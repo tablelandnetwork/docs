@@ -5,23 +5,36 @@ description: The quick and easy way to start creating tables on Tableland.
 # Quick Start
 
 {% hint style="danger" %}
-**Warning:** These docs pages reflect an API and concept that is in early development. APIs and features are subject to dramatic changes without warning.
+These docs pages reflect an API and concept that is in early development. APIs and features are subject to dramatic changes without warning.
 {% endhint %}
 
-## Get your API keys
+## Get Access
 
-Your API requests are authenticated using API keys. Any request that doesn't include an API key will return an error.
+For now, Tableland API requests are authenticated using API keys. Any request that doesn't include an API key will return an error.
 
-You can generate an API key from your Dashboard at any time.
+You can get access to the Tableland MVP by joining our Discord.
 
-## Install the library
+{% embed url="https://discord.gg/A7JpNjpk3K" %}
 
-The best way to interact with our API is to use one of our official clients:
+Once you've joined the Discord server and gone through the validation steps, you can sign up for API access using the `join` command.
+
+```
+!join 0xPublicAddress
+```
+
+That's it! One of the core Tableland team members will add your address to the access control list shortly.
+
+{% hint style="info" %}
+Having trouble getting access? One of the core Tableland developer team members will be happy to help. Just ask in #general or #support!
+{% endhint %}
+
+## Install the SDK
+
+The best way to interact with our API is to use our official client. You can install this via `npm` or `yarn`. You can also pull the ESM build via `cdn.skypack.dev` or other means.
 
 {% tabs %}
 {% tab title="Node" %}
 ```
-# Install via NPM
 npm install --save @textile/tableland
 ```
 {% endtab %}
@@ -36,106 +49,50 @@ npm install --save @textile/tableland
 Now that you have the SDK installed, it's time to integrate it into your dApp and create a simple table.
 
 {% tabs %}
-{% tab title="Node" %}
+{% tab title="Installed" %}
 ```javascript
-// Some code
+import { connect, createTable, runQuery } from "@textile/tableland";
+
+await connect({ host: "http://testnet.tableland.network" });
 ```
 {% endtab %}
 
 {% tab title="Browser" %}
+```typescript
+import { connect, createTable, runQuery } from "https://cdn.skypack.dev/@textile/tableland";
 
+await connect({ host: "http://testnet.tableland.network" });
+```
 {% endtab %}
 {% endtabs %}
 
 ## Make your first table
 
-To make your first table, send an authenticated request to the rpc endpoint. This will create a `table`, which is nice.
+To make your first table, call `createTable` via the SDK.&#x20;
 
-{% swagger baseUrl="https://api.myapi.com/v1" method="post" path="/pet" summary="Create pet." %}
-{% swagger-description %}
-Creates a new pet.
-{% endswagger-description %}
+{% hint style="danger" %}
+It would be really nice to show a valid JSON-RPC flow for desktop/cli usage. The only thing missing is creating the self-signed JWT token. Maybe we could just create a utility that prints the token out in the browser to be used on the CLI afterwards?
 
-{% swagger-parameter in="body" name="name" required="true" type="string" %}
-The name of the pet
-{% endswagger-parameter %}
-
-{% swagger-parameter in="body" name="owner_id" required="false" type="string" %}
-The 
-
-`id`
-
- of the user who owns the pet
-{% endswagger-parameter %}
-
-{% swagger-parameter in="body" name="species" required="false" type="string" %}
-The species of the pet
-{% endswagger-parameter %}
-
-{% swagger-parameter in="body" name="breed" required="false" type="string" %}
-The breed of the pet
-{% endswagger-parameter %}
-
-{% swagger-response status="200" description="Pet successfully created" %}
-```javascript
-{
-    "name"="Wilson",
-    "owner": {
-        "id": "sha7891bikojbkreuy",
-        "name": "Samuel Passet",
-    "species": "Dog",}
-    "breed": "Golden Retriever",
-}
-```
-{% endswagger-response %}
-
-{% swagger-response status="401" description="Permission denied" %}
-
-{% endswagger-response %}
-{% endswagger %}
-
-{% hint style="info" %}
-**Good to know:** You can use the API Method block to fully document an API method. You can also sync your API blocks with an OpenAPI file or URL to auto-populate them.
+If you prefer to use a command line interface, we have provided RPC examples you can use with [HTTPie](https://httpie.org). Please note that params take either an object or array passed as a string.
 {% endhint %}
 
-Take a look at how you might call this method using our official libraries, or via `curl`:
-
 {% tabs %}
-{% tab title="Node" %}
+{% tab title="Javascript" %}
 ```javascript
-// require the myapi module and set it up with your API key
-const myapi = require('myapi')(YOUR_API_KEY);
+import { createTable } from "@textile/tableland";
+// Assumes a connection has already been established as above
 
-const newPet = away myapi.pet.create({
-    name: 'Wilson',
-    owner_id: 'sha7891bikojbkreuy',
-    species: 'Dog',
-    breed: 'Golden Retriever',
-})
+const tableId = await createTable(
+  "CREATE TABLE table (name text, id int, primary key (id));"
+);
 ```
 {% endtab %}
 
-{% tab title="Python" %}
-```python
-// Set your API key before making the request
-myapi.api_key = YOUR_API_KEY
-
-myapi.Pet.create(
-    name='Wilson',
-    owner_id='sha7891bikojbkreuy',
-    species='Dog',
-    breed='Golden Retriever',
-)
+{% tab title="httpie" %}
 ```
-{% endtab %}
-
-{% tab title="curl" %}
-```
-curl https://api.myapi.com/v1/pet  
-    -u YOUR_API_KEY:  
-    -d name='Wilson'  
-    -d species='dog'  
-    -d owner_id='sha7891bikojbkreuy'  
+# Not available yet
 ```
 {% endtab %}
 {% endtabs %}
+
+You're all set, now its time to jump into further details using the [javascript-sdk.md](javascript-sdk.md "mention") page (next), or check out [demos-and-examples.md](demos-and-examples.md "mention") for more!
