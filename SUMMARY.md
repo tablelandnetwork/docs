@@ -17,13 +17,6 @@
 ## Developers
 
 * [Quick Start](developers/quick-start.md)
-* [Demos & Examples](developers/demos-and-examples.md)
-* [Javascript SDK](developers/javascript-sdk/README.md)
-  * [ReadQueryResult](developers/javascript-sdk/readqueryresult.md)
-  * [ColumnDescriptor](developers/javascript-sdk/columndescriptor.md)
-  * [ConnectionDetails](developers/javascript-sdk/connectiondetails.md)
-  * [Column](developers/javascript-sdk/column.md)
-  * [Row](developers/javascript-sdk/row.md)
-  * [Authenticator](developers/javascript-sdk/authenticator.md)
-  * [Token](developers/javascript-sdk/token.md)
+* [Javascript SDK](developers/javascript-sdk.md)
 * [Remote API](developers/remote-api.md)
+* [Demos & Examples](developers/demos-and-examples.md)
