@@ -157,8 +157,8 @@ Now that we have a table to work with, it is easy to use vanilla SQL statements 
 
 {% tab title="httpie" %}
 ```bash
-https -A bearer -a token post https://testnet.tableland.network \
-  jsonrpc=2.0 id=dontcare method=tableland_createTable \
+https -A bearer -a token post https://testnet.tableland.network/rpc \
+  jsonrpc=2.0 id=dontcare method=tableland_runSQL \
   params:='{
     "tableId": "00000000-0000-0000-0000-000000000000",
     "controller": "0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266",
@@ -245,7 +245,7 @@ These two RESTful APIs provide useful features to app builders looking to provid
 Since these are `GET` methods, the httpie call is simple. We're using a test address here.
 
 ```
-http https://testnet.tableland.network/tables/controller/0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266
+http --print=b https://testnet.tableland.network/tables/controller/0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266
 ```
 {% endtab %}
 
