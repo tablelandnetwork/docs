@@ -36,7 +36,8 @@ An easy way to test the examples below, would be to use an API request tool such
 If you prefer to use a command line interface, we have provided RPC examples you can use with [HTTPie](https://httpie.org). Please note that params take either an object or array passed as a string.
 
 ```
-http post https://testnet.tabeland.network/rpc jsonrpc=2.0 id=dontcare method=todo params:='[]'
+http post https://testnet.tabeland.network/rpc \
+    jsonrpc=2.0 id=1 method=tableland_runSQL params:='[]'
 ```
 
 ### Endpoint
@@ -68,9 +69,9 @@ Like most relational database systems, Tableland requires the user to create tab
   "method": "tableland_createTable",
   "id": 1,
   "params": {
-    "tableId": "00000000-0000-0000-0000-000000000000",
+    "tableId": "d9163b48-670f-4549-813a-6f66888bc1fb",
     "type": "mytabletype",
-    "controller": "0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266",
+    "controller": "0xbDA5747bFD65F08deb54cb465eB87D40e51B197E",
     "statement": "CREATE TABLE mytable (column_a int, column_b text);"
   }
 }
@@ -80,13 +81,13 @@ Like most relational database systems, Tableland requires the user to create tab
 {% tab title="httpie" %}
 ```bash
 https -A bearer -a token post https://testnet.tableland.network/rpc \
-  jsonrpc=2.0 id=dontcare method=tableland_createTable \
-  params:='{
-    "tableId": "00000000-0000-0000-0000-000000000000",
+  jsonrpc=2.0 id=1 method=tableland_createTable \
+  params:='[{
+    "tableId": "d9163b48-670f-4549-813a-6f66888bc1fb",
     "type": "mytabletype",
-    "controller": "0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266",
+    "controller": "0xbDA5747bFD65F08deb54cb465eB87D40e51B197E",
     "statement": "CREATE TABLE mytable (column_a int, column_b text);"
-  }'
+  }]'
 ```
 {% endtab %}
 
@@ -100,9 +101,9 @@ curl --location --request POST 'https://testnet.tableland.network/rpc' \
     "method": "tableland_createTable", 
     "id" : 1,
     "params": [{
-        "tableId" : "00000000-0000-0000-0000-000000000000",
+        "tableId": "d9163b48-670f-4549-813a-6f66888bc1fb",
         "type": "mytabletype",
-        "controller": "0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266",
+        "controller": "0xbDA5747bFD65F08deb54cb465eB87D40e51B197E",
         "statement": "CREATE TABLE mytable (column_a int, column_b text);"
     }]
 }'
@@ -147,8 +148,8 @@ Now that we have a table to work with, it is easy to use vanilla SQL statements 
   "method": "tableland_runSQL",
   "id": 1,
   "params": {
-    "tableId": "00000000-0000-0000-0000-000000000000",
-    "controller": "0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266",
+    "tableId": "d9163b48-670f-4549-813a-6f66888bc1fb",
+    "controller": "0xbDA5747bFD65F08deb54cb465eB87D40e51B197E",
     "statement": "SELECT * FROM mytable;"
   }
 }
@@ -158,12 +159,12 @@ Now that we have a table to work with, it is easy to use vanilla SQL statements 
 {% tab title="httpie" %}
 ```bash
 https -A bearer -a token post https://testnet.tableland.network/rpc \
-  jsonrpc=2.0 id=dontcare method=tableland_runSQL \
-  params:='{
-    "tableId": "00000000-0000-0000-0000-000000000000",
-    "controller": "0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266",
+  jsonrpc=2.0 id=1 method=tableland_runSQL \
+  params:='[{
+    "tableId": "d9163b48-670f-4549-813a-6f66888bc1fb",
+    "controller": "0xbDA5747bFD65F08deb54cb465eB87D40e51B197E",
     "statement": "SELECT * FROM mytable;"
-  }'
+  }]'
 ```
 {% endtab %}
 
@@ -177,8 +178,8 @@ curl --location --request POST 'https://testnet.tableland.network/rpc' \
     "method": "tableland_runSQL", 
     "id" : 1,
     "params": [{
-        "tableId" : "00000000-0000-0000-0000-000000000000",
-        "controller": "0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266",
+        "tableId": "d9163b48-670f-4549-813a-6f66888bc1fb",
+        "controller": "0xbDA5747bFD65F08deb54cb465eB87D40e51B197E",
         "statement": "SELECT * FROM mytable;"
     }]
 }'
@@ -245,7 +246,7 @@ These two RESTful APIs provide useful features to app builders looking to provid
 Since these are `GET` methods, the httpie call is simple. We're using a test address here.
 
 ```
-http --print=b https://testnet.tableland.network/tables/controller/0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266
+http --print=b https://testnet.tableland.network/tables/controller/0xbDA5747bFD65F08deb54cb465eB87D40e51B197E
 ```
 {% endtab %}
 
@@ -253,7 +254,7 @@ http --print=b https://testnet.tableland.network/tables/controller/0xf39Fd6e51aa
 Here we're piping the `curl` output to [`jq` for pretty printing](https://stedolan.github.io/jq/).
 
 ```
-curl -s https://testnet.tableland.network/tables/controller/0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266 | jq
+curl -s https://testnet.tableland.network/tables/controller/0xbDA5747bFD65F08deb54cb465eB87D40e51B197E | jq
 ```
 {% endtab %}
 {% endtabs %}
