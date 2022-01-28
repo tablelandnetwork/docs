@@ -25,7 +25,7 @@ For now, the following HTTP settings are all you need to interact with the JSON-
 * `POST` for all methods
 * `JSON RPC 2.0`
 * `id: "dontcare"` (i.e., doesn't really matter)
-* endpoint URL: `https://testnet.tableland.network/`.
+* endpoint URL: `https://testnet.tableland.network/rpc`.
 
 #### Postman
 
@@ -134,7 +134,7 @@ Like most relational database systems, Tableland requires the user to create tab
 
 {% tab title="httpie" %}
 ```bash
-https -A bearer -a token post https://testnet.tableland.network \
+https -A bearer -a token post https://testnet.tableland.network/rpc \
   jsonrpc=2.0 id=dontcare method=tableland_createTable \
   params:='{
     "tableId": "00000000-0000-0000-0000-000000000000",
@@ -142,6 +142,25 @@ https -A bearer -a token post https://testnet.tableland.network \
     "controller": "0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266",
     "statement": "CREATE TABLE mytable (column_a int, column_b text);"
   }'
+```
+{% endtab %}
+
+{% tab title="curl" %}
+```
+curl --location --request POST 'https://testnet.tableland.network/rpc' \
+--header 'Content-Type: application/json' \
+--header 'Authorization: Bearer token' \
+--data-raw '{
+    "jsonrpc": "2.0", 
+    "method": "tableland_createTable", 
+    "id" : 1,
+    "params": [{
+        "tableId" : "00000000-0000-0000-0000-000000000000",
+        "type": "mytabletype",
+        "controller": "0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266",
+        "statement": "CREATE TABLE mytable (column_a int, column_b text);"
+    }]
+}'
 ```
 {% endtab %}
 {% endtabs %}
@@ -200,6 +219,24 @@ https -A bearer -a token post https://testnet.tableland.network \
     "controller": "0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266",
     "statement": "SELECT * FROM mytable;"
   }'
+```
+{% endtab %}
+
+{% tab title="curl" %}
+```
+curl --location --request POST 'https://testnet.tableland.network/rpc' \
+--header 'Content-Type: application/json' \
+--header 'Authorization: Bearer token' \
+--data-raw '{
+    "jsonrpc": "2.0", 
+    "method": "tableland_runSQL", 
+    "id" : 1,
+    "params": [{
+        "tableId" : "00000000-0000-0000-0000-000000000000",
+        "controller": "0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266",
+        "statement": "SELECT * FROM mytable;"
+    }]
+}'
 ```
 {% endtab %}
 {% endtabs %}
