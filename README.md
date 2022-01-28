@@ -24,6 +24,6 @@ Want to learn more about Tableland, or engage with our amazing community? How ab
 
 ## Jump in!
 
-Can't find what you're looking for? Let us know on our Discord!
+Can't find what you're looking for? Let us know on our Discord by pinging us in the #general channel.
 
 {% embed url="https://discord.gg/A7JpNjpk3K" %}

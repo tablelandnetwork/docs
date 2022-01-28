@@ -10,19 +10,19 @@ These docs pages reflect an API and concept that is in early development. APIs a
 
 ## Get Access
 
-For now, Tableland API requests are authenticated using API keys. Any request that doesn't include an API key will return an error.
+For now, Tableland API requests are authenticated by ETH address. Any request that doesn't include a self-signed access token that is tied to a pre-registered ETH address will return an error.
 
 You can get access to the Tableland MVP by joining our Discord.
 
 {% embed url="https://discord.gg/A7JpNjpk3K" %}
 
-Once you've joined the Discord server and gone through the validation steps, you can sign up for API access using the `join` command.
+Once you've joined the Discord server and gone through the validation steps, you can sign up for API access using the `!join` command.
 
 ```
 !join 0xPublicAddress
 ```
 
-That's it! One of the core Tableland team members will add your address to the access control list shortly.
+That's it! Your ETH address will be added to the access control list shortly.
 
 {% hint style="info" %}
 Having trouble getting access? One of the core Tableland developer team members will be happy to help. Just ask in #general or #support!
