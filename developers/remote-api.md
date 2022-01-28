@@ -43,63 +43,8 @@ http post https://testnet.tabeland.network/rpc jsonrpc=2.0 id=dontcare method=to
 
 The core RPC API is available via the following endpoint. There are currently only two RPC methods available, `createTable` and `runSQL`. The `createdTable` method allows you to create a table that has already been minted in the on-chain registry. The `runSQL` method allows you to run SQL statements on an existing table.
 
-{% swagger method="post" path="/rpc" baseUrl="https://gateway.tableland.com" summary="Lets you interact with Tableland's JSON-RPC calls" %}
-{% swagger-description %}
-There are two available JSON-RPC methods: `createdTable` and `runSQL`.
-
-The `createdTable` method allows you to create a table that was already minted.
-
-The `runSQL` method allows you to run SQL statements on an existing table.
-{% endswagger-description %}
-
-{% swagger-parameter in="header" name="Authorization" required="true" %}
-JWT Token
-{% endswagger-parameter %}
-
-{% swagger-response status="200: OK" description="Successful table creation" %}
-```javascript
-{
-  "jsonrpc": "2.0",
-  "id": 1,
-  "result": {
-    "message": "Table created",
-    "data": null
-  }
-}
-```
-{% endswagger-response %}
-
-{% swagger-response status="200: OK" description="Successful SELECT executed" %}
-```javascript
-{
-  "jsonrpc": "2.0",
-  "id": 1,
-  "result": {
-    "message": "Select executed",
-    "data": {
-      "columns": [
-        {
-          "name": "c1"
-        },
-        {
-          "name": "c2"
-        }
-      ],
-      "rows": [
-        [
-          "e11",
-          "e12"
-        ],
-        [
-          "e21",
-          "e22"
-        ]
-      ]
-    }
-  }
-}
-```
-{% endswagger-response %}
+{% swagger src="../.gitbook/assets/tableland-openapi-spec.yaml" path="/rpc" method="post" %}
+[tableland-openapi-spec.yaml](../.gitbook/assets/tableland-openapi-spec.yaml)
 {% endswagger %}
 
 ### Creating Tables
