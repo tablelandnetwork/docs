@@ -10,7 +10,9 @@ Each Tableland validator provides a simple JSON RPC 2.0 API and REST API to inte
 
 ### Setup
 
-There are just a few setup steps required before making RPC calls. Firstly, since all Tableland API calls are "gated" by Ethereum address, you'll need to request access as mentioned in our [quick-start.md](quick-start.md "mention") guide. One you have registered your ETH address, you'll need to generate a self-signed JWT token. This is done automatically when using the Javascript SDK via a browser app, however, for interacting directly with the JSON RPC APIs, you'll need to create one manually.
+There are just a few setup steps required before making RPC calls. Firstly, since all Tableland API calls are "gated" by Ethereum address, you'll need to request access as mentioned in our [quick-start.md](quick-start.md "mention") guide. One you have registered your ETH address, you'll need to generate a self-signed JWT token. This is done automatically when using the Javascript SDK via a browser app (thanks to Metamask), however, for interacting directly with the JSON RPC APIs, you'll need to create one manually.
+
+To generate a token manually, you can use the following simple utility tool. It takes as an argument an ETH private key string, and generates a self-signed token on the command line. Note that this is done locally, so your keys are safe and secure on your machine. If you don't want to trust the tool, use Metamask or some other Web3Provider interface.
 
 {% hint style="danger" %}
 This hasn't been flushed out yet, so we'll have to come back to this later.
