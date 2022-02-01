@@ -1,5 +1,5 @@
 ---
-description: Build dApps, NFTs, and metaverse content using familiar SQL
+description: Build dApps, NFTs, and metaverse content using familiar SQL.
 ---
 
 # Tableland

@@ -1,5 +1,7 @@
 ---
-description: Here we'll copy some material and content from the main website.s
+description: >-
+  A network and SQL database protocol. Built for developers, NFT creators, and
+  web3 visionaries.
 ---
 
 # What is Tableland?
