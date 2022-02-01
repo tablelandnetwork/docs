@@ -10,7 +10,6 @@
     * [Bug Reports 101](general/community/getting-help/bug-reports-101.md)
     * [Feature Requests 101](general/community/getting-help/feature-requests-101.md)
   * [Textile Blog](https://blog.textile.io)
-  * [Calendar](general/community/calendar.md)
 * [Code of Conduct](general/code-of-conduct.md)
 * [Lite Paper](general/lite-paper.md)
 
@@ -20,3 +19,7 @@
 * [Javascript SDK](developers/javascript-sdk.md)
 * [Remote API](developers/remote-api.md)
 * [Demos & Examples](developers/demos-and-examples.md)
+
+## Hacking
+
+* [ETH Denver](hacking/eth-denver.md)
