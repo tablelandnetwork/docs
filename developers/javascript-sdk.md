@@ -14,31 +14,63 @@ Interested in supporting additional chains and ecosystems? Create an Issue and l
 
 ## Install
 
-Installation is easy using `npm` or `yarn`. An ES bundle is also available for those operating purely in a browser environnement.
+You can install the SDK via `npm` or `yarn`. You can also pull the ESM build via `cdn.skypack.dev` or other means.
 
-```bash
-npm i @textile/tableland
+{% tabs %}
+{% tab title="Node" %}
 ```
+npm install --save @textile/tableland
+```
+{% endtab %}
+
+{% tab title="Browser" %}
+```
+https://cdn.skypack.dev/@textile/tableland
+```
+{% endtab %}
+{% endtabs %}
 
 {% hint style="info" %}
-Not seeing the build type you need for your project or idea? Let us know, we're happy to work with you to improve the SDK usability!
+**Note:** Currently only a Javascript/Typescript client is provided. Intersted in another language? Please get in touch and let us know what you'd like to see next!
 {% endhint %}
 
 ## Basic Usage
 
 Most common Tableland usage patterns will follow something like the following. In general, you'll need to **connect**, **create**, **mutate**, and **query** your tables. In that order :smile:.
 
+{% tabs %}
+{% tab title="Node" %}
 ```typescript
 import { connect, createTable, runQuery, myTables } from "@textile/tableland";
 
 await connect({ host: "http://testnet.tableland.network" });
 
 let id = createTable(
-  `CREATE TABLE table (name text, id int, primary key (id))`
+  `CREATE TABLE mnytable (name text, id int, primary key (id))`
+);
+let res = await runQuery(`INSERT (firstname) VALUES ('Murray' INTO ${id})`);
+
+res = await runQuery(`SELECT * FROM ${id}`);
+```
+{% endtab %}
+
+{% tab title="Browser" %}
+```html
+<script type="module">
+import { connect, createTable, runQuery, myTables } from "https://cdn.skypack.dev/@textile/tableland";
+
+await connect({ host: "http://testnet.tableland.network" });
+let id = createTable(
+  `CREATE TABLE mnytable (name text, id int, primary key (id))`
 );
 let res = await runQuery(`INSERT (firstname) VALUES ('Murray' INTO ${id})`);
 res = await runQuery(`SELECT * FROM ${id}`);
+</script>
 ```
+{% endtab %}
+{% endtabs %}
+
+
 
 ## API
 
