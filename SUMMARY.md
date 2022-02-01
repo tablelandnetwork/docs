@@ -19,6 +19,8 @@
 * [Remote API](developers/remote-api.md)
 * [Demos & Examples](developers/demos-and-examples.md)
 
-## Hacking
+## Building
 
-* [ETH Denver](hacking/eth-denver.md)
+* [ETH Denver](building/eth-denver.md)
+* [Grants](building/grants.md)
+* [Usecases](building/usecases.md)
