@@ -1,5 +1,5 @@
 ---
-description: An exciting sub-header about how great Tableland is!
+description: Build dApps, NFTs, and metaverse content using familiar SQL
 ---
 
 # Tableland
