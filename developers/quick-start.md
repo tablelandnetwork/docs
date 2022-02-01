@@ -4,7 +4,7 @@ description: The quick and easy way to start creating tables on Tableland.
 
 # Quick Start
 
-{% hint style="danger" %}
+{% hint style="warning" %}
 These docs pages reflect an API and concept that is in early development. APIs and features are subject to dramatic changes without warning.
 {% endhint %}
 
@@ -90,12 +90,10 @@ await connect({ host: "http://testnet.tableland.network" });
 
 ## Make your first table
 
-To make your first table, call `createTable` via the SDK.&#x20;
+To make your first table, call `createTable` via the SDK, or create one using our simple playground app. TODO: Add link to playground app.
 
-{% hint style="danger" %}
-It would be really nice to show a valid JSON-RPC flow for desktop/cli usage. The only thing missing is creating the self-signed JWT token. Maybe we could just create a utility that prints the token out in the browser to be used on the CLI afterwards?
-
-If you prefer to use a command line interface, we have provided RPC examples you can use with [HTTPie](https://httpie.org). Please note that params take either an object or array passed as a string.
+{% hint style="success" %}
+If you prefer to use a command line interface, we have provided RPC examples you can use with [HTTPie](https://httpie.org). You can play with these on the [remote-api.md](remote-api.md "mention") page, though you will have to create a table using the SDK or playground first.
 {% endhint %}
 
 {% tabs %}
@@ -111,8 +109,14 @@ const tableId = await createTable(
 {% endtab %}
 
 {% tab title="httpie" %}
+```javascript
+// Not available yet
 ```
-# Not available yet
+{% endtab %}
+
+{% tab title="curl" %}
+```javascript
+// Not yet available
 ```
 {% endtab %}
 {% endtabs %}
