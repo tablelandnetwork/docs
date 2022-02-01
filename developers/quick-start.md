@@ -12,14 +12,14 @@ These docs pages reflect an API and concept that is in early development. APIs a
 
 For now, Tableland API requests are authenticated by ETH address. Any request that doesn't include a self-signed access token that is tied to a pre-registered ETH address will return an error.
 
-You can get access to the Tableland MVP by joining our Discord.
+You can gain access to the Tableland MVP by joining our Discord.
 
 {% embed url="https://discord.gg/A7JpNjpk3K" %}
 
-Once you've joined the Discord server and gone through the validation steps, you can sign up for API access using the `!join` command.
+Once you've joined the Discord server and gone through the validation steps, you can sign up for API access by letting us know if you are hacking at ETH Denver in the `#start-here` channel, and then jumping into the `#🎟-creator-whitelist` channel and posting your ETH public address.
 
-```
-!join 0xPublicAddress
+```bash
+0x4cablahblahblahblahblahblahblahblahblah2
 ```
 
 That's it! Your ETH address will be added to the access control list shortly.
@@ -28,14 +28,24 @@ That's it! Your ETH address will be added to the access control list shortly.
 Having trouble getting access? One of the core Tableland developer team members will be happy to help. Just ask in #general or #support!
 {% endhint %}
 
+## Playground
+
+The best way to interact and play with our API is to use our official playground tools.
+
 ## Install the SDK
 
-The best way to interact with our API is to use our official client. You can install this via `npm` or `yarn`. You can also pull the ESM build via `cdn.skypack.dev` or other means.
+The best way to build on top of our APIs is to use our official Typescript/Javascript client. You can install this via `npm` or `yarn`. You can also pull the ESM build via `cdn.skypack.dev` or other means.
 
 {% tabs %}
 {% tab title="Node" %}
 ```
 npm install --save @textile/tableland
+```
+{% endtab %}
+
+{% tab title="Browser" %}
+```
+https://cdn.skypack.dev/@textile/tableland
 ```
 {% endtab %}
 {% endtabs %}
@@ -49,19 +59,21 @@ npm install --save @textile/tableland
 Now that you have the SDK installed, it's time to integrate it into your dApp and create a simple table.
 
 {% tabs %}
-{% tab title="Installed" %}
+{% tab title="Node" %}
 ```javascript
 import { connect, createTable, runQuery } from "@textile/tableland";
+
 
 await connect({ host: "http://testnet.tableland.network" });
 ```
 {% endtab %}
 
 {% tab title="Browser" %}
-```typescript
-import { connect, createTable, runQuery } from "https://cdn.skypack.dev/@textile/tableland";
-
-await connect({ host: "http://testnet.tableland.network" });
+```html
+<script type="module">
+    import { connect, createTable, runQuery } from "https://cdn.skypack.dev/@textile/tableland";
+    await connect({ host: "http://testnet.tableland.network" });
+</script>
 ```
 {% endtab %}
 {% endtabs %}

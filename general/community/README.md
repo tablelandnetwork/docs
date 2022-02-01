@@ -22,8 +22,6 @@ You can always learn about the latest Tableland news and updates via our company
 
 {% embed url="https://blog.textile.io" %}
 
-## Twitter
+## Calendar
 
-Twitter is where crypto is happening, following along with official [@textileio](https://twitter.com/textileio) posts, and soon, you'll be able to get [@tableland\_\_](https://twitter.com/tableland\_\_) specific news and posts!
-
-{% embed url="https://twitter.com/textileio" %}
+TODO: Here's where you might find information about our latest community events and happenings?
