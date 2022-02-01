@@ -11,7 +11,6 @@
     * [Feature Requests 101](general/community/getting-help/feature-requests-101.md)
   * [Textile Blog](https://blog.textile.io)
 * [Code of Conduct](general/code-of-conduct.md)
-* [Lite Paper](general/lite-paper.md)
 
 ## Developers
 
