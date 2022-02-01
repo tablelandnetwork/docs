@@ -12,29 +12,39 @@ These docs pages reflect an API and concept that is in early development. APIs a
 
 For now, Tableland API requests are authenticated by ETH address. Any request that doesn't include a self-signed access token that is tied to a pre-registered ETH address will return an error.
 
-You can gain access to the Tableland MVP by joining our Discord.
+You can gain access to the Tableland MVP by joining our Discord. While you're there, don't forget to say hello in the `#👋-intros` channel! Oh, and welcome to the communit!
 
 {% embed url="https://discord.gg/A7JpNjpk3K" %}
 
-Once you've joined the Discord server and gone through the validation steps, you can sign up for API access by letting us know if you are hacking at ETH Denver in the `#start-here` channel, and then jumping into the `#🎟-creator-whitelist` channel and posting your ETH public address.
+{% hint style="info" %}
+Tableland is currently in private beta, so to join you’ll need to do a few more steps! Having trouble getting access? One of the core Tableland developer team members will be happy to help. Just ask in #general or #support!
+{% endhint %}
+
+Once you've joined the Discord server and gone through the validation steps, you can sign up for API access by letting us know if you are hacking at ETH Denver in the `#news` channel (follow the instructions in the comment and react with the :crown: emoji). This will set you up with the _Creator_ role.
+
+You should now find two new channels that are visible to you in the `#Tableland` category. Congrats, you are now a Tableland Creator :muscle:.
+
+Next, jump into the `#🎟-creator-whitelist` channel and posting your ETH public address.
 
 ```bash
 0x4cablahblahblahblahblahblahblahblahblah2
 ```
 
-That's it! Your ETH address will be added to the access control list shortly.
+That's it! Your ETH address will be added to the access control list shortly. You’ll be able to use `#🔩-creator-chat` to share your project, find collaborators, learn from others, ask any technical questions, or let us know about any issues you run into.
 
-{% hint style="info" %}
-Having trouble getting access? One of the core Tableland developer team members will be happy to help. Just ask in #general or #support!
+{% hint style="danger" %}
+Only ever share you _public_ address. We will never DM you and will never ask you for your secrets, private keys, passwords, or phrases. Be diligent, and report scammers and spammers.
 {% endhint %}
 
 ## Playground
 
 The best way to interact and play with our API is to use our official playground tools.
 
+**Coming soon!**
+
 ## Install the SDK
 
-The best way to build on top of our APIs is to use our official Typescript/Javascript client. You can install this via `npm` or `yarn`. You can also pull the ESM build via `cdn.skypack.dev` or other means.
+The best way to _build on_ our APIs is to use our official Typescript/Javascript client. You can install this via `npm` or `yarn`. You can also pull the ESM build via `cdn.skypack.dev` or other means.
 
 {% tabs %}
 {% tab title="Node" %}
