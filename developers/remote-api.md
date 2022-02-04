@@ -4,21 +4,25 @@ description: API Reference for the core REST/JSON RPC API.
 
 # Remote API
 
-Each Tableland validator provides a simple JSON RPC 2.0 API and REST API to interact with the Tableland network. These API methods are used under the hood by the Javascript SDK. The API surface is purposefully small, but enables tons of flexibility once you start utilizing the power of SQL statements.
+Each Tableland Validator provides a simple JSON RPC 2.0 API and REST API to interact with the Tableland network. These API methods are used under the hood by the Javascript SDK. The API surface is purposefully small, but enables tons of flexibility once you start utilizing the power of SQL statements.
 
 ## RPC API
 
 ### Setup
 
-There are just a few setup steps required before making RPC calls. Firstly, since all Tableland API calls are "gated" by Ethereum address, you'll need to request access as mentioned in our [quick-start.md](quick-start.md "mention") guide. One you have registered your ETH address, you'll need to generate a self-signed JWT token. This is done automatically when using the Javascript SDK via a browser app (thanks to Metamask), however, for interacting directly with the JSON RPC APIs, you'll need to create one manually.
+There are just a few setup steps required before making RPC calls. Firstly, since all Tableland API calls are "gated" by Ethereum address, you'll need to request access as mentioned in Quick Start guide.
 
-To generate a token manually, you can use the following simple utility tool. It takes as an argument an ETH private key string, and generates a self-signed token on the command line. Note that this is done locally, so your keys are safe and secure on your machine. If you don't want to trust the tool, use Metamask or some other Web3Provider interface.
+{% content-ref url="quick-start.md" %}
+[quick-start.md](quick-start.md)
+{% endcontent-ref %}
 
-{% hint style="danger" %}
-This hasn't been flushed out yet, so we'll have to come back to this later.
-{% endhint %}
+One you have registered your ETH address, you'll need to generate a self-signed [JWT token](https://jwt.io). This is done automatically when using the [javascript-sdk.md](javascript-sdk.md "mention") via a browser app (thanks to [Metamask](https://metamask.io)). For interacting _directly_ with the JSON RPC API via the CLI, you'll need to create one "manually" and include it with all API calls.&#x20;
 
-With a JWT token in hand and access granted via Discord, you are ready to start making RPC calls. The following settings are needed when interacting with the Tableland network RPC APIs.
+The following [codepen.io demo](https://codepen.io/carsonfarmer/pen/zYPBVbO) can be used to generate a JWT token using a Metamask-enabled browser. Simply run the demo and select the output token text. This can then be set on the CLI to be included in all RPC calls (see below).
+
+{% embed url="https://codepen.io/carsonfarmer/pen/zYPBVbO" %}
+
+With a JWT token in hand (and access already granted via Discord), you are ready to start making RPC calls. The following settings are needed when interacting with the Tableland network RPC APIs.&#x20;
 
 #### Settings
 
@@ -26,19 +30,23 @@ For now, the following HTTP settings are all you need to interact with the JSON-
 
 * `POST` for all methods
 * `JSON RPC 2.0`
-* `id: "dontcare"` (i.e., doesn't really matter)
+* `id: 1`  (doesn't really matter)
 * endpoint URL: `https://testnet.tableland.network/rpc`.
+
+{% hint style="info" %}
+It may be useful to create a local environment variable to avoid pasting the above JWT token in all CLI commands. Copy the previously generated token and create an env var called `TOKEN` (the examples below assume the token string has been exported as `TOKEN`): `export TOKEN=<generated.token.string>`
+{% endhint %}
 
 #### Postman
 
-An easy way to test the examples below, would be to use an API request tool such as [Postman](https://www.postman.com). You will only need to configure a few things. First, you'll need to make sure you add a header with a key of `Content-Type` and value of `application/json`. Additionally, you'll need to create a self-signed JWT using the address you wish to use to interact with the Tableland network. Next, you'll need to select the `Body` tab and choose the `raw` radio button and ensure `JSON` is the selected format. Lastly, just copy/paste the `JSON object` example snippets below into the `body` of your request, on Postman, and click `send`.
+An easy way to test the examples below would be to use an API request tool such as [Postman](https://www.postman.com). You will only need to configure a few things. First, you'll need to make sure you [add a header](https://learning.postman.com/docs/sending-requests/requests/#configuring-request-headers) with a key of `Content-Type` and value of `application/json`. Additionally, you'll need to take the self-signed JWT token you created previously, and [set this as a Bearer token](https://learning.postman.com/docs/sending-requests/authorization/#bearer-token). Next, you'll need to select the `Body` tab and choose the `raw` radio button and ensure `JSON` is the selected format. Lastly, just copy/paste the `JSON object` example snippets below into the `body` of your request on Postman, and click `send`.
 
 #### HTTPie
 
-If you prefer to use a command line interface, we have provided RPC examples you can use with [HTTPie](https://httpie.org). Please note that params take either an object or array passed as a string.
+If you prefer to use a command line interface, we have provided RPC examples you can use with [HTTPie](https://httpie.org) (and [cURL](https://curl.se)). Please note that params take either an object or array passed as a string.
 
 ```
-http post https://testnet.tabeland.network/rpc \
+https -A bearer -a $TOKEN post https://testnet.tabeland.network/rpc \
     jsonrpc=2.0 id=1 method=tableland_runSQL params:='[]'
 ```
 
@@ -82,7 +90,7 @@ Like most relational database systems, Tableland requires the user to create tab
 
 {% tab title="httpie" %}
 ```bash
-https -A bearer -a token post https://testnet.tableland.network/rpc \
+https -A bearer -a $TOKEN post https://testnet.tableland.network/rpc \
   jsonrpc=2.0 id=1 method=tableland_createTable \
   params:='[{
     "tableId": "d9163b48-670f-4549-813a-6f66888bc1fb",
@@ -97,7 +105,7 @@ https -A bearer -a token post https://testnet.tableland.network/rpc \
 ```
 curl --location --request POST 'https://testnet.tableland.network/rpc' \
 --header 'Content-Type: application/json' \
---header 'Authorization: Bearer token' \
+--header 'Authorization: Bearer '"$TOKEN"'' \
 --data-raw '{
     "jsonrpc": "2.0", 
     "method": "tableland_createTable", 
@@ -160,7 +168,7 @@ Now that we have a table to work with, it is easy to use vanilla SQL statements 
 
 {% tab title="httpie" %}
 ```bash
-https -A bearer -a token post https://testnet.tableland.network/rpc \
+https -A bearer -a $TOKEN post https://testnet.tableland.network/rpc \
   jsonrpc=2.0 id=1 method=tableland_runSQL \
   params:='[{
     "tableId": "d9163b48-670f-4549-813a-6f66888bc1fb",
@@ -174,7 +182,7 @@ https -A bearer -a token post https://testnet.tableland.network/rpc \
 ```
 curl --location --request POST 'https://testnet.tableland.network/rpc' \
 --header 'Content-Type: application/json' \
---header 'Authorization: Bearer token' \
+--header 'Authorization: Bearer '"$TOKEN"'' \
 --data-raw '{
     "jsonrpc": "2.0", 
     "method": "tableland_runSQL", 
@@ -266,7 +274,3 @@ Now you know everything you need to know to interact with the low-level REST and
 {% content-ref url="../general/community/" %}
 [community](../general/community/)
 {% endcontent-ref %}
-
-{% hint style="success" %}
-Some of the above content is borrowed from the excellent NEAR RPC docs ([https://docs.near.org/docs/api/rpc](https://docs.near.org/docs/api/rpc)). Big thanks to the NEAR team :pray:!
-{% endhint %}
