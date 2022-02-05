@@ -63,7 +63,7 @@ The core RPC API is available via the following endpoint. There are currently on
 Like most relational database systems, Tableland requires the user to create tables for storing, querying, and relating data. See [#creating-tables](javascript-sdk.md#creating-tables "mention") in the [javascript-sdk.md](javascript-sdk.md "mention") docs for details on `CREATE` requirements.
 
 {% hint style="info" %}
-Currently, creating tables requires the caller to first mint a `TABLE` using the [Tableland Tables Registry](https://rinkeby.etherscan.io/token/0x30867AD98A520287CCc28Cde70fCF63E3Cdb9c3C). This step is done automatically via the [javascript-sdk.md](javascript-sdk.md "mention") during MVP testing. It is also possible to [`safeMint` a `TABLE` directly via etherscan](https://rinkeby.etherscan.io/address/0x30867AD98A520287CCc28Cde70fCF63E3Cdb9c3C#writeProxyContract) for those wishing to test interaction with the smart contract directly, though this is not recommended..
+Currently, creating tables requires the caller to first mint a `TABLE` using the [Tableland Tables Registry](https://rinkeby.etherscan.io/token/0x30867AD98A520287CCc28Cde70fCF63E3Cdb9c3C). This step is done automatically via the [javascript-sdk.md](javascript-sdk.md "mention") during MVP testing. It is also possible to [`safeMint` a `TABLE` directly via etherscan](https://rinkeby.etherscan.io/address/0x30867AD98A520287CCc28Cde70fCF63E3Cdb9c3C#writeProxyContract) for those wishing to test interaction with the smart contract directly, though this is not recommended.
 {% endhint %}
 
 #### tableland\_ceateTable
