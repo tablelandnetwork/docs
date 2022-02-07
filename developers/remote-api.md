@@ -60,7 +60,7 @@ The core RPC API is available via the following endpoint. There are currently on
 
 ### Creating Tables
 
-Like most relational database systems, Tableland requires the user to create tables for storing, querying, and relating data. See [#creating-tables](javascript-sdk.md#creating-tables "mention") in the [javascript-sdk.md](javascript-sdk.md "mention") docs for details on `CREATE` requirements.
+Like most relational database systems, Tableland requires the user to create tables for storing, querying, and relating data. See [#creating-tables](javascript-sdk.md#creating-tables "mention") in the [javascript-sdk.md](javascript-sdk.md "mention") docs for details on `CREATE` requirements. The response from a `createTable` method call includes the created table name, which the caller can use to make subsequent queries and updates.
 
 {% hint style="info" %}
 Currently, creating tables requires the caller to first mint a `TABLE` using the [Tableland Tables Registry](https://rinkeby.etherscan.io/token/0x30867AD98A520287CCc28Cde70fCF63E3Cdb9c3C). This step is done automatically via the [javascript-sdk.md](javascript-sdk.md "mention") during MVP testing. It is also possible to [`safeMint` a `TABLE` directly via etherscan](https://rinkeby.etherscan.io/address/0x30867AD98A520287CCc28Cde70fCF63E3Cdb9c3C#writeProxyContract) for those wishing to test interaction with the smart contract directly, though this is not recommended.
@@ -71,9 +71,9 @@ Currently, creating tables requires the caller to first mint a `TABLE` using the
 | param       | type                              |
 | ----------- | --------------------------------- |
 | id          | int/string (e.g., "0")            |
-| description | string (e.g., "tableland rocks!") |
 | controller  | eth address string                |
 | statement   | sql statement string              |
+| description | string (e.g., "tableland rocks!") |
 
 {% tabs %}
 {% tab title="JSON" %}
@@ -143,13 +143,12 @@ curl --location --request POST 'https://testnet.tableland.network/rpc' \
 
 ### Running SQL
 
-Now that we have a table to work with, it is easy to use vanilla SQL statements to insert new rows, update existing rows, delete old rows, and even query the whole thing! See [#mutating-tables](javascript-sdk.md#mutating-tables "mention") and [#querying-tables](javascript-sdk.md#querying-tables "mention") from the [javascript-sdk.md](javascript-sdk.md "mention") docs for further details.
+Now that we have a table to work with, it is easy to use vanilla SQL statements to insert new rows, update existing rows, delete old rows, and even query the whole thing! See [#mutating-tables](javascript-sdk.md#mutating-tables "mention") and [#querying-tables](javascript-sdk.md#querying-tables "mention") from the [javascript-sdk.md](javascript-sdk.md "mention") docs for further details. The key thing to keep in mind when working with tables is that you must specify the table name that you get back from the `tableland_createTable` response. So the above example would require you to query the `myname_t0`  table (the `myname` prefix _is_ actually optional).
 
 #### tableland\_runSQL
 
 | param      | type                 |
 | ---------- | -------------------- |
-| tableId    | uuid string          |
 | controller | eth address string   |
 | statement  | sql statement string |
 
@@ -161,9 +160,8 @@ Now that we have a table to work with, it is easy to use vanilla SQL statements 
   "method": "tableland_runSQL",
   "id": 1,
   "params": {
-    "tableId": "d9163b48-670f-4549-813a-6f66888bc1fb",
-    "controller": "0xbDA5747bFD65F08deb54cb465eB87D40e51B197E",
-    "statement": "SELECT * FROM mytable;"
+    "controller": "0xbAb12215Ed94713A290e0c618fa8177fAb5eFd2D",
+    "statement": "SELECT * FROM myname_t0;"
   }
 }
 ```
@@ -174,9 +172,8 @@ Now that we have a table to work with, it is easy to use vanilla SQL statements 
 https -A bearer -a $TOKEN post https://testnet.tableland.network/rpc \
   jsonrpc=2.0 id=1 method=tableland_runSQL \
   params:='[{
-    "tableId": "d9163b48-670f-4549-813a-6f66888bc1fb",
-    "controller": "0xbDA5747bFD65F08deb54cb465eB87D40e51B197E",
-    "statement": "SELECT * FROM mytable;"
+    "controller": "0xbAb12215Ed94713A290e0c618fa8177fAb5eFd2D",
+    "statement": "SELECT * FROM myname_t0;"
   }]'
 ```
 {% endtab %}
@@ -191,9 +188,8 @@ curl --location --request POST 'https://testnet.tableland.network/rpc' \
     "method": "tableland_runSQL", 
     "id" : 1,
     "params": [{
-        "tableId": "d9163b48-670f-4549-813a-6f66888bc1fb",
-        "controller": "0xbDA5747bFD65F08deb54cb465eB87D40e51B197E",
-        "statement": "SELECT * FROM mytable;"
+        "controller": "0xbAb12215Ed94713A290e0c618fa8177fAb5eFd2D",
+        "statement": "SELECT * FROM myname_t0;"
     }]
 }'
 ```
@@ -209,14 +205,13 @@ curl --location --request POST 'https://testnet.tableland.network/rpc' \
   "jsonrpc": "2.0",
   "id": 1,
   "result": {
-    "message": "Select executed",
     "data": {
       "columns": [
         {
-          "name": "c1"
+          "name": "column_a"
         },
         {
-          "name": "c2"
+          "name": "column_b"
         }
       ],
       "rows": [
@@ -259,7 +254,7 @@ These two RESTful APIs provide useful features to app builders looking to provid
 Since these are `GET` methods, the httpie call is simple. We're using a test address here.
 
 ```
-http --print=b https://testnet.tableland.network/tables/controller/0xbDA5747bFD65F08deb54cb465eB87D40e51B197E
+http --print=b https://testnet.tableland.network/tables/controller/0xbAb12215Ed94713A290e0c618fa8177fAb5eFd2D
 ```
 {% endtab %}
 
@@ -267,7 +262,7 @@ http --print=b https://testnet.tableland.network/tables/controller/0xbDA5747bFD6
 Here we're piping the `curl` output to [`jq` for pretty printing](https://stedolan.github.io/jq/).
 
 ```
-curl -s https://testnet.tableland.network/tables/controller/0xbDA5747bFD65F08deb54cb465eB87D40e51B197E | jq
+curl -s https://testnet.tableland.network/tables/controller/0xbAb12215Ed94713A290e0c618fa8177fAb5eFd2D | jq
 ```
 {% endtab %}
 {% endtabs %}
