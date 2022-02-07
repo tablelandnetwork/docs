@@ -243,7 +243,7 @@ There are a few additional REST APIs that can be used to discover tables control
 [tableland-openapi-spec.yaml](../.gitbook/assets/tableland-openapi-spec.yaml)
 {% endswagger %}
 
-{% swagger src="../.gitbook/assets/tableland-openapi-spec.yaml" path="/tables/{uuid}" method="get" %}
+{% swagger src="../.gitbook/assets/tableland-openapi-spec.yaml" path="/tables/{id}" method="get" %}
 [tableland-openapi-spec.yaml](../.gitbook/assets/tableland-openapi-spec.yaml)
 {% endswagger %}
 
