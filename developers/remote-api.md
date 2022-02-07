@@ -66,14 +66,14 @@ Like most relational database systems, Tableland requires the user to create tab
 Currently, creating tables requires the caller to first mint a `TABLE` using the [Tableland Tables Registry](https://rinkeby.etherscan.io/token/0x30867AD98A520287CCc28Cde70fCF63E3Cdb9c3C). This step is done automatically via the [javascript-sdk.md](javascript-sdk.md "mention") during MVP testing. It is also possible to [`safeMint` a `TABLE` directly via etherscan](https://rinkeby.etherscan.io/address/0x30867AD98A520287CCc28Cde70fCF63E3Cdb9c3C#writeProxyContract) for those wishing to test interaction with the smart contract directly, though this is not recommended.
 {% endhint %}
 
-#### tableland\_ceateTable
+#### tableland\_createTable
 
-| param      | type                 |
-| ---------- | -------------------- |
-| tableId    | uuid string          |
-| type       | string               |
-| controller | eth address string   |
-| statement  | sql statement string |
+| param       | type                              |
+| ----------- | --------------------------------- |
+| id          | int/string (e.g., "0")            |
+| description | string (e.g., "tableland rocks!") |
+| controller  | eth address string                |
+| statement   | sql statement string              |
 
 {% tabs %}
 {% tab title="JSON" %}
@@ -83,10 +83,10 @@ Currently, creating tables requires the caller to first mint a `TABLE` using the
   "method": "tableland_createTable",
   "id": 1,
   "params": {
-    "tableId": "d9163b48-670f-4549-813a-6f66888bc1fb",
-    "type": "mytabletype",
-    "controller": "0xbDA5747bFD65F08deb54cb465eB87D40e51B197E",
-    "statement": "CREATE TABLE mytable (column_a int, column_b text);"
+    "id": "0",
+    "description": "tableland rocks!",
+    "controller": "0xbAb12215Ed94713A290e0c618fa8177fAb5eFd2D",
+    "statement": "CREATE TABLE myname (column_a int, column_b text);"
   }
 }
 ```
@@ -97,10 +97,10 @@ Currently, creating tables requires the caller to first mint a `TABLE` using the
 https -A bearer -a $TOKEN post https://testnet.tableland.network/rpc \
   jsonrpc=2.0 id=1 method=tableland_createTable \
   params:='[{
-    "tableId": "0",
-    "type": "mytabletype",
-    "controller": "0xbDA5747bFD65F08deb54cb465eB87D40e51B197E",
-    "statement": "CREATE TABLE mytable (column_a int, column_b text);"
+    "id": "0",
+    "description": "tableland rocks!",
+    "controller": "0xbAb12215Ed94713A290e0c618fa8177fAb5eFd2D",
+    "statement": "CREATE TABLE myname (column_a int, column_b text);"
   }]'
 ```
 {% endtab %}
@@ -115,10 +115,10 @@ curl --location --request POST 'https://testnet.tableland.network/rpc' \
     "method": "tableland_createTable", 
     "id" : 1,
     "params": [{
-        "tableId": "0",
-        "type": "mytabletype",
-        "controller": "0xbDA5747bFD65F08deb54cb465eB87D40e51B197E",
-        "statement": "CREATE TABLE mytable (column_a int, column_b text);"
+        "id": "0",
+        "description": "tableland rocks!"
+        "controller": "0xbAb12215Ed94713A290e0c618fa8177fAb5eFd2D",
+        "statement": "CREATE TABLE myname (column_a int, column_b text);"
     }]
 }'
 ```
@@ -132,10 +132,9 @@ curl --location --request POST 'https://testnet.tableland.network/rpc' \
 ```json
 {
   "jsonrpc": "2.0",
-  "id": "dontcare",
+  "id": "1",
   "result": {
-    "message": "Table created",
-    "data": null
+    "tablename": "myname_t0"
   }
 }
 ```
