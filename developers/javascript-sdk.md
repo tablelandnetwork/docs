@@ -12,7 +12,17 @@ Simply import the library, connect to the Tableland network, and you are ready t
 Interested in supporting additional chains and ecosystems? Create an Issue and let us know!
 {% endhint %}
 
-## Install
+## Setup
+
+There are just a few setup steps required before using the Javascript/Typescript SDK. Firstly, since all Tableland API calls are "gated" by Ethereum address, you'll need to request access as mentioned in Quick Start guide.
+
+{% content-ref url="quick-start.md" %}
+[quick-start.md](quick-start.md)
+{% endcontent-ref %}
+
+​ One you have registered your ETH address, you'll need to install the SDK in your project or web-app.
+
+### Install
 
 You can install the SDK via `npm` or `yarn`. You can also pull the ESM build via `cdn.skypack.dev` or other means.
 
