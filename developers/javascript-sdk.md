@@ -1,5 +1,5 @@
 ---
-description: API Reference for the integrated Javascript/Typescript Client/SDK.
+description: API Reference for the integrated Javascript/Typescript client/SDK.
 ---
 
 # Javascript SDK
@@ -41,7 +41,7 @@ https://cdn.skypack.dev/@textile/tableland
 {% endtabs %}
 
 {% hint style="info" %}
-**Note:** Currently only a Javascript/Typescript client is provided. Intersted in another language? Please get in touch and let us know what you'd like to see next!
+**Note:** Currently only a Javascript/Typescript client is provided. Interested in another language? Please get in touch and let us know what you'd like to see next!
 {% endhint %}
 
 ## Basic Usage

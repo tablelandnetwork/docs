@@ -4,10 +4,6 @@ description: The quick and easy way to start creating tables on Tableland.
 
 # Quick Start
 
-{% hint style="warning" %}
-These docs pages reflect an API and concept that is in early development. APIs and features are subject to dramatic changes without warning.
-{% endhint %}
-
 ## Get Access
 
 For now, Tableland API requests are authenticated by ETH address. Any request that doesn't include a self-signed access token that is tied to a per-registered ETH address will return an error.
@@ -27,7 +23,7 @@ You should now find two new channels that are visible to you in the `#Tableland`
 Next, jump into the `#🎟-creator-whitelist` channel and post your ETH public address.
 
 ```bash
-0x4cablahblahblahblahblahblahblahblahblah2
+0xbAb12215Ed94713A290e0c618fa8177fAb5eFd2D
 ```
 
 That's it! Your ETH address will be added to the access control list shortly. You’ll be able to use `#🔩-creator-chat` to share your project, find collaborators, learn from others, ask technical questions, or let us know about any issues you run into.
