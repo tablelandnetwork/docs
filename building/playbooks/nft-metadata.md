@@ -164,15 +164,13 @@ Tableland provides the special `uri` type for handling IPFS URIs. There is also 
 
 ## Gateway response
 
-With your ERC-721/1155 compliant table in place, it is just a matter of specifying a Tableland gateway URL for your token's `tokenURI` base URI. For example, using an NFT contract created using the [OpenZeppelin](https://openzeppelin.com/contracts) [Contracts Wizard](https://wizard.openzeppelin.com/#erc721), you can set the base URI to `https://testnet.tableland.network/tables/{table_id}` (which in our above example would have `{table_id}` set to `0`). This should generate the following code:
+With your ERC-721/1155 compliant table in place, it is just a matter of requesting the JSON data over the Tableland gateway. The JSON query URI looks something like this:
 
-```solidity
-function _baseURI() internal pure override returns (string memory) {
-    return "https://testnet.tableland.network/tables/0/";
-}
+```
+https://testnet.tableland.network/tables/{table_id}/id/{primary_key}
 ```
 
-In this case, the token id will automatically be appended to the end of the URI string when calling the `tokenURI` method of the smart contract. The response from that Tableland gateway URL is a JSONified version of the corresponding row of the table, which will be ERC-721 compliant token metadata:
+From our above example `{table_id}` becomes `0`, and `primary_key` is the token id of the target token. An example of the type of JSON output you get from this endpoint is given below.
 
 <details>
 
@@ -216,5 +214,15 @@ In this case, the token id will automatically be appended to the end of the URI 
 ```
 
 </details>
+
+The above Tableland gateway URL pattern becomes particularly useful when combined with your NFT smart contract's `tokenURI` method. For example, using an NFT contract created using the [OpenZeppelin](https://openzeppelin.com/contracts) [Contracts Wizard](https://wizard.openzeppelin.com/#erc721), you can set the base URI to `https://testnet.tableland.network/tables/{table_id}/id/`. This should generate the following code:
+
+```solidity
+function _baseURI() internal pure override returns (string memory) {
+    return "https://testnet.tableland.network/tables/0/id/";
+}
+```
+
+In this case, the token id will automatically be appended to the end of the URI string when calling the `tokenURI` method of the smart contract. The response from that Tableland gateway URL is a JSONified version of the corresponding row of the table, which will be ERC-721 compliant token metadata!
 
 And that's it! Now you have a mutable, secure source for maintaining NFT metadata!
