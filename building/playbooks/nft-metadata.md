@@ -168,7 +168,7 @@ With your ERC-721/1155 compliant table in place, it is just a matter of specifyi
 
 ```solidity
 function _baseURI() internal pure override returns (string memory) {
-    return "https://testnet.tableland.network/tables/{table_id}/";
+    return "https://testnet.tableland.network/tables/0/";
 }
 ```
 
