@@ -1,6 +1,6 @@
 # Table of contents
 
-* [Tableland](README.md)
+* [TABLELAND](README.md)
 
 ## General
 
