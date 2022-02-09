@@ -134,7 +134,7 @@ curl --location --request POST 'https://testnet.tableland.network/rpc' \
   "jsonrpc": "2.0",
   "id": "1",
   "result": {
-    "tablename": "myname_t0"
+    "tablename": "myname_0"
   }
 }
 ```
