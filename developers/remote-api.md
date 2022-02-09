@@ -143,7 +143,7 @@ curl --location --request POST 'https://testnet.tableland.network/rpc' \
 
 ### Running SQL
 
-Now that we have a table to work with, it is easy to use vanilla SQL statements to insert new rows, update existing rows, delete old rows, and even query the whole thing! See [#mutating-tables](javascript-sdk.md#mutating-tables "mention") and [#querying-tables](javascript-sdk.md#querying-tables "mention") from the [javascript-sdk.md](javascript-sdk.md "mention") docs for further details. The key thing to keep in mind when working with tables is that you must specify the table name that you get back from the `tableland_createTable` response. So the above example would require you to query the `myname_t0`  table (the `myname` prefix _is_ actually optional).
+Now that we have a table to work with, it is easy to use vanilla SQL statements to insert new rows, update existing rows, delete old rows, and even query the whole thing! See [#mutating-tables](javascript-sdk.md#mutating-tables "mention") and [#querying-tables](javascript-sdk.md#querying-tables "mention") from the [javascript-sdk.md](javascript-sdk.md "mention") docs for further details. The key thing to keep in mind when working with tables is that you must specify the table name that you get back from the `tableland_createTable` response. So the above example would require you to query the `myname_0`  table (the `myname` prefix _is_ actually optional).
 
 #### tableland\_runSQL
 
@@ -161,7 +161,7 @@ Now that we have a table to work with, it is easy to use vanilla SQL statements 
   "id": 1,
   "params": {
     "controller": "0xbAb12215Ed94713A290e0c618fa8177fAb5eFd2D",
-    "statement": "SELECT * FROM myname_t0;"
+    "statement": "SELECT * FROM myname_0;"
   }
 }
 ```
@@ -173,7 +173,7 @@ https -A bearer -a $TOKEN post https://testnet.tableland.network/rpc \
   jsonrpc=2.0 id=1 method=tableland_runSQL \
   params:='[{
     "controller": "0xbAb12215Ed94713A290e0c618fa8177fAb5eFd2D",
-    "statement": "SELECT * FROM myname_t0;"
+    "statement": "SELECT * FROM myname_0;"
   }]'
 ```
 {% endtab %}
@@ -189,7 +189,7 @@ curl --location --request POST 'https://testnet.tableland.network/rpc' \
     "id" : 1,
     "params": [{
         "controller": "0xbAb12215Ed94713A290e0c618fa8177fAb5eFd2D",
-        "statement": "SELECT * FROM myname_t0;"
+        "statement": "SELECT * FROM myname_0;"
     }]
 }'
 ```
