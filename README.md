@@ -1,8 +1,10 @@
 ---
 description: Build dApps, NFTs, and metaverse content using familiar SQL.
+cover: .gitbook/assets/Screen_Shot_2022-02-09_at_1.59.24_PM_copy.png
+coverY: 0
 ---
 
-# Tableland
+# TABLELAND
 
 Welcome to Tableland! Here you'll find all sorts of useful resources for interacting with our community, our APIs, and our network in general. Whatever your interests, we think there's a home for you here on Tableland.
 
