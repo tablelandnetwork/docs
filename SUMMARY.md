@@ -25,4 +25,4 @@
   * [NFT Metadata](building/playbooks/nft-metadata.md)
 * [ETH Denver](building/eth-denver.md)
 * [Grants](building/grants.md)
-* [Usecases](building/usecases.md)
+* [Use-cases](building/use-cases.md)
