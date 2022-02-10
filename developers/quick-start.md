@@ -36,7 +36,7 @@ Only ever share you _public_ address. We will never DM you and we will never ask
 
 The best way to interact and play with our API is to use our official playground tools.
 
-{% embed url="https://codepen.io/carsonfarmer/pen/MWOmwex?editors=0012" %}
+{% embed url="https://codepen.io/carsonfarmer/pen/MWOmwex" %}
 
 ## Build with our SDK
 
