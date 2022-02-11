@@ -21,8 +21,8 @@
 
 ## Building
 
+* [ETH Denver](building/eth-denver.md)
 * [Playbooks](building/playbooks/README.md)
   * [NFT Metadata](building/playbooks/nft-metadata.md)
-* [ETH Denver](building/eth-denver.md)
 * [Grants](building/grants.md)
 * [Use-cases](building/use-cases.md)
