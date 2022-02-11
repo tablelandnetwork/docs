@@ -6,7 +6,7 @@ description: Everything you need to know about Tableland at ETH Denver 2022.
 
 Textile is proud to be returning as an official sponsor for [ETH Denver 2022](https://www.ethdenver.com). We are giving away up to $15,000 USD in bounties to the best hacks that build on our Tableland MVP.
 
-Check out our bounty video here:
+
 
 
 
