@@ -11,3 +11,8 @@ Textile is excited to be launching a whole new way to improve the decentralized 
 Imagine storing everything from tokenURI metadata, to NFT extensions, to DAO role-based tools, in relational tables. Tables can be owned and controlled by anyone on the ETH network, plus they come with built-in NFT access control super powers.
 
 The MVP we are launching this week is the gateway for devs to create and use tables from ETH. We also have $15k in bounties to throw at you, plus a ton of super secret drops and perks for folks who are among the earliest to build on the protocol.
+
+
+
+Let's add a section here about limits?
+
