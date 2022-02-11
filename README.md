@@ -1,5 +1,5 @@
 ---
-description: Build dApps, NFTs, and metaverse content using familiar SQL.
+description: Build for web3 using familiar SQL.
 cover: .gitbook/assets/Screen_Shot_2022-02-09_at_1.59.24_PM_copy.png
 coverY: 0
 ---
