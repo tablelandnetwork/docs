@@ -4,6 +4,7 @@
 
 ## General
 
+* [Partners](general/partners.md)
 * [What is Tableland?](general/what-is-tableland.md)
 * [Community](general/community/README.md)
   * [Getting Help](general/community/getting-help/README.md)
