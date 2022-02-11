@@ -136,7 +136,7 @@ CREATE TABLE myToken OF erc721_metadata (
 );
 ```
 
-This will create a table (say with the name `MyToken_0` ) with the following column specification (with `id` as the primary key). See [javascript-sdk.md](../../developers/javascript-sdk.md "mention") for details on how to create a table using the Javascript SDK from within your app.
+This will create a table (say with the name `MyToken_0` ) with the following column specification (with `id` as the primary key). See [javascript-sdk.md](../../building/javascript-sdk.md "mention") for details on how to create a table using the Javascript SDK from within your app.
 
 ```sql
 -- This is just the table type definition for references

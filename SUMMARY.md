@@ -13,17 +13,17 @@
 * [Partners](general/partners.md)
 * [Code of Conduct](general/code-of-conduct.md)
 
-## Developers
-
-* [Quick Start](developers/quick-start.md)
-* [Javascript SDK](developers/javascript-sdk.md)
-* [Remote API](developers/remote-api.md)
-* [Demos & Examples](developers/demos-and-examples.md)
-
 ## Building
 
-* [ETH Denver](building/eth-denver.md)
-* [Playbooks](building/playbooks/README.md)
-  * [NFT Metadata](building/playbooks/nft-metadata.md)
-* [Grants](building/grants.md)
-* [Use-cases](building/use-cases.md)
+* [Quick Start](building/quick-start.md)
+* [Javascript SDK](building/javascript-sdk.md)
+* [Remote API](building/remote-api.md)
+* [Demos & Examples](building/demos-and-examples.md)
+
+## Developers
+
+* [ETH Denver](developers/eth-denver.md)
+* [Playbooks](developers/playbooks/README.md)
+  * [NFT Metadata](developers/playbooks/nft-metadata.md)
+* [Grants](developers/grants.md)
+* [Use-cases](developers/use-cases.md)

@@ -12,8 +12,8 @@ The first thing you're going to want to do is join our discord and jump into the
 
 Take a look at the quick start guide for details on getting access and more.
 
-{% content-ref url="../developers/quick-start.md" %}
-[quick-start.md](../developers/quick-start.md)
+{% content-ref url="../building/quick-start.md" %}
+[quick-start.md](../building/quick-start.md)
 {% endcontent-ref %}
 
 ## Building&#x20;

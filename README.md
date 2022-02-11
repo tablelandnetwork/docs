@@ -1,5 +1,5 @@
 ---
-description: Build for web3 using familiar SQL.
+description: Build web3 with SQL
 cover: .gitbook/assets/Screen_Shot_2022-02-09_at_1.59.24_PM_copy.png
 coverY: 0
 ---
@@ -12,8 +12,8 @@ Welcome to Tableland! Here you'll find all sorts of useful resources for interac
 
 Ready to start building? Check out the content on the left for demos and examples, details about our Javascript/Typescript SDK and Tableland remote RPC API, and a whole lot more. Start with our Quick Start guide and get building!
 
-{% content-ref url="developers/quick-start.md" %}
-[quick-start.md](developers/quick-start.md)
+{% content-ref url="building/quick-start.md" %}
+[quick-start.md](building/quick-start.md)
 {% endcontent-ref %}
 
 ## General
@@ -28,8 +28,8 @@ Want to learn more about Tableland, or engage with our amazing community? Dig in
 
 Are you building a hack or demo for ETH Denver? Maybe you have an idea or usecase for Tableland that you'd like to explore? Check out our grants page for details, or skip to our ETH Denver page for information on early access for hacking on Tableland.
 
-{% content-ref url="building/eth-denver.md" %}
-[eth-denver.md](building/eth-denver.md)
+{% content-ref url="developers/eth-denver.md" %}
+[eth-denver.md](developers/eth-denver.md)
 {% endcontent-ref %}
 
 ## Jump in!
