@@ -36,9 +36,7 @@ That's it! Your ETH address will be added to the access control list shortly. Yo
 
 The best way to interact and play with our API is to use our official playground tools. You can test out a simple interactive terminal for querying tables on Tableland below.
 
-{% embed url="https://codepen.io/carsonfarmer/pen/BamZdLN" %}
-Interactive "terminal" to query Tableland tables.
-{% endembed %}
+{% embed url="https://codepen.io/carsonfarmer/pen/BamZJEQ" %}
 
 Or jump on over to [our website](https://tableland.xyz) where you can play with our integrated testnet Terminal. Finally, you can play with this Javascript console-based environment to learn how to use the Javascript SDK.
 

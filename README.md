@@ -1,7 +1,7 @@
 ---
 description: Build web3 with SQL
 cover: .gitbook/assets/Screen_Shot_2022-02-09_at_1.59.24_PM_copy.png
-coverY: 0
+coverY: 37.70848440899203
 ---
 
 # TABLELAND
