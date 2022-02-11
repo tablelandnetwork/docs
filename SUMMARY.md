@@ -4,13 +4,13 @@
 
 ## General
 
-* [Partners](general/partners.md)
 * [What is Tableland?](general/what-is-tableland.md)
 * [Community](general/community/README.md)
   * [Getting Help](general/community/getting-help/README.md)
     * [Bug Reports 101](general/community/getting-help/bug-reports-101.md)
     * [Feature Requests 101](general/community/getting-help/feature-requests-101.md)
   * [Textile Blog](https://blog.textile.io)
+* [Partners](general/partners.md)
 * [Code of Conduct](general/code-of-conduct.md)
 
 ## Developers
