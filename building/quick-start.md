@@ -16,27 +16,31 @@ You can gain access to the Tableland MVP by joining our Discord. While you're th
 Tableland is currently in private beta, so to join you’ll need to do a few more steps! Having trouble getting access? One of the core Tableland developer team members will be happy to help. Just ask in #general or #support!
 {% endhint %}
 
-Once you've joined the Discord server and gone through the validation steps, you can sign up for API access by letting us know if you are hacking at ETH Denver in the `#news` channel (follow the instructions in the comment and react with the :crown: emoji). This will set you up with the _Creator_ role.
+Once you've joined the Discord server and gone through the validation steps, you can sign up for API access by letting us know if you are hacking at ETH Denver in the `#💻-ethden-lounge` channel (follow the instructions in the comment and react with the :gem: emoji). This will set you up with the _Creator_ role.
 
 You should now find two new channels that are visible to you in the `#Tableland` category. Congrats, you are now a Tableland Creator :muscle:.
 
-Next, jump into the `#🎟-creator-whitelist` channel and post your ETH public address.
+Next, jump into the `#🎟-creator-whitelist` channel and post your ETH public address. It should look something like this:
 
 ```bash
 0xbAb12215Ed94713A290e0c618fa8177fAb5eFd2D
 ```
 
-That's it! Your ETH address will be added to the access control list shortly. You’ll be able to use `#🔩-creator-chat` to share your project, find collaborators, learn from others, ask technical questions, or let us know about any issues you run into.
-
 {% hint style="danger" %}
 Only ever share you _public_ address. We will never DM you and we will never ask you for your secrets, private keys, passwords, or phrases. Be diligent, and report scammers and spammers.
 {% endhint %}
 
+That's it! Your ETH address will be added to the access control list shortly. You’ll be able to use `#🔩-creator-chat` to share your project, find collaborators, learn from others, ask technical questions, or let us know about any issues you run into. We'll also be posting periodic updates in the `#🚥-creator-updates`, so stay tuned!
+
 ## Play with our Terminal
 
-The best way to interact and play with our API is to use our official playground tools.
+The best way to interact and play with our API is to use our official playground tools. You can test out a simple interactive terminal for querying tables on Tableland below.
 
-{% embed url="https://codepen.io/carsonfarmer/pen/MWOmwex" %}
+{% embed url="https://codepen.io/carsonfarmer/pen/BamZdLN" %}
+Interactive "terminal" to query Tableland tables.
+{% endembed %}
+
+Or jump on over to [our website](https://tableland.xyz) where you can play with our integrated testnet Terminal. Finally, you can play with this Javascript console-based environment to learn how to use the Javascript SDK.
 
 ## Build with our SDK
 
