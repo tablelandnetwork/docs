@@ -25,6 +25,7 @@
 
 * [ETH Denver](developers/eth-denver.md)
 * [Playbooks](developers/playbooks/README.md)
+  * [Key Value Storage](developers/playbooks/key-value-storage.md)
   * [NFT Metadata](developers/playbooks/nft-metadata.md)
 * [Grants](developers/grants.md)
 * [Use-cases](developers/use-cases.md)
