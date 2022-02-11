@@ -28,3 +28,4 @@
   * [NFT Metadata](developers/playbooks/nft-metadata.md)
 * [Grants](developers/grants.md)
 * [Use-cases](developers/use-cases.md)
+* [Limits](developers/limits.md)
