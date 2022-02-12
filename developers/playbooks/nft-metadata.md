@@ -1,10 +1,10 @@
 ---
-description: Launch your next Non-Fungible Token project with metadata stored on Tableland.
+description: Launch your next NFT project with metadata stored on Tableland.
 ---
 
 # NFT Metadata
 
-Today, the primary standards for NFTs are the [Ethereum ERC-721 Non-Fungible Token Standard](https://eips.ethereum.org/EIPS/eip-721), and the more recent [Ethereum ERC-1155 Multi Token Standard](https://eips.ethereum.org/EIPS/eip-1155). Platforms such as OpenSea have adopted these NFT standards, along with [modifications of their own](https://docs.opensea.io/docs/metadata-standards), to support a wide range of NFT projects. For the purposes of this document, the most important features of these NFT standards are their treatment of token metadata, and the standards around that metadata.
+Today, the primary standards for Non-Fungible Tokens are the [Ethereum ERC-721 Non-Fungible Token Standard](https://eips.ethereum.org/EIPS/eip-721), and the more recent [Ethereum ERC-1155 Multi Token Standard](https://eips.ethereum.org/EIPS/eip-1155). Platforms such as OpenSea have adopted these NFT standards, along with [modifications of their own](https://docs.opensea.io/docs/metadata-standards), to support a wide range of NFT projects. For the purposes of this document, the most important features of these NFT standards are their treatment of token metadata, and the standards around that metadata.
 
 {% hint style="info" %}
 The following is taken liberally from this [IPFS NFT docs page](https://docs.ipfs.io/how-to/best-practices-for-nft-data/#types-of-ipfs-links-and-when-to-use-them).
