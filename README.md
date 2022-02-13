@@ -20,8 +20,8 @@ Ready to start building? Check out the content on the left for demos and example
 
 Want to learn more about Tableland, or engage with our amazing community? Dig into our general reference materials on the left, or start with a high-level overview of the Tableland network below.
 
-{% content-ref url="general/what-is-tableland.md" %}
-[what-is-tableland.md](general/what-is-tableland.md)
+{% content-ref url="general/what-is-tableland/" %}
+[what-is-tableland](general/what-is-tableland/)
 {% endcontent-ref %}
 
 ## Building

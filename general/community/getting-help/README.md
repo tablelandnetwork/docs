@@ -10,8 +10,8 @@ The following is a set of guidelines for getting help in and around Tableland. W
 
 This project and everyone participating in it is governed by the Contributor Covenant Code of Conduct. By participating, you are expected to uphold this code. Please check out our code of conduct for details.
 
-{% content-ref url="../../code-of-conduct.md" %}
-[code-of-conduct.md](../../code-of-conduct.md)
+{% content-ref url="../code-of-conduct.md" %}
+[code-of-conduct.md](../code-of-conduct.md)
 {% endcontent-ref %}
 
 ### Questions&#x20;
