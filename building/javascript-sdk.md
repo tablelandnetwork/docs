@@ -49,7 +49,7 @@ https://cdn.skypack.dev/@textile/tableland
 Most common Tableland usage patterns will follow something like the following. In general, you'll need to **connect**, **create**, **mutate**, and **query** your tables. In that order :smile:.
 
 {% tabs %}
-{% tab title="Node" %}
+{% tab title="JS" %}
 ```typescript
 import { connect } from "@textile/tableland";
 
@@ -64,18 +64,31 @@ res = await tbl.query(`SELECT * FROM ${id}`);
 ```
 {% endtab %}
 
+{% tab title="Node" %}
+```javascript
+import { Wallet } from "ethers";
+import { connect } from "@textile/tableland";
+// Since we don't have Metamask, you need to supply a private key directly
+const privateKey = "somePrivateKeyString";
+const signer = new Wallet(privateKey);
+const tbl = await connect({ network: "testnet", signer });
+
+let res = await tbl.query(`INSERT INTO ${id} (id, name) VALUES (0, 'Bobby Tables');`);
+
+res = await tbl.query(`SELECT * FROM ${id}`);
+```
+{% endtab %}
+
 {% tab title="Browser" %}
 ```html
 <script type="module">
 import { connect } from "https://cdn.skypack.dev/@textile/tableland";
 
 const tbl = await connect({ network: "testnet" });
-
 let id = await tbl.create(
   `CREATE TABLE mytable (name text, id int, primary key (id))`
 );
 let res = await tbl.query(`INSERT INTO ${id} (id, name) VALUES (0, 'Bobby Tables');`);
-
 res = await tbl.query(`SELECT * FROM ${id}`);
 </script>
 ```
