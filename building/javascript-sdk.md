@@ -204,6 +204,6 @@ for (const [rowId, row] of Object.entries(rows)) {
 
 And now you're ready to start building your next web3 experience with Tableland! If you want to dive deeper, you can check out the [full API documentation here](https://textileio.github.io/js-tableland/), or check out some of our demos and examples:
 
-{% content-ref url="demos-and-examples.md" %}
-[demos-and-examples.md](demos-and-examples.md)
+{% content-ref url="examples/" %}
+[examples](examples/)
 {% endcontent-ref %}

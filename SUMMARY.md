@@ -20,14 +20,15 @@
 * [Quick Start](building/quick-start.md)
 * [Javascript SDK](building/javascript-sdk.md)
 * [Remote API](building/remote-api.md)
-* [Demos & Examples](building/demos-and-examples.md)
+* [Examples](building/examples/README.md)
+  * [Demos](building/examples/demos.md)
+  * [Playbooks](building/examples/playbooks/README.md)
+    * [Key Value Storage](building/examples/playbooks/key-value-storage.md)
+    * [NFT Metadata](building/examples/playbooks/nft-metadata.md)
 
 ## Developers
 
 * [ETH Denver](developers/eth-denver.md)
-* [Playbooks](developers/playbooks/README.md)
-  * [Key Value Storage](developers/playbooks/key-value-storage.md)
-  * [NFT Metadata](developers/playbooks/nft-metadata.md)
 * [Grants](developers/grants.md)
 * [Use-cases](developers/use-cases.md)
 * [Limits](developers/limits.md)

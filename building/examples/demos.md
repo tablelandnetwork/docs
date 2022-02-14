@@ -2,7 +2,7 @@
 description: Example apps and demos that showcase Tableland usage
 ---
 
-# Demos & Examples
+# Demos
 
 ## Official Examples
 

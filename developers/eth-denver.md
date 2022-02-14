@@ -18,8 +18,8 @@ Take a look at the quick start guide for details on getting access and more.
 
 ## Building&#x20;
 
-{% content-ref url="playbooks/" %}
-[playbooks](playbooks/)
+{% content-ref url="../building/examples/playbooks/" %}
+[playbooks](../building/examples/playbooks/)
 {% endcontent-ref %}
 
 Need some inspiration? Check out some use-cases that can be built on Tableland.

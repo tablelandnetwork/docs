@@ -267,7 +267,7 @@ curl -s https://testnet.tableland.network/tables/controller/0xbAb12215Ed94713A29
 {% endtab %}
 {% endtabs %}
 
-Now you know everything you need to know to interact with the low-level REST and RPC APIs provided by the Tableland network. Next, take a look at our [demos-and-examples.md](demos-and-examples.md "mention"), just start building your own application. While you're at it, jump over to our community resources and let us konw what you're up to!
+Now you know everything you need to know to interact with the low-level REST and RPC APIs provided by the Tableland network. Next, take a look at our [examples](examples/ "mention"), just start building your own application. While you're at it, jump over to our community resources and let us konw what you're up to!
 
 {% content-ref url="../general/community/" %}
 [community](../general/community/)
