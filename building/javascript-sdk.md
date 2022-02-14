@@ -58,7 +58,7 @@ const tbl = await connect({ network: "testnet" });
 let id = await tbl.create(
   `CREATE TABLE mytable (name text, id int, primary key (id))`
 );
-let res = await tbl.query(`INSERT (firstname) VALUES ('Murray' INTO ${id})`);
+let res = await tbl.query(`INSERT INTO ${id} (id, name) VALUES (0, 'Bobby Tables');`);
 
 res = await tbl.query(`SELECT * FROM ${id}`);
 ```
@@ -74,7 +74,7 @@ const tbl = await connect({ network: "testnet" });
 let id = await tbl.create(
   `CREATE TABLE mytable (name text, id int, primary key (id))`
 );
-let res = await tbl.query(`INSERT (firstname) VALUES ('Murray' INTO ${id})`);
+let res = await tbl.query(`INSERT INTO ${id} (id, name) VALUES (0, 'Bobby Tables');`);
 
 res = await tbl.query(`SELECT * FROM ${id}`);
 </script>
