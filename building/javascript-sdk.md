@@ -107,12 +107,28 @@ The `connect` function can be used to connect to a remote Tableland host, which 
 
 Upon calling `connect`, the user will be prompted to sign a self-signed JSON web token. This token is used to verify ownership of the given Ethereum address, and to avoid the user having to sign subsequent Tableland transactions/method calls.
 
+{% tabs %}
+{% tab title="JS" %}
 ```typescript
 import { connect } from "@textile/tableland";
 
 // By default, connect uses the tableland testnet validator
+// It will sign a token via Metamask
 const tbl = await connect({ network: "testnet" });
 ```
+{% endtab %}
+
+{% tab title="Node" %}
+```typescript
+import { Wallet } from "ethers";
+import { connect } from "@textile/tableland";
+// Since we don't have Metamask, supply the private key string directly
+const privateKey = "somePrivateKeyString";
+const signer = new Wallet(privateKey);
+const tbl = await connect({ signer, network: "testnet" });
+```
+{% endtab %}
+{% endtabs %}
 
 ### Creating Tables
 
