@@ -4,8 +4,8 @@
 
 ## General
 
-* [What is Tableland?](general/what-is-tableland/README.md)
-  * [Roadmap](general/what-is-tableland/roadmap.md)
+* [What is Tableland?](general/what-is-tableland.md)
+* [Roadmap](general/roadmap.md)
 * [Community](general/community/README.md)
   * [Partners](general/community/partners.md)
   * [Textile Blog](https://blog.textile.io)

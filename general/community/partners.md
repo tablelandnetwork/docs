@@ -6,6 +6,5 @@ description: >-
 
 # Partners
 
+TODO
 
-
-Tableland is the right tool for many use-cases. Our team has compiled a few well-known use-cases for ideas and inspiration. Have a use-case you want to explore? Get in touch and let us know!
