@@ -116,7 +116,7 @@ curl --location --request POST 'https://testnet.tableland.network/rpc' \
     "id" : 1,
     "params": [{
         "id": "0",
-        "description": "tableland rocks!"
+        "description": "tableland rocks!",
         "controller": "0xbAb12215Ed94713A290e0c618fa8177fAb5eFd2D",
         "statement": "CREATE TABLE myname (column_a int, column_b text);"
     }]
