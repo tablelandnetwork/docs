@@ -10,13 +10,13 @@ A series of demos and examples created by the core Tableland development team. T
 
 ### Tableland Examples Apps
 
-This repo contains fork-able proof-of-concept frontends built on Tableland.
+This repo contains fork-able proof-of-concept front-ends built on Tableland by the Tableland team. Click on the links to view a live demo deployed to IPFS via Textile Buckets.
 
-* **Todo App** - The classic todo app, built with tables!
-* **Synthetic Loot Game** - A fun game extension that uses tables to imbue special properties on [Synthetic Loot](https://www.lootproject.com/synthloot).
+* ****[**Todo App**](https://bafzbeief5apdktj25lyoobv6kcity4icgoya5etklxxixkaugcmttetafm.textile.space) - The classic todo app, built with tables!
+* ****[**Synthetic Loot Game**](https://bafzbeicm4qjen5wyhzpxowmkb7m35zv75apudw4gxgd3fulioiuqaq3lzu.textile.space) **** - A fun game extension that uses tables to imbue special properties on [Synthetic Loot](https://www.lootproject.com/synthloot).
 * and more...
 
-Clone the repo to get started:
+Wanna play around with the demos? Clone the repo to get started, and dig right in!
 
 {% embed url="https://github.com/textileio/tableland-example-apps" %}
 tableland-example-apps GitHub repo
