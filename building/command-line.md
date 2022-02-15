@@ -198,29 +198,109 @@ export TBL_ALCHEMY=fblahblah-Osoethingd0MeXJ
 export TBL_PRIVATE_KEY=myhexstringprivatekeystringthatissecret
 ```
 
-Creating a table is generally the first thing we'll do, so let's start with something simple:
+Creating a table is generally the first thing we'll do, so let's start with something simple (note that this is an on-chain event, and so can take a while to complete):
 
+{% tabs %}
+{% tab title="Input" %}
 ```
-tableland create "create table demo ( id int, name text, primary key (id));" --description="tableland rocks!"
+tableland create "create table demo ( id int, name text, primary key (id));" --description="tableland rocks"
 ```
+{% endtab %}
 
-Now that we've done that, let's list our tables, and then we'll grab some information about the above table:
+{% tab title="Output" %}
+```json
+{
+  "name": "demo_55"
+}
+```
+{% endtab %}
+{% endtabs %}
 
+Now that we've done that, let's list our tables, and then we'll grab some information about the above table.
+
+{% hint style="warning" %}
+You might need to `unset` your previous `TBL_ALCHEMY` env var.
+{% endhint %}
+
+{% tabs %}
+{% tab title="Input" %}
 ```
 tableland list
 ```
+{% endtab %}
 
-Make note of the table id of the previously created table from the create or list statements. We'll use that id in the next command:
-
+{% tab title="Output" %}
+```json
+[
+  {
+    "controller": "0xbAb12215Ed94713A290e0c618fa8177fAb5eFd2D",
+    "name": "demo_55",
+    "description": "tableland rocks",
+    "structure": "40eef2d5ae0737569bf8fec3227e7c851637b0dd3d4b1c6b807e55d00cd02399",
+    "created_at": "2022-02-15T07:21:08.008025Z"
+  }
+]
 ```
-tableland info xx
+{% endtab %}
+{% endtabs %}
+
+Make note of the table id of the previously created table (here we had 55) from the create or list statements. We'll use that id in the next command:
+
+{% tabs %}
+{% tab title="Input" %}
 ```
+tableland info 55
+```
+{% endtab %}
 
-Ok, now we're going to create a JWT to use for querying and mutating the table on Tableland. Recall that we specified our privateKey argument previously, which is what will be used to signed the JWT now:
+{% tab title="Output" %}
+```json
+{
+  "name": "demo_55",
+  "description": "tablelnd rocks",
+  "external_url": "https://testnet.tableland.network/tables/55",
+  "image": "https://bafkreifhuhrjhzbj4onqgbrmhpysk2mop2jimvdvfut6taiyzt2yqzt43a.ipfs.dweb.link",
+  "attributes": [
+    {
+      "display_type": "date",
+      "trait_type": "created",
+      "value": 1644909668
+    }
+  ]
+}
+```
+{% endtab %}
+{% endtabs %}
 
+Ok, now we're going to create a JWT to use for querying and mutating the table on Tableland. Recall that we specified our `privateKey` argument previously, which is what will be used to signed the JWT now:
+
+{% tabs %}
+{% tab title="Input" %}
 ```
 tableland jwt
 ```
+{% endtab %}
+
+{% tab title="Output" %}
+```json
+{
+  "token": "theverylong.tokenstring.thatwecreated",
+  "claims": {
+    "nbf": 1644910264,
+    "iat": 1644910274,
+    "exp": 1644946274,
+    "iss": "0xbAb12215Ed94713A290e0c618fa8177fAb5eFd2D",
+    "sub": "0xbAb12215Ed94713A290e0c618fa8177fAb5eFd2D"
+  },
+  "header": {
+    "typ": "JWT",
+    "alg": "ETH",
+    "kid": "eth:unknown:0xbAb12215Ed94713A290e0c618fa8177fAb5eFd2D"
+  }
+}
+```
+{% endtab %}
+{% endtabs %}
 
 We only need to hang on to the `token` value itself from the above command. We can use `jq` to extract that part, and export it for future ease of use:
 
@@ -231,21 +311,75 @@ export TBL_TOKEN=<theverylong.tokenstring.thatwecreated>
 
 Finally, we can start querying and mutating our table using the `query` command. We'll start with a basic `insert` and then `select` to showcase that it really is working:
 
+{% tabs %}
+{% tab title="Input" %}
 ```
-tableland query "insert into demo_xx values (0, 'Bobby Tables');"
+tableland query "insert into demo_55 values (0, 'Bobby Tables');"
 ```
+{% endtab %}
+
+{% tab title="Output" %}
+```json
+{
+  "data": null
+}
+```
+{% endtab %}
+{% endtabs %}
 
 Ok, let's see if little Bobby Tables made it into our table on Tableland:
 
+{% tabs %}
+{% tab title="Input" %}
 ```
-tableland query "select * from demo_xx;"
+tableland query "select * from demo_55;"
 ```
+{% endtab %}
 
-Wooo hoo! You should now see some pretty JSON output with your column and row data. It is often nice to just pull out the bits you need using `jq`:
+{% tab title="Output" %}
+```json
+{
+  "data": {
+    "columns": [
+      {
+        "name": "id"
+      },
+      {
+        "name": "name"
+      }
+    ],
+    "rows": [
+      [
+        0,
+        "Bobby Tables"
+      ]
+    ]
+  }
+}
+```
+{% endtab %}
+{% endtabs %}
 
+Wooo hoo! You should now see some pretty JSON output with your `columns` and `rows` data. It is often nice to just pull out the bits you need using `jq`:
+
+{% tabs %}
+{% tab title="Input" %}
 ```
-tableland query "select * from demo_xx;" | jq '.rows'
+tableland query "select * from demo_55;" | jq '.data.rows'
 ```
+{% endtab %}
+
+{% tab title="Output" %}
+```json
+[
+  [
+    0,
+    "Bobby Tables"
+  ]
+]
+```
+{% endtab %}
+{% endtabs %}
 
 And there we have it, you are now ready to interact with your tables from the command line. Why not get going on that NFT project you've been meaning to start, backed by mutable NFT metadata on Tableland!
 
