@@ -58,6 +58,7 @@ const tbl = await connect({ network: "testnet" });
 let id = await tbl.create(
   `CREATE TABLE mytable (name text, id int, primary key (id))`
 );
+
 let res = await tbl.query(`INSERT INTO ${id} (id, name) VALUES (0, 'Bobby Tables');`);
 
 res = await tbl.query(`SELECT * FROM ${id}`);
@@ -66,15 +67,16 @@ res = await tbl.query(`SELECT * FROM ${id}`);
 
 {% tab title="Node" %}
 ```javascript
-import { Wallet } from "ethers";
+import { Wallet, providers } from "ethers";
 import { connect } from "@textile/tableland";
 // Since we don't have Metamask, you need to supply a private key directly
 const privateKey = "somePrivateKeyString";
-const signer = new Wallet(privateKey);
+const wallet = new Wallet(privateKey);
+// We also need an RPC provider to connec to
+const provider = new providers.AlchemyProvider("rinkeby", "myapikey");
+const signer = wallet.connect(provider);
 const tbl = await connect({ network: "testnet", signer });
-
 let res = await tbl.query(`INSERT INTO ${id} (id, name) VALUES (0, 'Bobby Tables');`);
-
 res = await tbl.query(`SELECT * FROM ${id}`);
 ```
 {% endtab %}
@@ -85,6 +87,7 @@ res = await tbl.query(`SELECT * FROM ${id}`);
 import { connect } from "https://cdn.skypack.dev/@textile/tableland";
 
 const tbl = await connect({ network: "testnet" });
+
 let id = await tbl.create(
   `CREATE TABLE mytable (name text, id int, primary key (id))`
 );
@@ -94,6 +97,10 @@ res = await tbl.query(`SELECT * FROM ${id}`);
 ```
 {% endtab %}
 {% endtabs %}
+
+{% hint style="info" %}
+The Tableland SDK uses the modern `fetch` API. When working in Node, it is therefore necessary to provide [global access to node-fetch](https://github.com/node-fetch/node-fetch#providing-global-access) to use the SDK.
+{% endhint %}
 
 ## API
 
