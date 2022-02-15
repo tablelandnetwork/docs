@@ -1,7 +1,5 @@
 ---
-description: >-
-  A network and SQL database protocol. Built for developers, NFT creators, and
-  web3 visionaries.
+description: Build web3 with SQL.
 ---
 
 # What is Tableland?

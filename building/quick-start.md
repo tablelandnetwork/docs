@@ -32,7 +32,7 @@ Only ever share you _public_ address. We will never DM you and we will never ask
 
 That's it! Your ETH address will be added to the access control list shortly. You’ll be able to use `#🔩-creator-chat` to share your project, find collaborators, learn from others, ask technical questions, or let us know about any issues you run into. We'll also be posting periodic updates in the `#🚥-creator-updates`, so stay tuned!
 
-## Play with our Terminal
+## Play in the Browser
 
 The best way to interact and play with our API is to use our official playground tools. You can test out a simple interactive terminal for querying tables on Tableland below.
 
@@ -42,7 +42,7 @@ Be sure to connect with Metamask before running queries in the demo below. Feel 
 
 {% embed url="https://codepen.io/carsonfarmer/pen/BamZJEQ" %}
 
-Or jump on over to [our website](https://tableland.xyz) where you can play with our integrated testnet Terminal. Finally, you can play with this Javascript console-based environment to learn how to use the Javascript SDK.
+Or jump on over to [our website](https://tableland.xyz) where you can play with our integrated testnet Terminal!
 
 ## Build with our SDK
 
@@ -58,4 +58,12 @@ If raw REST and RPC APIs are more your thing, then you might be more comfortable
 
 {% content-ref url="remote-api.md" %}
 [remote-api.md](remote-api.md)
+{% endcontent-ref %}
+
+## Tinker from the CLI
+
+Sometimes you just wanna type stuff into a terminal and observe the results. That's what the experimental command line tools for Tableland are for. Read on to get started playing with Tableland from the comfort of your command line.
+
+{% content-ref url="command-line.md" %}
+[command-line.md](command-line.md)
 {% endcontent-ref %}
