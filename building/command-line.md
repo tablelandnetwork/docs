@@ -41,17 +41,17 @@ npm install -g @textile/tableland-cli
 Most common Tableland usage patterns are possible via the command line. In general, you'll need to **connect**, **create**, **mutate**, and **query** your tables. In that order :smile:.
 
 ```bash
-➜ tableland --help               
+➜ tableland --help
 tableland [command]
 
 Commands:
-  tableland create <statement>              Run a query against a remote table
+  tableland create <statement>              Create a new unique table
   [description] [alchemy] [infura]
+  [etherscan]
   tableland info <id>                       Get info about a given table by id.
   tableland jwt                             Create a signed JWT token
   tableland list [controller]               List tables by controller
   tableland query <statement>               Run a query against a remote table
-  [description]
 
 Options:
       --help        Show help                                          [boolean]
@@ -59,6 +59,8 @@ Options:
   -k, --privateKey  Private key string                       [string] [required]
   -h, --host        Remote API host
                          [string] [default: "https://testnet.tableland.network"]
+      --network     The EVM compatible network to target (currently ignored)
+                                                   [string] [default: "rinkeby"]
 ```
 
 ## Commands
@@ -78,6 +80,8 @@ Options:
   -k, --privateKey  Private key string                       [string] [required]
   -h, --host        Remote API host
                          [string] [default: "https://testnet.tableland.network"]
+      --network     The EVM compatible network to target (currently ignored)
+                                                   [string] [default: "rinkeby"]
 ```
 
 {% hint style="info" %}
@@ -167,6 +171,8 @@ Options:
 ### query
 
 Run a query against a remote table
+
+Now that we have a table to work with, it is easy to use vanilla SQL statements to insert new rows, update existing rows, delete old rows, and even query the whole thing! See [#mutating-tables](javascript-sdk.md#mutating-tables "mention") and [#querying-tables](javascript-sdk.md#querying-tables "mention") from the [javascript-sdk.md](javascript-sdk.md "mention") docs for further details. The key thing to keep in mind when working with tables is that you must specify the table name that you get back from the `create` command.
 
 ```
 Positionals:
