@@ -4,7 +4,7 @@ description: Tableland is just getting started! Read about our plans and next st
 
 # Roadmap
 
-Tableland is building with the [progressive decentralization](https://variant.fund/writing/progressive-decentralization-a-playbook-for-building) playbook. While the principals therein are most often applied to _decentralized apps_, they also make sense for a _decentralized network_ like Tableland that builds off existing blockchains:
+Tableland is building with the [progressive decentralization](https://variant.fund/writing/progressive-decentralization-a-playbook-for-building) playbook. While the principles therein are most often applied to _decentralized apps_, they also make sense for a _decentralized network_ like Tableland that builds off existing blockchains:
 
 1. Product/market fit
 2. Community participation
