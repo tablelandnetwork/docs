@@ -82,12 +82,12 @@ Currently, creating tables requires the caller to first mint a `TABLE` using the
   "jsonrpc": "2.0",
   "method": "tableland_createTable",
   "id": 1,
-  "params": {
+  "params": [{
     "id": "0",
     "description": "tableland rocks!",
     "controller": "0xbAb12215Ed94713A290e0c618fa8177fAb5eFd2D",
     "statement": "CREATE TABLE myname (column_a int, column_b text);"
-  }
+  }]
 }
 ```
 {% endtab %}
