@@ -159,10 +159,10 @@ Now that we have a table to work with, it is easy to use vanilla SQL statements 
   "jsonrpc": "2.0",
   "method": "tableland_runSQL",
   "id": 1,
-  "params": {
+  "params": [{
     "controller": "0xbAb12215Ed94713A290e0c618fa8177fAb5eFd2D",
     "statement": "SELECT * FROM myname_0;"
-  }
+  }]
 }
 ```
 {% endtab %}
