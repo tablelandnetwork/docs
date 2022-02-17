@@ -223,7 +223,7 @@ While rows can be deleted from the table state, row information will remain in t
 Finally, the moment we've all been waiting for; we are ready to query our table state! You already have all the tools required to get this done. Simply use the `query` function imported previously to query the latest table state. Currently, queries are extremely flexible in Tableland. You have most SQL query features available to craft your query, though the most common will likely be the classic `SELECT * FROM` pattern shown here:
 
 ```typescript
-const { rows, columns } = await tbl.query(`SELECT * FROM ${id};`);
+const { data: { rows, columns }} = await tbl.query(`SELECT * FROM ${id};`);
 ```
 
 The response from a read query contains a `ReadQueryResult` object, with properties for `columns` and `rows`. The `columns` property contains an enumerated array of column ids and their corresponding `ColumnDescriptor` information. The `rows` property is an array of row-wise table data. The rows can be iterated over and used to populate UIs etc.
