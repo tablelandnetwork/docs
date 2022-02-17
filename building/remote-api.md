@@ -20,7 +20,7 @@ One you have registered your ETH address, you'll need to generate a self-signed 
 
 The following [codepen.io demo](https://codepen.io/carsonfarmer/pen/zYPBVbO) can be used to generate a JWT token using a Metamask-enabled browser. Simply run the demo and select the output token text. This can then be set on the CLI to be included in all RPC calls (see below).
 
-{% embed url="https://codepen.io/carsonfarmer/pen/zYPBVbO" %}
+{% embed url="https://codepen.io/asutula/pen/dyZJeKV" %}
 
 With a JWT token in hand (and access already granted via Discord), you are ready to start making RPC calls. The following settings are needed when interacting with the Tableland network RPC APIs.&#x20;
 
