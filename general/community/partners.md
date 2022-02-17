@@ -6,5 +6,8 @@ description: >-
 
 # Partners
 
-TODO
+****[**Filecoin**](https://filecoin.io)****
 
+****[**LitProtocol**](https://litprotocol.com)****
+
+[You? Let us know on Discord](https://discord.gg/7WDqyanQ)
