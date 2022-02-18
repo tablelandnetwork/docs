@@ -153,7 +153,12 @@ CREATE TABLE MyToken (
 To insert new token metadata into the table is now as easy as:
 
 ```
-INSERT INTO MyToken_0 (id, name, image) VALUES (0, 'Token 0', 'ipfs://QmHash');
+INSERT INTO MyToken_0 (id, name, image, description) VALUES (
+    0,
+    'Little Bobby Tables',
+    'ipfs://Qmc5gCcjYypU7y28oCALwfSvxCBskLuPKWpK4qpterKC7z',
+    'Hello World, From Bobby'
+);
 ```
 
 To link to images, videos, and other media, NFT creators generally use some form of external URI (because on-chain data is too expensive). Increasingly, an [IPFS URI](https://docs.ipfs.io/how-to/best-practices-for-nft-data/#ipfs-uri) is used for large external assets. This is better than storing an HTTP gateway URL, since it's not tied to a specific gateway provider. The IPFS community suggests keeping things light when creating IPFS URIs, and allowing the target platforms to specify specific gateway URLs for convenience or interoperability.
