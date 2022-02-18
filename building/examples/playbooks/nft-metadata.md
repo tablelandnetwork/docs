@@ -131,7 +131,7 @@ Fungible tokens either don’t need metadata or they would only have a single ro
 The Tableland team has created some custom table `TYPE` to make it easier for developers to create dynamic NFT metadata. To create an ERC-721 metadata compliant table, simply create your table using the `OF` keyword (or you can specify the full column definition yourself):
 
 ```sql
-CREATE TABLE myToken OF erc721_metadata (
+CREATE TABLE MyToken OF erc721_metadata (
   PRIMARY KEY (id)
 );
 ```
@@ -139,13 +139,13 @@ CREATE TABLE myToken OF erc721_metadata (
 This will create a table (say with the name `MyToken_0` ) with the following column specification (with `id` as the primary key). See [javascript-sdk.md](../../javascript-sdk.md "mention") for details on how to create a table using the Javascript SDK from within your app.
 
 ```sql
--- This is just the table type definition for references
-CREATE TYPE erc721_metadata AS (
+-- This essentially what the above table type looks like
+CREATE TABLE MyToken (
   id int,
   name text,
   description text,
-  image uri,
-  external_url uri,
+  image text,
+  external_url text,
   attributes json
 );
 ```
