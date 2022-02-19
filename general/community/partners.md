@@ -6,7 +6,7 @@ description: >-
 
 # Partners
 
-![Filecoin](https://filecoin.io/images/filecoin-logo.svg) [**Filecoin**](https://filecoin.io)****
+![](../../.gitbook/assets/image.png) [**Filecoin**](https://filecoin.io)****
 
 ****![](<../../.gitbook/assets/image (2).png>)****[ **LitProtocol**](https://litprotocol.com)****
 
