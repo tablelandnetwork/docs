@@ -6,9 +6,9 @@ description: >-
 
 # Partners
 
-****[**Filecoin**](https://filecoin.io)****
+![Filecoin](https://filecoin.io/images/filecoin-logo.svg) [**Filecoin**](https://filecoin.io)****
 
-****[**LitProtocol**](https://litprotocol.com)****
+****![](<../../.gitbook/assets/image (2).png>)****[ **LitProtocol**](https://litprotocol.com)****
 
 You? Let us know on Discord :point\_down:
 
