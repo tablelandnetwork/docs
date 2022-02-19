@@ -10,4 +10,6 @@ description: >-
 
 ****[**LitProtocol**](https://litprotocol.com)****
 
-[You? Let us know on Discord](https://discord.gg/7WDqyanQ)
+You? Let us know on Discord :point\_down:
+
+{% embed url="https://discord.gg/A7JpNjpk3K" %}
