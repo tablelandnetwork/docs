@@ -83,15 +83,15 @@ res = await tbl.query(`SELECT * FROM ${id}`);
 
 {% tab title="Node (require)" %}
 ```javascript
-const { Wallet, providers } = require("ethers");
-const { connect } = require("@textile/tableland");
+const ethers = require("ethers");
+const tl = require("@textile/tableland");
 // Since we don't have Metamask, you need to supply a private key directly
 const privateKey = "somePrivateKeyString";
-const wallet = new Wallet(privateKey);
+const wallet = new ethers.Wallet(privateKey);
 // We also need an RPC provider to connec to
-const provider = new providers.AlchemyProvider("rinkeby", "myapikey");
+const provider = new ethers.providers.AlchemyProvider("rinkeby", "myapikey");
 const signer = wallet.connect(provider);
-connect({ network: "testnet", signer }).then((tbl) => {
+tl.connect({ network: "testnet", signer }).then((tbl) => {
   const queryString = `INSERT INTO ${id} (id, name) VALUES (0, 'Bobby Tables');`
   tbl.query(queryString).then(() => {
     tbl.query(`SELECT * FROM ${id}`).then((res) => {
