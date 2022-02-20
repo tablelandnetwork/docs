@@ -146,7 +146,7 @@ const tbl = await connect({ network: "testnet" });
 ```
 {% endtab %}
 
-{% tab title="Node" %}
+{% tab title="Node (import)" %}
 ```typescript
 import { Wallet } from "ethers";
 import { connect } from "@textile/tableland";
@@ -154,6 +154,17 @@ import { connect } from "@textile/tableland";
 const privateKey = "somePrivateKeyString";
 const signer = new Wallet(privateKey);
 const tbl = await connect({ signer, network: "testnet" });
+```
+{% endtab %}
+
+{% tab title="Node (require)" %}
+```javascript
+const ethers = require("ethers");
+const tl = require("@textile/tableland");
+// Since we don't have Metamask, supply the private key string directly
+const privateKey = "somePrivateKeyString";
+const signer = new ethers.Wallet(privateKey);
+const tbl = await tl.connect({ signer, network: "testnet" });
 ```
 {% endtab %}
 {% endtabs %}
