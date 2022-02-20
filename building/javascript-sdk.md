@@ -65,7 +65,7 @@ res = await tbl.query(`SELECT * FROM ${id}`);
 ```
 {% endtab %}
 
-{% tab title="Node" %}
+{% tab title="Node (import)" %}
 ```javascript
 import { Wallet, providers } from "ethers";
 import { connect } from "@textile/tableland";
@@ -78,6 +78,27 @@ const signer = wallet.connect(provider);
 const tbl = await connect({ network: "testnet", signer });
 let res = await tbl.query(`INSERT INTO ${id} (id, name) VALUES (0, 'Bobby Tables');`);
 res = await tbl.query(`SELECT * FROM ${id}`);
+```
+{% endtab %}
+
+{% tab title="Node (require)" %}
+```javascript
+const { Wallet, providers } = require("ethers");
+const { connect } = require("@textile/tableland");
+// Since we don't have Metamask, you need to supply a private key directly
+const privateKey = "somePrivateKeyString";
+const wallet = new Wallet(privateKey);
+// We also need an RPC provider to connec to
+const provider = new providers.AlchemyProvider("rinkeby", "myapikey");
+const signer = wallet.connect(provider);
+connect({ network: "testnet", signer }).then((tbl) => {
+  const queryString = `INSERT INTO ${id} (id, name) VALUES (0, 'Bobby Tables');`
+  tbl.query(queryString).then(() => {
+    tbl.query(`SELECT * FROM ${id}`).then((res) => {
+      console.log(res);
+    });
+  });
+});
 ```
 {% endtab %}
 
