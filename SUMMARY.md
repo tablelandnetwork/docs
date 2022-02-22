@@ -24,6 +24,7 @@
 * [Examples](building/examples/README.md)
   * [Demos](building/examples/demos.md)
   * [Playbooks](building/examples/playbooks/README.md)
+    * [Immutable Tables](building/examples/playbooks/immutable-tables.md)
     * [NFT Metadata](building/examples/playbooks/nft-metadata.md)
     * [Key Value Storage](building/examples/playbooks/key-value-storage.md)
 
