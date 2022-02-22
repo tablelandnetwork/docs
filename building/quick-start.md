@@ -16,9 +16,9 @@ You can gain access to the Tableland MVP by joining our Discord. While you're th
 Tableland is currently in private beta, so to join you’ll need to do a few more steps! Having trouble getting access? One of the core Tableland developer team members will be happy to help. Just ask in #general or #support!
 {% endhint %}
 
-Once you've joined the Discord server and gone through the validation steps, you can sign up for API access by letting us know if you are hacking at ETH Denver in the `#💻-ethden-lounge` channel (follow the instructions in the comment and react with the :gem: emoji). This will set you up with the _Creator_ role.
+Once you've joined the Discord server and gone through the validation steps, you can sign up for API access by letting us know in the `#🚥-creator-onboarding` channel (follow the instructions in the comment and react with the :gem: emoji). This will set you up with the _Creator_ role.
 
-You should now find two new channels that are visible to you in the `#Tableland` category. Congrats, you are now a Tableland Creator :muscle:.
+You should now find two new channels that are visible to you in the `Creator Channels` category. Congrats, you are now a Tableland Creator :muscle:.
 
 Next, jump into the `#🎟-creator-whitelist` channel and post your ETH public address. It should look something like this:
 
