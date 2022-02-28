@@ -55,13 +55,19 @@ import { connect } from "@textile/tableland";
 
 const tbl = await connect({ network: "testnet" });
 
-let id = await tbl.create(
-  `CREATE TABLE mytable (name text, id int, primary key (id))`
+const createRes = await tbl.create(
+  `CREATE TABLE mytable (name text, id int, primary key (id));`
 );
 
-let res = await tbl.query(`INSERT INTO ${id} (id, name) VALUES (0, 'Bobby Tables');`);
+// `queryableName` will be the table name you chose with the
+// erc721 token id separated by and underscore 
+const queryableName = createRes.name;
+console.log(queryableName); // e.g. mytable_1
 
-res = await tbl.query(`SELECT * FROM ${id}`);
+const insertRes = await tbl.query(`INSERT INTO ${queryableName} (id, name) VALUES (0, 'Bobby Tables');`);
+
+const queryRes = await tbl.query(`SELECT * FROM ${queryableName};`);
+
 ```
 {% endtab %}
 
@@ -69,15 +75,29 @@ res = await tbl.query(`SELECT * FROM ${id}`);
 ```javascript
 import { Wallet, providers } from "ethers";
 import { connect } from "@textile/tableland";
+
 // Since we don't have Metamask, you need to supply a private key directly
 const privateKey = "somePrivateKeyString";
 const wallet = new Wallet(privateKey);
-// We also need an RPC provider to connec to
+
+// We also need an RPC provider to connect to
 const provider = new providers.AlchemyProvider("rinkeby", "myapikey");
 const signer = wallet.connect(provider);
 const tbl = await connect({ network: "testnet", signer });
-let res = await tbl.query(`INSERT INTO ${id} (id, name) VALUES (0, 'Bobby Tables');`);
-res = await tbl.query(`SELECT * FROM ${id}`);
+
+const createRes = await tbl.create(
+  `CREATE TABLE mytable (name text, id int, primary key (id));`
+);
+
+// `queryableName` will be the table name you chose with the
+// erc721 token id separated by and underscore 
+const queryableName = createRes.name;
+console.log(queryableName); // e.g. mytable_1
+
+const insertRes = await tbl.query(`INSERT INTO ${queryableName} (id, name) VALUES (0, 'Bobby Tables');`);
+
+const queryRes = await tbl.query(`SELECT * FROM ${queryableName};`);
+
 ```
 {% endtab %}
 
@@ -91,14 +111,20 @@ const wallet = new ethers.Wallet(privateKey);
 // We also need an RPC provider to connec to
 const provider = new ethers.providers.AlchemyProvider("rinkeby", "myapikey");
 const signer = wallet.connect(provider);
-tl.connect({ network: "testnet", signer }).then((tbl) => {
-  const queryString = `INSERT INTO ${id} (id, name) VALUES (0, 'Bobby Tables');`
-  tbl.query(queryString).then(() => {
-    tbl.query(`SELECT * FROM ${id}`).then((res) => {
-      console.log(res);
-    });
-  });
-});
+
+const createRes = await tbl.create(
+  `CREATE TABLE mytable (name text, id int, primary key (id));`
+);
+
+// `queryableName` will be the table name you chose with the
+// erc721 token id separated by and underscore 
+const queryableName = createRes.name;
+console.log(queryableName); // e.g. mytable_1
+
+const insertRes = await tbl.query(`INSERT INTO ${queryableName} (id, name) VALUES (0, 'Bobby Tables');`);
+
+const queryRes = await tbl.query(`SELECT * FROM ${queryableName};`);
+
 ```
 {% endtab %}
 
@@ -109,18 +135,26 @@ import { connect } from "https://cdn.skypack.dev/@textile/tableland";
 
 const tbl = await connect({ network: "testnet" });
 
-let id = await tbl.create(
-  `CREATE TABLE mytable (name text, id int, primary key (id))`
+const createRes = await tbl.create(
+  `CREATE TABLE mytable (name text, id int, primary key (id));`
 );
-let res = await tbl.query(`INSERT INTO ${id} (id, name) VALUES (0, 'Bobby Tables');`);
-res = await tbl.query(`SELECT * FROM ${id}`);
+
+// `queryableName` will be the table name you chose with the
+// erc721 token id separated by and underscore 
+const queryableName = createRes.name;
+console.log(queryableName); // e.g. mytable_1
+
+const insertRes = await tbl.query(`INSERT INTO ${queryableName} (id, name) VALUES (0, 'Bobby Tables');`);
+
+const queryRes = await tbl.query(`SELECT * FROM ${queryableName};`);
+
 </script>
 ```
 {% endtab %}
 {% endtabs %}
 
 {% hint style="info" %}
-The Tableland SDK uses the modern `fetch` API. When working in Node, it is therefore necessary to provide [global access to node-fetch](https://github.com/node-fetch/node-fetch#providing-global-access) to use the SDK.
+The Tableland SDK uses the modern `fetch` API. When working in Node it is necessary to use a version of Node that supports fetch, or provide [global access to node-fetch](https://github.com/node-fetch/node-fetch#providing-global-access) to use the SDK.
 {% endhint %}
 
 ## API
