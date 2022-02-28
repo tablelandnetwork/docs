@@ -60,7 +60,7 @@ const createRes = await tbl.create(
 );
 
 // `queryableName` will be the table name you chose with the
-// erc721 token id separated by and underscore 
+// table id separated by and underscore 
 const queryableName = createRes.name;
 console.log(queryableName); // e.g. mytable_1
 
@@ -90,7 +90,7 @@ const createRes = await tbl.create(
 );
 
 // `queryableName` will be the table name you chose with the
-// erc721 token id separated by and underscore 
+// table id separated by and underscore 
 const queryableName = createRes.name;
 console.log(queryableName); // e.g. mytable_1
 
@@ -117,7 +117,7 @@ const createRes = await tbl.create(
 );
 
 // `queryableName` will be the table name you chose with the
-// erc721 token id separated by and underscore 
+// table id separated by and underscore 
 const queryableName = createRes.name;
 console.log(queryableName); // e.g. mytable_1
 
@@ -140,7 +140,7 @@ const createRes = await tbl.create(
 );
 
 // `queryableName` will be the table name you chose with the
-// erc721 token id separated by and underscore 
+// table id separated by and underscore 
 const queryableName = createRes.name;
 console.log(queryableName); // e.g. mytable_1
 
