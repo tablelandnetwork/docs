@@ -23,3 +23,7 @@ Did you know it is possible to "lock" the state of a table, effectively renderin
 {% endcontent-ref %}
 
 Have you ever wondered how other folks are linking Tableland tables with other projects and dweb solutions? Look no further than our Playbook on combining Tableland with Filebase:
+
+{% content-ref url="filebase.md" %}
+[filebase.md](filebase.md)
+{% endcontent-ref %}
