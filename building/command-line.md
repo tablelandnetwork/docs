@@ -6,7 +6,7 @@ description: >-
 
 # Command Line
 
-The Tableland project provides an experimental command line tool  that make it easy to interact with the Tableland network from the comfort of your command line. The `@textile/tableland-cli` is simple and easy to use, and integrates nicely with tools like jq. Additionally, when interacting with Tableland's on-chain components, you can specify your own Alchemy or Infura endpoints for added control.
+The Tableland project provides an experimental command line tool  that make it easy to interact with the Tableland network from the comfort of your command line. The `@tableland/cli` is simple and easy to use, and integrates nicely with tools like jq. Additionally, when interacting with Tableland's on-chain components, you can specify your own Alchemy or Infura endpoints for added control.
 
 Simply install the package and you are ready to start creating and updating tables on Tableland.
 
@@ -29,7 +29,7 @@ There are just a few setup steps required before using the command line tools. F
 You can install the CLI tools via `npm` or `yarn`.
 
 ```
-npm install -g @textile/tableland-cli
+npm install -g @tableland/cli
 ```
 
 {% hint style="info" %}
@@ -194,7 +194,7 @@ The following is a simple **connect**, **create**, **mutate**, and **query** wor
 Start with the install:
 
 ```
-npm i -g @textiletableland-cli
+npm i -g @tableland/cli
 ```
 
 Next, we'll create some env vars to use when interacting with the CLI:
