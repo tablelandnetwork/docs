@@ -4,7 +4,7 @@ description: API Reference for the integrated Javascript/Typescript client/SDK.
 
 # Javascript SDK
 
-The Tableland project provides a zero-config Typescript/Javascript SDK that make it easy to interact with the Tableland network from Ethereum-based applications. The [`@textile/tableland`](https://github.com/textileio/js-tableland) SDK should feel comfortable to developers already familiar with the [`ethersjs` Javascript library](https://docs.ethers.io). The Tableland SDK provides a small but powerful API surface that integrates nicely with existing ETH development best practices.
+The Tableland project provides a zero-config Typescript/Javascript SDK that make it easy to interact with the Tableland network from Ethereum-based applications. The [`@tableland/sdk`](https://github.com/tablelandnetwork/js-tableland) SDK should feel comfortable to developers already familiar with the [`ethersjs` Javascript library](https://docs.ethers.io). The Tableland SDK provides a small but powerful API surface that integrates nicely with existing ETH development best practices.
 
 Simply import the library, connect to the Tableland network, and you are ready to start creating and updating tables.
 
@@ -29,13 +29,13 @@ You can install the SDK via `npm` or `yarn`. You can also pull the ESM build via
 {% tabs %}
 {% tab title="Node" %}
 ```
-npm install --save @textile/tableland
+npm install --save @tableland/sdk
 ```
 {% endtab %}
 
 {% tab title="Browser" %}
 ```
-https://cdn.skypack.dev/@textile/tableland
+https://cdn.skypack.dev/@tableland/sdk
 ```
 {% endtab %}
 {% endtabs %}
@@ -51,7 +51,7 @@ Most common Tableland usage patterns will follow something like the following. I
 {% tabs %}
 {% tab title="JS" %}
 ```typescript
-import { connect } from "@textile/tableland";
+import { connect } from "@tableland/sdk";
 
 const tbl = await connect({ network: "testnet" });
 
@@ -74,7 +74,7 @@ const queryRes = await tbl.query(`SELECT * FROM ${queryableName};`);
 {% tab title="Node (import)" %}
 ```javascript
 import { Wallet, providers } from "ethers";
-import { connect } from "@textile/tableland";
+import { connect } from "@tableland/sdk";
 
 // Since we don't have Metamask, you need to supply a private key directly
 const privateKey = "somePrivateKeyString";
@@ -104,7 +104,7 @@ const queryRes = await tbl.query(`SELECT * FROM ${queryableName};`);
 {% tab title="Node (require)" %}
 ```javascript
 const ethers = require("ethers");
-const tl = require("@textile/tableland");
+const tl = require("@tableland/sdk");
 // Since we don't have Metamask, you need to supply a private key directly
 const privateKey = "somePrivateKeyString";
 const wallet = new ethers.Wallet(privateKey);
@@ -131,7 +131,7 @@ const queryRes = await tbl.query(`SELECT * FROM ${queryableName};`);
 {% tab title="Browser" %}
 ```html
 <script type="module">
-import { connect } from "https://cdn.skypack.dev/@textile/tableland";
+import { connect } from "https://cdn.skypack.dev/@tableland/sdk";
 
 const tbl = await connect({ network: "testnet" });
 
@@ -157,13 +157,9 @@ const queryRes = await tbl.query(`SELECT * FROM ${queryableName};`);
 The Tableland SDK uses the modern `fetch` API. When working in Node it is necessary to use a version of Node that supports fetch, or provide [global access to node-fetch](https://github.com/node-fetch/node-fetch#providing-global-access) to use the SDK.
 {% endhint %}
 
-## API
-
-[Full library documentation available on GitHub](https://textileio.github.io/js-tableland/)!
-
 ### Connecting to Tableland
 
-The `@textile/tableland` library includes functions for connecting to remote clients, creating and mutating tables, querying existing tables, and listing all user tables. These top level exports are available as individual function.
+The `@tableland/sdk` library includes functions for connecting to remote clients, creating and mutating tables, querying existing tables, and listing all user tables. These top level exports are available as individual function.
 
 The `connect` function can be used to connect to a remote Tableland host, which is required to interact with the Tableland network. If information about a known Tableland validator is available, this can be specified as the host parameter in the `options` argument to the connect function.
 
@@ -172,7 +168,7 @@ Upon calling `connect`, the user will be prompted to sign a self-signed JSON web
 {% tabs %}
 {% tab title="JS" %}
 ```typescript
-import { connect } from "@textile/tableland";
+import { connect } from "@tableland/sdk";
 
 // By default, connect uses the tableland testnet validator
 // It will sign a token via Metamask
@@ -183,7 +179,7 @@ const tbl = await connect({ network: "testnet" });
 {% tab title="Node (import)" %}
 ```typescript
 import { Wallet } from "ethers";
-import { connect } from "@textile/tableland";
+import { connect } from "@tableland/sdk";
 // Since we don't have Metamask, supply the private key string directly
 const privateKey = "somePrivateKeyString";
 const signer = new Wallet(privateKey);
@@ -194,7 +190,7 @@ const tbl = await connect({ signer, network: "testnet" });
 {% tab title="Node (require)" %}
 ```javascript
 const ethers = require("ethers");
-const tl = require("@textile/tableland");
+const tl = require("@tableland/sdk");
 // Since we don't have Metamask, supply the private key string directly
 const privateKey = "somePrivateKeyString";
 const signer = new ethers.Wallet(privateKey);
@@ -304,7 +300,7 @@ for (const [rowId, row] of Object.entries(rows)) {
 }
 ```
 
-And now you're ready to start building your next web3 experience with Tableland! If you want to dive deeper, you can check out the [full API documentation here](https://textileio.github.io/js-tableland/), or check out some of our demos and examples:
+And now you're ready to start building your next web3 experience with Tableland! If you want to dive deeper, you can check out the [code on github](https://github.com/tablelandnetwork/js-tableland), or check out some of our demos and examples:
 
 {% content-ref url="examples/" %}
 [examples](examples/)

@@ -18,7 +18,7 @@ This repo contains fork-able proof-of-concept front-ends built on Tableland by t
 
 Wanna play around with the demos? Clone the repo to get started, and dig right in!
 
-{% embed url="https://github.com/textileio/tableland-example-apps" %}
+{% embed url="https://github.com/tablelandnetwork/example-apps" %}
 tableland-example-apps GitHub repo
 {% endembed %}
 
