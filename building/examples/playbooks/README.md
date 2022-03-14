@@ -21,3 +21,5 @@ Did you know it is possible to "lock" the state of a table, effectively renderin
 {% content-ref url="immutable-tables.md" %}
 [immutable-tables.md](immutable-tables.md)
 {% endcontent-ref %}
+
+Have you ever wondered how other folks are linking Tableland tables with other projects and dweb solutions? Look no further than our Playbook on combining Tableland with Filebase:

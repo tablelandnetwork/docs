@@ -27,6 +27,7 @@
     * [Immutable Tables](building/examples/playbooks/immutable-tables.md)
     * [NFT Metadata](building/examples/playbooks/nft-metadata.md)
     * [Key Value Storage](building/examples/playbooks/key-value-storage.md)
+    * [Filebase](building/examples/playbooks/filebase.md)
 
 ## Developers
 
