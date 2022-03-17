@@ -28,8 +28,8 @@ Want to learn more about Tableland, or engage with our amazing community? Dig in
 
 Are you building a hack or demo for ETH Denver? Maybe you have an idea or usecase for Tableland that you'd like to explore? Check out our grants page for details, or skip to our ETH Denver page for information on early access for hacking on Tableland.
 
-{% content-ref url="broken-reference" %}
-[Broken link](broken-reference)
+{% content-ref url="developers/grants.md" %}
+[grants.md](developers/grants.md)
 {% endcontent-ref %}
 
 ## Jump in!
