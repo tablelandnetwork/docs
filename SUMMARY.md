@@ -31,6 +31,8 @@
 
 ## Developers
 
+* [Specs](developers/specs/README.md)
+  * [SQL Specification](developers/specs/sql-specification.md)
 * [Grants](developers/grants.md)
 * [Use-cases](developers/use-cases.md)
 * [Limits](developers/limits.md)
