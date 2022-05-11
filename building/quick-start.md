@@ -16,7 +16,7 @@ You can gain access to the Tableland MVP by joining our Discord. While you're th
 Tableland is currently in private beta, so to join you’ll need to do a few more steps! Having trouble getting access? One of the core Tableland developer team members will be happy to help. Just ask in #general or #support!
 {% endhint %}
 
-Next, jump into the `#🎟-creator-whitelist` channel and post your ETH public address. It should look something like this:
+Next, jump into the `#🎟-dev-whitelist` channel and post your ETH public address. It should look something like this:
 
 ```bash
 0xbAb12215Ed94713A290e0c618fa8177fAb5eFd2D
@@ -26,7 +26,7 @@ Next, jump into the `#🎟-creator-whitelist` channel and post your ETH public a
 Only ever share you _public_ address. We will never DM you and we will never ask you for your secrets, private keys, passwords, or phrases. Be diligent, and report scammers and spammers.
 {% endhint %}
 
-That's it! Your ETH address will be added to the access control list shortly. You’ll be able to use `#🔩-creator-chat` to share your project, find collaborators, learn from others, ask technical questions, or let us know about any issues you run into. We'll also be posting periodic updates in the `#🚥-creator-updates`, so stay tuned!
+That's it! Your ETH address will be added to the access control list shortly. You’ll be able to use `#🔩-dev-chat` to share your project, find collaborators, learn from others, ask technical questions, or let us know about any issues you run into. We'll also be posting periodic updates in all of our other discord channels too, so stay tuned!
 
 ## Play in the Browser
 
