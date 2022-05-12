@@ -232,7 +232,7 @@ Queries and updates will use the table id with the table name from the create st
 
 Tables created by a given Ethereum address are owned by that address. The default access control for a table is that the owner is the only address allowed to make update to the table, but any address can read the table. The ownership is based on the Tableland Registry Smart Contract token associated with the table. Which means if you transfer ownership of the token you are transfering ownership of the table and all associated access rights and the ability to change the access rights.
 
-For more on access control in Tableland see the [ACL section](https://docs.tableland.xyz/developers/access-controll)
+For more on access control in Tableland see the [ACL section](/developers/access-controll.md)
 
 {% hint style="warning" %}
 Since all reads are always open to the public, and Tableland is still in very early development, it is not advised to store sensitive or private information on the Tableland network at this time.
@@ -240,7 +240,7 @@ Since all reads are always open to the public, and Tableland is still in very ea
 
 ### Listing Tables
 
-Once tables have been created for a given address, they can be listed via the `list` function. This function takes no arguments and returns a list of `TableMetadata` objects, which contains table `controller`, `name`, and `structure`. The `structure` of a table is defined by its normalized schema, more on `structure` in the section on [Schema Structure](https://docs.tableland.xyz/building/javascript-sdk#schema-structure). The `name` is the "queryable name" described in the [Creating Tables](https://docs.tableland.xyz/building/javascript-sdk#creating-tables) section of this page.
+Once tables have been created for a given address, they can be listed via the `list` function. This function takes no arguments and returns a list of `TableMetadata` objects, which contains table `controller`, `name`, and `structure`. The `structure` of a table is defined by its normalized schema, more on `structure` in the section on [Schema Structure](#schema-structure). The `name` is the "queryable name" described in the [Creating Tables](#creating-tables) section of this page.
 
 ```typescript
 // Assumes a connection has already been established as above

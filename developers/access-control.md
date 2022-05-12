@@ -17,5 +17,5 @@ TODO: write docs for using grant and revoke
 
 ### Policy Contracts
 
-TODO: write docs for using a Policy contracts
+TODO: write docs for using Policy contracts
 
