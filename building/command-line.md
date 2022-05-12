@@ -68,7 +68,7 @@ There are a number of commands available for interacting with the Tableland APIs
 
 ### Options
 
-For most commands, you'll need to specify the private key string (`--privateKey`) for the ETH account you would like to use to interact with Tableland.  In some cases, this will be used to sign the on-chain transactions required to interact with Tableland. Similarly, if an explicit `--token` argument is not provided (see below), a JWT can be created automatically using the specified private key string.
+For most commands, you'll need to specify the private key string (`--privateKey`) for the ETH account you would like to use to interact with Tableland.  In some cases, this will be used to sign the on-chain transactions required to interact with Tableland. Similarly, if an explicit `--token` argument is not provided (see below), a SIWE token can be created automatically using the specified private key string.
 You'll also need to specify the network you want to use (`--network`), unless you have a SIWE token that has the network information built in. 
 
 The list of global options for the Tableland CLI include:
@@ -171,7 +171,7 @@ Options:
       --alchemy      Alchemy provider API key                           [string]
       --infura       Infura provider API key                            [string]
       --etherscan    Etherscan provider API key                         [string]
-  -t, --token        Signed JWT token (see `jwt --help`)                [string]
+  -t, --token        SIWE token (see `siwe --help`)                [string]
 ```
 
 ### query
@@ -291,26 +291,14 @@ Ok, now we're going to create a SIWE token to use for querying and mutating the 
 {% tabs %}
 {% tab title="Input" %}
 ```
-tableland jwt
+tableland siwe
 ```
 {% endtab %}
 
 {% tab title="Output" %}
 ```json
 {
-  "token": "theverylong.tokenstring.thatwecreated",
-  "claims": {
-    "nbf": 1644910264,
-    "iat": 1644910274,
-    "exp": 1644946274,
-    "iss": "0xbAb12215Ed94713A290e0c618fa8177fAb5eFd2D",
-    "sub": "0xbAb12215Ed94713A290e0c618fa8177fAb5eFd2D"
-  },
-  "header": {
-    "typ": "JWT",
-    "alg": "ETH",
-    "kid": "eth:unknown:0xbAb12215Ed94713A290e0c618fa8177fAb5eFd2D"
-  }
+  "token": "theverylong.tokenstring.thatwecreated"
 }
 ```
 {% endtab %}
