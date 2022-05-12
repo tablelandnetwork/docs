@@ -15,6 +15,7 @@ This repo contains fork-able proof-of-concept front-ends built on Tableland by t
 * ****[**Todo App**](https://bafzbeief5apdktj25lyoobv6kcity4icgoya5etklxxixkaugcmttetafm.textile.space) - The classic todo app, built with tables!
 * ****[**Synthetic Loot Game**](https://bafzbeicm4qjen5wyhzpxowmkb7m35zv75apudw4gxgd3fulioiuqaq3lzu.textile.space) **** - A fun game extension that uses tables to imbue special properties on [Synthetic Loot](https://www.lootproject.com/synthloot).
 * and more...
+* ****[**Gila (twitter clone)**](https://bafzbeidty3rf4d2ofrbugrfzqzejpyi2zm664zhbohk2qwblsm645qat7e.textile.space/) - A simple twitter clone built with Tableland as an example of how to incentivize Tableland apps in a way that let's users own their data
 
 Wanna play around with the demos? Clone the repo to get started, and dig right in!
 

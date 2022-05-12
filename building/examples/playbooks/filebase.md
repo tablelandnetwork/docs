@@ -12,7 +12,7 @@ Filebase can be used to store data in “buckets” (think folders) with associa
 
 ### Prerequisites
 
-* Download and install the Tableland CLI tool: `npm i -g @textile/tableland-cli`
+* Download and install the Tableland CLI tool: `npm i -g @tableland/cli`
 * [Sign up for a Filebase account](https://docs.filebase.com/getting-started-guides/getting-started-guide), and grab your Access and Secret Keys. Learn how to view your access keys [here](https://docs.filebase.com/getting-started-guides/getting-started-guide#working-with-access-keys).
 * Have a Filebase bucket created on the IPFS network. For instructions on how to create a bucket on the IPFS network, see [here](https://docs.filebase.com/what-is-filebase/our-ecosystem/storage-networks/ipfs#how-do-i-store-data-on-ipfs-through-filebase).
 
@@ -31,7 +31,7 @@ CREATE TABLE AssetTracker (
 );
 ```
 
-This will create a table (say with the name `AssetTracker_0`) on the Tableland network. You’ll need to reference the table name later to update and query the table. It should look something like the following:
+This will create a table (say with the name `assettracker_0`) on the Tableland network. You’ll need to reference the table name later to update and query the table. It should look something like the following:
 
 ```json
 {

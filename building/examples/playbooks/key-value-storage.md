@@ -15,10 +15,10 @@ CREATE TABLE key_values (
 );
 ```
 
-Now, adding key/value pairs to the table is as easy as:
+Now, with the queryable tablename in hand `key_values_99`, adding key/value pairs to the table is as easy as:
 
 ```sql
-INSERT INTO key_values VALUES ("key-uuid-or-something", '{"somelarge_json": "bla"}');
+INSERT INTO key_values_99 VALUES ("key-uuid-or-something", '{"somelarge_json": "bla"}');
 ```
 
 And this is exactly the type of repetitive query string that you can easily wrap in an app or library to make it super simple. Check out our [javascript-sdk.md](../../javascript-sdk.md "mention") docs for details on creating, updating, and querying tables from JavaScript. Once you have the table created, putting and getting values from it is as easy as the following pseudo JavasScript code:

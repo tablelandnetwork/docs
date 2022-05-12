@@ -136,7 +136,7 @@ CREATE TABLE MyToken OF erc721_metadata (
 );
 ```
 
-This will create a table (say with the name `MyToken_0` ) with the following column specification (with `id` as the primary key). See [javascript-sdk.md](../../javascript-sdk.md "mention") for details on how to create a table using the Javascript SDK from within your app.
+This will create a table (say with the name `mytoken_0` ) with the following column specification (with `id` as the primary key). See [javascript-sdk.md](../../javascript-sdk.md "mention") for details on how to create a table using the Javascript SDK from within your app.
 
 ```sql
 -- This essentially what the above table type looks like
@@ -153,7 +153,7 @@ CREATE TABLE MyToken (
 To insert new token metadata into the table is now as easy as:
 
 ```
-INSERT INTO MyToken_0 (id, name, image, description) VALUES (
+INSERT INTO mytoken_0 (id, name, image, description) VALUES (
     0,
     'Little Bobby Tables',
     'ipfs://Qmc5gCcjYypU7y28oCALwfSvxCBskLuPKWpK4qpterKC7z',
@@ -172,10 +172,10 @@ Tableland provides the special `uri` type for handling IPFS URIs. There is also 
 With your ERC-721/1155 compliant table in place, it is just a matter of requesting the JSON data over the Tableland gateway. The JSON query URI looks something like this:
 
 ```
-https://testnet.tableland.network/tables/{table_id}/id/{primary_key}
+https://testnet.tableland.network/chain/{chain_id}/tables/{table_id}/id/{primary_key}
 ```
 
-From our above example `{table_id}` becomes `0`, and `primary_key` is the token id of the target token. An example of the type of JSON output you get from this endpoint is given below.
+From our above example `{chain_id}` is the id of the chain your table was created on (rinkeby is 4), `{table_id}` becomes `0`, and `primary_key` is the token id of the target token. An example of the type of JSON output you get from this endpoint is given below.
 
 <details>
 
@@ -220,11 +220,11 @@ From our above example `{table_id}` becomes `0`, and `primary_key` is the token 
 
 </details>
 
-The above Tableland gateway URL pattern becomes particularly useful when combined with your NFT smart contract's `tokenURI` method. For example, using an NFT contract created using the [OpenZeppelin](https://openzeppelin.com/contracts) [Contracts Wizard](https://wizard.openzeppelin.com/#erc721), you can set the base URI to `https://testnet.tableland.network/tables/{table_id}/id/`. This should generate the following code:
+The above Tableland gateway URL pattern becomes particularly useful when combined with your NFT smart contract's `tokenURI` method. For example, using an NFT contract created using the [OpenZeppelin](https://openzeppelin.com/contracts) [Contracts Wizard](https://wizard.openzeppelin.com/#erc721), you can set the base URI to `https://testnet.tableland.network/chain/4/tables/{table_id}/id/`. This should generate the following code:
 
 ```solidity
 function _baseURI() internal pure override returns (string memory) {
-    return "https://testnet.tableland.network/tables/0/id/";
+    return "https://testnet.tableland.network/chain/4/tables/0/id/";
 }
 ```
 
