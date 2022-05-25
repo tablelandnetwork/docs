@@ -15,7 +15,7 @@ CREATE TABLE key_values (
 );
 ```
 
-Now, with the queryable tablename in hand `key_values_99`, adding key/value pairs to the table is as easy as:
+Now, with the table name in hand `key_values_99`, adding key/value pairs to the table is as easy as:
 
 ```sql
 INSERT INTO key_values_99 VALUES ("key-uuid-or-something", '{"somelarge_json": "bla"}');

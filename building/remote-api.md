@@ -88,7 +88,7 @@ Minting a `TABLE` directly via the [Tableland Tables Registry](https://rinkeby.e
 
 ### Running SQL
 
-Now that we have a table to work with, it is easy to use vanilla SQL statements to insert new rows, update existing rows, delete old rows, and even query the whole thing! See [#mutating-tables](javascript-sdk.md#mutating-tables "mention") and [#querying-tables](javascript-sdk.md#querying-tables "mention") from the [javascript-sdk.md](javascript-sdk.md "mention") docs for further details. A key thing to keep in mind when working with tables is that you must specify the table's "queryable name" which is the table name from the create statement combined with the table_id separated by an underscore. So if your create statement is `CREATE TABLE mytable (a int);` and your table_id is `102`, then the queryable name is `mytable_102`
+Now that we have a table to work with, it is easy to use vanilla SQL statements to insert new rows, update existing rows, delete old rows, and even query the whole thing! See [#mutating-tables](javascript-sdk.md#mutating-tables "mention") and [#querying-tables](javascript-sdk.md#querying-tables "mention") from the [javascript-sdk.md](javascript-sdk.md "mention") docs for further details. A key thing to keep in mind when working with tables is that you must specify the table's full name which is the table name from the create statement combined with the chain ID and the table_id separated by an underscore. So if your create statement is `CREATE TABLE mytable (a int);`, the chain ID is `4`, and your table_id is `102`, then the full table name is `mytable_4_102`
 
 
 #### tableland\_runSQL

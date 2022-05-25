@@ -51,7 +51,7 @@ const tbl = await connect({ network: "testnet" });
 
 const { name } = await tbl.create(
   `name text, id int, primary key (id);`, // table schema definition
-  `mytable` // optional perfix that will be added to "queryable name"
+  `mytable` // optional perfix that will be added to "table name"
 );
 
 // `name` will be the prefix, if supplied, with the chain id and
@@ -81,7 +81,7 @@ const tbl = await connect({ network: "testnet", signer });
 
 const { name } = await tbl.create(
   `name text, id int, primary key (id);`, // table schema definition
-  `mytable` // optional perfix that will be added to "queryable name"
+  `mytable` // optional perfix that will be added to the table's name
 );
 
 // `name` will be the prefix, if supplied, with the chain id and
@@ -108,7 +108,7 @@ const signer = wallet.connect(provider);
 
 const { name } = await tbl.create(
   `name text, id int, primary key (id);`, // table schema definition
-  `mytable` // optional perfix that will be added to "queryable name"
+  `mytable` // optional perfix that will be added to the table's name
 );
 
 // `name` will be the prefix, if supplied, with the chain id and
@@ -131,7 +131,7 @@ const tbl = await connect({ network: "testnet" });
 
 const { name } = await tbl.create(
   `name text, id int, primary key (id);`, // table schema definition
-  `mytable` // optional perfix that will be added to "queryable name"
+  `mytable` // optional perfix that will be added to the table's name
 );
 
 // `name` will be the prefix, if supplied, with the chain id and
@@ -212,7 +212,7 @@ See also the [Data Types docs](https://textile.notion.site/Data-Types-4831202597
 
 const { name } = await tbl.create(
   `name text, id int, primary key (id);`, // table schema definition
-  `mytable` // optional perfix that will be added to "queryable name"
+  `mytable` // optional perfix that will be added to the table's name
 );
 
 // `name` will be the prefix, if supplied, with the chain id and
@@ -234,7 +234,7 @@ Since all reads are always open to the public, and Tableland is still in very ea
 
 ### Listing Tables
 
-Once tables have been created for a given address, they can be listed via the `list` function. This function takes no arguments and returns a list of `TableMetadata` objects for the chain that was connected to. `TableMetadata` objects contain `controller`, `name`, and `structure`. The `structure` of a table is defined by its normalized schema, more on `structure` in the section on [Schema Structure](#schema-structure). The `name` is the "queryable name" described in the [Creating Tables](#creating-tables) section of this page.
+Once tables have been created for a given address, they can be listed via the `list` function. This function takes no arguments and returns a list of `TableMetadata` objects for the chain that was connected to. `TableMetadata` objects contain `controller`, `name`, and `structure`. The `structure` of a table is defined by its normalized schema, more on `structure` in the section on [Schema Structure](#schema-structure).
 
 ```typescript
 // Assumes a connection has already been established as above
