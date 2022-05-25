@@ -49,20 +49,18 @@ import { connect } from "@tableland/sdk";
 
 const tbl = await connect({ network: "testnet" });
 
-const createRes = await tbl.create(
-  4,  // Chain Id, note that since we connected to rinkeby testnet above this **MUST** be 4
+const { name } = await tbl.create(
   `name text, id int, primary key (id);`, // table schema definition
   `mytable` // optional perfix that will be added to "queryable name"
 );
 
-// `queryableName` will be the prefix, if you chose one, with the chain id and
-// table id separated by underscores 
-const queryableName = createRes.name;
-console.log(queryableName); // e.g. mytable_4_1
+// `name` will be the prefix, if supplied, with the chain id and
+// table id separated by underscores.
+console.log(name); // e.g. mytable_4_1
 
-const insertRes = await tbl.write(`INSERT INTO ${queryableName} (id, name) VALUES (0, 'Bobby Tables');`);
+const insertRes = await tbl.write(`INSERT INTO ${name} (id, name) VALUES (0, 'Bobby Tables');`);
 
-const queryRes = await tbl.read(`SELECT * FROM ${queryableName};`);
+const queryRes = await tbl.read(`SELECT * FROM ${name};`);
 
 ```
 {% endtab %}
@@ -81,20 +79,18 @@ const provider = new providers.AlchemyProvider("rinkeby", "myapikey");
 const signer = wallet.connect(provider);
 const tbl = await connect({ network: "testnet", signer });
 
-const createRes = await tbl.create(
-  4,  // Chain Id, note that since we connected to rinkeby testnet above this **MUST** be 4
+const { name } = await tbl.create(
   `name text, id int, primary key (id);`, // table schema definition
   `mytable` // optional perfix that will be added to "queryable name"
 );
 
-// `queryableName` will be the prefix, if you chose one, with the chain id and
-// table id separated by underscores 
-const queryableName = createRes.name;
-console.log(queryableName); // e.g. mytable_4_1
+// `name` will be the prefix, if supplied, with the chain id and
+// table id separated by underscores.
+console.log(name); // e.g. mytable_4_1
 
-const insertRes = await tbl.write(`INSERT INTO ${queryableName} (id, name) VALUES (0, 'Bobby Tables');`);
+const insertRes = await tbl.write(`INSERT INTO ${name} (id, name) VALUES (0, 'Bobby Tables');`);
 
-const queryRes = await tbl.read(`SELECT * FROM ${queryableName};`);
+const queryRes = await tbl.read(`SELECT * FROM ${name};`);
 
 ```
 {% endtab %}
@@ -110,20 +106,18 @@ const wallet = new ethers.Wallet(privateKey);
 const provider = new ethers.providers.AlchemyProvider("rinkeby", "myapikey");
 const signer = wallet.connect(provider);
 
-const createRes = await tbl.create(
-  4,  // Chain Id, note that since we connected to rinkeby testnet above this **MUST** be 4
+const { name } = await tbl.create(
   `name text, id int, primary key (id);`, // table schema definition
   `mytable` // optional perfix that will be added to "queryable name"
 );
 
-// `queryableName` will be the prefix, if you chose one, with the chain id and
-// table id separated by underscores 
-const queryableName = createRes.name;
-console.log(queryableName); // e.g. mytable_4_1
+// `name` will be the prefix, if supplied, with the chain id and
+// table id separated by underscores.
+console.log(name); // e.g. mytable_4_1
 
-const insertRes = await tbl.write(`INSERT INTO ${queryableName} (id, name) VALUES (0, 'Bobby Tables');`);
+const insertRes = await tbl.write(`INSERT INTO ${name} (id, name) VALUES (0, 'Bobby Tables');`);
 
-const queryRes = await tbl.read(`SELECT * FROM ${queryableName};`);
+const queryRes = await tbl.read(`SELECT * FROM ${name};`);
 
 ```
 {% endtab %}
@@ -135,20 +129,18 @@ import { connect } from "https://cdn.skypack.dev/@tableland/sdk";
 
 const tbl = await connect({ network: "testnet" });
 
-const createRes = await tbl.create(
-  4,  // Chain Id, note that since we connected to rinkeby testnet above this **MUST** be 4
+const { name } = await tbl.create(
   `name text, id int, primary key (id);`, // table schema definition
   `mytable` // optional perfix that will be added to "queryable name"
 );
 
-// `queryableName` will be the prefix, if you chose one, with the chain id and
-// table id separated by underscores 
-const queryableName = createRes.name;
-console.log(queryableName); // e.g. mytable_4_1
+// `name` will be the prefix, if supplied, with the chain id and
+// table id separated by underscores.
+console.log(name); // e.g. mytable_4_1
 
-const insertRes = await tbl.write(`INSERT INTO ${queryableName} (id, name) VALUES (0, 'Bobby Tables');`);
+const insertRes = await tbl.write(`INSERT INTO ${name} (id, name) VALUES (0, 'Bobby Tables');`);
 
-const queryRes = await tbl.read(`SELECT * FROM ${queryableName};`);
+const queryRes = await tbl.read(`SELECT * FROM ${name};`);
 
 </script>
 ```
@@ -203,41 +195,33 @@ const tbl = await tl.connect({ signer, network: "testnet" });
 
 ### Creating Tables
 
-Like most relational database systems, Tableland requires the user to create tables for storing, querying, and relating data. This is done via the `create` function. The `create` function takes 3 arguments: 
-1. The chainId of the chain you specified while connecting.
-2. The column names, datatypes, and constraints that would go inside the parenthesis of a full `CREATE TABLE` statement.
-3. An optional "prefix" to the universally unique Tableland table name.
+Like most relational database systems, Tableland requires the user to create tables for storing, querying, and relating data. This is done via the `create` function. The `create` function takes 2 arguments: 
 
-All tables in Tableland are unique, and the way uniqueness is ensured is that each table is named by combining the chainId of the chain the table is minted on, and the id of the ERC-721 token that represents the table.  If the prefix is specified it is added to to start of the table name.  As such the prefix must follow the rules SQL table naming, e.g it cannot start with a number and the dash character cannot be used.  For more on rules of SQL table names see [Naming Syntax](https://www.postgresql.org/docs/7.0/syntax525.htm)
-Most valid SQL _constraints_ are supported, and the following data types are currently [supported](https://github.com/textileio/go-tableland/blob/main/pkg/parsing/query\_validator.go):
+1. The column names, datatypes, and constraints that would go inside the parenthesis of a full `CREATE TABLE` statement.  For example: `id int, name string, value real`
+2. An optional "prefix" to the universally unique Tableland table name.
 
-* `int2`, `int4`, `int8`, `serial`, `bigserial`
-* `text`, `uri`, `varchar`, `bpchar`
-* `date`, `timestamptz`
-* `bool`, `float4`, `float8`, `numeric`
-* `uuid`, `json`
+All tables in Tableland are unique, and the way uniqueness is ensured is that each table is named by combining the chainId of the chain the table is minted on, and the id of the ERC-721 token that represents the table. If the prefix is specified it is added to the start of the table name. As such the prefix must follow standard SQL table naming conventions, i.e. the prefix cannot start with a number, and only ASCII characters, numbers, and underscores may be used. For more on the rules of SQL table names see (for example) [Naming Syntax](https://www.postgresql.org/docs/7.0/syntax525.htm)
+Most valid SQL _constraints_ are supported, and the following data types are currently [supported](https://textile.notion.site/Data-Types-4831202597e04823998fe7addc275fea):
 
-{% hint style="info" %}
-The above list is tentative and incomplete; the accepted types are still not well defined at the spec level.
-{% endhint %}
+* `int`, `real`, `text`, `blob`, `any`
+
+See also the [Data Types docs](https://textile.notion.site/Data-Types-4831202597e04823998fe7addc275fea) for details on representing other common SQL data types using the above core types.
 
 ```typescript
 // Assumes a connection has already been established as above
 
-const createRes = await tbl.create(
-  4,  // Chain Id, note that since we connected to rinkeby testnet above this **MUST** be 4
+const { name } = await tbl.create(
   `name text, id int, primary key (id);`, // table schema definition
   `mytable` // optional perfix that will be added to "queryable name"
 );
 
-// `queryableName` will be the prefix, if you chose one, with the chain id and
-// table id separated by underscores, i.e. `${prefix}_${chainId}_${tableId}`
-const queryableName = createRes.name;
-console.log(queryableName); // e.g. mytable_4_1
+// `name` will be the prefix, if supplied, with the chain id and
+// table id separated by underscores.
+console.log(name); // e.g. mytable_4_1
 
 ```
 
-Creating a table generates a unique table identifier (table id). The table id is unique within the specified chain and can be used to reference the table for queries and updates after it has been created.  This table id is the tokenId from the Tableland Registry Smart Contract which means you can view your table on any blockchain scanner associated with the chain your table was minted on, Here is an example of a Tableland rinkeby table viewed on [Opensea](https://testnets.opensea.io/assets/0x30867ad98a520287ccc28cde70fcf63e3cdb9c3c/723)
+Creating a table generates a unique table identifier (table id). The table id is unique within the specified chain and can be used to reference the table for queries and updates after it has been created.  This table id is the tokenId from the Tableland Registry Smart Contract which means you can view your table on any blockchain scanner associated with the chain your table was minted on. Here is an example of a Tableland rinkeby table viewed on [Opensea](https://testnets.opensea.io/assets/0x30867ad98a520287ccc28cde70fcf63e3cdb9c3c/723)
 
 
 Tables created by a given Ethereum address are owned by that address. The default access control for a table is that the owner is the only address allowed to make update to the table, but any address can read the table. The ownership is based on the Tableland Registry Smart Contract token associated with the table. Which means if you transfer ownership of the token you are transfering ownership of the table and all associated access rights and the ability to change the access rights.
