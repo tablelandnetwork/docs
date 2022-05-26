@@ -6,7 +6,7 @@ description: >-
 
 # Command Line
 
-The Tableland project provides an experimental command line tool  that make it easy to interact with the Tableland network from the comfort of your command line. The `@tableland/cli` is simple and easy to use, and integrates nicely with tools like jq. Additionally, when interacting with Tableland's on-chain components, you can specify your own Alchemy or Infura endpoints for added control.
+The Tableland project provides an experimental command line tool that make it easy to interact with the Tableland network from the comfort of your command line. The `@tableland/cli` is simple and easy to use, and integrates nicely with tools like jq. Additionally, when interacting with Tableland's on-chain components, you can specify your own Alchemy or Infura endpoints for added control.
 
 Simply install the package and you are ready to start creating and updating tables on Tableland.
 
@@ -16,13 +16,13 @@ This is an experimental command line tool built with NodeJS. It is for demonstra
 
 ## Setup
 
-There are just a few setup steps required before using the command line tools. Firstly, since all Tableland API calls are "gated" by Ethereum address, you'll need to request access as mentioned in Quick Start guide.
+There are just a few setup steps required before using the command line tools. Firstly, since all Tableland API calls are "gated" by Wallet address, you'll need to request access as mentioned in Quick Start guide.
 
 {% content-ref url="quick-start.md" %}
 [quick-start.md](quick-start.md)
 {% endcontent-ref %}
 
-​ One you have registered your ETH address, you'll need to install the CLI tool on your desktop machine.
+​ Once you have registered your address, you'll need to install the CLI tool on your machine.
 
 ### Install
 
@@ -46,10 +46,9 @@ tableland [command]
 
 Commands:
   tableland create <statement>              Create a new unique table
-  [description] [alchemy] [infura]
-  [etherscan]
+  [alchemy] [infura] [etherscan]
   tableland info <id>                       Get info about a given table by id.
-  tableland jwt                             Create a signed JWT token
+  tableland siwe                            Create a SIWE token
   tableland list [controller]               List tables by controller
   tableland query <statement>               Run a query against a remote table
 
@@ -59,7 +58,7 @@ Options:
   -k, --privateKey  Private key string                       [string] [required]
   -h, --host        Remote API host
                          [string] [default: "https://testnet.tableland.network"]
-      --network     The EVM compatible network to target (currently ignored)
+      --network     The EVM compatible network to target
                                                    [string] [default: "rinkeby"]
 ```
 
@@ -69,7 +68,8 @@ There are a number of commands available for interacting with the Tableland APIs
 
 ### Options
 
-For most commands, you'll need to specify the private key string (`--privateKey`) for the ETH account you would like to use to interact with Tableland. In some cases, this will be used to sign the on-chain transactions required to interact with Tableland. Similarly, if an explicit `--token` argument is not provided (see below), a JWT can be created automatically using the specified private key string.
+For most commands, you'll need to specify the private key string (`--privateKey`) for the ETH account you would like to use to interact with Tableland.  In some cases, this will be used to sign the on-chain transactions required to interact with Tableland. Similarly, if an explicit `--token` argument is not provided (see below), a SIWE token can be created automatically using the specified private key string.
+You'll also need to specify the network you want to use (`--network`), unless you have a SIWE token that has the network information built in. 
 
 The list of global options for the Tableland CLI include:
 
@@ -80,22 +80,22 @@ Options:
   -k, --privateKey  Private key string                       [string] [required]
   -h, --host        Remote API host
                          [string] [default: "https://testnet.tableland.network"]
-      --network     The EVM compatible network to target (currently ignored)
+      --network     The EVM compatible network to target
                                                    [string] [default: "rinkeby"]
 ```
 
 {% hint style="info" %}
-It may be useful to create a local environment variable to avoid pasting the private key string (and JWT token) in all CLI commands. Copy your private key string and/or self-generated JWT token and create an env var prefixed with `TBL` to automatically use them when interacting with the CLI. For example, privateKey above becomes `TBL_PRIVATE_KEY`.
+It may be useful to create a local environment variable to avoid pasting the private key string (and SIWE token) in all CLI commands. Copy your private key string and/or SIWE token and create an env var prefixed with `TBL` to automatically use them when interacting with the CLI. For example, privateKey above becomes `TBL_PRIVATE_KEY`.
 {% endhint %}
 
-### jwt
+### Sign in with Ethereum
 
-Create a signed JWT token
+Create a SIWE token
 
-One you have registered your ETH address, you'll need to generate a self-signed [JWT token](https://jwt.io). This is done automatically when using the [javascript-sdk.md](javascript-sdk.md "mention") via a browser app (thanks to [Metamask](https://metamask.io)). For interacting _via the command line,_ you'll need to create one "manually" and include it (`--token`) with most command line calls.
+One you have registered your Wallet address, you'll need to generate a SIWE token. This is done automatically when using the [javascript-sdk.md](javascript-sdk.md "mention") via a browser that has an integrated Wallet, e.g. [Brave](https://brave.com/) or [Metamask](https://metamask.io)). For interacting _via the command line,_ you'll need to create one "manually" and include it (`--token`) with most command line calls.
 
 ```
-tableland jwt
+tableland siwe
 
 Options:
       --help        Show help                                          [boolean]
@@ -121,6 +121,8 @@ Options:
   -k, --privateKey  Private key string                       [string] [required]
   -h, --host        Remote API host
                          [string] [default: "https://testnet.tableland.network"]
+      --network     The EVM compatible network to target
+                                                   [string] [default: "rinkeby"]
 ```
 
 ### info
@@ -139,6 +141,8 @@ Options:
   -k, --privateKey  Private key string                       [string] [required]
   -h, --host        Remote API host
                          [string] [default: "https://testnet.tableland.network"]
+      --network     The EVM compatible network to target
+                                                   [string] [default: "rinkeby"]
 ```
 
 ### create
@@ -147,7 +151,7 @@ Create a new unique table.
 
 Like most relational database systems, Tableland requires the user to create tables for storing, querying, and relating data. See [#creating-tables](javascript-sdk.md#creating-tables "mention") in the [javascript-sdk.md](javascript-sdk.md "mention") docs for details on `CREATE` requirements. The response from a `create` statement includes the created table name, which the caller can use to make subsequent queries and updates.
 
-Since creating a table on Tableland currently mints a `TABLE` using the [Tableland Tables Registry](https://rinkeby.etherscan.io/token/0x30867AD98A520287CCc28Cde70fCF63E3Cdb9c3C), it is necessary to provide an API key to a remote ETH provider API when using the `create` command. Currently, we support [Alchemy](https://alchemyapi.io), [Infura](https://infura.io), and [Etherscan](https://etherscan.io). Simply specify your desired API provider key (or provide all three), and create a table.
+Since creating a table on Tableland currently mints a `TABLE` using the [Tableland Tables Registry](https://rinkeby.etherscan.io/token/0x30867AD98A520287CCc28Cde70fCF63E3Cdb9c3C), it is necessary to provide an API key to a remote provider API when using the `create` command. Currently, we support [Alchemy](https://alchemyapi.io), [Infura](https://infura.io), and [Etherscan](https://etherscan.io). Simply specify your desired API provider key (or provide all three), and create a table.
 
 ```
 tableland create <statement> [description] [alchemy] [infura] [etherscan]
@@ -161,11 +165,13 @@ Options:
   -k, --privateKey   Private key string                      [string] [required]
   -h, --host         Remote API host
                          [string] [default: "https://testnet.tableland.network"]
+      --network     The EVM compatible network to target
+                                                   [string] [default: "rinkeby"]
       --description  Table description                                  [string]
       --alchemy      Alchemy provider API key                           [string]
       --infura       Infura provider API key                            [string]
       --etherscan    Etherscan provider API key                         [string]
-  -t, --token        Signed JWT token (see `jwt --help`)                [string]
+  -t, --token        SIWE token (see `siwe --help`)                [string]
 ```
 
 ### query
@@ -184,7 +190,9 @@ Options:
   -k, --privateKey  Private key string                       [string] [required]
   -h, --host        Remote API host
                          [string] [default: "https://testnet.tableland.network"]
-  -t, --token       Signed JWT token (see `jwt --help`)                 [string]
+  -t, --token       SIWE token (see `siwe --help`)                 [string]
+      --network     The EVM compatible network to target, if not using --token
+                                                   [string] [default: "rinkeby"]
 ```
 
 ## Example
@@ -209,7 +217,7 @@ Creating a table is generally the first thing we'll do, so let's start with some
 {% tabs %}
 {% tab title="Input" %}
 ```
-tableland create "create table demo ( id int, name text, primary key (id));" --description="tableland rocks"
+tableland create "create table demo ( id int, name text, primary key (id));"
 ```
 {% endtab %}
 
@@ -278,31 +286,19 @@ tableland info 55
 {% endtab %}
 {% endtabs %}
 
-Ok, now we're going to create a JWT to use for querying and mutating the table on Tableland. Recall that we specified our `privateKey` argument previously, which is what will be used to signed the JWT now:
+Ok, now we're going to create a SIWE token to use for querying and mutating the table on Tableland. Recall that we specified our `privateKey` argument previously, which is what will be used to sign the SIWE now:
 
 {% tabs %}
 {% tab title="Input" %}
 ```
-tableland jwt
+tableland siwe
 ```
 {% endtab %}
 
 {% tab title="Output" %}
 ```json
 {
-  "token": "theverylong.tokenstring.thatwecreated",
-  "claims": {
-    "nbf": 1644910264,
-    "iat": 1644910274,
-    "exp": 1644946274,
-    "iss": "0xbAb12215Ed94713A290e0c618fa8177fAb5eFd2D",
-    "sub": "0xbAb12215Ed94713A290e0c618fa8177fAb5eFd2D"
-  },
-  "header": {
-    "typ": "JWT",
-    "alg": "ETH",
-    "kid": "eth:unknown:0xbAb12215Ed94713A290e0c618fa8177fAb5eFd2D"
-  }
+  "token": "theverylong.tokenstring.thatwecreated"
 }
 ```
 {% endtab %}
@@ -311,7 +307,7 @@ tableland jwt
 We only need to hang on to the `token` value itself from the above command. We can use `jq` to extract that part, and export it for future ease of use:
 
 ```
-tableland jwt | jq '.token'
+tableland siwe | jq '.token'
 export TBL_TOKEN=<theverylong.tokenstring.thatwecreated>
 ```
 
