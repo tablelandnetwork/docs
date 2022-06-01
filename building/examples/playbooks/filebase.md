@@ -21,7 +21,7 @@ Filebase can be used to store data in “buckets” (think folders) with associa
 We’ll start by creating a new table called AssetTracker, that we’ll use to track our Filebase assets. The table definition is given below. You can use the tableland CLI tool to create the table. See our Command Line docs for details on getting started with the CLI tool.
 
 ```sql
-CREATE TABLE AssetTracker (
+CREATE TABLE AssetTracker_69 (
 	id INT PRIMARY KEY,
 	name TEXT,
 	type TEXT,
@@ -31,11 +31,11 @@ CREATE TABLE AssetTracker (
 );
 ```
 
-This will create a table (say with the name `assettracker_0`) on the Tableland network. You’ll need to reference the table name later to update and query the table. It should look something like the following:
+This will create a table (say with the name `assettracker_69_0`) on the Tableland network. You’ll need to reference the table name later to update and query the table. It should look something like the following:
 
 ```json
 {
-	"name": "assettracker_192"
+	"name": "assettracker_69_192"
 }
 ```
 
@@ -64,7 +64,7 @@ Replace `assettracker_0` with the value you received in the previous step. The f
 To query the database, use the following statement via the CLI’s `query` command:
 
 ```sql
-SELECT * FROM assettracker_0;
+SELECT * FROM assettracker_69_0;
 ```
 
 This example queries all entries in the table. You can modify this to reflect your desired query for a single object or a certain criteria of objects.

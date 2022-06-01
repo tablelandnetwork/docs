@@ -14,18 +14,9 @@ Simply install the package and you are ready to start creating and updating tabl
 This is an experimental command line tool built with NodeJS. It is for demonstration purposes only at this early stage.
 {% endhint %}
 
-## Setup
-
-There are just a few setup steps required before using the command line tools. Firstly, since all Tableland API calls are "gated" by Wallet address, you'll need to request access as mentioned in Quick Start guide.
-
-{% content-ref url="quick-start.md" %}
-[quick-start.md](quick-start.md)
-{% endcontent-ref %}
-
-​ Once you have registered your address, you'll need to install the CLI tool on your machine.
-
 ### Install
 
+You'll need to install the CLI tool on your machine.
 You can install the CLI tools via `npm` or `yarn`.
 
 ```

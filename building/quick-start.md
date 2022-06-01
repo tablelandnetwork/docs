@@ -4,29 +4,21 @@ description: The quick and easy way to start creating tables on Tableland.
 
 # Quick Start
 
-## Get Access
+## Get Help
 
-For now, Tableland API requests are authenticated by ETH address. Any request that doesn't include a self-signed access token that is tied to a per-registered ETH address will return an error.
-
-You can gain access to the Tableland MVP by joining our Discord. While you're there, don't forget to say hello in the `#👋-intros` channel! Oh, and welcome to the community!
+Tableland is currently in beta. If you're having troubleyou can get help by joining our Discord. While you're there, don't forget to say hello in the `#👋-intros` channel! Oh, and welcome to the community!
 
 {% embed url="https://discord.gg/A7JpNjpk3K" %}
 
 {% hint style="info" %}
-Tableland is currently in private beta, so to join you’ll need to do a few more steps! Having trouble getting access? One of the core Tableland developer team members will be happy to help. Just ask in #general or #support!
+Not sure where to start in Discord? Just ask in #general or #support!
 {% endhint %}
-
-Next, jump into the `#🎟-dev-whitelist` channel and post your ETH public address. It should look something like this:
-
-```bash
-0xbAb12215Ed94713A290e0c618fa8177fAb5eFd2D
-```
 
 {% hint style="danger" %}
-Only ever share you _public_ address. We will never DM you and we will never ask you for your secrets, private keys, passwords, or phrases. Be diligent, and report scammers and spammers.
+We will never DM you and we will never ask you for your secrets, private keys, passwords, or phrases. Be diligent, and report scammers and spammers.
 {% endhint %}
 
-That's it! Your ETH address will be added to the access control list shortly. You’ll be able to use `#🔩-dev-chat` to share your project, find collaborators, learn from others, ask technical questions, or let us know about any issues you run into. We'll also be posting periodic updates in all of our other discord channels too, so stay tuned!
+Even if you don't need help it would be great if you joined and used `#🔩-dev-chat` to share your project, find collaborators, learn from others, ask technical questions, or let us know about any issues you run into. We'll also be posting periodic updates in all of our other discord channels too, so stay tuned!
 
 ## Play in the Browser
 

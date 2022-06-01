@@ -9,16 +9,16 @@ Tableland is all about tables, and relationships between tables. But did you kno
 So let's say you want to store key/value pairs that map strings to JSON data. Tableland can help! This is as easy as creating a table with these two column types, and specifying that your key column (e.g., `k`) is a `varchar(255)` primary key, and you value column (e.g., `v` is `json`):
 
 ```sql
-CREATE TABLE key_values (
+CREATE TABLE key_values_69 (
     k varchar(255) primary key,
     v json
 );
 ```
 
-Now, with the table name in hand `key_values_99`, adding key/value pairs to the table is as easy as:
+Now, with the table name in hand `key_values_69_99`, adding key/value pairs to the table is as easy as:
 
 ```sql
-INSERT INTO key_values_99 VALUES ("key-uuid-or-something", '{"somelarge_json": "bla"}');
+INSERT INTO key_values_69_99 VALUES ("key-uuid-or-something", '{"somelarge_json": "bla"}');
 ```
 
 And this is exactly the type of repetitive query string that you can easily wrap in an app or library to make it super simple. Check out our [javascript-sdk.md](../../javascript-sdk.md "mention") docs for details on creating, updating, and querying tables from JavaScript. Once you have the table created, putting and getting values from it is as easy as the following pseudo JavasScript code:
@@ -26,11 +26,11 @@ And this is exactly the type of repetitive query string that you can easily wrap
 ```typescript
 async function put(key: string, value: any) {
     const json = JSON.stringify(value);
-    return tbl.query(`INSERT INTO key_values_99 VALUES (${key}, ${json});`)
+    return tbl.query(`INSERT INTO key_values_69_99 VALUES (${key}, ${json});`)
 }
 
 async fuction get(key: string) {
-    return tbl.query(`SELECT v FROM key_values_99 WHERE k = ${key}`).rows[0]
+    return tbl.query(`SELECT v FROM key_values_69_99 WHERE k = ${key}`).rows[0]
 }
 ```
 

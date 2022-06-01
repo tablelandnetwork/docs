@@ -11,7 +11,7 @@ paths:
         - bearerAuth: []
       summary: Lets you interact with Tableland's JSON-RPC calls
       description: >
-        There are four available JSON-RPC methods:
+        The following JSON-RPC methods are available:
 
         * The `validateCreateTable` method allows you validate a CREATE TABLE query as a pre-mint check, and also calculate its corresponding structure hash.
 
@@ -44,38 +44,38 @@ paths:
                   method: tableland_validateCreateTable
                   id: 1
                   params:
-                    id: "0"
-                    create_statement: "CREATE TABLE myname (column_a int, column_b text);"
+                    - id: "0"
+                      create_statement: "CREATE TABLE myname_31337 (column_a int, column_b text);"
               runReadQuery:
                 value:
                   jsonrpc: "2.0"
                   method: tableland_runReadQuery
                   id: 1
                   params:
-                    statement: SELECT * FROM Hello_4_10;
+                    - statement: SELECT * FROM healthbot_31337_0;
               relayWriteQuery:
                 value:
                   jsonrpc: "2.0"
                   method: tableland_relayWriteQuery
                   id: 1
                   params:
-                    statement: INSERT INTO Hello_4_10 values (1);
+                    - statement: INSERT INTO healthbot_31337_0 values (2);
               getReceipt:
                 value:
                   jsonrpc: "2.0"
                   method: tableland_getReceipt
                   id: 1
                   params:
-                    txn_hash: "0xc3e7d1e81b59556f414a5f5c23760eb61b4bfaa18150d924d7d3b334941dbecd"
+                    - txn_hash: "0x400508d7cc035b14cc53f64393a8dafcc55f66ad8f9b44d626744157337e2098"
               setController:
                 value:
                   jsonrpc: "2.0"
                   method: tableland_setController
                   id: 1
                   params:
-                    Caller: "0x6887246668a3b87f54deb3b94ba47a6f63f32985"
-                    Controller: "0x5e4e65926ba27467555eb562121fac00d24e9dd2"
-                    token_id: "10"
+                    - caller: "0xf39fd6e51aad88f6f4ce6ab8827279cfffb92266"
+                      controller: "0x5e4e65926ba27467555eb562121fac00d24e9dd2"
+                      token_id: "0"
       responses:
         "200":
           description: OK
@@ -116,9 +116,8 @@ paths:
                     jsonrpc: "2.0"
                     id: 1
                     result:
-                      data:
-                        transaction:
-                          - hash: "0xc3e7d1e81b59556f414a5f5c23760eb61b4bfaa18150d924d7d3b334941dbecd"
+                      tx:
+                        hash: "0xc3e7d1e81b59556f414a5f5c23760eb61b4bfaa18150d924d7d3b334941dbecd"
                 runReadQuery:
                   value:
                     jsonrpc: "2.0"
@@ -136,14 +135,14 @@ paths:
                     jsonrpc: "2.0"
                     id: 1
                     result:
-                      ok: "true"
+                      ok: true
                       receipt:
                         chain_id: 4
                         txn_hash: "0xc3e7d1e81b59556f414a5f5c23760eb61b4bfaa18150d924d7d3b334941dbecd"
                         block_number: 1000
                         error: ""
                         table_id: 102
-  /chain/{chainID}/tables/controller/{ethAddress}:
+  /chain/{chainID}/tables/controller/{address}:
     get:
       summary: Get all tables controlled by an ETH address
       parameters:
@@ -154,7 +153,7 @@ paths:
           required: true
           description: The ChainID of the targeted chain.
         - in: path
-          name: ethAddress
+          name: address
           schema:
             type: string
           required: true
@@ -185,11 +184,10 @@ paths:
                     structure:
                       type: "string"
                   example:
-                    controller: "0xbAb12215Ed94713A290e0c618fa8177fAb5eFd2D"
-                    name: "myname_0"
-                    description: "tableland rocks!"
-                    structure: "be1eb905f03347a439ecf9b612632fd53839b7f082dc2f9be6ef7da5dfddd660"
-                    created_at: "2022-02-07T22:57:41.606803Z"
+                    - controller: "0xbAb12215Ed94713A290e0c618fa8177fAb5eFd2D"
+                      name: "healthbot_31337_0"
+                      structure: "be1eb905f03347a439ecf9b612632fd53839b7f082dc2f9be6ef7da5dfddd660"
+                      created_at: "2022-02-07T22:57:41.606803Z"
   /chain/{chainID}/tables/{id}:
     get:
       summary: Get the metadata associated with a table
@@ -280,7 +278,7 @@ components:
       scheme: bearer
       bearerFormat: SIWE
   schemas:
-   runReadQuery:
+    runReadQuery:
       type: "object"
       required:
         - "method"
