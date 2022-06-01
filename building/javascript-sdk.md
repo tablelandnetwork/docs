@@ -234,7 +234,12 @@ Since all reads are always open to the public, and Tableland is still in very ea
 
 ### Listing Tables
 
-Once tables have been created for a given address, they can be listed via the `list` function. This function takes no arguments and returns a list of `TableMetadata` objects for the chain that was connected to. `TableMetadata` objects contain `controller`, `name`, and `structure`. The `structure` of a table is defined by its normalized schema, more on `structure` in the section on [Schema Structure](#schema-structure).
+Once tables have been created for a given address, they can be listed via the `list` function. This function takes no arguments and returns a list of `TableMetadata` objects for the chain that was connected to.
+`TableMetadata` objects contain:
+  - `controller`, the checksummed address of the account that owns the table
+  - `name`, the table name that can be used to run read and write queries against the table
+  - `structure`, the structure of a table is defined by its normalized schema, more on `structure` in the section on [Schema Structure](#schema-structure) 
+  - `created_at`, this is the ISO data and time in UTC when the Validator created the table represented as a string. It's worth noting that Validators all come to the same consensus on the state of tables, but when tables are created is specific to the Validator. Validators are all listening to EVM events, and they they all process them in the same order.  The actual processing may happen at slightly different times which could result in different values for `create_at`, depending on the Validator you've connected to.
 
 ```typescript
 // Assumes a connection has already been established as above
