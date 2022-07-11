@@ -4,6 +4,12 @@ cover: .gitbook/assets/Screen_Shot_2022-02-09_at_1.59.24_PM_copy.png
 coverY: 37.70848440899203
 ---
 
+**DEPRECATION NOTICE**: We are no longer rendering our docs from this repo.
+We have moved to a Notion-based flow which is easier to maintain. If you would
+like to submit issues, please join our Discord and mention your issue there.
+
+https://discord.gg/SGBxcE7cGX
+
 # TABLELAND
 
 Welcome to Tableland! Here you'll find all sorts of useful resources for interacting with our community, our APIs, and our network in general. Whatever your interests, we think there's a home for you here on Tableland. Read more about Tableland’s progressive decentralization in our [roadmap.md](general/roadmap.md "mention").
