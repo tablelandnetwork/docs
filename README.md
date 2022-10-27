@@ -1,45 +1,40 @@
----
-description: Build web3 with SQL.
-cover: .gitbook/assets/Screen_Shot_2022-02-09_at_1.59.24_PM_copy.png
-coverY: 37.70848440899203
----
+# Tableland Specifications
 
-**DEPRECATION NOTICE**: We are no longer rendering our docs from this repo.
-We have moved to a Notion-based flow which is easier to maintain. If you would
-like to submit issues, please join our Discord and mention your issue there.
+> Specs for the Tableland Network protocol.
 
-https://discord.gg/SGBxcE7cGX
+## Table of Contents
 
-# TABLELAND
+- [Background](#background)
+- [Index](#index)
+- [Documentation & Support](#documentation--support)
+- [Contributing](#contributing)
+- [License](#license)
 
-Welcome to Tableland! Here you'll find all sorts of useful resources for interacting with our community, our APIs, and our network in general. Whatever your interests, we think there's a home for you here on Tableland. Read more about Tableland’s progressive decentralization in our [roadmap.md](general/roadmap.md "mention").
+## Background
 
-## Developers
+This repository hosts the Tableland protocol specifications. The following label system is used to help identify the current state of each spec:
 
-Ready to start building? Check out the content on the left for demos and examples, details about our Javascript/Typescript SDK and Tableland remote RPC API, and a whole lot more. Start with our Quick Start guide and get building!
+- ![wip](https://img.shields.io/badge/status-wip-orange.svg?style=flat-square) → A work-in-progress. It may be used to describe an idea before actually committing to a full draft of the spec.
+- ![draft](https://img.shields.io/badge/status-draft-yellow.svg?style=flat-square) → A draft that is ready to review and implementable.
+- ![stable](https://img.shields.io/badge/status-stable-brightgreen.svg?style=flat-square) → A spec that has been adopted (implemented). It might be improved but should not change fundamentally.
 
-{% content-ref url="building/quick-start.md" %}
-[quick-start.md](building/quick-start.md)
-{% endcontent-ref %}
+## Index
 
-## General
+### [SQL specification](specs/sql/)
 
-Want to learn more about Tableland, or engage with our amazing community? Dig into our general reference materials on the left, or start with a high-level overview of the Tableland network below.
+These specs define the SQL language compliant with the Tableland protocol. It is a subset of the [SQLite SQL language specification](https://www.sqlite.org/lang.html), with additional constraints specific to Tableland operations. It does omit many features while at the same time adds a few features of its own.
 
-{% content-ref url="general/what-is-tableland.md" %}
-[what-is-tableland.md](general/what-is-tableland.md)
-{% endcontent-ref %}
+## Documentation & Support
 
-## Building
+For user support, please see the official [Documentation](https://docs.tableland.xyz/) and/or join the [Tableland Discord](https://t.co/m1ItWcJTLG).
 
-Are you building a hack or demo for ETH Denver? Maybe you have an idea or usecase for Tableland that you'd like to explore? Check out our grants page for details, or skip to our ETH Denver page for information on early access for hacking on Tableland.
+## Contributing
 
-{% content-ref url="developers/grants.md" %}
-[grants.md](developers/grants.md)
-{% endcontent-ref %}
+PRs accepted.
 
-## Jump in!
+Small note: If editing the README, please conform to the
+[standard-readme](https://github.com/RichardLitt/standard-readme) specification.
 
-Can't find what you're looking for? Let us know on our Discord by pinging us in the #general channel.
+## License
 
-{% embed url="https://discord.gg/A7JpNjpk3K" %}
+MIT AND Apache-2.0, © 2021-2022 Tableland Network Contributors
