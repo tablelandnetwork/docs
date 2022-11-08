@@ -1,9 +1,6 @@
 # Tableland Specifications
 
-<h1 align="center">
-  <img src="https://ucaa2378a630ffc982346c73f24a.previews.dropboxusercontent.com/p/thumb/ABsuf_fnuOX82jhbky25zwpYL57KGVKTNVLWplbJmBFfSpoqYLT8fBnLPlYoyN8F-mLCtm5XhaqB7UEN8Qpsl5sdRzUPuiKUosGGf-6VHoGxSSsJdFWWAobxkAvqRxA8IvQdeAF8bGDmP5gR9TIUjsf4N9CUl8PLx0h3pivFOPy8rSXr27fjzpDD5Ec_MWIAYEd-OpXrd5xFrXqirIp8tmmVNNHL8hAbZAIGQttTsvBkTUnW5h6FAJSeoJ-VcfyGqeLDvGGnOtgHEjWiS3f1hthVSJqoTMtzJ4OuBmAJO2f0udPdqT9CwY7RbyiHMbIcqo1PYSNLVhLITCq2D0-RdWa0rfvLoSMxSPGSC-4-1UUZL1L8rSjemxSVkDJEJCAaJ_E/p.png" style="width:250px;" alt="libp2p logo"/>
-</h1>
-
+![image](https://user-images.githubusercontent.com/6136245/153219831-53b05f19-1ac2-4523-b564-0686e2078d4d.png)
 ![stable](https://img.shields.io/badge/status-stable-brightgreen.svg?style=flat-square)
 <a href="http://textile.io"><img src="https://img.shields.io/badge/made%20by-Textile%20-blue.svg?style=flat-square" /></a>
 
