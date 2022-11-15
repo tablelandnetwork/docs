@@ -43,6 +43,7 @@ pandoc -s --toc \
     -B Header.md \
     StatementTypes.md \
     DataTypes.md \
+    Encoding.md \
     -o README.md
 ```
 
