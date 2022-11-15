@@ -36,7 +36,11 @@ These specs define the SQL language compliant with the Tableland protocol. It is
 The SQL specification document can be generated from its parts via:
 
 ```bash
-pandoc -s --toc -B Header.md \
+cd specs/sql
+pandoc -s --toc \
+    -t gfm+tex_math_dollars\
+    -f gfm+tex_math_dollars \
+    -B Header.md \
     StatementTypes.md \
     DataTypes.md \
     -o README.md
