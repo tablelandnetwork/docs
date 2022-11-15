@@ -139,9 +139,57 @@ The value of a `VIRTUAL` column is computed when read, whereas the value of a `S
 
 Each table in Tableland may have _at most one_ `PRIMARY KEY`. If the keywords `PRIMARY KEY` are added to a column definition, then the primary key for the table consists of that single column. Or, if a `PRIMARY KEY` clause is specified as a separate table constraint, then the primary key of the table consists of the list of columns specified as part of the `PRIMARY KEY` clause. The `PRIMARY KEY` clause must contain only column names. An error is raised if more than one `PRIMARY KEY` clause appears in a `CREATE TABLE` statement. The `PRIMARY KEY` is optional.
 
+If a table has a single column primary key and the declared type of that column is `INTEGER`, then the column is known as an `INTEGER PRIMARY KEY`. See below for a description of the special properties and behaviors associated with an [`INTEGER PRIMARY KEY`](#integer-primary-key).
+
 Each row in a table with a primary key must have a unique combination of values in its primary key columns. If an `INSERT` or `UPDATE` statement attempts to modify the table content so that two or more rows have identical primary key values, that is a constraint violation. Related, the SQL standard is that a `PRIMARY KEY` should always be `NOT NULL`, so Tableland enforces this constraint.
 
-> 🚧 **Feature At Risk**: It is not currently possible to `ALTER TABLE` after it has been created. As such, table structure in Tableland is considered immutable. The Tableland core development team is currently evaluating whether to allow `ALTER TABLE` only in the case of _adding new columns_.
+#### Integer Primary Key
+
+All rows within Tableland tables have a 64-bit signed integer key that uniquely identifies the row within its table. This integer is usually called the `ROWID`. The `ROWID` value can be accessed using one of the special case-independent names `"rowid"`, `"oid"`, or `"_rowid_"` in place of a column name. If a table contains a user defined column named `"rowid"`, `"oid"` or `"_rowid_"`, then that name always refers the explicitly declared column and cannot be used to retrieve the integer `ROWID` value.
+
+The data for Tableland tables are stored in sorted order, by `ROWID`. This means that retrieving or sorting records by `ROWID` is fast. Searching for a record with a specific `ROWID`, or for all records with `ROWID`s within a specified range is around twice as fast as a similar search made by specifying any other `PRIMARY KEY`. This `ROWID` sorting is also required for sub-queries and other SQL features on Tableland, to ensure deterministic ordering of results.
+
+With one exception noted below, if a table has a primary key that consists of a single column and the declared type of that column is `INTEGER`, then the column becomes an alias for the `ROWID`. Such a column is usually referred to as an "integer primary key". A `PRIMARY KEY` column only becomes an integer primary key if the declared type name is exactly `INTEGER`. Other integer type names like `INT` causes the primary key column to behave as an ordinary table column with integer affinity and a unique index, not as an alias for the `ROWID`.
+
+In the above case of an integer primary key, there is an additional implied `AUTOINCREMENT` constraint, which forces the integer primary key to behave as if it were specified with `INTEGER PRIMARY KEY AUTOINCREMENT`. See [Autoincrement](#autoincrement) for further details.
+
+The exception mentioned above is that if the declaration of a column with declared type `INTEGER` includes an `PRIMARY KEY DESC` clause, it does not become an alias for the `ROWID` and is not classified as an integer primary key. In pratice, this means that the following three table declarations all cause the column "x" to be an alias for the `ROWID` (an integer primary key):
+
+- `CREATE TABLE t(x INTEGER PRIMARY KEY ASC, y, z);`
+- `CREATE TABLE t(x INTEGER, y, z, PRIMARY KEY(x ASC));`
+- `CREATE TABLE t(x INTEGER, y, z, PRIMARY KEY(x DESC));`
+
+But the following declaration does not result in "x" being an alias for the `ROWID`:
+
+- `CREATE TABLE t(x INTEGER PRIMARY KEY DESC, y, z);`
+
+Given this, and the implied autoincrement behavior, if the primary key is defined at the end as a table constraint and not as a column constraint:
+
+- `CREATE TABLE t(x INTEGER, y, z, PRIMARY KEY(x DESC));`
+
+this will actually be transformed (behind the scenes) by the Tableland Parser to:
+
+- `CREATE TABLE t(x INTEGER PRIMARY KEY DESC AUTOINCREMENT, y, z);`
+
+in order to maintain the `ROWID` alias behavior. This transformation to the more canonical direct constraint on the primary key is required to enfore the implied `AUTOINCREMENT` behavior on the special integer primary keys.
+
+Rowid values _may not_ be modified using an `UPDATE` statement in the same way as any other column value can, either using one of the built-in aliases (`"rowid"`, `"oid"` or `"_rowid_"`) or by using an alias created by an integer primary key. Similarly, an `INSERT` statement may not provide a value to use as the `ROWID` for any row inserted.
+
+#### Autoincrement
+
+In Tableland, a column with type `INTEGER PRIMARY KEY` is an alias for the `ROWID` which is always a 64-bit signed integer. It is implied that this column will behave as `INTEGER PRIMARY KEY AUTOINCREMENT`. This is a special feature of the Tableland SQL Specification, and helps to ensure deterministic odering of values within a table.
+
+> ℹ️ While the `AUTOINCREMENT` keyword is implied with `INTEGER PRIMARY KEY` columns, the keyword itself is not allowed in this specification. Any attempt to use the `AUTOINCREMENT` keyword on any column results in an error.
+
+On an `INSERT`, the `ROWID` or `INTEGER PRIMARY KEY` column will be filled automatically with a monotonically increasing integer value, usually one more than the largest `ROWID` currently in use.
+
+In practice, this prevents the reuse of `ROWID`s over the lifetime of the table. In other words, the purpose of the implied `AUTOINCREMENT` is to prevent the reuse of `ROWID`s from previously deleted rows.
+
+The `ROWID` chosen for the new row is at least one larger than the largest `ROWID` that has ever before existed in that same table. If the table has never before contained any data, then a `ROWID` of 1 is used. If the largest possible `ROWID` has previously been inserted, then new `INSERT`s are _not allowed_ and any attempt to insert a new row will fail with an error. Only `ROWID` values from previous transactions that were committed are considered. `ROWID` values that were rolled back are ignored and can be reused.
+
+Rows with automatically selected `ROWID`s are guaranteed to have `ROWID`s that have never been used before by the same table. And the automatically generated `ROWID`s are guaranteed to be monotonically increasing. These are important properties for blockchain applications.
+
+Note that "monotonically increasing" does not imply that the `ROWID` always increases by exactly one. One is the usual increment. However, if an insert fails due to (for example) a uniqueness constraint, the `ROWID` of the failed insertion attempt might not be reused on subsequent inserts, resulting in gaps in the `ROWID` sequence. Tableland guarantees that automatically chosen `ROWID`s will be increasing but not that they will be sequential.
 
 ## DELETE
 
