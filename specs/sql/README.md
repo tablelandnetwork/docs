@@ -97,7 +97,7 @@ table:
 
 ## Structure
 
-``` {.sql}
+``` sql
 CREATE TABLE *table_name* ( [
   { *column_name* *data_type* [ *column_constraint* [,  ... ] ]
   | table_constraint }
@@ -107,7 +107,7 @@ CREATE TABLE *table_name* ( [
 
 where `column_constraint` has structure
 
-``` {.sql}
+``` sql
 [ CONSTRAINT constraint_name ]
 { NOT NULL |
   CHECK ( expression ) |
@@ -119,7 +119,7 @@ where `column_constraint` has structure
 
 and `table_constraint` has structure
 
-``` {.sql}
+``` sql
 [ CONSTRAINT constraint_name ]
 { CHECK ( expression ) |
   UNIQUE ( column_name [, ... ] ) |
@@ -177,12 +177,12 @@ any English language word as the name of a user-defined object.
 If you want to use a keyword as a name, you need to quote it. There are
 four ways of quoting keywords in SQLite:
 
--   `'keyword'` --- A keyword in single quotes is a string literal.
--   `"keyword"` --- A keyword in double-quotes is an identifier.
--   `[keyword]` --- A keyword enclosed in square brackets is an
+-   `'keyword'` — A keyword in single quotes is a string literal.
+-   `"keyword"` — A keyword in double-quotes is an identifier.
+-   `[keyword]` — A keyword enclosed in square brackets is an
     identifier. This is not standard SQL, it is included in Tableland
     for compatibility.
--   `keyword` --- A keyword enclosed in grave accents (ASCII code 96) is
+-   `keyword` — A keyword enclosed in grave accents (ASCII code 96) is
     an identifier. This is not standard SQL, it is included in Tableland
     for compatibility.
 
@@ -274,7 +274,7 @@ in the new row are determined by their default values, as follows:
 A column that includes a `GENERATED ALWAYS AS` clause is a generated
 column:
 
-``` {.sql}
+``` sql
 CREATE TABLE table_id (
     ...,
     column_name data_type { GENERATED ALWAYS } AS (*expression*) { STORED | VIRTUAL }
@@ -360,7 +360,7 @@ the table id.
 
 ## Structure
 
-``` {.sql}
+``` sql
 DELETE FROM table_id [ WHERE condition ]
 ```
 
@@ -378,7 +378,7 @@ id.
 
 ## Structure
 
-``` {.sql}
+``` sql
 INSERT INTO table_id [ ( *column_name* [, ...] ) ] VALUES (
   { expression } [, ...]
 );
@@ -386,7 +386,7 @@ INSERT INTO table_id [ ( *column_name* [, ...] ) ] VALUES (
 
 or
 
-``` {.sql}
+``` sql
 INSERT INTO table_id DEFAULT VALUES;
 ```
 
@@ -420,7 +420,7 @@ zero or more rows of the database table identified by the table id.
 
 ## Structure
 
-``` {.sql}
+``` sql
 UPDATE table_name
     SET { column_name = { expression | DEFAULT } } [, ...]
     [ WHERE condition ];
@@ -449,7 +449,7 @@ assignments are made.
 
 > ℹ️ An assignment in the `SET` clause can be a parenthesized list of
 > column names on the left and a `ROW` value of the same size on the
-> right. For example, consider the following two "styles" of `UPDATE`
+> right. For example, consider the following two “styles” of `UPDATE`
 > statements: `UPDATE table_id SET (a,b)=(b,a);` or
 > `UPDATE table_id SET a=b, b=a;`.
 
@@ -460,7 +460,7 @@ privileges for a table identified by table name and id.
 
 ## Structure
 
-``` {.sql}
+``` sql
 GRANT { INSERT | UPDATE | DELETE } [, ...]
     ON { [ TABLE ] table_name [, ...] }
     TO role [, ...]
@@ -479,7 +479,7 @@ has all (valid) privileges on creation. The owner could, however, choose
 to revoke some of their own privileges for safety reasons.
 
 Related, if a table is created with an access controller contract
-specified, or if an address with sufficient privileges updates a table's
+specified, or if an address with sufficient privileges updates a table’s
 access control rules to use a controller contract, then all
 command-based access control rules are ignored in favor of the
 controller contract access control. In other words, if a controller
@@ -519,7 +519,7 @@ The `SELECT` statement is the work-house of the SQL query model, and as
 such, the available syntax is extremely complex. In practice, most
 `SELECT` statements are simple `SELECT` statements of the form:
 
-``` {.sql}
+``` sql
 SELECT [ ALL | DISTINCT ]
     [ * | expression [, ...] ]
     [ FROM from_clause [, ...] ]
@@ -553,7 +553,7 @@ four step process in the description below:
     `SELECT DISTINCT` query (see further details below), duplicate rows
     are removed from the set of result rows.
 
-There are two types of simple `SELECT` statement --- aggregate and
+There are two types of simple `SELECT` statement — aggregate and
 non-aggregate queries. A simple `SELECT` statement is an aggregate query
 if it contains either a `GROUP BY` clause or one or more *aggregate
 functions* in the result set. Otherwise, if a simple `SELECT` contains
@@ -580,7 +580,7 @@ duplicate rows, two `NULL` values are considered to be equal.
 
 ## Structure
 
-``` {.sql}
+``` sql
 WHERE condition
 ```
 
@@ -605,14 +605,14 @@ uses the following steps:
     step, with columns subset to match the `SELECT` statement.
 
 > ℹ️ The search condition in the `WHERE` clause is made up of any number
-> of comparisons (=, \<, \>, LIKE, IN, etc), combined using a range of
-> logical operators (e.g., OR, AND, ALL, ANY, etc).
+> of comparisons (=, &lt;, &gt;, LIKE, IN, etc), combined using a range
+> of logical operators (e.g., OR, AND, ALL, ANY, etc).
 
 # FROM clause
 
 ## Structure
 
-``` {.sql}
+``` sql
 FROM { table_name [ * ] [ [ AS ] alias ] | ( sub_select ) [ AS ] alias }
 ```
 
@@ -649,7 +649,7 @@ together.
 
 ## Structure
 
-``` {.sql}
+``` sql
 JOIN from_clause [ ON on_expression | USING ( column_name [, ...] ) ]
 ```
 
@@ -697,26 +697,14 @@ Tableland supports a small set of accepted column types in user-defined
 tables. The currently supported types are listed below and can be used
 to represent most, if not all, common SQL types:
 
-  -----------------------------------------------------------------------------
-  Type        Description
-  ----------- -----------------------------------------------------------------
-  `INT`       Signed integer values, stored in 0, 1, 2, 3, 4, 6, or 8 bytes
-              depending on the magnitude of the value.
-
-  `INTEGER`   Same as `INT`, except it may also be used to represent an
-              auto-incrementing `PRIMARY KEY` field.
-
-  `REAL`      Floating point values, stored as an 8-byte IEEE floating point
-              number.
-
-  `TEXT`      Text string, stored using the database encoding (UTF-8).
-
-  `BLOB`      A blob of data, stored exactly as it was input. Useful for byte
-              slices etc.
-
-  `ANY`       Any kind of data. No type checking is performed, no data coercion
-              is done on insert.
-  -----------------------------------------------------------------------------
+| Type      | Description                                                                                            |
+|-----------|--------------------------------------------------------------------------------------------------------|
+| `INT`     | Signed integer values, stored in 0, 1, 2, 3, 4, 6, or 8 bytes depending on the magnitude of the value. |
+| `INTEGER` | Same as `INT`, except it may also be used to represent an auto-incrementing `PRIMARY KEY` field.       |
+| `REAL`    | Floating point values, stored as an 8-byte IEEE floating point number.                                 |
+| `TEXT`    | Text string, stored using the database encoding (UTF-8).                                               |
+| `BLOB`    | A blob of data, stored exactly as it was input. Useful for byte slices etc.                            |
+| `ANY`     | Any kind of data. No type checking is performed, no data coercion is done on insert.                   |
 
 # Details
 
@@ -832,36 +820,36 @@ use a `int64` in smart contracts if it makes sense for the use case. See
 the following tables for how each Solidity number should be defined in
 Tableland schemas:
 
-  Solidity Type   SQL Type
-  --------------- ----------
-  uint256         text
-  uint128         text
-  uint64          text
-  uint32          integer
-  uint16          integer
-  uint8           integer
+| Solidity Type | SQL Type |
+|---------------|----------|
+| uint256       | text     |
+| uint128       | text     |
+| uint64        | text     |
+| uint32        | integer  |
+| uint16        | integer  |
+| uint8         | integer  |
 
-  Solidity Type   SQL Type
-  --------------- ----------
-  int256          text
-  int128          text
-  int64           integer
-  int32           integer
-  int16           integer
-  uint8           integer
+| Solidity Type | SQL Type |
+|---------------|----------|
+| int256        | text     |
+| int128        | text     |
+| int64         | integer  |
+| int32         | integer  |
+| int16         | integer  |
+| uint8         | integer  |
 
 Other best practices have also been defined below:
 
-  Solidity Type   SQL Type
-  --------------- ----------
-  string          text
-  address         text
-  bytes           blob
-  bool            text
-  bool int8       integer
-  ---             any
+| Solidity Type | SQL Type |
+|---------------|----------|
+| string        | text     |
+| address       | text     |
+| bytes         | blob     |
+| bool          | text     |
+| bool int8     | integer  |
+| —             | any      |
 
-> ⚠️ Tableland doesn't support boolean values, so instead of using a
+> ⚠️ Tableland doesn’t support boolean values, so instead of using a
 > Solidity `bool`, consider using a `uint8` to represent a true/false as
 > `1` or `0`, which is then stored in Tableland as an `INT`.
 
