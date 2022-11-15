@@ -10,4 +10,4 @@ Tableland understands a small subset of the standard SQL language. It does omit
 
 This general SQL specification is broken down into two core sub-documents (which are linked below). This specification is a living document, and as such, may be updated over time. Proposals for the addition of SQL language features and data types may be submitted by the Tableland community over time. These proposals will be evaluated for technical feasibility, utility to the community, and longer-term sustainability.
 
-## Table of Contents
+### Table of Contents

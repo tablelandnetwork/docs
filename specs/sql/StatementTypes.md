@@ -5,7 +5,7 @@ The core Tableland SQL parser accepts an SQL statement list which is a semicolon
 > ⚠️
 > The statement and data types provided here are part of the official _minimal_ Tableland SQL specification. Additional functionality may be available in practice. However, it is not recommended that developers rely on SQL features outside of this minimal specification in the long-term.
 
-# CREATE TABLE
+## CREATE TABLE
 
 The `CREATE TABLE` command is used to create a new table on Tableland. A `CREATE TABLE` command specifies the following attributes of the new table:
 
@@ -17,7 +17,7 @@ The `CREATE TABLE` command is used to create a new table on Tableland. A `CREATE
 - A set of SQL [constraints for the table](#column-definitions-and-constraints). Tableland supports `UNIQUE`, `NOT NULL`, `CHECK` and `PRIMARY KEY` constraints (see previous bullet).
 - Optionally, a [generated column constraint](#generated-columns).
 
-## Structure
+### Structure
 
 ```sql
 CREATE TABLE *table_name* ( [
@@ -48,9 +48,9 @@ and `table_constraint` has structure
   PRIMARY KEY ( column_name [, ... ] )
 ```
 
-## Details
+### Details
 
-### Table Identifiers/Names
+#### Table Identifiers/Names
 
 Every `CREATE TABLE` statement must specify a _fully-qualified table identifier_ (id) as the name of the new table. The fully-qualified table identifier has the following structure:
 
@@ -66,7 +66,7 @@ Table identifiers must be globally unique. The combination of chain id and monot
 
 > ℹ️ Tableland also supports quoted identifiers (for table names, column names, etc). This allows callers to use SQL Keywords (see next section) as part of identifiers, etc. There are some limitations to this, and it does not circumvent any other naming constraints.
 
-### Reserved Keywords
+#### Reserved Keywords
 
 The SQL standard specifies a large number of keywords which may not be used as the names of tables, indices, columns, databases, or any other named object. The list of keywords is often so long that few people can remember them all. For most SQL code, your safest bet is to never use any English language word as the name of a user-defined object.
 
@@ -86,7 +86,7 @@ The list below shows all possible reserved keywords used by Tableland (or SQLite
 
 > ⚠️ Table _names_ that begin with `sqlite`, `system` or `registry` are also reserved for internal use. It is an error to attempt to create a table with a name that starts with these reserved names.
 
-### Column Definitions and Constraints
+#### Column Definitions and Constraints
 
 Every `CREATE TABLE` statement includes one or more column definitions, optionally followed by a list of table constraints. Each column definition consists of the name of the column, followed by the declared type of the column (see [Data Types](#data-types)), then one or more optional column constraints. Included in the definition of column constraints for the purposes of the previous statement is the [`DEFAULT` clause](#column-defaults), even though this is not really a constraint in the sense that it does not restrict the data that the table may contain. The other constraints, `NOT NULL`, `CHECK`, `UNIQUE`, and `PRIMARY KEY` constraints, impose restrictions on the table data.
 
@@ -97,7 +97,7 @@ Every `CREATE TABLE` statement includes one or more column definitions, optiona
 > 🚧 **Feature At Risk**: `FOREIGN KEY` constraints of the form `FOREIGN KEY(column_name) REFERENCES table_id(column_name)` are currently not supported across Tableland tables. Instead, dynamic `JOIN`s can be used to reference columns in remote tables. However, inclusion of `FOREIGN KEY` constraints are being considered for inclusion in the Tableland SQL specification with some specific limitations. In particular, key constraint actions would be restricted to `SET NULL` or `SET DEFAULT` (see the section called SQLite foreign key constraint actions at the link below).
 > [See SQLite Foreign Key](https://www.sqlitetutorial.net/sqlite-foreign-key/)
 
-### Column Defaults
+#### Column Defaults
 
 The `DEFAULT` clause specifies a default value to use for the column if no value is explicitly provided by the user when doing an `INSERT`. If there is no explicit `DEFAULT` clause attached to a column definition, then the default value of the column is `NULL`. An explicit `DEFAULT` clause may specify that the default value is `NULL`, a string constant, a blob constant, a signed-number, or any constant expression enclosed in parentheses. For the purposes of the `DEFAULT` clause, an expression is considered constant if it contains no sub-queries, column, or table references, or string literals enclosed in double-quotes instead of single-quotes.
 
@@ -106,7 +106,7 @@ Each time a row is inserted into the table by an `INSERT` statement that does no
 - If the default value of the column is a constant `NULL`, text, blob or signed-number value, then that value is used directly in the new row.
 - If the default value of a column is an expression in parentheses, then the expression is evaluated once for each row inserted and the results used in the new row.
 
-### Generated Columns
+#### Generated Columns
 
 A column that includes a `GENERATED ALWAYS AS` clause is a generated column:
 
@@ -135,7 +135,7 @@ The value of a `VIRTUAL` column is computed when read, whereas the value of a `S
 - Every table must have at least one non-generated column.
 - The data type of the generated column is determined only by the declared data type from the column definition. The datatype of the `GENERATED ALWAYS AS` expression has no affect on the data type of the column data itself.
 
-### Primary Key
+#### Primary Key
 
 Each table in Tableland may have _at most one_ `PRIMARY KEY`. If the keywords `PRIMARY KEY` are added to a column definition, then the primary key for the table consists of that single column. Or, if a `PRIMARY KEY` clause is specified as a separate table constraint, then the primary key of the table consists of the list of columns specified as part of the `PRIMARY KEY` clause. The `PRIMARY KEY` clause must contain only column names. An error is raised if more than one `PRIMARY KEY` clause appears in a `CREATE TABLE` statement. The `PRIMARY KEY` is optional.
 
@@ -143,25 +143,25 @@ Each row in a table with a primary key must have a unique combination of values 
 
 > 🚧 **Feature At Risk**: It is not currently possible to `ALTER TABLE` after it has been created. As such, table structure in Tableland is considered immutable. The Tableland core development team is currently evaluating whether to allow `ALTER TABLE` only in the case of _adding new columns_.
 
-# DELETE
+## DELETE
 
 The `DELETE` command removes records from the table identified by the table id.
 
-## Structure
+### Structure
 
 ```sql
 DELETE FROM table_id [ WHERE condition ]
 ```
 
-## Details
+### Details
 
 If the [`WHERE` clause](#where-clause) is not present, all records in the table are deleted. If a `WHERE` clause is supplied, then only those rows for which the `WHERE` clause boolean expression is true are deleted. Rows for which the expression is false or `NULL` are retained.
 
-# INSERT
+## INSERT
 
 The `INSERT` command creates new rows in a table identified by the table id.
 
-## Structure
+### Structure
 
 ```sql
 INSERT INTO table_id [ ( *column_name* [, ...] ) ] VALUES (
@@ -175,17 +175,17 @@ or
 INSERT INTO table_id DEFAULT VALUES;
 ```
 
-## Details
+### Details
 
 An `INSERT` statement creates one or more new rows in an existing table. If the `column_name` list after `table_name` is omitted then the number of values inserted into each row must be the same as the number of columns in the table. In this case the result of evaluating the left-most expression from each term of the `VALUES` list is inserted into the left-most column of each new row, and so forth for each subsequent expression. If a `column_name` list is specified, then the number of values in each term of the `VALUE` list must match the number of specified columns. Each of the named columns of the new row is populated with the results of evaluating the corresponding `VALUES` expression. Table columns that do not appear in the column list are populated with the default column value (specified as part of the `CREATE TABLE` statement), or with `NULL` if no default value is specified.
 
 The alternative `INSERT ... DEFAULT VALUES` statement inserts a single new row into the named table. Each column of the new row is populated with its default value, or with a `NULL` if no default value is specified as part of the column definition in the `CREATE TABLE` statement.
 
-# UPDATE
+## UPDATE
 
 An `UPDATE` statement is used to modify a subset of the values stored in zero or more rows of the database table identified by the table id.
 
-## Structure
+### Structure
 
 ```sql
 UPDATE table_name
@@ -193,7 +193,7 @@ UPDATE table_name
     [ WHERE condition ];
 ```
 
-## Details
+### Details
 
 If the `UPDATE` statement does not have a [`WHERE` clause](#where-clause), all rows in the table are modified by the `UPDATE`. Otherwise, the `UPDATE` affects only those rows for which the `WHERE` clause boolean expression is true. It is not an error if the `WHERE` clause does not evaluate to true for any row in the table; this just means that the `UPDATE` statement affects zero rows.
 
@@ -201,11 +201,11 @@ The modifications made to each row affected by an `UPDATE` statement are determi
 
 > ℹ️ An assignment in the `SET` clause can be a parenthesized list of column names on the left and a `ROW` value of the same size on the right. For example, consider the following two “styles” of `UPDATE` statements: `UPDATE table_id SET (a,b)=(b,a);` or `UPDATE table_id SET a=b, b=a;`.
 
-# GRANT/REVOKE
+## GRANT/REVOKE
 
 The `GRANT` and `REVOKE` commands are used to define low-level access privileges for a table identified by table name and id.
 
-## Structure
+### Structure
 
 ```sql
 GRANT { INSERT | UPDATE | DELETE } [, ...]
@@ -217,7 +217,7 @@ REVOKE { INSERT | UPDATE | DELETE } [, ...]
     FROM role [, ...]
 ```
 
-## Details
+### Details
 
 The `GRANT` command gives specific privileges on a table to one or more `role`. These privileges are added to those already granted, if any. By default, the creator of a table (as specified by a public ETH address) has all (valid) privileges on creation. The owner could, however, choose to revoke some of their own privileges for safety reasons.
 
@@ -231,11 +231,11 @@ Roles (`role`) in Tableland are defined by an Ethereum public-key based address.
 
 Conversely to the `GRANT` command, the `REVOKE` command removes specific, previously granted access privileges on a table from one or more roles. All role definitions and allowable privileges associated with granting privileges also apply to revoking them.
 
-# SELECT
+## SELECT
 
 The `SELECT` statement is used to query the database. The result of a `SELECT` is zero or more rows of data where each row has a fixed number of columns. A `SELECT` statement does not make any changes to the database.
 
-## Structure
+### Structure
 
 The `SELECT` statement is the work-house of the SQL query model, and as such, the available syntax is extremely complex. In practice, most `SELECT` statements are simple `SELECT` statements of the form:
 
@@ -252,7 +252,7 @@ SELECT [ ALL | DISTINCT ]
 
 See the standalone sections on [`WHERE`](#where-clause), [`FROM`](#from-clause), and [`JOIN`](#join-clause) clauses for further details on query structure.
 
-## Details
+### Details
 
 Generating the results of a simple `SELECT` statement is presented as a four step process in the description below:
 
@@ -267,15 +267,15 @@ Once the input data from the `FROM` clause has been filtered by the `WHERE` clau
 
 One of the `ALL` or `DISTINCT` keywords may follow the `SELECT` keyword in a simple `SELECT` statement. If the simple `SELECT` is a `SELECT ALL`, then the entire set of result rows are returned by the `SELECT`. If neither `ALL` or `DISTINCT` are present, then the behavior is as if `ALL` were specified. If the simple `SELECT` is a `SELECT DISTINCT`, then duplicate rows are removed from the set of result rows before it is returned. For the purposes of detecting duplicate rows, two `NULL` values are considered to be equal.
 
-# WHERE clause
+## `WHERE` clause
 
-## Structure
+### Structure
 
 ```sql
 WHERE condition
 ```
 
-## Details
+### Details
 
 The SQL `WHERE` clause is an optional clause of the `SELECT`, `DELETE`, and/or `UPDATE` statements. It appears after the primary clauses of the corresponding statement. For example in a `SELECT` statement, the `WHERE` clause can be added _after_ the `FROM` clause to filter rows returned by the query. Only rows for which the `WHERE` clause expression evaluates to true are included from the dataset before continuing. Rows are excluded from the result if the `WHERE` clause evaluates to either false or `NULL`.
 
@@ -287,15 +287,15 @@ When evaluating a `SELECT` statement with a `WHERE` clause, Tableland uses the f
 
 > ℹ️ The search condition in the `WHERE` clause is made up of any number of comparisons (=, <, >, LIKE, IN, etc), combined using a range of logical operators (e.g., OR, AND, ALL, ANY, etc).
 
-# FROM clause
+## `FROM` clause
 
-## Structure
+### Structure
 
 ```sql
 FROM { table_name [ * ] [ [ AS ] alias ] | ( sub_select ) [ AS ] alias }
 ```
 
-## Details
+### Details
 
 The input data used by a simple `SELECT` query is a set of *N* rows each *M* columns wide. If the `FROM` clause is omitted from a simple `SELECT` statement, then the input data is implicitly a single row zero columns wide (i.e. *N*=1 and *M*=0).
 
@@ -305,15 +305,15 @@ If there is only a single table or subquery in the `FROM` clause (a common case)
 
 > ℹ️ When more than two tables are joined together as part of a `FROM` clause, the `JOIN` operations are processed in order from left to right. In other words, the `FROM` clause (A _join-op-1_ B _join-op-2_ C) is computed as ((A _join-op-1_ B) _join-op-2_ C).
 
-# JOIN clause
+## `JOIN` clause
 
-## Structure
+### Structure
 
 ```sql
 JOIN from_clause [ ON on_expression | USING ( column_name [, ...] ) ]
 ```
 
-## Details
+### Details
 
 Only simple `JOIN` clauses are supported in Tableland. This means that all joins in Tableland are based on the cartesian product of the left and right-hand datasets. The columns of the cartesian product dataset are, in order, all the columns of the left-hand dataset followed by all the columns of the right-hand dataset. There is a row in the cartesian product dataset formed by combining each unique combination of a row from the left-hand and right-hand datasets. In other words, if the left-hand dataset consists of $N_l$ rows of $M_l$ columns, and the right-hand dataset of $N_r$ rows of $M_r$ columns, then the cartesian product is a dataset of $N_l \times N_r$ rows, each containing $N_l + N_r$ columns.
 

@@ -10,52 +10,46 @@ Tableland understands a small subset of the standard SQL language. It does omit
 
 This general SQL specification is broken down into two core sub-documents (which are linked below). This specification is a living document, and as such, may be updated over time. Proposals for the addition of SQL language features and data types may be submitted by the Tableland community over time. These proposals will be evaluated for technical feasibility, utility to the community, and longer-term sustainability.
 
-## Table of Contents
+### Table of Contents
 
 -   [Statement Types](#statement-types)
--   [CREATE TABLE](#create-table)
-    -   [Structure](#structure)
-    -   [Details](#details)
-        -   [Table Identifiers/Names](#table-identifiersnames)
-        -   [Reserved Keywords](#reserved-keywords)
-        -   [Column Definitions and
-            Constraints](#column-definitions-and-constraints)
-        -   [Column Defaults](#column-defaults)
-        -   [Generated Columns](#generated-columns)
-        -   [Primary Key](#primary-key)
--   [DELETE](#delete)
-    -   [Structure](#structure-1)
-    -   [Details](#details-1)
--   [INSERT](#insert)
-    -   [Structure](#structure-2)
-    -   [Details](#details-2)
--   [UPDATE](#update)
-    -   [Structure](#structure-3)
-    -   [Details](#details-3)
--   [GRANT/REVOKE](#grantrevoke)
-    -   [Structure](#structure-4)
-    -   [Details](#details-4)
--   [SELECT](#select)
-    -   [Structure](#structure-5)
-    -   [Details](#details-5)
--   [WHERE clause](#where-clause)
-    -   [Structure](#structure-6)
-    -   [Details](#details-6)
--   [FROM clause](#from-clause)
-    -   [Structure](#structure-7)
-    -   [Details](#details-7)
--   [JOIN clause](#join-clause)
-    -   [Structure](#structure-8)
-    -   [Details](#details-8)
+    -   [CREATE TABLE](#create-table)
+        -   [Structure](#structure)
+        -   [Details](#details)
+    -   [DELETE](#delete)
+        -   [Structure](#structure-1)
+        -   [Details](#details-1)
+    -   [INSERT](#insert)
+        -   [Structure](#structure-2)
+        -   [Details](#details-2)
+    -   [UPDATE](#update)
+        -   [Structure](#structure-3)
+        -   [Details](#details-3)
+    -   [GRANT/REVOKE](#grantrevoke)
+        -   [Structure](#structure-4)
+        -   [Details](#details-4)
+    -   [SELECT](#select)
+        -   [Structure](#structure-5)
+        -   [Details](#details-5)
+    -   [`WHERE` clause](#where-clause)
+        -   [Structure](#structure-6)
+        -   [Details](#details-6)
+    -   [`FROM` clause](#from-clause)
+        -   [Structure](#structure-7)
+        -   [Details](#details-7)
+    -   [`JOIN` clause](#join-clause)
+        -   [Structure](#structure-8)
+        -   [Details](#details-8)
 -   [Data Types](#data-types)
--   [Details](#details-9)
--   [Common Types](#common-types)
-    -   [Character](#character)
-    -   [Numeric](#numeric)
-    -   [Boolean](#boolean)
-    -   [Date/Time](#datetime)
-    -   [JSON](#json)
--   [Solidity to SQL Types](#solidity-to-sql-types)
+    -   [Details](#details-9)
+    -   [Common Types](#common-types)
+        -   [Character](#character)
+        -   [Numeric](#numeric)
+        -   [Boolean](#boolean)
+        -   [Date/Time](#datetime)
+        -   [JSON](#json)
+    -   [Solidity](#solidity)
+-   [Encoding](#encoding)
 
 # Statement Types
 
@@ -74,7 +68,7 @@ be summarized in seven command/statement types: `CREATE TABLE`,
 > rely on SQL features outside of this minimal specification in the
 > long-term.
 
-# CREATE TABLE
+## CREATE TABLE
 
 The `CREATE TABLE` command is used to create a new table on Tableland. A
 `CREATE TABLE` command specifies the following attributes of the new
@@ -95,7 +89,7 @@ table:
     previous bullet).
 -   Optionally, a [generated column constraint](#generated-columns).
 
-## Structure
+### Structure
 
 ``` sql
 CREATE TABLE *table_name* ( [
@@ -126,9 +120,9 @@ and `table_constraint` has structure
   PRIMARY KEY ( column_name [, ... ] )
 ```
 
-## Details
+### Details
 
-### Table Identifiers/Names
+#### Table Identifiers/Names
 
 Every `CREATE TABLE` statement must specify a *fully-qualified table
 identifier* (id) as the name of the new table. The fully-qualified table
@@ -166,7 +160,7 @@ required). The maximum (slug-ified) prefix length is 32 bytes.
 > section) as part of identifiers, etc. There are some limitations to
 > this, and it does not circumvent any other naming constraints.
 
-### Reserved Keywords
+#### Reserved Keywords
 
 The SQL standard specifies a large number of keywords which may not be
 used as the names of tables, indices, columns, databases, or any other
@@ -209,7 +203,7 @@ not considered a keyword to the SQL parser in Tableland:
 > also reserved for internal use. It is an error to attempt to create a
 > table with a name that starts with these reserved names.
 
-### Column Definitions and Constraints
+#### Column Definitions and Constraints
 
 Every `CREATE TABLE` statement includes one or more column definitions,
 optionally followed by a list of table constraints. Each column
@@ -245,7 +239,7 @@ contain. The other constraints, `NOT NULL`, `CHECK`, `UNIQUE`, and
 > key constraint actions at the link below). [See SQLite Foreign
 > Key](https://www.sqlitetutorial.net/sqlite-foreign-key/)
 
-### Column Defaults
+#### Column Defaults
 
 The `DEFAULT` clause specifies a default value to use for the column if
 no value is explicitly provided by the user when doing an `INSERT`. If
@@ -269,7 +263,7 @@ in the new row are determined by their default values, as follows:
     then the expression is evaluated once for each row inserted and the
     results used in the new row.
 
-### Generated Columns
+#### Generated Columns
 
 A column that includes a `GENERATED ALWAYS AS` clause is a generated
 column:
@@ -328,7 +322,7 @@ use more CPU cycles when being read.
     `GENERATED ALWAYS AS` expression has no affect on the data type of
     the column data itself.
 
-### Primary Key
+#### Primary Key
 
 Each table in Tableland may have *at most one* `PRIMARY KEY`. If the
 keywords `PRIMARY KEY` are added to a column definition, then the
@@ -353,30 +347,30 @@ Tableland enforces this constraint.
 > evaluating whether to allow `ALTER TABLE` only in the case of *adding
 > new columns*.
 
-# DELETE
+## DELETE
 
 The `DELETE` command removes records from the table identified by
 the table id.
 
-## Structure
+### Structure
 
 ``` sql
 DELETE FROM table_id [ WHERE condition ]
 ```
 
-## Details
+### Details
 
 If the [`WHERE` clause](#where-clause) is not present, all records in
 the table are deleted. If a `WHERE` clause is supplied, then only those
 rows for which the `WHERE` clause boolean expression is true are
 deleted. Rows for which the expression is false or `NULL` are retained.
 
-# INSERT
+## INSERT
 
 The `INSERT` command creates new rows in a table identified by the table
 id.
 
-## Structure
+### Structure
 
 ``` sql
 INSERT INTO table_id [ ( *column_name* [, ...] ) ] VALUES (
@@ -390,7 +384,7 @@ or
 INSERT INTO table_id DEFAULT VALUES;
 ```
 
-## Details
+### Details
 
 An `INSERT` statement creates one or more new rows in an existing table.
 If the `column_name` list after `table_name` is omitted then the number
@@ -413,12 +407,12 @@ with its default value, or with a `NULL` if no default value is
 specified as part of the column definition in the `CREATE TABLE`
 statement.
 
-# UPDATE
+## UPDATE
 
 An `UPDATE` statement is used to modify a subset of the values stored in
 zero or more rows of the database table identified by the table id.
 
-## Structure
+### Structure
 
 ``` sql
 UPDATE table_name
@@ -426,7 +420,7 @@ UPDATE table_name
     [ WHERE condition ];
 ```
 
-## Details
+### Details
 
 If the `UPDATE` statement does not have a [`WHERE`
 clause](#where-clause), all rows in the table are modified by the
@@ -453,12 +447,12 @@ assignments are made.
 > statements: `UPDATE table_id SET (a,b)=(b,a);` or
 > `UPDATE table_id SET a=b, b=a;`.
 
-# GRANT/REVOKE
+## GRANT/REVOKE
 
 The `GRANT` and `REVOKE` commands are used to define low-level access
 privileges for a table identified by table name and id.
 
-## Structure
+### Structure
 
 ``` sql
 GRANT { INSERT | UPDATE | DELETE } [, ...]
@@ -470,7 +464,7 @@ REVOKE { INSERT | UPDATE | DELETE } [, ...]
     FROM role [, ...]
 ```
 
-## Details
+### Details
 
 The `GRANT` command gives specific privileges on a table to one or more
 `role`. These privileges are added to those already granted, if any. By
@@ -506,14 +500,14 @@ specific, previously granted access privileges on a table from one or
 more roles. All role definitions and allowable privileges associated
 with granting privileges also apply to revoking them.
 
-# SELECT
+## SELECT
 
 The `SELECT` statement is used to query the database. The result of a
 `SELECT` is zero or more rows of data where each row has a fixed number
 of columns. A `SELECT` statement does not make any changes to the
 database.
 
-## Structure
+### Structure
 
 The `SELECT` statement is the work-house of the SQL query model, and as
 such, the available syntax is extremely complex. In practice, most
@@ -534,7 +528,7 @@ See the standalone sections on [`WHERE`](#where-clause),
 [`FROM`](#from-clause), and [`JOIN`](#join-clause) clauses for further
 details on query structure.
 
-## Details
+### Details
 
 Generating the results of a simple `SELECT` statement is presented as a
 four step process in the description below:
@@ -576,15 +570,15 @@ is as if `ALL` were specified. If the simple `SELECT` is a
 result rows before it is returned. For the purposes of detecting
 duplicate rows, two `NULL` values are considered to be equal.
 
-# WHERE clause
+## `WHERE` clause
 
-## Structure
+### Structure
 
 ``` sql
 WHERE condition
 ```
 
-## Details
+### Details
 
 The SQL `WHERE` clause is an optional clause of the `SELECT`, `DELETE`,
 and/or `UPDATE` statements. It appears after the primary clauses of the
@@ -608,15 +602,15 @@ uses the following steps:
 > of comparisons (=, &lt;, &gt;, LIKE, IN, etc), combined using a range
 > of logical operators (e.g., OR, AND, ALL, ANY, etc).
 
-# FROM clause
+## `FROM` clause
 
-## Structure
+### Structure
 
 ``` sql
 FROM { table_name [ * ] [ [ AS ] alias ] | ( sub_select ) [ AS ] alias }
 ```
 
-## Details
+### Details
 
 The input data used by a simple `SELECT` query is a set of *N* rows
 each *M* columns wide. If the `FROM` clause is omitted from a simple
@@ -645,15 +639,15 @@ together.
 > right. In other words, the `FROM` clause (A *join-op-1* B *join-op-2*
 > C) is computed as ((A *join-op-1* B) *join-op-2* C).
 
-# JOIN clause
+## `JOIN` clause
 
-## Structure
+### Structure
 
 ``` sql
 JOIN from_clause [ ON on_expression | USING ( column_name [, ...] ) ]
 ```
 
-## Details
+### Details
 
 Only simple `JOIN` clauses are supported in Tableland. This means that
 all joins in Tableland are based on the cartesian product of the left
@@ -706,7 +700,7 @@ to represent most, if not all, common SQL types:
 | `BLOB`    | A blob of data, stored exactly as it was input. Useful for byte slices etc.                            |
 | `ANY`     | Any kind of data. No type checking is performed, no data coercion is done on insert.                   |
 
-# Details
+## Details
 
 When creating tables, every column definition *must specify a data type*
 for that column, and the data type must be one of the above types. No
@@ -724,7 +718,7 @@ Columns with data type `ANY` can accept any kind of data (except they
 will reject `NULL` values if they have a `NOT NULL` constraint, of
 course). No type coercion occurs for a column of type `ANY`.
 
-# Common Types
+## Common Types
 
 For users looking for more nuanced data types in tables, the following
 set of recommendations will help guide table schema design.
@@ -732,7 +726,7 @@ Additionally, new types might be added in future versions of the
 Tableland SQL Specification, and users are able to make
 requests/suggestions via Tableland TIPs.
 
-## Character
+### Character
 
 Tableland represents all character/text types using the single
 variable-length `TEXT` type. Although the type `TEXT` is not in any SQL
@@ -741,7 +735,7 @@ You can store any text/character-based data as `TEXT`. Additionally,
 more complex data types such as dates, timestamps, JSON strings, and
 more can be represented using `TEXT` (or in some cases `BLOB`).
 
-## Numeric
+### Numeric
 
 Numeric types consist of integer and floating-point (real) numbers. In
 practice, two-, four-, and eight-byte integers are all represented by
@@ -756,13 +750,13 @@ values are stored as an 8-byte IEEE floating point number.
 > SQLite](https://www.sqlite.org/floatingpoint.html) about issues with
 > floating-point numbers.
 
-## Boolean
+### Boolean
 
 Tableland does not have a separate data type to represent boolean
 values. Instead, Tableland users should represent true and false values
 using the integers `1` (true) and `0` (false).
 
-## Date/Time
+### Date/Time
 
 Tableland does not have a storage class set aside for storing dates
 and/or times. Instead, users of Tableland can store dates and times as
@@ -785,7 +779,7 @@ database engine.
 > are welcome to use them for now, but they should be considered
 > unstable features.
 
-## JSON
+### JSON
 
 JSON data types are for storing JSON (JavaScript Object Notation) data,
 as specified in [RFC 7159](https://tools.ietf.org/html/rfc7159). In
@@ -807,7 +801,7 @@ engine.
 > the Tableland SQL language specification. You are welcome to use them
 > for now, but they should be considered unstable features.
 
-# Solidity to SQL Types
+## Solidity
 
 To prevent overflows while working with Solidity numbers, it is
 recommended to use a `text` type in certain scenarios. Anything larger
@@ -855,3 +849,44 @@ Other best practices have also been defined below:
 
 Tableland also has an `any` type, which can be useful for scenarios
 where none of the above works.
+
+# Encoding
+
+As mentioned in the section on [Statement Types](#statement-types), the
+core Tableland SQL parser accepts a semicolon-separated list of
+statements, which are then parsed and evaluated according this Tableland
+SQL Specification. Internally, the statements are represented using an
+[abstract syntax
+tree](https://en.wikipedia.org/wiki/Abstract_syntax_tree) (AST). The
+internal representation of the nodes of this AST are outside the bounds
+of the Tableland SQL Specification, however, further details can be
+found in the [Go Tableland SQL
+Parser](https://github.com/tablelandnetwork/go-sqlparser) reference
+implementation.
+
+With the above caveat in mind, the Tableland SQL Specification does
+define a canonical string encoding of a set of (compliant) SQL
+statements that have passed through the Tableland SQL Parser (and have
+been represented via the Parser's AST). That is, this Specfication
+outlines — in general terms — the string encoding produced by parsing a
+set of Tableland SQL Specification compliant statements and re-encoding
+them into a canonical (string) format.
+
+There are some nuances and corner cases that affect the final encoded
+string. For example, the statement `UPDATE t SET (A, b) = (1, 2);` is
+ultimately encoded as `update t set A = 1, b = 2`. This is because the
+two statements are equivalent, and their representation within the AST
+is identical. As such, when producing the canonical string for such a
+statement, the parser outputs the most conventional form.
+
+In general, any (set of) statement(s) processed by the parser should be
+encoded such that,
+
+-   All SQL language components are specified using lower case ASCII
+    characters,
+-   The execution of the (set of) statement(s) after encoding is
+    *equivalent* to the original set of statements, and
+-   The encoding of a (set of) statements(s) is as close as possible to
+    the original (set of) statement(s).
+
+Any further guarantees are left outside the scope of this specification.
