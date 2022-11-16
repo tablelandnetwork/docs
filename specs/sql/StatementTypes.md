@@ -130,7 +130,7 @@ The value of a `VIRTUAL` column is computed when read, whereas the value of a `S
 - The expression of a generated column can refer to any of the other declared columns in the table, including other generated columns, as long as the expression does not directly or indirectly refer back to itself.
 - Generated columns may not have a `DEFAULT` clause. The value of a generated column is always the value specified by the expression that follows the `AS` keyword.
 - Generated columns may not be used as part of the `PRIMARY KEY`.
-- The expression of a generated column may only reference constant literals and columns within the same row, and may only use scalar deterministic functions. The expression may not use subqueries, aggregate functions, etc.
+- The expression of a generated column may only reference constant literals and columns within the same row, and may only use scalar deterministic functions. The expression may not use sub-queries, aggregate functions, etc.
 - The expression of a generated column may refer to other generated columns in the same row, but no generated column can depend upon itself, either directly or indirectly.
 - Every table must have at least one non-generated column.
 - The data type of the generated column is determined only by the declared data type from the column definition. The datatype of the `GENERATED ALWAYS AS` expression has no affect on the data type of the column data itself.
@@ -299,9 +299,9 @@ FROM { table_name [ * ] [ [ AS ] alias ] | ( sub_select ) [ AS ] alias }
 
 The input data used by a simple `SELECT` query is a set of *N* rows each *M* columns wide. If the `FROM` clause is omitted from a simple `SELECT` statement, then the input data is implicitly a single row zero columns wide (i.e. *N*=1 and *M*=0).
 
-If a `FROM` clause is specified, the data on which a simple `SELECT` query operates comes from the one or more tables or subqueries (`SELECT` statements in parentheses) specified following the `FROM` keyword. A subquery specified in the table or subquery clause following the `FROM` clause in a simple `SELECT` statement is handled as if it was a table containing the data returned by executing the subquery statement.
+If a `FROM` clause is specified, the data on which a simple `SELECT` query operates comes from the one or more tables or sub-queries (`SELECT` statements in parentheses) specified following the `FROM` keyword. A sub-query specified in the table or sub-query clause following the `FROM` clause in a simple `SELECT` statement is handled as if it was a table containing the data returned by executing the sub-query statement.
 
-If there is only a single table or subquery in the `FROM` clause (a common case), then the input data used by the `SELECT` statement is the contents of the named table. If there is more than one table or subquery in `FROM` clause, then the contents of all tables and/or subqueries are joined into a single dataset for the simple `SELECT` statement to operate on. Exactly how the data is combined depends on the specific [`JOIN` clause](#join-clause) (i.e., the combination of `JOIN` operator and `JOIN` constraint) used to connect the tables or subqueries together.
+If there is only a single table or sub-query in the `FROM` clause (a common case), then the input data used by the `SELECT` statement is the contents of the named table. If there is more than one table or sub-query in `FROM` clause, then the contents of all tables and/or sub-queries are joined into a single dataset for the simple `SELECT` statement to operate on. Exactly how the data is combined depends on the specific [`JOIN` clause](#join-clause) (i.e., the combination of `JOIN` operator and `JOIN` constraint) used to connect the tables or sub-queries together.
 
 > ℹ️ When more than two tables are joined together as part of a `FROM` clause, the `JOIN` operations are processed in order from left to right. In other words, the `FROM` clause (A _join-op-1_ B _join-op-2_ C) is computed as ((A _join-op-1_ B) _join-op-2_ C).
 

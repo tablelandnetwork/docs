@@ -31,7 +31,7 @@ Tableland represents all character/text types using the single variable-length `
 
 Numeric types consist of integer and floating-point (real) numbers. In practice, two-, four-, and eight-byte integers are all represented by the `INTEGER` type, and their storage size depends on the magnitude of the value itself. Conversely, all float/real types are represented by the `REAL` type, and unlike with integer types, all floating point values are stored as an 8-byte IEEE floating point number.
 
-> 🚧 **Feature At Risk**: Note that real numbers are likely to be dropped from the SQL specification due to non-deterministic bahavior across computer platforms. See [documentation from SQLite](https://www.sqlite.org/floatingpoint.html) about issues with floating-point numbers.
+> 🚧 **Feature At Risk**: Note that real numbers are likely to be dropped from the SQL specification due to non-deterministic behavior across computer platforms. See [documentation from SQLite](https://www.sqlite.org/floatingpoint.html) about issues with floating-point numbers.
 
 ### Boolean
 
