@@ -44,7 +44,8 @@ This general SQL specification is broken down into two core sub-documents (which
     -   [Details](#details-9)
     -   [Common Types](#common-types)
         -   [Character](#character)
-        -   [Numeric](#numeric)
+        -   [Integers](#integers)
+        -   [Floats](#floats)
         -   [Boolean](#boolean)
         -   [Date/Time](#datetime)
         -   [JSON](#json)
@@ -696,7 +697,6 @@ to represent most, if not all, common SQL types:
 |-----------|--------------------------------------------------------------------------------------------------------|
 | `INT`     | Signed integer values, stored in 0, 1, 2, 3, 4, 6, or 8 bytes depending on the magnitude of the value. |
 | `INTEGER` | Same as `INT`, except it may also be used to represent an auto-incrementing `PRIMARY KEY` field.       |
-| `REAL`    | Floating point values, stored as an 8-byte IEEE floating point number.                                 |
 | `TEXT`    | Text string, stored using the database encoding (UTF-8).                                               |
 | `BLOB`    | A blob of data, stored exactly as it was input. Useful for byte slices etc.                            |
 | `ANY`     | Any kind of data. No type checking is performed, no data coercion is done on insert.                   |
@@ -736,20 +736,28 @@ You can store any text/character-based data as `TEXT`. Additionally,
 more complex data types such as dates, timestamps, JSON strings, and
 more can be represented using `TEXT` (or in some cases `BLOB`).
 
-### Numeric
+### Integers
 
-Numeric types consist of integer and floating-point (real) numbers. In
-practice, two-, four-, and eight-byte integers are all represented by
-the `INTEGER` type, and their storage size depends on the magnitude of
-the value itself. Conversely, all float/real types are represented by
-the `REAL` type, and unlike with integer types, all floating point
-values are stored as an 8-byte IEEE floating point number.
+Numeric types often consist of integer and floating-point (float/real)
+numbers. On Tableland, two-, four-, and eight-byte integers are all
+represented by the `INTEGER` type, and their storage size depends on the
+magnitude of the value itself.
 
-> 🚧 **Feature At Risk**: Note that real numbers are likely to be dropped
-> from the SQL specification due to non-deterministic behavior across
-> computer platforms. See [documentation from
-> SQLite](https://www.sqlite.org/floatingpoint.html) about issues with
-> floating-point numbers.
+### Floats
+
+Tableland does not have a separate data type to represent float/real
+types. This is because in practice **floating point values are
+approximate**, which may lead to non-deterministic bahavior across
+compute platforms. If you need an exact answer, you should not use
+floating-point values, in Tableland or in any other software. This is
+not a Tableland limitation per se, but a mathematical limitation
+inherent in the design of floating-point numbers.
+
+See the [SQLite
+documentation](https://www.sqlite.org/floatingpoint.html) about issues
+with floating-point numbers, or learn more about why [floating-point
+math is
+hard](https://docs.oracle.com/cd/E19957-01/806-3568/ncg_goldberg.html).
 
 ### Boolean
 
@@ -761,24 +769,22 @@ using the integers `1` (true) and `0` (false).
 
 Tableland does not have a storage class set aside for storing dates
 and/or times. Instead, users of Tableland can store dates and times as
-`TEXT`, `REAL`, or `INTEGER` values:
+`TEXT` or `INTEGER` values:
 
 -   `TEXT` as [ISO-8601](http://en.wikipedia.org/wiki/ISO_8601) strings.
--   `REAL` as [Julian day](http://en.wikipedia.org/wiki/Julian_day)
-    numbers.
 -   `INTEGER` as Unix Time (number of seconds since (or before)
     1970-01-01 00:00:00 UTC).
 
-Applications can choose to store dates and times in any of these formats
-and freely convert between formats using the built-in date and time
-functions. Tableland currently supports the [six date and time
+Applications can choose to store dates and times in any of these (or
+other) formats and freely convert between formats using various date and
+time functions. Tableland currently supports the [six date and time
 functions](https://sqlite.org/lang_datefunc.html) provided by the SQLite
 database engine.
 
 > 🚧 **Feature At Risk**: Note that these date and time function have not
-> yet been formalized into the Tableland SQL language specification. You
-> are welcome to use them for now, but they should be considered
-> unstable features.
+> yet been formalized into the Tableland SQL Specification. You are
+> welcome to use them for now, but they should be considered unstable
+> features.
 
 ### JSON
 
