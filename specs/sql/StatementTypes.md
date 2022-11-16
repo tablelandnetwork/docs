@@ -130,7 +130,7 @@ The value of a `VIRTUAL` column is computed when read, whereas the value of a `S
 - The expression of a generated column can refer to any of the other declared columns in the table, including other generated columns, as long as the expression does not directly or indirectly refer back to itself.
 - Generated columns may not have a `DEFAULT` clause. The value of a generated column is always the value specified by the expression that follows the `AS` keyword.
 - Generated columns may not be used as part of the `PRIMARY KEY`.
-- The expression of a generated column may only reference constant literals and columns within the same row, and may only use scalar deterministic functions. The expression may not use subqueries, aggregate functions, etc.
+- The expression of a generated column may only reference constant literals and columns within the same row, and may only use scalar deterministic functions. The expression may not use sub-queries, aggregate functions, etc.
 - The expression of a generated column may refer to other generated columns in the same row, but no generated column can depend upon itself, either directly or indirectly.
 - Every table must have at least one non-generated column.
 - The data type of the generated column is determined only by the declared data type from the column definition. The datatype of the `GENERATED ALWAYS AS` expression has no affect on the data type of the column data itself.
@@ -145,7 +145,7 @@ Each row in a table with a primary key must have a unique combination of values 
 
 #### Integer Primary Key
 
-All rows within Tableland tables have a 64-bit signed integer key that uniquely identifies the row within its table. This integer is usually called the `ROWID`. The `ROWID` value can be accessed using one of the special case-independent names `"rowid"`, `"oid"`, or `"_rowid_"` in place of a column name. If a table contains a user defined column named `"rowid"`, `"oid"` or `"_rowid_"`, then that name always refers the explicitly declared column and cannot be used to retrieve the integer `ROWID` value.
+All rows within Tableland tables have a 64-bit signed integer key that uniquely identifies the row within its table. This integer is usually called the `ROWID`. The `ROWID` value can be accessed using one of the special case-independent names `"rowid"`, `"oid"`, or `"_rowid_"` in place of a column name. As such, these values are _not allowed_ as identifiers for columns in a `CREATE TABLE` statement.
 
 The data for Tableland tables are stored in sorted order, by `ROWID`. This means that retrieving or sorting records by `ROWID` is fast. Searching for a record with a specific `ROWID`, or for all records with `ROWID`s within a specified range is around twice as fast as a similar search made by specifying any other `PRIMARY KEY`. This `ROWID` sorting is also required for sub-queries and other SQL features on Tableland, to ensure deterministic ordering of results.
 
@@ -153,7 +153,7 @@ With one exception noted below, if a table has a primary key that consists of a 
 
 In the above case of an integer primary key, there is an additional implied `AUTOINCREMENT` constraint, which forces the integer primary key to behave as if it were specified with `INTEGER PRIMARY KEY AUTOINCREMENT`. See [Autoincrement](#autoincrement) for further details.
 
-The exception mentioned above is that if the declaration of a column with declared type `INTEGER` includes an `PRIMARY KEY DESC` clause, it does not become an alias for the `ROWID` and is not classified as an integer primary key. In pratice, this means that the following three table declarations all cause the column "x" to be an alias for the `ROWID` (an integer primary key):
+The exception mentioned above is that if the declaration of a column with declared type `INTEGER` includes an `PRIMARY KEY DESC` clause, it does not become an alias for the `ROWID` and is not classified as an integer primary key. In practice, this means that the following three table declarations all cause the column "x" to be an alias for the `ROWID` (an integer primary key):
 
 - `CREATE TABLE t(x INTEGER PRIMARY KEY ASC, y, z);`
 - `CREATE TABLE t(x INTEGER, y, z, PRIMARY KEY(x ASC));`
@@ -163,21 +163,27 @@ But the following declaration does not result in "x" being an alias for the `ROW
 
 - `CREATE TABLE t(x INTEGER PRIMARY KEY DESC, y, z);`
 
-Given this, and the implied autoincrement behavior, if the primary key is defined at the end as a table constraint and not as a column constraint:
+Given this, and the implied autoincrement behavior, the following transformation rules are enforced by the Tableland Parser to maintain the correct `ROWID` alias behavior:
 
-- `CREATE TABLE t(x INTEGER, y, z, PRIMARY KEY(x DESC));`
+| Statement                                       | Transformation                                                 |
+| ----------------------------------------------- | -------------------------------------------------------------- |
+| `CREATE TABLE (a INTEGER PRIMARY KEY);`         | Inject `AUTOINCREMENT`                                         |
+| `CREATE TABLE (a INTEGER PRIMARY KEY DESC);`    | Unchanged and not an alias                                     |
+| `CREATE TABLE (a INTEGER, PRIMARY KEY(x ASC);`  | Transformed to first row version with injected `AUTOINCREMENT` |
+| `CREATE TABLE (a INTEGER, PRIMARY KEY(x DESC);` | Transformed to second row version and no longer an alias       |
 
-this will actually be transformed (behind the scenes) by the Tableland Parser to:
+These transformations to the more "canonical" direct constraint on the primary key are required to enforce the implied `AUTOINCREMENT` behavior on the special integer primary keys.
 
-- `CREATE TABLE t(x INTEGER PRIMARY KEY DESC AUTOINCREMENT, y, z);`
+Rowid values _may not_ be modified using an `UPDATE` statement by attempting to assign to one of the built-in aliases (`"rowid"`, `"oid"` or `"_rowid_"`). However, it _is_ possible to `UPDATE` an integer primary key value (which is an alias to `ROWID`) by specifying a value directly. Similarly, an `INSERT` statement may be used to directly provide a value to use as the `ROWID` for any row inserted. For example, the following statements are allowed, and will update/set the `ROWID` value directly:
 
-in order to maintain the `ROWID` alias behavior. This transformation to the more canonical direct constraint on the primary key is required to enfore the implied `AUTOINCREMENT` behavior on the special integer primary keys.
+- `INSERT INTO a VALUES (2, 'Hello');`
+- `UPDATE a SET a = 10 WHERE b = 'Hello';`
 
-Rowid values _may not_ be modified using an `UPDATE` statement in the same way as any other column value can, either using one of the built-in aliases (`"rowid"`, `"oid"` or `"_rowid_"`) or by using an alias created by an integer primary key. Similarly, an `INSERT` statement may not provide a value to use as the `ROWID` for any row inserted.
+> ⚠️ If an `UPDATE` or `INSERT` sets a given `ROWID` to the largest possible value, then new `INSERT`s are _not allowed_ and any attempt to insert a new row will fail with an error. As such, use caution when directly assigning values to a `ROWID` alias in the form of an integer primary key.
 
 #### Autoincrement
 
-In Tableland, a column with type `INTEGER PRIMARY KEY` is an alias for the `ROWID` which is always a 64-bit signed integer. It is implied that this column will behave as `INTEGER PRIMARY KEY AUTOINCREMENT`. This is a special feature of the Tableland SQL Specification, and helps to ensure deterministic odering of values within a table.
+In Tableland, a column with type `INTEGER PRIMARY KEY` is an alias for the `ROWID` which is always a 64-bit signed integer. It is implied that this column will behave as `INTEGER PRIMARY KEY AUTOINCREMENT`. This is a special feature of the Tableland SQL Specification, and helps to ensure deterministic ordering of values within a table.
 
 > ℹ️ While the `AUTOINCREMENT` keyword is implied with `INTEGER PRIMARY KEY` columns, the keyword itself is not allowed in this specification. Any attempt to use the `AUTOINCREMENT` keyword on any column results in an error.
 
@@ -347,9 +353,9 @@ FROM { table_name [ * ] [ [ AS ] alias ] | ( sub_select ) [ AS ] alias }
 
 The input data used by a simple `SELECT` query is a set of *N* rows each *M* columns wide. If the `FROM` clause is omitted from a simple `SELECT` statement, then the input data is implicitly a single row zero columns wide (i.e. *N*=1 and *M*=0).
 
-If a `FROM` clause is specified, the data on which a simple `SELECT` query operates comes from the one or more tables or subqueries (`SELECT` statements in parentheses) specified following the `FROM` keyword. A subquery specified in the table or subquery clause following the `FROM` clause in a simple `SELECT` statement is handled as if it was a table containing the data returned by executing the subquery statement.
+If a `FROM` clause is specified, the data on which a simple `SELECT` query operates comes from the one or more tables or sub-queries (`SELECT` statements in parentheses) specified following the `FROM` keyword. A sub-query specified in the table or sub-query clause following the `FROM` clause in a simple `SELECT` statement is handled as if it was a table containing the data returned by executing the sub-query statement.
 
-If there is only a single table or subquery in the `FROM` clause (a common case), then the input data used by the `SELECT` statement is the contents of the named table. If there is more than one table or subquery in `FROM` clause, then the contents of all tables and/or subqueries are joined into a single dataset for the simple `SELECT` statement to operate on. Exactly how the data is combined depends on the specific [`JOIN` clause](#join-clause) (i.e., the combination of `JOIN` operator and `JOIN` constraint) used to connect the tables or subqueries together.
+If there is only a single table or sub-query in the `FROM` clause (a common case), then the input data used by the `SELECT` statement is the contents of the named table. If there is more than one table or sub-query in `FROM` clause, then the contents of all tables and/or sub-queries are joined into a single dataset for the simple `SELECT` statement to operate on. Exactly how the data is combined depends on the specific [`JOIN` clause](#join-clause) (i.e., the combination of `JOIN` operator and `JOIN` constraint) used to connect the tables or sub-queries together.
 
 > ℹ️ When more than two tables are joined together as part of a `FROM` clause, the `JOIN` operations are processed in order from left to right. In other words, the `FROM` clause (A _join-op-1_ B _join-op-2_ C) is computed as ((A _join-op-1_ B) _join-op-2_ C).
 
