@@ -354,10 +354,8 @@ All rows within Tableland tables have a 64-bit signed integer key that
 uniquely identifies the row within its table. This integer is usually
 called the `ROWID`. The `ROWID` value can be accessed using one of the
 special case-independent names `"rowid"`, `"oid"`, or `"_rowid_"` in
-place of a column name. If a table contains a user defined column named
-`"rowid"`, `"oid"` or `"_rowid_"`, then that name always refers the
-explicitly declared column and cannot be used to retrieve the integer
-`ROWID` value.
+place of a column name. As such, these values are *not allowed* as
+identifiers for columns in a `CREATE TABLE` statement.
 
 The data for Tableland tables are stored in sorted order, by `ROWID`.
 This means that retrieving or sorting records by `ROWID` is fast.
@@ -385,7 +383,7 @@ for further details.
 The exception mentioned above is that if the declaration of a column
 with declared type `INTEGER` includes an `PRIMARY KEY DESC` clause, it
 does not become an alias for the `ROWID` and is not classified as an
-integer primary key. In pratice, this means that the following three
+integer primary key. In practice, this means that the following three
 table declarations all cause the column "x" to be an alias for the
 `ROWID` (an integer primary key):
 
@@ -398,27 +396,38 @@ the `ROWID`:
 
 -   `CREATE TABLE t(x INTEGER PRIMARY KEY DESC, y, z);`
 
-Given this, and the implied autoincrement behavior, if the primary key
-is defined at the end as a table constraint and not as a column
-constraint:
+Given this, and the implied autoincrement behavior, the following
+transformation rules are enforced by the Tableland Parser to maintain
+the correct `ROWID` alias behavior:
 
--   `CREATE TABLE t(x INTEGER, y, z, PRIMARY KEY(x DESC));`
+| Statement                                       | Transformation                                                 |
+|-------------------------------------------------|----------------------------------------------------------------|
+| `CREATE TABLE (a INTEGER PRIMARY KEY);`         | Inject `AUTOINCREMENT`                                         |
+| `CREATE TABLE (a INTEGER PRIMARY KEY DESC);`    | Unchanged and not an alias                                     |
+| `CREATE TABLE (a INTEGER, PRIMARY KEY(x ASC);`  | Transformed to first row version with injected `AUTOINCREMENT` |
+| `CREATE TABLE (a INTEGER, PRIMARY KEY(x DESC);` | Transformed to second row version and no longer an alias       |
 
-this will actually be transformed (behind the scenes) by the Tableland
-Parser to:
+These transformations to the more "canonical" direct constraint on the
+primary key are required to enforce the implied `AUTOINCREMENT` behavior
+on the special integer primary keys.
 
--   `CREATE TABLE t(x INTEGER PRIMARY KEY DESC AUTOINCREMENT, y, z);`
+Rowid values *may not* be modified using an `UPDATE` statement by
+attempting to assign to one of the built-in aliases (`"rowid"`, `"oid"`
+or `"_rowid_"`). However, it *is* possible to `UPDATE` an integer
+primary key value (which is an alias to `ROWID`) by specifying a value
+directly. Similarly, an `INSERT` statement may be used to directly
+provide a value to use as the `ROWID` for any row inserted. For example,
+the following statements are allowed, and will update/set the `ROWID`
+value directly:
 
-in order to maintain the `ROWID` alias behavior. This transformation to
-the more canonical direct constraint on the primary key is required to
-enfore the implied `AUTOINCREMENT` behavior on the special integer
-primary keys.
+-   `INSERT INTO a VALUES (2, 'Hello');`
+-   `UPDATE a SET a = 10 WHERE b = 'Hello';`
 
-Rowid values *may not* be modified using an `UPDATE` statement in the
-same way as any other column value can, either using one of the built-in
-aliases (`"rowid"`, `"oid"` or `"_rowid_"`) or by using an alias created
-by an integer primary key. Similarly, an `INSERT` statement may not
-provide a value to use as the `ROWID` for any row inserted.
+> ⚠️ If an `UPDATE` or `INSERT` sets a given `ROWID` to the largest
+> possible value, then new `INSERT`s are *not allowed* and any attempt
+> to insert a new row will fail with an error. As such, use caution when
+> directly assigning values to a `ROWID` alias in the form of an integer
+> primary key.
 
 #### Autoincrement
 
@@ -426,7 +435,7 @@ In Tableland, a column with type `INTEGER PRIMARY KEY` is an alias for
 the `ROWID` which is always a 64-bit signed integer. It is implied that
 this column will behave as `INTEGER PRIMARY KEY AUTOINCREMENT`. This is
 a special feature of the Tableland SQL Specification, and helps to
-ensure deterministic odering of values within a table.
+ensure deterministic ordering of values within a table.
 
 > ℹ️ While the `AUTOINCREMENT` keyword is implied with
 > `INTEGER PRIMARY KEY` columns, the keyword itself is not allowed in
