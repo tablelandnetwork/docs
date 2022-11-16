@@ -313,7 +313,7 @@ use more CPU cycles when being read.
 -   The expression of a generated column may only reference constant
     literals and columns within the same row, and may only use
     scalar deterministic functions. The expression may not use
-    subqueries, aggregate functions, etc.
+    sub-queries, aggregate functions, etc.
 -   The expression of a generated column may refer to other generated
     columns in the same row, but no generated column can depend upon
     itself, either directly or indirectly.
@@ -619,21 +619,22 @@ each *M* columns wide. If the `FROM` clause is omitted from a simple
 columns wide (i.e. *N*=1 and *M*=0).
 
 If a `FROM` clause is specified, the data on which a simple `SELECT`
-query operates comes from the one or more tables or subqueries (`SELECT`
-statements in parentheses) specified following the `FROM` keyword. A
-subquery specified in the table or subquery clause following the `FROM`
-clause in a simple `SELECT` statement is handled as if it was a table
-containing the data returned by executing the subquery statement.
+query operates comes from the one or more tables or sub-queries
+(`SELECT` statements in parentheses) specified following the `FROM`
+keyword. A sub-query specified in the table or sub-query
+clause following the `FROM` clause in a simple `SELECT` statement is
+handled as if it was a table containing the data returned by executing
+the sub-query statement.
 
-If there is only a single table or subquery in the `FROM` clause (a
+If there is only a single table or sub-query in the `FROM` clause (a
 common case), then the input data used by the `SELECT` statement is the
-contents of the named table. If there is more than one table or subquery
-in `FROM` clause, then the contents of all tables and/or subqueries are
-joined into a single dataset for the simple `SELECT` statement to
-operate on. Exactly how the data is combined depends on the specific
-[`JOIN` clause](#join-clause) (i.e., the combination of `JOIN`
-operator and `JOIN` constraint) used to connect the tables or subqueries
-together.
+contents of the named table. If there is more than one table or
+sub-query in `FROM` clause, then the contents of all tables and/or
+sub-queries are joined into a single dataset for the simple `SELECT`
+statement to operate on. Exactly how the data is combined depends on the
+specific [`JOIN` clause](#join-clause) (i.e., the combination of `JOIN`
+operator and `JOIN` constraint) used to connect the tables or
+sub-queries together.
 
 > ℹ️ When more than two tables are joined together as part of a `FROM`
 > clause, the `JOIN` operations are processed in order from left to
@@ -860,11 +861,11 @@ where none of the above works.
 
 As mentioned in the section on [Statement Types](#statement-types), the
 core Tableland SQL parser accepts a semicolon-separated list of
-statements, which are then parsed and evaluated according this Tableland
-SQL Specification. Internally, the statements are represented using an
-[abstract syntax
+statements, which are then parsed and evaluated according to this
+Tableland SQL Specification. Internally, the statements are represented
+using an [abstract syntax
 tree](https://en.wikipedia.org/wiki/Abstract_syntax_tree) (AST). The
-internal representation of the nodes of this AST are outside the bounds
+internal representation of the nodes of this AST is outside the bounds
 of the Tableland SQL Specification, however, further details can be
 found in the [Go Tableland SQL
 Parser](https://github.com/tablelandnetwork/go-sqlparser) reference
@@ -873,7 +874,7 @@ implementation.
 With the above caveat in mind, the Tableland SQL Specification does
 define a canonical string encoding of a set of (compliant) SQL
 statements that have passed through the Tableland SQL Parser (and have
-been represented via the Parser's AST). That is, this Specfication
+been represented via the Parser's AST). That is, this Specification
 outlines — in general terms — the string encoding produced by parsing a
 set of Tableland SQL Specification compliant statements and re-encoding
 them into a canonical (string) format.
