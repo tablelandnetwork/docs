@@ -105,7 +105,8 @@ paths:
           description: The parent chain to target
           required: true
           schema:
-            type: number
+            type: integer
+            format: int32
         - name: txnHash
           in: path
           description: The transaction hash to request
@@ -140,7 +141,8 @@ paths:
           description: The parent chain to filter on
           required: false
           schema:
-            type: number
+            type: integer
+            format: int32
       responses:
         "200":
           description: successful operation
@@ -204,6 +206,7 @@ components:
                 description: "The trait type for marketplaces"
               value:
                 description: "The value of the property"
+                type: object
                 oneOf:
                   - type: string
                   - type: number
@@ -228,10 +231,12 @@ components:
           type: string
           example: "0x400508d7cc035b14cc53f64393a8dafcc55f66ad8f9b44d626744157337e2098"
         blockNumber:
-          type: number
+          type: integer
+          format: int64
           example: 1
         chainId:
-          type: number
+          type: integer
+          format: int32
           example: 80001
     Info:
       type: object
