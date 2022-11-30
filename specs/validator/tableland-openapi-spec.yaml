@@ -122,52 +122,29 @@ paths:
                 $ref: "#/components/schemas/TxnReceipt"
         "400":
           description: Invalid query/statement value
-  /tables/structure/{hash}:
-    get:
-      tags:
-        - tables
-      summary: Finds tables by structure
-      description: Returns all tables that match a given structure
-      operationId: findTablesByStructure
-      parameters:
-        - name: hash
-          in: path
-          description: Structure hash to filter on
-          required: true
-          schema:
-            type: string
-        - name: chainId
-          in: query
-          description: The parent chain to filter on
-          required: false
-          schema:
-            type: integer
-            format: int32
-      responses:
-        "200":
-          description: successful operation
-          content:
-            application/json:
-              schema:
-                type: array
-                items:
-                  $ref: "#/components/schemas/Info"
-        "400":
-          description: Invalid structure value
-  /tables/{tableName}:
+  /tables/{chainId}/{tableId}:
     get:
       tags:
         - tables
       summary: Get information about a table
       description: Returns information about a single table, including schema information
-      operationId: getTableByName
+      operationId: getTableById
       parameters:
-        - name: tableName
+        - name: chainId
           in: path
-          description: Full name of table to return
+          description: The parent chain to target
           required: true
           schema:
-            type: string
+            type: integer
+            format: int32
+        - name: tableId
+          in: path
+          description: Table identifier in the Registry.
+          required: true
+          schema:
+            type: integer
+            format: int64
+
       responses:
         "200":
           description: successful operation
