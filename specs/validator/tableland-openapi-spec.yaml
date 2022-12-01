@@ -42,6 +42,30 @@ tags:
       description: Find out more about tables
       url: http://docs.tableland.xyz
 paths:
+  /health:
+    get:
+      tags:
+        - health
+      summary: Returns OK if the validator considers it's healty.
+      description: Returns OK if the validator considers it's healthy.
+      operationId: health
+      responses:
+        "200":
+          description: The validator is healthy.
+  /version:
+    get:
+      tags:
+        - version
+      summary: Returns version information about the validator daemon.
+      description: Returns version information about the validator.
+      operationId: version
+      responses:
+        "200":
+          description: successful operation
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/VersionInfo"
   /query:
     get:
       tags:
@@ -253,3 +277,27 @@ components:
           items:
             type: string
           example: ["NOT NULL", "PRIMARY KEY", "UNIQUE"]
+    VersionInfo:
+      type: object
+      properties:
+        version:
+          type: string
+          example: 0
+        gitCommit:
+          type: string
+          example: "79688910d4689dcc0991a0d8eb9d988200586d8f"
+        gitBranch:
+          type: string
+          example: "foo/experimentalfeature"
+        gitState:
+          type: string
+          example: "dirty"
+        gitSummary:
+          type: string
+          example: "v1.2.3_dirty"
+        buildDate:
+          type: string
+          example: "2022-11-29T16:28:04Z"
+        binary_version:
+          type: string
+          example: "v1.0.1"
