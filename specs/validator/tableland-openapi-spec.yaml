@@ -122,7 +122,7 @@ paths:
         - receipt
       summary: Query the Tableland network for transaction status
       description: Returns the status of a given transaction receipt by hash
-      operationId: receiptByTransactionnHash
+      operationId: receiptByTransactionHash
       parameters:
         - name: chainId
           in: path
@@ -144,6 +144,8 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/TransactionReceipt"
+        "400":
+          description: Invalid chain identifier or transaction hash format.
         "404":
           description: There's no transaction receipt with the provided hash.
   /tables/{chainId}/{tableId}:
@@ -177,7 +179,7 @@ paths:
               schema:
                 $ref: "#/components/schemas/Table"
         "400":
-          description: Invalid name supplied
+          description: Invalid chain identifier or table id.
         "404":
           description: Table not found
 components:
