@@ -144,8 +144,8 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/TransactionReceipt"
-        "400":
-          description: Invalid query/statement value
+        "404":
+          description: There's no transaction receipt with the provided hash.
   /tables/{chainId}/{tableId}:
     get:
       tags:
@@ -239,6 +239,13 @@ components:
           type: integer
           format: int32
           example: 80001
+        error:
+          type: string
+          example: "The query statement is invalid"
+        errorEventIdx:
+          type: integer
+          format: int32
+          example: 1
     Info:
       type: object
       properties:
