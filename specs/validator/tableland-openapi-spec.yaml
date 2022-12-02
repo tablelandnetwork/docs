@@ -116,13 +116,13 @@ paths:
                 type: object
         "400":
           description: Invalid query/statement value
-  /receipt/{chainId}/{txnHash}:
+  /receipt/{chainId}/{transactionHash}:
     get:
       tags:
         - receipt
       summary: Query the Tableland network for transaction status
       description: Returns the status of a given transaction receipt by hash
-      operationId: receiptByTxnHash
+      operationId: receiptByTransactionnHash
       parameters:
         - name: chainId
           in: path
@@ -131,7 +131,7 @@ paths:
           schema:
             type: integer
             format: int32
-        - name: txnHash
+        - name: transactionHash
           in: path
           description: The transaction hash to request
           required: true
@@ -143,7 +143,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/TxnReceipt"
+                $ref: "#/components/schemas/TransactionReceipt"
         "400":
           description: Invalid query/statement value
   /tables/{chainId}/{tableId}:
@@ -222,13 +222,13 @@ components:
             }
         schema:
           $ref: "#/components/schemas/Schema"
-    TxnReceipt:
+    TransactionReceipt:
       type: object
       properties:
         tableId:
           type: string
           example: healthbot_5_1
-        txnHash:
+        transactionHash:
           type: string
           example: "0x400508d7cc035b14cc53f64393a8dafcc55f66ad8f9b44d626744157337e2098"
         blockNumber:
@@ -298,6 +298,6 @@ components:
         buildDate:
           type: string
           example: "2022-11-29T16:28:04Z"
-        binary_version:
+        binaryVersion:
           type: string
           example: "v1.0.1"
