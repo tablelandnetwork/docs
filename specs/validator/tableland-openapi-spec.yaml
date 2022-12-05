@@ -258,7 +258,7 @@ components:
           type: array
           items:
             $ref: "#/components/schemas/Column"
-        tableConstraints:
+        table_constraints:
           type: array
           items:
             type: string
