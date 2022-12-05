@@ -71,12 +71,12 @@ paths:
       tags:
         - query
       summary: Query the Tableland network
-      description: Returns the results of a SQL query against the Tabeland network
+      description: Returns the results of a SQL read query against the Tabeland network
       operationId: queryFromQuery
       parameters:
         - name: statement
           in: query
-          description: The SQL query statement
+          description: The SQL read query statement
           required: true
           schema:
             type: string
@@ -248,18 +248,6 @@ components:
           type: integer
           format: int32
           example: 1
-    Info:
-      type: object
-      properties:
-        owner:
-          type: string
-          example: "0xbAb12215Ed94713A290e0c618fa8177fAb5eFd2D"
-        name:
-          type: string
-          example: "healthbot_5_1"
-        structure:
-          type: string
-          example: "799dcf5ed5cfeb9e221500db95531ab9197224f8fc9cb9452ce30e4b5cea80d1"
     Schema:
       type: object
       properties:
