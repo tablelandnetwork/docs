@@ -281,7 +281,8 @@ components:
       type: object
       properties:
         version:
-          type: string
+          type: integer
+          format: int32
           example: 0
         gitCommit:
           type: string
