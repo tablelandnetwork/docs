@@ -230,24 +230,24 @@ components:
     TransactionReceipt:
       type: object
       properties:
-        tableId:
+        table_id:
           type: string
           example: healthbot_5_1
-        transactionHash:
+        transaction_hash:
           type: string
           example: "0x400508d7cc035b14cc53f64393a8dafcc55f66ad8f9b44d626744157337e2098"
-        blockNumber:
+        block_number:
           type: integer
           format: int64
           example: 1
-        chainId:
+        chain_id:
           type: integer
           format: int32
           example: 80001
         error:
           type: string
           example: "The query statement is invalid"
-        errorEventIdx:
+        error_event_idx:
           type: integer
           format: int32
           example: 1
@@ -284,21 +284,21 @@ components:
           type: integer
           format: int32
           example: 0
-        gitCommit:
+        git_commit:
           type: string
           example: "79688910d4689dcc0991a0d8eb9d988200586d8f"
-        gitBranch:
+        git_branch:
           type: string
           example: "foo/experimentalfeature"
-        gitState:
+        git_state:
           type: string
           example: "dirty"
-        gitSummary:
+        git_summary:
           type: string
           example: "v1.2.3_dirty"
-        buildDate:
+        build_date:
           type: string
           example: "2022-11-29T16:28:04Z"
-        binaryVersion:
+        binary_version:
           type: string
           example: "v1.0.1"
