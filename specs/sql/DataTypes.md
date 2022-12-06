@@ -71,15 +71,12 @@ Alternatively, consider casting the overflow-able numbers to or simply use a `in
 | uint32        | integer  |
 | uint16        | integer  |
 | uint8         | integer  |
-
-| Solidity Type | SQL Type |
-| ------------- | -------- |
 | int256        | text     |
 | int128        | text     |
 | int64         | integer  |
 | int32         | integer  |
 | int16         | integer  |
-| uint8         | integer  |
+| int8          | integer  |
 
 Other best practices have also been defined below:
 
@@ -89,9 +86,6 @@ Other best practices have also been defined below:
 | address       | text     |
 | bytes         | blob     |
 | bool          | text     |
-| bool int8     | integer  |
-| —             | any      |
+| ~~bool~~ int8 | integer  |
 
-> ⚠️ Tableland doesn’t support boolean values, so instead of using a Solidity `bool`, consider using a `uint8` to represent a true/false as `1` or `0`, which is then stored in Tableland as an `INT`.
-
-Tableland also has an `any` type, which can be useful for scenarios where none of the above works.
+> ⚠️ Tableland doesn’t support boolean values, so instead of using a Solidity `bool`, consider using a `uint8` to represent a true/false as `1` or `0`, which is then stored in Tableland as an `INTEGER`.
