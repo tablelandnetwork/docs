@@ -42,17 +42,41 @@ tags:
       description: Find out more about tables
       url: http://docs.tableland.xyz
 paths:
+  /health:
+    get:
+      tags:
+        - health
+      summary: Returns OK if the validator considers it's healty.
+      description: Returns OK if the validator considers it's healthy.
+      operationId: health
+      responses:
+        "200":
+          description: The validator is healthy.
+  /version:
+    get:
+      tags:
+        - version
+      summary: Returns version information about the validator daemon.
+      description: Returns version information about the validator.
+      operationId: version
+      responses:
+        "200":
+          description: successful operation
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/VersionInfo"
   /query:
     get:
       tags:
         - query
       summary: Query the Tableland network
-      description: Returns the results of a SQL query against the Tabeland network
+      description: Returns the results of a SQL read query against the Tabeland network
       operationId: queryFromQuery
       parameters:
         - name: statement
           in: query
-          description: The SQL query statement
+          description: The SQL read query statement
           required: true
           schema:
             type: string
@@ -92,13 +116,13 @@ paths:
                 type: object
         "400":
           description: Invalid query/statement value
-  /receipt/{chainId}/{txnHash}:
+  /receipt/{chainId}/{transactionHash}:
     get:
       tags:
         - receipt
       summary: Query the Tableland network for transaction status
       description: Returns the status of a given transaction receipt by hash
-      operationId: receiptByTxnHash
+      operationId: receiptByTransactionHash
       parameters:
         - name: chainId
           in: path
@@ -107,7 +131,7 @@ paths:
           schema:
             type: integer
             format: int32
-        - name: txnHash
+        - name: transactionHash
           in: path
           description: The transaction hash to request
           required: true
@@ -119,9 +143,11 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/TxnReceipt"
+                $ref: "#/components/schemas/TransactionReceipt"
         "400":
-          description: Invalid query/statement value
+          description: Invalid chain identifier or transaction hash format.
+        "404":
+          description: There's no transaction receipt with the provided hash.
   /tables/{chainId}/{tableId}:
     get:
       tags:
@@ -153,7 +179,7 @@ paths:
               schema:
                 $ref: "#/components/schemas/Table"
         "400":
-          description: Invalid name supplied
+          description: Invalid chain identifier or table id.
         "404":
           description: Table not found
 components:
@@ -167,6 +193,9 @@ components:
         external_url:
           type: string
           example: https://testnet.tableland.network/tables/healthbot_5_1
+        animation_url:
+          type: string
+          example: https://render.tableland.xyz/anim/?chain=1&id=1
         image:
           type: string
           example: https://render.tableland.xyz/healthbot_5_1
@@ -198,35 +227,30 @@ components:
             }
         schema:
           $ref: "#/components/schemas/Schema"
-    TxnReceipt:
+    TransactionReceipt:
       type: object
       properties:
-        tableId:
+        table_id:
           type: string
           example: healthbot_5_1
-        txnHash:
+        transaction_hash:
           type: string
           example: "0x400508d7cc035b14cc53f64393a8dafcc55f66ad8f9b44d626744157337e2098"
-        blockNumber:
+        block_number:
           type: integer
           format: int64
           example: 1
-        chainId:
+        chain_id:
           type: integer
           format: int32
           example: 80001
-    Info:
-      type: object
-      properties:
-        owner:
+        error:
           type: string
-          example: "0xbAb12215Ed94713A290e0c618fa8177fAb5eFd2D"
-        name:
-          type: string
-          example: "healthbot_5_1"
-        structure:
-          type: string
-          example: "799dcf5ed5cfeb9e221500db95531ab9197224f8fc9cb9452ce30e4b5cea80d1"
+          example: "The query statement is invalid"
+        error_event_idx:
+          type: integer
+          format: int32
+          example: 1
     Schema:
       type: object
       properties:
@@ -234,7 +258,7 @@ components:
           type: array
           items:
             $ref: "#/components/schemas/Column"
-        tableConstraints:
+        table_constraints:
           type: array
           items:
             type: string
@@ -253,3 +277,28 @@ components:
           items:
             type: string
           example: ["NOT NULL", "PRIMARY KEY", "UNIQUE"]
+    VersionInfo:
+      type: object
+      properties:
+        version:
+          type: integer
+          format: int32
+          example: 0
+        git_commit:
+          type: string
+          example: "79688910d4689dcc0991a0d8eb9d988200586d8f"
+        git_branch:
+          type: string
+          example: "foo/experimentalfeature"
+        git_state:
+          type: string
+          example: "dirty"
+        git_summary:
+          type: string
+          example: "v1.2.3_dirty"
+        build_date:
+          type: string
+          example: "2022-11-29T16:28:04Z"
+        binary_version:
+          type: string
+          example: "v1.0.1"
