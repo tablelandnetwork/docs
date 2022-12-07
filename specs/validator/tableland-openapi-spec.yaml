@@ -24,7 +24,7 @@ externalDocs:
   description: Tableland docs
   url: http://docs.tableland.xyz
 servers:
-  - url: https://testnet.tableland.xyz/api/v1
+  - url: https://testnets.tableland.xyz/api/v1
 tags:
   - name: query
     description: Query the Tableland network
@@ -46,8 +46,8 @@ paths:
     get:
       tags:
         - health
-      summary: Returns OK if the validator considers it's healty.
-      description: Returns OK if the validator considers it's healthy.
+      summary: Returns OK if the validator considers itself healthy.
+      description: Returns OK if the validator considers itself healthy.
       operationId: health
       responses:
         "200":
@@ -57,7 +57,7 @@ paths:
       tags:
         - version
       summary: Returns version information about the validator daemon.
-      description: Returns version information about the validator.
+      description: Returns version information about the validator daemon.
       operationId: version
       responses:
         "200":
@@ -95,21 +95,21 @@ paths:
             default: "objects"
         - name: extract
           in: query
-          description: Whether or not to extract the JSON object from the single property of the surrounding JSON object.
+          description: Whether to extract the JSON object from the single property of the surrounding JSON object.
           required: false
           schema:
             type: boolean
             default: false
         - name: unwrap
           in: query
-          description: Whether or not to unwrap the returned JSON objects from their surrounding array.
+          description: Whether to unwrap the returned JSON objects from their surrounding array.
           required: false
           schema:
             type: boolean
             default: false
       responses:
         "200":
-          description: successful operation
+          description: Successful operation
           content:
             application/json:
               schema:
@@ -145,9 +145,9 @@ paths:
               schema:
                 $ref: "#/components/schemas/TransactionReceipt"
         "400":
-          description: Invalid chain identifier or transaction hash format.
+          description: Invalid chain identifier or transaction hash format
         "404":
-          description: There's no transaction receipt with the provided hash.
+          description: Not transaction receipt found with the provided hash
   /tables/{chainId}/{tableId}:
     get:
       tags:
@@ -165,7 +165,7 @@ paths:
             format: int32
         - name: tableId
           in: path
-          description: Table identifier in the Registry.
+          description: Table identifier
           required: true
           schema:
             type: integer
@@ -179,7 +179,7 @@ paths:
               schema:
                 $ref: "#/components/schemas/Table"
         "400":
-          description: Invalid chain identifier or table id.
+          description: Invalid chain or table identifier
         "404":
           description: Table not found
 components:
