@@ -72,7 +72,7 @@ paths:
         - query
       summary: Query the network
       description: Returns the results of a SQL read query against the Tabeland network
-      operationId: queryFromQuery
+      operationId: queryByStatement
       parameters:
         - name: statement
           in: query
