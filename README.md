@@ -58,9 +58,8 @@ npm i -g widdershins
 cd specs/validator
 widdershins tableland-openapi-spec.yaml \
     --omitHeader \
-    --httpsnippet \
-    --language_tabs \
-    'javascript:JavaScript:fetch' 'javascript--node:Node.JS' 'go:Go' 'shell:cURL:curl' \
+    --summary \
+    --language_tabs 'shell:curl:curl' \
     -o Specification.md
 pandoc -s --toc --toc-dept 2 -t gfm \
     -B Header.md \

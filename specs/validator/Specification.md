@@ -16,7 +16,7 @@ That way, with time, we can improve the API in general, and expose some of the n
 
 Base URLs:
 
-* <a href="https://testnets.tableland.xyz/api/v1">https://testnets.tableland.xyz/api/v1</a>
+* <a href="https://testnets.tableland.network/api/v1">https://testnets.tableland.network/api/v1</a>
 
 <a href="http://docs.tableland.xyz">Terms of service</a>
 Email: <a href="mailto:carson@textile.io">core devs</a> 
@@ -28,97 +28,24 @@ Query the Tableland network
 
 <a href="http://docs.tableland.xyz">Find out more about queries</a>
 
-## queryFromQuery
+## Query the network
 
 <a id="opIdqueryFromQuery"></a>
 
 > Code samples
 
-```javascript
-fetch("https://testnets.tableland.xyz/api/v1/query?statement=string", {
-  "method": "GET",
-  "headers": {
-    "Accept": "application/json"
-  }
-})
-.then(response => {
-  console.log(response);
-})
-.catch(err => {
-  console.error(err);
-});
-```
-
-```javascript--node
-const http = require("https");
-
-const options = {
-  "method": "GET",
-  "hostname": "testnets.tableland.xyz",
-  "port": null,
-  "path": "/api/v1/query?statement=string",
-  "headers": {
-    "Accept": "application/json"
-  }
-};
-
-const req = http.request(options, function (res) {
-  const chunks = [];
-
-  res.on("data", function (chunk) {
-    chunks.push(chunk);
-  });
-
-  res.on("end", function () {
-    const body = Buffer.concat(chunks);
-    console.log(body.toString());
-  });
-});
-
-req.end();
-```
-
-```go
-package main
-
-import (
-	"fmt"
-	"net/http"
-	"io/ioutil"
-)
-
-func main() {
-
-	url := "https://testnets.tableland.xyz/api/v1/query?statement=string"
-
-	req, _ := http.NewRequest("GET", url, nil)
-
-	req.Header.Add("Accept", "application/json")
-
-	res, _ := http.DefaultClient.Do(req)
-
-	defer res.Body.Close()
-	body, _ := ioutil.ReadAll(res.Body)
-
-	fmt.Println(res)
-	fmt.Println(string(body))
-
-}
-```
-
 ```shell
-curl --request GET \
-  --url 'https://testnets.tableland.xyz/api/v1/query?statement=string' \
-  --header 'Accept: application/json'
+# You can also use wget
+curl -X GET https://testnets.tableland.network/api/v1/query?statement=string \
+  -H 'Accept: application/json'
+
 ```
 
 `GET /query`
 
-*Query the Tableland network*
-
 Returns the results of a SQL read query against the Tabeland network
 
-<h3 id="queryfromquery-parameters">Parameters</h3>
+<h3 id="query-the-network-parameters">Parameters</h3>
 
 |Name|In|Type|Required|Description|
 |---|---|---|---|---|
@@ -148,14 +75,14 @@ Returns the results of a SQL read query against the Tabeland network
 {}
 ```
 
-<h3 id="queryfromquery-responses">Responses</h3>
+<h3 id="query-the-network-responses">Responses</h3>
 
 |Status|Meaning|Description|Schema|
 |---|---|---|---|
 |200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|Successful operation|Inline|
 |400|[Bad Request](https://tools.ietf.org/html/rfc7231#section-6.5.1)|Invalid query/statement value|None|
 
-<h3 id="queryfromquery-responseschema">Response Schema</h3>
+<h3 id="query-the-network-responseschema">Response Schema</h3>
 
 <aside class="success">
 This operation does not require authentication
@@ -167,97 +94,24 @@ Get information about transaction progress
 
 <a href="http://docs.tableland.xyz">Find out more about receipts</a>
 
-## receiptByTransactionHash
+## Get transaction status
 
 <a id="opIdreceiptByTransactionHash"></a>
 
 > Code samples
 
-```javascript
-fetch("https://testnets.tableland.xyz/api/v1/receipt/0/string", {
-  "method": "GET",
-  "headers": {
-    "Accept": "application/json"
-  }
-})
-.then(response => {
-  console.log(response);
-})
-.catch(err => {
-  console.error(err);
-});
-```
-
-```javascript--node
-const http = require("https");
-
-const options = {
-  "method": "GET",
-  "hostname": "testnets.tableland.xyz",
-  "port": null,
-  "path": "/api/v1/receipt/0/string",
-  "headers": {
-    "Accept": "application/json"
-  }
-};
-
-const req = http.request(options, function (res) {
-  const chunks = [];
-
-  res.on("data", function (chunk) {
-    chunks.push(chunk);
-  });
-
-  res.on("end", function () {
-    const body = Buffer.concat(chunks);
-    console.log(body.toString());
-  });
-});
-
-req.end();
-```
-
-```go
-package main
-
-import (
-	"fmt"
-	"net/http"
-	"io/ioutil"
-)
-
-func main() {
-
-	url := "https://testnets.tableland.xyz/api/v1/receipt/0/string"
-
-	req, _ := http.NewRequest("GET", url, nil)
-
-	req.Header.Add("Accept", "application/json")
-
-	res, _ := http.DefaultClient.Do(req)
-
-	defer res.Body.Close()
-	body, _ := ioutil.ReadAll(res.Body)
-
-	fmt.Println(res)
-	fmt.Println(string(body))
-
-}
-```
-
 ```shell
-curl --request GET \
-  --url https://testnets.tableland.xyz/api/v1/receipt/0/string \
-  --header 'Accept: application/json'
+# You can also use wget
+curl -X GET https://testnets.tableland.network/api/v1/receipt/{chainId}/{transactionHash} \
+  -H 'Accept: application/json'
+
 ```
 
 `GET /receipt/{chainId}/{transactionHash}`
 
-*Query the Tableland network for transaction status*
-
 Returns the status of a given transaction receipt by hash
 
-<h3 id="receiptbytransactionhash-parameters">Parameters</h3>
+<h3 id="get-transaction-status-parameters">Parameters</h3>
 
 |Name|In|Type|Required|Description|
 |---|---|---|---|---|
@@ -279,7 +133,7 @@ Returns the status of a given transaction receipt by hash
 }
 ```
 
-<h3 id="receiptbytransactionhash-responses">Responses</h3>
+<h3 id="get-transaction-status-responses">Responses</h3>
 
 |Status|Meaning|Description|Schema|
 |---|---|---|---|
@@ -297,97 +151,24 @@ Access to table information
 
 <a href="http://docs.tableland.xyz">Find out more about tables</a>
 
-## getTableById
+## Get table information
 
 <a id="opIdgetTableById"></a>
 
 > Code samples
 
-```javascript
-fetch("https://testnets.tableland.xyz/api/v1/tables/0/0", {
-  "method": "GET",
-  "headers": {
-    "Accept": "application/json"
-  }
-})
-.then(response => {
-  console.log(response);
-})
-.catch(err => {
-  console.error(err);
-});
-```
-
-```javascript--node
-const http = require("https");
-
-const options = {
-  "method": "GET",
-  "hostname": "testnets.tableland.xyz",
-  "port": null,
-  "path": "/api/v1/tables/0/0",
-  "headers": {
-    "Accept": "application/json"
-  }
-};
-
-const req = http.request(options, function (res) {
-  const chunks = [];
-
-  res.on("data", function (chunk) {
-    chunks.push(chunk);
-  });
-
-  res.on("end", function () {
-    const body = Buffer.concat(chunks);
-    console.log(body.toString());
-  });
-});
-
-req.end();
-```
-
-```go
-package main
-
-import (
-	"fmt"
-	"net/http"
-	"io/ioutil"
-)
-
-func main() {
-
-	url := "https://testnets.tableland.xyz/api/v1/tables/0/0"
-
-	req, _ := http.NewRequest("GET", url, nil)
-
-	req.Header.Add("Accept", "application/json")
-
-	res, _ := http.DefaultClient.Do(req)
-
-	defer res.Body.Close()
-	body, _ := ioutil.ReadAll(res.Body)
-
-	fmt.Println(res)
-	fmt.Println(string(body))
-
-}
-```
-
 ```shell
-curl --request GET \
-  --url https://testnets.tableland.xyz/api/v1/tables/0/0 \
-  --header 'Accept: application/json'
+# You can also use wget
+curl -X GET https://testnets.tableland.network/api/v1/tables/{chainId}/{tableId} \
+  -H 'Accept: application/json'
+
 ```
 
 `GET /tables/{chainId}/{tableId}`
 
-*Get information about a table*
-
 Returns information about a single table, including schema information
 
-<h3 id="gettablebyid-parameters">Parameters</h3>
+<h3 id="get-table-information-parameters">Parameters</h3>
 
 |Name|In|Type|Required|Description|
 |---|---|---|---|---|
@@ -428,7 +209,7 @@ Returns information about a single table, including schema information
 }
 ```
 
-<h3 id="gettablebyid-responses">Responses</h3>
+<h3 id="get-table-information-responses">Responses</h3>
 
 |Status|Meaning|Description|Schema|
 |---|---|---|---|
@@ -442,90 +223,23 @@ This operation does not require authentication
 
 <h1 id="tableland-validator-openapi-3-0-health">health</h1>
 
-## health
+## Get health status
 
 <a id="opIdhealth"></a>
 
 > Code samples
 
-```javascript
-fetch("https://testnets.tableland.xyz/api/v1/health", {
-  "method": "GET",
-  "headers": {}
-})
-.then(response => {
-  console.log(response);
-})
-.catch(err => {
-  console.error(err);
-});
-```
-
-```javascript--node
-const http = require("https");
-
-const options = {
-  "method": "GET",
-  "hostname": "testnets.tableland.xyz",
-  "port": null,
-  "path": "/api/v1/health",
-  "headers": {}
-};
-
-const req = http.request(options, function (res) {
-  const chunks = [];
-
-  res.on("data", function (chunk) {
-    chunks.push(chunk);
-  });
-
-  res.on("end", function () {
-    const body = Buffer.concat(chunks);
-    console.log(body.toString());
-  });
-});
-
-req.end();
-```
-
-```go
-package main
-
-import (
-	"fmt"
-	"net/http"
-	"io/ioutil"
-)
-
-func main() {
-
-	url := "https://testnets.tableland.xyz/api/v1/health"
-
-	req, _ := http.NewRequest("GET", url, nil)
-
-	res, _ := http.DefaultClient.Do(req)
-
-	defer res.Body.Close()
-	body, _ := ioutil.ReadAll(res.Body)
-
-	fmt.Println(res)
-	fmt.Println(string(body))
-
-}
-```
-
 ```shell
-curl --request GET \
-  --url https://testnets.tableland.xyz/api/v1/health
+# You can also use wget
+curl -X GET https://testnets.tableland.network/api/v1/health
+
 ```
 
 `GET /health`
 
-*Returns OK if the validator considers itself healthy.*
-
 Returns OK if the validator considers itself healthy.
 
-<h3 id="health-responses">Responses</h3>
+<h3 id="get-health-status-responses">Responses</h3>
 
 |Status|Meaning|Description|Schema|
 |---|---|---|---|
@@ -537,93 +251,20 @@ This operation does not require authentication
 
 <h1 id="tableland-validator-openapi-3-0-version">version</h1>
 
-## version
+## Get version information
 
 <a id="opIdversion"></a>
 
 > Code samples
 
-```javascript
-fetch("https://testnets.tableland.xyz/api/v1/version", {
-  "method": "GET",
-  "headers": {
-    "Accept": "application/json"
-  }
-})
-.then(response => {
-  console.log(response);
-})
-.catch(err => {
-  console.error(err);
-});
-```
-
-```javascript--node
-const http = require("https");
-
-const options = {
-  "method": "GET",
-  "hostname": "testnets.tableland.xyz",
-  "port": null,
-  "path": "/api/v1/version",
-  "headers": {
-    "Accept": "application/json"
-  }
-};
-
-const req = http.request(options, function (res) {
-  const chunks = [];
-
-  res.on("data", function (chunk) {
-    chunks.push(chunk);
-  });
-
-  res.on("end", function () {
-    const body = Buffer.concat(chunks);
-    console.log(body.toString());
-  });
-});
-
-req.end();
-```
-
-```go
-package main
-
-import (
-	"fmt"
-	"net/http"
-	"io/ioutil"
-)
-
-func main() {
-
-	url := "https://testnets.tableland.xyz/api/v1/version"
-
-	req, _ := http.NewRequest("GET", url, nil)
-
-	req.Header.Add("Accept", "application/json")
-
-	res, _ := http.DefaultClient.Do(req)
-
-	defer res.Body.Close()
-	body, _ := ioutil.ReadAll(res.Body)
-
-	fmt.Println(res)
-	fmt.Println(string(body))
-
-}
-```
-
 ```shell
-curl --request GET \
-  --url https://testnets.tableland.xyz/api/v1/version \
-  --header 'Accept: application/json'
+# You can also use wget
+curl -X GET https://testnets.tableland.network/api/v1/version \
+  -H 'Accept: application/json'
+
 ```
 
 `GET /version`
-
-*Returns version information about the validator daemon.*
 
 Returns version information about the validator daemon.
 
@@ -643,7 +284,7 @@ Returns version information about the validator daemon.
 }
 ```
 
-<h3 id="version-responses">Responses</h3>
+<h3 id="get-version-information-responses">Responses</h3>
 
 |Status|Meaning|Description|Schema|
 |---|---|---|---|
