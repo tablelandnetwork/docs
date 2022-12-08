@@ -24,7 +24,7 @@ externalDocs:
   description: Tableland docs
   url: http://docs.tableland.xyz
 servers:
-  - url: https://testnets.tableland.xyz/api/v1
+  - url: https://testnets.tableland.network/api/v1
 tags:
   - name: query
     description: Query the Tableland network
@@ -46,7 +46,7 @@ paths:
     get:
       tags:
         - health
-      summary: Returns OK if the validator considers itself healthy.
+      summary: Get health status
       description: Returns OK if the validator considers itself healthy.
       operationId: health
       responses:
@@ -56,7 +56,7 @@ paths:
     get:
       tags:
         - version
-      summary: Returns version information about the validator daemon.
+      summary: Get version information
       description: Returns version information about the validator daemon.
       operationId: version
       responses:
@@ -70,7 +70,7 @@ paths:
     get:
       tags:
         - query
-      summary: Query the Tableland network
+      summary: Query the network
       description: Returns the results of a SQL read query against the Tabeland network
       operationId: queryFromQuery
       parameters:
@@ -120,7 +120,7 @@ paths:
     get:
       tags:
         - receipt
-      summary: Query the Tableland network for transaction status
+      summary: Get transaction status
       description: Returns the status of a given transaction receipt by hash
       operationId: receiptByTransactionHash
       parameters:
@@ -152,7 +152,7 @@ paths:
     get:
       tags:
         - tables
-      summary: Get information about a table
+      summary: Get table information
       description: Returns information about a single table, including schema information
       operationId: getTableById
       parameters:
