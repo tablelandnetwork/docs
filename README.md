@@ -35,7 +35,7 @@ These specs define the SQL language compliant with the Tableland protocol. It is
 
 The SQL specification document can be generated from its parts via:
 
-```bash
+```shell
 cd specs/sql
 pandoc -s --toc \
     -t gfm+tex_math_dollars\
@@ -44,6 +44,26 @@ pandoc -s --toc \
     StatementTypes.md \
     DataTypes.md \
     Encoding.md \
+    -o README.md
+```
+
+## [Validator API specification](specs/validator/)
+
+### Building
+
+The OpenAPI specification document is used to generate clients and services that drive the Tabeland Validator. It can also be used to generate Markdown documentation via:
+
+```shell
+npm i -g widdershins
+cd specs/validator
+widdershins tableland-openapi-spec.yaml \
+    --httpsnippet \
+    --language_tabs \
+    'javascript:JavaScript:fetch' 'javascript--node:Node.JS' 'go:Go' 'shell:cURL:curl' \
+    -o Specification.md
+pandoc -s --toc --toc-dept 1 -t gfm \
+    -B Header.md \
+    Specification.md \
     -o README.md
 ```
 
