@@ -1,24 +1,3 @@
----
-title: Tableland Validator - OpenAPI 3.0 v1.0.0
-language_tabs:
-  - javascript: JavaScript
-  - javascript--node: Node.JS
-  - go: Go
-  - shell: cURL
-language_clients:
-  - javascript: fetch
-  - javascript--node: ""
-  - go: ""
-  - shell: curl
-toc_footers:
-  - <a href="http://docs.tableland.xyz">Tableland docs</a>
-includes: []
-search: true
-highlight_theme: darkula
-headingLevel: 2
-
----
-
 <!-- Generator: Widdershins v4.0.1 -->
 
 <h1 id="tableland-validator-openapi-3-0">Tableland Validator - OpenAPI 3.0 v1.0.0</h1>

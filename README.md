@@ -57,6 +57,7 @@ The OpenAPI specification document is used to generate clients and services that
 npm i -g widdershins
 cd specs/validator
 widdershins tableland-openapi-spec.yaml \
+    --omitHeader \
     --httpsnippet \
     --language_tabs \
     'javascript:JavaScript:fetch' 'javascript--node:Node.JS' 'go:Go' 'shell:cURL:curl' \
