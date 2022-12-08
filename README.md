@@ -61,7 +61,7 @@ widdershins tableland-openapi-spec.yaml \
     --language_tabs \
     'javascript:JavaScript:fetch' 'javascript--node:Node.JS' 'go:Go' 'shell:cURL:curl' \
     -o Specification.md
-pandoc -s --toc --toc-dept 1 -t gfm \
+pandoc -s --toc --toc-dept 2 -t gfm \
     -B Header.md \
     Specification.md \
     -o README.md
