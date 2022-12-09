@@ -30,7 +30,7 @@ Query the Tableland network
 
 ## Query the network
 
-<a id="opIdqueryFromQuery"></a>
+<a id="opIdqueryByStatement"></a>
 
 > Code samples
 
@@ -139,7 +139,7 @@ Returns the status of a given transaction receipt by hash
 |---|---|---|---|
 |200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|successful operation|[TransactionReceipt](#schematransactionreceipt)|
 |400|[Bad Request](https://tools.ietf.org/html/rfc7231#section-6.5.1)|Invalid chain identifier or transaction hash format|None|
-|404|[Not Found](https://tools.ietf.org/html/rfc7231#section-6.5.4)|Not transaction receipt found with the provided hash|None|
+|404|[Not Found](https://tools.ietf.org/html/rfc7231#section-6.5.4)|No transaction receipt found with the provided hash|None|
 
 <aside class="success">
 This operation does not require authentication

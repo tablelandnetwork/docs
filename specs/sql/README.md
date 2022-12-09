@@ -133,15 +133,17 @@ $$
 \mathtt{tableId} = \mathtt{prefix} + \mathtt{chainId} + \mathtt{tokenId}
 $$
 
-Where $\mathtt{prefix}$ is optional, and may include any characters from
-the regular expression `([A-Za-z0-9\_]+)`, but cannot start with a
-number. A prefix string may be up to 32 bytes in length. In practice,
-long names with spaces must be slug-ified with underscores. For example,
-`“my amazing table"` would become `"my_amazing_table"`. The last two
-components of the table id, *must be* the chain id and the token id,
-which are numeric values separated by an underscore. For example, a
-valid table id without a prefix looks like `_42_0` (or `42_1`), whereas
-a valid table id *with* a prefix might look like `dogs_42_0`.
+Where $\mathtt{prefix}$ is optional. When a prefix is included, it must
+start with a letter and be followed by any combination of (zero or more)
+letters, numbers, and/or underscores. A prefix string may be up to 32
+bytes in length. A prefix string may be up to 32 bytes in length. In
+practice, long names with spaces must be slug-ified with underscores.
+For example, `“my amazing table"` would become `"my_amazing_table"`. The
+last two components of the table id, *must be* the chain id and the
+token id, which are numeric values separated by an underscore. For
+example, a valid table id without a prefix looks like `_42_0` (or
+`42_1`), whereas a valid table id *with* a prefix might look like
+`dogs_42_0`.
 
 > ⚠️ It is *not* up to the caller to determine what token id to use in a
 > `CREATE TABLE` statement. The token id is a monotonically-increasing
@@ -823,7 +825,6 @@ to represent most, if not all, common SQL types:
 | `INTEGER` | Same as `INT`, except it may also be used to represent an auto-incrementing `PRIMARY KEY` field.       |
 | `TEXT`    | Text string, stored using the database encoding (UTF-8).                                               |
 | `BLOB`    | A blob of data, stored exactly as it was input. Useful for byte slices etc.                            |
-| `ANY`     | Any kind of data. No type checking is performed, no data coercion is done on insert.                   |
 
 ## Details
 
@@ -832,16 +833,12 @@ for that column, and the data type must be one of the above types. No
 other data type names are allowed, though new types might be added in
 future versions of the Tableland SQL specification.
 
-Content inserted into a column with a data type other than `ANY` must be
-either a `NULL` (assuming there is no `NOT NULL` constraint on the
-column) or the type specified. Tableland will attempt to coerce input
-data into the appropriate type using the usual affinity rules, as most
-SQL engines all do. However, if the value cannot be losslessly converted
-in the specified datatype, then an error will be raised.
-
-Columns with data type `ANY` can accept any kind of data (except they
-will reject `NULL` values if they have a `NOT NULL` constraint, of
-course). No type coercion occurs for a column of type `ANY`.
+Content inserted into a column must be either a `NULL` (assuming there
+is no `NOT NULL` constraint on the column) or the type specified.
+Tableland will attempt to coerce input data into the appropriate type
+using the usual affinity rules, as most SQL engines all do. However, if
+the value cannot be losslessly converted in the specified datatype, then
+an error will be raised.
 
 ## Common Types
 
@@ -882,6 +879,10 @@ documentation](https://www.sqlite.org/floatingpoint.html) about issues
 with floating-point numbers, or learn more about why [floating-point
 math is
 hard](https://docs.oracle.com/cd/E19957-01/806-3568/ncg_goldberg.html).
+
+⚠️ In addition to *not* supporting floating point values (`REAL`) as a
+storage data type in create statements, the Tableland specification also
+does not allow `REAL` value *literals* in read or write queries.
 
 ### Boolean
 
@@ -953,15 +954,12 @@ Tableland schemas:
 | uint32        | integer  |
 | uint16        | integer  |
 | uint8         | integer  |
-
-| Solidity Type | SQL Type |
-|---------------|----------|
 | int256        | text     |
 | int128        | text     |
 | int64         | integer  |
 | int32         | integer  |
 | int16         | integer  |
-| uint8         | integer  |
+| int8          | integer  |
 
 Other best practices have also been defined below:
 
@@ -971,15 +969,11 @@ Other best practices have also been defined below:
 | address       | text     |
 | bytes         | blob     |
 | bool          | text     |
-| bool int8     | integer  |
-| —             | any      |
+| ~~bool~~ int8 | integer  |
 
 > ⚠️ Tableland doesn’t support boolean values, so instead of using a
 > Solidity `bool`, consider using a `uint8` to represent a true/false as
-> `1` or `0`, which is then stored in Tableland as an `INT`.
-
-Tableland also has an `any` type, which can be useful for scenarios
-where none of the above works.
+> `1` or `0`, which is then stored in Tableland as an `INTEGER`.
 
 # Encoding
 

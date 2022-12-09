@@ -72,7 +72,7 @@ paths:
         - query
       summary: Query the network
       description: Returns the results of a SQL read query against the Tabeland network
-      operationId: queryFromQuery
+      operationId: queryByStatement
       parameters:
         - name: statement
           in: query
@@ -147,7 +147,7 @@ paths:
         "400":
           description: Invalid chain identifier or transaction hash format
         "404":
-          description: Not transaction receipt found with the provided hash
+          description: No transaction receipt found with the provided hash
   /tables/{chainId}/{tableId}:
     get:
       tags:

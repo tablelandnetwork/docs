@@ -8,15 +8,12 @@ Tableland supports a small set of accepted column types in user-defined tables. 
 | `INTEGER` | Same as `INT`, except it may also be used to represent an auto-incrementing `PRIMARY KEY` field.       |
 | `TEXT`    | Text string, stored using the database encoding (UTF-8).                                               |
 | `BLOB`    | A blob of data, stored exactly as it was input. Useful for byte slices etc.                            |
-| `ANY`     | Any kind of data. No type checking is performed, no data coercion is done on insert.                   |
 
 ## Details
 
 When creating tables, every column definition _must specify a data type_ for that column, and the data type must be one of the above types. No other data type names are allowed, though new types might be added in future versions of the Tableland SQL specification.
 
-Content inserted into a column with a data type other than `ANY` must be either a `NULL` (assuming there is no `NOT NULL` constraint on the column) or the type specified. Tableland will attempt to coerce input data into the appropriate type using the usual affinity rules, as most SQL engines all do. However, if the value cannot be losslessly converted in the specified datatype, then an error will be raised.
-
-Columns with data type `ANY` can accept any kind of data (except they will reject `NULL` values if they have a `NOT NULL` constraint, of course). No type coercion occurs for a column of type `ANY`.
+Content inserted into a column must be either a `NULL` (assuming there is no `NOT NULL` constraint on the column) or the type specified. Tableland will attempt to coerce input data into the appropriate type using the usual affinity rules, as most SQL engines all do. However, if the value cannot be losslessly converted in the specified datatype, then an error will be raised.
 
 ## Common Types
 
@@ -35,6 +32,8 @@ Numeric types often consist of integer and floating-point (float/real) numbers. 
 Tableland does not have a separate data type to represent float/real types. This is because in practice **floating point values are approximate**, which may lead to non-deterministic bahavior across compute platforms. If you need an exact answer, you should not use floating-point values, in Tableland or in any other software. This is not a Tableland limitation per se, but a mathematical limitation inherent in the design of floating-point numbers.
 
 See the [SQLite documentation](https://www.sqlite.org/floatingpoint.html) about issues with floating-point numbers, or learn more about why [floating-point math is hard](https://docs.oracle.com/cd/E19957-01/806-3568/ncg_goldberg.html).
+
+⚠️ In addition to _not_ supporting floating point values (`REAL`) as a storage data type in create statements, the Tableland specification also does not allow `REAL` value _literals_ in read or write queries.
 
 ### Boolean
 
