@@ -116,6 +116,8 @@ paths:
                 type: object
         "400":
           description: Invalid query/statement value
+        "429":
+          description: Too Many Requests
   /receipt/{chainId}/{transactionHash}:
     get:
       tags:
@@ -148,6 +150,8 @@ paths:
           description: Invalid chain identifier or transaction hash format
         "404":
           description: No transaction receipt found with the provided hash
+        "429":
+          description: Too Many Requests
   /tables/{chainId}/{tableId}:
     get:
       tags:
@@ -182,6 +186,8 @@ paths:
           description: Invalid chain or table identifier
         "404":
           description: Table not found
+        "429":
+          description: Too Many Requests
 components:
   schemas:
     Table:
