@@ -25,6 +25,7 @@ externalDocs:
   url: http://docs.tableland.xyz
 servers:
   - url: https://testnets.tableland.network/api/v1
+  - url: http://localhost:8080/api/v1
 tags:
   - name: query
     description: Query the Tableland network
@@ -80,6 +81,7 @@ paths:
           required: true
           schema:
             type: string
+          example: select * from healthbot_80001_1
         - name: format
           in: query
           description: >
@@ -117,7 +119,7 @@ paths:
         "400":
           description: Invalid query/statement value
         "404":
-          description: Rows Not Found
+          description: Row Not Found
         "429":
           description: Too Many Requests
   /receipt/{chainId}/{transactionHash}:
@@ -135,12 +137,14 @@ paths:
           schema:
             type: integer
             format: int32
+          example: 80001
         - name: transactionHash
           in: path
           description: The transaction hash to request
           required: true
           schema:
             type: string
+          example: "0x400508d7cc035b14cc53f64393a8dafcc55f66ad8f9b44d626744157337e2098"
       responses:
         "200":
           description: successful operation
@@ -169,13 +173,14 @@ paths:
           schema:
             type: integer
             format: int32
+          example: 80001
         - name: tableId
           in: path
           description: Table identifier
           required: true
           schema:
-            type: integer
-            format: int64
+            type: string
+          example: "1"
 
       responses:
         "200":
@@ -190,6 +195,8 @@ paths:
           description: Table Not Found
         "429":
           description: Too Many Requests
+        "500":
+          description: Internal Server Error
 components:
   schemas:
     Table:
@@ -240,7 +247,7 @@ components:
       properties:
         table_id:
           type: string
-          example: healthbot_5_1
+          example: "1"
         transaction_hash:
           type: string
           example: "0x400508d7cc035b14cc53f64393a8dafcc55f66ad8f9b44d626744157337e2098"
