@@ -46,9 +46,7 @@ Tableland does not have a storage class set aside for storing dates and/or times
 - `TEXT` as [ISO-8601](http://en.wikipedia.org/wiki/ISO_8601) strings.
 - `INTEGER` as Unix Time (number of seconds since (or before) 1970-01-01 00:00:00 UTC).
 
-Applications can choose to store dates and times in any of these (or other) formats and freely convert between formats using various date and time functions. Tableland currently supports the [six date and time functions](https://sqlite.org/lang_datefunc.html) provided by the SQLite database engine.
-
-> 🚧 **Feature At Risk**: Note that these date and time function have not yet been formalized into the Tableland SQL Specification. You are welcome to use them for now, but they should be considered unstable features.
+**Tableland does not support any of the [date nor time functions](https://sqlite.org/lang_datefunc.html)** provided by the SQLite database engine. Namely, these functions can lead to non-deterministic behavior, so they are not available.
 
 ### JSON
 
