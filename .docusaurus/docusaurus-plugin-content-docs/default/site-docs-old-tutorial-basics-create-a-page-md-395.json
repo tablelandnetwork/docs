@@ -1,0 +1,29 @@
+{
+  "unversionedId": "old/tutorial-basics/create-a-page",
+  "id": "old/tutorial-basics/create-a-page",
+  "title": "Create a Page",
+  "description": "Add Markdown or React files to src/pages to create a standalone page:",
+  "source": "@site/docs/old/tutorial-basics/create-a-page.md",
+  "sourceDirName": "old/tutorial-basics",
+  "slug": "/old/tutorial-basics/create-a-page",
+  "permalink": "/docs/old/tutorial-basics/create-a-page",
+  "draft": false,
+  "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/old/tutorial-basics/create-a-page.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "sidebar_position": 1
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Tutorial - Basics",
+    "permalink": "/docs/category/tutorial---basics"
+  },
+  "next": {
+    "title": "Tutorial Intro",
+    "permalink": "/docs/old/tutorial-basics/intro"
+  }
+}

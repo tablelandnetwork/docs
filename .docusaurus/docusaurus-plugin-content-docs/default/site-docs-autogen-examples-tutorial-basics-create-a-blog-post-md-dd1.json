@@ -1,0 +1,28 @@
+{
+  "unversionedId": "autogen-examples/tutorial-basics/create-a-blog-post",
+  "id": "autogen-examples/tutorial-basics/create-a-blog-post",
+  "title": "Create a Blog Post",
+  "description": "Docusaurus creates a page for each blog post, but also a blog index page, a tag system, an RSS feed...",
+  "source": "@site/docs/autogen-examples/tutorial-basics/create-a-blog-post.md",
+  "sourceDirName": "autogen-examples/tutorial-basics",
+  "slug": "/autogen-examples/tutorial-basics/create-a-blog-post",
+  "permalink": "/docs/autogen-examples/tutorial-basics/create-a-blog-post",
+  "draft": false,
+  "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/autogen-examples/tutorial-basics/create-a-blog-post.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 3,
+  "frontMatter": {
+    "sidebar_position": 3,
+    "author": "dtb"
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Create a Document",
+    "permalink": "/docs/autogen-examples/tutorial-basics/create-a-document"
+  },
+  "next": {
+    "title": "Markdown Features",
+    "permalink": "/docs/autogen-examples/tutorial-basics/markdown-features"
+  }
+}

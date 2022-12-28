@@ -1,0 +1,26 @@
+{
+  "unversionedId": "contribute/writing-style",
+  "id": "contribute/writing-style",
+  "title": "writing-style",
+  "description": "",
+  "source": "@site/docs/contribute/writing-style.md",
+  "sourceDirName": "contribute",
+  "slug": "/contribute/writing-style",
+  "permalink": "/docs/contribute/writing-style",
+  "draft": false,
+  "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/contribute/writing-style.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Maintainers",
+    "permalink": "/docs/contribute/maintainers"
+  },
+  "next": {
+    "title": "test",
+    "permalink": "/docs/test/"
+  }
+}

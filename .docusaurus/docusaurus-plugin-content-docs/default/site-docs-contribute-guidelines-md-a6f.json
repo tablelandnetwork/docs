@@ -1,0 +1,45 @@
+{
+  "unversionedId": "contribute/guidelines",
+  "id": "contribute/guidelines",
+  "title": "How to contribute",
+  "description": "Understand how to contribute",
+  "source": "@site/docs/contribute/guidelines.md",
+  "sourceDirName": "contribute",
+  "slug": "/contribute/guidelines",
+  "permalink": "/docs/contribute/guidelines",
+  "draft": false,
+  "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/contribute/guidelines.md",
+  "tags": [
+    {
+      "label": "contributing",
+      "permalink": "/docs/tags/contributing"
+    }
+  ],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "title": "How to contribute",
+    "sidebar_position": 1,
+    "sidebar_label": "Contributor guidelines",
+    "description": "Understand how to contribute",
+    "keywords": [
+      "docs",
+      "tableland",
+      "contribute",
+      "contributor",
+      "contributing"
+    ],
+    "tags": [
+      "contributing"
+    ]
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Translate your site",
+    "permalink": "/docs/autogen-examples/tutorial-extras/translate-your-site"
+  },
+  "next": {
+    "title": "Maintainers",
+    "permalink": "/docs/contribute/maintainers"
+  }
+}

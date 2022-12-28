@@ -1,0 +1,37 @@
+{
+  "unversionedId": "contribute/maintainers",
+  "id": "contribute/maintainers",
+  "title": "Maintainers",
+  "description": "A list of Tableland maintainers",
+  "source": "@site/docs/contribute/maintainers.md",
+  "sourceDirName": "contribute",
+  "slug": "/contribute/maintainers",
+  "permalink": "/docs/contribute/maintainers",
+  "draft": false,
+  "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/contribute/maintainers.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "id": "maintainers",
+    "title": "Maintainers",
+    "sidebar_position": 2,
+    "sidebar_label": "Maintainers",
+    "description": "A list of Tableland maintainers",
+    "keywords": [
+      "docs",
+      "tableland",
+      "maintainers",
+      "contributors"
+    ]
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Contributor guidelines",
+    "permalink": "/docs/contribute/guidelines"
+  },
+  "next": {
+    "title": "test",
+    "permalink": "/docs/test/"
+  }
+}

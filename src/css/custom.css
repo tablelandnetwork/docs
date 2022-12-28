@@ -1,0 +1,144 @@
+/**
+ * Any CSS included here will be global. The classic template
+ * bundles Infima by default. Infima is a CSS framework designed to
+ * work well for content-centric websites.
+ */
+
+/* You can override the default Infima variables here. */
+
+:root {
+  --ifm-color-primary: #2e8555;
+  --ifm-color-primary-dark: #29784c;
+  --ifm-color-primary-darker: #277148;
+  --ifm-color-primary-darkest: #205d3b;
+  --ifm-color-primary-light: #33925d;
+  --ifm-color-primary-lighter: #359962;
+  --ifm-color-primary-lightest: #3cad6e;
+  --ifm-code-font-size: 88%;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+  --ifm-font-family-base: "Mulish";
+
+  /* Set font size variables, used down below with `md` files, too */
+  --h1-font-size: 2.5rem;
+  --h2-font-size: 2rem;
+  --h3-font-size: 1.5rem;
+  --h4-font-size: 1rem;
+  --h5-font-size: 0.875rem;
+  --h6-font-size: 0.85rem;
+  /* Set font size for ifm to variables above */
+  --ifm-h1-font-size: var(--h1-font-size);
+  --ifm-h2-font-size: var(--h2-font-size);
+  --ifm-h3-font-size: var(--h3-font-size);
+  --ifm-h4-font-size: var(--h4-font-size);
+  --ifm-h5-font-size: var(--h5-font-size);
+  --ifm-h6-font-size: var(--h6-font-size);
+}
+
+/* For readability concerns, you should choose a lighter palette in dark mode. */
+[data-theme="dark"] {
+  --ifm-color-primary: #25c2a0;
+  --ifm-color-primary-dark: #21af90;
+  --ifm-color-primary-darker: #1fa588;
+  --ifm-color-primary-darkest: #1a8870;
+  --ifm-color-primary-light: #29d5b0;
+  --ifm-color-primary-lighter: #32d8b4;
+  --ifm-color-primary-lightest: #4fddbf;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+}
+
+.markdown,
+.markdown > h1,
+.markdown > h2,
+.markdown > h3,
+.markdown > h4,
+.markdown > h5,
+.markdown > h6 {
+  --ifm-h1-font-size: var(--h1-font-size);
+  --ifm-h2-font-size: var(--h2-font-size);
+  --ifm-h3-font-size: var(--h3-font-size);
+  --ifm-h4-font-size: var(--h4-font-size);
+  --ifm-h5-font-size: var(--h5-font-size);
+  --ifm-h6-font-size: var(--h6-font-size);
+}
+
+/* You can override the default Infima variables here. */
+@font-face {
+  font-family: "mulish";
+  font-weight: 300;
+  src: url("/fonts/mulish/mulish-Light.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "mulish";
+  font-weight: 400;
+  src: url("/fonts/mulish/mulish-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "mulish";
+  font-weight: 500;
+  src: url("/fonts/mulish/mulish-Medium.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "mulish";
+  font-weight: 600;
+  src: url("/fonts/mulish/mulish-Semibold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "mulish";
+  font-weight: 700;
+  src: url("/fonts/mulish/mulish-Bold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "mulish";
+  font-weight: 800;
+  src: url("/fonts/mulish/mulish-ExtraBold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "mulish";
+  font-weight: 900;
+  src: url("/fonts/mulish/mulish-Black.ttf") format("truetype");
+}
+
+@-ms-viewport {
+  width: device-width;
+}
+
+article {
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* Announcement Bar */
+div[class^="announcementBar"] {
+  background-color: var(--ifm-background-surface-color);
+  color: var(--ifm-font-color-base);
+}
+
+div[class^="announcementBar"] a {
+  color: var(--ifm-link-color);
+  text-decoration: inherit;
+}
+
+div[class^="announcementBar"] a:hover {
+  color: var(--ifm-link-color);
+  text-decoration: underline;
+}
+
+/* Header Dropdown Menu */
+.dropdown__link {
+  font-size: inherit;
+}
+
+/* Custom error css, set in the magic comments in docusaurus config */
+.code-block-error-line {
+  background-color: #ff000020;
+  display: block;
+  margin: 0 calc(-1 * var(--ifm-pre-padding));
+  padding: 0 var(--ifm-pre-padding);
+  border-left: 3px solid #ff000080;
+}

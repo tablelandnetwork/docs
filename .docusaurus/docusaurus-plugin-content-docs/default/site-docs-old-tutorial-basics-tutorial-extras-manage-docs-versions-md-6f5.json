@@ -1,0 +1,29 @@
+{
+  "unversionedId": "old/tutorial-basics/tutorial-extras/manage-docs-versions",
+  "id": "old/tutorial-basics/tutorial-extras/manage-docs-versions",
+  "title": "Manage Docs Versions",
+  "description": "Docusaurus can manage multiple versions of your docs.",
+  "source": "@site/docs/old/tutorial-basics/tutorial-extras/manage-docs-versions.md",
+  "sourceDirName": "old/tutorial-basics/tutorial-extras",
+  "slug": "/old/tutorial-basics/tutorial-extras/manage-docs-versions",
+  "permalink": "/docs/old/tutorial-basics/tutorial-extras/manage-docs-versions",
+  "draft": false,
+  "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/old/tutorial-basics/tutorial-extras/manage-docs-versions.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "sidebar_position": 1
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Tutorial - Extras",
+    "permalink": "/docs/category/tutorial---extras"
+  },
+  "next": {
+    "title": "Translate your site",
+    "permalink": "/docs/old/tutorial-basics/tutorial-extras/translate-your-site"
+  }
+}

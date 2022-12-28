@@ -1,0 +1,29 @@
+{
+  "unversionedId": "old/tutorial-basics/tutorial-extras/translate-your-site",
+  "id": "old/tutorial-basics/tutorial-extras/translate-your-site",
+  "title": "Translate your site",
+  "description": "Let's translate docs/intro.md to French.",
+  "source": "@site/docs/old/tutorial-basics/tutorial-extras/translate-your-site.md",
+  "sourceDirName": "old/tutorial-basics/tutorial-extras",
+  "slug": "/old/tutorial-basics/tutorial-extras/translate-your-site",
+  "permalink": "/docs/old/tutorial-basics/tutorial-extras/translate-your-site",
+  "draft": false,
+  "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/old/tutorial-basics/tutorial-extras/translate-your-site.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "sidebar_position": 2
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Manage Docs Versions",
+    "permalink": "/docs/old/tutorial-basics/tutorial-extras/manage-docs-versions"
+  },
+  "next": {
+    "title": "Markdown Features",
+    "permalink": "/docs/old/tutorial-basics/markdown-features"
+  }
+}

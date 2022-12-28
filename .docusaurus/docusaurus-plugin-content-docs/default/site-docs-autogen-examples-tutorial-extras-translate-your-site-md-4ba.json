@@ -1,0 +1,27 @@
+{
+  "unversionedId": "autogen-examples/tutorial-extras/translate-your-site",
+  "id": "autogen-examples/tutorial-extras/translate-your-site",
+  "title": "Translate your site",
+  "description": "Let's translate docs/autogen-examples/intro.md to French.",
+  "source": "@site/docs/autogen-examples/tutorial-extras/translate-your-site.md",
+  "sourceDirName": "autogen-examples/tutorial-extras",
+  "slug": "/autogen-examples/tutorial-extras/translate-your-site",
+  "permalink": "/docs/autogen-examples/tutorial-extras/translate-your-site",
+  "draft": false,
+  "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/autogen-examples/tutorial-extras/translate-your-site.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "sidebar_position": 2
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Manage Docs Versions",
+    "permalink": "/docs/autogen-examples/tutorial-extras/manage-docs-versions"
+  },
+  "next": {
+    "title": "Contributor guidelines",
+    "permalink": "/docs/contribute/guidelines"
+  }
+}

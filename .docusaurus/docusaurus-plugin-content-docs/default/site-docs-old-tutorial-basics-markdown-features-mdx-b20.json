@@ -1,0 +1,29 @@
+{
+  "unversionedId": "old/tutorial-basics/markdown-features",
+  "id": "old/tutorial-basics/markdown-features",
+  "title": "Markdown Features",
+  "description": "Docusaurus supports Markdown and a few additional features.",
+  "source": "@site/docs/old/tutorial-basics/markdown-features.mdx",
+  "sourceDirName": "old/tutorial-basics",
+  "slug": "/old/tutorial-basics/markdown-features",
+  "permalink": "/docs/old/tutorial-basics/markdown-features",
+  "draft": false,
+  "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/old/tutorial-basics/markdown-features.mdx",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "sidebarPosition": 4,
+  "frontMatter": {
+    "sidebar_position": 4
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Create a Blog Post",
+    "permalink": "/docs/old/tutorial-basics/create-a-blog-post"
+  },
+  "next": {
+    "title": "Deploy your site",
+    "permalink": "/docs/old/tutorial-basics/deploy-your-site"
+  }
+}

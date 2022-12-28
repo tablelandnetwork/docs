@@ -1,0 +1,29 @@
+{
+  "unversionedId": "old/tutorial-basics/congratulations",
+  "id": "old/tutorial-basics/congratulations",
+  "title": "Congratulations!",
+  "description": "You have just learned the basics of Docusaurus and made some changes to the initial template.",
+  "source": "@site/docs/old/tutorial-basics/congratulations.md",
+  "sourceDirName": "old/tutorial-basics",
+  "slug": "/old/tutorial-basics/congratulations",
+  "permalink": "/docs/old/tutorial-basics/congratulations",
+  "draft": false,
+  "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/old/tutorial-basics/congratulations.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "sidebarPosition": 6,
+  "frontMatter": {
+    "sidebar_position": 6
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Deploy your site",
+    "permalink": "/docs/old/tutorial-basics/deploy-your-site"
+  },
+  "next": {
+    "title": "Tutorial - Extras",
+    "permalink": "/docs/category/tutorial---extras"
+  }
+}

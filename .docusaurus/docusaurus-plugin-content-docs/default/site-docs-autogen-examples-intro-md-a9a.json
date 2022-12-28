@@ -1,0 +1,27 @@
+{
+  "unversionedId": "autogen-examples/intro",
+  "id": "autogen-examples/intro",
+  "title": "Tutorial Intro",
+  "description": "Let's discover Docusaurus in less than 5 minutes.",
+  "source": "@site/docs/autogen-examples/intro.md",
+  "sourceDirName": "autogen-examples",
+  "slug": "/autogen-examples/intro",
+  "permalink": "/docs/autogen-examples/intro",
+  "draft": false,
+  "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/autogen-examples/intro.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "sidebar_position": 1
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Page Title",
+    "permalink": "/docs/template"
+  },
+  "next": {
+    "title": "Tutorial - Basics",
+    "permalink": "/docs/category/tutorial---basics"
+  }
+}

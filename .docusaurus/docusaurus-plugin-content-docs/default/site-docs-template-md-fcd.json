@@ -1,0 +1,32 @@
+{
+  "unversionedId": "template",
+  "id": "template",
+  "title": "Example Page Title",
+  "description": "Example description.",
+  "source": "@site/docs/template.md",
+  "sourceDirName": ".",
+  "slug": "/template",
+  "permalink": "/docs/template",
+  "draft": false,
+  "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/template.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "id": "template",
+    "sidebar_position": 1,
+    "title": "Example Page Title",
+    "sidebar_label": "Page Title",
+    "description": "Example description.",
+    "keywords": [
+      "example"
+    ],
+    "image": "img/tableland/example-image.png",
+    "slug": "template"
+  },
+  "sidebar": "tutorialSidebar",
+  "next": {
+    "title": "Tutorial Intro",
+    "permalink": "/docs/autogen-examples/intro"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "unversionedId": "autogen-examples/tutorial-basics/create-a-page",
+  "id": "autogen-examples/tutorial-basics/create-a-page",
+  "title": "Create a Page",
+  "description": "Add Markdown or React files to src/pages to create a standalone page:",
+  "source": "@site/docs/autogen-examples/tutorial-basics/create-a-page.md",
+  "sourceDirName": "autogen-examples/tutorial-basics",
+  "slug": "/autogen-examples/tutorial-basics/create-a-page",
+  "permalink": "/docs/autogen-examples/tutorial-basics/create-a-page",
+  "draft": false,
+  "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/autogen-examples/tutorial-basics/create-a-page.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "sidebar_position": 1
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Tutorial - Basics",
+    "permalink": "/docs/category/tutorial---basics"
+  },
+  "next": {
+    "title": "Create a Document",
+    "permalink": "/docs/autogen-examples/tutorial-basics/create-a-document"
+  }
+}

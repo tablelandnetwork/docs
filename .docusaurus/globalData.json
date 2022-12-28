@@ -1,0 +1,103 @@
+{
+  "docusaurus-plugin-content-docs": {
+    "default": {
+      "path": "/docs",
+      "versions": [
+        {
+          "name": "current",
+          "label": "Next",
+          "isLast": true,
+          "path": "/docs",
+          "mainDocId": "template",
+          "docs": [
+            {
+              "id": "autogen-examples/intro",
+              "path": "/docs/autogen-examples/intro",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "autogen-examples/tutorial-basics/congratulations",
+              "path": "/docs/autogen-examples/tutorial-basics/congratulations",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "autogen-examples/tutorial-basics/create-a-blog-post",
+              "path": "/docs/autogen-examples/tutorial-basics/create-a-blog-post",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "autogen-examples/tutorial-basics/create-a-document",
+              "path": "/docs/autogen-examples/tutorial-basics/create-a-document",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "autogen-examples/tutorial-basics/create-a-page",
+              "path": "/docs/autogen-examples/tutorial-basics/create-a-page",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "autogen-examples/tutorial-basics/deploy-your-site",
+              "path": "/docs/autogen-examples/tutorial-basics/deploy-your-site",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "autogen-examples/tutorial-basics/markdown-features",
+              "path": "/docs/autogen-examples/tutorial-basics/markdown-features",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "autogen-examples/tutorial-extras/manage-docs-versions",
+              "path": "/docs/autogen-examples/tutorial-extras/manage-docs-versions",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "autogen-examples/tutorial-extras/translate-your-site",
+              "path": "/docs/autogen-examples/tutorial-extras/translate-your-site",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "contribute/guidelines",
+              "path": "/docs/contribute/guidelines",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "contribute/maintainers",
+              "path": "/docs/contribute/maintainers",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "template",
+              "path": "/docs/template",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "test/test",
+              "path": "/docs/test/",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "/category/tutorial---basics",
+              "path": "/docs/category/tutorial---basics",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "/category/tutorial---extras",
+              "path": "/docs/category/tutorial---extras",
+              "sidebar": "tutorialSidebar"
+            }
+          ],
+          "draftIds": [],
+          "sidebars": {
+            "tutorialSidebar": {
+              "link": {
+                "path": "/docs/template",
+                "label": "Page Title"
+              }
+            }
+          }
+        }
+      ],
+      "breadcrumbs": true
+    }
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "unversionedId": "test/test",
+  "id": "test/test",
+  "title": "test",
+  "description": "hello",
+  "source": "@site/docs/test/test.md",
+  "sourceDirName": "test",
+  "slug": "/test/",
+  "permalink": "/docs/test/",
+  "draft": false,
+  "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/test/test.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Maintainers",
+    "permalink": "/docs/contribute/maintainers"
+  }
+}
