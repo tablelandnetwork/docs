@@ -27,8 +27,17 @@ const config = {
     defaultLocale: "en",
     locales: ["en"],
   },
+  markdown: {
+    mermaid: true,
+  },
   plugins: [
     "@docusaurus/theme-live-codeblock",
+    [
+      "docusaurus-plugin-dotenv",
+      {
+        path: "./.env", // Path to your environment variables in `.env` file
+      },
+    ],
     /* TODO -- need to add redirects from old site pages to new site pages
     [
       "@docusaurus/plugin-client-redirects",
@@ -63,6 +72,7 @@ const config = {
   ],
   themes: [
     "@easyops-cn/docusaurus-search-local", // Used for site search
+    "@docusaurus/theme-mermaid",
   ],
   stylesheets: [
     // Used for math / KaTeX formulas
@@ -80,7 +90,7 @@ const config = {
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
-          sidebarPath: require.resolve("./sidebars.js"),
+          sidebarPath: "./sidebars.js",
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl: "https://github.com/tablelandnetwork/docs/tree/main/",
@@ -92,6 +102,7 @@ const config = {
             { sync: true },
           ],
           rehypePlugins: [katex],
+          showLastUpdateAuthor: true,
         },
         blog: {
           showReadingTime: true,
@@ -100,7 +111,13 @@ const config = {
           editUrl: "https://github.com/tablelandnetwork/docs/tree/main",
         },
         theme: {
-          customCss: require.resolve("./src/css/custom.css"),
+          customCss: "./src/css/custom.css",
+        },
+        sitemap: {
+          changefreq: "weekly",
+          priority: 0.5,
+          ignorePatterns: ["/tags/**"],
+          filename: "sitemap.xml",
         },
       }),
     ],
@@ -117,6 +134,15 @@ const config = {
             "tableland, docs, documentation, web3, crypto, SQL, relational, database",
         },
       ],
+      mermaid: {
+        theme: {
+          light: "neutral",
+          dark: "dark",
+        },
+        options: {
+          fontFamily: "mulish",
+        },
+      },
       navbar: {
         hideOnScroll: true,
         title: "",

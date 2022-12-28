@@ -71,11 +71,6 @@
               "sidebar": "tutorialSidebar"
             },
             {
-              "id": "test/test",
-              "path": "/docs/test/",
-              "sidebar": "tutorialSidebar"
-            },
-            {
               "id": "/category/tutorial---basics",
               "path": "/docs/category/tutorial---basics",
               "sidebar": "tutorialSidebar"

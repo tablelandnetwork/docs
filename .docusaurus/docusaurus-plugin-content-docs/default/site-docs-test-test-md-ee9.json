@@ -2,7 +2,7 @@
   "unversionedId": "test/test",
   "id": "test/test",
   "title": "test",
-  "description": "hello",
+  "description": "SQL Spec Data Types",
   "source": "@site/docs/test/test.md",
   "sourceDirName": "test",
   "slug": "/test/",
@@ -11,6 +11,9 @@
   "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/test/test.md",
   "tags": [],
   "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
   "frontMatter": {},
   "sidebar": "tutorialSidebar",
   "previous": {

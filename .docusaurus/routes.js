@@ -79,7 +79,7 @@ export default [
   },
   {
     path: '/docs',
-    component: ComponentCreator('/docs', '7b8'),
+    component: ComponentCreator('/docs', '458'),
     routes: [
       {
         path: '/docs/autogen-examples/intro',
@@ -162,12 +162,6 @@ export default [
       {
         path: '/docs/template',
         component: ComponentCreator('/docs/template', 'df8'),
-        exact: true,
-        sidebar: "tutorialSidebar"
-      },
-      {
-        path: '/docs/test/',
-        component: ComponentCreator('/docs/test/', '15b'),
         exact: true,
         sidebar: "tutorialSidebar"
       }

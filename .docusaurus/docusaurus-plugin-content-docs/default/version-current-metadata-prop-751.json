@@ -114,12 +114,6 @@
             "docId": "contribute/maintainers"
           }
         ]
-      },
-      {
-        "type": "link",
-        "label": "test",
-        "href": "/docs/test/",
-        "docId": "test/test"
       }
     ]
   },
@@ -194,12 +188,6 @@
       "id": "template",
       "title": "Example Page Title",
       "description": "Example description.",
-      "sidebar": "tutorialSidebar"
-    },
-    "test/test": {
-      "id": "test/test",
-      "title": "test",
-      "description": "hello",
       "sidebar": "tutorialSidebar"
     }
   }

@@ -32,10 +32,20 @@
       "name": "@docusaurus/theme-live-codeblock",
       "version": "2.2.0"
     },
+    "docusaurus-plugin-dotenv": {
+      "type": "package",
+      "name": "docusaurus-plugin-dotenv",
+      "version": "1.0.1"
+    },
     "@easyops-cn/docusaurus-search-local": {
       "type": "package",
       "name": "@easyops-cn/docusaurus-search-local",
       "version": "0.33.6"
+    },
+    "docusaurus-theme-mermaid": {
+      "type": "package",
+      "name": "@docusaurus/theme-mermaid",
+      "version": "2.2.0"
     }
   }
 }

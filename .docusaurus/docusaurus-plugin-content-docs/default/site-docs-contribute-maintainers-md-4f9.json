@@ -11,6 +11,9 @@
   "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/contribute/maintainers.md",
   "tags": [],
   "version": "current",
+  "lastUpdatedBy": "Dan Buchholz",
+  "lastUpdatedAt": 1672203463,
+  "formattedLastUpdatedAt": "Dec 28, 2022",
   "sidebarPosition": 2,
   "frontMatter": {
     "id": "maintainers",
@@ -29,9 +32,5 @@
   "previous": {
     "title": "Contributor guidelines",
     "permalink": "/docs/contribute/guidelines"
-  },
-  "next": {
-    "title": "test",
-    "permalink": "/docs/test/"
   }
 }

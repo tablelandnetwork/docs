@@ -21,11 +21,21 @@ export default {
     "path": "i18n",
     "localeConfigs": {}
   },
+  "markdown": {
+    "mermaid": true
+  },
   "plugins": [
-    "@docusaurus/theme-live-codeblock"
+    "@docusaurus/theme-live-codeblock",
+    [
+      "docusaurus-plugin-dotenv",
+      {
+        "path": "./.env"
+      }
+    ]
   ],
   "themes": [
-    "@easyops-cn/docusaurus-search-local"
+    "@easyops-cn/docusaurus-search-local",
+    "@docusaurus/theme-mermaid"
   ],
   "stylesheets": [
     {
@@ -40,7 +50,7 @@ export default {
       "classic",
       {
         "docs": {
-          "sidebarPath": "/Users/dtb/tbl/docs/sidebars.js",
+          "sidebarPath": "./sidebars.js",
           "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/",
           "showLastUpdateTime": true,
           "breadcrumbs": true,
@@ -53,14 +63,23 @@ export default {
           ],
           "rehypePlugins": [
             null
-          ]
+          ],
+          "showLastUpdateAuthor": true
         },
         "blog": {
           "showReadingTime": true,
           "editUrl": "https://github.com/tablelandnetwork/docs/tree/main"
         },
         "theme": {
-          "customCss": "/Users/dtb/tbl/docs/src/css/custom.css"
+          "customCss": "./src/css/custom.css"
+        },
+        "sitemap": {
+          "changefreq": "weekly",
+          "priority": 0.5,
+          "ignorePatterns": [
+            "/tags/**"
+          ],
+          "filename": "sitemap.xml"
         }
       }
     ]
@@ -73,6 +92,15 @@ export default {
         "content": "tableland, docs, documentation, web3, crypto, SQL, relational, database"
       }
     ],
+    "mermaid": {
+      "theme": {
+        "light": "neutral",
+        "dark": "dark"
+      },
+      "options": {
+        "fontFamily": "mulish"
+      }
+    },
     "navbar": {
       "hideOnScroll": true,
       "title": "",
@@ -430,8 +458,5 @@ export default {
   "headTags": [],
   "clientModules": [],
   "titleDelimiter": "|",
-  "noIndex": false,
-  "markdown": {
-    "mermaid": false
-  }
+  "noIndex": false
 };

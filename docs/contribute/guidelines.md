@@ -21,7 +21,7 @@ Feel free to [raise an issue on our Tableland docs repository](https://github.co
 
 Tableland welcomes new collaborators and contributions. To get started, you can do the following:
 
-- View the [open issues](https://github.com/tablelandnetwork/docs/issues) in the docs (or other) repositories and browse issues by labels (like `help wanted`, `good first issue`, etc.).
+- View the [open issues](https://github.com/tablelandnetwork/docs/issues) in the docs (or other) repositories and browse issues by labels (example [here](https://github.com/tablelandnetwork/evm-tableland/labels)).
 - Create an issue if there is a specific contribution in mind. One of the Tableland [documentation maintainers](/docs/contribute/maintainers) will reach out and help find an area for you to contribute.
 - Dive into our Discord and ask in `#dev-chat` if you don't want to open an issue yet but want to discuss potential contributions.
 
@@ -40,11 +40,11 @@ The Tableland documentation uses the Docusaurus static site generator. There are
 
 All headings / titles should follow sentence case. Namely, do not capitalize the page like a title but as a sentence. As an example, this page's primary heading is `How to contribute` and **_not_** `How to Contribute`. Research suggests that sentence case is more readable, and [Stripe's best-in-class docs](https://stripe.com/docs/products-prices/how-products-and-prices-work) do the same.
 
-Also, the primary h1 heading in markdown (`#`) is reserved for the page's title. You **cannot use `#` in your markdown pages**. Instead, all headings must be an h2 (`##`) or smaller (up to an h6). If a primary heaing is used, the header content will not render in the table of contents on the right-hand side. One other potentially useful customization is redefining heading anchor links — perhaps if a header is too verbose, you can customize it: `## Hello {#my-custom-id}`
+Also, the primary `h1` heading in markdown (`#`) is reserved for the page's title. You **should not use `#` in your markdown pages**. Instead, all headings must be an `h2` (`##`) or smaller (up to an `h6`). If a primary heading is used, the header content will not render in the table of contents on the right-hand side. One other potentially useful customization is redefining heading anchor links—perhaps if a header is too verbose, you can customize it: `## Hello {#my-custom-id}`
 
 ### Front matter
 
-Every markdown page should include [front matter](https://docusaurus.io/docs/next/markdown-features#front-matter) at the beginning of the document. This information is used to generate site metadata (for [SEO](https://docusaurus.io/docs/next/seo)) as well as the contents and routes. This page has the following front matter:
+Every markdown page should include [front matter](https://docusaurus.io/docs/next/markdown-features#front-matter) at the beginning of the document, which should be valid YAML and between triple dashed lines (`---`). This information is used to generate site metadata (for [SEO](https://docusaurus.io/docs/next/seo)) as well as the contents and routes. For example, this page has the following front matter:
 
 ```md
 ---
@@ -63,9 +63,9 @@ tags:
 ---
 ```
 
-You'll notice a number of fields that are available:
+You'll notice a number of fields that are available, and the full list can be found [here](https://docusaurus.io/docs/next/api/plugins/@docusaurus/plugin-content-docs#markdown-front-matter):
 
-- **`title`**: The page's title gets automatically displayed in the content as an h1 header (`# Your Title`) and is also used in the page's metadata.
+- **`title`**: The page's title gets automatically displayed in the content as an `h1` header (`# Your Title`) and is also used in the page's metadata.
 - **`sidebar_position`**: Visual position of the page within the sidebar / sub-section.
 - **`description`**: A brief about the page, kept under ~60 characters and only used in the metadata.
 - **`keywords`**: Keywords help with SEO and are part of the page's metadata. Simply add a bulleted list of keywords, or provide an array of comma-separated values (e.g., `keywords: [docs, tableland]`).
@@ -94,9 +94,31 @@ There are also Docususaurus-specific features that can be used to enhance the do
 
 ### MDX
 
-[MDX](https://docusaurus.io/docs/markdown-features/react) is a superset of markdown that adds the ability to import and use JSX alongside common markdown. Docusaurus offers a set of components that can be imported and used within a `.mdx` file. You can also write your own components within `src/components` and then import them into the desired markdown page. A simple example:
+[MDX](https://docusaurus.io/docs/markdown-features/react) is a superset of markdown that adds the ability to import and use JSX alongside common markdown; execute code blocks inside markdown. You can write your own components within `src/components` and then import them into the desired markdown page, or write them directly in an page (**must** use `export`):
 
-See [here](https://docusaurus.io/docs/markdown-features/react) for more details.
+```jsx
+export const Element = ({ word }) => <h4>Hello, {word}!</h4>;
+
+<Element word={"world"} />;
+```
+
+export const Element = ({word}) => <h4>Hello, {word}!</h4>;
+
+This will render the following JSX within the markdown:
+
+<Element word={"world"} />
+
+You can also import other markdown files into a markdown file. A simple example using the `@site` keyword to denote the root folder (but, of course, relative paths can also be used):
+
+```md
+import DataTypes from '@site/specs/sql/DataTypes.md'
+
+## SQL Spec Data Types
+
+<DataTypes />
+```
+
+Docusaurus also offers a set of components that can be imported into markdown, such as [`Tabs`](#tabs). Note that Docusaurus parses both `.md` and `.mdx` files using MDX, but some of the syntaxes are treated slightly differently by third-party tools. Thus, an `.md` file can leverage `.mdx` functionality but beware that third-party tools may not do the same—a best practice is to use `.mdx` where JSX is used. See [here](https://docusaurus.io/docs/markdown-features/react) for more details.
 
 ### Code blocks
 
@@ -178,6 +200,22 @@ console.log(name.toUpperCase());
 // Uncaught TypeError: Cannot read properties of null (reading 'toUpperCase')
 ```
 
+### Links
+
+You can use either a URL path (`./example`) or file path (`./example.md`). If you're referencing another page, you can opt for a relative path such that it will be resolved against the current file's directory. And as with standard markdown, you can link to a heading within the page by referencing the heading in [kebab case](https://en.wikipedia.org/wiki/Letter_case#Kebab_case).
+
+```md title="docs/folder/doc1.md"
+## My page
+
+I am referencing a [document](doc2.md). # This is also in the same `folder`
+
+Reference to another [document in a subfolder](subfolder/doc3.md). # This is in `folder/subfolder`
+
+[Relative document](../otherFolder/doc4.md) referencing works as well. # A document outside of `folder`
+
+[A link to "My page"](#my-page)
+```
+
 ### Admonitions
 
 [Admonitions](https://docusaurus.io/docs/markdown-features/admonitions) are callout boxes with a keyword, symbol, and color. An example in this document is the tooltip at the top, which is generated using `:::` followed by the keyword `tip`, a custom title (optional), and later closed out by another `:::`:
@@ -246,6 +284,7 @@ npm run start
 
 ### Assets
 
+All [static assets](https://docusaurus.io/docs/next/static-assets) should be placed in the `src/static` directory. These files will be will be copied into the root of the generated `build` folder with the directory hierarchy preserved (e.g., some image `/static/img/tableland.png` will be served at `/img/tableland.png`).
 Content, such as images, can be displayed directly through either markdown syntax, CJS require, ES imports syntax, or the built-in `useBaseUrl` method. SVGs can also be directly imported. The following demonstrate how to do this, and note the `@site` prefix can be used to access the root `src` directory:
 
 ```jsx
@@ -277,7 +316,7 @@ Which will directly import this SVG:
 
 import Logo from '@site/static/img/tableland/logo-black.svg'
 
-<Logo />
+<Logo width="60vw"/>
 
 ### Math
 
@@ -308,3 +347,78 @@ Will render:
 $$
 I = \int_0^{2\pi} \sin(x)\,dx
 $$
+
+### Diagrams
+
+[Mermaid](https://mermaid.js.org/intro/) support exists. Simply create a code block with the `mermaid` language -- the example below is from left-to-right (`LR`) with various [shapes](https://mermaid.js.org/syntax/mindmap.html#icons):
+
+````md
+```mermaid
+---
+title: Example Title
+---
+graph LR
+  A[Square Rect] -- Link text --> B((Circle))
+  A --> C(Round Rect)
+  B --> D{Rhombus}
+  C --> D
+```
+````
+
+This will create an mermaid diagram with it's (optional) title.
+
+```mermaid
+---
+title: Example Title
+---
+graph LR
+  A[Square Rect] -- Link text --> B((Circle))
+  A --> C(Round Rect)
+  B --> D{Rhombus}
+  C --> D
+```
+
+---
+
+Here's a more complicated example with subgraphs and a multidirectional flow:
+
+```mermaid
+flowchart LR
+
+subgraph chain[On-chain]
+direction LR
+  A((EOA)) -- Calls --> B(Tableland\n Registry)
+  A -- Calls --> C(Contract)
+  C --> B
+end
+
+subgraph offchain[Off-chain]
+direction BT
+  subgraph tbl[Tableland]
+  direction LR
+    subgraph node[Node N, N+1,...]
+    direction LR
+      E --Update--> E
+      D{{Validator}} --Process--> E[(SQLite)]
+    end
+    F[Gateway]
+  end
+
+  G(dapp)
+  G-.Read data .->F --> node
+end
+
+chain--Emit\n SQL -->offchain
+
+```
+
+See the [mermaid docs](https://mermaid.js.org/syntax/classDiagram.html) for more details.
+
+### Swizzling
+
+There are two parts to [swizzling](https://docusaurus.io/docs/next/swizzling) a component: [ejecting](https://docusaurus.io/docs/next/swizzling#ejecting) and [wrapping](https://docusaurus.io/docs/next/swizzling#wrapping). The purpose of swizzling is to allow for a specific component to be further customized, such as editing or wrapping a `<Footer />` component from some imported Docusaurus theme.
+
+- Run `npm run swizzle [theme name] [component name] -- --eject` or `--wrap`.
+- Run `npm run swizzle --list` to see what’s safe to swizzle.
+
+Ejecting a theme component is the process of creating a copy of the original theme component, which you can fully customize and override. It will copy the component into `src/theme` to then allow you to further customize it. Wrapping a theme is the process of creating a wrapper around the original theme component; you can further enhance "around" the component but not directly edit it.
