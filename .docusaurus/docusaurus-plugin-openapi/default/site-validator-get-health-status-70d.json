@@ -1,0 +1,71 @@
+{
+  "type": "api",
+  "id": "get-health-status",
+  "unversionedId": "get-health-status",
+  "title": "Get health status",
+  "description": "",
+  "slug": "/get-health-status",
+  "frontMatter": {},
+  "api": {
+    "tags": [
+      "health"
+    ],
+    "description": "Returns OK if the validator considers itself healthy.",
+    "operationId": "health",
+    "responses": {
+      "200": {
+        "description": "The validator is healthy."
+      }
+    },
+    "method": "get",
+    "path": "/health",
+    "servers": [
+      {
+        "url": "https://testnets.tableland.network/api/v1"
+      }
+    ],
+    "info": {
+      "title": "Tableland Validator - OpenAPI 3.0",
+      "description": "In Tableland, Validators are the execution unit/actors of the protocol.\nThey have the following responsibilities:\n- Listen to on-chain events to materialize Tableland-compliant SQL queries in a database engine (currently, SQLite by default).\n- Serve read-queries (e.g: SELECT * FROM foo_69_1) to the external world.\n- Serve state queries (e.g. list tables, get receipts, etc) to the external world.\n\nIn the 1.0.0 release of the Tableland Validator API, we've switched to a design first approach!\nYou can now help us improve the API whether it's by making changes to the definition itself or to the code.\nThat way, with time, we can improve the API in general, and expose some of the new features in OAS3.",
+      "termsOfService": "http://docs.tableland.xyz",
+      "contact": {
+        "name": "core devs",
+        "email": "carson@textile.io"
+      },
+      "license": {
+        "name": "Apache 2.0",
+        "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
+      },
+      "version": "1.0.0"
+    },
+    "postman": {
+      "name": "Get health status",
+      "description": {
+        "content": "Returns OK if the validator considers itself healthy.",
+        "type": "text/plain"
+      },
+      "url": {
+        "path": [
+          "health"
+        ],
+        "host": [
+          "{{baseUrl}}"
+        ],
+        "query": [],
+        "variable": []
+      },
+      "method": "GET"
+    }
+  },
+  "source": "@site/specs/validator/tableland-openapi-spec.yaml",
+  "sourceDirName": ".",
+  "permalink": "/validator/get-health-status",
+  "previous": {
+    "title": "Introduction",
+    "permalink": "/validator/introduction"
+  },
+  "next": {
+    "title": "Get version information",
+    "permalink": "/validator/get-version-information"
+  }
+}

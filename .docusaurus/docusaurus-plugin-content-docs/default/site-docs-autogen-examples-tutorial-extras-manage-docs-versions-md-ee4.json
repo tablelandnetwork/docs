@@ -11,17 +11,17 @@
   "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/autogen-examples/tutorial-extras/manage-docs-versions.md",
   "tags": [],
   "version": "current",
-  "lastUpdatedBy": "Dan Buchholz",
-  "lastUpdatedAt": 1672203463,
-  "formattedLastUpdatedAt": "Dec 28, 2022",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
   "sidebarPosition": 1,
   "frontMatter": {
     "sidebar_position": 1
   },
   "sidebar": "tutorialSidebar",
   "previous": {
-    "title": "Tutorial - Extras",
-    "permalink": "/docs/category/tutorial---extras"
+    "title": "Congratulations!",
+    "permalink": "/docs/autogen-examples/tutorial-basics/congratulations"
   },
   "next": {
     "title": "Translate your site",

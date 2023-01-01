@@ -13,17 +13,13 @@ tags:
   - contributing
 ---
 
-:::tip
-Feel free to [raise an issue on our Tableland docs repository](https://github.com/tablelandnetwork/docs/issues)
-:::
-
 ## Where to start
 
 Tableland welcomes new collaborators and contributions. To get started, you can do the following:
 
-- View the [open issues](https://github.com/tablelandnetwork/docs/issues) in the docs (or other) repositories and browse issues by labels (example [here](https://github.com/tablelandnetwork/evm-tableland/labels)).
+- View the [open issues](https://github.com/tablelandnetwork/docs/issues) in the docs (or other) repositories and browse issues by labels (example [here](https://github.com/tablelandnetwork/js-tableland/labels)).
 - Create an issue if there is a specific contribution in mind. One of the Tableland [documentation maintainers](/docs/contribute/maintainers) will reach out and help find an area for you to contribute.
-- Dive into our Discord and ask in `#dev-chat` if you don't want to open an issue yet but want to discuss potential contributions.
+- Dive into our Discord and ask in open a ticket in [`#contact-team`](https://discord.com/channels/592843512312102924/1000182412795445378) if you don't want to open a GitHub issue yet but want to discuss potential contributions.
 
 ## Add to the Tableland docs
 
@@ -32,7 +28,7 @@ Tableland welcomes new collaborators and contributions. To get started, you can 
 - Repository: https://github.com/tablelandnetwork/docs
 - Sample PR: https://github.com/tablelandnetwork/docs/pull/49
 
-## Formatting & Style
+## Formatting & style
 
 The Tableland documentation uses the Docusaurus static site generator. There are a number of benefits—such as docs-specific plugins, auto-generated pages from `docs`, and MDX support—but also some formatting-related aspects you should be aware of.
 
@@ -40,7 +36,9 @@ The Tableland documentation uses the Docusaurus static site generator. There are
 
 All headings / titles should follow sentence case. Namely, do not capitalize the page like a title but as a sentence. As an example, this page's primary heading is `How to contribute` and **_not_** `How to Contribute`. Research suggests that sentence case is more readable, and [Stripe's best-in-class docs](https://stripe.com/docs/products-prices/how-products-and-prices-work) do the same.
 
-Also, the primary `h1` heading in markdown (`#`) is reserved for the page's title. You **should not use `#` in your markdown pages**. Instead, all headings must be an `h2` (`##`) or smaller (up to an `h6`). If a primary heading is used, the header content will not render in the table of contents on the right-hand side. One other potentially useful customization is redefining heading anchor links—perhaps if a header is too verbose, you can customize it: `## Hello {#my-custom-id}`
+Also, the primary headings in markdown (`#`) are reserved for the page's title. You **should not use `#` in your markdown pages**. Instead, all headings must be a secondary (`##`) or smaller. If a primary heading is used, the header content will not render in the table of contents on the right-hand side. One other potentially useful customization is redefining heading anchor links—perhaps if a header is too verbose, you can customize it: `## Hello {#my-custom-id}`. These docs allow for three levels of nesting to show up in the table of contents: `h2`, `h3`, or `h4`.
+
+Note that using an `h1`, `h2`, etc. _within markdown_ will not render in the table of contents. These elements can be used as needed. All markdown headings (`#`, `##`, etc.) _will_ render in the table of contents, and for reference, these are later compiled into html elements when the docs site is built.
 
 ### Front matter
 
@@ -65,15 +63,16 @@ tags:
 
 You'll notice a number of fields that are available, and the full list can be found [here](https://docusaurus.io/docs/next/api/plugins/@docusaurus/plugin-content-docs#markdown-front-matter):
 
-- **`title`**: The page's title gets automatically displayed in the content as an `h1` header (`# Your Title`) and is also used in the page's metadata.
-- **`sidebar_position`**: Visual position of the page within the sidebar / sub-section.
-- **`description`**: A brief about the page, kept under ~60 characters and only used in the metadata.
-- **`keywords`**: Keywords help with SEO and are part of the page's metadata. Simply add a bulleted list of keywords, or provide an array of comma-separated values (e.g., `keywords: [docs, tableland]`).
-- [**`tags`**](https://docusaurus.io/docs/next/create-doc#doc-tags): _(Optional)_ Similarly, tags help with categorization and search within the site. Simply add a bulleted list of tags, or provide an array of comma-separated values (e.g., `tags: [docs, tableland]`). These are displayed at the bottom of each page, and viewing a grouping is possible by clicking on the tag or visiting the `/docs/tags` URI on the site.
-- **`sidebar_label`**: _(Optional)_ A page's `title` can have a different display value in the sidebar. For example, this page has a title of `How to contribute` but a `sidebar_label` of `Contributor guidelines`. Often, this field is used for long page titles that should be condensed within the sidebar section.
-- [**`id`**](https://docusaurus.io/docs/next/create-doc#document-id): _(Optional)_ Each docuement has a unique ID generated based on the file path from the root `docs` directory. For example, an `example` folder within the `docs` directory that contains `test.md` with have an auto-generated `id` of `example/test`. The ID is used to refer to a document when hand-writing sidebars, or when using docs-related layout components or hooks. Thus, it is generally okay to use the auto-generated `id`.
-- [**`slug`**](https://docusaurus.io/docs/next/create-doc#doc-urls): _(Optional)_ The default slug will be the file path. For example, an `example` folder within the `docs` directory that contains `test.md` with have a slug `docs/example/test`. Instead, you can set a custom slug. If you set the `slug` to `my-new-slug`, the slug will now be `docs/example/my-new-slug` (`docs/my-new-slug`) or a specific name (`docs/specific-name/my-new-slug`). Generally, you can expect to use the default behavior.
-- **`image`**: _(Optional)_ A thumbnail image to be shown in social media cards. A default image is configured such that this is not required, unless desired by the page creator (e.g., a custom tutorial or a page with tailored imanges already present).
+- `title`: The page's title gets automatically displayed in the content as an `h1` header (`# Your Title`) and is also used in the page's metadata.
+- `sidebar_position`: Visual position of the page within the sidebar / sub-section.
+- `description`: A brief about the page, kept under ~60 characters and only used in the metadata.
+- `keywords`: Keywords help with SEO and are part of the page's metadata. Simply add a bulleted list of keywords, or provide an array of comma-separated values (e.g., `keywords: [docs, tableland]`).
+- [`tags`](https://docusaurus.io/docs/next/create-doc#doc-tags): _(Optional)_ Similarly, tags help with categorization and search within the site. Simply add a bulleted list of tags, or provide an array of comma-separated values (e.g., `tags: [docs, tableland]`). These are displayed at the bottom of each page, and viewing a grouping is possible by clicking on the tag or visiting the `/docs/tags` URI on the site.
+- `sidebar_label`: _(Optional)_ A page's `title` can have a different display value in the sidebar. For example, this page has a title of `How to contribute` but a `sidebar_label` of `Contributor guidelines`. Often, this field is used for long page titles that should be condensed within the sidebar section.
+- [`id`](https://docusaurus.io/docs/next/create-doc#document-id): _(Optional)_ Each docuement has a unique ID generated based on the file path from the root `docs` directory. For example, an `example` folder within the `docs` directory that contains `test.md` with have an auto-generated `id` of `example/test`. The ID is used to refer to a document when hand-writing sidebars, or when using docs-related layout components or hooks. Thus, it is generally okay to use the auto-generated `id`.
+- [`slug`](https://docusaurus.io/docs/next/create-doc#doc-urls): _(Optional)_ The default slug will be the file path. For example, an `example` folder within the `docs` directory that contains `test.md` with have a slug `docs/example/test`. Instead, you can set a custom slug. If you set the `slug` to `my-new-slug`, the slug will now be `docs/example/my-new-slug` (`docs/my-new-slug`) or a specific name (`docs/specific-name/my-new-slug`). Generally, you can expect to use the default behavior.
+- `image`: _(Optional)_ A thumbnail image to be shown in social media cards. A default image is configured such that this is not required, unless desired by the page creator (e.g., a custom tutorial or a page with tailored imanges already present).
+- `hide_title`: _(Optional)_ A boolean value can be passed to hide the default `title`. This is only really used in case of an imported markdown file that begins with a `#`, which should then be used as the page's `title`.
 
 ### Writing style
 
@@ -86,7 +85,20 @@ For most of the documentation, writers should address the user directly with (e.
 - End all sentences with a period; headings should not end in punctuation.
 - When using the em dash (—), don't put spaces around it but "connected" to the word(s) its between.
 
-Feel free to refer [Google's style guide](https://github.com/google/styleguide/blob/gh-pages/docguide/style.md) as well as [Microsoft's'](https://docs.microsoft.com/en-us/style-guide/welcome/) for more pointers.
+Feel free to refer [Google's style guide](https://github.com/google/styleguide/blob/gh-pages/docguide/style.md) as well as [Microsoft's](https://docs.microsoft.com/en-us/style-guide/welcome/) for more pointers.
+
+### Templates
+
+This project places a number of starter templates in the `docs/_templates` directory. Note that any directory that is prefixed with an underscore `_` **will not be** indexed nor displayed on this site. Instead, go to the [docs GitHub repo](https://github.com/tablelandnetwork/docs/tree/main/docs/_templates) to see this content.
+
+Generally, every category should have a similar structure inclusive of the following pages:
+
+1. Overview
+2. Get started
+3. Additional pages with specific content
+4. FAQs
+
+This is a general framework but not explicitly required. If there are multiple subcategories, each should include points `2.` and `3.` above. A good example to reference is the [Stripe developer docs](https://stripe.com/docs/stripe-cli).
 
 ## Additional features
 
@@ -94,7 +106,7 @@ There are also Docususaurus-specific features that can be used to enhance the do
 
 ### MDX
 
-[MDX](https://docusaurus.io/docs/markdown-features/react) is a superset of markdown that adds the ability to import and use JSX alongside common markdown; execute code blocks inside markdown. You can write your own components within `src/components` and then import them into the desired markdown page, or write them directly in an page (**must** use `export`):
+[MDX (v1)](https://docusaurus.io/docs/markdown-features/react) is a superset of markdown that adds the ability to import and use JSX alongside common markdown; execute code blocks inside markdown. You can write your own components within `src/components` and then import them into the desired markdown page, or write them directly in an page (**must** use `export`):
 
 ```jsx
 export const Element = ({ word }) => <h4>Hello, {word}!</h4>;
@@ -102,18 +114,20 @@ export const Element = ({ word }) => <h4>Hello, {word}!</h4>;
 <Element word={"world"} />;
 ```
 
-export const Element = ({word}) => <h4>Hello, {word}!</h4>;
+export const Element = ({ word }) => <h4>Hello, {word}!</h4>;
 
 This will render the following JSX within the markdown:
 
 <Element word={"world"} />
 
-You can also import other markdown files into a markdown file. A simple example using the `@site` keyword to denote the root folder (but, of course, relative paths can also be used):
+You can also import markdown files into another markdown file. Here's a simple example using the `@site` keyword to denote the root folder (but, of course, relative paths can also be used). It may occasionally be helpful to use the `hide_title` front matter, in case the imported markdown already beings with an `h1` (`#`) tag:
 
 ```md
-import DataTypes from '@site/specs/sql/DataTypes.md'
+---
+hide_title: true
+---
 
-## SQL Spec Data Types
+import DataTypes from '/specs/sql/DataTypes.md'
 
 <DataTypes />
 ```
@@ -226,26 +240,30 @@ This is a tip.
 :::
 ```
 
-Aside from `tip`, other options include `note`, `info`, `caution`, and `danger`. Each of these comes with a different color and symbol, and if no custom title is created, the callout's title will default to the captialized keyword name (`Tip`, `Note`, etc.).
+Aside from `tip`, other options include `note`, `info`, `caution`, and `warning`. Each of these comes with a different color and symbol, and if no custom title is created, the callout's title will default to the captialized keyword name (`Tip`, `Note`, etc.).
 
 Additionally, standard quotation blocks (starting a line with `>`) are displayed with a custom format. These may also be used to highlight specific information in scenarios that don't need the callout box with `:::tip`, etc. but want to highlight a block of text. Lastly, [`<details>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/details) may occasionally be useful for a similar purpose.
 
 ### Tabs
 
-Many code examples have multiple languages or commands that can be used for, essentially, the same thing. Perhaps a Node.js vs. client-side import or usage of installing with `npm` vs. `yarn`. With tabs, code can easily be displayed with a side-by-side navbar-like set of tabs that are used in an `.md` or `.mdx` file.
+Many code examples have multiple languages or commands that can be used for, essentially, the same thing. Perhaps a Node.js vs. client-side import or usage of installing with `npm` vs. `yarn`. With tabs, code can easily be displayed with a side-by-side navbar-like set of tabs that are used in a markdown files. Keep in mind that the MDX parser is rather picky, so **you must** provide the correct spacing and indentation for code blocks, as demonstrated below:
 
-```jsx
+```md
 import Tabs from "@theme/Tabs";
 import TabItem from "@theme/TabItem";
 
 <Tabs>
-  <TabItem value="bobby" label="Bobby" default>
-    Bobby
+  <TabItem value="esm" label="Node.js (import)" default>
+
+    import abc from "abc";
+
   </TabItem>
-  <TabItem value="tables" label="Tables">
-    Tables
+    <TabItem value="require" label="Node.js (require)">
+
+    const abc = require("abc");
+
   </TabItem>
-</Tabs>;
+</Tabs>
 ```
 
 Which will then display:
@@ -254,15 +272,28 @@ import Tabs from "@theme/Tabs";
 import TabItem from "@theme/TabItem";
 
 <Tabs>
-  <TabItem value="bobby" label="Bobby" default>
-    Bobby
+  <TabItem value="esm" label="Node.js (import)" default>
+
+    import abc from "abc";
+
   </TabItem>
-  <TabItem value="tables" label="Tables">
-    Tables
+    <TabItem value="require" label="Node.js (require)">
+
+    const abc = require("abc");
+
   </TabItem>
 </Tabs>
 
----
+You can alternatively pass `defaultValue` and an array of objects with keys `label` and `value` to `Tabs`:
+
+```jsx
+<Tabs
+  defaultValue="bobby"
+  values={[
+    { label: "Bobby", value: "bobby" },
+    { label: "Tables", value: "tables" },
+]}>
+```
 
 Since `npm` and `yarn` are so commonly used, the [npm2yarn](https://www.npmjs.com/package/@docusaurus/remark-plugin-npm2yarn) plugin was made to handle this without the need for using tabs while also auto-generating a `yarn` command from an `npm` command:
 
@@ -282,9 +313,11 @@ npm install <package>
 npm run start
 ```
 
-### Assets
+### Assets & images
 
-All [static assets](https://docusaurus.io/docs/next/static-assets) should be placed in the `src/static` directory. These files will be will be copied into the root of the generated `build` folder with the directory hierarchy preserved (e.g., some image `/static/img/tableland.png` will be served at `/img/tableland.png`).
+All [static assets](https://docusaurus.io/docs/next/static-assets) should be placed in the `src/static` directory. Images should be placed in the `src/static/img` folder, although, it _is_ possible to reference images placed within the `docs` folder (not recommended for maintainability purposes).
+
+These files will be will be copied into the root of the generated `build` folder with the directory hierarchy preserved (e.g., some image `/static/img/tableland.png` will be served at `/img/tableland.png`).
 Content, such as images, can be displayed directly through either markdown syntax, CJS require, ES imports syntax, or the built-in `useBaseUrl` method. SVGs can also be directly imported. The following demonstrate how to do this, and note the `@site` prefix can be used to access the root `src` directory:
 
 ```jsx
@@ -304,19 +337,42 @@ All of these render the same image:
 
 ![Example image](@site/static/img/tableland/example-image.png)
 
-And for direct SVG imports, import the image and use accordingly:
+And for direct SVG imports, import the image and use accordingly—it may be useful to attach the `width` property to properly size the image (or use CSS in `src/css/custom.css` accomplish this):
 
 ```jsx
 import Logo from "@site/static/img/tableland/logo-black.svg";
 
-<Logo />;
+<Logo width="20em" />;
 ```
 
-Which will directly import this SVG:
+#### Themed images
 
-import Logo from '@site/static/img/tableland/logo-black.svg'
+Since the docs site supports both a light and a dark theme, images should consider the same. Use the `ThemedImage` component to accomplish this by passing a `sources` property with `light` and `dark` keys that point to the associated images:
 
-<Logo width="60vw"/>
+```jsx
+import ThemedImage from "@theme/ThemedImage";
+
+<ThemedImage
+  alt="Tableland themed image"
+  sources={{
+    light: useBaseUrl("/img/tableland/logo-black.svg"),
+    dark: useBaseUrl("/img/tableland/logo-white.svg"),
+  }}
+/>;
+```
+
+Which will change the image based on which site theme has been set by the user:
+
+import useBaseUrl from "@docusaurus/useBaseUrl";
+import ThemedImage from "@theme/ThemedImage";
+
+<ThemedImage
+alt="Tableland themed image"
+sources={{
+    light: useBaseUrl("/img/tableland/logo-black.svg"),
+    dark: useBaseUrl("/img/tableland/logo-white.svg"),
+  }}
+/>
 
 ### Math
 
@@ -334,7 +390,7 @@ Let $f\colon[a,b]\to\R$ be Riemann integrable. Let $F\colon[a,b]\to\R$ be
 $F(x)=\int_{a}^{x} f(t)\,dt$. Then $F$ is continuous, and at all $x$ such that
 $f$ is continuous at $x$, $F$ is differentiable at $x$ with $F'(x)=f(x)$.
 
-Or, wrap a block with `$$`:
+Or, wrapping a block with `$$`:
 
 ```md
 $$
@@ -350,7 +406,7 @@ $$
 
 ### Diagrams
 
-[Mermaid](https://mermaid.js.org/intro/) support exists. Simply create a code block with the `mermaid` language -- the example below is from left-to-right (`LR`) with various [shapes](https://mermaid.js.org/syntax/mindmap.html#icons):
+[Mermaid](https://mermaid.js.org/intro/) support exists. Simply create a code block with the `mermaid` language—the example below is from left-to-right (`LR`) with various [shapes](https://mermaid.js.org/syntax/mindmap.html#icons):
 
 ````md
 ```mermaid
@@ -387,7 +443,7 @@ flowchart LR
 
 subgraph chain[On-chain]
 direction LR
-  A((EOA)) -- Calls --> B(Tableland\n Registry)
+  A((EOA)) -- Create or write --> B(Tableland\n Registry\n)
   A -- Calls --> C(Contract)
   C --> B
 end
@@ -396,19 +452,18 @@ subgraph offchain[Off-chain]
 direction BT
   subgraph tbl[Tableland]
   direction LR
-    subgraph node[Node N, N+1,...]
+    subgraph node[Validator Node]
     direction LR
-      E --Update--> E
-      D{{Validator}} --Process--> E[(SQLite)]
+      D{{Event}} --Process--> E[(SQLite)]
     end
-    F[Gateway]
+    F[/Gateway/]
   end
 
   G(dapp)
-  G-.Read data .->F --> node
+  G<-.Read data .->F --> node
 end
 
-chain--Emit\n SQL -->offchain
+chain--"Emit event\n (SQL)" -->offchain
 
 ```
 
@@ -418,7 +473,13 @@ See the [mermaid docs](https://mermaid.js.org/syntax/classDiagram.html) for more
 
 There are two parts to [swizzling](https://docusaurus.io/docs/next/swizzling) a component: [ejecting](https://docusaurus.io/docs/next/swizzling#ejecting) and [wrapping](https://docusaurus.io/docs/next/swizzling#wrapping). The purpose of swizzling is to allow for a specific component to be further customized, such as editing or wrapping a `<Footer />` component from some imported Docusaurus theme.
 
-- Run `npm run swizzle [theme name] [component name] -- --eject` or `--wrap`.
+- Run `npm run swizzle @docusaurus/theme-classic NotFound -- --eject` or `--wrap`.
 - Run `npm run swizzle --list` to see what’s safe to swizzle.
+
+For example, to customize the `NotFound` component from the default Docusaurus theme, you would run:
+
+```terminal
+npm run swizzle @docusaurus/theme-classic NotFound -- --eject
+```
 
 Ejecting a theme component is the process of creating a copy of the original theme component, which you can fully customize and override. It will copy the component into `src/theme` to then allow you to further customize it. Wrapping a theme is the process of creating a wrapper around the original theme component; you can further enhance "around" the component but not directly edit it.

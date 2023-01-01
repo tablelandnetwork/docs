@@ -1,0 +1,23 @@
+{
+  "unversionedId": "specst/sql/StatementTypes",
+  "id": "specst/sql/StatementTypes",
+  "title": "Statement Types",
+  "description": "The core Tableland SQL parser accepts an SQL statement list which is a semicolon-separated list of statements. Each SQL statement in the statement list is an instance of one of the following specific statement types. All other standard SQL statement types are unavailable (at the moment). Each statement type is associated with a well-known SQL command (see following sections). In general, the entire Tableland SQL API can be summarized in seven command/statement types: CREATE TABLE, INSERT, UPDATE, DELETE, SELECT, GRANT, REVOKE.",
+  "source": "@site/docs/specst/sql/StatementTypes.md",
+  "sourceDirName": "specst/sql",
+  "slug": "/specst/sql/StatementTypes",
+  "permalink": "/docs/specst/sql/StatementTypes",
+  "draft": false,
+  "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/specst/sql/StatementTypes.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Tableland SQL Language Specification",
+    "permalink": "/docs/specst/sql/Header"
+  }
+}

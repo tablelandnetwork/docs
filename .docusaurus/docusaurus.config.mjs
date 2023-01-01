@@ -8,9 +8,9 @@ export default {
   "tagline": "Build web3 with SQL",
   "url": "http://localhost:3000",
   "baseUrl": "/",
-  "onBrokenLinks": "throw",
+  "onBrokenLinks": "log",
   "onBrokenMarkdownLinks": "warn",
-  "favicon": "img/favicon.ico",
+  "favicon": "img/tableland/favicon.ico",
   "organizationName": "tablelandnetwork",
   "projectName": "docs",
   "i18n": {
@@ -88,8 +88,28 @@ export default {
     "image": "img/tableland/site-banner.png",
     "metadata": [
       {
+        "name": "description",
+        "content": "The official documentation for the Tableland Network. Build web3 with SQL using smart contracts, SDKs, and APIs, and learn all about the protocol."
+      },
+      {
+        "name": "og:title",
+        "content": "Tableland Docs: API Reference, Quickstart Guides, and Integrations"
+      },
+      {
+        "name": "twitter:title",
+        "content": "Tableland Docs"
+      },
+      {
+        "name": "twitter:description",
+        "content": "The official documentation for the Tableland Network. Build web3 with SQL."
+      },
+      {
+        "name": "og:site_name",
+        "content": "Tableland Docs"
+      },
+      {
         "name": "keywords",
-        "content": "tableland, docs, documentation, web3, crypto, SQL, relational, database"
+        "content": "tableland, docs, documentation, web3, crypto, blockchain, SQL, SQLite, relational, database"
       }
     ],
     "mermaid": {
@@ -101,8 +121,19 @@ export default {
         "fontFamily": "mulish"
       }
     },
+    "docs": {
+      "sidebar": {
+        "autoCollapseCategories": true,
+        "hideable": false
+      },
+      "versionPersistence": "localStorage"
+    },
+    "tableOfContents": {
+      "minHeadingLevel": 2,
+      "maxHeadingLevel": 4
+    },
     "navbar": {
-      "hideOnScroll": true,
+      "hideOnScroll": false,
       "title": "",
       "logo": {
         "alt": "Tableland logo",
@@ -119,9 +150,11 @@ export default {
           "label": "Template"
         },
         {
-          "to": "/blog",
-          "label": "Blog",
-          "position": "left"
+          "href": "https://dev.tableland.xyz",
+          "position": "right",
+          "label": "Tech Blog",
+          "target": "_blank",
+          "rel": null
         },
         {
           "label": "Community",
@@ -129,16 +162,8 @@ export default {
           "items": [
             {
               "to": "docs/contribute/guidelines/",
-              "label": "Contribute to Wiki",
-              "target": "_blank",
-              "rel": null,
-              "activeBasePath": "docs/contribute"
-            },
-            {
-              "href": "https://github.com/tablelandnetwork/docs",
               "label": "Contribute",
-              "target": "_blank",
-              "rel": null
+              "activeBasePath": "docs/contribute"
             },
             {
               "href": "https://discord.com/invite/dc8EBEhGbg",
@@ -162,8 +187,9 @@ export default {
         },
         {
           "href": "https://github.com/tablelandnetwork/",
-          "label": "GitHub",
-          "position": "right"
+          "position": "right",
+          "className": "header-github-link",
+          "aria-label": "GitHub repository"
         },
         {
           "type": "search",
@@ -210,7 +236,7 @@ export default {
           ]
         }
       ],
-      "copyright": "Copyright © 2022 Tableland Network."
+      "copyright": "Copyright © 2023 Tableland Network"
     },
     "prism": {
       "theme": {
@@ -433,19 +459,8 @@ export default {
       "content": "Give Tableland a ⭐️ on <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://github.com/tablelandnetwork\">GitHub</a> and follow us on <a target=\"_blank\" rel=\"noopener noreferrer\" href=\"https://twitter.com/tableland__\" >Twitter</a>",
       "isCloseable": true
     },
-    "docs": {
-      "sidebar": {
-        "hideable": true,
-        "autoCollapseCategories": false
-      },
-      "versionPersistence": "localStorage"
-    },
     "liveCodeBlock": {
       "playgroundPosition": "bottom"
-    },
-    "tableOfContents": {
-      "minHeadingLevel": 2,
-      "maxHeadingLevel": 3
     }
   },
   "baseUrlIssueBanner": true,

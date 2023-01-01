@@ -1,0 +1,98 @@
+{
+  "apiSidebars": {
+    "openapi-sidebar-validator": [
+      {
+        "type": "link",
+        "label": "Introduction",
+        "href": "/validator/introduction",
+        "docId": "introduction",
+        "position": 999999
+      },
+      {
+        "type": "category",
+        "label": "health",
+        "collapsible": true,
+        "collapsed": true,
+        "items": [
+          {
+            "type": "link",
+            "label": "Get health status",
+            "href": "/validator/get-health-status",
+            "docId": "get-health-status",
+            "className": "api-method get",
+            "position": 999999
+          }
+        ],
+        "position": 999999
+      },
+      {
+        "type": "category",
+        "label": "version",
+        "collapsible": true,
+        "collapsed": true,
+        "items": [
+          {
+            "type": "link",
+            "label": "Get version information",
+            "href": "/validator/get-version-information",
+            "docId": "get-version-information",
+            "className": "api-method get",
+            "position": 999999
+          }
+        ],
+        "position": 999999
+      },
+      {
+        "type": "category",
+        "label": "query",
+        "collapsible": true,
+        "collapsed": true,
+        "items": [
+          {
+            "type": "link",
+            "label": "Query the network",
+            "href": "/validator/query-the-network",
+            "docId": "query-the-network",
+            "className": "api-method get",
+            "position": 999999
+          }
+        ],
+        "position": 999999
+      },
+      {
+        "type": "category",
+        "label": "receipt",
+        "collapsible": true,
+        "collapsed": true,
+        "items": [
+          {
+            "type": "link",
+            "label": "Get transaction status",
+            "href": "/validator/get-transaction-status",
+            "docId": "get-transaction-status",
+            "className": "api-method get",
+            "position": 999999
+          }
+        ],
+        "position": 999999
+      },
+      {
+        "type": "category",
+        "label": "tables",
+        "collapsible": true,
+        "collapsed": true,
+        "items": [
+          {
+            "type": "link",
+            "label": "Get table information",
+            "href": "/validator/get-table-information",
+            "docId": "get-table-information",
+            "className": "api-method get",
+            "position": 999999
+          }
+        ],
+        "position": 999999
+      }
+    ]
+  }
+}

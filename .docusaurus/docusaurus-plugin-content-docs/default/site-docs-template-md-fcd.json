@@ -1,7 +1,7 @@
 {
   "unversionedId": "template",
   "id": "template",
-  "title": "Example Page Title",
+  "title": "template",
   "description": "Example description.",
   "source": "@site/docs/template.md",
   "sourceDirName": ".",
@@ -11,14 +11,13 @@
   "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/template.md",
   "tags": [],
   "version": "current",
-  "lastUpdatedBy": "Dan Buchholz",
-  "lastUpdatedAt": 1672203463,
-  "formattedLastUpdatedAt": "Dec 28, 2022",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
   "sidebarPosition": 1,
   "frontMatter": {
     "id": "template",
     "sidebar_position": 1,
-    "title": "Example Page Title",
     "sidebar_label": "Page Title",
     "description": "Example description.",
     "keywords": [

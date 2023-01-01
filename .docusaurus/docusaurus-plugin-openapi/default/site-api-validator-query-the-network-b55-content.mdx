@@ -1,0 +1,38 @@
+# Query the network
+
+
+
+Returns the results of a SQL read query against the Tabeland network
+
+<table style={{"display":"table","width":"100%"}}><thead><tr><th style={{"textAlign":"left"}}>Query Parameters</th></tr></thead><tbody><tr><td><code>statement</code><span style={{"opacity":"0.6"}}> string</span><span style={{"opacity":"0.6"}}> — </span><strong style={{"fontSize":"var(--ifm-code-font-size)","color":"var(--openapi-required)"}}> REQUIRED</strong><div style={{"marginTop":"var(--ifm-table-cell-padding)"}}>
+
+The SQL read query statement
+
+</div></td></tr><tr><td><code>format</code><span style={{"opacity":"0.6"}}> string</span><div style={{"marginTop":"var(--ifm-table-cell-padding)"}}>
+
+**Possible values:** [`objects`, `table`]
+
+</div><div style={{"marginTop":"var(--ifm-table-cell-padding)"}}>
+
+The requested response format:
+ * `objects` - Returns the query results as a JSON array of JSON objects.
+ * `table` - Return the query results as a JSON object with columns and rows properties.
+
+
+</div></td></tr><tr><td><code>extract</code><span style={{"opacity":"0.6"}}> boolean</span><div style={{"marginTop":"var(--ifm-table-cell-padding)"}}>
+
+Whether to extract the JSON object from the single property of the surrounding JSON object.
+
+</div></td></tr><tr><td><code>unwrap</code><span style={{"opacity":"0.6"}}> boolean</span><div style={{"marginTop":"var(--ifm-table-cell-padding)"}}>
+
+Whether to unwrap the returned JSON objects from their surrounding array.
+
+</div></td></tr></tbody></table><table style={{"display":"table","width":"100%"}}><thead><tr><th style={{"textAlign":"left"}}>Responses</th></tr></thead><tbody><tr><td><div style={{"display":"flex"}}><div style={{"marginRight":"var(--ifm-table-cell-padding)"}}><code>200</code></div><div>
+
+Successful operation
+
+</div></div><div><table style={{"display":"table","width":"100%","marginTop":"var(--ifm-table-cell-padding)","marginBottom":"0px"}}><thead><tr><th style={{"textAlign":"left"}}>Schema <div></div></th></tr></thead><tbody><tr><td><span style={{"opacity":"0.6"}}> object</span></td></tr></tbody></table></div></td></tr><tr><td><div style={{"display":"flex"}}><div style={{"marginRight":"var(--ifm-table-cell-padding)"}}><code>400</code></div><div>
+
+Invalid query/statement value
+
+</div></div><div></div></td></tr></tbody></table>

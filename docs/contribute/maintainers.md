@@ -15,20 +15,20 @@ The following provides a list of regular contributors to the Tableland documenta
 
 ## General Documentation
 
-### Dan Buchholz
+#### Dan Buchholz
 
 GitHub: [dtbuchholz](https://github.com/dtbuchholz)
 
 ## SQL & Validator Specifications
 
-### Carson Farmer
+#### Carson Farmer
 
 GitHub: [carsonfarmer](https://github.com/carsonfarmer)
 
-### Bruno Calza
+#### Bruno Calza
 
-GitHub: [Bruno Calza](https://github.com/brunocalza)
+GitHub: [brunocalza](https://github.com/brunocalza)
 
-### Ignacio Hagopian
+#### Ignacio Hagopian
 
-GitHub: [Ignacio Hagopian](https://github.com/jsign)
+GitHub: [jsign](https://github.com/jsign)

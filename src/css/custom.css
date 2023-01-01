@@ -3,49 +3,77 @@
  * bundles Infima by default. Infima is a CSS framework designed to
  * work well for content-centric websites.
  */
-
-/* You can override the default Infima variables here. */
-
+/*
+/* Override the default Infima variables here. */
 :root {
-  --ifm-color-primary: #2e8555;
-  --ifm-color-primary-dark: #29784c;
-  --ifm-color-primary-darker: #277148;
-  --ifm-color-primary-darkest: #205d3b;
-  --ifm-color-primary-light: #33925d;
-  --ifm-color-primary-lighter: #359962;
-  --ifm-color-primary-lightest: #3cad6e;
-  --ifm-code-font-size: 88%;
+  /* Colors (light mode colors are the default) */
+  --ifm-color-primary: #9563a7;
+  --ifm-color-primary-dark: #704b7e;
+  --ifm-color-primary-darker: #4d3357;
+  --ifm-color-primary-darkest: #251929;
+  --ifm-color-primary-light: #a782b5;
+  --ifm-color-primary-lighter: #b99bc4;
+  --ifm-color-primary-lightest: #dccde1;
+  /* Change the Tab component to be less vertically padded */
+  --ifm-tabs-padding-vertical: 0.3rem;
+  --ifm-global-radius: 0.1rem;
+  /* Don't underline links on hover */
+  --ifm-link-hover-decoration: none;
+  /* Font edits, including font size variables, used down below with `md` files, too */
+  --ifm-code-font-size: 102%;
+  --ifm-font-family-base: "Inter", sans-serif;
+  --ifm-font-family-monospace: "Inconsolata", monospace;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
-  --ifm-font-family-base: "Mulish";
-
-  /* Set font size variables, used down below with `md` files, too */
-  --h1-font-size: 2.5rem;
-  --h2-font-size: 2rem;
-  --h3-font-size: 1.5rem;
-  --h4-font-size: 1rem;
-  --h5-font-size: 0.875rem;
-  --h6-font-size: 0.85rem;
-  /* Set font size for ifm to variables above */
+  --h1-font-size: 2rem;
+  --h2-font-size: 1.5rem;
+  --h3-font-size: 1.25rem;
+  --h4-font-size: 1rem; /* Equal to body's font size */
+  --h5-font-size: 1rem; /* Same as `h4` but won't show up in table of contents */
+  --h6-font-size: 0.875rem;
   --ifm-h1-font-size: var(--h1-font-size);
   --ifm-h2-font-size: var(--h2-font-size);
   --ifm-h3-font-size: var(--h3-font-size);
   --ifm-h4-font-size: var(--h4-font-size);
   --ifm-h5-font-size: var(--h5-font-size);
   --ifm-h6-font-size: var(--h6-font-size);
+  /* Decrease the amount of spacing under an `h1` and between elements */
+  --ifm-h1-vertical-rhythm-bottom: 0.5;
+  --ifm-leading: calc(var(--ifm-leading-desktop) * 0.75rem);
 }
 
-/* For readability concerns, you should choose a lighter palette in dark mode. */
+/* Change the color of the body to a dark grey but keep headings black*/
+[data-theme="light"] {
+  --ifm-color-content: var(--ifm-color-gray-800);
+  --ifm-heading-color: var(--ifm-color-gray-1000);
+}
+
+/* Change the color of the body to a dark grey but keep headings black*/
+.markdown h2:first-of-type {
+  font-weight: 400;
+}
+
+/* Dark mode */
 [data-theme="dark"] {
-  --ifm-color-primary: #25c2a0;
-  --ifm-color-primary-dark: #21af90;
-  --ifm-color-primary-darker: #1fa588;
-  --ifm-color-primary-darkest: #1a8870;
-  --ifm-color-primary-light: #29d5b0;
-  --ifm-color-primary-lighter: #32d8b4;
-  --ifm-color-primary-lightest: #4fddbf;
+  /* Colors */
+  --ifm-color-primary: #75b6b5;
+  --ifm-color-primary-dark: #3b706f;
+  --ifm-color-primary-darker: #2c5453;
+  --ifm-color-primary-darkest: #1e3837;
+  --ifm-color-primary-light: #4a8c8b;
+  --ifm-color-primary-lighter: #59a7a6;
+  --ifm-color-primary-lightest: #77dddc;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+  /* Make the navbar the same color as the background; include bottom box shadow */
+  --ifm-navbar-background-color: var(--ifm-background-color);
+  --ifm-navbar-shadow: 0 1px 2px 0 var(--ifm-color-emphasis-200);
 }
 
+/* Don't dim the site logo on hover in dark mode */
+[data-theme="dark"] .navbar__brand:hover {
+  filter: brightness(1);
+}
+
+/* Ensure markdown files have the same setting as the `--ifm` header variables */
 .markdown,
 .markdown > h1,
 .markdown > h2,
@@ -61,47 +89,23 @@
   --ifm-h6-font-size: var(--h6-font-size);
 }
 
-/* You can override the default Infima variables here. */
-@font-face {
-  font-family: "mulish";
-  font-weight: 300;
-  src: url("/fonts/mulish/mulish-Light.ttf") format("truetype");
+/* Correct h1 defaulting to 3rem */
+.markdown h1:first-child {
+  --ifm-h1-font-size: var(--h1-font-size);
 }
 
-@font-face {
-  font-family: "mulish";
-  font-weight: 400;
-  src: url("/fonts/mulish/mulish-Regular.ttf") format("truetype");
+/* A few general CSS fixes */
+html {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -ms-overflow-style: scrollbar;
 }
 
-@font-face {
-  font-family: "mulish";
-  font-weight: 500;
-  src: url("/fonts/mulish/mulish-Medium.ttf") format("truetype");
-}
-
-@font-face {
-  font-family: "mulish";
-  font-weight: 600;
-  src: url("/fonts/mulish/mulish-Semibold.ttf") format("truetype");
-}
-
-@font-face {
-  font-family: "mulish";
-  font-weight: 700;
-  src: url("/fonts/mulish/mulish-Bold.ttf") format("truetype");
-}
-
-@font-face {
-  font-family: "mulish";
-  font-weight: 800;
-  src: url("/fonts/mulish/mulish-ExtraBold.ttf") format("truetype");
-}
-
-@font-face {
-  font-family: "mulish";
-  font-weight: 900;
-  src: url("/fonts/mulish/mulish-Black.ttf") format("truetype");
+*,
+::after,
+::before {
+  -webkit-box-sizing: inherit;
+  box-sizing: inherit;
 }
 
 @-ms-viewport {
@@ -113,7 +117,8 @@ article {
   margin-left: auto;
   margin-right: auto;
 }
-/* Announcement Bar */
+
+/* Announcement bar overrides */
 div[class^="announcementBar"] {
   background-color: var(--ifm-background-surface-color);
   color: var(--ifm-font-color-base);
@@ -129,11 +134,6 @@ div[class^="announcementBar"] a:hover {
   text-decoration: underline;
 }
 
-/* Header Dropdown Menu */
-.dropdown__link {
-  font-size: inherit;
-}
-
 /* Custom error css, set in the magic comments in docusaurus config */
 .code-block-error-line {
   background-color: #ff000020;
@@ -141,4 +141,172 @@ div[class^="announcementBar"] a:hover {
   margin: 0 calc(-1 * var(--ifm-pre-padding));
   padding: 0 var(--ifm-pre-padding);
   border-left: 3px solid #ff000080;
+}
+
+/* Make anchors slightly bolded */
+a {
+  font-weight: var(--ifm-font-weight-semibold);
+}
+
+/* Darken color on link hover */
+a:hover {
+  color: rgba(var(--ifm-link-color), 0.5);
+  transition: color var(--ifm-transition-fast);
+}
+
+/* In tooltips, highlight anchors are embedded links and change opacity on hover */
+.alert a {
+  text-decoration: underline;
+  transition: opacity var(--ifm-transition-fast);
+}
+
+.alert a:hover {
+  text-decoration: underline;
+  opacity: 0.7;
+  transition: opacity var(--ifm-transition-fast);
+}
+
+/* Inline code snippets should not wrap */
+/* code {
+  white-space: nowrap;
+} */
+
+/* GitHub class / SVG, used in `docusaurus.config.js */
+.header-github-link:hover {
+  opacity: 0.6;
+  transition: opacity var(--ifm-transition-fast);
+}
+
+.header-github-link:before {
+  content: "";
+  width: 24px;
+  height: 24px;
+  display: flex;
+  background: url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12'/%3E%3C/svg%3E")
+    no-repeat;
+}
+
+html[data-theme="dark"] .header-github-link:before {
+  background: url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='white' d='M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12'/%3E%3C/svg%3E")
+    no-repeat;
+}
+
+/* Change the search box outline color on focus */
+.navbar__search-input:focus-visible {
+  outline: var(--ifm-color-primary) auto 2px;
+}
+
+/* Override style for buttons */
+.button,
+button {
+  cursor: pointer;
+  font-size: inherit;
+  line-height: 1.5rem;
+  font-weight: 600;
+  border-radius: 4px;
+  padding: 10px 15px;
+  border: none;
+  outline: none;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+  background-color: var(--ifm-color-primary-dark);
+  color: #ffffff !important;
+}
+
+.button:hover,
+button:hover {
+  filter: brightness(1);
+}
+
+/* Change the `Tab` component's border radius to be more square */
+.tabs__item {
+  border-radius: 0.1rem 0.1rem 0 0;
+}
+
+/* Override landing page hero background / font colors */
+.hero--primary {
+  --ifm-hero-background-color: var(--ifm-hero-background-color);
+  --ifm-hero-text-color: var(--ifm-font-color-base);
+}
+
+.hero__title {
+  font-size: var(--h1-font-size);
+}
+
+/* Custom fonts for the site */
+@font-face {
+  font-family: "Inter";
+  font-weight: 100;
+  src: url("/fonts/Inter/Inter-Thin.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Inter";
+  font-weight: 200;
+  src: url("/fonts/Inter/Inter-ExtraLight.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Inter";
+  font-weight: 300;
+  src: url("/fonts/Inter/Inter-Light.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Inter";
+  font-weight: 400;
+  src: url("/fonts/Inter/Inter-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Inter";
+  font-weight: 500;
+  src: url("/fonts/Inter/Inter-Medium.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Inter";
+  font-weight: 600;
+  src: url("/fonts/Inter/Inter-Semibold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Inter";
+  font-weight: 700;
+  src: url("/fonts/Inter/Inter-Bold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Inter";
+  font-weight: 800;
+  src: url("/fonts/Inter/Inter-ExtraBold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Inter";
+  font-weight: 900;
+  src: url("/fonts/Inter/Inter-Black.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Inconsolata";
+  font-weight: 400;
+  src: url("/fonts/Inconsolata/Inconsolata-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Inconsolata";
+  font-weight: 500;
+  src: url("/fonts/Inconsolata/Inconsolata-Medium.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Inconsolata";
+  font-weight: 600;
+  src: url("/fonts/Inconsolata/Inconsolata-SemiBold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Inconsolata";
+  font-weight: 700;
+  src: url("/fonts/Inconsolata/Inconsolata-Bold.ttf") format("truetype");
 }

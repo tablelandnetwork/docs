@@ -1,0 +1,30 @@
+{
+  "unversionedId": "specs/sql/statement-types",
+  "id": "specs/sql/statement-types",
+  "title": "statement-types",
+  "description": "Example description.",
+  "source": "@site/docs/specs/sql/statement-types.mdx",
+  "sourceDirName": "specs/sql",
+  "slug": "/specs/sql/statement-types",
+  "permalink": "/docs/specs/sql/statement-types",
+  "draft": false,
+  "editUrl": "https://github.com/tablelandnetwork/docs/blob/main/specs/sql/StatementTypes.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "hide_title": true,
+    "custom_edit_url": "https://github.com/tablelandnetwork/docs/blob/main/specs/sql/StatementTypes.md",
+    "description": "Example description.",
+    "keywords": [
+      "example"
+    ]
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Overview",
+    "permalink": "/docs/specs/sql/overview"
+  }
+}

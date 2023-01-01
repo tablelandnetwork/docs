@@ -12,9 +12,9 @@ const config = {
   tagline: "Build web3 with SQL",
   url: "http://localhost:3000", // https://docs.tableland.xyz
   baseUrl: "/",
-  onBrokenLinks: "throw",
+  onBrokenLinks: "log", // Or, could `throw`
   onBrokenMarkdownLinks: "warn",
-  favicon: "img/favicon.ico",
+  favicon: "img/tableland/favicon.ico",
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
@@ -91,6 +91,7 @@ const config = {
       ({
         docs: {
           sidebarPath: "./sidebars.js",
+
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl: "https://github.com/tablelandnetwork/docs/tree/main/",
@@ -129,9 +130,32 @@ const config = {
       image: "img/tableland/site-banner.png", // Default image used in metadata, e.g., links shared on socials
       metadata: [
         {
+          name: "description",
+          content:
+            "The official documentation for the Tableland Network. Build web3 with SQL using smart contracts, SDKs, and APIs, and learn all about the protocol.",
+        },
+        {
+          name: "og:title",
+          content:
+            "Tableland Docs: API Reference, Quickstart Guides, and Integrations",
+        },
+        {
+          name: "twitter:title",
+          content: "Tableland Docs",
+        },
+        {
+          name: "twitter:description",
+          content:
+            "The official documentation for the Tableland Network. Build web3 with SQL.",
+        },
+        {
+          name: "og:site_name",
+          content: "Tableland Docs",
+        },
+        {
           name: "keywords",
           content:
-            "tableland, docs, documentation, web3, crypto, SQL, relational, database",
+            "tableland, docs, documentation, web3, crypto, blockchain, SQL, SQLite, relational, database",
         },
       ],
       mermaid: {
@@ -143,8 +167,18 @@ const config = {
           fontFamily: "mulish",
         },
       },
+      docs: {
+        sidebar: {
+          autoCollapseCategories: true, // Collapse sidebar categories when opening a new one
+        },
+      },
+      // Allow markdown to use `h2` to `h4` so that up to 3 headings are shown in the table of contents
+      tableOfContents: {
+        minHeadingLevel: 2,
+        maxHeadingLevel: 4,
+      },
       navbar: {
-        hideOnScroll: true,
+        hideOnScroll: false,
         title: "",
         logo: {
           alt: "Tableland logo",
@@ -160,23 +194,37 @@ const config = {
             position: "left",
             label: "Template",
           },
-          { to: "/blog", label: "Blog", position: "left" },
+          // {
+          //   label: "Specs",
+          //   position: "left",
+          //   items: [
+          //     {
+          //       to: "docs/specs/sql/overview",
+          //       label: "SQL Specification",
+          //       // activeBasePath: "specs/data-types",
+          //     },
+          //     {
+          //       to: "specs/sql/DataTypes",
+          //       label: "Contribute to asdf",
+          //       // activeBasePath: "specs/dtypes",
+          //     },
+          //   ],
+          // },
+          {
+            href: "https://dev.tableland.xyz",
+            position: "right",
+            label: "Tech Blog",
+            target: "_blank",
+            rel: null,
+          },
           {
             label: "Community",
             position: "right",
             items: [
               {
                 to: "docs/contribute/guidelines/",
-                label: "Contribute to Wiki",
-                target: "_blank",
-                rel: null,
-                activeBasePath: "docs/contribute",
-              },
-              {
-                href: "https://github.com/tablelandnetwork/docs",
                 label: "Contribute",
-                target: "_blank",
-                rel: null,
+                activeBasePath: "docs/contribute",
               },
               {
                 href: "https://discord.com/invite/dc8EBEhGbg",
@@ -200,8 +248,9 @@ const config = {
           },
           {
             href: "https://github.com/tablelandnetwork/",
-            label: "GitHub",
             position: "right",
+            className: "header-github-link",
+            "aria-label": "GitHub repository",
           },
           {
             type: "search",
@@ -248,7 +297,7 @@ const config = {
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} Tableland Network.`,
+        copyright: `Copyright © ${new Date().getFullYear()} Tableland Network`,
       },
       prism: {
         theme: lightCodeTheme,
@@ -256,35 +305,29 @@ const config = {
         defaultLanguage: "javascript",
         additionalLanguages: ["solidity"],
         magicComments: [
-          // Remember to extend the default highlight class name as well!
+          // Default class for syntax highlighting in a code block, e.g., `// highlight-next-line`
           {
             className: "theme-code-block-highlighted-line",
             line: "highlight-next-line",
             block: { start: "highlight-start", end: "highlight-end" },
           },
-          // highlight-start
+          // Custom class used to highlight errors, for code block syntax highlighting
           {
             className: "code-block-error-line",
             line: "error",
           },
-          // highlight-end
         ],
       },
-
       colorMode: {
         defaultMode: "light",
         disableSwitch: false,
         respectPrefersColorScheme: true,
       },
+      // Announcement bar is upon visiting the site and removed if the user closes it out (tracked in local storage)
       announcementBar: {
         id: "announcementBar-0", // Increment on change
         content: `Give Tableland a ⭐️ on <a target="_blank" rel="noopener noreferrer" href="https://github.com/tablelandnetwork">GitHub</a> and follow us on <a target="_blank" rel="noopener noreferrer" href="https://twitter.com/tableland__" >Twitter</a>`,
         isCloseable: true,
-      },
-      docs: {
-        sidebar: {
-          hideable: true,
-        },
       },
       liveCodeBlock: {
         /**

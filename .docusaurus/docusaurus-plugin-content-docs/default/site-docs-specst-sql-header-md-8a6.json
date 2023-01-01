@@ -1,0 +1,27 @@
+{
+  "unversionedId": "specst/sql/Header",
+  "id": "specst/sql/Header",
+  "title": "Tableland SQL Language Specification",
+  "description": "stable",
+  "source": "@site/docs/specst/sql/Header.md",
+  "sourceDirName": "specst/sql",
+  "slug": "/specst/sql/Header",
+  "permalink": "/docs/specst/sql/Header",
+  "draft": false,
+  "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/specst/sql/Header.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Encoding",
+    "permalink": "/docs/specst/sql/Encoding"
+  },
+  "next": {
+    "title": "Statement Types",
+    "permalink": "/docs/specst/sql/StatementTypes"
+  }
+}

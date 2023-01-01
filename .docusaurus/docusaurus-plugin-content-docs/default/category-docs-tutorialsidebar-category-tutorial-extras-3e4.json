@@ -4,8 +4,8 @@
   "permalink": "/docs/category/tutorial---extras",
   "navigation": {
     "previous": {
-      "title": "Congratulations!",
-      "permalink": "/docs/autogen-examples/tutorial-basics/congratulations"
+      "title": "Tutorial Intro",
+      "permalink": "/docs/autogen-examples/intro"
     },
     "next": {
       "title": "Manage Docs Versions",

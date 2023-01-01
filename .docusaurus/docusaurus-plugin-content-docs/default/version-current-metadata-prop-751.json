@@ -29,7 +29,7 @@
           },
           {
             "type": "category",
-            "label": "Tutorial - Basics",
+            "label": "tutorial-basics",
             "collapsible": true,
             "collapsed": true,
             "items": [
@@ -69,12 +69,11 @@
                 "href": "/docs/autogen-examples/tutorial-basics/congratulations",
                 "docId": "autogen-examples/tutorial-basics/congratulations"
               }
-            ],
-            "href": "/docs/category/tutorial---basics"
+            ]
           },
           {
             "type": "category",
-            "label": "Tutorial - Extras",
+            "label": "tutorial-extras",
             "collapsible": true,
             "collapsed": true,
             "items": [
@@ -90,8 +89,7 @@
                 "href": "/docs/autogen-examples/tutorial-extras/translate-your-site",
                 "docId": "autogen-examples/tutorial-extras/translate-your-site"
               }
-            ],
-            "href": "/docs/category/tutorial---extras"
+            ]
           }
         ]
       },
@@ -186,7 +184,7 @@
     },
     "template": {
       "id": "template",
-      "title": "Example Page Title",
+      "title": "template",
       "description": "Example description.",
       "sidebar": "tutorialSidebar"
     }

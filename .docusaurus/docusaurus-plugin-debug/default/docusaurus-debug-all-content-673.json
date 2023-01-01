@@ -45,8 +45,8 @@
                 "permalink": "/docs/template"
               },
               "next": {
-                "title": "Tutorial - Basics",
-                "permalink": "/docs/category/tutorial---basics"
+                "title": "Create a Page",
+                "permalink": "/docs/autogen-examples/tutorial-basics/create-a-page"
               }
             },
             {
@@ -75,8 +75,8 @@
                 "permalink": "/docs/autogen-examples/tutorial-basics/deploy-your-site"
               },
               "next": {
-                "title": "Tutorial - Extras",
-                "permalink": "/docs/category/tutorial---extras"
+                "title": "Manage Docs Versions",
+                "permalink": "/docs/autogen-examples/tutorial-extras/manage-docs-versions"
               }
             },
             {
@@ -162,8 +162,8 @@
               },
               "sidebar": "tutorialSidebar",
               "previous": {
-                "title": "Tutorial - Basics",
-                "permalink": "/docs/category/tutorial---basics"
+                "title": "Tutorial Intro",
+                "permalink": "/docs/autogen-examples/intro"
               },
               "next": {
                 "title": "Create a Document",
@@ -252,8 +252,8 @@
               },
               "sidebar": "tutorialSidebar",
               "previous": {
-                "title": "Tutorial - Extras",
-                "permalink": "/docs/category/tutorial---extras"
+                "title": "Congratulations!",
+                "permalink": "/docs/autogen-examples/tutorial-basics/congratulations"
               },
               "next": {
                 "title": "Translate your site",
@@ -372,16 +372,12 @@
               "previous": {
                 "title": "Contributor guidelines",
                 "permalink": "/docs/contribute/guidelines"
-              },
-              "next": {
-                "title": "test",
-                "permalink": "/docs/test/"
               }
             },
             {
               "unversionedId": "template",
               "id": "template",
-              "title": "Example Page Title",
+              "title": "template",
               "description": "Example description.",
               "source": "@site/docs/template.md",
               "sourceDirName": ".",
@@ -398,7 +394,6 @@
               "frontMatter": {
                 "id": "template",
                 "sidebar_position": 1,
-                "title": "Example Page Title",
                 "sidebar_label": "Page Title",
                 "description": "Example description.",
                 "keywords": [
@@ -411,29 +406,6 @@
               "next": {
                 "title": "Tutorial Intro",
                 "permalink": "/docs/autogen-examples/intro"
-              }
-            },
-            {
-              "unversionedId": "test/test",
-              "id": "test/test",
-              "title": "test",
-              "description": "SQL Spec Data Types",
-              "source": "@site/docs/test/test.md",
-              "sourceDirName": "test",
-              "slug": "/test/",
-              "permalink": "/docs/test/",
-              "draft": false,
-              "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/test/test.md",
-              "tags": [],
-              "version": "current",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
-              "formattedLastUpdatedAt": "Oct 14, 2018",
-              "frontMatter": {},
-              "sidebar": "tutorialSidebar",
-              "previous": {
-                "title": "Maintainers",
-                "permalink": "/docs/contribute/maintainers"
               }
             }
           ],
@@ -457,7 +429,7 @@
                   },
                   {
                     "type": "category",
-                    "label": "Tutorial - Basics",
+                    "label": "tutorial-basics",
                     "collapsible": true,
                     "collapsed": true,
                     "items": [
@@ -485,17 +457,11 @@
                         "type": "doc",
                         "id": "autogen-examples/tutorial-basics/congratulations"
                       }
-                    ],
-                    "link": {
-                      "type": "generated-index",
-                      "description": "5 minutes to learn the most important Docusaurus concepts.",
-                      "slug": "/category/tutorial---basics",
-                      "permalink": "/docs/category/tutorial---basics"
-                    }
+                    ]
                   },
                   {
                     "type": "category",
-                    "label": "Tutorial - Extras",
+                    "label": "tutorial-extras",
                     "collapsible": true,
                     "collapsed": true,
                     "items": [
@@ -507,12 +473,7 @@
                         "type": "doc",
                         "id": "autogen-examples/tutorial-extras/translate-your-site"
                       }
-                    ],
-                    "link": {
-                      "type": "generated-index",
-                      "slug": "/category/tutorial---extras",
-                      "permalink": "/docs/category/tutorial---extras"
-                    }
+                    ]
                   }
                 ]
               },
@@ -533,11 +494,6 @@
                     "label": "Maintainers"
                   }
                 ]
-              },
-              {
-                "type": "doc",
-                "label": "test",
-                "id": "test/test"
               }
             ]
           }

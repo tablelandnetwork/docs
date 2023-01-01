@@ -1,0 +1,224 @@
+{
+  "type": "api",
+  "id": "get-table-information",
+  "unversionedId": "get-table-information",
+  "title": "Get table information",
+  "description": "",
+  "slug": "/get-table-information",
+  "frontMatter": {},
+  "api": {
+    "tags": [
+      "tables"
+    ],
+    "description": "Returns information about a single table, including schema information",
+    "operationId": "getTableById",
+    "parameters": [
+      {
+        "name": "chainId",
+        "in": "path",
+        "description": "The parent chain to target",
+        "required": true,
+        "schema": {
+          "type": "integer",
+          "format": "int32"
+        }
+      },
+      {
+        "name": "tableId",
+        "in": "path",
+        "description": "Table identifier",
+        "required": true,
+        "schema": {
+          "type": "integer",
+          "format": "int64"
+        }
+      }
+    ],
+    "responses": {
+      "200": {
+        "description": "successful operation",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string",
+                  "example": "healthbot_5_1"
+                },
+                "external_url": {
+                  "type": "string",
+                  "example": "https://testnet.tableland.network/tables/healthbot_5_1"
+                },
+                "animation_url": {
+                  "type": "string",
+                  "example": "https://render.tableland.xyz/anim/?chain=1&id=1"
+                },
+                "image": {
+                  "type": "string",
+                  "example": "https://render.tableland.xyz/healthbot_5_1"
+                },
+                "attributes": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "display_type": {
+                        "type": "string",
+                        "description": "The display type for marketplaces"
+                      },
+                      "trait_type": {
+                        "type": "string",
+                        "description": "The trait type for marketplaces"
+                      },
+                      "value": {
+                        "description": "The value of the property",
+                        "type": "object",
+                        "oneOf": [
+                          {
+                            "type": "string"
+                          },
+                          {
+                            "type": "number"
+                          },
+                          {
+                            "type": "integer"
+                          },
+                          {
+                            "type": "boolean"
+                          },
+                          {
+                            "type": "object"
+                          }
+                        ]
+                      }
+                    }
+                  },
+                  "example": {
+                    "display_type": "date",
+                    "trait_type": "created",
+                    "value": 1657113720
+                  }
+                },
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "columns": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "name": {
+                            "type": "string",
+                            "example": "id"
+                          },
+                          "type": {
+                            "type": "string",
+                            "example": "integer"
+                          },
+                          "constraints": {
+                            "type": "array",
+                            "items": {
+                              "type": "string"
+                            },
+                            "example": [
+                              "NOT NULL",
+                              "PRIMARY KEY",
+                              "UNIQUE"
+                            ]
+                          }
+                        }
+                      }
+                    },
+                    "table_constraints": {
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      },
+                      "example": [
+                        "PRIMARY KEY (id)"
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "400": {
+        "description": "Invalid chain or table identifier"
+      },
+      "404": {
+        "description": "Table not found"
+      }
+    },
+    "method": "get",
+    "path": "/tables/{chainId}/{tableId}",
+    "servers": [
+      {
+        "url": "https://testnets.tableland.network/api/v1"
+      }
+    ],
+    "info": {
+      "title": "Tableland Validator - OpenAPI 3.0",
+      "description": "In Tableland, Validators are the execution unit/actors of the protocol.\nThey have the following responsibilities:\n- Listen to on-chain events to materialize Tableland-compliant SQL queries in a database engine (currently, SQLite by default).\n- Serve read-queries (e.g: SELECT * FROM foo_69_1) to the external world.\n- Serve state queries (e.g. list tables, get receipts, etc) to the external world.\n\nIn the 1.0.0 release of the Tableland Validator API, we've switched to a design first approach!\nYou can now help us improve the API whether it's by making changes to the definition itself or to the code.\nThat way, with time, we can improve the API in general, and expose some of the new features in OAS3.",
+      "termsOfService": "http://docs.tableland.xyz",
+      "contact": {
+        "name": "core devs",
+        "email": "carson@textile.io"
+      },
+      "license": {
+        "name": "Apache 2.0",
+        "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
+      },
+      "version": "1.0.0"
+    },
+    "postman": {
+      "name": "Get table information",
+      "description": {
+        "content": "Returns information about a single table, including schema information",
+        "type": "text/plain"
+      },
+      "url": {
+        "path": [
+          "tables",
+          ":chainId",
+          ":tableId"
+        ],
+        "host": [
+          "{{baseUrl}}"
+        ],
+        "query": [],
+        "variable": [
+          {
+            "description": {
+              "content": "(Required) The parent chain to target",
+              "type": "text/plain"
+            },
+            "type": "any",
+            "value": "<integer>",
+            "key": "chainId"
+          },
+          {
+            "description": {
+              "content": "(Required) Table identifier",
+              "type": "text/plain"
+            },
+            "type": "any",
+            "value": "<long>",
+            "key": "tableId"
+          }
+        ]
+      },
+      "method": "GET"
+    }
+  },
+  "source": "@site/specs/validator/tableland-openapi-spec.yaml",
+  "sourceDirName": ".",
+  "permalink": "/docs/validator/get-table-information",
+  "previous": {
+    "title": "Get transaction status",
+    "permalink": "/docs/validator/get-transaction-status"
+  }
+}
