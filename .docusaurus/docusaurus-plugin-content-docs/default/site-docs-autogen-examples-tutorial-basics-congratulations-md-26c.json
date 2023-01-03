@@ -6,7 +6,7 @@
   "source": "@site/docs/autogen-examples/tutorial-basics/congratulations.md",
   "sourceDirName": "autogen-examples/tutorial-basics",
   "slug": "/autogen-examples/tutorial-basics/congratulations",
-  "permalink": "/docs/autogen-examples/tutorial-basics/congratulations",
+  "permalink": "/autogen-examples/tutorial-basics/congratulations",
   "draft": false,
   "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/autogen-examples/tutorial-basics/congratulations.md",
   "tags": [],
@@ -17,14 +17,5 @@
   "sidebarPosition": 6,
   "frontMatter": {
     "sidebar_position": 6
-  },
-  "sidebar": "tutorialSidebar",
-  "previous": {
-    "title": "Deploy your site",
-    "permalink": "/docs/autogen-examples/tutorial-basics/deploy-your-site"
-  },
-  "next": {
-    "title": "Manage Docs Versions",
-    "permalink": "/docs/autogen-examples/tutorial-extras/manage-docs-versions"
   }
 }

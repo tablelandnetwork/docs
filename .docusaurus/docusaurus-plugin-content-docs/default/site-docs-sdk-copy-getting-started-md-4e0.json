@@ -1,0 +1,26 @@
+{
+  "unversionedId": "sdk copy/getting-started",
+  "id": "sdk copy/getting-started",
+  "title": "Getting started",
+  "description": "Get up an running with the Tableland SDK.",
+  "source": "@site/docs/sdk copy/getting-started.md",
+  "sourceDirName": "sdk copy",
+  "slug": "/sdk copy/getting-started",
+  "permalink": "/sdk copy/getting-started",
+  "draft": false,
+  "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/sdk copy/getting-started.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "title": "Getting started",
+    "description": "Get up an running with the Tableland SDK.",
+    "synopsis": "Dive into the basics for connecting, creating, writing, and reading from tables. More detailed information is provided in subsequent overviews, but the details provided here should allow developers to quickly understand where to start.",
+    "keywords": [
+      "SQL query",
+      "Tableland SDK"
+    ]
+  }
+}

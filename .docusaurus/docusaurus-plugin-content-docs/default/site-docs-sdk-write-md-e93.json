@@ -1,0 +1,35 @@
+{
+  "unversionedId": "sdk/write",
+  "id": "sdk/write",
+  "title": "Writing to tables",
+  "description": "Mutate your table values with additional access control.",
+  "source": "@site/docs/sdk/write.md",
+  "sourceDirName": "sdk",
+  "slug": "/sdk/write",
+  "permalink": "/sdk/write",
+  "draft": false,
+  "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/sdk/write.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "title": "Writing to tables",
+    "description": "Mutate your table values with additional access control.",
+    "synopsis": "Table values can be mutated by the table owner or provisioned actors.",
+    "keywords": [
+      "write to table",
+      "mutate table"
+    ]
+  },
+  "sidebar": "sdk",
+  "previous": {
+    "title": "Creating tables",
+    "permalink": "/sdk/create"
+  },
+  "next": {
+    "title": "Reading tables",
+    "permalink": "/sdk/read"
+  }
+}

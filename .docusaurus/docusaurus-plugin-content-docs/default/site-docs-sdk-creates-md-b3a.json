@@ -1,0 +1,27 @@
+{
+  "unversionedId": "sdk/creates",
+  "id": "sdk/creates",
+  "title": "creates",
+  "description": "",
+  "source": "@site/docs/sdk/creates.md",
+  "sourceDirName": "sdk",
+  "slug": "/sdk/creates",
+  "permalink": "/sdk/creates",
+  "draft": false,
+  "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/sdk/creates.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Style guide",
+    "permalink": "/contribute/style-guide"
+  },
+  "next": {
+    "title": "getting-started",
+    "permalink": "/sdk/getting-started"
+  }
+}

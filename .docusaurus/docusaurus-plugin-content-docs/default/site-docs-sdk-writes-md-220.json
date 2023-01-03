@@ -1,0 +1,27 @@
+{
+  "unversionedId": "sdk/writes",
+  "id": "sdk/writes",
+  "title": "writes",
+  "description": "",
+  "source": "@site/docs/sdk/writes.md",
+  "sourceDirName": "sdk",
+  "slug": "/sdk/writes",
+  "permalink": "/sdk/writes",
+  "draft": false,
+  "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/sdk/writes.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "read",
+    "permalink": "/sdk/read"
+  },
+  "next": {
+    "title": "SQL Specification",
+    "permalink": "/sql/sql-specs"
+  }
+}

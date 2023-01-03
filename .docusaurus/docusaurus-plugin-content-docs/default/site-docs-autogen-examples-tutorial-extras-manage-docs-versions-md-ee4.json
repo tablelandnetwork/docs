@@ -6,7 +6,7 @@
   "source": "@site/docs/autogen-examples/tutorial-extras/manage-docs-versions.md",
   "sourceDirName": "autogen-examples/tutorial-extras",
   "slug": "/autogen-examples/tutorial-extras/manage-docs-versions",
-  "permalink": "/docs/autogen-examples/tutorial-extras/manage-docs-versions",
+  "permalink": "/autogen-examples/tutorial-extras/manage-docs-versions",
   "draft": false,
   "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/autogen-examples/tutorial-extras/manage-docs-versions.md",
   "tags": [],
@@ -17,14 +17,5 @@
   "sidebarPosition": 1,
   "frontMatter": {
     "sidebar_position": 1
-  },
-  "sidebar": "tutorialSidebar",
-  "previous": {
-    "title": "Congratulations!",
-    "permalink": "/docs/autogen-examples/tutorial-basics/congratulations"
-  },
-  "next": {
-    "title": "Translate your site",
-    "permalink": "/docs/autogen-examples/tutorial-extras/translate-your-site"
   }
 }

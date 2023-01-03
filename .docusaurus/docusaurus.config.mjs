@@ -51,6 +51,7 @@ export default {
       {
         "docs": {
           "sidebarPath": "./sidebars.js",
+          "routeBasePath": "/",
           "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/",
           "showLastUpdateTime": true,
           "breadcrumbs": true,
@@ -124,7 +125,7 @@ export default {
     "docs": {
       "sidebar": {
         "autoCollapseCategories": true,
-        "hideable": false
+        "hideable": true
       },
       "versionPersistence": "localStorage"
     },
@@ -145,9 +146,53 @@ export default {
       "items": [
         {
           "type": "doc",
-          "docId": "template",
+          "docId": "/category/cli",
           "position": "left",
-          "label": "Template"
+          "label": "CLI"
+        },
+        {
+          "type": "doc",
+          "docId": "/category/smart-contracts",
+          "position": "left",
+          "label": "Smart contracts"
+        },
+        {
+          "type": "doc",
+          "docId": "/category/protocol",
+          "position": "left",
+          "label": "Protocol"
+        },
+        {
+          "label": "Learn",
+          "position": "left",
+          "items": [
+            {
+              "to": "/learn/tableland/what-is-tableland",
+              "label": "Tableland"
+            },
+            {
+              "to": "/learn/sql/what-is-sql",
+              "label": "SQL"
+            },
+            {
+              "to": "/learn/blockchain/what-is-blockchain",
+              "label": "Blockchain"
+            }
+          ]
+        },
+        {
+          "label": "Specs",
+          "position": "left",
+          "items": [
+            {
+              "to": "/sql/sql-spec",
+              "label": "SQL"
+            },
+            {
+              "to": "/protocol/validator-spec",
+              "label": "Validator"
+            }
+          ]
         },
         {
           "href": "https://dev.tableland.xyz",
@@ -161,9 +206,8 @@ export default {
           "position": "right",
           "items": [
             {
-              "to": "docs/contribute/guidelines/",
-              "label": "Contribute",
-              "activeBasePath": "docs/contribute"
+              "to": "contribute/guidelines/",
+              "label": "Contribute"
             },
             {
               "href": "https://discord.com/invite/dc8EBEhGbg",
@@ -174,6 +218,12 @@ export default {
             {
               "href": "https://twitter.com/tableland__",
               "label": "Twitter",
+              "target": "_blank",
+              "rel": null
+            },
+            {
+              "href": "https://tableland.xyz/pilot-program/",
+              "label": "Pilot Program",
               "target": "_blank",
               "rel": null
             },
@@ -201,11 +251,31 @@ export default {
       "style": "dark",
       "links": [
         {
-          "title": "Docs",
+          "title": "Developers",
           "items": [
             {
-              "label": "Template",
-              "to": "/docs/template"
+              "to": "/category/sdk",
+              "label": "SDK"
+            },
+            {
+              "to": "/category/cli",
+              "label": "CLI"
+            },
+            {
+              "to": "/category/smart-contracts",
+              "label": "Smart contracts"
+            },
+            {
+              "to": "/category/protocol",
+              "label": "Protocol"
+            },
+            {
+              "to": "/sql/sql-spec",
+              "label": "SQL spec"
+            },
+            {
+              "to": "/protocol/validator-spec",
+              "label": "Validator spec"
             }
           ]
         },
@@ -213,25 +283,63 @@ export default {
           "title": "Community",
           "items": [
             {
-              "label": "Discord",
-              "href": "https://discord.com/invite/dc8EBEhGbg"
+              "to": "contribute/guidelines/",
+              "label": "Contribute"
             },
             {
+              "href": "https://discord.com/invite/dc8EBEhGbg",
+              "label": "Discord",
+              "target": "_blank",
+              "rel": null
+            },
+            {
+              "href": "https://twitter.com/tableland__",
               "label": "Twitter",
-              "href": "https://twitter.com/tableland__"
+              "target": "_blank",
+              "rel": null
+            },
+            {
+              "href": "https://tableland.xyz/pilot-program/",
+              "position": "right",
+              "label": "Pilot Program",
+              "target": "_blank",
+              "rel": null
+            },
+            {
+              "href": "https://dev.tableland.xyz/showcase/",
+              "label": "Showcase",
+              "target": "_blank",
+              "rel": null
             }
           ]
         },
         {
-          "title": "More",
+          "title": "Company",
           "items": [
             {
-              "label": "Blog",
-              "to": "/blog"
+              "href": "https://tableland.xyz",
+              "position": "right",
+              "label": "Main site",
+              "target": "_blank",
+              "rel": null
+            },
+            {
+              "href": "https://dev.tableland.xyz",
+              "position": "right",
+              "label": "Tech Blog",
+              "target": "_blank",
+              "rel": null
             },
             {
               "label": "GitHub",
-              "href": "https://github.com/tablelandnetwork/docs"
+              "href": "https://github.com/tablelandnetwork/"
+            },
+            {
+              "href": "https://linktr.ee/textileio",
+              "position": "right",
+              "label": "Team",
+              "target": "_blank",
+              "rel": null
             }
           ]
         }

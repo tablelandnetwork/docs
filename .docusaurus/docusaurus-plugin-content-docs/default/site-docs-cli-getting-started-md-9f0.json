@@ -1,0 +1,35 @@
+{
+  "unversionedId": "cli/getting-started",
+  "id": "cli/getting-started",
+  "title": "Getting started",
+  "description": "Get up an running with the Tableland SDK.",
+  "source": "@site/docs/cli/getting-started.md",
+  "sourceDirName": "cli",
+  "slug": "/cli/getting-started",
+  "permalink": "/cli/getting-started",
+  "draft": false,
+  "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/cli/getting-started.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "title": "Getting started",
+    "description": "Get up an running with the Tableland SDK.",
+    "synopsis": "Dive into the basics for connecting, creating, writing, and reading from tables. More detailed information is provided in subsequent overviews, but the details provided here should allow developers to quickly understand where to start.",
+    "keywords": [
+      "SQL query",
+      "Tableland SDK"
+    ]
+  },
+  "sidebar": "cli",
+  "previous": {
+    "title": "CLI",
+    "permalink": "/category/cli"
+  },
+  "next": {
+    "title": "Connecting to Tableland",
+    "permalink": "/cli/connect"
+  }
+}

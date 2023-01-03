@@ -1,0 +1,11 @@
+{
+  "title": "SDK",
+  "slug": "/category/sdk",
+  "permalink": "/category/sdk",
+  "navigation": {
+    "next": {
+      "title": "Getting started",
+      "permalink": "/sdk/getting-started"
+    }
+  }
+}

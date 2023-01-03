@@ -179,20 +179,6 @@
     "sidebar": "sidebar---blog-814-8ac",
     "content": "content---blog-welcomed-9-f-ffb"
   },
-  "/docs/tags-e17": {
-    "__comp": "__comp---theme-doc-tags-list-page-372-89e",
-    "__context": {
-      "plugin": "plugin---docs-tags-54-b-ee4"
-    },
-    "tags": "tags---docs-tags-559-5e5"
-  },
-  "/docs/tags/contributing-4ae": {
-    "__comp": "__comp---theme-doc-tag-doc-list-pagedf-2-9f0",
-    "__context": {
-      "plugin": "plugin---docs-tags-54-b-ee4"
-    },
-    "tag": "tag---docs-tags-contributing-7-dd-6ef"
-  },
   "/markdown-page-277": {
     "__comp": "__comp---theme-mdx-page-1-f-3-b90",
     "__context": {
@@ -206,60 +192,19 @@
       "plugin": "plugin---search-700-07c"
     }
   },
-  "/docs-b15": {
-    "__comp": "__comp---theme-doc-page-1-be-9be",
+  "/tags-5f1": {
+    "__comp": "__comp---theme-doc-tags-list-page-372-89e",
     "__context": {
-      "plugin": "plugin---docs-tags-54-b-ee4"
+      "plugin": "plugin---tags-54-b-0a7"
     },
-    "versionMetadata": "versionMetadata---docs-935-398"
+    "tags": "tags---tags-559-690"
   },
-  "/docs/autogen-examples/intro-903": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-autogen-examples-introa-9-a-36e"
-  },
-  "/docs/autogen-examples/tutorial-basics/congratulations-e69": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-autogen-examples-tutorial-basics-congratulations-26-c-4f4"
-  },
-  "/docs/autogen-examples/tutorial-basics/create-a-blog-post-488": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-autogen-examples-tutorial-basics-create-a-blog-postdd-1-7cb"
-  },
-  "/docs/autogen-examples/tutorial-basics/create-a-document-a6f": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-autogen-examples-tutorial-basics-create-a-document-10-a-5c4"
-  },
-  "/docs/autogen-examples/tutorial-basics/create-a-page-eb4": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-autogen-examples-tutorial-basics-create-a-pagedc-5-f38"
-  },
-  "/docs/autogen-examples/tutorial-basics/deploy-your-site-f0b": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-autogen-examples-tutorial-basics-deploy-your-site-817-fd2"
-  },
-  "/docs/autogen-examples/tutorial-basics/markdown-features-f34": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-autogen-examples-tutorial-basics-markdown-featuresd-7-e-52a"
-  },
-  "/docs/autogen-examples/tutorial-extras/manage-docs-versions-54e": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-autogen-examples-tutorial-extras-manage-docs-versionsee-4-b98"
-  },
-  "/docs/autogen-examples/tutorial-extras/translate-your-site-164": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-autogen-examples-tutorial-extras-translate-your-site-4-ba-8b5"
-  },
-  "/docs/contribute/guidelines-8b8": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-contribute-guidelinesa-6-f-a65"
-  },
-  "/docs/contribute/maintainers-900": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-contribute-maintainers-4-f-9-4b0"
-  },
-  "/docs/template-df8": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-templatefcd-6df"
+  "/tags/contributing-298": {
+    "__comp": "__comp---theme-doc-tag-doc-list-pagedf-2-9f0",
+    "__context": {
+      "plugin": "plugin---tags-54-b-0a7"
+    },
+    "tag": "tag---tags-contributing-9-d-7-88b"
   },
   "/-c40": {
     "__comp": "__comp---site-src-pages-index-tsx-1-df-d3e",
@@ -267,5 +212,148 @@
       "plugin": "plugin---markdown-page-44-e-840"
     },
     "config": "config---5-e-9-4f3"
+  },
+  "/-7fd": {
+    "__comp": "__comp---theme-doc-page-1-be-9be",
+    "__context": {
+      "plugin": "plugin---tags-54-b-0a7"
+    },
+    "versionMetadata": "versionMetadata---935-fcf"
+  },
+  "/category/blockchain-basics-165": {
+    "__comp": "__comp---theme-doc-category-generated-index-page-14-e-640",
+    "categoryGeneratedIndex": "categoryGeneratedIndex---category-blockchain-basics-15-e-2da"
+  },
+  "/category/cli-d70": {
+    "__comp": "__comp---theme-doc-category-generated-index-page-14-e-640",
+    "categoryGeneratedIndex": "categoryGeneratedIndex---category-cli-5-c-5-ce5"
+  },
+  "/category/protocol-160": {
+    "__comp": "__comp---theme-doc-category-generated-index-page-14-e-640",
+    "categoryGeneratedIndex": "categoryGeneratedIndex---category-protocol-0-cc-b10"
+  },
+  "/category/sdk-b13": {
+    "__comp": "__comp---theme-doc-category-generated-index-page-14-e-640",
+    "categoryGeneratedIndex": "categoryGeneratedIndex---category-sdk-814-e59"
+  },
+  "/category/smart-contracts-dc4": {
+    "__comp": "__comp---theme-doc-category-generated-index-page-14-e-640",
+    "categoryGeneratedIndex": "categoryGeneratedIndex---category-smart-contracts-1-b-2-57a"
+  },
+  "/category/sql-5bb": {
+    "__comp": "__comp---theme-doc-category-generated-index-page-14-e-640",
+    "categoryGeneratedIndex": "categoryGeneratedIndex---category-sqla-37-b1e"
+  },
+  "/category/sql-basics-143": {
+    "__comp": "__comp---theme-doc-category-generated-index-page-14-e-640",
+    "categoryGeneratedIndex": "categoryGeneratedIndex---category-sql-basics-9-ac-bcf"
+  },
+  "/category/tableland-basics-f80": {
+    "__comp": "__comp---theme-doc-category-generated-index-page-14-e-640",
+    "categoryGeneratedIndex": "categoryGeneratedIndex---category-tableland-basicsd-4-d-c9c"
+  },
+  "/cli/connect-c53": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---cli-connect-5-bd-f77"
+  },
+  "/cli/create-ff2": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---cli-createece-51c"
+  },
+  "/cli/getting-started-889": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---cli-getting-started-9-f-0-026"
+  },
+  "/cli/overview-fa3": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---cli-overview-2-c-1-786"
+  },
+  "/cli/read-8ae": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---cli-read-9-be-4e7"
+  },
+  "/cli/write-ac5": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---cli-write-346-213"
+  },
+  "/contribute/guidelines-406": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---contribute-guidelinesa-6-f-50f"
+  },
+  "/contribute/maintainers-595": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---contribute-maintainers-4-f-9-3b0"
+  },
+  "/contribute/style-guide-dbc": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---contribute-style-guided-01-728"
+  },
+  "/learn/blockchain/what-is-blockchain-19c": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---learn-blockchain-what-is-blockchaina-33-909"
+  },
+  "/learn/sql/what-is-sql-54f": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---learn-sql-what-is-sql-667-cce"
+  },
+  "/learn/tableland/what-is-tableland-e1a": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---learn-tableland-what-is-tablelandf-00-0d6"
+  },
+  "/protocol/validator-spec-81e": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---protocol-validator-spec-72-c-c80"
+  },
+  "/sdk/connect-de3": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---sdk-connectdb-2-18a"
+  },
+  "/sdk/create-6b0": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---sdk-create-0-b-1-7fd"
+  },
+  "/sdk/getting-started-d33": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---sdk-getting-started-14-b-cc1"
+  },
+  "/sdk/read-876": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---sdk-read-969-efb"
+  },
+  "/sdk/write-7ea": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---sdk-writee-93-ca5"
+  },
+  "/smart-contracts/connect-982": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---smart-contracts-connect-69-b-47b"
+  },
+  "/smart-contracts/create-e3b": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---smart-contracts-create-601-8a3"
+  },
+  "/smart-contracts/getting-started-d70": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---smart-contracts-getting-starteda-60-faf"
+  },
+  "/smart-contracts/overview-eb9": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---smart-contracts-overview-7-da-784"
+  },
+  "/smart-contracts/read-606": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---smart-contracts-read-994-cc0"
+  },
+  "/smart-contracts/write-a6f": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---smart-contracts-write-5-fb-988"
+  },
+  "/sql/sql-spec-4a8": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---sql-sql-speca-7-a-0e2"
+  },
+  "/template-731": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---templatefcd-096"
   }
 }

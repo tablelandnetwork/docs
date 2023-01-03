@@ -6,7 +6,7 @@
   "source": "@site/docs/autogen-examples/tutorial-basics/markdown-features.mdx",
   "sourceDirName": "autogen-examples/tutorial-basics",
   "slug": "/autogen-examples/tutorial-basics/markdown-features",
-  "permalink": "/docs/autogen-examples/tutorial-basics/markdown-features",
+  "permalink": "/autogen-examples/tutorial-basics/markdown-features",
   "draft": false,
   "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/autogen-examples/tutorial-basics/markdown-features.mdx",
   "tags": [],
@@ -17,14 +17,5 @@
   "sidebarPosition": 4,
   "frontMatter": {
     "sidebar_position": 4
-  },
-  "sidebar": "tutorialSidebar",
-  "previous": {
-    "title": "Create a Blog Post",
-    "permalink": "/docs/autogen-examples/tutorial-basics/create-a-blog-post"
-  },
-  "next": {
-    "title": "Deploy your site",
-    "permalink": "/docs/autogen-examples/tutorial-basics/deploy-your-site"
   }
 }

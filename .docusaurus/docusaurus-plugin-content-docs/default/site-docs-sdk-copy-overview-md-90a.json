@@ -1,0 +1,26 @@
+{
+  "unversionedId": "sdk copy/overview",
+  "id": "sdk copy/overview",
+  "title": "Overview",
+  "description": "Openly readable tables by your applications.",
+  "source": "@site/docs/sdk copy/overview.md",
+  "sourceDirName": "sdk copy",
+  "slug": "/sdk copy/overview",
+  "permalink": "/sdk copy/overview",
+  "draft": false,
+  "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/sdk copy/overview.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "title": "Overview",
+    "description": "Openly readable tables by your applications.",
+    "synopsis": "The JavaScript / TypeScript SDK allows developers to create tables on their chain of choice. Connect, create, and then interact with your tables thereafter with table writes and reads.",
+    "keywords": [
+      "SQL query",
+      "Tableland SDK"
+    ]
+  }
+}

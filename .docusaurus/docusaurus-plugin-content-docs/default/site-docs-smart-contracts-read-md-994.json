@@ -1,0 +1,31 @@
+{
+  "unversionedId": "smart-contracts/read",
+  "id": "smart-contracts/read",
+  "title": "Reading tables",
+  "description": "Openly readable tables by your applications.",
+  "source": "@site/docs/smart-contracts/read.md",
+  "sourceDirName": "smart-contracts",
+  "slug": "/smart-contracts/read",
+  "permalink": "/smart-contracts/read",
+  "draft": false,
+  "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/smart-contracts/read.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "title": "Reading tables",
+    "description": "Openly readable tables by your applications.",
+    "synopsis": "Reading from tables is entirely open (for anyone), allowing for true composability. Write SQL qeuries—but with some limitations that are due to the nature of decentralized networks and deterministic requirements.",
+    "keywords": [
+      "write to table",
+      "mutate table"
+    ]
+  },
+  "sidebar": "smartContracts",
+  "previous": {
+    "title": "Writing to tables",
+    "permalink": "/smart-contracts/write"
+  }
+}

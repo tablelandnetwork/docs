@@ -6,7 +6,7 @@
   "source": "@site/docs/autogen-examples/tutorial-basics/deploy-your-site.md",
   "sourceDirName": "autogen-examples/tutorial-basics",
   "slug": "/autogen-examples/tutorial-basics/deploy-your-site",
-  "permalink": "/docs/autogen-examples/tutorial-basics/deploy-your-site",
+  "permalink": "/autogen-examples/tutorial-basics/deploy-your-site",
   "draft": false,
   "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/autogen-examples/tutorial-basics/deploy-your-site.md",
   "tags": [],
@@ -17,14 +17,5 @@
   "sidebarPosition": 5,
   "frontMatter": {
     "sidebar_position": 5
-  },
-  "sidebar": "tutorialSidebar",
-  "previous": {
-    "title": "Markdown Features",
-    "permalink": "/docs/autogen-examples/tutorial-basics/markdown-features"
-  },
-  "next": {
-    "title": "Congratulations!",
-    "permalink": "/docs/autogen-examples/tutorial-basics/congratulations"
   }
 }

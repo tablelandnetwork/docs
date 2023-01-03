@@ -8,185 +8,365 @@
   "className": "docs-version-current",
   "isLast": true,
   "docsSidebars": {
-    "tutorialSidebar": [
-      {
-        "type": "link",
-        "label": "Page Title",
-        "href": "/docs/template",
-        "docId": "template"
-      },
+    "tablelandBasics": [
       {
         "type": "category",
-        "label": "autogen-examples",
-        "collapsible": true,
-        "collapsed": true,
+        "label": "Tableland basics",
         "items": [
           {
             "type": "link",
-            "label": "Tutorial Intro",
-            "href": "/docs/autogen-examples/intro",
-            "docId": "autogen-examples/intro"
-          },
-          {
-            "type": "category",
-            "label": "tutorial-basics",
-            "collapsible": true,
-            "collapsed": true,
-            "items": [
-              {
-                "type": "link",
-                "label": "Create a Page",
-                "href": "/docs/autogen-examples/tutorial-basics/create-a-page",
-                "docId": "autogen-examples/tutorial-basics/create-a-page"
-              },
-              {
-                "type": "link",
-                "label": "Create a Document",
-                "href": "/docs/autogen-examples/tutorial-basics/create-a-document",
-                "docId": "autogen-examples/tutorial-basics/create-a-document"
-              },
-              {
-                "type": "link",
-                "label": "Create a Blog Post",
-                "href": "/docs/autogen-examples/tutorial-basics/create-a-blog-post",
-                "docId": "autogen-examples/tutorial-basics/create-a-blog-post"
-              },
-              {
-                "type": "link",
-                "label": "Markdown Features",
-                "href": "/docs/autogen-examples/tutorial-basics/markdown-features",
-                "docId": "autogen-examples/tutorial-basics/markdown-features"
-              },
-              {
-                "type": "link",
-                "label": "Deploy your site",
-                "href": "/docs/autogen-examples/tutorial-basics/deploy-your-site",
-                "docId": "autogen-examples/tutorial-basics/deploy-your-site"
-              },
-              {
-                "type": "link",
-                "label": "Congratulations!",
-                "href": "/docs/autogen-examples/tutorial-basics/congratulations",
-                "docId": "autogen-examples/tutorial-basics/congratulations"
-              }
-            ]
-          },
-          {
-            "type": "category",
-            "label": "tutorial-extras",
-            "collapsible": true,
-            "collapsed": true,
-            "items": [
-              {
-                "type": "link",
-                "label": "Manage Docs Versions",
-                "href": "/docs/autogen-examples/tutorial-extras/manage-docs-versions",
-                "docId": "autogen-examples/tutorial-extras/manage-docs-versions"
-              },
-              {
-                "type": "link",
-                "label": "Translate your site",
-                "href": "/docs/autogen-examples/tutorial-extras/translate-your-site",
-                "docId": "autogen-examples/tutorial-extras/translate-your-site"
-              }
-            ]
+            "label": "What is Tableland",
+            "href": "/learn/tableland/what-is-tableland",
+            "docId": "learn/tableland/what-is-tableland"
           }
-        ]
-      },
+        ],
+        "collapsed": true,
+        "collapsible": true,
+        "href": "/category/tableland-basics"
+      }
+    ],
+    "sqlBasics": [
       {
         "type": "category",
-        "label": "contribute",
-        "collapsible": true,
-        "collapsed": true,
+        "label": "SQL basics",
         "items": [
           {
             "type": "link",
-            "label": "Contributor guidelines",
-            "href": "/docs/contribute/guidelines",
-            "docId": "contribute/guidelines"
+            "label": "What is SQL",
+            "href": "/learn/sql/what-is-sql",
+            "docId": "learn/sql/what-is-sql"
+          }
+        ],
+        "collapsed": true,
+        "collapsible": true,
+        "href": "/category/sql-basics"
+      }
+    ],
+    "blockchainBasics": [
+      {
+        "type": "category",
+        "label": "Blockchain basics",
+        "items": [
+          {
+            "type": "link",
+            "label": "What is blockchain",
+            "href": "/learn/blockchain/what-is-blockchain",
+            "docId": "learn/blockchain/what-is-blockchain"
+          }
+        ],
+        "collapsed": true,
+        "collapsible": true,
+        "href": "/category/blockchain-basics"
+      }
+    ],
+    "sdk": [
+      {
+        "type": "category",
+        "label": "SDK",
+        "items": [
+          {
+            "type": "link",
+            "label": "Getting started",
+            "href": "/sdk/getting-started",
+            "docId": "sdk/getting-started"
           },
           {
             "type": "link",
-            "label": "Maintainers",
-            "href": "/docs/contribute/maintainers",
-            "docId": "contribute/maintainers"
+            "label": "Connecting to Tableland",
+            "href": "/sdk/connect",
+            "docId": "sdk/connect"
+          },
+          {
+            "type": "link",
+            "label": "Creating tables",
+            "href": "/sdk/create",
+            "docId": "sdk/create"
+          },
+          {
+            "type": "link",
+            "label": "Writing to tables",
+            "href": "/sdk/write",
+            "docId": "sdk/write"
+          },
+          {
+            "type": "link",
+            "label": "Reading tables",
+            "href": "/sdk/read",
+            "docId": "sdk/read"
           }
-        ]
+        ],
+        "collapsed": true,
+        "collapsible": true,
+        "href": "/category/sdk"
+      }
+    ],
+    "cli": [
+      {
+        "type": "category",
+        "label": "CLI",
+        "items": [
+          {
+            "type": "link",
+            "label": "Getting started",
+            "href": "/cli/getting-started",
+            "docId": "cli/getting-started"
+          },
+          {
+            "type": "link",
+            "label": "Connecting to Tableland",
+            "href": "/cli/connect",
+            "docId": "cli/connect"
+          },
+          {
+            "type": "link",
+            "label": "Creating tables",
+            "href": "/cli/create",
+            "docId": "cli/create"
+          },
+          {
+            "type": "link",
+            "label": "Writing to tables",
+            "href": "/cli/write",
+            "docId": "cli/write"
+          },
+          {
+            "type": "link",
+            "label": "Reading tables",
+            "href": "/cli/read",
+            "docId": "cli/read"
+          }
+        ],
+        "collapsed": true,
+        "collapsible": true,
+        "href": "/category/cli"
+      }
+    ],
+    "smartContracts": [
+      {
+        "type": "category",
+        "label": "Smart contracts",
+        "items": [
+          {
+            "type": "link",
+            "label": "Getting started",
+            "href": "/smart-contracts/getting-started",
+            "docId": "smart-contracts/getting-started"
+          },
+          {
+            "type": "link",
+            "label": "Connecting to Tableland",
+            "href": "/smart-contracts/connect",
+            "docId": "smart-contracts/connect"
+          },
+          {
+            "type": "link",
+            "label": "Creating tables",
+            "href": "/smart-contracts/create",
+            "docId": "smart-contracts/create"
+          },
+          {
+            "type": "link",
+            "label": "Writing to tables",
+            "href": "/smart-contracts/write",
+            "docId": "smart-contracts/write"
+          },
+          {
+            "type": "link",
+            "label": "Reading tables",
+            "href": "/smart-contracts/read",
+            "docId": "smart-contracts/read"
+          }
+        ],
+        "collapsed": true,
+        "collapsible": true,
+        "href": "/category/smart-contracts"
+      }
+    ],
+    "sql": [
+      {
+        "type": "category",
+        "label": "SQL",
+        "items": [
+          {
+            "type": "link",
+            "label": "SQL specification",
+            "href": "/sql/sql-spec",
+            "docId": "sql/sql-spec"
+          }
+        ],
+        "collapsed": true,
+        "collapsible": true,
+        "href": "/category/sql"
+      }
+    ],
+    "validator": [
+      {
+        "type": "category",
+        "label": "Protocol",
+        "items": [
+          {
+            "type": "link",
+            "label": "Validator specification",
+            "href": "/protocol/validator-spec",
+            "docId": "protocol/validator-spec"
+          }
+        ],
+        "collapsed": true,
+        "collapsible": true,
+        "href": "/category/protocol"
       }
     ]
   },
   "docs": {
-    "autogen-examples/intro": {
-      "id": "autogen-examples/intro",
-      "title": "Tutorial Intro",
-      "description": "Let's discover Docusaurus in less than 5 minutes.",
-      "sidebar": "tutorialSidebar"
+    "cli/connect": {
+      "id": "cli/connect",
+      "title": "Connecting to Tableland",
+      "description": "Access the Tableland network by first connecting to the base chain.",
+      "sidebar": "cli"
     },
-    "autogen-examples/tutorial-basics/congratulations": {
-      "id": "autogen-examples/tutorial-basics/congratulations",
-      "title": "Congratulations!",
-      "description": "You have just learned the basics of Docusaurus and made some changes to the initial template.",
-      "sidebar": "tutorialSidebar"
+    "cli/create": {
+      "id": "cli/create",
+      "title": "Creating tables",
+      "description": "Learn how to create tables from the SDK.",
+      "sidebar": "cli"
     },
-    "autogen-examples/tutorial-basics/create-a-blog-post": {
-      "id": "autogen-examples/tutorial-basics/create-a-blog-post",
-      "title": "Create a Blog Post",
-      "description": "Docusaurus creates a page for each blog post, but also a blog index page, a tag system, an RSS feed...",
-      "sidebar": "tutorialSidebar"
+    "cli/getting-started": {
+      "id": "cli/getting-started",
+      "title": "Getting started",
+      "description": "Get up an running with the Tableland SDK.",
+      "sidebar": "cli"
     },
-    "autogen-examples/tutorial-basics/create-a-document": {
-      "id": "autogen-examples/tutorial-basics/create-a-document",
-      "title": "Create a Document",
-      "description": "Documents are groups of pages connected through:",
-      "sidebar": "tutorialSidebar"
+    "cli/overview": {
+      "id": "cli/overview",
+      "title": "Overview",
+      "description": "Openly readable tables by your applications."
     },
-    "autogen-examples/tutorial-basics/create-a-page": {
-      "id": "autogen-examples/tutorial-basics/create-a-page",
-      "title": "Create a Page",
-      "description": "Add Markdown or React files to src/pages to create a standalone page:",
-      "sidebar": "tutorialSidebar"
+    "cli/read": {
+      "id": "cli/read",
+      "title": "Reading tables",
+      "description": "Openly readable tables by your applications.",
+      "sidebar": "cli"
     },
-    "autogen-examples/tutorial-basics/deploy-your-site": {
-      "id": "autogen-examples/tutorial-basics/deploy-your-site",
-      "title": "Deploy your site",
-      "description": "Docusaurus is a static-site-generator (also called Jamstack).",
-      "sidebar": "tutorialSidebar"
-    },
-    "autogen-examples/tutorial-basics/markdown-features": {
-      "id": "autogen-examples/tutorial-basics/markdown-features",
-      "title": "Markdown Features",
-      "description": "Docusaurus supports Markdown and a few additional features.",
-      "sidebar": "tutorialSidebar"
-    },
-    "autogen-examples/tutorial-extras/manage-docs-versions": {
-      "id": "autogen-examples/tutorial-extras/manage-docs-versions",
-      "title": "Manage Docs Versions",
-      "description": "Docusaurus can manage multiple versions of your docs.",
-      "sidebar": "tutorialSidebar"
-    },
-    "autogen-examples/tutorial-extras/translate-your-site": {
-      "id": "autogen-examples/tutorial-extras/translate-your-site",
-      "title": "Translate your site",
-      "description": "Let's translate docs/autogen-examples/intro.md to French.",
-      "sidebar": "tutorialSidebar"
+    "cli/write": {
+      "id": "cli/write",
+      "title": "Writing to tables",
+      "description": "Mutate your table values with additional access control.",
+      "sidebar": "cli"
     },
     "contribute/guidelines": {
       "id": "contribute/guidelines",
       "title": "How to contribute",
-      "description": "Understand how to contribute",
-      "sidebar": "tutorialSidebar"
+      "description": "Get involved and contribute to the Tableland ecosystem."
     },
     "contribute/maintainers": {
       "id": "contribute/maintainers",
       "title": "Maintainers",
-      "description": "A list of Tableland maintainers",
-      "sidebar": "tutorialSidebar"
+      "description": "Core contributors to the Tableland protocol's documentation."
+    },
+    "contribute/style-guide": {
+      "id": "contribute/style-guide",
+      "title": "Style guide",
+      "description": "Learn the ins and outs of contributing to the Tableland docs site."
+    },
+    "learn/blockchain/what-is-blockchain": {
+      "id": "learn/blockchain/what-is-blockchain",
+      "title": "What is blockchain",
+      "description": "Learn about the basics of blockchains.",
+      "sidebar": "blockchainBasics"
+    },
+    "learn/sql/what-is-sql": {
+      "id": "learn/sql/what-is-sql",
+      "title": "What is SQL",
+      "description": "Learn about the basics of SQL.",
+      "sidebar": "sqlBasics"
+    },
+    "learn/tableland/what-is-tableland": {
+      "id": "learn/tableland/what-is-tableland",
+      "title": "What is Tableland",
+      "description": "Learn about the basics of the Tableland network.",
+      "sidebar": "tablelandBasics"
+    },
+    "protocol/validator-spec": {
+      "id": "protocol/validator-spec",
+      "title": "validator-spec",
+      "description": "The Tableland protocol validator specification.",
+      "sidebar": "validator"
+    },
+    "sdk/connect": {
+      "id": "sdk/connect",
+      "title": "Connecting to Tableland",
+      "description": "Access the Tableland network by first connecting to the base chain.",
+      "sidebar": "sdk"
+    },
+    "sdk/create": {
+      "id": "sdk/create",
+      "title": "Creating tables",
+      "description": "Learn how to create tables from the SDK.",
+      "sidebar": "sdk"
+    },
+    "sdk/getting-started": {
+      "id": "sdk/getting-started",
+      "title": "Getting started",
+      "description": "Get up an running with the Tableland SDK.",
+      "sidebar": "sdk"
+    },
+    "sdk/read": {
+      "id": "sdk/read",
+      "title": "Reading tables",
+      "description": "Openly readable tables by your applications.",
+      "sidebar": "sdk"
+    },
+    "sdk/write": {
+      "id": "sdk/write",
+      "title": "Writing to tables",
+      "description": "Mutate your table values with additional access control.",
+      "sidebar": "sdk"
+    },
+    "smart-contracts/connect": {
+      "id": "smart-contracts/connect",
+      "title": "Connecting to Tableland",
+      "description": "Access the Tableland network by first connecting to the base chain.",
+      "sidebar": "smartContracts"
+    },
+    "smart-contracts/create": {
+      "id": "smart-contracts/create",
+      "title": "Creating tables",
+      "description": "Learn how to create tables from the SDK.",
+      "sidebar": "smartContracts"
+    },
+    "smart-contracts/getting-started": {
+      "id": "smart-contracts/getting-started",
+      "title": "Getting started",
+      "description": "Get up an running with the Tableland SDK.",
+      "sidebar": "smartContracts"
+    },
+    "smart-contracts/overview": {
+      "id": "smart-contracts/overview",
+      "title": "Overview",
+      "description": "Openly readable tables by your applications."
+    },
+    "smart-contracts/read": {
+      "id": "smart-contracts/read",
+      "title": "Reading tables",
+      "description": "Openly readable tables by your applications.",
+      "sidebar": "smartContracts"
+    },
+    "smart-contracts/write": {
+      "id": "smart-contracts/write",
+      "title": "Writing to tables",
+      "description": "Mutate your table values with additional access control.",
+      "sidebar": "smartContracts"
+    },
+    "sql/sql-spec": {
+      "id": "sql/sql-spec",
+      "title": "sql-spec",
+      "description": "The Tableland SQL language specification.",
+      "sidebar": "sql"
     },
     "template": {
       "id": "template",
       "title": "template",
-      "description": "Example description.",
-      "sidebar": "tutorialSidebar"
+      "description": "Example description."
     }
   }
 }

@@ -1,0 +1,11 @@
+{
+  "title": "CLI",
+  "slug": "/category/cli",
+  "permalink": "/category/cli",
+  "navigation": {
+    "next": {
+      "title": "Getting started",
+      "permalink": "/cli/getting-started"
+    }
+  }
+}

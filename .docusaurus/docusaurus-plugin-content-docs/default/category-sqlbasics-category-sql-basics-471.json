@@ -1,0 +1,11 @@
+{
+  "title": "SQL basics",
+  "slug": "/category/sql-basics",
+  "permalink": "/category/sql-basics",
+  "navigation": {
+    "next": {
+      "title": "What is SQL",
+      "permalink": "/learn/sql/what-is-sql"
+    }
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "unversionedId": "sql/sql",
+  "id": "sql/sql",
+  "title": "sql",
+  "description": "",
+  "source": "@site/docs/sql/sql.md",
+  "sourceDirName": "sql",
+  "slug": "/sql/",
+  "permalink": "/sql/",
+  "draft": false,
+  "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/sql/sql.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Style guide",
+    "permalink": "/contribute/style-guide"
+  },
+  "next": {
+    "title": "SQL Specification",
+    "permalink": "/sql/sql-specs"
+  }
+}

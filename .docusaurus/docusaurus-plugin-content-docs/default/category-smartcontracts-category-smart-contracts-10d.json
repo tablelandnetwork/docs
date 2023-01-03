@@ -1,0 +1,11 @@
+{
+  "title": "Smart contracts",
+  "slug": "/category/smart-contracts",
+  "permalink": "/category/smart-contracts",
+  "navigation": {
+    "next": {
+      "title": "Getting started",
+      "permalink": "/smart-contracts/getting-started"
+    }
+  }
+}

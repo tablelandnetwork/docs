@@ -15,7 +15,6 @@ const config = {
   onBrokenLinks: "log", // Or, could `throw`
   onBrokenMarkdownLinks: "warn",
   favicon: "img/tableland/favicon.ico",
-
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
   organizationName: "tablelandnetwork", // Usually your GitHub org/user name.
@@ -91,7 +90,7 @@ const config = {
       ({
         docs: {
           sidebarPath: "./sidebars.js",
-
+          routeBasePath: "/", // Use `/` instead of `/docs` for doc pages' base URL
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl: "https://github.com/tablelandnetwork/docs/tree/main/",
@@ -170,6 +169,7 @@ const config = {
       docs: {
         sidebar: {
           autoCollapseCategories: true, // Collapse sidebar categories when opening a new one
+          hideable: true, // Allow the sidebar to be hidden with a toggle
         },
       },
       // Allow markdown to use `h2` to `h4` so that up to 3 headings are shown in the table of contents
@@ -190,26 +190,54 @@ const config = {
         items: [
           {
             type: "doc",
-            docId: "template",
+            docId: "/category/cli",
             position: "left",
-            label: "Template",
+            label: "CLI",
           },
-          // {
-          //   label: "Specs",
-          //   position: "left",
-          //   items: [
-          //     {
-          //       to: "docs/specs/sql/overview",
-          //       label: "SQL Specification",
-          //       // activeBasePath: "specs/data-types",
-          //     },
-          //     {
-          //       to: "specs/sql/DataTypes",
-          //       label: "Contribute to asdf",
-          //       // activeBasePath: "specs/dtypes",
-          //     },
-          //   ],
-          // },
+          {
+            type: "doc",
+            docId: "/category/smart-contracts",
+            position: "left",
+            label: "Smart contracts",
+          },
+          {
+            type: "doc",
+            docId: "/category/protocol",
+            position: "left",
+            label: "Protocol",
+          },
+          {
+            label: "Learn",
+            position: "left",
+            items: [
+              {
+                to: "/learn/tableland/what-is-tableland",
+                label: "Tableland",
+              },
+              {
+                to: "/learn/sql/what-is-sql",
+                label: "SQL",
+              },
+              {
+                to: "/learn/blockchain/what-is-blockchain",
+                label: "Blockchain",
+              },
+            ],
+          },
+          {
+            label: "Specs",
+            position: "left",
+            items: [
+              {
+                to: "/sql/sql-spec",
+                label: "SQL",
+              },
+              {
+                to: "/protocol/validator-spec",
+                label: "Validator",
+              },
+            ],
+          },
           {
             href: "https://dev.tableland.xyz",
             position: "right",
@@ -222,9 +250,8 @@ const config = {
             position: "right",
             items: [
               {
-                to: "docs/contribute/guidelines/",
+                to: "contribute/guidelines/",
                 label: "Contribute",
-                activeBasePath: "docs/contribute",
               },
               {
                 href: "https://discord.com/invite/dc8EBEhGbg",
@@ -235,6 +262,12 @@ const config = {
               {
                 href: "https://twitter.com/tableland__",
                 label: "Twitter",
+                target: "_blank",
+                rel: null,
+              },
+              {
+                href: "https://tableland.xyz/pilot-program/",
+                label: "Pilot Program",
                 target: "_blank",
                 rel: null,
               },
@@ -262,11 +295,31 @@ const config = {
         style: "dark",
         links: [
           {
-            title: "Docs",
+            title: "Developers",
             items: [
               {
-                label: "Template",
-                to: "/docs/template",
+                to: "/category/sdk",
+                label: "SDK",
+              },
+              {
+                to: "/category/cli",
+                label: "CLI",
+              },
+              {
+                to: "/category/smart-contracts",
+                label: "Smart contracts",
+              },
+              {
+                to: "/category/protocol",
+                label: "Protocol",
+              },
+              {
+                to: "/sql/sql-spec",
+                label: "SQL spec",
+              },
+              {
+                to: "/protocol/validator-spec",
+                label: "Validator spec",
               },
             ],
           },
@@ -274,25 +327,63 @@ const config = {
             title: "Community",
             items: [
               {
-                label: "Discord",
-                href: "https://discord.com/invite/dc8EBEhGbg",
+                to: "contribute/guidelines/",
+                label: "Contribute",
               },
               {
-                label: "Twitter",
+                href: "https://discord.com/invite/dc8EBEhGbg",
+                label: "Discord",
+                target: "_blank",
+                rel: null,
+              },
+              {
                 href: "https://twitter.com/tableland__",
+                label: "Twitter",
+                target: "_blank",
+                rel: null,
+              },
+              {
+                href: "https://tableland.xyz/pilot-program/",
+                position: "right",
+                label: "Pilot Program",
+                target: "_blank",
+                rel: null,
+              },
+              {
+                href: "https://dev.tableland.xyz/showcase/",
+                label: "Showcase",
+                target: "_blank",
+                rel: null,
               },
             ],
           },
           {
-            title: "More",
+            title: "Company",
             items: [
               {
-                label: "Blog",
-                to: "/blog",
+                href: "https://tableland.xyz",
+                position: "right",
+                label: "Main site",
+                target: "_blank",
+                rel: null,
+              },
+              {
+                href: "https://dev.tableland.xyz",
+                position: "right",
+                label: "Tech Blog",
+                target: "_blank",
+                rel: null,
               },
               {
                 label: "GitHub",
-                href: "https://github.com/tablelandnetwork/docs",
+                href: "https://github.com/tablelandnetwork/",
+              },
+              {
+                href: "https://linktr.ee/textileio",
+                position: "right",
+                label: "Team",
+                target: "_blank",
+                rel: null,
               },
             ],
           },

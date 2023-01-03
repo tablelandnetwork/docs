@@ -6,7 +6,7 @@
   "source": "@site/docs/template.md",
   "sourceDirName": ".",
   "slug": "/template",
-  "permalink": "/docs/template",
+  "permalink": "/template",
   "draft": false,
   "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/template.md",
   "tags": [],
@@ -25,10 +25,5 @@
     ],
     "image": "img/tableland/example-image.png",
     "slug": "template"
-  },
-  "sidebar": "tutorialSidebar",
-  "next": {
-    "title": "Tutorial Intro",
-    "permalink": "/docs/autogen-examples/intro"
   }
 }

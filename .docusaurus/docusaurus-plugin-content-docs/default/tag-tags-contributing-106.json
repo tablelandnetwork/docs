@@ -1,0 +1,20 @@
+{
+  "label": "contributing",
+  "permalink": "/tags/contributing",
+  "allTagsPath": "/tags",
+  "count": 2,
+  "items": [
+    {
+      "id": "contribute/guidelines",
+      "title": "How to contribute",
+      "description": "Get involved and contribute to the Tableland ecosystem.",
+      "permalink": "/contribute/guidelines"
+    },
+    {
+      "id": "contribute/style-guide",
+      "title": "Style guide",
+      "description": "Learn the ins and outs of contributing to the Tableland docs site.",
+      "permalink": "/contribute/style-guide"
+    }
+  ]
+}

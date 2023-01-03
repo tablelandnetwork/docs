@@ -1,0 +1,11 @@
+{
+  "title": "Blockchain",
+  "slug": "/category/blockchain",
+  "permalink": "/category/blockchain",
+  "navigation": {
+    "next": {
+      "title": "What is blockchain",
+      "permalink": "/learn/blockchain/what-is-blockchain"
+    }
+  }
+}

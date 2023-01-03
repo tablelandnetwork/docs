@@ -1,0 +1,11 @@
+{
+  "title": "Learn",
+  "slug": "/category/learn",
+  "permalink": "/category/learn",
+  "navigation": {
+    "next": {
+      "title": "What is Tableland",
+      "permalink": "/learn/tableland/what-is-tableland"
+    }
+  }
+}

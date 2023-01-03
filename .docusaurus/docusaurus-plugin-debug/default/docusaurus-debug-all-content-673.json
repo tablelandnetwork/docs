@@ -9,8 +9,8 @@
           "badge": false,
           "noIndex": false,
           "className": "docs-version-current",
-          "path": "/docs",
-          "tagsPath": "/docs/tags",
+          "path": "/",
+          "tagsPath": "/tags",
           "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs",
           "editUrlLocalized": "https://github.com/tablelandnetwork/docs/tree/main/i18n/en/docusaurus-plugin-content-docs/current",
           "isLast": true,
@@ -20,303 +20,227 @@
           "contentPathLocalized": "/Users/dtb/tbl/docs/i18n/en/docusaurus-plugin-content-docs/current",
           "docs": [
             {
-              "unversionedId": "autogen-examples/intro",
-              "id": "autogen-examples/intro",
-              "title": "Tutorial Intro",
-              "description": "Let's discover Docusaurus in less than 5 minutes.",
-              "source": "@site/docs/autogen-examples/intro.md",
-              "sourceDirName": "autogen-examples",
-              "slug": "/autogen-examples/intro",
-              "permalink": "/docs/autogen-examples/intro",
+              "unversionedId": "cli/connect",
+              "id": "cli/connect",
+              "title": "Connecting to Tableland",
+              "description": "Access the Tableland network by first connecting to the base chain.",
+              "source": "@site/docs/cli/connect.md",
+              "sourceDirName": "cli",
+              "slug": "/cli/connect",
+              "permalink": "/cli/connect",
               "draft": false,
-              "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/autogen-examples/intro.md",
+              "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/cli/connect.md",
               "tags": [],
               "version": "current",
               "lastUpdatedBy": "Author",
               "lastUpdatedAt": 1539502055,
               "formattedLastUpdatedAt": "Oct 14, 2018",
-              "sidebarPosition": 1,
               "frontMatter": {
-                "sidebar_position": 1
+                "title": "Connecting to Tableland",
+                "description": "Access the Tableland network by first connecting to the base chain.",
+                "synopsis": "Tableland is an extension of the chains it supports. Namely, every table creation and write occurs through on-chain actions, so it is a requirement for every developer to connect and interact with a supported blockchain. From there, reads happen off-chain by way of directly accessing the Tableland node network.",
+                "keywords": [
+                  "read table",
+                  "SQL query"
+                ]
               },
-              "sidebar": "tutorialSidebar",
+              "sidebar": "cli",
               "previous": {
-                "title": "Page Title",
-                "permalink": "/docs/template"
+                "title": "Getting started",
+                "permalink": "/cli/getting-started"
               },
               "next": {
-                "title": "Create a Page",
-                "permalink": "/docs/autogen-examples/tutorial-basics/create-a-page"
+                "title": "Creating tables",
+                "permalink": "/cli/create"
               }
             },
             {
-              "unversionedId": "autogen-examples/tutorial-basics/congratulations",
-              "id": "autogen-examples/tutorial-basics/congratulations",
-              "title": "Congratulations!",
-              "description": "You have just learned the basics of Docusaurus and made some changes to the initial template.",
-              "source": "@site/docs/autogen-examples/tutorial-basics/congratulations.md",
-              "sourceDirName": "autogen-examples/tutorial-basics",
-              "slug": "/autogen-examples/tutorial-basics/congratulations",
-              "permalink": "/docs/autogen-examples/tutorial-basics/congratulations",
+              "unversionedId": "cli/create",
+              "id": "cli/create",
+              "title": "Creating tables",
+              "description": "Learn how to create tables from the SDK.",
+              "source": "@site/docs/cli/create.md",
+              "sourceDirName": "cli",
+              "slug": "/cli/create",
+              "permalink": "/cli/create",
               "draft": false,
-              "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/autogen-examples/tutorial-basics/congratulations.md",
+              "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/cli/create.md",
               "tags": [],
               "version": "current",
               "lastUpdatedBy": "Author",
               "lastUpdatedAt": 1539502055,
               "formattedLastUpdatedAt": "Oct 14, 2018",
-              "sidebarPosition": 6,
               "frontMatter": {
-                "sidebar_position": 6
+                "title": "Creating tables",
+                "description": "Learn how to create tables from the SDK.",
+                "synopsis": "All tables are created through on-chain actions that create a table (ERC721 token). The SDK abstracts this from the developer's point of view, but it's important to understand this context for why a chain connection is required for table creation.",
+                "keywords": [
+                  "create table"
+                ]
               },
-              "sidebar": "tutorialSidebar",
+              "sidebar": "cli",
               "previous": {
-                "title": "Deploy your site",
-                "permalink": "/docs/autogen-examples/tutorial-basics/deploy-your-site"
+                "title": "Connecting to Tableland",
+                "permalink": "/cli/connect"
               },
               "next": {
-                "title": "Manage Docs Versions",
-                "permalink": "/docs/autogen-examples/tutorial-extras/manage-docs-versions"
+                "title": "Writing to tables",
+                "permalink": "/cli/write"
               }
             },
             {
-              "unversionedId": "autogen-examples/tutorial-basics/create-a-blog-post",
-              "id": "autogen-examples/tutorial-basics/create-a-blog-post",
-              "title": "Create a Blog Post",
-              "description": "Docusaurus creates a page for each blog post, but also a blog index page, a tag system, an RSS feed...",
-              "source": "@site/docs/autogen-examples/tutorial-basics/create-a-blog-post.md",
-              "sourceDirName": "autogen-examples/tutorial-basics",
-              "slug": "/autogen-examples/tutorial-basics/create-a-blog-post",
-              "permalink": "/docs/autogen-examples/tutorial-basics/create-a-blog-post",
+              "unversionedId": "cli/getting-started",
+              "id": "cli/getting-started",
+              "title": "Getting started",
+              "description": "Get up an running with the Tableland SDK.",
+              "source": "@site/docs/cli/getting-started.md",
+              "sourceDirName": "cli",
+              "slug": "/cli/getting-started",
+              "permalink": "/cli/getting-started",
               "draft": false,
-              "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/autogen-examples/tutorial-basics/create-a-blog-post.md",
+              "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/cli/getting-started.md",
               "tags": [],
               "version": "current",
               "lastUpdatedBy": "Author",
               "lastUpdatedAt": 1539502055,
               "formattedLastUpdatedAt": "Oct 14, 2018",
-              "sidebarPosition": 3,
               "frontMatter": {
-                "sidebar_position": 3,
-                "author": "dtb"
+                "title": "Getting started",
+                "description": "Get up an running with the Tableland SDK.",
+                "synopsis": "Dive into the basics for connecting, creating, writing, and reading from tables. More detailed information is provided in subsequent overviews, but the details provided here should allow developers to quickly understand where to start.",
+                "keywords": [
+                  "SQL query",
+                  "Tableland SDK"
+                ]
               },
-              "sidebar": "tutorialSidebar",
+              "sidebar": "cli",
               "previous": {
-                "title": "Create a Document",
-                "permalink": "/docs/autogen-examples/tutorial-basics/create-a-document"
+                "title": "CLI",
+                "permalink": "/category/cli"
               },
               "next": {
-                "title": "Markdown Features",
-                "permalink": "/docs/autogen-examples/tutorial-basics/markdown-features"
+                "title": "Connecting to Tableland",
+                "permalink": "/cli/connect"
               }
             },
             {
-              "unversionedId": "autogen-examples/tutorial-basics/create-a-document",
-              "id": "autogen-examples/tutorial-basics/create-a-document",
-              "title": "Create a Document",
-              "description": "Documents are groups of pages connected through:",
-              "source": "@site/docs/autogen-examples/tutorial-basics/create-a-document.md",
-              "sourceDirName": "autogen-examples/tutorial-basics",
-              "slug": "/autogen-examples/tutorial-basics/create-a-document",
-              "permalink": "/docs/autogen-examples/tutorial-basics/create-a-document",
+              "unversionedId": "cli/overview",
+              "id": "cli/overview",
+              "title": "Overview",
+              "description": "Openly readable tables by your applications.",
+              "source": "@site/docs/cli/overview.md",
+              "sourceDirName": "cli",
+              "slug": "/cli/overview",
+              "permalink": "/cli/overview",
               "draft": false,
-              "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/autogen-examples/tutorial-basics/create-a-document.md",
+              "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/cli/overview.md",
               "tags": [],
               "version": "current",
               "lastUpdatedBy": "Author",
               "lastUpdatedAt": 1539502055,
               "formattedLastUpdatedAt": "Oct 14, 2018",
-              "sidebarPosition": 2,
               "frontMatter": {
-                "sidebar_position": 2
-              },
-              "sidebar": "tutorialSidebar",
-              "previous": {
-                "title": "Create a Page",
-                "permalink": "/docs/autogen-examples/tutorial-basics/create-a-page"
-              },
-              "next": {
-                "title": "Create a Blog Post",
-                "permalink": "/docs/autogen-examples/tutorial-basics/create-a-blog-post"
+                "title": "Overview",
+                "description": "Openly readable tables by your applications.",
+                "synopsis": "The JavaScript / TypeScript SDK allows developers to create tables on their chain of choice. Connect, create, and then interact with your tables thereafter with table writes and reads.",
+                "keywords": [
+                  "SQL query",
+                  "Tableland SDK"
+                ]
               }
             },
             {
-              "unversionedId": "autogen-examples/tutorial-basics/create-a-page",
-              "id": "autogen-examples/tutorial-basics/create-a-page",
-              "title": "Create a Page",
-              "description": "Add Markdown or React files to src/pages to create a standalone page:",
-              "source": "@site/docs/autogen-examples/tutorial-basics/create-a-page.md",
-              "sourceDirName": "autogen-examples/tutorial-basics",
-              "slug": "/autogen-examples/tutorial-basics/create-a-page",
-              "permalink": "/docs/autogen-examples/tutorial-basics/create-a-page",
+              "unversionedId": "cli/read",
+              "id": "cli/read",
+              "title": "Reading tables",
+              "description": "Openly readable tables by your applications.",
+              "source": "@site/docs/cli/read.md",
+              "sourceDirName": "cli",
+              "slug": "/cli/read",
+              "permalink": "/cli/read",
               "draft": false,
-              "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/autogen-examples/tutorial-basics/create-a-page.md",
+              "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/cli/read.md",
               "tags": [],
               "version": "current",
               "lastUpdatedBy": "Author",
               "lastUpdatedAt": 1539502055,
               "formattedLastUpdatedAt": "Oct 14, 2018",
-              "sidebarPosition": 1,
               "frontMatter": {
-                "sidebar_position": 1
+                "title": "Reading tables",
+                "description": "Openly readable tables by your applications.",
+                "synopsis": "Reading from tables is entirely open (for anyone), allowing for true composability. Write SQL qeuries—but with some limitations that are due to the nature of decentralized networks and deterministic requirements.",
+                "keywords": [
+                  "write to table",
+                  "mutate table"
+                ]
               },
-              "sidebar": "tutorialSidebar",
+              "sidebar": "cli",
               "previous": {
-                "title": "Tutorial Intro",
-                "permalink": "/docs/autogen-examples/intro"
-              },
-              "next": {
-                "title": "Create a Document",
-                "permalink": "/docs/autogen-examples/tutorial-basics/create-a-document"
+                "title": "Writing to tables",
+                "permalink": "/cli/write"
               }
             },
             {
-              "unversionedId": "autogen-examples/tutorial-basics/deploy-your-site",
-              "id": "autogen-examples/tutorial-basics/deploy-your-site",
-              "title": "Deploy your site",
-              "description": "Docusaurus is a static-site-generator (also called Jamstack).",
-              "source": "@site/docs/autogen-examples/tutorial-basics/deploy-your-site.md",
-              "sourceDirName": "autogen-examples/tutorial-basics",
-              "slug": "/autogen-examples/tutorial-basics/deploy-your-site",
-              "permalink": "/docs/autogen-examples/tutorial-basics/deploy-your-site",
+              "unversionedId": "cli/write",
+              "id": "cli/write",
+              "title": "Writing to tables",
+              "description": "Mutate your table values with additional access control.",
+              "source": "@site/docs/cli/write.md",
+              "sourceDirName": "cli",
+              "slug": "/cli/write",
+              "permalink": "/cli/write",
               "draft": false,
-              "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/autogen-examples/tutorial-basics/deploy-your-site.md",
+              "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/cli/write.md",
               "tags": [],
               "version": "current",
               "lastUpdatedBy": "Author",
               "lastUpdatedAt": 1539502055,
               "formattedLastUpdatedAt": "Oct 14, 2018",
-              "sidebarPosition": 5,
               "frontMatter": {
-                "sidebar_position": 5
+                "title": "Writing to tables",
+                "description": "Mutate your table values with additional access control.",
+                "synopsis": "Table values can be mutated by the table owner or provisioned actors.",
+                "keywords": [
+                  "write to table",
+                  "mutate table"
+                ]
               },
-              "sidebar": "tutorialSidebar",
+              "sidebar": "cli",
               "previous": {
-                "title": "Markdown Features",
-                "permalink": "/docs/autogen-examples/tutorial-basics/markdown-features"
+                "title": "Creating tables",
+                "permalink": "/cli/create"
               },
               "next": {
-                "title": "Congratulations!",
-                "permalink": "/docs/autogen-examples/tutorial-basics/congratulations"
-              }
-            },
-            {
-              "unversionedId": "autogen-examples/tutorial-basics/markdown-features",
-              "id": "autogen-examples/tutorial-basics/markdown-features",
-              "title": "Markdown Features",
-              "description": "Docusaurus supports Markdown and a few additional features.",
-              "source": "@site/docs/autogen-examples/tutorial-basics/markdown-features.mdx",
-              "sourceDirName": "autogen-examples/tutorial-basics",
-              "slug": "/autogen-examples/tutorial-basics/markdown-features",
-              "permalink": "/docs/autogen-examples/tutorial-basics/markdown-features",
-              "draft": false,
-              "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/autogen-examples/tutorial-basics/markdown-features.mdx",
-              "tags": [],
-              "version": "current",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
-              "formattedLastUpdatedAt": "Oct 14, 2018",
-              "sidebarPosition": 4,
-              "frontMatter": {
-                "sidebar_position": 4
-              },
-              "sidebar": "tutorialSidebar",
-              "previous": {
-                "title": "Create a Blog Post",
-                "permalink": "/docs/autogen-examples/tutorial-basics/create-a-blog-post"
-              },
-              "next": {
-                "title": "Deploy your site",
-                "permalink": "/docs/autogen-examples/tutorial-basics/deploy-your-site"
-              }
-            },
-            {
-              "unversionedId": "autogen-examples/tutorial-extras/manage-docs-versions",
-              "id": "autogen-examples/tutorial-extras/manage-docs-versions",
-              "title": "Manage Docs Versions",
-              "description": "Docusaurus can manage multiple versions of your docs.",
-              "source": "@site/docs/autogen-examples/tutorial-extras/manage-docs-versions.md",
-              "sourceDirName": "autogen-examples/tutorial-extras",
-              "slug": "/autogen-examples/tutorial-extras/manage-docs-versions",
-              "permalink": "/docs/autogen-examples/tutorial-extras/manage-docs-versions",
-              "draft": false,
-              "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/autogen-examples/tutorial-extras/manage-docs-versions.md",
-              "tags": [],
-              "version": "current",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
-              "formattedLastUpdatedAt": "Oct 14, 2018",
-              "sidebarPosition": 1,
-              "frontMatter": {
-                "sidebar_position": 1
-              },
-              "sidebar": "tutorialSidebar",
-              "previous": {
-                "title": "Congratulations!",
-                "permalink": "/docs/autogen-examples/tutorial-basics/congratulations"
-              },
-              "next": {
-                "title": "Translate your site",
-                "permalink": "/docs/autogen-examples/tutorial-extras/translate-your-site"
-              }
-            },
-            {
-              "unversionedId": "autogen-examples/tutorial-extras/translate-your-site",
-              "id": "autogen-examples/tutorial-extras/translate-your-site",
-              "title": "Translate your site",
-              "description": "Let's translate docs/autogen-examples/intro.md to French.",
-              "source": "@site/docs/autogen-examples/tutorial-extras/translate-your-site.md",
-              "sourceDirName": "autogen-examples/tutorial-extras",
-              "slug": "/autogen-examples/tutorial-extras/translate-your-site",
-              "permalink": "/docs/autogen-examples/tutorial-extras/translate-your-site",
-              "draft": false,
-              "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/autogen-examples/tutorial-extras/translate-your-site.md",
-              "tags": [],
-              "version": "current",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
-              "formattedLastUpdatedAt": "Oct 14, 2018",
-              "sidebarPosition": 2,
-              "frontMatter": {
-                "sidebar_position": 2
-              },
-              "sidebar": "tutorialSidebar",
-              "previous": {
-                "title": "Manage Docs Versions",
-                "permalink": "/docs/autogen-examples/tutorial-extras/manage-docs-versions"
-              },
-              "next": {
-                "title": "Contributor guidelines",
-                "permalink": "/docs/contribute/guidelines"
+                "title": "Reading tables",
+                "permalink": "/cli/read"
               }
             },
             {
               "unversionedId": "contribute/guidelines",
               "id": "contribute/guidelines",
               "title": "How to contribute",
-              "description": "Understand how to contribute",
+              "description": "Get involved and contribute to the Tableland ecosystem.",
               "source": "@site/docs/contribute/guidelines.md",
               "sourceDirName": "contribute",
               "slug": "/contribute/guidelines",
-              "permalink": "/docs/contribute/guidelines",
+              "permalink": "/contribute/guidelines",
               "draft": false,
               "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/contribute/guidelines.md",
               "tags": [
                 {
                   "label": "contributing",
-                  "permalink": "/docs/tags/contributing"
+                  "permalink": "/tags/contributing"
                 }
               ],
               "version": "current",
               "lastUpdatedBy": "Author",
               "lastUpdatedAt": 1539502055,
               "formattedLastUpdatedAt": "Oct 14, 2018",
-              "sidebarPosition": 1,
               "frontMatter": {
                 "title": "How to contribute",
-                "sidebar_position": 1,
                 "sidebar_label": "Contributor guidelines",
-                "description": "Understand how to contribute",
+                "description": "Get involved and contribute to the Tableland ecosystem.",
+                "synopsis": "Tableland welcomes new collaborators and contributions. The protocol is constantly growing and looking for help from community members, and we've open sourced all of our code, documentation, and tutorials to make this possible. Learn more about where to begin and stylistic guidelines & features about the docs site, in particular.",
                 "keywords": [
                   "docs",
                   "tableland",
@@ -327,26 +251,17 @@
                 "tags": [
                   "contributing"
                 ]
-              },
-              "sidebar": "tutorialSidebar",
-              "previous": {
-                "title": "Translate your site",
-                "permalink": "/docs/autogen-examples/tutorial-extras/translate-your-site"
-              },
-              "next": {
-                "title": "Maintainers",
-                "permalink": "/docs/contribute/maintainers"
               }
             },
             {
               "unversionedId": "contribute/maintainers",
               "id": "contribute/maintainers",
               "title": "Maintainers",
-              "description": "A list of Tableland maintainers",
+              "description": "Core contributors to the Tableland protocol's documentation.",
               "source": "@site/docs/contribute/maintainers.md",
               "sourceDirName": "contribute",
               "slug": "/contribute/maintainers",
-              "permalink": "/docs/contribute/maintainers",
+              "permalink": "/contribute/maintainers",
               "draft": false,
               "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/contribute/maintainers.md",
               "tags": [],
@@ -354,24 +269,578 @@
               "lastUpdatedBy": "Author",
               "lastUpdatedAt": 1539502055,
               "formattedLastUpdatedAt": "Oct 14, 2018",
-              "sidebarPosition": 2,
               "frontMatter": {
-                "id": "maintainers",
                 "title": "Maintainers",
-                "sidebar_position": 2,
-                "sidebar_label": "Maintainers",
-                "description": "A list of Tableland maintainers",
+                "description": "Core contributors to the Tableland protocol's documentation.",
                 "keywords": [
                   "docs",
                   "tableland",
                   "maintainers",
                   "contributors"
                 ]
+              }
+            },
+            {
+              "unversionedId": "contribute/style-guide",
+              "id": "contribute/style-guide",
+              "title": "Style guide",
+              "description": "Learn the ins and outs of contributing to the Tableland docs site.",
+              "source": "@site/docs/contribute/style-guide.md",
+              "sourceDirName": "contribute",
+              "slug": "/contribute/style-guide",
+              "permalink": "/contribute/style-guide",
+              "draft": false,
+              "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/contribute/style-guide.md",
+              "tags": [
+                {
+                  "label": "contributing",
+                  "permalink": "/tags/contributing"
+                }
+              ],
+              "version": "current",
+              "lastUpdatedBy": "Author",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "Oct 14, 2018",
+              "frontMatter": {
+                "title": "Style guide",
+                "description": "Learn the ins and outs of contributing to the Tableland docs site.",
+                "synopsis": "The docs site is built using Docusaurus, a static site generator developed by Meta that is specifically designed for documentation. It offers a number of features, including MDX support (embed JSX in markdown) and various content-friendly plugins. Please ensure you follow the guidelines on writing style as well.",
+                "keywords": [
+                  "docs",
+                  "tableland",
+                  "contribute",
+                  "contributor",
+                  "contributing"
+                ],
+                "tags": [
+                  "contributing"
+                ]
+              }
+            },
+            {
+              "unversionedId": "learn/blockchain/what-is-blockchain",
+              "id": "learn/blockchain/what-is-blockchain",
+              "title": "What is blockchain",
+              "description": "Learn about the basics of blockchains.",
+              "source": "@site/docs/learn/blockchain/what-is-blockchain.md",
+              "sourceDirName": "learn/blockchain",
+              "slug": "/learn/blockchain/what-is-blockchain",
+              "permalink": "/learn/blockchain/what-is-blockchain",
+              "draft": false,
+              "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/learn/blockchain/what-is-blockchain.md",
+              "tags": [],
+              "version": "current",
+              "lastUpdatedBy": "Author",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "Oct 14, 2018",
+              "frontMatter": {
+                "title": "What is blockchain",
+                "description": "Learn about the basics of blockchains.",
+                "synopsis": "Blockchains offer distributed computing with incentives, thus, decentralizing computing into a global network.",
+                "keywords": [
+                  "blockchains",
+                  "about"
+                ]
               },
-              "sidebar": "tutorialSidebar",
+              "sidebar": "blockchainBasics",
               "previous": {
-                "title": "Contributor guidelines",
-                "permalink": "/docs/contribute/guidelines"
+                "title": "Blockchain basics",
+                "permalink": "/category/blockchain-basics"
+              }
+            },
+            {
+              "unversionedId": "learn/sql/what-is-sql",
+              "id": "learn/sql/what-is-sql",
+              "title": "What is SQL",
+              "description": "Learn about the basics of SQL.",
+              "source": "@site/docs/learn/sql/what-is-sql.md",
+              "sourceDirName": "learn/sql",
+              "slug": "/learn/sql/what-is-sql",
+              "permalink": "/learn/sql/what-is-sql",
+              "draft": false,
+              "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/learn/sql/what-is-sql.md",
+              "tags": [],
+              "version": "current",
+              "lastUpdatedBy": "Author",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "Oct 14, 2018",
+              "frontMatter": {
+                "title": "What is SQL",
+                "description": "Learn about the basics of SQL.",
+                "synopsis": "Structured Query Language (SQL) is a language that allows developers to interact with databases for extracting and mutating values.",
+                "keywords": [
+                  "SQL",
+                  "SQLite",
+                  "about"
+                ]
+              },
+              "sidebar": "sqlBasics",
+              "previous": {
+                "title": "SQL basics",
+                "permalink": "/category/sql-basics"
+              }
+            },
+            {
+              "unversionedId": "learn/tableland/what-is-tableland",
+              "id": "learn/tableland/what-is-tableland",
+              "title": "What is Tableland",
+              "description": "Learn about the basics of the Tableland network.",
+              "source": "@site/docs/learn/tableland/what-is-tableland.md",
+              "sourceDirName": "learn/tableland",
+              "slug": "/learn/tableland/what-is-tableland",
+              "permalink": "/learn/tableland/what-is-tableland",
+              "draft": false,
+              "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/learn/tableland/what-is-tableland.md",
+              "tags": [],
+              "version": "current",
+              "lastUpdatedBy": "Author",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "Oct 14, 2018",
+              "frontMatter": {
+                "title": "What is Tableland",
+                "description": "Learn about the basics of the Tableland network.",
+                "synopsis": "Tableland is a web3 native SQL database.",
+                "keywords": [
+                  "Tableland",
+                  "about"
+                ]
+              },
+              "sidebar": "tablelandBasics",
+              "previous": {
+                "title": "Tableland basics",
+                "permalink": "/category/tableland-basics"
+              }
+            },
+            {
+              "unversionedId": "protocol/validator-spec",
+              "id": "protocol/validator-spec",
+              "title": "validator-spec",
+              "description": "The Tableland protocol validator specification.",
+              "source": "@site/docs/protocol/validator-spec.md",
+              "sourceDirName": "protocol",
+              "slug": "/protocol/validator-spec",
+              "permalink": "/protocol/validator-spec",
+              "draft": false,
+              "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/protocol/validator-spec.md",
+              "tags": [],
+              "version": "current",
+              "lastUpdatedBy": "Author",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "Oct 14, 2018",
+              "frontMatter": {
+                "hide_title": true,
+                "sidebar_label": "Validator specification",
+                "description": "The Tableland protocol validator specification.",
+                "synopsis": "The Tableland protocol is ran by validator nodes.",
+                "keywords": [
+                  "sql",
+                  "sqlite",
+                  "specification"
+                ]
+              },
+              "sidebar": "validator",
+              "previous": {
+                "title": "Protocol",
+                "permalink": "/category/protocol"
+              }
+            },
+            {
+              "unversionedId": "sdk/connect",
+              "id": "sdk/connect",
+              "title": "Connecting to Tableland",
+              "description": "Access the Tableland network by first connecting to the base chain.",
+              "source": "@site/docs/sdk/connect.md",
+              "sourceDirName": "sdk",
+              "slug": "/sdk/connect",
+              "permalink": "/sdk/connect",
+              "draft": false,
+              "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/sdk/connect.md",
+              "tags": [],
+              "version": "current",
+              "lastUpdatedBy": "Author",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "Oct 14, 2018",
+              "frontMatter": {
+                "title": "Connecting to Tableland",
+                "description": "Access the Tableland network by first connecting to the base chain.",
+                "synopsis": "Tableland is an extension of the chains it supports. Namely, every table creation and write occurs through on-chain actions, so it is a requirement for every developer to connect and interact with a supported blockchain. From there, reads happen off-chain by way of directly accessing the Tableland node network.",
+                "keywords": [
+                  "read table",
+                  "SQL query"
+                ]
+              },
+              "sidebar": "sdk",
+              "previous": {
+                "title": "Getting started",
+                "permalink": "/sdk/getting-started"
+              },
+              "next": {
+                "title": "Creating tables",
+                "permalink": "/sdk/create"
+              }
+            },
+            {
+              "unversionedId": "sdk/create",
+              "id": "sdk/create",
+              "title": "Creating tables",
+              "description": "Learn how to create tables from the SDK.",
+              "source": "@site/docs/sdk/create.md",
+              "sourceDirName": "sdk",
+              "slug": "/sdk/create",
+              "permalink": "/sdk/create",
+              "draft": false,
+              "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/sdk/create.md",
+              "tags": [],
+              "version": "current",
+              "lastUpdatedBy": "Author",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "Oct 14, 2018",
+              "frontMatter": {
+                "title": "Creating tables",
+                "description": "Learn how to create tables from the SDK.",
+                "synopsis": "All tables are created through on-chain actions that create a table (ERC721 token). The SDK abstracts this from the developer's point of view, but it's important to understand this context for why a chain connection is required for table creation.",
+                "keywords": [
+                  "create table"
+                ]
+              },
+              "sidebar": "sdk",
+              "previous": {
+                "title": "Connecting to Tableland",
+                "permalink": "/sdk/connect"
+              },
+              "next": {
+                "title": "Writing to tables",
+                "permalink": "/sdk/write"
+              }
+            },
+            {
+              "unversionedId": "sdk/getting-started",
+              "id": "sdk/getting-started",
+              "title": "Getting started",
+              "description": "Get up an running with the Tableland SDK.",
+              "source": "@site/docs/sdk/getting-started.md",
+              "sourceDirName": "sdk",
+              "slug": "/sdk/getting-started",
+              "permalink": "/sdk/getting-started",
+              "draft": false,
+              "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/sdk/getting-started.md",
+              "tags": [],
+              "version": "current",
+              "lastUpdatedBy": "Author",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "Oct 14, 2018",
+              "frontMatter": {
+                "title": "Getting started",
+                "description": "Get up an running with the Tableland SDK.",
+                "synopsis": "The JavaScript / TypeScript SDK allows developers to create tables on their chain of choice. Connect, create, and then interact with your tables thereafter with table writes and reads. Dive into the basics for connecting, creating, writing, and reading from tables.",
+                "keywords": [
+                  "SQL query",
+                  "Tableland SDK"
+                ]
+              },
+              "sidebar": "sdk",
+              "previous": {
+                "title": "SDK",
+                "permalink": "/category/sdk"
+              },
+              "next": {
+                "title": "Connecting to Tableland",
+                "permalink": "/sdk/connect"
+              }
+            },
+            {
+              "unversionedId": "sdk/read",
+              "id": "sdk/read",
+              "title": "Reading tables",
+              "description": "Openly readable tables by your applications.",
+              "source": "@site/docs/sdk/read.md",
+              "sourceDirName": "sdk",
+              "slug": "/sdk/read",
+              "permalink": "/sdk/read",
+              "draft": false,
+              "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/sdk/read.md",
+              "tags": [],
+              "version": "current",
+              "lastUpdatedBy": "Author",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "Oct 14, 2018",
+              "frontMatter": {
+                "title": "Reading tables",
+                "description": "Openly readable tables by your applications.",
+                "synopsis": "Reading from tables is entirely open (for anyone), allowing for true composability. Write SQL qeuries—but with some limitations that are due to the nature of decentralized networks and deterministic requirements.",
+                "keywords": [
+                  "write to table",
+                  "mutate table"
+                ]
+              },
+              "sidebar": "sdk",
+              "previous": {
+                "title": "Writing to tables",
+                "permalink": "/sdk/write"
+              }
+            },
+            {
+              "unversionedId": "sdk/write",
+              "id": "sdk/write",
+              "title": "Writing to tables",
+              "description": "Mutate your table values with additional access control.",
+              "source": "@site/docs/sdk/write.md",
+              "sourceDirName": "sdk",
+              "slug": "/sdk/write",
+              "permalink": "/sdk/write",
+              "draft": false,
+              "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/sdk/write.md",
+              "tags": [],
+              "version": "current",
+              "lastUpdatedBy": "Author",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "Oct 14, 2018",
+              "frontMatter": {
+                "title": "Writing to tables",
+                "description": "Mutate your table values with additional access control.",
+                "synopsis": "Table values can be mutated by the table owner or provisioned actors.",
+                "keywords": [
+                  "write to table",
+                  "mutate table"
+                ]
+              },
+              "sidebar": "sdk",
+              "previous": {
+                "title": "Creating tables",
+                "permalink": "/sdk/create"
+              },
+              "next": {
+                "title": "Reading tables",
+                "permalink": "/sdk/read"
+              }
+            },
+            {
+              "unversionedId": "smart-contracts/connect",
+              "id": "smart-contracts/connect",
+              "title": "Connecting to Tableland",
+              "description": "Access the Tableland network by first connecting to the base chain.",
+              "source": "@site/docs/smart-contracts/connect.md",
+              "sourceDirName": "smart-contracts",
+              "slug": "/smart-contracts/connect",
+              "permalink": "/smart-contracts/connect",
+              "draft": false,
+              "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/smart-contracts/connect.md",
+              "tags": [],
+              "version": "current",
+              "lastUpdatedBy": "Author",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "Oct 14, 2018",
+              "frontMatter": {
+                "title": "Connecting to Tableland",
+                "description": "Access the Tableland network by first connecting to the base chain.",
+                "synopsis": "Tableland is an extension of the chains it supports. Namely, every table creation and write occurs through on-chain actions, so it is a requirement for every developer to connect and interact with a supported blockchain. From there, reads happen off-chain by way of directly accessing the Tableland node network.",
+                "keywords": [
+                  "read table",
+                  "SQL query"
+                ]
+              },
+              "sidebar": "smartContracts",
+              "previous": {
+                "title": "Getting started",
+                "permalink": "/smart-contracts/getting-started"
+              },
+              "next": {
+                "title": "Creating tables",
+                "permalink": "/smart-contracts/create"
+              }
+            },
+            {
+              "unversionedId": "smart-contracts/create",
+              "id": "smart-contracts/create",
+              "title": "Creating tables",
+              "description": "Learn how to create tables from the SDK.",
+              "source": "@site/docs/smart-contracts/create.md",
+              "sourceDirName": "smart-contracts",
+              "slug": "/smart-contracts/create",
+              "permalink": "/smart-contracts/create",
+              "draft": false,
+              "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/smart-contracts/create.md",
+              "tags": [],
+              "version": "current",
+              "lastUpdatedBy": "Author",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "Oct 14, 2018",
+              "frontMatter": {
+                "title": "Creating tables",
+                "description": "Learn how to create tables from the SDK.",
+                "synopsis": "All tables are created through on-chain actions that create a table (ERC721 token). The SDK abstracts this from the developer's point of view, but it's important to understand this context for why a chain connection is required for table creation.",
+                "keywords": [
+                  "create table"
+                ]
+              },
+              "sidebar": "smartContracts",
+              "previous": {
+                "title": "Connecting to Tableland",
+                "permalink": "/smart-contracts/connect"
+              },
+              "next": {
+                "title": "Writing to tables",
+                "permalink": "/smart-contracts/write"
+              }
+            },
+            {
+              "unversionedId": "smart-contracts/getting-started",
+              "id": "smart-contracts/getting-started",
+              "title": "Getting started",
+              "description": "Get up an running with the Tableland SDK.",
+              "source": "@site/docs/smart-contracts/getting-started.md",
+              "sourceDirName": "smart-contracts",
+              "slug": "/smart-contracts/getting-started",
+              "permalink": "/smart-contracts/getting-started",
+              "draft": false,
+              "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/smart-contracts/getting-started.md",
+              "tags": [],
+              "version": "current",
+              "lastUpdatedBy": "Author",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "Oct 14, 2018",
+              "frontMatter": {
+                "title": "Getting started",
+                "description": "Get up an running with the Tableland SDK.",
+                "synopsis": "Dive into the basics for connecting, creating, writing, and reading from tables. More detailed information is provided in subsequent overviews, but the details provided here should allow developers to quickly understand where to start.",
+                "keywords": [
+                  "SQL query",
+                  "Tableland SDK"
+                ]
+              },
+              "sidebar": "smartContracts",
+              "previous": {
+                "title": "Smart contracts",
+                "permalink": "/category/smart-contracts"
+              },
+              "next": {
+                "title": "Connecting to Tableland",
+                "permalink": "/smart-contracts/connect"
+              }
+            },
+            {
+              "unversionedId": "smart-contracts/overview",
+              "id": "smart-contracts/overview",
+              "title": "Overview",
+              "description": "Openly readable tables by your applications.",
+              "source": "@site/docs/smart-contracts/overview.md",
+              "sourceDirName": "smart-contracts",
+              "slug": "/smart-contracts/overview",
+              "permalink": "/smart-contracts/overview",
+              "draft": false,
+              "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/smart-contracts/overview.md",
+              "tags": [],
+              "version": "current",
+              "lastUpdatedBy": "Author",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "Oct 14, 2018",
+              "frontMatter": {
+                "title": "Overview",
+                "description": "Openly readable tables by your applications.",
+                "synopsis": "The JavaScript / TypeScript SDK allows developers to create tables on their chain of choice. Connect, create, and then interact with your tables thereafter with table writes and reads.",
+                "keywords": [
+                  "SQL query",
+                  "Tableland SDK"
+                ]
+              }
+            },
+            {
+              "unversionedId": "smart-contracts/read",
+              "id": "smart-contracts/read",
+              "title": "Reading tables",
+              "description": "Openly readable tables by your applications.",
+              "source": "@site/docs/smart-contracts/read.md",
+              "sourceDirName": "smart-contracts",
+              "slug": "/smart-contracts/read",
+              "permalink": "/smart-contracts/read",
+              "draft": false,
+              "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/smart-contracts/read.md",
+              "tags": [],
+              "version": "current",
+              "lastUpdatedBy": "Author",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "Oct 14, 2018",
+              "frontMatter": {
+                "title": "Reading tables",
+                "description": "Openly readable tables by your applications.",
+                "synopsis": "Reading from tables is entirely open (for anyone), allowing for true composability. Write SQL qeuries—but with some limitations that are due to the nature of decentralized networks and deterministic requirements.",
+                "keywords": [
+                  "write to table",
+                  "mutate table"
+                ]
+              },
+              "sidebar": "smartContracts",
+              "previous": {
+                "title": "Writing to tables",
+                "permalink": "/smart-contracts/write"
+              }
+            },
+            {
+              "unversionedId": "smart-contracts/write",
+              "id": "smart-contracts/write",
+              "title": "Writing to tables",
+              "description": "Mutate your table values with additional access control.",
+              "source": "@site/docs/smart-contracts/write.md",
+              "sourceDirName": "smart-contracts",
+              "slug": "/smart-contracts/write",
+              "permalink": "/smart-contracts/write",
+              "draft": false,
+              "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/smart-contracts/write.md",
+              "tags": [],
+              "version": "current",
+              "lastUpdatedBy": "Author",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "Oct 14, 2018",
+              "frontMatter": {
+                "title": "Writing to tables",
+                "description": "Mutate your table values with additional access control.",
+                "synopsis": "Table values can be mutated by the table owner or provisioned actors.",
+                "keywords": [
+                  "write to table",
+                  "mutate table"
+                ]
+              },
+              "sidebar": "smartContracts",
+              "previous": {
+                "title": "Creating tables",
+                "permalink": "/smart-contracts/create"
+              },
+              "next": {
+                "title": "Reading tables",
+                "permalink": "/smart-contracts/read"
+              }
+            },
+            {
+              "unversionedId": "sql/sql-spec",
+              "id": "sql/sql-spec",
+              "title": "sql-spec",
+              "description": "The Tableland SQL language specification.",
+              "source": "@site/docs/sql/sql-spec.md",
+              "sourceDirName": "sql",
+              "slug": "/sql/sql-spec",
+              "permalink": "/sql/sql-spec",
+              "draft": false,
+              "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/sql/sql-spec.md",
+              "tags": [],
+              "version": "current",
+              "lastUpdatedBy": "Author",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "Oct 14, 2018",
+              "frontMatter": {
+                "hide_title": true,
+                "sidebar_label": "SQL specification",
+                "description": "The Tableland SQL language specification.",
+                "synopsis": "Tableland offers a unique set of SQL that is a subset of the SQLite language.",
+                "keywords": [
+                  "sql",
+                  "sqlite",
+                  "specification"
+                ]
+              },
+              "sidebar": "sql",
+              "previous": {
+                "title": "SQL",
+                "permalink": "/category/sql"
               }
             },
             {
@@ -382,7 +851,7 @@
               "source": "@site/docs/template.md",
               "sourceDirName": ".",
               "slug": "/template",
-              "permalink": "/docs/template",
+              "permalink": "/template",
               "draft": false,
               "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/template.md",
               "tags": [],
@@ -401,99 +870,209 @@
                 ],
                 "image": "img/tableland/example-image.png",
                 "slug": "template"
-              },
-              "sidebar": "tutorialSidebar",
-              "next": {
-                "title": "Tutorial Intro",
-                "permalink": "/docs/autogen-examples/intro"
               }
             }
           ],
           "drafts": [],
           "sidebars": {
-            "tutorialSidebar": [
-              {
-                "type": "doc",
-                "id": "template",
-                "label": "Page Title"
-              },
+            "tablelandBasics": [
               {
                 "type": "category",
-                "label": "autogen-examples",
-                "collapsible": true,
-                "collapsed": true,
+                "label": "Tableland basics",
+                "link": {
+                  "type": "generated-index",
+                  "slug": "/category/tableland-basics",
+                  "permalink": "/category/tableland-basics"
+                },
                 "items": [
                   {
                     "type": "doc",
-                    "id": "autogen-examples/intro"
-                  },
-                  {
-                    "type": "category",
-                    "label": "tutorial-basics",
-                    "collapsible": true,
-                    "collapsed": true,
-                    "items": [
-                      {
-                        "type": "doc",
-                        "id": "autogen-examples/tutorial-basics/create-a-page"
-                      },
-                      {
-                        "type": "doc",
-                        "id": "autogen-examples/tutorial-basics/create-a-document"
-                      },
-                      {
-                        "type": "doc",
-                        "id": "autogen-examples/tutorial-basics/create-a-blog-post"
-                      },
-                      {
-                        "type": "doc",
-                        "id": "autogen-examples/tutorial-basics/markdown-features"
-                      },
-                      {
-                        "type": "doc",
-                        "id": "autogen-examples/tutorial-basics/deploy-your-site"
-                      },
-                      {
-                        "type": "doc",
-                        "id": "autogen-examples/tutorial-basics/congratulations"
-                      }
-                    ]
-                  },
-                  {
-                    "type": "category",
-                    "label": "tutorial-extras",
-                    "collapsible": true,
-                    "collapsed": true,
-                    "items": [
-                      {
-                        "type": "doc",
-                        "id": "autogen-examples/tutorial-extras/manage-docs-versions"
-                      },
-                      {
-                        "type": "doc",
-                        "id": "autogen-examples/tutorial-extras/translate-your-site"
-                      }
-                    ]
+                    "id": "learn/tableland/what-is-tableland"
                   }
-                ]
-              },
+                ],
+                "collapsed": true,
+                "collapsible": true
+              }
+            ],
+            "sqlBasics": [
               {
                 "type": "category",
-                "label": "contribute",
-                "collapsible": true,
-                "collapsed": true,
+                "label": "SQL basics",
+                "link": {
+                  "type": "generated-index",
+                  "slug": "/category/sql-basics",
+                  "permalink": "/category/sql-basics"
+                },
                 "items": [
                   {
                     "type": "doc",
-                    "id": "contribute/guidelines",
-                    "label": "Contributor guidelines"
+                    "id": "learn/sql/what-is-sql"
+                  }
+                ],
+                "collapsed": true,
+                "collapsible": true
+              }
+            ],
+            "blockchainBasics": [
+              {
+                "type": "category",
+                "label": "Blockchain basics",
+                "link": {
+                  "type": "generated-index",
+                  "slug": "/category/blockchain-basics",
+                  "permalink": "/category/blockchain-basics"
+                },
+                "items": [
+                  {
+                    "type": "doc",
+                    "id": "learn/blockchain/what-is-blockchain"
+                  }
+                ],
+                "collapsed": true,
+                "collapsible": true
+              }
+            ],
+            "sdk": [
+              {
+                "type": "category",
+                "label": "SDK",
+                "link": {
+                  "type": "generated-index",
+                  "slug": "/category/sdk",
+                  "permalink": "/category/sdk"
+                },
+                "items": [
+                  {
+                    "type": "doc",
+                    "id": "sdk/getting-started"
                   },
                   {
                     "type": "doc",
-                    "id": "contribute/maintainers",
-                    "label": "Maintainers"
+                    "id": "sdk/connect"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "sdk/create"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "sdk/write"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "sdk/read"
                   }
-                ]
+                ],
+                "collapsed": true,
+                "collapsible": true
+              }
+            ],
+            "cli": [
+              {
+                "type": "category",
+                "label": "CLI",
+                "link": {
+                  "type": "generated-index",
+                  "slug": "/category/cli",
+                  "permalink": "/category/cli"
+                },
+                "items": [
+                  {
+                    "type": "doc",
+                    "id": "cli/getting-started"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "cli/connect"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "cli/create"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "cli/write"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "cli/read"
+                  }
+                ],
+                "collapsed": true,
+                "collapsible": true
+              }
+            ],
+            "smartContracts": [
+              {
+                "type": "category",
+                "label": "Smart contracts",
+                "link": {
+                  "type": "generated-index",
+                  "slug": "/category/smart-contracts",
+                  "permalink": "/category/smart-contracts"
+                },
+                "items": [
+                  {
+                    "type": "doc",
+                    "id": "smart-contracts/getting-started"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "smart-contracts/connect"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "smart-contracts/create"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "smart-contracts/write"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "smart-contracts/read"
+                  }
+                ],
+                "collapsed": true,
+                "collapsible": true
+              }
+            ],
+            "sql": [
+              {
+                "type": "category",
+                "label": "SQL",
+                "link": {
+                  "type": "generated-index",
+                  "slug": "/category/sql",
+                  "permalink": "/category/sql"
+                },
+                "items": [
+                  {
+                    "type": "doc",
+                    "id": "sql/sql-spec"
+                  }
+                ],
+                "collapsed": true,
+                "collapsible": true
+              }
+            ],
+            "validator": [
+              {
+                "type": "category",
+                "label": "Protocol",
+                "link": {
+                  "type": "generated-index",
+                  "slug": "/category/protocol",
+                  "permalink": "/category/protocol"
+                },
+                "items": [
+                  {
+                    "type": "doc",
+                    "id": "protocol/validator-spec"
+                  }
+                ],
+                "collapsed": true,
+                "collapsible": true
               }
             ]
           }

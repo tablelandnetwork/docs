@@ -1,0 +1,25 @@
+{
+  "unversionedId": "specs/asdf",
+  "id": "specs/asdf",
+  "title": "asdf",
+  "description": "",
+  "source": "@site/docs/specs/asdf.md",
+  "sourceDirName": "specs",
+  "slug": "/specs/asdf",
+  "permalink": "/specs/asdf",
+  "draft": false,
+  "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/specs/asdf.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "hide_title": true
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Style guide",
+    "permalink": "/contribute/style-guide"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "unversionedId": "specs/index",
+  "id": "specs/index",
+  "title": "index",
+  "description": "",
+  "source": "@site/docs/specs/index.md",
+  "sourceDirName": "specs",
+  "slug": "/specs/",
+  "permalink": "/specs/",
+  "draft": false,
+  "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/specs/index.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "hide_title": true
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Style guide",
+    "permalink": "/contribute/style-guide"
+  }
+}

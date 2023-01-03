@@ -1,0 +1,26 @@
+{
+  "unversionedId": "sdk copy/read",
+  "id": "sdk copy/read",
+  "title": "Reading tables",
+  "description": "Openly readable tables by your applications.",
+  "source": "@site/docs/sdk copy/read.md",
+  "sourceDirName": "sdk copy",
+  "slug": "/sdk copy/read",
+  "permalink": "/sdk copy/read",
+  "draft": false,
+  "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/sdk copy/read.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "title": "Reading tables",
+    "description": "Openly readable tables by your applications.",
+    "synopsis": "Reading from tables is entirely open (for anyone), allowing for true composability. Write SQL qeuries—but with some limitations that are due to the nature of decentralized networks and deterministic requirements.",
+    "keywords": [
+      "write to table",
+      "mutate table"
+    ]
+  }
+}

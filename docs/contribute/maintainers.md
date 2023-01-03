@@ -1,17 +1,12 @@
 ---
-id: maintainers
 title: Maintainers
-sidebar_position: 2
-sidebar_label: Maintainers
-description: A list of Tableland maintainers
+description: Core contributors to the Tableland protocol's documentation.
 keywords:
   - docs
   - tableland
   - maintainers
   - contributors
 ---
-
-The following provides a list of regular contributors to the Tableland documentation and their GitHub contact information.
 
 ## General Documentation
 

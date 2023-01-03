@@ -24,37 +24,36 @@
   --ifm-font-family-base: "Inter", sans-serif;
   --ifm-font-family-monospace: "Inconsolata", monospace;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+  /* Change the heading font sizes */
   --h1-font-size: 2rem;
   --h2-font-size: 1.5rem;
   --h3-font-size: 1.25rem;
   --h4-font-size: 1rem; /* Equal to body's font size */
-  --h5-font-size: 1rem; /* Same as `h4` but won't show up in table of contents */
-  --h6-font-size: 0.875rem;
+  --h5-font-size: 0.875rem;
+  --h6-font-size: 0.85rem;
   --ifm-h1-font-size: var(--h1-font-size);
   --ifm-h2-font-size: var(--h2-font-size);
   --ifm-h3-font-size: var(--h3-font-size);
   --ifm-h4-font-size: var(--h4-font-size);
   --ifm-h5-font-size: var(--h5-font-size);
   --ifm-h6-font-size: var(--h6-font-size);
-  /* Decrease the amount of spacing under an `h1` and between elements */
-  --ifm-h1-vertical-rhythm-bottom: 0.5;
-  --ifm-leading: calc(var(--ifm-leading-desktop) * 0.75rem);
+  /* Decrease sidebar width and don't change background on hover */
+  --doc-sidebar-width: 17rem !important;
+  --ifm-menu-color-background-hover: none;
+  --ifm-menu-link-padding-vertical: 0.3rem;
+  --ifm-menu-color: var(--ifm-color-content-secondary);
 }
 
-/* Change the color of the body to a dark grey but keep headings black*/
+/* Change the font color of the content to a dark grey but keep headings black*/
 [data-theme="light"] {
   --ifm-color-content: var(--ifm-color-gray-800);
   --ifm-heading-color: var(--ifm-color-gray-1000);
 }
 
-/* Change the color of the body to a dark grey but keep headings black*/
-.markdown h2:first-of-type {
-  font-weight: 400;
-}
-
 /* Dark mode */
 [data-theme="dark"] {
   /* Colors */
+  --color-primary-rgb: 117, 182, 181;
   --ifm-color-primary: #75b6b5;
   --ifm-color-primary-dark: #3b706f;
   --ifm-color-primary-darker: #2c5453;
@@ -66,32 +65,6 @@
   /* Make the navbar the same color as the background; include bottom box shadow */
   --ifm-navbar-background-color: var(--ifm-background-color);
   --ifm-navbar-shadow: 0 1px 2px 0 var(--ifm-color-emphasis-200);
-}
-
-/* Don't dim the site logo on hover in dark mode */
-[data-theme="dark"] .navbar__brand:hover {
-  filter: brightness(1);
-}
-
-/* Ensure markdown files have the same setting as the `--ifm` header variables */
-.markdown,
-.markdown > h1,
-.markdown > h2,
-.markdown > h3,
-.markdown > h4,
-.markdown > h5,
-.markdown > h6 {
-  --ifm-h1-font-size: var(--h1-font-size);
-  --ifm-h2-font-size: var(--h2-font-size);
-  --ifm-h3-font-size: var(--h3-font-size);
-  --ifm-h4-font-size: var(--h4-font-size);
-  --ifm-h5-font-size: var(--h5-font-size);
-  --ifm-h6-font-size: var(--h6-font-size);
-}
-
-/* Correct h1 defaulting to 3rem */
-.markdown h1:first-child {
-  --ifm-h1-font-size: var(--h1-font-size);
 }
 
 /* A few general CSS fixes */
@@ -112,26 +85,68 @@ html {
   width: device-width;
 }
 
-article {
-  max-width: 700px;
+/* All docs pages are the first `.container` in `main`; reduce the max width for some visual spacing */
+main > .container {
+  max-width: 1100px;
   margin-left: auto;
   margin-right: auto;
 }
 
+/* Ensure markdown files have the same setting as the `--ifm` header variables */
+.markdown,
+.markdown h1,
+.markdown h2,
+.markdown h3,
+.markdown h4,
+.markdown h5,
+.markdown h6 {
+  --ifm-h1-font-size: var(--h1-font-size);
+  --ifm-h2-font-size: var(--h2-font-size);
+  --ifm-h3-font-size: var(--h3-font-size);
+  --ifm-h4-font-size: var(--h4-font-size);
+  --ifm-h5-font-size: var(--h5-font-size);
+  --ifm-h6-font-size: var(--h6-font-size);
+}
+
+main > .container,
+main > .container h1,
+main > .container h2,
+main > .container h3,
+main > .container h4,
+main > .container h5,
+main > .container h6 {
+  --ifm-h1-font-size: var(--h1-font-size);
+  --ifm-h2-font-size: var(--h2-font-size);
+  --ifm-h3-font-size: var(--h3-font-size);
+  --ifm-h4-font-size: var(--h4-font-size);
+  --ifm-h5-font-size: var(--h5-font-size);
+  --ifm-h6-font-size: var(--h6-font-size);
+}
+
+/* Correct h1 defaulting to 3rem and decrease bottom spacing */
+.markdown h1:first-child {
+  --ifm-h1-font-size: var(--h1-font-size);
+  margin-bottom: calc(var(--ifm-h1-vertical-rhythm-bottom) * 0.3rem);
+}
+
+/* Inline code snippets should not wrap */
+.markdown > p code {
+  white-space: nowrap;
+}
+
 /* Announcement bar overrides */
 div[class^="announcementBar"] {
-  background-color: var(--ifm-background-surface-color);
-  color: var(--ifm-font-color-base);
+  background-color: var(--ifm-color-primary-light);
+  color: var(--ifm-color-secondary-lightest);
 }
 
 div[class^="announcementBar"] a {
-  color: var(--ifm-link-color);
+  color: var(--ifm-color-primary-darker);
   text-decoration: inherit;
 }
 
-div[class^="announcementBar"] a:hover {
-  color: var(--ifm-link-color);
-  text-decoration: underline;
+[data-theme="dark"] div[class^="announcementBar"] {
+  background-color: var(--ifm-color-primary);
 }
 
 /* Custom error css, set in the magic comments in docusaurus config */
@@ -146,12 +161,12 @@ div[class^="announcementBar"] a:hover {
 /* Make anchors slightly bolded */
 a {
   font-weight: var(--ifm-font-weight-semibold);
+  transition: color var(--ifm-transition-fast);
 }
 
-/* Darken color on link hover */
+/* Darken color on link hover; lighten on dark mode */
 a:hover {
-  color: rgba(var(--ifm-link-color), 0.5);
-  transition: color var(--ifm-transition-fast);
+  color: rgba(var(--ifm-link-color), 0);
 }
 
 /* In tooltips, highlight anchors are embedded links and change opacity on hover */
@@ -166,10 +181,10 @@ a:hover {
   transition: opacity var(--ifm-transition-fast);
 }
 
-/* Inline code snippets should not wrap */
-/* code {
-  white-space: nowrap;
-} */
+/* Don't darken the heading's `#` anchor tag on hover */
+.hash-link:hover {
+  color: var(--ifm-link-color);
+}
 
 /* GitHub class / SVG, used in `docusaurus.config.js */
 .header-github-link:hover {
@@ -196,9 +211,8 @@ html[data-theme="dark"] .header-github-link:before {
   outline: var(--ifm-color-primary) auto 2px;
 }
 
-/* Override style for buttons */
-.button,
-button {
+/* Custom style for buttons */
+.btn {
   cursor: pointer;
   font-size: inherit;
   line-height: 1.5rem;
@@ -210,11 +224,6 @@ button {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
   background-color: var(--ifm-color-primary-dark);
   color: #ffffff !important;
-}
-
-.button:hover,
-button:hover {
-  filter: brightness(1);
 }
 
 /* Change the `Tab` component's border radius to be more square */
@@ -230,6 +239,61 @@ button:hover {
 
 .hero__title {
   font-size: var(--h1-font-size);
+}
+
+/* Every markdown page with front matter `description` uses a larger font size */
+.page-description {
+  font-size: var(--h2-font-size);
+}
+
+/* Reduce font size in sidebar, bold the active sidebar page, and don't change active link color on hover */
+.menu__list {
+  font-size: var(--h5-font-size);
+}
+
+.menu__link--active {
+  font-weight: var(--ifm-font-weight-semibold);
+}
+
+.menu__link:not(.menu__link--active) {
+  opacity: 0.8;
+  transition: opacity var(--ifm-transition-fast);
+}
+
+.menu__link:not(.menu__link--active):hover {
+  opacity: 1;
+}
+
+/* Decrease size of sidebar toggle caret */
+.menu__link--sublist-caret:after {
+  background: var(--ifm-menu-link-sublist-icon) 50% / 1.25rem 1.25rem;
+}
+
+.menu__caret::before {
+  background: var(--ifm-menu-link-sublist-icon) 50% / 1.25rem 1.25rem;
+}
+
+/* Make table of contents match sidebar's colors & highlighting */
+.table-of-contents__link:not(.table-of-contents__link--active) {
+  opacity: 0.8;
+  transition: opacity var(--ifm-transition-fast);
+}
+
+.table-of-contents__link:not(.table-of-contents__link--active):hover {
+  opacity: 1;
+  color: var(--ifm-color-content-secondary);
+}
+
+/* Pagination fix to not change font color on hover; also, change icons */
+.pagination-nav__link:hover {
+  color: var(--ifm-link-color);
+}
+
+.pagination-nav__link--next .pagination-nav__label::after {
+  content: " →";
+}
+.pagination-nav__link--prev .pagination-nav__label::before {
+  content: "← ";
 }
 
 /* Custom fonts for the site */

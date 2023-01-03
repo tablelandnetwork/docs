@@ -1,0 +1,35 @@
+{
+  "unversionedId": "smart-contracts/getting-started",
+  "id": "smart-contracts/getting-started",
+  "title": "Getting started",
+  "description": "Get up an running with the Tableland SDK.",
+  "source": "@site/docs/smart-contracts/getting-started.md",
+  "sourceDirName": "smart-contracts",
+  "slug": "/smart-contracts/getting-started",
+  "permalink": "/smart-contracts/getting-started",
+  "draft": false,
+  "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/smart-contracts/getting-started.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "title": "Getting started",
+    "description": "Get up an running with the Tableland SDK.",
+    "synopsis": "Dive into the basics for connecting, creating, writing, and reading from tables. More detailed information is provided in subsequent overviews, but the details provided here should allow developers to quickly understand where to start.",
+    "keywords": [
+      "SQL query",
+      "Tableland SDK"
+    ]
+  },
+  "sidebar": "smartContracts",
+  "previous": {
+    "title": "Smart contracts",
+    "permalink": "/category/smart-contracts"
+  },
+  "next": {
+    "title": "Connecting to Tableland",
+    "permalink": "/smart-contracts/connect"
+  }
+}

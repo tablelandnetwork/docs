@@ -1,0 +1,11 @@
+{
+  "title": "Protocol",
+  "slug": "/category/protocol",
+  "permalink": "/category/protocol",
+  "navigation": {
+    "next": {
+      "title": "Validator specification",
+      "permalink": "/protocol/validator-spec"
+    }
+  }
+}

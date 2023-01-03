@@ -2,29 +2,28 @@
   "unversionedId": "contribute/guidelines",
   "id": "contribute/guidelines",
   "title": "How to contribute",
-  "description": "Understand how to contribute",
+  "description": "Get involved and contribute to the Tableland ecosystem.",
   "source": "@site/docs/contribute/guidelines.md",
   "sourceDirName": "contribute",
   "slug": "/contribute/guidelines",
-  "permalink": "/docs/contribute/guidelines",
+  "permalink": "/contribute/guidelines",
   "draft": false,
   "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/contribute/guidelines.md",
   "tags": [
     {
       "label": "contributing",
-      "permalink": "/docs/tags/contributing"
+      "permalink": "/tags/contributing"
     }
   ],
   "version": "current",
   "lastUpdatedBy": "Author",
   "lastUpdatedAt": 1539502055,
   "formattedLastUpdatedAt": "Oct 14, 2018",
-  "sidebarPosition": 1,
   "frontMatter": {
     "title": "How to contribute",
-    "sidebar_position": 1,
     "sidebar_label": "Contributor guidelines",
-    "description": "Understand how to contribute",
+    "description": "Get involved and contribute to the Tableland ecosystem.",
+    "synopsis": "Tableland welcomes new collaborators and contributions. The protocol is constantly growing and looking for help from community members, and we've open sourced all of our code, documentation, and tutorials to make this possible. Learn more about where to begin and stylistic guidelines & features about the docs site, in particular.",
     "keywords": [
       "docs",
       "tableland",
@@ -35,14 +34,5 @@
     "tags": [
       "contributing"
     ]
-  },
-  "sidebar": "tutorialSidebar",
-  "previous": {
-    "title": "Translate your site",
-    "permalink": "/docs/autogen-examples/tutorial-extras/translate-your-site"
-  },
-  "next": {
-    "title": "Maintainers",
-    "permalink": "/docs/contribute/maintainers"
   }
 }

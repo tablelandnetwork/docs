@@ -1,0 +1,31 @@
+{
+  "unversionedId": "learn/tableland/what-is-tableland",
+  "id": "learn/tableland/what-is-tableland",
+  "title": "What is Tableland",
+  "description": "Learn about the basics of the Tableland network.",
+  "source": "@site/docs/learn/tableland/what-is-tableland.md",
+  "sourceDirName": "learn/tableland",
+  "slug": "/learn/tableland/what-is-tableland",
+  "permalink": "/learn/tableland/what-is-tableland",
+  "draft": false,
+  "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/learn/tableland/what-is-tableland.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "title": "What is Tableland",
+    "description": "Learn about the basics of the Tableland network.",
+    "synopsis": "Tableland is a web3 native SQL database.",
+    "keywords": [
+      "Tableland",
+      "about"
+    ]
+  },
+  "sidebar": "tablelandBasics",
+  "previous": {
+    "title": "Tableland basics",
+    "permalink": "/category/tableland-basics"
+  }
+}

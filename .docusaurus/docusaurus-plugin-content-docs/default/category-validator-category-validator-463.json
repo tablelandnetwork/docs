@@ -1,0 +1,11 @@
+{
+  "title": "Validator",
+  "slug": "/category/validator",
+  "permalink": "/category/validator",
+  "navigation": {
+    "next": {
+      "title": "SQL Specification",
+      "permalink": "/validator/validator-spec"
+    }
+  }
+}

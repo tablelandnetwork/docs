@@ -1,0 +1,27 @@
+{
+  "unversionedId": "sdk/reads",
+  "id": "sdk/reads",
+  "title": "reads",
+  "description": "",
+  "source": "@site/docs/sdk/reads.md",
+  "sourceDirName": "sdk",
+  "slug": "/sdk/reads",
+  "permalink": "/sdk/reads",
+  "draft": false,
+  "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/sdk/reads.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "overview",
+    "permalink": "/sdk/overview"
+  },
+  "next": {
+    "title": "writes",
+    "permalink": "/sdk/writes"
+  }
+}

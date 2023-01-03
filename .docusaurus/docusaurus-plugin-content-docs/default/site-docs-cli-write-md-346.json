@@ -1,0 +1,35 @@
+{
+  "unversionedId": "cli/write",
+  "id": "cli/write",
+  "title": "Writing to tables",
+  "description": "Mutate your table values with additional access control.",
+  "source": "@site/docs/cli/write.md",
+  "sourceDirName": "cli",
+  "slug": "/cli/write",
+  "permalink": "/cli/write",
+  "draft": false,
+  "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/cli/write.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "title": "Writing to tables",
+    "description": "Mutate your table values with additional access control.",
+    "synopsis": "Table values can be mutated by the table owner or provisioned actors.",
+    "keywords": [
+      "write to table",
+      "mutate table"
+    ]
+  },
+  "sidebar": "cli",
+  "previous": {
+    "title": "Creating tables",
+    "permalink": "/cli/create"
+  },
+  "next": {
+    "title": "Reading tables",
+    "permalink": "/cli/read"
+  }
+}
