@@ -376,3 +376,25 @@ If the `JOIN` operator does not include an `ON` or `USING` clause, then the resu
 - If there is an `ON` clause then the `ON` expression is evaluated for each row of the cartesian product as a [boolean expression](https://sqlite.org/lang_expr.html#booleanexpr). Only rows for which the expression evaluates to true are included from the dataset.
 - If there is a `USING` clause then each of the column names specified must exist in the datasets to both the left and right of the `JOIN` operator. For each pair of named columns, the expression "lhs.X = rhs.X" is evaluated for each row of the cartesian product as a boolean expression. Only rows for which all such expressions evaluates to true are included from the result set. The column from the dataset on the left-hand side of the `JOIN` operator is considered to be on the left-hand side of the comparison operator (=) for the purposes of comparison.
   For each pair of columns identified by a `USING` clause, the column from the right-hand dataset is omitted from the joined dataset. This is the only difference between a `USING` clause and its equivalent `ON` constraint.
+
+## Custom functions
+
+The Tableland SQL Specification includes several web3 native functions that simplify working with blockchain transactions. The list of custom functions may grow over time.
+
+### `TXN_HASH()`
+
+The Validator will replace this text with the hash of the transaction that delivered the SQL event (only available in write queries).
+
+```sql
+INSERT INTO {table_name} VALUES (TXN_HASH());
+```
+
+### `BLOCK_NUM()`
+
+The Validator will replace this text with the number of the block that delivered the SQL event (only available in write queries).
+
+```sql
+INSERT INTO {table_name} VALUES (BLOCK_NUM());
+```
+
+If `BLOCK_NUM` is called with an integer argument (i.e., `BLOCK_NUM(<chain_id>)`), the Validator will replace this text with the number of the _last seen_ block for the given chain (only available to read queries).

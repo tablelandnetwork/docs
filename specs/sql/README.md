@@ -40,6 +40,9 @@ This general SQL specification is broken down into two core sub-documents (which
     -   [`JOIN` clause](#join-clause)
         -   [Structure](#structure-8)
         -   [Details](#details-8)
+    -   [Custom functions](#custom-functions)
+        -   [`TXN_HASH()`](#txn_hash)
+        -   [`BLOCK_NUM()`](#block_num)
 -   [Data Types](#data-types)
     -   [Details](#details-9)
     -   [Common Types](#common-types)
@@ -813,6 +816,35 @@ clauses, those are handled according to the following rules:
     difference between a `USING` clause and its equivalent `ON`
     constraint.
 
+## Custom functions
+
+The Tableland SQL Specification includes several web3 native functions
+that simplify working with blockchain transactions. The list of custom
+functions may grow over time.
+
+### `TXN_HASH()`
+
+The Validator will replace this text with the hash of the transaction
+that delivered the SQL event (only available in write queries).
+
+``` sql
+INSERT INTO {table_name} VALUES (TXN_HASH());
+```
+
+### `BLOCK_NUM()`
+
+The Validator will replace this text with the number of the block that
+delivered the SQL event (only available in write queries).
+
+``` sql
+INSERT INTO {table_name} VALUES (BLOCK_NUM());
+```
+
+If `BLOCK_NUM` is called with an integer argument (i.e.,
+`BLOCK_NUM(<chain_id>)`), the Validator will replace this text with the
+number of the *last seen* block for the given chain (only available to
+read queries).
+
 # Data Types
 
 Tableland supports a small set of accepted column types in user-defined
@@ -900,16 +932,10 @@ and/or times. Instead, users of Tableland can store dates and times as
 -   `INTEGER` as Unix Time (number of seconds since (or before)
     1970-01-01 00:00:00 UTC).
 
-Applications can choose to store dates and times in any of these (or
-other) formats and freely convert between formats using various date and
-time functions. Tableland currently supports the [six date and time
-functions](https://sqlite.org/lang_datefunc.html) provided by the SQLite
-database engine.
-
-> 🚧 **Feature At Risk**: Note that these date and time function have not
-> yet been formalized into the Tableland SQL Specification. You are
-> welcome to use them for now, but they should be considered unstable
-> features.
+**Tableland does not support any of the [date nor time
+functions](https://sqlite.org/lang_datefunc.html)** provided by the
+SQLite database engine. Namely, these functions can lead to
+non-deterministic behavior, so they are not available.
 
 ### JSON
 
