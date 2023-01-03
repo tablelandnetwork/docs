@@ -22,29 +22,32 @@ This general SQL specification is broken down into two core sub-documents (which
     -   [INSERT](#insert)
         -   [Structure](#structure-2)
         -   [Details](#details-2)
-    -   [UPDATE](#update)
+    -   [UPSERT](#upsert)
         -   [Structure](#structure-3)
         -   [Details](#details-3)
-    -   [GRANT/REVOKE](#grantrevoke)
+    -   [UPDATE](#update)
         -   [Structure](#structure-4)
         -   [Details](#details-4)
-    -   [SELECT](#select)
+    -   [GRANT/REVOKE](#grantrevoke)
         -   [Structure](#structure-5)
         -   [Details](#details-5)
-    -   [`WHERE` clause](#where-clause)
+    -   [SELECT](#select)
         -   [Structure](#structure-6)
         -   [Details](#details-6)
-    -   [`FROM` clause](#from-clause)
+    -   [`WHERE` clause](#where-clause)
         -   [Structure](#structure-7)
         -   [Details](#details-7)
-    -   [`JOIN` clause](#join-clause)
+    -   [`FROM` clause](#from-clause)
         -   [Structure](#structure-8)
         -   [Details](#details-8)
+    -   [`JOIN` clause](#join-clause)
+        -   [Structure](#structure-9)
+        -   [Details](#details-9)
     -   [Custom functions](#custom-functions)
         -   [`TXN_HASH()`](#txn_hash)
         -   [`BLOCK_NUM()`](#block_num)
 -   [Data Types](#data-types)
-    -   [Details](#details-9)
+    -   [Details](#details-10)
     -   [Common Types](#common-types)
         -   [Character](#character)
         -   [Integers](#integers)
@@ -485,7 +488,7 @@ the table id.
 ### Structure
 
 ``` sql
-DELETE FROM table_id [ WHERE condition ]
+DELETE FROM table_name [ WHERE condition ]
 ```
 
 ### Details
@@ -503,7 +506,7 @@ id.
 ### Structure
 
 ``` sql
-INSERT INTO table_id [ ( *column_name* [, ...] ) ] VALUES (
+INSERT INTO table_name [ ( *column_name* [, ...] ) ] VALUES (
   { expression } [, ...]
 );
 ```
@@ -511,7 +514,7 @@ INSERT INTO table_id [ ( *column_name* [, ...] ) ] VALUES (
 or
 
 ``` sql
-INSERT INTO table_id DEFAULT VALUES;
+INSERT INTO table_name DEFAULT VALUES;
 ```
 
 ### Details
@@ -536,6 +539,82 @@ new row into the named table. Each column of the new row is populated
 with its default value, or with a `NULL` if no default value is
 specified as part of the column definition in the `CREATE TABLE`
 statement.
+
+## UPSERT
+
+`UPSERT` is a special syntax addition to `INSERT` that causes the
+`INSERT` to behave as an `UPDATE` or a no-op if the `INSERT` would
+violate a uniqueness constraint. `UPSERT` is not standard SQL. `UPSERT`
+in Tableland follows the [syntax used in
+SQLite](https://www.sqlite.org/lang_UPSERT.html).
+
+### Structure
+
+``` sql
+INSERT INTO table_name [ ( *column_name* [, ...] ) ] VALUES (
+  { expression } [, ...]
+) [upsert_clause];
+```
+
+where `upsert_clause` has structure
+
+``` sql
+ON CONFLICT [ conflict_target ] conflict_action
+```
+
+where `conflict_target` has structure
+
+``` sql
+[ ( *column_name* [, ...] ) ]  [ WHERE condition ]
+```
+
+and `conflict_action` can be one of
+
+``` sql
+DO NOTHING
+```
+
+or
+
+``` sql
+DO UPDATE SET { column_name = { expression | DEFAULT } } [, ...]
+    [ WHERE condition ];
+```
+
+### Details
+
+An `UPSERT` is an ordinary `INSERT` statement that is followed by the
+special `ON CONFLICT` clause shown above.
+
+The syntax that occurs in between the "`ON CONFLICT`" and "`DO`"
+keywords is called the "conflict target". The conflict target specifies
+a specific uniqueness constraint that will trigger the upsert. The
+conflict target is required for `DO UPDATE` upserts, but is optional for
+`DO NOTHING`. When the conflict target is omitted, the upsert behavior
+is triggered by a violation of any uniqueness constraint on the table of
+the `INSERT`.
+
+If the insert operation would cause the uniqueness constraint identified
+by the `conflict_target` clause to fail, then the insert is omitted and
+either the `DO NOTHING` or `DO UPDATE` operation is performed instead.
+In the case of a multi-row insert, this decision is made separately for
+each row of the insert.
+
+The special `UPSERT` processing happens only for uniqueness constraint
+on the table that is receiving the `INSERT`. A "uniqueness constraint"
+is an explicit `UNIQUE` or `PRIMARY KEY` constraint within the
+`CREATE TABLE` statement, or a unique index. `UPSERT` does not intervene
+for failed `NOT NULL` constraints.
+
+Column names in the expressions of a `DO UPDATE` refer to the original
+unchanged value of the column, before the attempted `INSERT`.
+
+Note that the `DO UPDATE` clause acts only on the single row that
+experienced the constraint error during `INSERT`. It is not necessary to
+include a `WHERE` clause that restricts the action to that one row. The
+only use for the `WHERE` clause at the end of the `DO UPDATE` is to
+optionally change the `DO UPDATE` into a no-op depending on the original
+and/or new values.
 
 ## UPDATE
 
