@@ -204,7 +204,7 @@ The `DELETE` command removes records from the table identified by the table id.
 ### Structure
 
 ```sql
-DELETE FROM table_id [ WHERE condition ]
+DELETE FROM table_name [ WHERE condition ]
 ```
 
 ### Details
@@ -218,7 +218,7 @@ The `INSERT` command creates new rows in a table identified by the table id.
 ### Structure
 
 ```sql
-INSERT INTO table_id [ ( *column_name* [, ...] ) ] VALUES (
+INSERT INTO table_name [ ( *column_name* [, ...] ) ] VALUES (
   { expression } [, ...]
 );
 ```
@@ -226,7 +226,7 @@ INSERT INTO table_id [ ( *column_name* [, ...] ) ] VALUES (
 or
 
 ```sql
-INSERT INTO table_id DEFAULT VALUES;
+INSERT INTO table_name DEFAULT VALUES;
 ```
 
 ### Details
@@ -234,6 +234,57 @@ INSERT INTO table_id DEFAULT VALUES;
 An `INSERT` statement creates one or more new rows in an existing table. If the `column_name` list after `table_name` is omitted then the number of values inserted into each row must be the same as the number of columns in the table. In this case the result of evaluating the left-most expression from each term of the `VALUES` list is inserted into the left-most column of each new row, and so forth for each subsequent expression. If a `column_name` list is specified, then the number of values in each term of the `VALUE` list must match the number of specified columns. Each of the named columns of the new row is populated with the results of evaluating the corresponding `VALUES` expression. Table columns that do not appear in the column list are populated with the default column value (specified as part of the `CREATE TABLE` statement), or with `NULL` if no default value is specified.
 
 The alternative `INSERT ... DEFAULT VALUES` statement inserts a single new row into the named table. Each column of the new row is populated with its default value, or with a `NULL` if no default value is specified as part of the column definition in the `CREATE TABLE` statement.
+
+## UPSERT
+
+`UPSERT` is a special syntax addition to `INSERT` that causes the `INSERT` to behave as an `UPDATE` or a no-op if the `INSERT` would violate a uniqueness constraint. `UPSERT` is not standard SQL. `UPSERT` in Tableland follows the [syntax used in SQLite](https://www.sqlite.org/lang_UPSERT.html).
+
+### Structure
+
+```sql
+INSERT INTO table_name [ ( *column_name* [, ...] ) ] VALUES (
+  { expression } [, ...]
+) [upsert_clause];
+```
+
+where `upsert_clause` has structure
+
+```sql
+ON CONFLICT [ conflict_target ] conflict_action
+```
+
+where `conflict_target` has structure
+
+```sql
+[ ( *column_name* [, ...] ) ]  [ WHERE condition ]
+```
+
+and `conflict_action` can be one of
+
+```sql
+DO NOTHING
+```
+
+or
+
+```sql
+DO UPDATE SET { column_name = { expression | DEFAULT } } [, ...]
+    [ WHERE condition ];
+```
+
+### Details
+
+An `UPSERT` is an ordinary `INSERT` statement that is followed by the special `ON CONFLICT` clause shown above.
+
+The syntax that occurs in between the "`ON CONFLICT`" and "`DO`" keywords is called the "conflict target". The conflict target specifies a specific uniqueness constraint that will trigger the upsert. The conflict target is required for `DO UPDATE` upserts, but is optional for `DO NOTHING`. When the conflict target is omitted, the upsert behavior is triggered by a violation of any uniqueness constraint on the table of the `INSERT`.
+
+If the insert operation would cause the uniqueness constraint identified by the `conflict_target` clause to fail, then the insert is omitted and either the `DO NOTHING` or `DO UPDATE` operation is performed instead. In the case of a multi-row insert, this decision is made separately for each row of the insert.
+
+The special `UPSERT` processing happens only for uniqueness constraint on the table that is receiving the `INSERT`. A "uniqueness constraint" is an explicit `UNIQUE` or `PRIMARY KEY` constraint within the `CREATE TABLE` statement, or a unique index. `UPSERT` does not intervene for failed `NOT NULL` constraints.
+
+Column names in the expressions of a `DO UPDATE` refer to the original unchanged value of the column, before the attempted `INSERT`.
+
+Note that the `DO UPDATE` clause acts only on the single row that experienced the constraint error during `INSERT`. It is not necessary to include a `WHERE` clause that restricts the action to that one row. The only use for the `WHERE` clause at the end of the `DO UPDATE` is to optionally change the `DO UPDATE` into a no-op depending on the original and/or new values.
 
 ## UPDATE
 
