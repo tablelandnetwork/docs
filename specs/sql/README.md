@@ -132,37 +132,36 @@ and `table_constraint` has structure
 #### Table Identifiers/Names
 
 Every `CREATE TABLE` statement must specify a *fully-qualified table
-identifier* (id) as the name of the new table. The fully-qualified table
-identifier has the following structure:
+name* (name) as the name of the new table. The fully-qualified table
+name has the following structure:
 
 $$
-\mathtt{tableId} = \mathtt{prefix} + \mathtt{chainId} + \mathtt{tokenId}
+\mathtt{tableName} = \mathtt{prefix} + \mathtt{chainId} + \mathtt{tableId}
 $$
 
 Where $\mathtt{prefix}$ is optional. When a prefix is included, it must
 start with a letter and be followed by any combination of (zero or more)
 letters, numbers, and/or underscores. A prefix string may be up to 32
-bytes in length. A prefix string may be up to 32 bytes in length. In
-practice, long names with spaces must be slug-ified with underscores.
-For example, `“my amazing table"` would become `"my_amazing_table"`. The
-last two components of the table id, *must be* the chain id and the
-token id, which are numeric values separated by an underscore. For
-example, a valid table id without a prefix looks like `_42_0` (or
-`42_1`), whereas a valid table id *with* a prefix might look like
-`dogs_42_0`.
+bytes in length. In practice, long names with spaces must be slug-ified
+with underscores. For example, `"my amazing table"` would become
+`"my_amazing_table"`. The last two components of the table name, *must
+be* the chain id and the table id, which are numeric values separated by
+an underscore. For example, a valid table name without a prefix looks
+like `_42_0` (or `42_1`), whereas a valid table name *with* a prefix
+might look like `dogs_42_0`.
 
-> ⚠️ It is *not* up to the caller to determine what token id to use in a
-> `CREATE TABLE` statement. The token id is a monotonically-increasing
+> ⚠️ It is *not* up to the caller to determine what table id to use in a
+> `CREATE TABLE` statement. The table id is a monotonically-increasing
 > numeric value which is provided by the smart contract that is
 > processing the create statements. See the On-Chain API Specification
 > for details on the smart contract calls used to generate
 > `CREATE TABLE` statements in practice.
 
-Table identifiers must be globally unique. The combination of chain id
-and monotonically increasing token id ensures this is the case in
-practice. As such, the addition of a user-defined prefix string is an
-aesthetic feature that most developers will find useful (but is not
-required). The maximum (slug-ified) prefix length is 32 bytes.
+Table names are globally unique. The combination of chain id and
+monotonically increasing table id ensures this is the case in practice.
+As such, the addition of a user-defined prefix string is an aesthetic
+feature that most developers will find useful (but is not required). The
+maximum (slug-ified) prefix length is 32 bytes.
 
 > ℹ️ Tableland also supports quoted identifiers (for table names, column
 > names, etc). This allows callers to use SQL Keywords (see next
@@ -501,7 +500,7 @@ deleted. Rows for which the expression is false or `NULL` are retained.
 ## INSERT
 
 The `INSERT` command creates new rows in a table identified by the table
-id.
+name.
 
 ### Structure
 
@@ -515,6 +514,14 @@ or
 
 ``` sql
 INSERT INTO table_name DEFAULT VALUES;
+```
+
+or, the following limited sub-query syntax
+
+``` sql
+INSERT INTO table_name [ ( *column_name* [, ...] ) ] SELECT [ * | expression [, ...] ]
+    [ FROM from_clause [, ...] ]
+    [ WHERE where_clause ];
 ```
 
 ### Details
@@ -539,6 +546,24 @@ new row into the named table. Each column of the new row is populated
 with its default value, or with a `NULL` if no default value is
 specified as part of the column definition in the `CREATE TABLE`
 statement.
+
+The last form of the `INSERT` statement contains a `SELECT` statement
+instead of a `VALUES` clause. A new entry is inserted into the table for
+each row of data returned by executing the `SELECT` statement. If a
+column name list is specified, the number of columns in the result of
+the `SELECT` must be the same as the number of items in the column name
+list. Otherwise, if no column name list is specified, the number of
+columns in the result of the `SELECT` must be the same as the number of
+columns in the table. Only simple (flattened) `SELECT` statement may be
+used in an `INSERT` statement of this form. This means the SELECT
+statements cannot include UNIONs, JOINs, or further sub-queries.
+Additionally, only direct references to tables on the same chain are
+supported.
+
+> ⚠️ Currently, `HAVING` and `GROUP BY` clauses are not allowed in any
+> `SELECT` statements within an `INSERT`. Additionally, under the hood,
+> the Tableland Specification forces an implicit `ORDER BY rowid` clause
+> on the `SELECT` statement.
 
 ## UPSERT
 
@@ -619,7 +644,7 @@ and/or new values.
 ## UPDATE
 
 An `UPDATE` statement is used to modify a subset of the values stored in
-zero or more rows of the database table identified by the table id.
+zero or more rows of the database table identified by the table name.
 
 ### Structure
 
