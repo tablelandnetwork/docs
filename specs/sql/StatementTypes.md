@@ -453,7 +453,7 @@ The `table_or_subquery` is a table or sub-query of the form:
 
 ### Details
 
-All joins in Tableland are based on the cartesian product of the left and right-hand datasets. The columns of the cartesian product dataset are, in order, all the columns of the left-hand dataset followed by all the columns of the right-hand dataset. There is a row in the cartesian product dataset formed by combining each unique combination of a row from the left-hand and right-hand datasets. In other words, if the left-hand dataset consists of $N_l$ rows of $M_l$ columns, and the right-hand dataset of $N_r$ rows of $M_r$ columns, then the cartesian product is a dataset of $N_l ⨉ N_r$ rows, each containing $N_l + N_r$ columns.
+All joins in Tableland are based on the cartesian product of the left- and right-want databsets. The columns of the cartesian product dataset are, in order, all the columns of the left-hand dataset followed by all the columns of the right-hand dataset. This is a row in the cartesian product dataset formed by combining each unique combination of a raw from the left-hand and right-hand datasets. In other words, if the left-hand dataset consists of $N_{l}$ rows and $M_{l}$ columns, and the right-hand dataset of $N_{r}$ rows of $M_{r}$ columns, then the cartesian product is a dataset of $N_{l} \times N_{r}$ rows, each containing $N_{l} + N_{r}$ columns.
 
 If the join operator is "`CROSS JOIN`", "`INNER JOIN`", "`JOIN`" or a comma ("`,`") and there is no `ON` or `USING` clause, then the result of the join is simply the cartesian product of the left and right-hand datasets. If join operator does have `ON` or `USING` clauses, those are handled according to the following bullet points:
 
