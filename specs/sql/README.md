@@ -43,6 +43,7 @@ This general SQL specification is broken down into two core sub-documents (which
     -   [`JOIN` clause](#join-clause)
         -   [Structure](#structure-9)
         -   [Details](#details-9)
+    -   [Compound Select Statements](#compound-select-statements)
     -   [Custom functions](#custom-functions)
         -   [`TXN_HASH()`](#txn_hash)
         -   [`BLOCK_NUM()`](#block_num)
@@ -865,27 +866,47 @@ contents of the named table. If there is more than one table or
 sub-query in `FROM` clause, then the contents of all tables and/or
 sub-queries are joined into a single dataset for the simple `SELECT`
 statement to operate on. Exactly how the data is combined depends on the
-specific [`JOIN` clause](#join-clause) (i.e., the combination of `JOIN`
-operator and `JOIN` constraint) used to connect the tables or
-sub-queries together.
-
-> ℹ️ When more than two tables are joined together as part of a `FROM`
-> clause, the `JOIN` operations are processed in order from left to
-> right. In other words, the `FROM` clause (A *join-op-1* B *join-op-2*
-> C) is computed as ((A *join-op-1* B) *join-op-2* C).
+specific [`JOIN` clause](#join-clause) (i.e., the combination of join
+operator and join constraint) used to connect the tables or sub-queries
+together.
 
 ## `JOIN` clause
 
 ### Structure
 
 ``` sql
-JOIN from_clause [ ON on_expression | USING ( column_name [, ...] ) ]
+[ NATURAL ] join_type table_or_subquery [ ON on_expression | USING ( column_name [, ...] ) ]
+```
+
+where `join_type` is one of
+
+-   `[ INNER ] JOIN`
+-   `LEFT [ OUTER ] JOIN`
+-   `RIGHT [ OUTER ] JOIN`
+-   `FULL [ OUTER ] JOIN`
+
+> ℹ️ There is no difference between the "`INNER JOIN`", "`JOIN"` and
+> "`,`" join operators. They are completely interchangeable in
+> Tableland.
+
+or,
+
+``` sql
+CROSS JOIN table_or_subquery [ ON on_expression | USING ( column_name [, ...] ) ]
+```
+
+or, a series of comma-separated tables or sub-queries followed by an
+optional join constraint as in above.
+
+The `table_or_subquery` is a table or sub-query of the form:
+
+``` sql
+{ table_name [ [ AS ] alias ] | ( sub_select ) [ AS ] alias }
 ```
 
 ### Details
 
-Only simple `JOIN` clauses are supported in Tableland. This means that
-all joins in Tableland are based on the cartesian product of the left
+All joins in Tableland are based on the cartesian product of the left
 and right-hand datasets. The columns of the cartesian product dataset
 are, in order, all the columns of the left-hand dataset followed by all
 the columns of the right-hand dataset. There is a row in the cartesian
@@ -896,10 +917,11 @@ right-hand dataset of $N_r$ rows of $M_r$ columns, then the cartesian
 product is a dataset of $N_l \times N_r$ rows, each
 containing $N_l + N_r$ columns.
 
-If the `JOIN` operator does not include an `ON` or `USING` clause, then
-the result of the `JOIN` is simply the cartesian product of the left and
-right-hand datasets. If the `JOIN` operator does have `ON` or `USING`
-clauses, those are handled according to the following rules:
+If the join operator is "`CROSS JOIN`", "`INNER JOIN`", "`JOIN`" or a
+comma ("`,`") and there is no `ON` or `USING` clause, then the result of
+the join is simply the cartesian product of the left and right-hand
+datasets. If join operator does have `ON` or `USING` clauses, those are
+handled according to the following bullet points:
 
 -   If there is an `ON` clause then the `ON` expression is evaluated for
     each row of the cartesian product as a [boolean
@@ -907,18 +929,105 @@ clauses, those are handled according to the following rules:
     rows for which the expression evaluates to true are included from
     the dataset.
 -   If there is a `USING` clause then each of the column names specified
-    must exist in the datasets to both the left and right of the `JOIN`
+    must exist in the datasets to both the left and right of the join
     operator. For each pair of named columns, the expression "lhs.X =
-    rhs.X" is evaluated for each row of the cartesian product as
-    a boolean expression. Only rows for which all such expressions
-    evaluates to true are included from the result set. The column from
-    the dataset on the left-hand side of the `JOIN` operator is
-    considered to be on the left-hand side of the comparison operator
-    (=) for the purposes of comparison. For each pair of columns
-    identified by a `USING` clause, the column from the right-hand
-    dataset is omitted from the joined dataset. This is the only
-    difference between a `USING` clause and its equivalent `ON`
-    constraint.
+    rhs.X" is evaluated for each row of the cartesian product as a
+    boolean expression. Only rows for which all such expressions
+    evaluates to true are included from the result set. When comparing
+    values as a result of a `USING` clause, the normal rules for
+    handling affinities, collation sequences and `NULL` values in
+    comparisons apply. The column from the dataset on the left-hand side
+    of the join operator is considered to be on the left-hand side of
+    the comparison operator (`=`) for the purposes of collation sequence
+    and affinity precedence.
+-   For each pair of columns identified by a `USING` clause, the column
+    from the right-hand dataset is omitted from the joined dataset. This
+    is the only difference between a `USING` clause and its equivalent
+    `ON` constraint.
+-   If the `NATURAL` keyword is in the join operator then an implicit
+    `USING` clause is added to the join constraints. The implicit
+    `USING` clause contains each of the column names that appear in both
+    the left and right-hand input datasets. If the left and right-hand
+    input datasets feature no common column names, then the `NATURAL`
+    keyword has no effect on the results of the join. A `USING` or `ON`
+    clause may not be added to a join that specifies the `NATURAL`
+    keyword.
+-   If the join operator is a "`LEFT JOIN`" or "`LEFT OUTER JOIN`", then
+    after the `ON` or `USING` filtering clauses have been applied, an
+    extra row is added to the output for each row in the original
+    left-hand input dataset that does not match any row in the
+    right-hand dataset. The added rows contain `NULL` values in the
+    columns that would normally contain values copied from the
+    right-hand input dataset
+-   If the join operator is a "`RIGHT JOIN`" or "`RIGHT OUTER JOIN`",
+    then after the `ON` or `USING` filtering clauses have been applied,
+    an extra row is added to the output for each row in the original
+    right-hand input dataset that does not match any row in the
+    left-hand dataset. The added rows contain `NULL` values in the
+    columns that would normally contain values copied from the left-hand
+    input dataset.
+-   A "`FULL JOIN`" or "`FULL OUTER JOIN`" is a combination of a
+    "`LEFT JOIN`" and a "`RIGHT JOIN`". Extra rows of output are added
+    for each row in left dataset that matches no rows in the right, and
+    for each row in the right dataset that matches no rows in the left.
+    Unmatched columns are filled in with `NULL`.
+
+When more than two tables are joined together as part of a `FROM`
+clause, the join operations are processed in order from left to right.
+In other words, the `FROM` clause ($A + B + C$) is computed as
+$((A + B) + C)$.
+
+> ⚠️ The "`CROSS JOIN`" join operator produces the same result as the
+> "`INNER JOIN"`, "`JOIN`" and "`,`" operators, but is handled
+> differently by the query optimizer in that it prevents the query
+> optimizer from reordering the tables in the join. An application
+> programmer can use the `CROSS JOIN` operator to directly influence the
+> algorithm that is chosen to implement the `SELECT` statement. Avoid
+> using `CROSS JOIN` except in specific situations where manual control
+> of the query optimizer is desired. Avoid using `CROSS JOIN` early in
+> the development of an application as doing so is a [premature
+> optimization](http://wiki.c2.com/?PrematureOptimization). The special
+> handling of `CROSS JOIN` is an implementation detail. It is not a part
+> of standard SQL, and should not be relied upon.
+
+## Compound Select Statements
+
+Two or more simple `SELECT` statements may be connected together to form
+a compound `SELECT` using the `UNION`, `UNION ALL`, `INTERSECT` or
+`EXCEPT` operator.
+
+In a compound `SELECT`, all the constituent `SELECT`s must return the
+same number of result columns. As the components of a compound `SELECT`
+must be simple `SELECT` statements, they may not contain `ORDER BY` or
+`LIMIT` clauses. `ORDER BY` and `LIMIT` clauses may only occur at the
+end of the entire compound `SELECT`, and then only if the final element
+of the compound is not a `VALUES` clause.
+
+A compound `SELECT` created using `UNION ALL` operator returns all the
+rows from the `SELECT` to the left of the `UNION ALL` operator, and all
+the rows from the `SELECT` to the right of it. The `UNION` operator
+works the same way as `UNION ALL`, except that duplicate rows are
+removed from the final result set. The `INTERSECT` operator returns the
+intersection of the results of the left and right `SELECT`s. The
+`EXCEPT` operator returns the subset of rows returned by the left
+`SELECT` that are not also returned by the right-hand `SELECT`.
+Duplicate rows are removed from the results of `INTERSECT` and `EXCEPT`
+operators before the result set is returned.
+
+For the purposes of determining duplicate rows for the results of
+compound `SELECT` operators, `NULL` values are considered equal to other
+`NULL` values and distinct from all non-`NULL` values. The collation
+sequence used to compare two text values is determined as if the columns
+of the left and right-hand `SELECT` statements were the left and
+right-hand operands of the equals (`=`) operator, except that greater
+precedence is not assigned to a collation sequence specified with the
+postfix `COLLATE` operator. No affinity transformations are applied to
+any values when comparing rows as part of a compound `SELECT`.
+
+When three or more simple `SELECT`s are connected into a compound
+`SELECT`, they group from left to right. In other words, if $A$, $B$ and
+$C$ are all simple `SELECT` statements, $(A ⋆ B ⋆ C)$ is processed as
+$((A ⋆ B) ⋆ C)$.
 
 ## Custom functions
 
