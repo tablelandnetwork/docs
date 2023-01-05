@@ -914,7 +914,7 @@ product dataset formed by combining each unique combination of a row
 from the left-hand and right-hand datasets. In other words, if the
 left-hand dataset consists of $N_l$ rows of $M_l$ columns, and the
 right-hand dataset of $N_r$ rows of $M_r$ columns, then the cartesian
-product is a dataset of $N_l \times N_r$ rows, each
+product is a dataset of $N_l ⨉ N_r$ rows, each
 containing $N_l + N_r$ columns.
 
 If the join operator is "`CROSS JOIN`", "`INNER JOIN`", "`JOIN`" or a
@@ -930,12 +930,12 @@ handled according to the following bullet points:
     the dataset.
 -   If there is a `USING` clause then each of the column names specified
     must exist in the datasets to both the left and right of the join
-    operator. For each pair of named columns, the expression "lhs.X =
-    rhs.X" is evaluated for each row of the cartesian product as a
-    boolean expression. Only rows for which all such expressions
-    evaluates to true are included from the result set. When comparing
-    values as a result of a `USING` clause, the normal rules for
-    handling affinities, collation sequences and `NULL` values in
+    operator. For each pair of named columns, the expression
+    $X_{lhs} = X_{rhs}$ is evaluated for each row of the cartesian
+    product as a boolean expression. Only rows for which all such
+    expressions evaluates to true are included from the result set. When
+    comparing values as a result of a `USING` clause, the normal rules
+    for handling affinities, collation sequences and `NULL` values in
     comparisons apply. The column from the dataset on the left-hand side
     of the join operator is considered to be on the left-hand side of
     the comparison operator (`=`) for the purposes of collation sequence
@@ -974,7 +974,7 @@ handled according to the following bullet points:
 
 When more than two tables are joined together as part of a `FROM`
 clause, the join operations are processed in order from left to right.
-In other words, the `FROM` clause ($A + B + C$) is computed as
+In other words, the `FROM` clause $(A + B + C)$ is computed as
 $((A + B) + C)$.
 
 > ⚠️ The "`CROSS JOIN`" join operator produces the same result as the
