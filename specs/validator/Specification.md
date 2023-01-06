@@ -18,6 +18,8 @@ Base URLs:
 
 * <a href="https://testnets.tableland.network/api/v1">https://testnets.tableland.network/api/v1</a>
 
+* <a href="http://localhost:8080/api/v1">http://localhost:8080/api/v1</a>
+
 <a href="http://docs.tableland.xyz">Terms of service</a>
 Email: <a href="mailto:carson@textile.io">core devs</a> 
 License: <a href="http://www.apache.org/licenses/LICENSE-2.0.html">Apache 2.0</a>
@@ -36,7 +38,7 @@ Query the Tableland network
 
 ```shell
 # You can also use wget
-curl -X GET https://testnets.tableland.network/api/v1/query?statement=string \
+curl -X GET https://testnets.tableland.network/api/v1/query?statement=select%20%2A%20from%20healthbot_80001_1 \
   -H 'Accept: application/json'
 
 ```
@@ -81,6 +83,8 @@ Returns the results of a SQL read query against the Tabeland network
 |---|---|---|---|
 |200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|Successful operation|Inline|
 |400|[Bad Request](https://tools.ietf.org/html/rfc7231#section-6.5.1)|Invalid query/statement value|None|
+|404|[Not Found](https://tools.ietf.org/html/rfc7231#section-6.5.4)|Row Not Found|None|
+|429|[Too Many Requests](https://tools.ietf.org/html/rfc6585#section-4)|Too Many Requests|None|
 
 <h3 id="query-the-network-responseschema">Response Schema</h3>
 
@@ -124,7 +128,7 @@ Returns the status of a given transaction receipt by hash
 
 ```json
 {
-  "table_id": "healthbot_5_1",
+  "table_id": "1",
   "transaction_hash": "0x400508d7cc035b14cc53f64393a8dafcc55f66ad8f9b44d626744157337e2098",
   "block_number": 1,
   "chain_id": 80001,
@@ -140,6 +144,7 @@ Returns the status of a given transaction receipt by hash
 |200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|successful operation|[TransactionReceipt](#schematransactionreceipt)|
 |400|[Bad Request](https://tools.ietf.org/html/rfc7231#section-6.5.1)|Invalid chain identifier or transaction hash format|None|
 |404|[Not Found](https://tools.ietf.org/html/rfc7231#section-6.5.4)|No transaction receipt found with the provided hash|None|
+|429|[Too Many Requests](https://tools.ietf.org/html/rfc6585#section-4)|Too Many Requests|None|
 
 <aside class="success">
 This operation does not require authentication
@@ -173,7 +178,7 @@ Returns information about a single table, including schema information
 |Name|In|Type|Required|Description|
 |---|---|---|---|---|
 |chainId|path|integer(int32)|true|The parent chain to target|
-|tableId|path|integer(int64)|true|Table identifier|
+|tableId|path|string|true|Table identifier|
 
 > Example responses
 
@@ -215,7 +220,9 @@ Returns information about a single table, including schema information
 |---|---|---|---|
 |200|[OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)|successful operation|[Table](#schematable)|
 |400|[Bad Request](https://tools.ietf.org/html/rfc7231#section-6.5.1)|Invalid chain or table identifier|None|
-|404|[Not Found](https://tools.ietf.org/html/rfc7231#section-6.5.4)|Table not found|None|
+|404|[Not Found](https://tools.ietf.org/html/rfc7231#section-6.5.4)|Table Not Found|None|
+|429|[Too Many Requests](https://tools.ietf.org/html/rfc6585#section-4)|Too Many Requests|None|
+|500|[Internal Server Error](https://tools.ietf.org/html/rfc7231#section-6.6.1)|Internal Server Error|None|
 
 <aside class="success">
 This operation does not require authentication
@@ -392,7 +399,7 @@ continued
 
 ```json
 {
-  "table_id": "healthbot_5_1",
+  "table_id": "1",
   "transaction_hash": "0x400508d7cc035b14cc53f64393a8dafcc55f66ad8f9b44d626744157337e2098",
   "block_number": 1,
   "chain_id": 80001,
