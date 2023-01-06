@@ -129,8 +129,8 @@ Returns the status of a given transaction receipt by hash
 ```json
 {
   "table_id": "1",
-  "transaction_hash": "0x400508d7cc035b14cc53f64393a8dafcc55f66ad8f9b44d626744157337e2098",
-  "block_number": 1,
+  "transaction_hash": "0x02f319429b8a7be1cbb492f0bfbf740d2472232a2edadde7df7c16c0b61aa78b",
+  "block_number": 27055540,
   "chain_id": 80001,
   "error": "The query statement is invalid",
   "error_event_idx": 1
@@ -400,8 +400,8 @@ continued
 ```json
 {
   "table_id": "1",
-  "transaction_hash": "0x400508d7cc035b14cc53f64393a8dafcc55f66ad8f9b44d626744157337e2098",
-  "block_number": 1,
+  "transaction_hash": "0x02f319429b8a7be1cbb492f0bfbf740d2472232a2edadde7df7c16c0b61aa78b",
+  "block_number": 27055540,
   "chain_id": 80001,
   "error": "The query statement is invalid",
   "error_event_idx": 1

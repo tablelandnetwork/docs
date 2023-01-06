@@ -144,7 +144,7 @@ paths:
           required: true
           schema:
             type: string
-          example: "0x400508d7cc035b14cc53f64393a8dafcc55f66ad8f9b44d626744157337e2098"
+          example: "0x02f319429b8a7be1cbb492f0bfbf740d2472232a2edadde7df7c16c0b61aa78b"
       responses:
         "200":
           description: successful operation
@@ -250,11 +250,11 @@ components:
           example: "1"
         transaction_hash:
           type: string
-          example: "0x400508d7cc035b14cc53f64393a8dafcc55f66ad8f9b44d626744157337e2098"
+          example: "0x02f319429b8a7be1cbb492f0bfbf740d2472232a2edadde7df7c16c0b61aa78b"
         block_number:
           type: integer
           format: int64
-          example: 1
+          example: 27055540
         chain_id:
           type: integer
           format: int32
