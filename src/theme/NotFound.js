@@ -2,11 +2,14 @@ import React from "react";
 import Translate, { translate } from "@docusaurus/Translate";
 import { PageMetadata } from "@docusaurus/theme-common";
 import Layout from "@theme/Layout";
+import CustomFooter from "@theme/CustomFooter";
+import Link from "@docusaurus/Link";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 
 // This is an ejected `NotFound` component that customizes the 404 page
 export default function NotFound() {
   const { siteConfig } = useDocusaurusContext();
+
   return (
     <>
       <PageMetadata
@@ -24,23 +27,15 @@ export default function NotFound() {
                   id="theme.NotFound.title"
                   description="The title of the 404 page"
                 >
-                  Oops, not available.
+                  Page not found!
                 </Translate>
               </h1>
               <h4>
-                <i>
-                  <Translate
-                    id="theme.NotFound.p1"
-                    description="The first paragraph of the 404 page"
-                  >
-                    We're sorry
-                  </Translate>
-                </i>
                 <Translate
                   id="theme.NotFound.p1"
                   description="The first paragraph of the 404 page"
                 >
-                  ...we could not find what you were looking for.
+                  We're sorry...we could not find what you were looking for.
                 </Translate>
               </h4>
               <p>
@@ -64,8 +59,21 @@ export default function NotFound() {
               </p>
             </div>
           </div>
+          <div
+            style={{
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              marginTop: "2rem",
+            }}
+          >
+            <Link className="button button--secondary button--lg" to="/">
+              ← <Translate>Back to homepage</Translate>
+            </Link>
+          </div>
         </main>
       </Layout>
+      <CustomFooter />
     </>
   );
 }

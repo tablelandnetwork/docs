@@ -90,6 +90,7 @@ const config = {
       ({
         docs: {
           sidebarPath: "./sidebars.js",
+          navbarPath: "./navbar.js",
           routeBasePath: "/", // Use `/` instead of `/docs` for doc pages' base URL
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
@@ -177,122 +178,10 @@ const config = {
         minHeadingLevel: 2,
         maxHeadingLevel: 4,
       },
-      navbar: {
-        hideOnScroll: false,
-        title: "",
-        logo: {
-          alt: "Tableland logo",
-          src: "/img/tableland/logo-black.svg",
-          srcDark: "/img/tableland/logo-white.svg",
-          width: 200,
-          target: "_self",
-        },
-        items: [
-          {
-            type: "doc",
-            docId: "/category/cli",
-            position: "left",
-            label: "CLI",
-          },
-          {
-            type: "doc",
-            docId: "/category/smart-contracts",
-            position: "left",
-            label: "Smart contracts",
-          },
-          {
-            type: "doc",
-            docId: "/category/protocol",
-            position: "left",
-            label: "Protocol",
-          },
-          {
-            label: "Learn",
-            position: "left",
-            items: [
-              {
-                to: "/learn/tableland/what-is-tableland",
-                label: "Tableland",
-              },
-              {
-                to: "/learn/sql/what-is-sql",
-                label: "SQL",
-              },
-              {
-                to: "/learn/blockchain/what-is-blockchain",
-                label: "Blockchain",
-              },
-            ],
-          },
-          {
-            label: "Specs",
-            position: "left",
-            items: [
-              {
-                to: "/sql/sql-spec",
-                label: "SQL",
-              },
-              {
-                to: "/protocol/validator-spec",
-                label: "Validator",
-              },
-            ],
-          },
-          {
-            href: "https://dev.tableland.xyz",
-            position: "right",
-            label: "Tech Blog",
-            target: "_blank",
-            rel: null,
-          },
-          {
-            label: "Community",
-            position: "right",
-            items: [
-              {
-                to: "contribute/guidelines/",
-                label: "Contribute",
-              },
-              {
-                href: "https://discord.com/invite/dc8EBEhGbg",
-                label: "Discord",
-                target: "_blank",
-                rel: null,
-              },
-              {
-                href: "https://twitter.com/tableland__",
-                label: "Twitter",
-                target: "_blank",
-                rel: null,
-              },
-              {
-                href: "https://tableland.xyz/pilot-program/",
-                label: "Pilot Program",
-                target: "_blank",
-                rel: null,
-              },
-              {
-                href: "https://dev.tableland.xyz/showcase/",
-                label: "Showcase",
-                target: "_blank",
-                rel: null,
-              },
-            ],
-          },
-          {
-            href: "https://github.com/tablelandnetwork/",
-            position: "right",
-            className: "header-github-link",
-            "aria-label": "GitHub repository",
-          },
-          {
-            type: "search",
-            position: "right",
-          },
-        ],
-      },
-      footer: {
-        style: "dark",
+      // Change this from `footer` to `footerCustom`, and use `CustomFooter` over `Footer`
+      // Only render `CustomFooter` on the site landing page and `NotFound` page (instead of every page)
+      // In other words, since `footer` is not included, the `Footer` component is not rendered everywhere
+      customFooter: {
         links: [
           {
             title: "Developers",
@@ -333,27 +222,22 @@ const config = {
               {
                 href: "https://discord.com/invite/dc8EBEhGbg",
                 label: "Discord",
-                target: "_blank",
-                rel: null,
               },
               {
                 href: "https://twitter.com/tableland__",
                 label: "Twitter",
-                target: "_blank",
-                rel: null,
+              },
+              {
+                href: "https://www.youtube.com/@tablelandxyz",
+                label: "YouTube",
               },
               {
                 href: "https://tableland.xyz/pilot-program/",
-                position: "right",
                 label: "Pilot Program",
-                target: "_blank",
-                rel: null,
               },
               {
                 href: "https://dev.tableland.xyz/showcase/",
                 label: "Showcase",
-                target: "_blank",
-                rel: null,
               },
             ],
           },
@@ -362,17 +246,15 @@ const config = {
             items: [
               {
                 href: "https://tableland.xyz",
-                position: "right",
                 label: "Main site",
-                target: "_blank",
-                rel: null,
               },
               {
                 href: "https://dev.tableland.xyz",
-                position: "right",
                 label: "Tech Blog",
-                target: "_blank",
-                rel: null,
+              },
+              {
+                href: "https://mirror.xyz/tableland.eth",
+                label: "Main Blog",
               },
               {
                 label: "GitHub",
@@ -380,10 +262,7 @@ const config = {
               },
               {
                 href: "https://linktr.ee/textileio",
-                position: "right",
                 label: "Team",
-                target: "_blank",
-                rel: null,
               },
             ],
           },

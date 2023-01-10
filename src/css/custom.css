@@ -37,11 +37,16 @@
   --ifm-h4-font-size: var(--h4-font-size);
   --ifm-h5-font-size: var(--h5-font-size);
   --ifm-h6-font-size: var(--h6-font-size);
-  /* Decrease sidebar width and don't change background on hover */
+  /* Decrease sidebar width and padding; change color to match table of contents */
   --doc-sidebar-width: 17rem !important;
-  --ifm-menu-color-background-hover: none;
   --ifm-menu-link-padding-vertical: 0.3rem;
   --ifm-menu-color: var(--ifm-color-content-secondary);
+  /* Custom navbar and footer color */
+  --ifm-navbar-background-color: rgb(247, 250, 252);
+  --ifm-footer-background-color: var(--ifm-navbar-background-color);
+  /* Change `hr` section divider to be the same color as sidebar & TOC dividers */
+  --ifm-hr-background-color: var(--ifm-toc-border-color);
+  --ifm-button-border-radius: 0.4rem;
 }
 
 /* Change the font color of the content to a dark grey but keep headings black*/
@@ -63,7 +68,7 @@
   --ifm-color-primary-lightest: #77dddc;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
   /* Make the navbar the same color as the background; include bottom box shadow */
-  --ifm-navbar-background-color: var(--ifm-background-color);
+  --ifm-navbar-background-color: var(--ifm-background-surface-color);
   --ifm-navbar-shadow: 0 1px 2px 0 var(--ifm-color-emphasis-200);
 }
 
@@ -211,6 +216,12 @@ html[data-theme="dark"] .header-github-link:before {
   outline: var(--ifm-color-primary) auto 2px;
 }
 
+/* Don't darken button on hover */
+.button--secondary:hover {
+  background-color: var(--ifm-color-secondary);
+  border-color: var(--ifm-color-secondary);
+}
+
 /* Custom style for buttons */
 .btn {
   cursor: pointer;
@@ -256,12 +267,7 @@ html[data-theme="dark"] .header-github-link:before {
 }
 
 .menu__link:not(.menu__link--active) {
-  opacity: 0.8;
-  transition: opacity var(--ifm-transition-fast);
-}
-
-.menu__link:not(.menu__link--active):hover {
-  opacity: 1;
+  font-weight: var(--ifm-font-weight-normal);
 }
 
 /* Decrease size of sidebar toggle caret */
@@ -271,17 +277,6 @@ html[data-theme="dark"] .header-github-link:before {
 
 .menu__caret::before {
   background: var(--ifm-menu-link-sublist-icon) 50% / 1.25rem 1.25rem;
-}
-
-/* Make table of contents match sidebar's colors & highlighting */
-.table-of-contents__link:not(.table-of-contents__link--active) {
-  opacity: 0.8;
-  transition: opacity var(--ifm-transition-fast);
-}
-
-.table-of-contents__link:not(.table-of-contents__link--active):hover {
-  opacity: 1;
-  color: var(--ifm-color-content-secondary);
 }
 
 /* Pagination fix to not change font color on hover; also, change icons */

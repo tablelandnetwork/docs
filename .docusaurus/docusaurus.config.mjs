@@ -146,8 +146,14 @@ export default {
       "items": [
         {
           "type": "doc",
-          "docId": "/category/cli",
+          "docId": "/category/sdk",
           "position": "left",
+          "label": "SDK"
+        },
+        {
+          "type": "docSidebar",
+          "position": "left",
+          "sidebarId": "cli",
           "label": "CLI"
         },
         {
@@ -222,14 +228,14 @@ export default {
               "rel": null
             },
             {
-              "href": "https://tableland.xyz/pilot-program/",
-              "label": "Pilot Program",
+              "href": "https://www.youtube.com/@tablelandxyz",
+              "label": "YouTube",
               "target": "_blank",
               "rel": null
             },
             {
-              "href": "https://dev.tableland.xyz/showcase/",
-              "label": "Showcase",
+              "href": "https://tableland.xyz/pilot-program/",
+              "label": "Pilot Program",
               "target": "_blank",
               "rel": null
             }
@@ -247,8 +253,7 @@ export default {
         }
       ]
     },
-    "footer": {
-      "style": "dark",
+    "customFooter": {
       "links": [
         {
           "title": "Developers",
@@ -288,28 +293,23 @@ export default {
             },
             {
               "href": "https://discord.com/invite/dc8EBEhGbg",
-              "label": "Discord",
-              "target": "_blank",
-              "rel": null
+              "label": "Discord"
             },
             {
               "href": "https://twitter.com/tableland__",
-              "label": "Twitter",
-              "target": "_blank",
-              "rel": null
+              "label": "Twitter"
+            },
+            {
+              "href": "https://www.youtube.com/@tablelandxyz",
+              "label": "YouTube"
             },
             {
               "href": "https://tableland.xyz/pilot-program/",
-              "position": "right",
-              "label": "Pilot Program",
-              "target": "_blank",
-              "rel": null
+              "label": "Pilot Program"
             },
             {
               "href": "https://dev.tableland.xyz/showcase/",
-              "label": "Showcase",
-              "target": "_blank",
-              "rel": null
+              "label": "Showcase"
             }
           ]
         },
@@ -318,17 +318,15 @@ export default {
           "items": [
             {
               "href": "https://tableland.xyz",
-              "position": "right",
-              "label": "Main site",
-              "target": "_blank",
-              "rel": null
+              "label": "Main site"
             },
             {
               "href": "https://dev.tableland.xyz",
-              "position": "right",
-              "label": "Tech Blog",
-              "target": "_blank",
-              "rel": null
+              "label": "Tech Blog"
+            },
+            {
+              "href": "https://mirror.xyz/tableland.eth",
+              "label": "Main Blog"
             },
             {
               "label": "GitHub",
@@ -336,10 +334,7 @@ export default {
             },
             {
               "href": "https://linktr.ee/textileio",
-              "position": "right",
-              "label": "Team",
-              "target": "_blank",
-              "rel": null
+              "label": "Team"
             }
           ]
         }

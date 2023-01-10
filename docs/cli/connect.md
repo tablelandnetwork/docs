@@ -8,3 +8,6 @@ keywords:
 ---
 
 ## Setup
+
+export const t = 't'
+t

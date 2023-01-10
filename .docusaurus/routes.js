@@ -93,11 +93,6 @@ export default [
     exact: true
   },
   {
-    path: '/markdown-page',
-    component: ComponentCreator('/markdown-page', '277'),
-    exact: true
-  },
-  {
     path: '/search',
     component: ComponentCreator('/search', 'f5a'),
     exact: true

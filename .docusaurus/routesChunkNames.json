@@ -179,13 +179,6 @@
     "sidebar": "sidebar---blog-814-8ac",
     "content": "content---blog-welcomed-9-f-ffb"
   },
-  "/markdown-page-277": {
-    "__comp": "__comp---theme-mdx-page-1-f-3-b90",
-    "__context": {
-      "plugin": "plugin---markdown-page-44-e-840"
-    },
-    "content": "content---markdown-page-393-028"
-  },
   "/search-f5a": {
     "__comp": "__comp---theme-search-page-1-a-4-d6f",
     "__context": {
@@ -209,7 +202,7 @@
   "/-c40": {
     "__comp": "__comp---site-src-pages-index-tsx-1-df-d3e",
     "__context": {
-      "plugin": "plugin---markdown-page-44-e-840"
+      "plugin": "plugin---44-e-315"
     },
     "config": "config---5-e-9-4f3"
   },

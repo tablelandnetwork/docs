@@ -1,5 +1,6 @@
 import React from "react";
 import clsx from "clsx";
+import CustomFooter from "../../theme/CustomFooter";
 import styles from "./styles.module.css";
 
 type FeatureItem = {
@@ -57,14 +58,17 @@ function Feature({ title, Svg, description }: FeatureItem) {
 
 export default function HomepageFeatures(): JSX.Element {
   return (
-    <section className={styles.features}>
-      <div className="container">
-        <div className="row">
-          {FeatureList.map((props, idx) => (
-            <Feature key={idx} {...props} />
-          ))}
+    <>
+      <section className={styles.features}>
+        <div className="container">
+          <div className="row">
+            {FeatureList.map((props, idx) => (
+              <Feature key={idx} {...props} />
+            ))}
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+      <CustomFooter />
+    </>
   );
 }
