@@ -4,8 +4,8 @@
  * Modify the docusaurus.config.js file at your site's root instead.
  */
 export default {
-  "title": "Tableland",
-  "tagline": "Build web3 with SQL",
+  "title": "Tableland Docs",
+  "tagline": "Explore guides and examples on how to store & query data in a web3 SQL database.",
   "url": "http://localhost:3000",
   "baseUrl": "/",
   "onBrokenLinks": "log",
@@ -50,7 +50,7 @@ export default {
       "classic",
       {
         "docs": {
-          "sidebarPath": "./sidebars.js",
+          "sidebarPath": "./config/sidebars.js",
           "routeBasePath": "/",
           "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/",
           "showLastUpdateTime": true,
@@ -119,7 +119,7 @@ export default {
         "dark": "dark"
       },
       "options": {
-        "fontFamily": "mulish"
+        "fontFamily": "Inter"
       }
     },
     "docs": {
@@ -128,10 +128,6 @@ export default {
         "hideable": true
       },
       "versionPersistence": "localStorage"
-    },
-    "tableOfContents": {
-      "minHeadingLevel": 2,
-      "maxHeadingLevel": 4
     },
     "navbar": {
       "hideOnScroll": false,
@@ -252,6 +248,10 @@ export default {
           "position": "right"
         }
       ]
+    },
+    "tableOfContents": {
+      "minHeadingLevel": 2,
+      "maxHeadingLevel": 4
     },
     "customFooter": {
       "links": [

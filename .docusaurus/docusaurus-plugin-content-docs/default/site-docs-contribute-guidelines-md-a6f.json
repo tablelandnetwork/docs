@@ -34,5 +34,14 @@
     "tags": [
       "contributing"
     ]
+  },
+  "sidebar": "congtributing",
+  "previous": {
+    "title": "Contributing",
+    "permalink": "/category/contributing"
+  },
+  "next": {
+    "title": "Style guide",
+    "permalink": "/contribute/style-guide"
   }
 }

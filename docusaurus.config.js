@@ -5,11 +5,16 @@ const lightCodeTheme = require("prism-react-renderer/themes/github");
 const darkCodeTheme = require("prism-react-renderer/themes/dracula");
 const math = require("remark-math");
 const katex = require("rehype-katex");
+// Imports for configuring the footer, site metadata, and navbar
+const footer = require("./config/footer");
+const metadata = require("./config/metadata");
+const navbar = require("./config/navbar");
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: "Tableland",
-  tagline: "Build web3 with SQL",
+  title: "Tableland Docs",
+  tagline:
+    "Explore guides and examples on how to store & query data in a web3 SQL database.",
   url: "http://localhost:3000", // https://docs.tableland.xyz
   baseUrl: "/",
   onBrokenLinks: "log", // Or, could `throw`
@@ -89,8 +94,7 @@ const config = {
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
-          sidebarPath: "./sidebars.js",
-          navbarPath: "./navbar.js",
+          sidebarPath: "./config/sidebars.js",
           routeBasePath: "/", // Use `/` instead of `/docs` for doc pages' base URL
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
@@ -107,7 +111,6 @@ const config = {
         },
         blog: {
           showReadingTime: true,
-          // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl: "https://github.com/tablelandnetwork/docs/tree/main",
         },
@@ -123,48 +126,18 @@ const config = {
       }),
     ],
   ],
-
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       image: "img/tableland/site-banner.png", // Default image used in metadata, e.g., links shared on socials
-      metadata: [
-        {
-          name: "description",
-          content:
-            "The official documentation for the Tableland Network. Build web3 with SQL using smart contracts, SDKs, and APIs, and learn all about the protocol.",
-        },
-        {
-          name: "og:title",
-          content:
-            "Tableland Docs: API Reference, Quickstart Guides, and Integrations",
-        },
-        {
-          name: "twitter:title",
-          content: "Tableland Docs",
-        },
-        {
-          name: "twitter:description",
-          content:
-            "The official documentation for the Tableland Network. Build web3 with SQL.",
-        },
-        {
-          name: "og:site_name",
-          content: "Tableland Docs",
-        },
-        {
-          name: "keywords",
-          content:
-            "tableland, docs, documentation, web3, crypto, blockchain, SQL, SQLite, relational, database",
-        },
-      ],
+      metadata,
       mermaid: {
         theme: {
           light: "neutral",
           dark: "dark",
         },
         options: {
-          fontFamily: "mulish",
+          fontFamily: "Inter",
         },
       },
       docs: {
@@ -173,102 +146,16 @@ const config = {
           hideable: true, // Allow the sidebar to be hidden with a toggle
         },
       },
+      navbar,
       // Allow markdown to use `h2` to `h4` so that up to 3 headings are shown in the table of contents
       tableOfContents: {
         minHeadingLevel: 2,
         maxHeadingLevel: 4,
       },
-      // Change this from `footer` to `footerCustom`, and use `CustomFooter` over `Footer`
+      // Change this from `footer` to `customFooter`, and use `CustomFooter` over `Footer`
       // Only render `CustomFooter` on the site landing page and `NotFound` page (instead of every page)
       // In other words, since `footer` is not included, the `Footer` component is not rendered everywhere
-      customFooter: {
-        links: [
-          {
-            title: "Developers",
-            items: [
-              {
-                to: "/category/sdk",
-                label: "SDK",
-              },
-              {
-                to: "/category/cli",
-                label: "CLI",
-              },
-              {
-                to: "/category/smart-contracts",
-                label: "Smart contracts",
-              },
-              {
-                to: "/category/protocol",
-                label: "Protocol",
-              },
-              {
-                to: "/sql/sql-spec",
-                label: "SQL spec",
-              },
-              {
-                to: "/protocol/validator-spec",
-                label: "Validator spec",
-              },
-            ],
-          },
-          {
-            title: "Community",
-            items: [
-              {
-                to: "contribute/guidelines/",
-                label: "Contribute",
-              },
-              {
-                href: "https://discord.com/invite/dc8EBEhGbg",
-                label: "Discord",
-              },
-              {
-                href: "https://twitter.com/tableland__",
-                label: "Twitter",
-              },
-              {
-                href: "https://www.youtube.com/@tablelandxyz",
-                label: "YouTube",
-              },
-              {
-                href: "https://tableland.xyz/pilot-program/",
-                label: "Pilot Program",
-              },
-              {
-                href: "https://dev.tableland.xyz/showcase/",
-                label: "Showcase",
-              },
-            ],
-          },
-          {
-            title: "Company",
-            items: [
-              {
-                href: "https://tableland.xyz",
-                label: "Main site",
-              },
-              {
-                href: "https://dev.tableland.xyz",
-                label: "Tech Blog",
-              },
-              {
-                href: "https://mirror.xyz/tableland.eth",
-                label: "Main Blog",
-              },
-              {
-                label: "GitHub",
-                href: "https://github.com/tablelandnetwork/",
-              },
-              {
-                href: "https://linktr.ee/textileio",
-                label: "Team",
-              },
-            ],
-          },
-        ],
-        copyright: `Copyright © ${new Date().getFullYear()} Tableland Network`,
-      },
+      customFooter: footer,
       prism: {
         theme: lightCodeTheme,
         darkTheme: darkCodeTheme,

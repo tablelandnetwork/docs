@@ -23,5 +23,10 @@
       "maintainers",
       "contributors"
     ]
+  },
+  "sidebar": "congtributing",
+  "previous": {
+    "title": "Style guide",
+    "permalink": "/contribute/style-guide"
   }
 }

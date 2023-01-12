@@ -33,5 +33,14 @@
     "tags": [
       "contributing"
     ]
+  },
+  "sidebar": "congtributing",
+  "previous": {
+    "title": "Contributor guidelines",
+    "permalink": "/contribute/guidelines"
+  },
+  "next": {
+    "title": "Maintainers",
+    "permalink": "/contribute/maintainers"
   }
 }

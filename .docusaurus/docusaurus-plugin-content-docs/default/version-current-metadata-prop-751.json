@@ -215,6 +215,35 @@
         "collapsible": true,
         "href": "/category/protocol"
       }
+    ],
+    "congtributing": [
+      {
+        "type": "category",
+        "label": "Contributing",
+        "items": [
+          {
+            "type": "link",
+            "label": "Contributor guidelines",
+            "href": "/contribute/guidelines",
+            "docId": "contribute/guidelines"
+          },
+          {
+            "type": "link",
+            "label": "Style guide",
+            "href": "/contribute/style-guide",
+            "docId": "contribute/style-guide"
+          },
+          {
+            "type": "link",
+            "label": "Maintainers",
+            "href": "/contribute/maintainers",
+            "docId": "contribute/maintainers"
+          }
+        ],
+        "collapsed": true,
+        "collapsible": true,
+        "href": "/category/contributing"
+      }
     ]
   },
   "docs": {
@@ -256,17 +285,20 @@
     "contribute/guidelines": {
       "id": "contribute/guidelines",
       "title": "How to contribute",
-      "description": "Get involved and contribute to the Tableland ecosystem."
+      "description": "Get involved and contribute to the Tableland ecosystem.",
+      "sidebar": "congtributing"
     },
     "contribute/maintainers": {
       "id": "contribute/maintainers",
       "title": "Maintainers",
-      "description": "Core contributors to the Tableland protocol's documentation."
+      "description": "Core contributors to the Tableland protocol's documentation.",
+      "sidebar": "congtributing"
     },
     "contribute/style-guide": {
       "id": "contribute/style-guide",
       "title": "Style guide",
-      "description": "Learn the ins and outs of contributing to the Tableland docs site."
+      "description": "Learn the ins and outs of contributing to the Tableland docs site.",
+      "sidebar": "congtributing"
     },
     "learn/blockchain/what-is-blockchain": {
       "id": "learn/blockchain/what-is-blockchain",

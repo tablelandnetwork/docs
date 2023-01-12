@@ -2,8 +2,11 @@
  * Any CSS included here will be global. The classic template
  * bundles Infima by default. Infima is a CSS framework designed to
  * work well for content-centric websites.
+ * 
+ * See docs for styles and usage: https://infima.dev/docs/getting-started/introduction
  */
 /*
+
 /* Override the default Infima variables here. */
 :root {
   /* Colors (light mode colors are the default) */
@@ -139,6 +142,11 @@ main > .container h6 {
   white-space: nowrap;
 }
 
+/* Decrease container content's max width for better spacing */
+.container {
+  max-width: 1175px;
+}
+
 /* Announcement bar overrides */
 div[class^="announcementBar"] {
   background-color: var(--ifm-color-primary-light);
@@ -224,12 +232,13 @@ html[data-theme="dark"] .header-github-link:before {
 
 /* Custom style for buttons */
 .btn {
+  display: flex;
+  align-items: center;
+  white-space: pre-wrap;
   cursor: pointer;
-  font-size: inherit;
-  line-height: 1.5rem;
   font-weight: 600;
-  border-radius: 4px;
-  padding: 10px 15px;
+  border-radius: 0.25rem;
+  padding: 0.3rem 0.4rem;
   border: none;
   outline: none;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
@@ -242,7 +251,7 @@ html[data-theme="dark"] .header-github-link:before {
   border-radius: 0.1rem 0.1rem 0 0;
 }
 
-/* Override landing page hero background / font colors */
+/* Override landing page hero background / font colors; adjust padding on smaller screens */
 .hero--primary {
   --ifm-hero-background-color: var(--ifm-hero-background-color);
   --ifm-hero-text-color: var(--ifm-font-color-base);
@@ -250,6 +259,12 @@ html[data-theme="dark"] .header-github-link:before {
 
 .hero__title {
   font-size: var(--h1-font-size);
+}
+
+@media (max-width: 992px) {
+  .hero {
+    padding: 4rem 2rem;
+  }
 }
 
 /* Every markdown page with front matter `description` uses a larger font size */
@@ -287,8 +302,14 @@ html[data-theme="dark"] .header-github-link:before {
 .pagination-nav__link--next .pagination-nav__label::after {
   content: " →";
 }
+
 .pagination-nav__link--prev .pagination-nav__label::before {
   content: "← ";
+}
+
+/* Decrease the width of the search bar */
+.navbar__search-input {
+  width: 10rem;
 }
 
 /* Custom fonts for the site */

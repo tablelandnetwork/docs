@@ -1,18 +1,17 @@
 import React from "react";
 import clsx from "clsx";
-import CustomFooter from "../../theme/CustomFooter";
-import styles from "./styles.module.css";
+import { FaCode } from "react-icons/fa";
 
 type FeatureItem = {
   title: string;
-  Svg: React.ComponentType<React.ComponentProps<"svg">>;
+  icon: JSX.Element;
   description: JSX.Element;
 };
 
 const FeatureList: FeatureItem[] = [
   {
-    title: "Easy to Use",
-    Svg: require("@site/static/img/undraw_docusaurus_mountain.svg").default,
+    title: "SDK",
+    icon: <FaCode size={30} />,
     description: (
       <>
         Docusaurus was designed from the ground up to be easily installed and
@@ -22,7 +21,7 @@ const FeatureList: FeatureItem[] = [
   },
   {
     title: "Focus on What Matters",
-    Svg: require("@site/static/img/undraw_docusaurus_tree.svg").default,
+    icon: <FaCode size={30} />,
     description: (
       <>
         Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
@@ -32,7 +31,7 @@ const FeatureList: FeatureItem[] = [
   },
   {
     title: "Powered by React",
-    Svg: require("@site/static/img/undraw_docusaurus_react.svg").default,
+    icon: <FaCode size={30} />,
     description: (
       <>
         Extend or customize your website layout by reusing React. Docusaurus can
@@ -42,13 +41,11 @@ const FeatureList: FeatureItem[] = [
   },
 ];
 
-function Feature({ title, Svg, description }: FeatureItem) {
+function Feature({ title, icon, description }: FeatureItem) {
   return (
     <div className={clsx("col col--4")}>
-      <div className="text--center">
-        <Svg className={styles.featureSvg} role="img" />
-      </div>
-      <div className="text--center padding-horiz--md">
+      <div className="text padding-horiz--md">
+        {icon}
         <h3>{title}</h3>
         <p>{description}</p>
       </div>
@@ -59,7 +56,7 @@ function Feature({ title, Svg, description }: FeatureItem) {
 export default function HomepageFeatures(): JSX.Element {
   return (
     <>
-      <section className={styles.features}>
+      <section>
         <div className="container">
           <div className="row">
             {FeatureList.map((props, idx) => (
@@ -68,7 +65,6 @@ export default function HomepageFeatures(): JSX.Element {
           </div>
         </div>
       </section>
-      <CustomFooter />
     </>
   );
 }

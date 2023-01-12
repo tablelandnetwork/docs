@@ -118,6 +118,20 @@ const sidebars = {
       items: ["protocol/validator-spec"],
     },
   ],
+  congtributing: [
+    {
+      type: "category",
+      label: "Contributing",
+      link: {
+        type: "generated-index",
+      },
+      items: [
+        "contribute/guidelines",
+        "contribute/style-guide",
+        "contribute/maintainers",
+      ],
+    },
+  ],
 };
 
 module.exports = sidebars;

@@ -114,7 +114,7 @@ export default [
   },
   {
     path: '/',
-    component: ComponentCreator('/', '7fd'),
+    component: ComponentCreator('/', '8a8'),
     routes: [
       {
         path: '/category/blockchain-basics',
@@ -127,6 +127,12 @@ export default [
         component: ComponentCreator('/category/cli', 'd70'),
         exact: true,
         sidebar: "cli"
+      },
+      {
+        path: '/category/contributing',
+        component: ComponentCreator('/category/contributing', 'b27'),
+        exact: true,
+        sidebar: "congtributing"
       },
       {
         path: '/category/protocol',
@@ -201,18 +207,21 @@ export default [
       },
       {
         path: '/contribute/guidelines',
-        component: ComponentCreator('/contribute/guidelines', '406'),
-        exact: true
+        component: ComponentCreator('/contribute/guidelines', '156'),
+        exact: true,
+        sidebar: "congtributing"
       },
       {
         path: '/contribute/maintainers',
-        component: ComponentCreator('/contribute/maintainers', '595'),
-        exact: true
+        component: ComponentCreator('/contribute/maintainers', '4a4'),
+        exact: true,
+        sidebar: "congtributing"
       },
       {
         path: '/contribute/style-guide',
-        component: ComponentCreator('/contribute/style-guide', 'dbc'),
-        exact: true
+        component: ComponentCreator('/contribute/style-guide', 'd43'),
+        exact: true,
+        sidebar: "congtributing"
       },
       {
         path: '/learn/blockchain/what-is-blockchain',

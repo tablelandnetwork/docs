@@ -15,7 +15,7 @@
           "editUrlLocalized": "https://github.com/tablelandnetwork/docs/tree/main/i18n/en/docusaurus-plugin-content-docs/current",
           "isLast": true,
           "routePriority": -1,
-          "sidebarFilePath": "/Users/dtb/tbl/docs/sidebars.js",
+          "sidebarFilePath": "/Users/dtb/tbl/docs/config/sidebars.js",
           "contentPath": "/Users/dtb/tbl/docs/docs",
           "contentPathLocalized": "/Users/dtb/tbl/docs/i18n/en/docusaurus-plugin-content-docs/current",
           "docs": [
@@ -251,6 +251,15 @@
                 "tags": [
                   "contributing"
                 ]
+              },
+              "sidebar": "congtributing",
+              "previous": {
+                "title": "Contributing",
+                "permalink": "/category/contributing"
+              },
+              "next": {
+                "title": "Style guide",
+                "permalink": "/contribute/style-guide"
               }
             },
             {
@@ -278,6 +287,11 @@
                   "maintainers",
                   "contributors"
                 ]
+              },
+              "sidebar": "congtributing",
+              "previous": {
+                "title": "Style guide",
+                "permalink": "/contribute/style-guide"
               }
             },
             {
@@ -315,6 +329,15 @@
                 "tags": [
                   "contributing"
                 ]
+              },
+              "sidebar": "congtributing",
+              "previous": {
+                "title": "Contributor guidelines",
+                "permalink": "/contribute/guidelines"
+              },
+              "next": {
+                "title": "Maintainers",
+                "permalink": "/contribute/maintainers"
               }
             },
             {
@@ -1069,6 +1092,33 @@
                   {
                     "type": "doc",
                     "id": "protocol/validator-spec"
+                  }
+                ],
+                "collapsed": true,
+                "collapsible": true
+              }
+            ],
+            "congtributing": [
+              {
+                "type": "category",
+                "label": "Contributing",
+                "link": {
+                  "type": "generated-index",
+                  "slug": "/category/contributing",
+                  "permalink": "/category/contributing"
+                },
+                "items": [
+                  {
+                    "type": "doc",
+                    "id": "contribute/guidelines"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "contribute/style-guide"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "contribute/maintainers"
                   }
                 ],
                 "collapsed": true,

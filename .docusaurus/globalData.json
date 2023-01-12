@@ -41,15 +41,18 @@
             },
             {
               "id": "contribute/guidelines",
-              "path": "/contribute/guidelines"
+              "path": "/contribute/guidelines",
+              "sidebar": "congtributing"
             },
             {
               "id": "contribute/maintainers",
-              "path": "/contribute/maintainers"
+              "path": "/contribute/maintainers",
+              "sidebar": "congtributing"
             },
             {
               "id": "contribute/style-guide",
-              "path": "/contribute/style-guide"
+              "path": "/contribute/style-guide",
+              "sidebar": "congtributing"
             },
             {
               "id": "learn/blockchain/what-is-blockchain",
@@ -173,6 +176,11 @@
               "id": "/category/protocol",
               "path": "/category/protocol",
               "sidebar": "validator"
+            },
+            {
+              "id": "/category/contributing",
+              "path": "/category/contributing",
+              "sidebar": "congtributing"
             }
           ],
           "draftIds": [],
@@ -223,6 +231,12 @@
               "link": {
                 "path": "/category/protocol",
                 "label": "Protocol"
+              }
+            },
+            "congtributing": {
+              "link": {
+                "path": "/category/contributing",
+                "label": "Contributing"
               }
             }
           }
