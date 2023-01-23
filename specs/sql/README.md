@@ -1113,7 +1113,7 @@ magnitude of the value itself.
 
 Tableland does not have a separate data type to represent float/real
 types. This is because in practice **floating point values are
-approximate**, which may lead to non-deterministic bahavior across
+approximate**, which may lead to non-deterministic behavior across
 compute platforms. If you need an exact answer, you should not use
 floating-point values, in Tableland or in any other software. This is
 not a Tableland limitation per se, but a mathematical limitation
@@ -1246,7 +1246,7 @@ statement, the parser outputs the most conventional form.
 In general, any (set of) statement(s) processed by the parser should be
 encoded such that,
 
--   All SQL language components are specified using lower case ASCII
+-   All SQL language components are specified using lowercase ASCII
     characters,
 -   The execution of the (set of) statement(s) after encoding is
     *equivalent* to the original set of statements, and
