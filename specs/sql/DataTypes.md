@@ -29,7 +29,7 @@ Numeric types often consist of integer and floating-point (float/real) numbers. 
 
 ### Floats
 
-Tableland does not have a separate data type to represent float/real types. This is because in practice **floating point values are approximate**, which may lead to non-deterministic bahavior across compute platforms. If you need an exact answer, you should not use floating-point values, in Tableland or in any other software. This is not a Tableland limitation per se, but a mathematical limitation inherent in the design of floating-point numbers.
+Tableland does not have a separate data type to represent float/real types. This is because in practice **floating point values are approximate**, which may lead to non-deterministic behavior across compute platforms. If you need an exact answer, you should not use floating-point values, in Tableland or in any other software. This is not a Tableland limitation per se, but a mathematical limitation inherent in the design of floating-point numbers.
 
 See the [SQLite documentation](https://www.sqlite.org/floatingpoint.html) about issues with floating-point numbers, or learn more about why [floating-point math is hard](https://docs.oracle.com/cd/E19957-01/806-3568/ncg_goldberg.html).
 
