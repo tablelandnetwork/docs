@@ -1,0 +1,25 @@
+{
+  "unversionedId": "api/interfaces/TableFormat",
+  "id": "api/interfaces/TableFormat",
+  "title": "Interface: TableFormat<T>",
+  "description": "Type parameters",
+  "source": "@site/docs/api/interfaces/TableFormat.md",
+  "sourceDirName": "api/interfaces",
+  "slug": "/api/interfaces/TableFormat",
+  "permalink": "/api/interfaces/TableFormat",
+  "draft": false,
+  "editUrl": null,
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "sidebarPosition": 0,
+  "frontMatter": {
+    "id": "TableFormat",
+    "title": "Interface: TableFormat<T>",
+    "sidebar_label": "TableFormat",
+    "sidebar_position": 0,
+    "custom_edit_url": null
+  }
+}

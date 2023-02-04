@@ -1,0 +1,23 @@
+{
+  "unversionedId": "api/interfaces/evm_typechain_types.erc721A.contracts.erc721ASol.ERC721A__IERC721Receiver",
+  "id": "api/interfaces/evm_typechain_types.erc721A.contracts.erc721ASol.ERC721A__IERC721Receiver",
+  "title": "Interface: ERC721A__IERC721Receiver",
+  "description": "contracts.erc721ASol.ERC721AIERC721Receiver",
+  "source": "@site/docs/api/interfaces/evm_typechain_types.erc721A.contracts.erc721ASol.ERC721A__IERC721Receiver.md",
+  "sourceDirName": "api/interfaces",
+  "slug": "/api/interfaces/evm_typechain_types.erc721A.contracts.erc721ASol.ERC721A__IERC721Receiver",
+  "permalink": "/api/interfaces/evm_typechain_types.erc721A.contracts.erc721ASol.ERC721A__IERC721Receiver",
+  "draft": false,
+  "editUrl": null,
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "id": "evm_typechain_types.erc721A.contracts.erc721ASol.ERC721A__IERC721Receiver",
+    "title": "Interface: ERC721A__IERC721Receiver",
+    "sidebar_label": "ERC721A__IERC721Receiver",
+    "custom_edit_url": null
+  }
+}

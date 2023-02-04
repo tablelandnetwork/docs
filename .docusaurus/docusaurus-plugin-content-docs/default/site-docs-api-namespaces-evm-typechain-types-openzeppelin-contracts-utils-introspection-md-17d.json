@@ -1,0 +1,23 @@
+{
+  "unversionedId": "api/namespaces/evm_typechain_types.openzeppelin.contracts.utils.introspection",
+  "id": "api/namespaces/evm_typechain_types.openzeppelin.contracts.utils.introspection",
+  "title": "Namespace: introspection",
+  "description": "contracts.utils.introspection",
+  "source": "@site/docs/api/namespaces/evm_typechain_types.openzeppelin.contracts.utils.introspection.md",
+  "sourceDirName": "api/namespaces",
+  "slug": "/api/namespaces/evm_typechain_types.openzeppelin.contracts.utils.introspection",
+  "permalink": "/api/namespaces/evm_typechain_types.openzeppelin.contracts.utils.introspection",
+  "draft": false,
+  "editUrl": null,
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "id": "evm_typechain_types.openzeppelin.contracts.utils.introspection",
+    "title": "Namespace: introspection",
+    "sidebar_label": "introspection",
+    "custom_edit_url": null
+  }
+}

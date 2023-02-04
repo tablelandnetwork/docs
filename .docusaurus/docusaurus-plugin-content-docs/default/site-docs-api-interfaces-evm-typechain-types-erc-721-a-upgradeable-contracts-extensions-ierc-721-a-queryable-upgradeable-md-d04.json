@@ -1,0 +1,23 @@
+{
+  "unversionedId": "api/interfaces/evm_typechain_types.erc721AUpgradeable.contracts.extensions.IERC721AQueryableUpgradeable",
+  "id": "api/interfaces/evm_typechain_types.erc721AUpgradeable.contracts.extensions.IERC721AQueryableUpgradeable",
+  "title": "Interface: IERC721AQueryableUpgradeable",
+  "description": "contracts.extensions.IERC721AQueryableUpgradeable",
+  "source": "@site/docs/api/interfaces/evm_typechain_types.erc721AUpgradeable.contracts.extensions.IERC721AQueryableUpgradeable.md",
+  "sourceDirName": "api/interfaces",
+  "slug": "/api/interfaces/evm_typechain_types.erc721AUpgradeable.contracts.extensions.IERC721AQueryableUpgradeable",
+  "permalink": "/api/interfaces/evm_typechain_types.erc721AUpgradeable.contracts.extensions.IERC721AQueryableUpgradeable",
+  "draft": false,
+  "editUrl": null,
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "id": "evm_typechain_types.erc721AUpgradeable.contracts.extensions.IERC721AQueryableUpgradeable",
+    "title": "Interface: IERC721AQueryableUpgradeable",
+    "sidebar_label": "IERC721AQueryableUpgradeable",
+    "custom_edit_url": null
+  }
+}

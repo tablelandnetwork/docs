@@ -1,0 +1,23 @@
+{
+  "unversionedId": "api/namespaces/evm_typechain_types.factories.erc721A.contracts",
+  "id": "api/namespaces/evm_typechain_types.factories.erc721A.contracts",
+  "title": "Namespace: contracts",
+  "description": "factories.erc721A.contracts",
+  "source": "@site/docs/api/namespaces/evm_typechain_types.factories.erc721A.contracts.md",
+  "sourceDirName": "api/namespaces",
+  "slug": "/api/namespaces/evm_typechain_types.factories.erc721A.contracts",
+  "permalink": "/api/namespaces/evm_typechain_types.factories.erc721A.contracts",
+  "draft": false,
+  "editUrl": null,
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "id": "evm_typechain_types.factories.erc721A.contracts",
+    "title": "Namespace: contracts",
+    "sidebar_label": "contracts",
+    "custom_edit_url": null
+  }
+}

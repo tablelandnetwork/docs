@@ -1,0 +1,23 @@
+{
+  "unversionedId": "api/interfaces/evm_typechain_types.openzeppelin.contracts.token.erc721.IERC721Receiver",
+  "id": "api/interfaces/evm_typechain_types.openzeppelin.contracts.token.erc721.IERC721Receiver",
+  "title": "Interface: IERC721Receiver",
+  "description": "token.erc721.IERC721Receiver",
+  "source": "@site/docs/api/interfaces/evm_typechain_types.openzeppelin.contracts.token.erc721.IERC721Receiver.md",
+  "sourceDirName": "api/interfaces",
+  "slug": "/api/interfaces/evm_typechain_types.openzeppelin.contracts.token.erc721.IERC721Receiver",
+  "permalink": "/api/interfaces/evm_typechain_types.openzeppelin.contracts.token.erc721.IERC721Receiver",
+  "draft": false,
+  "editUrl": null,
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "id": "evm_typechain_types.openzeppelin.contracts.token.erc721.IERC721Receiver",
+    "title": "Interface: IERC721Receiver",
+    "sidebar_label": "IERC721Receiver",
+    "custom_edit_url": null
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "unversionedId": "api/classes/evm_typechain_types.factories.openzeppelin.contractsUpgradeable.interfaces.draftIerc1822UpgradeableSol.IERC1822ProxiableUpgradeable__factory",
+  "id": "api/classes/evm_typechain_types.factories.openzeppelin.contractsUpgradeable.interfaces.draftIerc1822UpgradeableSol.IERC1822ProxiableUpgradeable__factory",
+  "title": "Class: IERC1822ProxiableUpgradeable__factory",
+  "description": "interfaces.draftIerc1822UpgradeableSol.IERC1822ProxiableUpgradeablefactory",
+  "source": "@site/docs/api/classes/evm_typechain_types.factories.openzeppelin.contractsUpgradeable.interfaces.draftIerc1822UpgradeableSol.IERC1822ProxiableUpgradeable__factory.md",
+  "sourceDirName": "api/classes",
+  "slug": "/api/classes/evm_typechain_types.factories.openzeppelin.contractsUpgradeable.interfaces.draftIerc1822UpgradeableSol.IERC1822ProxiableUpgradeable__factory",
+  "permalink": "/api/classes/evm_typechain_types.factories.openzeppelin.contractsUpgradeable.interfaces.draftIerc1822UpgradeableSol.IERC1822ProxiableUpgradeable__factory",
+  "draft": false,
+  "editUrl": null,
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "id": "evm_typechain_types.factories.openzeppelin.contractsUpgradeable.interfaces.draftIerc1822UpgradeableSol.IERC1822ProxiableUpgradeable__factory",
+    "title": "Class: IERC1822ProxiableUpgradeable__factory",
+    "sidebar_label": "IERC1822ProxiableUpgradeable__factory",
+    "custom_edit_url": null
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "unversionedId": "api/interfaces/sdk_src.ReadConfig",
+  "id": "api/interfaces/sdk_src.ReadConfig",
+  "title": "Interface: ReadConfig",
+  "description": "sdk/src.ReadConfig",
+  "source": "@site/docs/api/interfaces/sdk_src.ReadConfig.md",
+  "sourceDirName": "api/interfaces",
+  "slug": "/api/interfaces/sdk_src.ReadConfig",
+  "permalink": "/api/interfaces/sdk_src.ReadConfig",
+  "draft": false,
+  "editUrl": null,
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "id": "sdk_src.ReadConfig",
+    "title": "Interface: ReadConfig",
+    "sidebar_label": "ReadConfig",
+    "custom_edit_url": null
+  }
+}

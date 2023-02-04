@@ -1,0 +1,23 @@
+{
+  "unversionedId": "api/interfaces/sdk_src.Signal",
+  "id": "api/interfaces/sdk_src.Signal",
+  "title": "Interface: Signal",
+  "description": "sdk/src.Signal",
+  "source": "@site/docs/api/interfaces/sdk_src.Signal.md",
+  "sourceDirName": "api/interfaces",
+  "slug": "/api/interfaces/sdk_src.Signal",
+  "permalink": "/api/interfaces/sdk_src.Signal",
+  "draft": false,
+  "editUrl": null,
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "id": "sdk_src.Signal",
+    "title": "Interface: Signal",
+    "sidebar_label": "Signal",
+    "custom_edit_url": null
+  }
+}

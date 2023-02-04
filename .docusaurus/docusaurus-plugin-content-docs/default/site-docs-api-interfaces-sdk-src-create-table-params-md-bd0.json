@@ -1,0 +1,23 @@
+{
+  "unversionedId": "api/interfaces/sdk_src.CreateTableParams",
+  "id": "api/interfaces/sdk_src.CreateTableParams",
+  "title": "Interface: CreateTableParams",
+  "description": "sdk/src.CreateTableParams",
+  "source": "@site/docs/api/interfaces/sdk_src.CreateTableParams.md",
+  "sourceDirName": "api/interfaces",
+  "slug": "/api/interfaces/sdk_src.CreateTableParams",
+  "permalink": "/api/interfaces/sdk_src.CreateTableParams",
+  "draft": false,
+  "editUrl": null,
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "id": "sdk_src.CreateTableParams",
+    "title": "Interface: CreateTableParams",
+    "sidebar_label": "CreateTableParams",
+    "custom_edit_url": null
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "unversionedId": "api/interfaces/Result",
+  "id": "api/interfaces/Result",
+  "title": "Interface: Result<T>",
+  "description": "Type parameters",
+  "source": "@site/docs/api/interfaces/Result.md",
+  "sourceDirName": "api/interfaces",
+  "slug": "/api/interfaces/Result",
+  "permalink": "/api/interfaces/Result",
+  "draft": false,
+  "editUrl": null,
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "sidebarPosition": 0,
+  "frontMatter": {
+    "id": "Result",
+    "title": "Interface: Result<T>",
+    "sidebar_label": "Result",
+    "sidebar_position": 0,
+    "custom_edit_url": null
+  }
+}

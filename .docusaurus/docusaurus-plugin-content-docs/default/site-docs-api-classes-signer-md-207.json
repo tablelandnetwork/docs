@@ -1,0 +1,25 @@
+{
+  "unversionedId": "api/classes/Signer",
+  "id": "api/classes/Signer",
+  "title": "Class: Signer",
+  "description": "Constructors",
+  "source": "@site/docs/api/classes/Signer.md",
+  "sourceDirName": "api/classes",
+  "slug": "/api/classes/Signer",
+  "permalink": "/api/classes/Signer",
+  "draft": false,
+  "editUrl": null,
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "sidebarPosition": 0,
+  "frontMatter": {
+    "id": "Signer",
+    "title": "Class: Signer",
+    "sidebar_label": "Signer",
+    "sidebar_position": 0,
+    "custom_edit_url": null
+  }
+}

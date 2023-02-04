@@ -1,0 +1,23 @@
+{
+  "unversionedId": "api/interfaces/evm_typechain_types.contracts.test.TestTablelandController",
+  "id": "api/interfaces/evm_typechain_types.contracts.test.TestTablelandController",
+  "title": "Interface: TestTablelandController",
+  "description": "contracts.test.TestTablelandController",
+  "source": "@site/docs/api/interfaces/evm_typechain_types.contracts.test.TestTablelandController.md",
+  "sourceDirName": "api/interfaces",
+  "slug": "/api/interfaces/evm_typechain_types.contracts.test.TestTablelandController",
+  "permalink": "/api/interfaces/evm_typechain_types.contracts.test.TestTablelandController",
+  "draft": false,
+  "editUrl": null,
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "id": "evm_typechain_types.contracts.test.TestTablelandController",
+    "title": "Interface: TestTablelandController",
+    "sidebar_label": "TestTablelandController",
+    "custom_edit_url": null
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "unversionedId": "api/interfaces/evm_typechain_types.openzeppelin.contractsUpgradeable.proxy.utils.UUPSUpgradeable",
+  "id": "api/interfaces/evm_typechain_types.openzeppelin.contractsUpgradeable.proxy.utils.UUPSUpgradeable",
+  "title": "Interface: UUPSUpgradeable",
+  "description": "proxy.utils.UUPSUpgradeable",
+  "source": "@site/docs/api/interfaces/evm_typechain_types.openzeppelin.contractsUpgradeable.proxy.utils.UUPSUpgradeable.md",
+  "sourceDirName": "api/interfaces",
+  "slug": "/api/interfaces/evm_typechain_types.openzeppelin.contractsUpgradeable.proxy.utils.UUPSUpgradeable",
+  "permalink": "/api/interfaces/evm_typechain_types.openzeppelin.contractsUpgradeable.proxy.utils.UUPSUpgradeable",
+  "draft": false,
+  "editUrl": null,
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "id": "evm_typechain_types.openzeppelin.contractsUpgradeable.proxy.utils.UUPSUpgradeable",
+    "title": "Interface: UUPSUpgradeable",
+    "sidebar_label": "UUPSUpgradeable",
+    "custom_edit_url": null
+  }
+}

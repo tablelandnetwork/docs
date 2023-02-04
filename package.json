@@ -24,6 +24,7 @@
     "@docusaurus/theme-search-algolia": "^2.2.0",
     "@easyops-cn/docusaurus-search-local": "^0.33.6",
     "@mdx-js/react": "^1.6.22",
+    "@tableland/sdk": "^4.0.0-pre.3",
     "clsx": "^1.2.1",
     "docusaurus-plugin-dotenv": "^1.0.1",
     "hast-util-is-element": "^1.1.0",

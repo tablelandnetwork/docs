@@ -1,0 +1,25 @@
+{
+  "unversionedId": "api/modules/sdk_src",
+  "id": "api/modules/sdk_src",
+  "title": "Module: sdk/src",
+  "description": "Classes",
+  "source": "@site/docs/api/modules/sdk_src.md",
+  "sourceDirName": "api/modules",
+  "slug": "/api/modules/sdk_src",
+  "permalink": "/api/modules/sdk_src",
+  "draft": false,
+  "editUrl": null,
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "sidebarPosition": 0,
+  "frontMatter": {
+    "id": "sdk_src",
+    "title": "Module: sdk/src",
+    "sidebar_label": "sdk/src",
+    "sidebar_position": 0,
+    "custom_edit_url": null
+  }
+}

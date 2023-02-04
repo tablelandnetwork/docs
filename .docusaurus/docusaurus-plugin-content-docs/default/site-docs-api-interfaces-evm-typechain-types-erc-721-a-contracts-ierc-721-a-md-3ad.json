@@ -1,0 +1,23 @@
+{
+  "unversionedId": "api/interfaces/evm_typechain_types.erc721A.contracts.IERC721A",
+  "id": "api/interfaces/evm_typechain_types.erc721A.contracts.IERC721A",
+  "title": "Interface: IERC721A",
+  "description": "erc721A.contracts.IERC721A",
+  "source": "@site/docs/api/interfaces/evm_typechain_types.erc721A.contracts.IERC721A.md",
+  "sourceDirName": "api/interfaces",
+  "slug": "/api/interfaces/evm_typechain_types.erc721A.contracts.IERC721A",
+  "permalink": "/api/interfaces/evm_typechain_types.erc721A.contracts.IERC721A",
+  "draft": false,
+  "editUrl": null,
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "id": "evm_typechain_types.erc721A.contracts.IERC721A",
+    "title": "Interface: IERC721A",
+    "sidebar_label": "IERC721A",
+    "custom_edit_url": null
+  }
+}

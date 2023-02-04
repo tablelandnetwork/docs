@@ -1,0 +1,23 @@
+{
+  "unversionedId": "api/interfaces/evm_typechain_types.erc721AUpgradeable.contracts.erc721AUpgradeableSol.ERC721A__IERC721ReceiverUpgradeable",
+  "id": "api/interfaces/evm_typechain_types.erc721AUpgradeable.contracts.erc721AUpgradeableSol.ERC721A__IERC721ReceiverUpgradeable",
+  "title": "Interface: ERC721A__IERC721ReceiverUpgradeable",
+  "description": "contracts.erc721AUpgradeableSol.ERC721AIERC721ReceiverUpgradeable",
+  "source": "@site/docs/api/interfaces/evm_typechain_types.erc721AUpgradeable.contracts.erc721AUpgradeableSol.ERC721A__IERC721ReceiverUpgradeable.md",
+  "sourceDirName": "api/interfaces",
+  "slug": "/api/interfaces/evm_typechain_types.erc721AUpgradeable.contracts.erc721AUpgradeableSol.ERC721A__IERC721ReceiverUpgradeable",
+  "permalink": "/api/interfaces/evm_typechain_types.erc721AUpgradeable.contracts.erc721AUpgradeableSol.ERC721A__IERC721ReceiverUpgradeable",
+  "draft": false,
+  "editUrl": null,
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "id": "evm_typechain_types.erc721AUpgradeable.contracts.erc721AUpgradeableSol.ERC721A__IERC721ReceiverUpgradeable",
+    "title": "Interface: ERC721A__IERC721ReceiverUpgradeable",
+    "sidebar_label": "ERC721A__IERC721ReceiverUpgradeable",
+    "custom_edit_url": null
+  }
+}

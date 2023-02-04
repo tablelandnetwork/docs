@@ -1,0 +1,23 @@
+{
+  "unversionedId": "api/classes/evm_typechain_types.factories.openzeppelin.contractsUpgradeable.proxy.beacon.IBeaconUpgradeable__factory",
+  "id": "api/classes/evm_typechain_types.factories.openzeppelin.contractsUpgradeable.proxy.beacon.IBeaconUpgradeable__factory",
+  "title": "Class: IBeaconUpgradeable__factory",
+  "description": "proxy.beacon.IBeaconUpgradeablefactory",
+  "source": "@site/docs/api/classes/evm_typechain_types.factories.openzeppelin.contractsUpgradeable.proxy.beacon.IBeaconUpgradeable__factory.md",
+  "sourceDirName": "api/classes",
+  "slug": "/api/classes/evm_typechain_types.factories.openzeppelin.contractsUpgradeable.proxy.beacon.IBeaconUpgradeable__factory",
+  "permalink": "/api/classes/evm_typechain_types.factories.openzeppelin.contractsUpgradeable.proxy.beacon.IBeaconUpgradeable__factory",
+  "draft": false,
+  "editUrl": null,
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "id": "evm_typechain_types.factories.openzeppelin.contractsUpgradeable.proxy.beacon.IBeaconUpgradeable__factory",
+    "title": "Class: IBeaconUpgradeable__factory",
+    "sidebar_label": "IBeaconUpgradeable__factory",
+    "custom_edit_url": null
+  }
+}

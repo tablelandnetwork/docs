@@ -1,0 +1,23 @@
+{
+  "unversionedId": "api/interfaces/evm_typechain_types.openzeppelin.contracts.token.erc721.extensions.IERC721Enumerable",
+  "id": "api/interfaces/evm_typechain_types.openzeppelin.contracts.token.erc721.extensions.IERC721Enumerable",
+  "title": "Interface: IERC721Enumerable",
+  "description": "erc721.extensions.IERC721Enumerable",
+  "source": "@site/docs/api/interfaces/evm_typechain_types.openzeppelin.contracts.token.erc721.extensions.IERC721Enumerable.md",
+  "sourceDirName": "api/interfaces",
+  "slug": "/api/interfaces/evm_typechain_types.openzeppelin.contracts.token.erc721.extensions.IERC721Enumerable",
+  "permalink": "/api/interfaces/evm_typechain_types.openzeppelin.contracts.token.erc721.extensions.IERC721Enumerable",
+  "draft": false,
+  "editUrl": null,
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "id": "evm_typechain_types.openzeppelin.contracts.token.erc721.extensions.IERC721Enumerable",
+    "title": "Interface: IERC721Enumerable",
+    "sidebar_label": "IERC721Enumerable",
+    "custom_edit_url": null
+  }
+}

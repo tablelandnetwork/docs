@@ -1,0 +1,23 @@
+{
+  "unversionedId": "api/interfaces/evm_typechain_types.contracts.TablelandTables",
+  "id": "api/interfaces/evm_typechain_types.contracts.TablelandTables",
+  "title": "Interface: TablelandTables",
+  "description": "evm/typechain-types.contracts.TablelandTables",
+  "source": "@site/docs/api/interfaces/evm_typechain_types.contracts.TablelandTables.md",
+  "sourceDirName": "api/interfaces",
+  "slug": "/api/interfaces/evm_typechain_types.contracts.TablelandTables",
+  "permalink": "/api/interfaces/evm_typechain_types.contracts.TablelandTables",
+  "draft": false,
+  "editUrl": null,
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "id": "evm_typechain_types.contracts.TablelandTables",
+    "title": "Interface: TablelandTables",
+    "sidebar_label": "TablelandTables",
+    "custom_edit_url": null
+  }
+}

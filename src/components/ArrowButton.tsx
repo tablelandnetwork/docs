@@ -23,7 +23,7 @@ export default function ArrowButton({ text, to }: ButtonString): JSX.Element {
             <path
               fill="#ffffff"
               d="M12.583 7 7.992 2.409A1 1 0 1 1 9.407.993l6.3 6.3a1 1 0 0 1 0 1.414l-6.3 6.3a1 1 0 0 1-1.415-1.416L12.583 9H1a1 1 0 1 1 0-2z"
-              fill-rule="evenodd"
+              fillRule="evenodd"
             ></path>
           </svg>
         </Link>

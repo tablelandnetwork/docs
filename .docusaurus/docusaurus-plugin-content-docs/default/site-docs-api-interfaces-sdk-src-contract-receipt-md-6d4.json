@@ -1,0 +1,23 @@
+{
+  "unversionedId": "api/interfaces/sdk_src.ContractReceipt",
+  "id": "api/interfaces/sdk_src.ContractReceipt",
+  "title": "Interface: ContractReceipt",
+  "description": "sdk/src.ContractReceipt",
+  "source": "@site/docs/api/interfaces/sdk_src.ContractReceipt.md",
+  "sourceDirName": "api/interfaces",
+  "slug": "/api/interfaces/sdk_src.ContractReceipt",
+  "permalink": "/api/interfaces/sdk_src.ContractReceipt",
+  "draft": false,
+  "editUrl": null,
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "id": "sdk_src.ContractReceipt",
+    "title": "Interface: ContractReceipt",
+    "sidebar_label": "ContractReceipt",
+    "custom_edit_url": null
+  }
+}

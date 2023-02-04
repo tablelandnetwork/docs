@@ -1,0 +1,23 @@
+{
+  "unversionedId": "api/classes/evm_typechain_types.factories.openzeppelin.contractsUpgradeable.access.OwnableUpgradeable__factory",
+  "id": "api/classes/evm_typechain_types.factories.openzeppelin.contractsUpgradeable.access.OwnableUpgradeable__factory",
+  "title": "Class: OwnableUpgradeable__factory",
+  "description": "contractsUpgradeable.access.OwnableUpgradeablefactory",
+  "source": "@site/docs/api/classes/evm_typechain_types.factories.openzeppelin.contractsUpgradeable.access.OwnableUpgradeable__factory.md",
+  "sourceDirName": "api/classes",
+  "slug": "/api/classes/evm_typechain_types.factories.openzeppelin.contractsUpgradeable.access.OwnableUpgradeable__factory",
+  "permalink": "/api/classes/evm_typechain_types.factories.openzeppelin.contractsUpgradeable.access.OwnableUpgradeable__factory",
+  "draft": false,
+  "editUrl": null,
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "id": "evm_typechain_types.factories.openzeppelin.contractsUpgradeable.access.OwnableUpgradeable__factory",
+    "title": "Class: OwnableUpgradeable__factory",
+    "sidebar_label": "OwnableUpgradeable__factory",
+    "custom_edit_url": null
+  }
+}

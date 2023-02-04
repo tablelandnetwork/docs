@@ -1,0 +1,23 @@
+{
+  "unversionedId": "api/interfaces/evm_typechain_types.erc721AUpgradeable.contracts.extensions.ERC721AQueryableUpgradeable",
+  "id": "api/interfaces/evm_typechain_types.erc721AUpgradeable.contracts.extensions.ERC721AQueryableUpgradeable",
+  "title": "Interface: ERC721AQueryableUpgradeable",
+  "description": "contracts.extensions.ERC721AQueryableUpgradeable",
+  "source": "@site/docs/api/interfaces/evm_typechain_types.erc721AUpgradeable.contracts.extensions.ERC721AQueryableUpgradeable.md",
+  "sourceDirName": "api/interfaces",
+  "slug": "/api/interfaces/evm_typechain_types.erc721AUpgradeable.contracts.extensions.ERC721AQueryableUpgradeable",
+  "permalink": "/api/interfaces/evm_typechain_types.erc721AUpgradeable.contracts.extensions.ERC721AQueryableUpgradeable",
+  "draft": false,
+  "editUrl": null,
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "id": "evm_typechain_types.erc721AUpgradeable.contracts.extensions.ERC721AQueryableUpgradeable",
+    "title": "Interface: ERC721AQueryableUpgradeable",
+    "sidebar_label": "ERC721AQueryableUpgradeable",
+    "custom_edit_url": null
+  }
+}

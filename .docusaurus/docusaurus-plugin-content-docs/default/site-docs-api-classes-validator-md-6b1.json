@@ -1,0 +1,25 @@
+{
+  "unversionedId": "api/classes/Validator",
+  "id": "api/classes/Validator",
+  "title": "Class: Validator",
+  "description": "Constructors",
+  "source": "@site/docs/api/classes/Validator.md",
+  "sourceDirName": "api/classes",
+  "slug": "/api/classes/Validator",
+  "permalink": "/api/classes/Validator",
+  "draft": false,
+  "editUrl": null,
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "sidebarPosition": 0,
+  "frontMatter": {
+    "id": "Validator",
+    "title": "Class: Validator",
+    "sidebar_label": "Validator",
+    "sidebar_position": 0,
+    "custom_edit_url": null
+  }
+}

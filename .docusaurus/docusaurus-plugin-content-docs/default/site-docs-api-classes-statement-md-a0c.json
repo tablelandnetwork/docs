@@ -1,0 +1,25 @@
+{
+  "unversionedId": "api/classes/Statement",
+  "id": "api/classes/Statement",
+  "title": "Class: Statement<S>",
+  "description": "Type parameters",
+  "source": "@site/docs/api/classes/Statement.md",
+  "sourceDirName": "api/classes",
+  "slug": "/api/classes/Statement",
+  "permalink": "/api/classes/Statement",
+  "draft": false,
+  "editUrl": null,
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "sidebarPosition": 0,
+  "frontMatter": {
+    "id": "Statement",
+    "title": "Class: Statement<S>",
+    "sidebar_label": "Statement",
+    "sidebar_position": 0,
+    "custom_edit_url": null
+  }
+}

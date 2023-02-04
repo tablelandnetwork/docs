@@ -1,0 +1,23 @@
+{
+  "unversionedId": "api/classes/evm_typechain_types.factories.erc721A.contracts.erc721ASol.ERC721A__IERC721Receiver__factory",
+  "id": "api/classes/evm_typechain_types.factories.erc721A.contracts.erc721ASol.ERC721A__IERC721Receiver__factory",
+  "title": "Class: ERC721A__IERC721Receiver__factory",
+  "description": "contracts.erc721ASol.ERC721AIERC721Receiverfactory",
+  "source": "@site/docs/api/classes/evm_typechain_types.factories.erc721A.contracts.erc721ASol.ERC721A__IERC721Receiver__factory.md",
+  "sourceDirName": "api/classes",
+  "slug": "/api/classes/evm_typechain_types.factories.erc721A.contracts.erc721ASol.ERC721A__IERC721Receiver__factory",
+  "permalink": "/api/classes/evm_typechain_types.factories.erc721A.contracts.erc721ASol.ERC721A__IERC721Receiver__factory",
+  "draft": false,
+  "editUrl": null,
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "id": "evm_typechain_types.factories.erc721A.contracts.erc721ASol.ERC721A__IERC721Receiver__factory",
+    "title": "Class: ERC721A__IERC721Receiver__factory",
+    "sidebar_label": "ERC721A__IERC721Receiver__factory",
+    "custom_edit_url": null
+  }
+}

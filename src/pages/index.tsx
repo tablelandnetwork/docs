@@ -25,27 +25,28 @@ export default function Home(): JSX.Element {
               <p>
                 Build applications on your chain of choice while using a
                 decentralized relational database, allowing developers to:
-                <ul>
-                  <li>
-                    Reduce reliance on centralized servers and associated
-                    maintenance.
-                  </li>{" "}
-                  <li>
-                    Stop resorting to expensive smart contract storage for
-                    frequently changing data that doesn't belong there.
-                  </li>
-                  <li>
-                    Replace the need for complicated "mutable" file publishing
-                    workflows on distributed file systems, which shouldn't be
-                    used as a database.
-                  </li>
-                </ul>{" "}
+              </p>
+              <ul>
+                <li>
+                  Reduce reliance on centralized servers and associated
+                  maintenance.
+                </li>{" "}
+                <li>
+                  Stop resorting to expensive smart contract storage for
+                  frequently changing data that doesn't belong there.
+                </li>
+                <li>
+                  Replace complicated "mutable" file publishing workflows on
+                  distributed file systems, trying to emulate a database but
+                  without its features.
+                </li>
+              </ul>{" "}
+              <p>
                 Developers can leverage a natively mutable and queryable data
-                storage option that <i>virtualizes</i> contract storage, along
-                with on-chain access controls. Write SQL to EVM chains and query
-                it off-chain on the Tableland network, where validator nodes
-                process & store data in SQLite—<i>mutable</i> data with{" "}
-                <i>immutable</i> rules.
+                storage option, along with on-chain access controls. Write SQL
+                to EVM chains and query it off-chain on the Tableland network,
+                where validator nodes process & store data in SQLite—
+                <i>mutable</i> data with <i>immutable</i> rules.
               </p>
               <ArrowButton text="Get started" to="sdk/getting-started" />
             </div>

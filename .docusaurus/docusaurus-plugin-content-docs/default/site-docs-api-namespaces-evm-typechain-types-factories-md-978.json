@@ -1,0 +1,23 @@
+{
+  "unversionedId": "api/namespaces/evm_typechain_types.factories",
+  "id": "api/namespaces/evm_typechain_types.factories",
+  "title": "Namespace: factories",
+  "description": "evm/typechain-types.factories",
+  "source": "@site/docs/api/namespaces/evm_typechain_types.factories.md",
+  "sourceDirName": "api/namespaces",
+  "slug": "/api/namespaces/evm_typechain_types.factories",
+  "permalink": "/api/namespaces/evm_typechain_types.factories",
+  "draft": false,
+  "editUrl": null,
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "id": "evm_typechain_types.factories",
+    "title": "Namespace: factories",
+    "sidebar_label": "factories",
+    "custom_edit_url": null
+  }
+}

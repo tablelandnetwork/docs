@@ -1,0 +1,25 @@
+{
+  "unversionedId": "api/modules",
+  "id": "api/modules",
+  "title": "@tableland/sdk",
+  "description": "Classes",
+  "source": "@site/docs/api/modules.md",
+  "sourceDirName": "api",
+  "slug": "/api/modules",
+  "permalink": "/api/modules",
+  "draft": false,
+  "editUrl": null,
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "sidebarPosition": 0.5,
+  "frontMatter": {
+    "id": "modules",
+    "title": "@tableland/sdk",
+    "sidebar_label": "Exports",
+    "sidebar_position": 0.5,
+    "custom_edit_url": null
+  }
+}

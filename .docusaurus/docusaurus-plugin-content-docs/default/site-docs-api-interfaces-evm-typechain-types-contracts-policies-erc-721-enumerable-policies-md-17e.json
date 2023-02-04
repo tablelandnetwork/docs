@@ -1,0 +1,23 @@
+{
+  "unversionedId": "api/interfaces/evm_typechain_types.contracts.policies.ERC721EnumerablePolicies",
+  "id": "api/interfaces/evm_typechain_types.contracts.policies.ERC721EnumerablePolicies",
+  "title": "Interface: ERC721EnumerablePolicies",
+  "description": "contracts.policies.ERC721EnumerablePolicies",
+  "source": "@site/docs/api/interfaces/evm_typechain_types.contracts.policies.ERC721EnumerablePolicies.md",
+  "sourceDirName": "api/interfaces",
+  "slug": "/api/interfaces/evm_typechain_types.contracts.policies.ERC721EnumerablePolicies",
+  "permalink": "/api/interfaces/evm_typechain_types.contracts.policies.ERC721EnumerablePolicies",
+  "draft": false,
+  "editUrl": null,
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "id": "evm_typechain_types.contracts.policies.ERC721EnumerablePolicies",
+    "title": "Interface: ERC721EnumerablePolicies",
+    "sidebar_label": "ERC721EnumerablePolicies",
+    "custom_edit_url": null
+  }
+}

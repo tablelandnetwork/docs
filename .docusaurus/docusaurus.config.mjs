@@ -24,15 +24,6 @@ export default {
   "markdown": {
     "mermaid": true
   },
-  "plugins": [
-    "@docusaurus/theme-live-codeblock",
-    [
-      "docusaurus-plugin-dotenv",
-      {
-        "path": "./.env"
-      }
-    ]
-  ],
   "themes": [
     "@easyops-cn/docusaurus-search-local",
     "@docusaurus/theme-mermaid"
@@ -44,6 +35,15 @@ export default {
       "integrity": "sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X",
       "crossorigin": "anonymous"
     }
+  ],
+  "plugins": [
+    "@docusaurus/theme-live-codeblock",
+    [
+      "docusaurus-plugin-dotenv",
+      {
+        "path": "./.env"
+      }
+    ]
   ],
   "presets": [
     [
@@ -145,6 +145,11 @@ export default {
           "docId": "/category/sdk",
           "position": "left",
           "label": "SDK"
+        },
+        {
+          "to": "api",
+          "label": "API",
+          "position": "left"
         },
         {
           "type": "docSidebar",

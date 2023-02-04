@@ -1,0 +1,23 @@
+{
+  "unversionedId": "api/interfaces/evm_typechain_types.openzeppelin.contracts.token.erc721.IERC721",
+  "id": "api/interfaces/evm_typechain_types.openzeppelin.contracts.token.erc721.IERC721",
+  "title": "Interface: IERC721",
+  "description": "token.erc721.IERC721",
+  "source": "@site/docs/api/interfaces/evm_typechain_types.openzeppelin.contracts.token.erc721.IERC721.md",
+  "sourceDirName": "api/interfaces",
+  "slug": "/api/interfaces/evm_typechain_types.openzeppelin.contracts.token.erc721.IERC721",
+  "permalink": "/api/interfaces/evm_typechain_types.openzeppelin.contracts.token.erc721.IERC721",
+  "draft": false,
+  "editUrl": null,
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "id": "evm_typechain_types.openzeppelin.contracts.token.erc721.IERC721",
+    "title": "Interface: IERC721",
+    "sidebar_label": "IERC721",
+    "custom_edit_url": null
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "unversionedId": "api/classes/sdk_src.Signer",
+  "id": "api/classes/sdk_src.Signer",
+  "title": "Class: Signer",
+  "description": "sdk/src.Signer",
+  "source": "@site/docs/api/classes/sdk_src.Signer.md",
+  "sourceDirName": "api/classes",
+  "slug": "/api/classes/sdk_src.Signer",
+  "permalink": "/api/classes/sdk_src.Signer",
+  "draft": false,
+  "editUrl": null,
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "id": "sdk_src.Signer",
+    "title": "Class: Signer",
+    "sidebar_label": "Signer",
+    "custom_edit_url": null
+  }
+}

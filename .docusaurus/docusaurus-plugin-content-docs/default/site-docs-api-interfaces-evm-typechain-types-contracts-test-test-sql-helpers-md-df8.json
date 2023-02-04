@@ -1,0 +1,23 @@
+{
+  "unversionedId": "api/interfaces/evm_typechain_types.contracts.test.TestSQLHelpers",
+  "id": "api/interfaces/evm_typechain_types.contracts.test.TestSQLHelpers",
+  "title": "Interface: TestSQLHelpers",
+  "description": "contracts.test.TestSQLHelpers",
+  "source": "@site/docs/api/interfaces/evm_typechain_types.contracts.test.TestSQLHelpers.md",
+  "sourceDirName": "api/interfaces",
+  "slug": "/api/interfaces/evm_typechain_types.contracts.test.TestSQLHelpers",
+  "permalink": "/api/interfaces/evm_typechain_types.contracts.test.TestSQLHelpers",
+  "draft": false,
+  "editUrl": null,
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "id": "evm_typechain_types.contracts.test.TestSQLHelpers",
+    "title": "Interface: TestSQLHelpers",
+    "sidebar_label": "TestSQLHelpers",
+    "custom_edit_url": null
+  }
+}

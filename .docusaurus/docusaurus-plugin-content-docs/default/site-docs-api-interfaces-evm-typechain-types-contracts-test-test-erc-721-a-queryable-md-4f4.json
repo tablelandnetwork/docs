@@ -1,0 +1,23 @@
+{
+  "unversionedId": "api/interfaces/evm_typechain_types.contracts.test.TestERC721AQueryable",
+  "id": "api/interfaces/evm_typechain_types.contracts.test.TestERC721AQueryable",
+  "title": "Interface: TestERC721AQueryable",
+  "description": "contracts.test.TestERC721AQueryable",
+  "source": "@site/docs/api/interfaces/evm_typechain_types.contracts.test.TestERC721AQueryable.md",
+  "sourceDirName": "api/interfaces",
+  "slug": "/api/interfaces/evm_typechain_types.contracts.test.TestERC721AQueryable",
+  "permalink": "/api/interfaces/evm_typechain_types.contracts.test.TestERC721AQueryable",
+  "draft": false,
+  "editUrl": null,
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "id": "evm_typechain_types.contracts.test.TestERC721AQueryable",
+    "title": "Interface: TestERC721AQueryable",
+    "sidebar_label": "TestERC721AQueryable",
+    "custom_edit_url": null
+  }
+}

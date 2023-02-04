@@ -1,0 +1,23 @@
+{
+  "unversionedId": "api/interfaces/evm_typechain_types.openzeppelin.contracts.token.erc721.ERC721",
+  "id": "api/interfaces/evm_typechain_types.openzeppelin.contracts.token.erc721.ERC721",
+  "title": "Interface: ERC721",
+  "description": "token.erc721.ERC721",
+  "source": "@site/docs/api/interfaces/evm_typechain_types.openzeppelin.contracts.token.erc721.ERC721.md",
+  "sourceDirName": "api/interfaces",
+  "slug": "/api/interfaces/evm_typechain_types.openzeppelin.contracts.token.erc721.ERC721",
+  "permalink": "/api/interfaces/evm_typechain_types.openzeppelin.contracts.token.erc721.ERC721",
+  "draft": false,
+  "editUrl": null,
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "id": "evm_typechain_types.openzeppelin.contracts.token.erc721.ERC721",
+    "title": "Interface: ERC721",
+    "sidebar_label": "ERC721",
+    "custom_edit_url": null
+  }
+}

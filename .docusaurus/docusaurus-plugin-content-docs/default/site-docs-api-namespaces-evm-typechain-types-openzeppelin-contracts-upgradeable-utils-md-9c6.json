@@ -1,0 +1,23 @@
+{
+  "unversionedId": "api/namespaces/evm_typechain_types.openzeppelin.contractsUpgradeable.utils",
+  "id": "api/namespaces/evm_typechain_types.openzeppelin.contractsUpgradeable.utils",
+  "title": "Namespace: utils",
+  "description": "openzeppelin.contractsUpgradeable.utils",
+  "source": "@site/docs/api/namespaces/evm_typechain_types.openzeppelin.contractsUpgradeable.utils.md",
+  "sourceDirName": "api/namespaces",
+  "slug": "/api/namespaces/evm_typechain_types.openzeppelin.contractsUpgradeable.utils",
+  "permalink": "/api/namespaces/evm_typechain_types.openzeppelin.contractsUpgradeable.utils",
+  "draft": false,
+  "editUrl": null,
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "id": "evm_typechain_types.openzeppelin.contractsUpgradeable.utils",
+    "title": "Namespace: utils",
+    "sidebar_label": "utils",
+    "custom_edit_url": null
+  }
+}

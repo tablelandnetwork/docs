@@ -34,6 +34,25 @@ const config = {
   markdown: {
     mermaid: true,
   },
+  themes: [
+    [
+      "@easyops-cn/docusaurus-search-local",
+      {
+        hashed: true,
+      },
+    ], // Used for site search
+    "@docusaurus/theme-mermaid",
+  ],
+  stylesheets: [
+    // Used for math / KaTeX formulas
+    {
+      href: "https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css",
+      type: "text/css",
+      integrity:
+        "sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X",
+      crossorigin: "anonymous",
+    },
+  ],
   plugins: [
     "@docusaurus/theme-live-codeblock",
     [
@@ -74,20 +93,6 @@ const config = {
     ],
     */
   ],
-  themes: [
-    "@easyops-cn/docusaurus-search-local", // Used for site search
-    "@docusaurus/theme-mermaid",
-  ],
-  stylesheets: [
-    // Used for math / KaTeX formulas
-    {
-      href: "https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css",
-      type: "text/css",
-      integrity:
-        "sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X",
-      crossorigin: "anonymous",
-    },
-  ],
   presets: [
     [
       "classic",
@@ -95,6 +100,7 @@ const config = {
       ({
         docs: {
           sidebarPath: "./config/sidebars.js",
+          // docLayoutComponent: "@theme/DocPage",
           routeBasePath: "/", // Use `/` instead of `/docs` for doc pages' base URL
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.

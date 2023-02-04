@@ -1,0 +1,25 @@
+{
+  "unversionedId": "api/classes/ApiError",
+  "id": "api/classes/ApiError",
+  "title": "Class: ApiError",
+  "description": "Hierarchy",
+  "source": "@site/docs/api/classes/ApiError.md",
+  "sourceDirName": "api/classes",
+  "slug": "/api/classes/ApiError",
+  "permalink": "/api/classes/ApiError",
+  "draft": false,
+  "editUrl": null,
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "sidebarPosition": 0,
+  "frontMatter": {
+    "id": "ApiError",
+    "title": "Class: ApiError",
+    "sidebar_label": "ApiError",
+    "sidebar_position": 0,
+    "custom_edit_url": null
+  }
+}
