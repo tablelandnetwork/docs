@@ -23,30 +23,33 @@ export default function Home(): JSX.Element {
             <div className="col column--6 padding-left--none">
               <h2>A new way to store web3 data</h2>
               <p>
-                Build applications on your chain of choice while using a
-                decentralized relational database, allowing developers to:
+                Build applications on your chain of choice while adding
+                Tableland to your stack, allowing developers to:
               </p>
               <ul>
                 <li>
-                  Reduce reliance on centralized servers and associated
-                  maintenance.
-                </li>{" "}
-                <li>
-                  Stop resorting to expensive smart contract storage for
-                  frequently changing data that doesn't belong there.
+                  Stop storing data in contracts that doesn't belong there, and
+                  offload it to a decentralized database with native SQL
+                  queries.
                 </li>
                 <li>
-                  Replace complicated "mutable" file publishing workflows on
-                  distributed file systems, trying to emulate a database but
-                  without its features.
+                  Eliminate centralized server dependence, or complex
+                  decentralized storage workflows (static JSON files) but
+                  without database features.
+                </li>
+                <li>
+                  Use on-chain rules to control who or what can change certain
+                  table data, such as gating with NFT ownership or an account's
+                  balance.
                 </li>
               </ul>{" "}
+              <p></p>
               <p>
-                Developers can leverage a natively mutable and queryable data
-                storage option, along with on-chain access controls. Write SQL
-                to EVM chains and query it off-chain on the Tableland network,
-                where validator nodes process & store data in SQLite—
-                <i>mutable</i> data with <i>immutable</i> rules.
+                Write SQL to EVM chains and <i>openly</i> read table data
+                off-chain within your application. Tableland validator nodes
+                listen to events at registry smart contracts, process SQL
+                queries, and store data in SQLite—enabling
+                <b> mutable</b> data with <b>immutable</b> rules.
               </p>
               <ArrowButton text="Get started" to="sdk/getting-started" />
             </div>

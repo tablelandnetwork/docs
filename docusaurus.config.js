@@ -14,7 +14,7 @@ const navbar = require("./config/navbar");
 const config = {
   title: "Tableland Docs",
   tagline:
-    "Explore guides and examples on how to store & query data in a web3 SQL database.",
+    "Explore how to store and query data on Tableland—the SQL database for blockchains.",
   url: "http://localhost:3000", // https://docs.tableland.xyz
   baseUrl: "/",
   onBrokenLinks: "log", // Or, could `throw`

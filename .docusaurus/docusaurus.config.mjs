@@ -5,7 +5,7 @@
  */
 export default {
   "title": "Tableland Docs",
-  "tagline": "Explore guides and examples on how to store & query data in a web3 SQL database.",
+  "tagline": "Explore how to store and query data on Tableland—the SQL database for blockchains.",
   "url": "http://localhost:3000",
   "baseUrl": "/",
   "onBrokenLinks": "log",
@@ -25,7 +25,12 @@ export default {
     "mermaid": true
   },
   "themes": [
-    "@easyops-cn/docusaurus-search-local",
+    [
+      "@easyops-cn/docusaurus-search-local",
+      {
+        "hashed": true
+      }
+    ],
     "@docusaurus/theme-mermaid"
   ],
   "stylesheets": [
@@ -145,11 +150,6 @@ export default {
           "docId": "/category/sdk",
           "position": "left",
           "label": "SDK"
-        },
-        {
-          "to": "api",
-          "label": "API",
-          "position": "left"
         },
         {
           "type": "docSidebar",
