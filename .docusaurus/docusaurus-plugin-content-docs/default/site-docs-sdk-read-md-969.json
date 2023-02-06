@@ -23,9 +23,13 @@
       "mutate table"
     ]
   },
-  "sidebar": "sdk",
+  "sidebar": "build",
   "previous": {
     "title": "Writing to tables",
     "permalink": "/sdk/write"
+  },
+  "next": {
+    "title": "CLI",
+    "permalink": "/category/cli"
   }
 }

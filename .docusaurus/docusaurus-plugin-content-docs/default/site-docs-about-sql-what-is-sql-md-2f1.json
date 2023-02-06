@@ -1,0 +1,27 @@
+{
+  "unversionedId": "about/sql/what-is-sql",
+  "id": "about/sql/what-is-sql",
+  "title": "What is SQL",
+  "description": "Learn about the basics of SQL.",
+  "source": "@site/docs/about/sql/what-is-sql.md",
+  "sourceDirName": "about/sql",
+  "slug": "/about/sql/what-is-sql",
+  "permalink": "/about/sql/what-is-sql",
+  "draft": false,
+  "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/about/sql/what-is-sql.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "title": "What is SQL",
+    "description": "Learn about the basics of SQL.",
+    "synopsis": "Structured Query Language (SQL) is a language that allows developers to interact with databases for extracting and mutating values.",
+    "keywords": [
+      "SQL",
+      "SQLite",
+      "about"
+    ]
+  }
+}

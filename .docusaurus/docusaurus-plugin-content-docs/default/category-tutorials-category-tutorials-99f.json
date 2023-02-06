@@ -1,0 +1,11 @@
+{
+  "title": "Tutorials",
+  "slug": "/category/tutorials",
+  "permalink": "/category/tutorials",
+  "navigation": {
+    "next": {
+      "title": "Creating a dynamic NFT with p5.js",
+      "permalink": "/tutorials/dynamic-nft-solidity"
+    }
+  }
+}

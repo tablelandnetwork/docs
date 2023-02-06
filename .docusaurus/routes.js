@@ -114,43 +114,65 @@ export default [
   },
   {
     path: '/',
-    component: ComponentCreator('/', '8a8'),
+    component: ComponentCreator('/', 'd44'),
     routes: [
       {
-        path: '/category/blockchain-basics',
-        component: ComponentCreator('/category/blockchain-basics', '165'),
+        path: '/about/',
+        component: ComponentCreator('/about/', 'e76'),
         exact: true,
-        sidebar: "blockchainBasics"
+        sidebar: "about"
+      },
+      {
+        path: '/about/blockchain/what-is-blockchain',
+        component: ComponentCreator('/about/blockchain/what-is-blockchain', '7e7'),
+        exact: true,
+        sidebar: "about"
+      },
+      {
+        path: '/about/rigs/overview',
+        component: ComponentCreator('/about/rigs/overview', 'b2d'),
+        exact: true
+      },
+      {
+        path: '/about/sql/what-is-sql',
+        component: ComponentCreator('/about/sql/what-is-sql', '5ec'),
+        exact: true
+      },
+      {
+        path: '/about/tableland/what-is-tableland',
+        component: ComponentCreator('/about/tableland/what-is-tableland', '658'),
+        exact: true,
+        sidebar: "about"
+      },
+      {
+        path: '/build/',
+        component: ComponentCreator('/build/', 'eda'),
+        exact: true,
+        sidebar: "build"
+      },
+      {
+        path: '/category/blockchain-basics',
+        component: ComponentCreator('/category/blockchain-basics', 'e7a'),
+        exact: true,
+        sidebar: "about"
       },
       {
         path: '/category/cli',
-        component: ComponentCreator('/category/cli', 'd70'),
+        component: ComponentCreator('/category/cli', '20d'),
         exact: true,
-        sidebar: "cli"
+        sidebar: "build"
       },
       {
         path: '/category/contributing',
-        component: ComponentCreator('/category/contributing', 'b27'),
+        component: ComponentCreator('/category/contributing', 'b2e'),
         exact: true,
-        sidebar: "congtributing"
-      },
-      {
-        path: '/category/protocol',
-        component: ComponentCreator('/category/protocol', '160'),
-        exact: true,
-        sidebar: "validator"
-      },
-      {
-        path: '/category/sdk',
-        component: ComponentCreator('/category/sdk', 'b13'),
-        exact: true,
-        sidebar: "sdk"
+        sidebar: "contributing"
       },
       {
         path: '/category/smart-contracts',
-        component: ComponentCreator('/category/smart-contracts', 'dc4'),
+        component: ComponentCreator('/category/smart-contracts', '441'),
         exact: true,
-        sidebar: "smartContracts"
+        sidebar: "build"
       },
       {
         path: '/category/sql',
@@ -159,34 +181,28 @@ export default [
         sidebar: "sql"
       },
       {
-        path: '/category/sql-basics',
-        component: ComponentCreator('/category/sql-basics', '143'),
+        path: '/category/tutorials',
+        component: ComponentCreator('/category/tutorials', '710'),
         exact: true,
-        sidebar: "sqlBasics"
-      },
-      {
-        path: '/category/tableland-basics',
-        component: ComponentCreator('/category/tableland-basics', 'f80'),
-        exact: true,
-        sidebar: "tablelandBasics"
+        sidebar: "tutorials"
       },
       {
         path: '/cli/connect',
-        component: ComponentCreator('/cli/connect', 'c53'),
+        component: ComponentCreator('/cli/connect', '049'),
         exact: true,
-        sidebar: "cli"
+        sidebar: "build"
       },
       {
         path: '/cli/create',
-        component: ComponentCreator('/cli/create', 'ff2'),
+        component: ComponentCreator('/cli/create', 'e24'),
         exact: true,
-        sidebar: "cli"
+        sidebar: "build"
       },
       {
         path: '/cli/getting-started',
-        component: ComponentCreator('/cli/getting-started', '889'),
+        component: ComponentCreator('/cli/getting-started', 'ddf'),
         exact: true,
-        sidebar: "cli"
+        sidebar: "build"
       },
       {
         path: '/cli/overview',
@@ -195,105 +211,92 @@ export default [
       },
       {
         path: '/cli/read',
-        component: ComponentCreator('/cli/read', '8ae'),
+        component: ComponentCreator('/cli/read', 'da8'),
         exact: true,
-        sidebar: "cli"
+        sidebar: "build"
       },
       {
         path: '/cli/write',
-        component: ComponentCreator('/cli/write', 'ac5'),
+        component: ComponentCreator('/cli/write', '69b'),
         exact: true,
-        sidebar: "cli"
+        sidebar: "build"
       },
       {
         path: '/contribute/guidelines',
-        component: ComponentCreator('/contribute/guidelines', '156'),
+        component: ComponentCreator('/contribute/guidelines', '7cb'),
         exact: true,
-        sidebar: "congtributing"
+        sidebar: "contributing"
       },
       {
         path: '/contribute/maintainers',
-        component: ComponentCreator('/contribute/maintainers', '4a4'),
+        component: ComponentCreator('/contribute/maintainers', 'ea1'),
         exact: true,
-        sidebar: "congtributing"
+        sidebar: "contributing"
       },
       {
         path: '/contribute/style-guide',
-        component: ComponentCreator('/contribute/style-guide', 'd43'),
+        component: ComponentCreator('/contribute/style-guide', 'fe4'),
         exact: true,
-        sidebar: "congtributing"
-      },
-      {
-        path: '/learn/blockchain/what-is-blockchain',
-        component: ComponentCreator('/learn/blockchain/what-is-blockchain', '19c'),
-        exact: true,
-        sidebar: "blockchainBasics"
-      },
-      {
-        path: '/learn/sql/what-is-sql',
-        component: ComponentCreator('/learn/sql/what-is-sql', '54f'),
-        exact: true,
-        sidebar: "sqlBasics"
-      },
-      {
-        path: '/learn/tableland/what-is-tableland',
-        component: ComponentCreator('/learn/tableland/what-is-tableland', 'e1a'),
-        exact: true,
-        sidebar: "tablelandBasics"
+        sidebar: "contributing"
       },
       {
         path: '/protocol/validator-spec',
-        component: ComponentCreator('/protocol/validator-spec', '81e'),
+        component: ComponentCreator('/protocol/validator-spec', '7ce'),
+        exact: true
+      },
+      {
+        path: '/sdk/',
+        component: ComponentCreator('/sdk/', '3a9'),
         exact: true,
-        sidebar: "validator"
+        sidebar: "build"
       },
       {
         path: '/sdk/connect',
-        component: ComponentCreator('/sdk/connect', 'de3'),
+        component: ComponentCreator('/sdk/connect', 'be9'),
         exact: true,
-        sidebar: "sdk"
+        sidebar: "build"
       },
       {
         path: '/sdk/create',
-        component: ComponentCreator('/sdk/create', '6b0'),
+        component: ComponentCreator('/sdk/create', 'b25'),
         exact: true,
-        sidebar: "sdk"
+        sidebar: "build"
       },
       {
         path: '/sdk/getting-started',
-        component: ComponentCreator('/sdk/getting-started', 'd33'),
+        component: ComponentCreator('/sdk/getting-started', 'f34'),
         exact: true,
-        sidebar: "sdk"
+        sidebar: "build"
       },
       {
         path: '/sdk/read',
-        component: ComponentCreator('/sdk/read', '876'),
+        component: ComponentCreator('/sdk/read', 'f5f'),
         exact: true,
-        sidebar: "sdk"
+        sidebar: "build"
       },
       {
         path: '/sdk/write',
-        component: ComponentCreator('/sdk/write', '7ea'),
+        component: ComponentCreator('/sdk/write', 'd41'),
         exact: true,
-        sidebar: "sdk"
+        sidebar: "build"
       },
       {
         path: '/smart-contracts/connect',
-        component: ComponentCreator('/smart-contracts/connect', '982'),
+        component: ComponentCreator('/smart-contracts/connect', '51c'),
         exact: true,
-        sidebar: "smartContracts"
+        sidebar: "build"
       },
       {
         path: '/smart-contracts/create',
-        component: ComponentCreator('/smart-contracts/create', 'e3b'),
+        component: ComponentCreator('/smart-contracts/create', '724'),
         exact: true,
-        sidebar: "smartContracts"
+        sidebar: "build"
       },
       {
         path: '/smart-contracts/getting-started',
-        component: ComponentCreator('/smart-contracts/getting-started', 'd70'),
+        component: ComponentCreator('/smart-contracts/getting-started', '736'),
         exact: true,
-        sidebar: "smartContracts"
+        sidebar: "build"
       },
       {
         path: '/smart-contracts/overview',
@@ -302,15 +305,15 @@ export default [
       },
       {
         path: '/smart-contracts/read',
-        component: ComponentCreator('/smart-contracts/read', '606'),
+        component: ComponentCreator('/smart-contracts/read', '502'),
         exact: true,
-        sidebar: "smartContracts"
+        sidebar: "build"
       },
       {
         path: '/smart-contracts/write',
-        component: ComponentCreator('/smart-contracts/write', 'a6f'),
+        component: ComponentCreator('/smart-contracts/write', '8d3'),
         exact: true,
-        sidebar: "smartContracts"
+        sidebar: "build"
       },
       {
         path: '/sql/sql-spec',
@@ -321,6 +324,28 @@ export default [
       {
         path: '/template',
         component: ComponentCreator('/template', '731'),
+        exact: true
+      },
+      {
+        path: '/tutorials/',
+        component: ComponentCreator('/tutorials/', 'eec'),
+        exact: true
+      },
+      {
+        path: '/tutorials/dynamic-nft-p5js',
+        component: ComponentCreator('/tutorials/dynamic-nft-p5js', '054'),
+        exact: true,
+        sidebar: "tutorials"
+      },
+      {
+        path: '/tutorials/dynamic-nft-solidity',
+        component: ComponentCreator('/tutorials/dynamic-nft-solidity', '466'),
+        exact: true,
+        sidebar: "tutorials"
+      },
+      {
+        path: '/tutorials/overview',
+        component: ComponentCreator('/tutorials/overview', '6b6'),
         exact: true
       }
     ]

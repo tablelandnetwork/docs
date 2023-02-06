@@ -1,0 +1,15 @@
+{
+  "title": "SQL basics",
+  "slug": "/category/sql-basics",
+  "permalink": "/category/sql-basics",
+  "navigation": {
+    "previous": {
+      "title": "What is Tableland",
+      "permalink": "/about/tableland/what-is-tableland"
+    },
+    "next": {
+      "title": "What is SQL",
+      "permalink": "/about/sql/what-is-sql"
+    }
+  }
+}

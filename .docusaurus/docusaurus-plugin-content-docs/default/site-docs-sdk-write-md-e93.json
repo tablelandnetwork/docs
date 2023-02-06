@@ -23,7 +23,7 @@
       "mutate table"
     ]
   },
-  "sidebar": "sdk",
+  "sidebar": "build",
   "previous": {
     "title": "Creating tables",
     "permalink": "/sdk/create"

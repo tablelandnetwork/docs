@@ -23,10 +23,10 @@
       "Tableland SDK"
     ]
   },
-  "sidebar": "sdk",
+  "sidebar": "build",
   "previous": {
-    "title": "SDK",
-    "permalink": "/category/sdk"
+    "title": "Overview",
+    "permalink": "/sdk/"
   },
   "next": {
     "title": "Connecting to Tableland",

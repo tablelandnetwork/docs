@@ -1,0 +1,37 @@
+{
+  "unversionedId": "tutorials/dynamic-nft-solidity",
+  "id": "tutorials/dynamic-nft-solidity",
+  "title": "Creating a dynamic NFT with p5.js",
+  "description": "Openly readable tables by your applications.",
+  "source": "@site/docs/tutorials/dynamic-nft-solidity.md",
+  "sourceDirName": "tutorials",
+  "slug": "/tutorials/dynamic-nft-solidity",
+  "permalink": "/tutorials/dynamic-nft-solidity",
+  "draft": false,
+  "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/tutorials/dynamic-nft-solidity.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "title": "Creating a dynamic NFT with p5.js",
+    "description": "Openly readable tables by your applications.",
+    "synopsis": "Reading from tables is entirely open (for anyone), allowing for true composability. Write SQL qeuries—but with some limitations that are due to the nature of decentralized networks and deterministic requirements.",
+    "keywords": [
+      "tutorial",
+      "solidity",
+      "dynamic NFT",
+      "p5.js"
+    ]
+  },
+  "sidebar": "tutorials",
+  "previous": {
+    "title": "Tutorials",
+    "permalink": "/category/tutorials"
+  },
+  "next": {
+    "title": "Build a Dynamic NFT in Solidity",
+    "permalink": "/tutorials/dynamic-nft-p5js"
+  }
+}

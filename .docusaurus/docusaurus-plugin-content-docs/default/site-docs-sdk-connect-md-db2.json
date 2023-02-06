@@ -23,7 +23,7 @@
       "SQL query"
     ]
   },
-  "sidebar": "sdk",
+  "sidebar": "build",
   "previous": {
     "title": "Getting started",
     "permalink": "/sdk/getting-started"

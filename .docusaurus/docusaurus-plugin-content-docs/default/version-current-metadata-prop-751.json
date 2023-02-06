@@ -8,41 +8,28 @@
   "className": "docs-version-current",
   "isLast": true,
   "docsSidebars": {
-    "tablelandBasics": [
+    "about": [
+      {
+        "type": "link",
+        "label": "Overview",
+        "href": "/about/",
+        "docId": "about/README"
+      },
       {
         "type": "category",
-        "label": "Tableland basics",
+        "label": "Tableland network",
         "items": [
           {
             "type": "link",
             "label": "What is Tableland",
-            "href": "/learn/tableland/what-is-tableland",
-            "docId": "learn/tableland/what-is-tableland"
+            "href": "/about/tableland/what-is-tableland",
+            "docId": "about/tableland/what-is-tableland"
           }
         ],
         "collapsed": true,
         "collapsible": true,
-        "href": "/category/tableland-basics"
-      }
-    ],
-    "sqlBasics": [
-      {
-        "type": "category",
-        "label": "SQL basics",
-        "items": [
-          {
-            "type": "link",
-            "label": "What is SQL",
-            "href": "/learn/sql/what-is-sql",
-            "docId": "learn/sql/what-is-sql"
-          }
-        ],
-        "collapsed": true,
-        "collapsible": true,
-        "href": "/category/sql-basics"
-      }
-    ],
-    "blockchainBasics": [
+        "href": "/sdk/"
+      },
       {
         "type": "category",
         "label": "Blockchain basics",
@@ -50,8 +37,8 @@
           {
             "type": "link",
             "label": "What is blockchain",
-            "href": "/learn/blockchain/what-is-blockchain",
-            "docId": "learn/blockchain/what-is-blockchain"
+            "href": "/about/blockchain/what-is-blockchain",
+            "docId": "about/blockchain/what-is-blockchain"
           }
         ],
         "collapsed": true,
@@ -59,10 +46,17 @@
         "href": "/category/blockchain-basics"
       }
     ],
-    "sdk": [
+    "build": [
+      {
+        "type": "link",
+        "label": "Overview",
+        "href": "/build/",
+        "docId": "build/README"
+      },
       {
         "type": "category",
         "label": "SDK",
+        "collapsed": false,
         "items": [
           {
             "type": "link",
@@ -95,12 +89,9 @@
             "docId": "sdk/read"
           }
         ],
-        "collapsed": true,
         "collapsible": true,
-        "href": "/category/sdk"
-      }
-    ],
-    "cli": [
+        "href": "/sdk/"
+      },
       {
         "type": "category",
         "label": "CLI",
@@ -139,9 +130,7 @@
         "collapsed": true,
         "collapsible": true,
         "href": "/category/cli"
-      }
-    ],
-    "smartContracts": [
+      },
       {
         "type": "category",
         "label": "Smart contracts",
@@ -199,24 +188,30 @@
         "href": "/category/sql"
       }
     ],
-    "validator": [
+    "tutorials": [
       {
         "type": "category",
-        "label": "Protocol",
+        "label": "Tutorials",
         "items": [
           {
             "type": "link",
-            "label": "Validator specification",
-            "href": "/protocol/validator-spec",
-            "docId": "protocol/validator-spec"
+            "label": "Creating a dynamic NFT with p5.js",
+            "href": "/tutorials/dynamic-nft-solidity",
+            "docId": "tutorials/dynamic-nft-solidity"
+          },
+          {
+            "type": "link",
+            "label": "Build a Dynamic NFT in Solidity",
+            "href": "/tutorials/dynamic-nft-p5js",
+            "docId": "tutorials/dynamic-nft-p5js"
           }
         ],
         "collapsed": true,
         "collapsible": true,
-        "href": "/category/protocol"
+        "href": "/category/tutorials"
       }
     ],
-    "congtributing": [
+    "contributing": [
       {
         "type": "category",
         "label": "Contributing",
@@ -247,23 +242,57 @@
     ]
   },
   "docs": {
+    "about/blockchain/what-is-blockchain": {
+      "id": "about/blockchain/what-is-blockchain",
+      "title": "What is blockchain",
+      "description": "Learn about the basics of blockchains.",
+      "sidebar": "about"
+    },
+    "about/README": {
+      "id": "about/README",
+      "title": "Overview",
+      "description": "Learn the ins and outs of contributing to the Tableland docs site.",
+      "sidebar": "about"
+    },
+    "about/rigs/overview": {
+      "id": "about/rigs/overview",
+      "title": "Tableland Rigs",
+      "description": "Learn about the basics of SQL."
+    },
+    "about/sql/what-is-sql": {
+      "id": "about/sql/what-is-sql",
+      "title": "What is SQL",
+      "description": "Learn about the basics of SQL."
+    },
+    "about/tableland/what-is-tableland": {
+      "id": "about/tableland/what-is-tableland",
+      "title": "What is Tableland",
+      "description": "Learn about the basics of the Tableland network.",
+      "sidebar": "about"
+    },
+    "build/README": {
+      "id": "build/README",
+      "title": "Overview",
+      "description": "Learn the ins and outs of contributing to the Tableland docs site.",
+      "sidebar": "build"
+    },
     "cli/connect": {
       "id": "cli/connect",
       "title": "Connecting to Tableland",
       "description": "Access the Tableland network by first connecting to the base chain.",
-      "sidebar": "cli"
+      "sidebar": "build"
     },
     "cli/create": {
       "id": "cli/create",
       "title": "Creating tables",
       "description": "Learn how to create tables from the SDK.",
-      "sidebar": "cli"
+      "sidebar": "build"
     },
     "cli/getting-started": {
       "id": "cli/getting-started",
       "title": "Getting started",
       "description": "Get up an running with the Tableland SDK.",
-      "sidebar": "cli"
+      "sidebar": "build"
     },
     "cli/overview": {
       "id": "cli/overview",
@@ -274,103 +303,90 @@
       "id": "cli/read",
       "title": "Reading tables",
       "description": "Openly readable tables by your applications.",
-      "sidebar": "cli"
+      "sidebar": "build"
     },
     "cli/write": {
       "id": "cli/write",
       "title": "Writing to tables",
       "description": "Mutate your table values with additional access control.",
-      "sidebar": "cli"
+      "sidebar": "build"
     },
     "contribute/guidelines": {
       "id": "contribute/guidelines",
       "title": "How to contribute",
       "description": "Get involved and contribute to the Tableland ecosystem.",
-      "sidebar": "congtributing"
+      "sidebar": "contributing"
     },
     "contribute/maintainers": {
       "id": "contribute/maintainers",
       "title": "Maintainers",
       "description": "Core contributors to the Tableland protocol's documentation.",
-      "sidebar": "congtributing"
+      "sidebar": "contributing"
     },
     "contribute/style-guide": {
       "id": "contribute/style-guide",
       "title": "Style guide",
       "description": "Learn the ins and outs of contributing to the Tableland docs site.",
-      "sidebar": "congtributing"
-    },
-    "learn/blockchain/what-is-blockchain": {
-      "id": "learn/blockchain/what-is-blockchain",
-      "title": "What is blockchain",
-      "description": "Learn about the basics of blockchains.",
-      "sidebar": "blockchainBasics"
-    },
-    "learn/sql/what-is-sql": {
-      "id": "learn/sql/what-is-sql",
-      "title": "What is SQL",
-      "description": "Learn about the basics of SQL.",
-      "sidebar": "sqlBasics"
-    },
-    "learn/tableland/what-is-tableland": {
-      "id": "learn/tableland/what-is-tableland",
-      "title": "What is Tableland",
-      "description": "Learn about the basics of the Tableland network.",
-      "sidebar": "tablelandBasics"
+      "sidebar": "contributing"
     },
     "protocol/validator-spec": {
       "id": "protocol/validator-spec",
       "title": "validator-spec",
-      "description": "The Tableland protocol validator specification.",
-      "sidebar": "validator"
+      "description": "The Tableland protocol validator specification."
     },
     "sdk/connect": {
       "id": "sdk/connect",
       "title": "Connecting to Tableland",
       "description": "Access the Tableland network by first connecting to the base chain.",
-      "sidebar": "sdk"
+      "sidebar": "build"
     },
     "sdk/create": {
       "id": "sdk/create",
       "title": "Creating tables",
       "description": "Learn how to create tables from the SDK.",
-      "sidebar": "sdk"
+      "sidebar": "build"
     },
     "sdk/getting-started": {
       "id": "sdk/getting-started",
       "title": "Getting started",
       "description": "Get up an running with the Tableland SDK.",
-      "sidebar": "sdk"
+      "sidebar": "build"
     },
     "sdk/read": {
       "id": "sdk/read",
       "title": "Reading tables",
       "description": "Openly readable tables by your applications.",
-      "sidebar": "sdk"
+      "sidebar": "build"
+    },
+    "sdk/README": {
+      "id": "sdk/README",
+      "title": "Overview",
+      "description": "Openly readable tables by your applications.",
+      "sidebar": "build"
     },
     "sdk/write": {
       "id": "sdk/write",
       "title": "Writing to tables",
       "description": "Mutate your table values with additional access control.",
-      "sidebar": "sdk"
+      "sidebar": "build"
     },
     "smart-contracts/connect": {
       "id": "smart-contracts/connect",
       "title": "Connecting to Tableland",
       "description": "Access the Tableland network by first connecting to the base chain.",
-      "sidebar": "smartContracts"
+      "sidebar": "build"
     },
     "smart-contracts/create": {
       "id": "smart-contracts/create",
       "title": "Creating tables",
       "description": "Learn how to create tables from the SDK.",
-      "sidebar": "smartContracts"
+      "sidebar": "build"
     },
     "smart-contracts/getting-started": {
       "id": "smart-contracts/getting-started",
       "title": "Getting started",
       "description": "Get up an running with the Tableland SDK.",
-      "sidebar": "smartContracts"
+      "sidebar": "build"
     },
     "smart-contracts/overview": {
       "id": "smart-contracts/overview",
@@ -381,13 +397,13 @@
       "id": "smart-contracts/read",
       "title": "Reading tables",
       "description": "Openly readable tables by your applications.",
-      "sidebar": "smartContracts"
+      "sidebar": "build"
     },
     "smart-contracts/write": {
       "id": "smart-contracts/write",
       "title": "Writing to tables",
       "description": "Mutate your table values with additional access control.",
-      "sidebar": "smartContracts"
+      "sidebar": "build"
     },
     "sql/sql-spec": {
       "id": "sql/sql-spec",
@@ -399,6 +415,28 @@
       "id": "template",
       "title": "template",
       "description": "Example description."
+    },
+    "tutorials/dynamic-nft-p5js": {
+      "id": "tutorials/dynamic-nft-p5js",
+      "title": "Build a Dynamic NFT in Solidity",
+      "description": "Openly readable tables by your applications.",
+      "sidebar": "tutorials"
+    },
+    "tutorials/dynamic-nft-solidity": {
+      "id": "tutorials/dynamic-nft-solidity",
+      "title": "Creating a dynamic NFT with p5.js",
+      "description": "Openly readable tables by your applications.",
+      "sidebar": "tutorials"
+    },
+    "tutorials/overview": {
+      "id": "tutorials/overview",
+      "title": "Overview",
+      "description": "Openly readable tables by your applications."
+    },
+    "tutorials/README": {
+      "id": "tutorials/README",
+      "title": "Overview",
+      "description": "Openly readable tables by your applications."
     }
   }
 }

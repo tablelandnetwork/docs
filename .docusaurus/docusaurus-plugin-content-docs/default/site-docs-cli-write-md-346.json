@@ -23,7 +23,7 @@
       "mutate table"
     ]
   },
-  "sidebar": "cli",
+  "sidebar": "build",
   "previous": {
     "title": "Creating tables",
     "permalink": "/cli/create"

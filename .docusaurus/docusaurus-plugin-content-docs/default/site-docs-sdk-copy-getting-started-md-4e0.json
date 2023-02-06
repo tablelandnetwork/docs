@@ -17,7 +17,7 @@
   "frontMatter": {
     "title": "Getting started",
     "description": "Get up an running with the Tableland SDK.",
-    "synopsis": "Dive into the basics for connecting, creating, writing, and reading from tables. More detailed information is provided in subsequent overviews, but the details provided here should allow developers to quickly understand where to start.",
+    "synopsis": "The JavaScript / TypeScript SDK allows developers to create tables on their chain of choice. Connect, create, and then interact with your tables thereafter with table writes and reads. Dive into the basics for connecting, creating, writing, and reading from tables.",
     "keywords": [
       "SQL query",
       "Tableland SDK"

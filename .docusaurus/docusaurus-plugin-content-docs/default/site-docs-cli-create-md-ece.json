@@ -22,7 +22,7 @@
       "create table"
     ]
   },
-  "sidebar": "cli",
+  "sidebar": "build",
   "previous": {
     "title": "Connecting to Tableland",
     "permalink": "/cli/connect"

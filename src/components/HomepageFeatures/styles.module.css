@@ -1,0 +1,28 @@
+.landingList {
+  list-style: none;
+  padding-left: 0;
+}
+
+.product {
+  border: 1px solid var(--ifm-color-emphasis-200);
+  transition: all var(--ifm-transition-fast) ease;
+  transition-property: box-shadow;
+  line-height: var(--ifm-heading-line-height);
+  padding: var(--ifm-global-spacing);
+}
+
+.product span {
+  font-size: var(--ifm-h4-font-size);
+  color: var(--ifm-color-content);
+  font-weight: var(--ifm-font-weight-normal);
+}
+
+.exploreSubtitle {
+  color: var(--ifm-hero-text-color);
+  font-size: 1.2rem;
+}
+
+.product:hover {
+  box-shadow: 0 0 0 1px var(--ifm-link-color),
+    0 7px 14px 0 rgba(50, 50, 93, 0.1), 0 3px 6px 0 rgba(0, 0, 0, 0.02);
+}

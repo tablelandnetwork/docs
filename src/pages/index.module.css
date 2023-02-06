@@ -6,3 +6,8 @@
 [data-theme="dark"] .landingImage {
   filter: none;
 }
+
+.containerMain {
+  display: flex;
+  padding: 2rem 2rem;
+}

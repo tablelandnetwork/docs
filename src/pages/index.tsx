@@ -20,7 +20,7 @@ export default function Home(): JSX.Element {
             <p className="hero__subtitle">{siteConfig.tagline}</p>
           </div>
           <div className="row row-landing margin-top--lg">
-            <div className="col column--6 padding-left--none">
+            <div className="col column--6 padding-left--none padding-right--none">
               <h2>A new way to store web3 data</h2>
               <p>
                 Build applications on your chain of choice while adding
@@ -70,7 +70,7 @@ export default function Home(): JSX.Element {
           </div>
         </div>
       </header>
-      <main className="container">
+      <main className={clsx(styles.containerMain)}>
         <HomepageFeatures />
       </main>
       <CustomFooter />

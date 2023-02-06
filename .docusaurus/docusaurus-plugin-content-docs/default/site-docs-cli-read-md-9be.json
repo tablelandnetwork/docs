@@ -23,9 +23,13 @@
       "mutate table"
     ]
   },
-  "sidebar": "cli",
+  "sidebar": "build",
   "previous": {
     "title": "Writing to tables",
     "permalink": "/cli/write"
+  },
+  "next": {
+    "title": "Smart contracts",
+    "permalink": "/category/smart-contracts"
   }
 }

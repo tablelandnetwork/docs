@@ -16,16 +16,8 @@ const footer = {
           label: "Smart contracts",
         },
         {
-          to: "/category/protocol",
-          label: "Protocol",
-        },
-        {
           to: "/sql/sql-spec",
           label: "SQL spec",
-        },
-        {
-          to: "/protocol/validator-spec",
-          label: "Validator spec",
         },
       ],
     },

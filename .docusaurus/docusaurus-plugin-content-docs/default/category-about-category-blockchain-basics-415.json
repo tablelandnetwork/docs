@@ -1,0 +1,15 @@
+{
+  "title": "Blockchain basics",
+  "slug": "/category/blockchain-basics",
+  "permalink": "/category/blockchain-basics",
+  "navigation": {
+    "previous": {
+      "title": "What is Tableland",
+      "permalink": "/about/tableland/what-is-tableland"
+    },
+    "next": {
+      "title": "What is blockchain",
+      "permalink": "/about/blockchain/what-is-blockchain"
+    }
+  }
+}

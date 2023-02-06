@@ -23,7 +23,7 @@
       "SQL query"
     ]
   },
-  "sidebar": "cli",
+  "sidebar": "build",
   "previous": {
     "title": "Getting started",
     "permalink": "/cli/getting-started"

@@ -1,0 +1,15 @@
+{
+  "title": "Protocol",
+  "slug": "/category/protocol",
+  "permalink": "/category/protocol",
+  "navigation": {
+    "previous": {
+      "title": "SQL specification",
+      "permalink": "/sql/sql-spec"
+    },
+    "next": {
+      "title": "Validator specification",
+      "permalink": "/protocol/validator-spec"
+    }
+  }
+}

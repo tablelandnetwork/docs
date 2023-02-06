@@ -22,7 +22,7 @@
       "create table"
     ]
   },
-  "sidebar": "sdk",
+  "sidebar": "build",
   "previous": {
     "title": "Connecting to Tableland",
     "permalink": "/sdk/connect"

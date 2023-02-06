@@ -1,0 +1,11 @@
+{
+  "title": "SQL",
+  "slug": "/category/sql",
+  "permalink": "/category/sql",
+  "navigation": {
+    "next": {
+      "title": "SQL specification",
+      "permalink": "/sql/sql-spec"
+    }
+  }
+}

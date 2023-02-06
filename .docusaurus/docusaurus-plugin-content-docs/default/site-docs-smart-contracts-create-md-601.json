@@ -22,7 +22,7 @@
       "create table"
     ]
   },
-  "sidebar": "smartContracts",
+  "sidebar": "build",
   "previous": {
     "title": "Connecting to Tableland",
     "permalink": "/smart-contracts/connect"

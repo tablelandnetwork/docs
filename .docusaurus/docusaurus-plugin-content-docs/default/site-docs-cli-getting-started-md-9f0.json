@@ -23,7 +23,7 @@
       "Tableland SDK"
     ]
   },
-  "sidebar": "cli",
+  "sidebar": "build",
   "previous": {
     "title": "CLI",
     "permalink": "/category/cli"

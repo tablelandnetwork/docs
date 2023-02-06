@@ -146,60 +146,28 @@ export default {
       },
       "items": [
         {
-          "type": "doc",
-          "docId": "/category/sdk",
+          "type": "docSidebar",
           "position": "left",
-          "label": "SDK"
+          "sidebarId": "about",
+          "label": "About"
         },
         {
           "type": "docSidebar",
           "position": "left",
-          "sidebarId": "cli",
-          "label": "CLI"
+          "sidebarId": "build",
+          "label": "Build"
         },
         {
           "type": "doc",
-          "docId": "/category/smart-contracts",
+          "docId": "/category/sql",
           "position": "left",
-          "label": "Smart contracts"
+          "label": "SQL"
         },
         {
           "type": "doc",
-          "docId": "/category/protocol",
+          "docId": "/category/tutorials",
           "position": "left",
-          "label": "Protocol"
-        },
-        {
-          "label": "Learn",
-          "position": "left",
-          "items": [
-            {
-              "to": "/learn/tableland/what-is-tableland",
-              "label": "Tableland"
-            },
-            {
-              "to": "/learn/sql/what-is-sql",
-              "label": "SQL"
-            },
-            {
-              "to": "/learn/blockchain/what-is-blockchain",
-              "label": "Blockchain"
-            }
-          ]
-        },
-        {
-          "label": "Specs",
-          "position": "left",
-          "items": [
-            {
-              "to": "/sql/sql-spec",
-              "label": "SQL"
-            },
-            {
-              "to": "/protocol/validator-spec",
-              "label": "Validator"
-            }
-          ]
+          "label": "Tutorials"
         },
         {
           "href": "https://dev.tableland.xyz",
@@ -276,16 +244,8 @@ export default {
               "label": "Smart contracts"
             },
             {
-              "to": "/category/protocol",
-              "label": "Protocol"
-            },
-            {
               "to": "/sql/sql-spec",
               "label": "SQL spec"
-            },
-            {
-              "to": "/protocol/validator-spec",
-              "label": "Validator spec"
             }
           ]
         },
