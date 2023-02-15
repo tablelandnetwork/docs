@@ -1,0 +1,34 @@
+{
+  "unversionedId": "concepts/sql/README",
+  "id": "concepts/sql/README",
+  "title": "Quick start",
+  "description": "Learn about what Tableland is.",
+  "source": "@site/docs/concepts/sql/README.md",
+  "sourceDirName": "concepts/sql",
+  "slug": "/concepts/sql/",
+  "permalink": "/concepts/sql/",
+  "draft": false,
+  "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/concepts/sql/README.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "title": "Quick start",
+    "description": "Learn about what Tableland is.",
+    "synopsis": "Structured Query Language (SQL) is a language that allows developers to interact with databases for extracting and mutating values.",
+    "keywords": [
+      "protocol"
+    ]
+  },
+  "sidebar": "concepts",
+  "previous": {
+    "title": "Roadmap",
+    "permalink": "/concepts/network/roadmap"
+  },
+  "next": {
+    "title": "Create a table",
+    "permalink": "/concepts/sql/create-a-table"
+  }
+}

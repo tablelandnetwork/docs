@@ -1,0 +1,35 @@
+{
+  "unversionedId": "build/chains/arbitrum",
+  "id": "build/chains/arbitrum",
+  "title": "Arbitrum",
+  "description": "Openly readable tables by your applications.",
+  "source": "@site/docs/build/chains/arbitrum.md",
+  "sourceDirName": "build/chains",
+  "slug": "/build/chains/arbitrum",
+  "permalink": "/build/chains/arbitrum",
+  "draft": false,
+  "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/build/chains/arbitrum.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "title": "Arbitrum",
+    "description": "Openly readable tables by your applications.",
+    "synopsis": "Reading from tables is entirely open (for anyone), allowing for true composability. Write SQL qeuries—but with some limitations that are due to the nature of decentralized networks and deterministic requirements.",
+    "keywords": [
+      "write to table",
+      "mutate table"
+    ]
+  },
+  "sidebar": "build",
+  "previous": {
+    "title": "Ethereum",
+    "permalink": "/build/chains/ethereum"
+  },
+  "next": {
+    "title": "Optimism",
+    "permalink": "/build/chains/optimism"
+  }
+}

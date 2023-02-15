@@ -1,0 +1,25 @@
+{
+  "unversionedId": "concepts/sql/schema",
+  "id": "concepts/sql/schema",
+  "title": "Table schema",
+  "description": "Learn about what Tableland is.",
+  "source": "@site/docs/concepts/sql/schema.md",
+  "sourceDirName": "concepts/sql",
+  "slug": "/concepts/sql/schema",
+  "permalink": "/concepts/sql/schema",
+  "draft": false,
+  "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/concepts/sql/schema.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "title": "Table schema",
+    "description": "Learn about what Tableland is.",
+    "synopsis": "Structured Query Language (SQL) is a language that allows developers to interact with databases for extracting and mutating values.",
+    "keywords": [
+      "protocol"
+    ]
+  }
+}

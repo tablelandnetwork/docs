@@ -1,0 +1,35 @@
+{
+  "unversionedId": "develop/reference/response-times",
+  "id": "develop/reference/response-times",
+  "title": "Response times",
+  "description": "Openly readable tables by your applications.",
+  "source": "@site/docs/develop/reference/response-times.md",
+  "sourceDirName": "develop/reference",
+  "slug": "/develop/reference/response-times",
+  "permalink": "/develop/reference/response-times",
+  "draft": false,
+  "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/develop/reference/response-times.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "title": "Response times",
+    "description": "Openly readable tables by your applications.",
+    "synopsis": "Reading from tables is entirely open (for anyone), allowing for true composability. Write SQL qeuries—but with some limitations that are due to the nature of decentralized networks and deterministic requirements.",
+    "keywords": [
+      "write to table",
+      "mutate table"
+    ]
+  },
+  "sidebar": "develop",
+  "previous": {
+    "title": "Limits",
+    "permalink": "/develop/reference/limits"
+  },
+  "next": {
+    "title": "Repos",
+    "permalink": "/develop/reference/repos"
+  }
+}

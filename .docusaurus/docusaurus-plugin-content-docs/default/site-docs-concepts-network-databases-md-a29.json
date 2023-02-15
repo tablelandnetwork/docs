@@ -1,0 +1,35 @@
+{
+  "unversionedId": "concepts/network/databases",
+  "id": "concepts/network/databases",
+  "title": "Databases & SQL",
+  "description": "Briefly look under the hood at relational databases.",
+  "source": "@site/docs/concepts/network/databases.md",
+  "sourceDirName": "concepts/network",
+  "slug": "/concepts/network/databases",
+  "permalink": "/concepts/network/databases",
+  "draft": false,
+  "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/concepts/network/databases.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "title": "Databases & SQL",
+    "description": "Briefly look under the hood at relational databases.",
+    "synopsis": "The network is akin to a bunch of databases communicating & agreeing with one another about things that happened on-chain. Although it's an oversimplification, the core premise behind it all is a relational database, which isn't flashy by any means but adds a new dimension to web3 storage.",
+    "keywords": [
+      "databases",
+      "relational database"
+    ]
+  },
+  "sidebar": "concepts",
+  "previous": {
+    "title": "Hybrid state",
+    "permalink": "/concepts/network/tableland-state"
+  },
+  "next": {
+    "title": "Considerations & tradeoffs",
+    "permalink": "/concepts/network/considerations-tradeoffs"
+  }
+}

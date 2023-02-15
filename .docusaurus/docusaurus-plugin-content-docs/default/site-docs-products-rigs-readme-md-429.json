@@ -1,0 +1,32 @@
+{
+  "unversionedId": "products/rigs/README",
+  "id": "products/rigs/README",
+  "title": "Tableland Rigs",
+  "description": "Learn about the basics of SQL.",
+  "source": "@site/docs/products/rigs/README.md",
+  "sourceDirName": "products/rigs",
+  "slug": "/products/rigs/",
+  "permalink": "/products/rigs/",
+  "draft": false,
+  "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/products/rigs/README.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "title": "Tableland Rigs",
+    "description": "Learn about the basics of SQL.",
+    "synopsis": "Structured Query Language (SQL) is a language that allows developers to interact with databases for extracting and mutating values.",
+    "keywords": [
+      "SQL",
+      "SQLite",
+      "about"
+    ]
+  },
+  "sidebar": "rigs",
+  "next": {
+    "title": "What are Rigs?",
+    "permalink": "/products/rigs/what-are-rigs"
+  }
+}

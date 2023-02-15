@@ -8,3 +8,7 @@ keywords:
 ---
 
 ## Setup
+
+import DocCardList from '@theme/DocCardList';
+
+<DocCardList />

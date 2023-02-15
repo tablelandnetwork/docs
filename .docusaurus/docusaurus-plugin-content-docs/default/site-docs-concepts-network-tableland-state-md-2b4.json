@@ -1,0 +1,36 @@
+{
+  "unversionedId": "concepts/network/tableland-state",
+  "id": "concepts/network/tableland-state",
+  "title": "Data availability & network state",
+  "description": "Understand the basic model behind on-chain writes and off-chain reads.",
+  "source": "@site/docs/concepts/network/tableland-state.md",
+  "sourceDirName": "concepts/network",
+  "slug": "/concepts/network/tableland-state",
+  "permalink": "/concepts/network/tableland-state",
+  "draft": false,
+  "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/concepts/network/tableland-state.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "title": "Data availability & network state",
+    "sidebar_label": "Hybrid state",
+    "description": "Understand the basic model behind on-chain writes and off-chain reads.",
+    "synopsis": "Blockchains are designed so that anyone can run some arbitrary programs and share computation; they are not designed to be databases. With a hybrid model, applications can inherit components (like security & execution) from the host chain while making the data itself dynamic & accessible on the Tableland network.",
+    "keywords": [
+      "Tableland",
+      "about"
+    ]
+  },
+  "sidebar": "concepts",
+  "previous": {
+    "title": "What is Tableland?",
+    "permalink": "/concepts/network/what-is-tableland"
+  },
+  "next": {
+    "title": "Databases & SQL",
+    "permalink": "/concepts/network/databases"
+  }
+}

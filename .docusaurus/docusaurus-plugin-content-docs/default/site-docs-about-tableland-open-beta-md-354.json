@@ -1,0 +1,26 @@
+{
+  "unversionedId": "about/tableland/open-beta",
+  "id": "about/tableland/open-beta",
+  "title": "Open beta",
+  "description": "Learn about the basics of the Tableland network.",
+  "source": "@site/docs/about/tableland/open-beta.md",
+  "sourceDirName": "about/tableland",
+  "slug": "/about/tableland/open-beta",
+  "permalink": "/about/tableland/open-beta",
+  "draft": false,
+  "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/about/tableland/open-beta.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "title": "Open beta",
+    "description": "Learn about the basics of the Tableland network.",
+    "synopsis": "Tableland is a web3 native SQL database.",
+    "keywords": [
+      "Tableland",
+      "about"
+    ]
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "unversionedId": "global/supported-chains",
+  "id": "global/supported-chains",
+  "title": "supported-chains",
+  "description": "",
+  "source": "@site/docs/global/supported-chains.md",
+  "sourceDirName": "global",
+  "slug": "/global/supported-chains",
+  "permalink": "/global/supported-chains",
+  "draft": false,
+  "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/global/supported-chains.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {}
+}

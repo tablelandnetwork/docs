@@ -1,0 +1,27 @@
+{
+  "unversionedId": "about/rigs/rigs-discord",
+  "id": "about/rigs/rigs-discord",
+  "title": "Rigs in Discord",
+  "description": "Learn about the basics of SQL.",
+  "source": "@site/docs/about/rigs/rigs-discord.md",
+  "sourceDirName": "about/rigs",
+  "slug": "/about/rigs/rigs-discord",
+  "permalink": "/about/rigs/rigs-discord",
+  "draft": false,
+  "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/about/rigs/rigs-discord.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "title": "Rigs in Discord",
+    "description": "Learn about the basics of SQL.",
+    "synopsis": "Structured Query Language (SQL) is a language that allows developers to interact with databases for extracting and mutating values.",
+    "keywords": [
+      "SQL",
+      "SQLite",
+      "about"
+    ]
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "unversionedId": "about/tableland/tradeoffs-considerations",
+  "id": "about/tableland/tradeoffs-considerations",
+  "title": "Tradeoffs & considerations",
+  "description": "Openly readable tables by your applications.",
+  "source": "@site/docs/about/tableland/tradeoffs-considerations.md",
+  "sourceDirName": "about/tableland",
+  "slug": "/about/tableland/tradeoffs-considerations",
+  "permalink": "/about/tableland/tradeoffs-considerations",
+  "draft": false,
+  "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/about/tableland/tradeoffs-considerations.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "title": "Tradeoffs & considerations",
+    "description": "Openly readable tables by your applications.",
+    "synopsis": "Reading from tables is entirely open (for anyone), allowing for true composability. Write SQL qeuries—but with some limitations that are due to the nature of decentralized networks and deterministic requirements.",
+    "keywords": [
+      "write to table",
+      "mutate table"
+    ]
+  },
+  "sidebar": "about",
+  "previous": {
+    "title": "How does it work?",
+    "permalink": "/about/tableland/how-does-tableland-work"
+  },
+  "next": {
+    "title": "Open beta",
+    "permalink": "/about/tableland/open-beta"
+  }
+}

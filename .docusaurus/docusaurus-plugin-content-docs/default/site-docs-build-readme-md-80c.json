@@ -21,7 +21,7 @@
   },
   "sidebar": "build",
   "next": {
-    "title": "Overview",
-    "permalink": "/sdk/"
+    "title": "Tableland protocol",
+    "permalink": "/build/reference/overview"
   }
 }

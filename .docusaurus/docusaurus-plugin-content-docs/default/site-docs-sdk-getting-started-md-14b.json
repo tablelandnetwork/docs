@@ -23,7 +23,7 @@
       "Tableland SDK"
     ]
   },
-  "sidebar": "build",
+  "sidebar": "develop",
   "previous": {
     "title": "Overview",
     "permalink": "/sdk/"

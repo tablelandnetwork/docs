@@ -1,8 +1,7 @@
 // @ts-check
 // Note: type annotations allow type checking and IDEs autocompletion
 
-const lightCodeTheme = require("prism-react-renderer/themes/github");
-const darkCodeTheme = require("prism-react-renderer/themes/dracula");
+const { lightCodeTheme, darkCodeTheme } = require("./src/theme/codeTheme");
 const math = require("remark-math");
 const katex = require("rehype-katex");
 // Imports for configuring the footer, site metadata, and navbar

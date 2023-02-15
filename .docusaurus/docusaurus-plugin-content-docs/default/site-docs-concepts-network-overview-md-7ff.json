@@ -1,0 +1,25 @@
+{
+  "unversionedId": "concepts/network/overview",
+  "id": "concepts/network/overview",
+  "title": "Tableland protocol",
+  "description": "Learn about what Tableland is.",
+  "source": "@site/docs/concepts/network/overview.md",
+  "sourceDirName": "concepts/network",
+  "slug": "/concepts/network/overview",
+  "permalink": "/concepts/network/overview",
+  "draft": false,
+  "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/concepts/network/overview.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "title": "Tableland protocol",
+    "description": "Learn about what Tableland is.",
+    "synopsis": "Structured Query Language (SQL) is a language that allows developers to interact with databases for extracting and mutating values.",
+    "keywords": [
+      "protocol"
+    ]
+  }
+}

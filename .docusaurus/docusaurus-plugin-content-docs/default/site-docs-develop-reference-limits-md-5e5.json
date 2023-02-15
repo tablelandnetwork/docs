@@ -1,0 +1,35 @@
+{
+  "unversionedId": "develop/reference/limits",
+  "id": "develop/reference/limits",
+  "title": "Limits",
+  "description": "Openly readable tables by your applications.",
+  "source": "@site/docs/develop/reference/limits.md",
+  "sourceDirName": "develop/reference",
+  "slug": "/develop/reference/limits",
+  "permalink": "/develop/reference/limits",
+  "draft": false,
+  "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/develop/reference/limits.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "title": "Limits",
+    "description": "Openly readable tables by your applications.",
+    "synopsis": "Reading from tables is entirely open (for anyone), allowing for true composability. Write SQL qeuries—but with some limitations that are due to the nature of decentralized networks and deterministic requirements.",
+    "keywords": [
+      "write to table",
+      "mutate table"
+    ]
+  },
+  "sidebar": "develop",
+  "previous": {
+    "title": "Chains & contracts",
+    "permalink": "/develop/reference/chains-contracts"
+  },
+  "next": {
+    "title": "Response times",
+    "permalink": "/develop/reference/response-times"
+  }
+}

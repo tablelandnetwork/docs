@@ -12,11 +12,15 @@ const footer = {
           label: "CLI",
         },
         {
+          to: "/category/api",
+          label: "API",
+        },
+        {
           to: "/category/smart-contracts",
           label: "Smart contracts",
         },
         {
-          to: "/sql/sql-spec",
+          to: "/concepts/sql/sql-spec",
           label: "SQL spec",
         },
       ],
@@ -25,9 +29,14 @@ const footer = {
       title: "Community",
       items: [
         {
-          to: "contribute/guidelines/",
+          to: "contribute",
           label: "Contribute",
         },
+        {
+          to: "rigs",
+          label: "Rigs NFT",
+        },
+
         {
           href: "https://discord.com/invite/dc8EBEhGbg",
           label: "Discord",
@@ -54,16 +63,16 @@ const footer = {
       title: "Company",
       items: [
         {
-          href: "https://tableland.xyz",
-          label: "Main site",
-        },
-        {
           href: "https://dev.tableland.xyz",
           label: "Tech Blog",
         },
         {
           href: "https://mirror.xyz/tableland.eth",
           label: "Main Blog",
+        },
+        {
+          href: "https://tableland.xyz",
+          label: "Main site",
         },
         {
           label: "GitHub",

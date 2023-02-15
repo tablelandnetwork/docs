@@ -1,0 +1,18 @@
+{
+  "unversionedId": "faqs",
+  "id": "faqs",
+  "title": "faqs",
+  "description": "",
+  "source": "@site/docs/faqs.md",
+  "sourceDirName": ".",
+  "slug": "/faqs",
+  "permalink": "/faqs",
+  "draft": false,
+  "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/faqs.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {}
+}

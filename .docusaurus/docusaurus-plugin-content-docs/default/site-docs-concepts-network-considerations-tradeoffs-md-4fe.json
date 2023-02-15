@@ -1,0 +1,31 @@
+{
+  "unversionedId": "concepts/network/considerations-tradeoffs",
+  "id": "concepts/network/considerations-tradeoffs",
+  "title": "Considerations & tradeoffs",
+  "description": "Tableland offers a solution to the suboptimal standards, and choosing a chain greatly impacts user experience & costs.",
+  "source": "@site/docs/concepts/network/considerations-tradeoffs.md",
+  "sourceDirName": "concepts/network",
+  "slug": "/concepts/network/considerations-tradeoffs",
+  "permalink": "/concepts/network/considerations-tradeoffs",
+  "draft": false,
+  "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/concepts/network/considerations-tradeoffs.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "title": "Considerations & tradeoffs",
+    "description": "Tableland offers a solution to the suboptimal standards, and choosing a chain greatly impacts user experience & costs.",
+    "synopsis": "Selecting the chain to deploy tables on has a significant impact on the subsequent usage of the table. But before selecting a chain to then use Tableland’s capabilities, it may be helpful to consider the alternatives to Tableland in the first place."
+  },
+  "sidebar": "concepts",
+  "previous": {
+    "title": "Databases & SQL",
+    "permalink": "/concepts/network/databases"
+  },
+  "next": {
+    "title": "Open beta",
+    "permalink": "/concepts/network/open-beta"
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "unversionedId": "concepts/sql/upsert",
+  "id": "concepts/sql/upsert",
+  "title": "Insert or update on conflict",
+  "description": "Learn about what Tableland is.",
+  "source": "@site/docs/concepts/sql/upsert.md",
+  "sourceDirName": "concepts/sql",
+  "slug": "/concepts/sql/upsert",
+  "permalink": "/concepts/sql/upsert",
+  "draft": false,
+  "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/concepts/sql/upsert.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "title": "Insert or update on conflict",
+    "sidebar_label": "UPSERT",
+    "description": "Learn about what Tableland is.",
+    "synopsis": "Structured Query Language (SQL) is a language that allows developers to interact with databases for extracting and mutating values.",
+    "keywords": [
+      "protocol"
+    ]
+  },
+  "sidebar": "concepts",
+  "previous": {
+    "title": "UPDATE",
+    "permalink": "/concepts/sql/update"
+  },
+  "next": {
+    "title": "DELETE",
+    "permalink": "/concepts/sql/delete"
+  }
+}

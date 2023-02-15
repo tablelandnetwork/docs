@@ -1,0 +1,35 @@
+{
+  "unversionedId": "concepts/network/open-beta",
+  "id": "concepts/network/open-beta",
+  "title": "Open beta",
+  "description": "Use Tableland on testnet and mainnet chains while the protocol is in development.",
+  "source": "@site/docs/concepts/network/open-beta.md",
+  "sourceDirName": "concepts/network",
+  "slug": "/concepts/network/open-beta",
+  "permalink": "/concepts/network/open-beta",
+  "draft": false,
+  "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/concepts/network/open-beta.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "title": "Open beta",
+    "description": "Use Tableland on testnet and mainnet chains while the protocol is in development.",
+    "synopsis": "The Tableland network is actively being developed and plans to launch a production (mainnet) in 2023. Prior to that launch, the protocol can still be used on supported chains, but its important to note what's in store in the future.",
+    "keywords": [
+      "open beta",
+      "production"
+    ]
+  },
+  "sidebar": "concepts",
+  "previous": {
+    "title": "Considerations & tradeoffs",
+    "permalink": "/concepts/network/considerations-tradeoffs"
+  },
+  "next": {
+    "title": "Roadmap",
+    "permalink": "/concepts/network/roadmap"
+  }
+}

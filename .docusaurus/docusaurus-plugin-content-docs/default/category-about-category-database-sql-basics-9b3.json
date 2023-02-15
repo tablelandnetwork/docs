@@ -1,0 +1,15 @@
+{
+  "title": "Database & SQL basics",
+  "slug": "/category/database--sql-basics",
+  "permalink": "/category/database--sql-basics",
+  "navigation": {
+    "previous": {
+      "title": "What is blockchain",
+      "permalink": "/about/blockchain/what-is-blockchain"
+    },
+    "next": {
+      "title": "What is SQL",
+      "permalink": "/about/sql/what-is-sql"
+    }
+  }
+}

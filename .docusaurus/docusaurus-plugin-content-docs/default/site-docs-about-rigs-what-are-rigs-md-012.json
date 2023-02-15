@@ -1,8 +1,8 @@
 {
   "unversionedId": "about/rigs/what-are-rigs",
   "id": "about/rigs/what-are-rigs",
-  "title": "what-are-rigs",
-  "description": "",
+  "title": "What are Rigs?",
+  "description": "Learn about the basics of SQL.",
   "source": "@site/docs/about/rigs/what-are-rigs.md",
   "sourceDirName": "about/rigs",
   "slug": "/about/rigs/what-are-rigs",
@@ -14,5 +14,14 @@
   "lastUpdatedBy": "Author",
   "lastUpdatedAt": 1539502055,
   "formattedLastUpdatedAt": "Oct 14, 2018",
-  "frontMatter": {}
+  "frontMatter": {
+    "title": "What are Rigs?",
+    "description": "Learn about the basics of SQL.",
+    "synopsis": "Structured Query Language (SQL) is a language that allows developers to interact with databases for extracting and mutating values.",
+    "keywords": [
+      "SQL",
+      "SQLite",
+      "about"
+    ]
+  }
 }

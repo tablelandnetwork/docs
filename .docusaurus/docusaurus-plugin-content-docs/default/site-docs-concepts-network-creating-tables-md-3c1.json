@@ -1,0 +1,25 @@
+{
+  "unversionedId": "concepts/network/creating-tables",
+  "id": "concepts/network/creating-tables",
+  "title": "Creating tables",
+  "description": "Learn about what Tableland is.",
+  "source": "@site/docs/concepts/network/creating-tables.md",
+  "sourceDirName": "concepts/network",
+  "slug": "/concepts/network/creating-tables",
+  "permalink": "/concepts/network/creating-tables",
+  "draft": false,
+  "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/concepts/network/creating-tables.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "title": "Creating tables",
+    "description": "Learn about what Tableland is.",
+    "synopsis": "Structured Query Language (SQL) is a language that allows developers to interact with databases for extracting and mutating values.",
+    "keywords": [
+      "protocol"
+    ]
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "title": "Databases & SQL",
+  "slug": "/category/databases--sql",
+  "permalink": "/category/databases--sql",
+  "navigation": {
+    "previous": {
+      "title": "Vision & roadmap",
+      "permalink": "/about/tableland/vision-roadmap"
+    },
+    "next": {
+      "title": "What is SQL",
+      "permalink": "/about/sql/what-is-sql"
+    }
+  }
+}

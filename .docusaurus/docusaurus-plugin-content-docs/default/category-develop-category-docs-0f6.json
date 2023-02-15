@@ -1,0 +1,15 @@
+{
+  "title": "Docs",
+  "slug": "/category/docs",
+  "permalink": "/category/docs",
+  "navigation": {
+    "previous": {
+      "title": "Deployed contracts",
+      "permalink": "/develop/reference/deployed-contracts"
+    },
+    "next": {
+      "title": "Limits",
+      "permalink": "/develop/reference/limits"
+    }
+  }
+}

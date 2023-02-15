@@ -1,0 +1,36 @@
+{
+  "unversionedId": "products/rigs/the-garage",
+  "id": "products/rigs/the-garage",
+  "title": "The Garage",
+  "description": "Learn about the basics of SQL.",
+  "source": "@site/docs/products/rigs/the-garage.md",
+  "sourceDirName": "products/rigs",
+  "slug": "/products/rigs/the-garage",
+  "permalink": "/products/rigs/the-garage",
+  "draft": false,
+  "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/products/rigs/the-garage.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "title": "The Garage",
+    "description": "Learn about the basics of SQL.",
+    "synopsis": "Structured Query Language (SQL) is a language that allows developers to interact with databases for extracting and mutating values.",
+    "keywords": [
+      "SQL",
+      "SQLite",
+      "about"
+    ]
+  },
+  "sidebar": "rigs",
+  "previous": {
+    "title": "What are Rigs?",
+    "permalink": "/products/rigs/what-are-rigs"
+  },
+  "next": {
+    "title": "Rigs in Discord",
+    "permalink": "/products/rigs/rigs-discord"
+  }
+}

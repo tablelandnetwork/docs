@@ -1,0 +1,27 @@
+{
+  "unversionedId": "concepts/network/vision-roadmap",
+  "id": "concepts/network/vision-roadmap",
+  "title": "Vision & roadmap",
+  "description": "Learn about the basics of SQL.",
+  "source": "@site/docs/concepts/network/vision-roadmap.md",
+  "sourceDirName": "concepts/network",
+  "slug": "/concepts/network/vision-roadmap",
+  "permalink": "/concepts/network/vision-roadmap",
+  "draft": false,
+  "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/concepts/network/vision-roadmap.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "title": "Vision & roadmap",
+    "description": "Learn about the basics of SQL.",
+    "synopsis": "Structured Query Language (SQL) is a language that allows developers to interact with databases for extracting and mutating values.",
+    "keywords": [
+      "SQL",
+      "SQLite",
+      "about"
+    ]
+  }
+}

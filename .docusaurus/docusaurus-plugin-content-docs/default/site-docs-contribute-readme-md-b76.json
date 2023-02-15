@@ -1,0 +1,43 @@
+{
+  "unversionedId": "contribute/README",
+  "id": "contribute/README",
+  "title": "How to contribute",
+  "description": "Get involved and contribute to the Tableland ecosystem.",
+  "source": "@site/docs/contribute/README.md",
+  "sourceDirName": "contribute",
+  "slug": "/contribute/",
+  "permalink": "/contribute/",
+  "draft": false,
+  "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/contribute/README.md",
+  "tags": [
+    {
+      "label": "contributing",
+      "permalink": "/tags/contributing"
+    }
+  ],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "title": "How to contribute",
+    "sidebar_label": "Contributor guidelines",
+    "description": "Get involved and contribute to the Tableland ecosystem.",
+    "synopsis": "Tableland welcomes new collaborators and contributions. The protocol is constantly growing and looking for help from community members, and we've open sourced all of our code, documentation, and tutorials to make this possible. Learn more about where to begin and stylistic guidelines & features about the docs site, in particular.",
+    "keywords": [
+      "docs",
+      "tableland",
+      "contribute",
+      "contributor",
+      "contributing"
+    ],
+    "tags": [
+      "contributing"
+    ]
+  },
+  "sidebar": "contribute",
+  "next": {
+    "title": "Style guide",
+    "permalink": "/contribute/style-guide"
+  }
+}

@@ -8,13 +8,13 @@ keywords:
   - contributors
 ---
 
-## General Documentation
+## General documentation
 
 #### Dan Buchholz
 
 GitHub: [dtbuchholz](https://github.com/dtbuchholz)
 
-## SQL & Validator Specifications
+## SQL & Validator specifications
 
 #### Carson Farmer
 
@@ -23,7 +23,3 @@ GitHub: [carsonfarmer](https://github.com/carsonfarmer)
 #### Bruno Calza
 
 GitHub: [brunocalza](https://github.com/brunocalza)
-
-#### Ignacio Hagopian
-
-GitHub: [jsign](https://github.com/jsign)

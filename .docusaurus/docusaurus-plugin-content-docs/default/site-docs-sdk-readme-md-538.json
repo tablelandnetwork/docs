@@ -23,10 +23,10 @@
       "mutate table"
     ]
   },
-  "sidebar": "build",
+  "sidebar": "develop",
   "previous": {
-    "title": "Overview",
-    "permalink": "/build/"
+    "title": "Repos",
+    "permalink": "/develop/reference/repos"
   },
   "next": {
     "title": "Getting started",

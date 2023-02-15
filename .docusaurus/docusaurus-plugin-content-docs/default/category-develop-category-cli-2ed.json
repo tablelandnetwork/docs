@@ -1,0 +1,15 @@
+{
+  "title": "CLI",
+  "slug": "/category/cli",
+  "permalink": "/category/cli",
+  "navigation": {
+    "previous": {
+      "title": "Reading tables",
+      "permalink": "/sdk/read"
+    },
+    "next": {
+      "title": "Getting started",
+      "permalink": "/cli/getting-started"
+    }
+  }
+}

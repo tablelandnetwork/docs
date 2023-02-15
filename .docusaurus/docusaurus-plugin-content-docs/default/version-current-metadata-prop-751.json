@@ -8,55 +8,177 @@
   "className": "docs-version-current",
   "isLast": true,
   "docsSidebars": {
-    "about": [
+    "concepts": [
       {
         "type": "link",
         "label": "Overview",
-        "href": "/about/",
-        "docId": "about/README"
+        "href": "/concepts/",
+        "docId": "concepts/README"
+      },
+      {
+        "type": "html",
+        "value": "<h6 class=\"margin-top--sm margin-bottom--none sidebar-section\">BASICS</h6>",
+        "defaultStyle": true
       },
       {
         "type": "category",
-        "label": "Tableland network",
+        "label": "What is Tableland",
         "items": [
           {
             "type": "link",
-            "label": "What is Tableland",
-            "href": "/about/tableland/what-is-tableland",
-            "docId": "about/tableland/what-is-tableland"
+            "label": "Hybrid state",
+            "href": "/concepts/network/tableland-state",
+            "docId": "concepts/network/tableland-state"
+          },
+          {
+            "type": "link",
+            "label": "Databases & SQL",
+            "href": "/concepts/network/databases",
+            "docId": "concepts/network/databases"
+          },
+          {
+            "type": "link",
+            "label": "Considerations & tradeoffs",
+            "href": "/concepts/network/considerations-tradeoffs",
+            "docId": "concepts/network/considerations-tradeoffs"
+          },
+          {
+            "type": "link",
+            "label": "Open beta",
+            "href": "/concepts/network/open-beta",
+            "docId": "concepts/network/open-beta"
+          },
+          {
+            "type": "link",
+            "label": "Roadmap",
+            "href": "/concepts/network/roadmap",
+            "docId": "concepts/network/roadmap"
           }
         ],
         "collapsed": true,
         "collapsible": true,
-        "href": "/sdk/"
+        "href": "/concepts/network/what-is-tableland"
       },
       {
         "type": "category",
-        "label": "Blockchain basics",
+        "label": "Using SQL",
         "items": [
           {
             "type": "link",
-            "label": "What is blockchain",
-            "href": "/about/blockchain/what-is-blockchain",
-            "docId": "about/blockchain/what-is-blockchain"
+            "label": "Create a table",
+            "href": "/concepts/sql/create-a-table",
+            "docId": "concepts/sql/create-a-table"
+          },
+          {
+            "type": "category",
+            "label": "Mutating table data",
+            "items": [
+              {
+                "type": "link",
+                "label": "INSERT",
+                "href": "/concepts/sql/insert",
+                "docId": "concepts/sql/insert"
+              },
+              {
+                "type": "link",
+                "label": "UPDATE",
+                "href": "/concepts/sql/update",
+                "docId": "concepts/sql/update"
+              },
+              {
+                "type": "link",
+                "label": "UPSERT",
+                "href": "/concepts/sql/upsert",
+                "docId": "concepts/sql/upsert"
+              },
+              {
+                "type": "link",
+                "label": "DELETE",
+                "href": "/concepts/sql/delete",
+                "docId": "concepts/sql/delete"
+              }
+            ],
+            "collapsed": true,
+            "collapsible": true,
+            "href": "/concepts/sql/mutating-data"
+          },
+          {
+            "type": "link",
+            "label": "Reading table data",
+            "href": "/concepts/sql/read",
+            "docId": "concepts/sql/read"
+          },
+          {
+            "type": "link",
+            "label": "Access control",
+            "href": "/concepts/sql/access-control",
+            "docId": "concepts/sql/access-control"
+          },
+          {
+            "type": "link",
+            "label": "SQL specification",
+            "href": "/concepts/sql/sql-spec",
+            "docId": "concepts/sql/sql-spec"
           }
         ],
         "collapsed": true,
         "collapsible": true,
-        "href": "/category/blockchain-basics"
+        "href": "/concepts/sql/"
       }
     ],
-    "build": [
+    "develop": [
       {
         "type": "link",
         "label": "Overview",
-        "href": "/build/",
-        "docId": "build/README"
+        "href": "/develop/",
+        "docId": "develop/README"
+      },
+      {
+        "type": "html",
+        "value": "<h6 class=\"margin-top--sm margin-bottom--none sidebar-section\"></h6>",
+        "defaultStyle": true
+      },
+      {
+        "type": "category",
+        "label": "Reference",
+        "items": [
+          {
+            "type": "link",
+            "label": "Chains & contracts",
+            "href": "/develop/reference/chains-contracts",
+            "docId": "develop/reference/chains-contracts"
+          },
+          {
+            "type": "link",
+            "label": "Limits",
+            "href": "/develop/reference/limits",
+            "docId": "develop/reference/limits"
+          },
+          {
+            "type": "link",
+            "label": "Response times",
+            "href": "/develop/reference/response-times",
+            "docId": "develop/reference/response-times"
+          },
+          {
+            "type": "link",
+            "label": "Repos",
+            "href": "/develop/reference/repos",
+            "docId": "develop/reference/repos"
+          }
+        ],
+        "collapsed": true,
+        "collapsible": true,
+        "href": "/develop/reference/"
+      },
+      {
+        "type": "html",
+        "value": "<h6 class=\"margin-top--sm margin-bottom--none sidebar-section\">BUILD</h6>",
+        "defaultStyle": true
       },
       {
         "type": "category",
         "label": "SDK",
-        "collapsed": false,
         "items": [
           {
             "type": "link",
@@ -89,6 +211,7 @@
             "docId": "sdk/read"
           }
         ],
+        "collapsed": true,
         "collapsible": true,
         "href": "/sdk/"
       },
@@ -129,7 +252,34 @@
         ],
         "collapsed": true,
         "collapsible": true,
-        "href": "/category/cli"
+        "href": "/cli/"
+      },
+      {
+        "type": "category",
+        "label": "REST API",
+        "items": [
+          {
+            "type": "link",
+            "label": "Overview",
+            "href": "/api/gateways",
+            "docId": "api/gateways"
+          },
+          {
+            "type": "link",
+            "label": "Overview",
+            "href": "/api/endpoints",
+            "docId": "api/endpoints"
+          },
+          {
+            "type": "link",
+            "label": "Overview",
+            "href": "/api/errors",
+            "docId": "api/errors"
+          }
+        ],
+        "collapsed": true,
+        "collapsible": true,
+        "href": "/api/"
       },
       {
         "type": "category",
@@ -168,24 +318,84 @@
         ],
         "collapsed": true,
         "collapsible": true,
-        "href": "/category/smart-contracts"
-      }
-    ],
-    "sql": [
+        "href": "/smart-contracts/"
+      },
+      {
+        "type": "html",
+        "value": "<h6 class=\"margin-top--sm margin-bottom--none sidebar-section\">INTEGRATIONS</h6>",
+        "defaultStyle": true
+      },
       {
         "type": "category",
-        "label": "SQL",
+        "label": "Chains",
         "items": [
           {
             "type": "link",
-            "label": "SQL specification",
-            "href": "/sql/sql-spec",
-            "docId": "sql/sql-spec"
+            "label": "Ethereum",
+            "href": "/develop/chains/ethereum",
+            "docId": "develop/chains/ethereum"
+          },
+          {
+            "type": "link",
+            "label": "Arbitrum",
+            "href": "/develop/chains/arbitrum",
+            "docId": "develop/chains/arbitrum"
+          },
+          {
+            "type": "link",
+            "label": "Optimism",
+            "href": "/develop/chains/optimism",
+            "docId": "develop/chains/optimism"
+          },
+          {
+            "type": "link",
+            "label": "Polygon",
+            "href": "/develop/chains/polygon",
+            "docId": "develop/chains/polygon"
           }
         ],
         "collapsed": true,
         "collapsible": true,
-        "href": "/category/sql"
+        "href": "/develop/chains/"
+      },
+      {
+        "type": "category",
+        "label": "Protocols",
+        "items": [
+          {
+            "type": "link",
+            "label": "Filecoin",
+            "href": "/develop/integrations/filecoin",
+            "docId": "develop/integrations/filecoin"
+          },
+          {
+            "type": "link",
+            "label": "Chainlink",
+            "href": "/develop/integrations/chainlink",
+            "docId": "develop/integrations/chainlink"
+          },
+          {
+            "type": "link",
+            "label": "Lit Protocol",
+            "href": "/develop/integrations/lit-protocol",
+            "docId": "develop/integrations/lit-protocol"
+          },
+          {
+            "type": "link",
+            "label": "NyCypher",
+            "href": "/develop/integrations/nucypher",
+            "docId": "develop/integrations/nucypher"
+          },
+          {
+            "type": "link",
+            "label": "Toucan Protocol",
+            "href": "/develop/integrations/toucan",
+            "docId": "develop/integrations/toucan"
+          }
+        ],
+        "collapsed": true,
+        "collapsible": true,
+        "href": "/develop/integrations/ipfs"
       }
     ],
     "tutorials": [
@@ -211,33 +421,53 @@
         "href": "/category/tutorials"
       }
     ],
-    "contributing": [
+    "contribute": [
+      {
+        "type": "link",
+        "label": "Contributor guidelines",
+        "href": "/contribute/",
+        "docId": "contribute/README"
+      },
+      {
+        "type": "link",
+        "label": "Style guide",
+        "href": "/contribute/style-guide",
+        "docId": "contribute/style-guide"
+      },
+      {
+        "type": "link",
+        "label": "Maintainers",
+        "href": "/contribute/maintainers",
+        "docId": "contribute/maintainers"
+      }
+    ],
+    "rigs": [
       {
         "type": "category",
-        "label": "Contributing",
+        "label": "Tableland Rigs NFT",
         "items": [
           {
             "type": "link",
-            "label": "Contributor guidelines",
-            "href": "/contribute/guidelines",
-            "docId": "contribute/guidelines"
+            "label": "What are Rigs?",
+            "href": "/products/rigs/what-are-rigs",
+            "docId": "products/rigs/what-are-rigs"
           },
           {
             "type": "link",
-            "label": "Style guide",
-            "href": "/contribute/style-guide",
-            "docId": "contribute/style-guide"
+            "label": "The Garage",
+            "href": "/products/rigs/the-garage",
+            "docId": "products/rigs/the-garage"
           },
           {
             "type": "link",
-            "label": "Maintainers",
-            "href": "/contribute/maintainers",
-            "docId": "contribute/maintainers"
+            "label": "Rigs in Discord",
+            "href": "/products/rigs/rigs-discord",
+            "docId": "products/rigs/rigs-discord"
           }
         ],
         "collapsed": true,
         "collapsible": true,
-        "href": "/category/contributing"
+        "href": "/products/rigs/"
       }
     ]
   },
@@ -245,18 +475,46 @@
     "about/blockchain/what-is-blockchain": {
       "id": "about/blockchain/what-is-blockchain",
       "title": "What is blockchain",
-      "description": "Learn about the basics of blockchains.",
-      "sidebar": "about"
+      "description": "Learn about the basics of blockchains."
+    },
+    "about/faqs/community-faqs": {
+      "id": "about/faqs/community-faqs",
+      "title": "Community FAQs",
+      "description": "Openly readable tables by your applications."
+    },
+    "about/faqs/protocol-faqs": {
+      "id": "about/faqs/protocol-faqs",
+      "title": "Protocol FAQs",
+      "description": "Openly readable tables by your applications."
+    },
+    "about/faqs/rigs-faqs": {
+      "id": "about/faqs/rigs-faqs",
+      "title": "Rigs NFT FAQs",
+      "description": "Learn about the basics of SQL."
     },
     "about/README": {
       "id": "about/README",
       "title": "Overview",
-      "description": "Learn the ins and outs of contributing to the Tableland docs site.",
-      "sidebar": "about"
+      "description": "Learn the ins and outs of contributing to the Tableland docs site."
     },
     "about/rigs/overview": {
       "id": "about/rigs/overview",
       "title": "Tableland Rigs",
+      "description": "Learn about the basics of SQL."
+    },
+    "about/rigs/rigs-discord": {
+      "id": "about/rigs/rigs-discord",
+      "title": "Rigs in Discord",
+      "description": "Learn about the basics of SQL."
+    },
+    "about/rigs/the-garage": {
+      "id": "about/rigs/the-garage",
+      "title": "The Garage",
+      "description": "Learn about the basics of SQL."
+    },
+    "about/rigs/what-are-rigs": {
+      "id": "about/rigs/what-are-rigs",
+      "title": "What are Rigs?",
       "description": "Learn about the basics of SQL."
     },
     "about/sql/what-is-sql": {
@@ -264,70 +522,351 @@
       "title": "What is SQL",
       "description": "Learn about the basics of SQL."
     },
+    "about/tableland/how-does-tableland-work": {
+      "id": "about/tableland/how-does-tableland-work",
+      "title": "How does it work?",
+      "description": "Learn about the basics of the Tableland network."
+    },
+    "about/tableland/open-beta": {
+      "id": "about/tableland/open-beta",
+      "title": "Open beta",
+      "description": "Learn about the basics of the Tableland network."
+    },
+    "about/tableland/overview": {
+      "id": "about/tableland/overview",
+      "title": "Tableland protocol",
+      "description": "Learn about what Tableland is."
+    },
+    "about/tableland/vision-roadmap": {
+      "id": "about/tableland/vision-roadmap",
+      "title": "Vision & roadmap",
+      "description": "Learn about the basics of SQL."
+    },
     "about/tableland/what-is-tableland": {
       "id": "about/tableland/what-is-tableland",
-      "title": "What is Tableland",
-      "description": "Learn about the basics of the Tableland network.",
-      "sidebar": "about"
+      "title": "What is Tableland?",
+      "description": "Learn about the basics of the Tableland network."
     },
-    "build/README": {
-      "id": "build/README",
+    "api/endpoints": {
+      "id": "api/endpoints",
       "title": "Overview",
-      "description": "Learn the ins and outs of contributing to the Tableland docs site.",
-      "sidebar": "build"
+      "description": "Openly readable tables by your applications.",
+      "sidebar": "develop"
+    },
+    "api/errors": {
+      "id": "api/errors",
+      "title": "Overview",
+      "description": "Openly readable tables by your applications.",
+      "sidebar": "develop"
+    },
+    "api/gateways": {
+      "id": "api/gateways",
+      "title": "Overview",
+      "description": "Openly readable tables by your applications.",
+      "sidebar": "develop"
+    },
+    "api/README": {
+      "id": "api/README",
+      "title": "Overview",
+      "description": "Openly readable tables by your applications.",
+      "sidebar": "develop"
     },
     "cli/connect": {
       "id": "cli/connect",
       "title": "Connecting to Tableland",
       "description": "Access the Tableland network by first connecting to the base chain.",
-      "sidebar": "build"
+      "sidebar": "develop"
     },
     "cli/create": {
       "id": "cli/create",
       "title": "Creating tables",
       "description": "Learn how to create tables from the SDK.",
-      "sidebar": "build"
+      "sidebar": "develop"
     },
     "cli/getting-started": {
       "id": "cli/getting-started",
       "title": "Getting started",
       "description": "Get up an running with the Tableland SDK.",
-      "sidebar": "build"
-    },
-    "cli/overview": {
-      "id": "cli/overview",
-      "title": "Overview",
-      "description": "Openly readable tables by your applications."
+      "sidebar": "develop"
     },
     "cli/read": {
       "id": "cli/read",
       "title": "Reading tables",
       "description": "Openly readable tables by your applications.",
-      "sidebar": "build"
+      "sidebar": "develop"
+    },
+    "cli/README": {
+      "id": "cli/README",
+      "title": "Overview",
+      "description": "Openly readable tables by your applications.",
+      "sidebar": "develop"
     },
     "cli/write": {
       "id": "cli/write",
       "title": "Writing to tables",
       "description": "Mutate your table values with additional access control.",
-      "sidebar": "build"
+      "sidebar": "develop"
     },
-    "contribute/guidelines": {
-      "id": "contribute/guidelines",
-      "title": "How to contribute",
-      "description": "Get involved and contribute to the Tableland ecosystem.",
-      "sidebar": "contributing"
+    "concepts/network/considerations-tradeoffs": {
+      "id": "concepts/network/considerations-tradeoffs",
+      "title": "Considerations & tradeoffs",
+      "description": "Tableland offers a solution to the suboptimal standards, and choosing a chain greatly impacts user experience & costs.",
+      "sidebar": "concepts"
+    },
+    "concepts/network/databases": {
+      "id": "concepts/network/databases",
+      "title": "Databases & SQL",
+      "description": "Briefly look under the hood at relational databases.",
+      "sidebar": "concepts"
+    },
+    "concepts/network/open-beta": {
+      "id": "concepts/network/open-beta",
+      "title": "Open beta",
+      "description": "Use Tableland on testnet and mainnet chains while the protocol is in development.",
+      "sidebar": "concepts"
+    },
+    "concepts/network/roadmap": {
+      "id": "concepts/network/roadmap",
+      "title": "Vision & roadmap",
+      "description": "The protocol is still being developed and progressively decentralized.",
+      "sidebar": "concepts"
+    },
+    "concepts/network/tableland-state": {
+      "id": "concepts/network/tableland-state",
+      "title": "Data availability & network state",
+      "description": "Understand the basic model behind on-chain writes and off-chain reads.",
+      "sidebar": "concepts"
+    },
+    "concepts/network/what-is-tableland": {
+      "id": "concepts/network/what-is-tableland",
+      "title": "What is Tableland?",
+      "description": "Learn about the basics of the Tableland network.",
+      "sidebar": "concepts"
+    },
+    "concepts/README": {
+      "id": "concepts/README",
+      "title": "Overview",
+      "description": "Learn about what Tableland is.",
+      "sidebar": "concepts"
+    },
+    "concepts/sql/access-control": {
+      "id": "concepts/sql/access-control",
+      "title": "Grant or revoke permissions",
+      "description": "Learn about what Tableland is.",
+      "sidebar": "concepts"
+    },
+    "concepts/sql/create-a-table": {
+      "id": "concepts/sql/create-a-table",
+      "title": "Create a table",
+      "description": "Learn about what Tableland is.",
+      "sidebar": "concepts"
+    },
+    "concepts/sql/delete": {
+      "id": "concepts/sql/delete",
+      "title": "Deleting table data",
+      "description": "Learn about what Tableland is.",
+      "sidebar": "concepts"
+    },
+    "concepts/sql/insert": {
+      "id": "concepts/sql/insert",
+      "title": "Inserting table data",
+      "description": "Learn about what Tableland is.",
+      "sidebar": "concepts"
+    },
+    "concepts/sql/mutating-data": {
+      "id": "concepts/sql/mutating-data",
+      "title": "Mutating table data",
+      "description": "Learn about what Tableland is.",
+      "sidebar": "concepts"
+    },
+    "concepts/sql/read": {
+      "id": "concepts/sql/read",
+      "title": "Reading table data",
+      "description": "Learn about what Tableland is.",
+      "sidebar": "concepts"
+    },
+    "concepts/sql/README": {
+      "id": "concepts/sql/README",
+      "title": "Quick start",
+      "description": "Learn about what Tableland is.",
+      "sidebar": "concepts"
+    },
+    "concepts/sql/sql-spec": {
+      "id": "concepts/sql/sql-spec",
+      "title": "SQL specification",
+      "description": "Learn about what Tableland is.",
+      "sidebar": "concepts"
+    },
+    "concepts/sql/update": {
+      "id": "concepts/sql/update",
+      "title": "Updating table data",
+      "description": "Learn about what Tableland is.",
+      "sidebar": "concepts"
+    },
+    "concepts/sql/upsert": {
+      "id": "concepts/sql/upsert",
+      "title": "Insert or update on conflict",
+      "description": "Learn about what Tableland is.",
+      "sidebar": "concepts"
     },
     "contribute/maintainers": {
       "id": "contribute/maintainers",
       "title": "Maintainers",
       "description": "Core contributors to the Tableland protocol's documentation.",
-      "sidebar": "contributing"
+      "sidebar": "contribute"
+    },
+    "contribute/README": {
+      "id": "contribute/README",
+      "title": "How to contribute",
+      "description": "Get involved and contribute to the Tableland ecosystem.",
+      "sidebar": "contribute"
     },
     "contribute/style-guide": {
       "id": "contribute/style-guide",
       "title": "Style guide",
       "description": "Learn the ins and outs of contributing to the Tableland docs site.",
-      "sidebar": "contributing"
+      "sidebar": "contribute"
+    },
+    "develop/chains/arbitrum": {
+      "id": "develop/chains/arbitrum",
+      "title": "Arbitrum",
+      "description": "Openly readable tables by your applications.",
+      "sidebar": "develop"
+    },
+    "develop/chains/ethereum": {
+      "id": "develop/chains/ethereum",
+      "title": "Ethereum",
+      "description": "Openly readable tables by your applications.",
+      "sidebar": "develop"
+    },
+    "develop/chains/optimism": {
+      "id": "develop/chains/optimism",
+      "title": "Optimism",
+      "description": "Openly readable tables by your applications.",
+      "sidebar": "develop"
+    },
+    "develop/chains/polygon": {
+      "id": "develop/chains/polygon",
+      "title": "Polygon",
+      "description": "Openly readable tables by your applications.",
+      "sidebar": "develop"
+    },
+    "develop/chains/README": {
+      "id": "develop/chains/README",
+      "title": "Choosing a chain",
+      "description": "Openly readable tables by your applications.",
+      "sidebar": "develop"
+    },
+    "develop/integrations/chainlink": {
+      "id": "develop/integrations/chainlink",
+      "title": "Chainlink",
+      "description": "Openly readable tables by your applications.",
+      "sidebar": "develop"
+    },
+    "develop/integrations/filecoin": {
+      "id": "develop/integrations/filecoin",
+      "title": "Filecoin",
+      "description": "Openly readable tables by your applications.",
+      "sidebar": "develop"
+    },
+    "develop/integrations/ipfs": {
+      "id": "develop/integrations/ipfs",
+      "title": "IPFS",
+      "description": "Openly readable tables by your applications.",
+      "sidebar": "develop"
+    },
+    "develop/integrations/lit-protocol": {
+      "id": "develop/integrations/lit-protocol",
+      "title": "Lit Protocol",
+      "description": "Openly readable tables by your applications.",
+      "sidebar": "develop"
+    },
+    "develop/integrations/nucypher": {
+      "id": "develop/integrations/nucypher",
+      "title": "NyCypher",
+      "description": "Openly readable tables by your applications.",
+      "sidebar": "develop"
+    },
+    "develop/integrations/overview": {
+      "id": "develop/integrations/overview",
+      "title": "Protocol integrations",
+      "description": "Openly readable tables by your applications."
+    },
+    "develop/integrations/toucan": {
+      "id": "develop/integrations/toucan",
+      "title": "Toucan Protocol",
+      "description": "Openly readable tables by your applications.",
+      "sidebar": "develop"
+    },
+    "develop/README": {
+      "id": "develop/README",
+      "title": "Overview",
+      "description": "Learn the ins and outs of contributing to the Tableland docs site.",
+      "sidebar": "develop"
+    },
+    "develop/reference/chains-contracts": {
+      "id": "develop/reference/chains-contracts",
+      "title": "Chains & contracts",
+      "description": "Openly readable tables by your applications.",
+      "sidebar": "develop"
+    },
+    "develop/reference/limits": {
+      "id": "develop/reference/limits",
+      "title": "Limits",
+      "description": "Openly readable tables by your applications.",
+      "sidebar": "develop"
+    },
+    "develop/reference/open-beta": {
+      "id": "develop/reference/open-beta",
+      "title": "Open beta",
+      "description": "Openly readable tables by your applications."
+    },
+    "develop/reference/README": {
+      "id": "develop/reference/README",
+      "title": "Tableland protocol",
+      "description": "Learn about what Tableland is.",
+      "sidebar": "develop"
+    },
+    "develop/reference/repos": {
+      "id": "develop/reference/repos",
+      "title": "Repos",
+      "description": "Openly readable tables by your applications.",
+      "sidebar": "develop"
+    },
+    "develop/reference/response-times": {
+      "id": "develop/reference/response-times",
+      "title": "Response times",
+      "description": "Openly readable tables by your applications.",
+      "sidebar": "develop"
+    },
+    "develop/reference/table-names": {
+      "id": "develop/reference/table-names",
+      "title": "Table names",
+      "description": "Learn about what Tableland is."
+    },
+    "products/rigs/README": {
+      "id": "products/rigs/README",
+      "title": "Tableland Rigs",
+      "description": "Learn about the basics of SQL.",
+      "sidebar": "rigs"
+    },
+    "products/rigs/rigs-discord": {
+      "id": "products/rigs/rigs-discord",
+      "title": "Rigs in Discord",
+      "description": "Learn about the basics of SQL.",
+      "sidebar": "rigs"
+    },
+    "products/rigs/the-garage": {
+      "id": "products/rigs/the-garage",
+      "title": "The Garage",
+      "description": "Learn about the basics of SQL.",
+      "sidebar": "rigs"
+    },
+    "products/rigs/what-are-rigs": {
+      "id": "products/rigs/what-are-rigs",
+      "title": "What are Rigs?",
+      "description": "Learn about the basics of SQL.",
+      "sidebar": "rigs"
     },
     "protocol/validator-spec": {
       "id": "protocol/validator-spec",
@@ -338,78 +877,103 @@
       "id": "sdk/connect",
       "title": "Connecting to Tableland",
       "description": "Access the Tableland network by first connecting to the base chain.",
-      "sidebar": "build"
+      "sidebar": "develop"
     },
     "sdk/create": {
       "id": "sdk/create",
       "title": "Creating tables",
       "description": "Learn how to create tables from the SDK.",
-      "sidebar": "build"
+      "sidebar": "develop"
     },
     "sdk/getting-started": {
       "id": "sdk/getting-started",
       "title": "Getting started",
       "description": "Get up an running with the Tableland SDK.",
-      "sidebar": "build"
+      "sidebar": "develop"
     },
     "sdk/read": {
       "id": "sdk/read",
       "title": "Reading tables",
       "description": "Openly readable tables by your applications.",
-      "sidebar": "build"
+      "sidebar": "develop"
     },
     "sdk/README": {
       "id": "sdk/README",
       "title": "Overview",
       "description": "Openly readable tables by your applications.",
-      "sidebar": "build"
+      "sidebar": "develop"
     },
     "sdk/write": {
       "id": "sdk/write",
       "title": "Writing to tables",
       "description": "Mutate your table values with additional access control.",
-      "sidebar": "build"
+      "sidebar": "develop"
     },
     "smart-contracts/connect": {
       "id": "smart-contracts/connect",
       "title": "Connecting to Tableland",
       "description": "Access the Tableland network by first connecting to the base chain.",
-      "sidebar": "build"
+      "sidebar": "develop"
     },
     "smart-contracts/create": {
       "id": "smart-contracts/create",
       "title": "Creating tables",
       "description": "Learn how to create tables from the SDK.",
-      "sidebar": "build"
+      "sidebar": "develop"
     },
     "smart-contracts/getting-started": {
       "id": "smart-contracts/getting-started",
       "title": "Getting started",
       "description": "Get up an running with the Tableland SDK.",
-      "sidebar": "build"
-    },
-    "smart-contracts/overview": {
-      "id": "smart-contracts/overview",
-      "title": "Overview",
-      "description": "Openly readable tables by your applications."
+      "sidebar": "develop"
     },
     "smart-contracts/read": {
       "id": "smart-contracts/read",
       "title": "Reading tables",
       "description": "Openly readable tables by your applications.",
-      "sidebar": "build"
+      "sidebar": "develop"
+    },
+    "smart-contracts/README": {
+      "id": "smart-contracts/README",
+      "title": "Overview",
+      "description": "Openly readable tables by your applications.",
+      "sidebar": "develop"
     },
     "smart-contracts/write": {
       "id": "smart-contracts/write",
       "title": "Writing to tables",
       "description": "Mutate your table values with additional access control.",
-      "sidebar": "build"
+      "sidebar": "develop"
+    },
+    "sql/access-control": {
+      "id": "sql/access-control",
+      "title": "access-control",
+      "description": "The Tableland SQL language specification."
+    },
+    "sql/creating-tables": {
+      "id": "sql/creating-tables",
+      "title": "creating-tables",
+      "description": "The Tableland SQL language specification."
+    },
+    "sql/overview": {
+      "id": "sql/overview",
+      "title": "overview",
+      "description": "The Tableland SQL language specification."
+    },
+    "sql/read-queries": {
+      "id": "sql/read-queries",
+      "title": "read-queries",
+      "description": "The Tableland SQL language specification."
     },
     "sql/sql-spec": {
       "id": "sql/sql-spec",
       "title": "sql-spec",
-      "description": "The Tableland SQL language specification.",
-      "sidebar": "sql"
+      "description": "The Tableland SQL language specification."
+    },
+    "sql/write-queries": {
+      "id": "sql/write-queries",
+      "title": "write-queries",
+      "description": "The Tableland SQL language specification."
     },
     "template": {
       "id": "template",

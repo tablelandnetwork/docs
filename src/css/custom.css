@@ -40,13 +40,21 @@
   --ifm-h4-font-size: var(--h4-font-size);
   --ifm-h5-font-size: var(--h5-font-size);
   --ifm-h6-font-size: var(--h6-font-size);
+  /* Default secondary colors */
+  --ifm-color-secondary-dark: rgb(212, 213, 216);
+  --ifm-color-secondary-darker: rgb(200, 201, 204);
+  --ifm-color-secondary-darkest: rgb(164, 166, 168);
+  --ifm-color-secondary-light: rgb(238, 240, 242);
+  --ifm-color-secondary-lighter: rgb(241, 242, 245);
+  --ifm-color-secondary-lightest: rgb(245, 246, 248);
   /* Decrease sidebar width and padding; change color to match table of contents */
   --doc-sidebar-width: 17rem !important;
   --ifm-menu-link-padding-vertical: 0.3rem;
   --ifm-menu-color: var(--ifm-color-content-secondary);
   /* Custom navbar and footer color */
-  --ifm-navbar-background-color: rgb(247, 250, 252);
+  --ifm-navbar-background-color: var(--ifm-color-secondary-lightest);
   --ifm-footer-background-color: var(--ifm-navbar-background-color);
+  --ifm-hover-overlay: var(--ifm-navbar-background-color);
   /* Change `hr` section divider to be the same color as sidebar & TOC dividers */
   --ifm-hr-background-color: var(--ifm-toc-border-color);
   --ifm-button-border-radius: 0.4rem;
@@ -69,10 +77,12 @@
   --ifm-color-primary-light: #4a8c8b;
   --ifm-color-primary-lighter: #59a7a6;
   --ifm-color-primary-lightest: #77dddc;
+  --ifm-heading-color: var(--ifm-color-content);
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
   /* Make the navbar the same color as the background; include bottom box shadow */
   --ifm-navbar-background-color: var(--ifm-background-surface-color);
   --ifm-navbar-shadow: 0 1px 2px 0 var(--ifm-color-emphasis-200);
+  --ifm-menu-color: var(--ifm-color-gray-500);
 }
 
 /* A few general CSS fixes */
@@ -273,6 +283,10 @@ html[data-theme="dark"] .header-github-link:before {
 }
 
 /* Reduce font size in sidebar, bold the active sidebar page, and don't change active link color on hover */
+.menu {
+  padding-top: var(--ifm-pre-padding) !important;
+}
+
 .menu__list {
   font-size: var(--h5-font-size);
 }
@@ -294,7 +308,16 @@ html[data-theme="dark"] .header-github-link:before {
   background: var(--ifm-menu-link-sublist-icon) 50% / 1.25rem 1.25rem;
 }
 
-/* Pagination fix to not change font color on hover; also, change icons */
+/* Style for the section / divider text */
+.sidebar-section {
+  font-weight: var(--ifm-font-weight-bold);
+}
+
+/* Pagination fixes background color, do not change font color on hover, and change icons */
+.pagination-nav__link {
+  background-color: var(--ifm-navbar-background-color);
+}
+
 .pagination-nav__link:hover {
   color: var(--ifm-link-color);
 }
@@ -310,6 +333,23 @@ html[data-theme="dark"] .header-github-link:before {
 /* Decrease the width of the search bar */
 .navbar__search-input {
   width: 10rem;
+}
+
+/* Make navbar text smaller */
+.navbar__item {
+  font-size: var(--ifm-h5-font-size);
+}
+
+/* Horizontally center all images by default */
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+figcaption {
+  font-size: var(--ifm-h5-font-size);
+  text-align: center;
 }
 
 /* Custom fonts for the site */

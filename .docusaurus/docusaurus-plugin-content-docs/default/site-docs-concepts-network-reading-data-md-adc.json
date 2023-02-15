@@ -1,0 +1,26 @@
+{
+  "unversionedId": "concepts/network/reading-data",
+  "id": "concepts/network/reading-data",
+  "title": "Reading table data",
+  "description": "Learn about what Tableland is.",
+  "source": "@site/docs/concepts/network/reading-data.md",
+  "sourceDirName": "concepts/network",
+  "slug": "/concepts/network/reading-data",
+  "permalink": "/concepts/network/reading-data",
+  "draft": false,
+  "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/concepts/network/reading-data.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "title": "Reading table data",
+    "sidebar_label": "Reading data",
+    "description": "Learn about what Tableland is.",
+    "synopsis": "Structured Query Language (SQL) is a language that allows developers to interact with databases for extracting and mutating values.",
+    "keywords": [
+      "protocol"
+    ]
+  }
+}

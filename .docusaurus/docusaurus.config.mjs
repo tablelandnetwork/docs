@@ -148,20 +148,14 @@ export default {
         {
           "type": "docSidebar",
           "position": "left",
-          "sidebarId": "about",
-          "label": "About"
+          "sidebarId": "concepts",
+          "label": "Concepts"
         },
         {
           "type": "docSidebar",
           "position": "left",
-          "sidebarId": "build",
-          "label": "Build"
-        },
-        {
-          "type": "doc",
-          "docId": "/category/sql",
-          "position": "left",
-          "label": "SQL"
+          "sidebarId": "develop",
+          "label": "Develop"
         },
         {
           "type": "doc",
@@ -170,19 +164,24 @@ export default {
           "label": "Tutorials"
         },
         {
-          "href": "https://dev.tableland.xyz",
-          "position": "right",
-          "label": "Tech Blog",
-          "target": "_blank",
-          "rel": null
-        },
-        {
           "label": "Community",
           "position": "right",
           "items": [
             {
-              "to": "contribute/guidelines/",
+              "type": "docSidebar",
+              "sidebarId": "contribute",
               "label": "Contribute"
+            },
+            {
+              "type": "docSidebar",
+              "sidebarId": "rigs",
+              "label": "Rigs NFT"
+            },
+            {
+              "href": "https://dev.tableland.xyz",
+              "label": "Tech blog",
+              "target": "_blank",
+              "rel": null
             },
             {
               "href": "https://discord.com/invite/dc8EBEhGbg",
@@ -193,12 +192,6 @@ export default {
             {
               "href": "https://twitter.com/tableland__",
               "label": "Twitter",
-              "target": "_blank",
-              "rel": null
-            },
-            {
-              "href": "https://www.youtube.com/@tablelandxyz",
-              "label": "YouTube",
               "target": "_blank",
               "rel": null
             },
@@ -240,11 +233,15 @@ export default {
               "label": "CLI"
             },
             {
+              "to": "/category/api",
+              "label": "API"
+            },
+            {
               "to": "/category/smart-contracts",
               "label": "Smart contracts"
             },
             {
-              "to": "/sql/sql-spec",
+              "to": "/concepts/sql/sql-spec",
               "label": "SQL spec"
             }
           ]
@@ -253,8 +250,12 @@ export default {
           "title": "Community",
           "items": [
             {
-              "to": "contribute/guidelines/",
+              "to": "contribute",
               "label": "Contribute"
+            },
+            {
+              "to": "rigs",
+              "label": "Rigs NFT"
             },
             {
               "href": "https://discord.com/invite/dc8EBEhGbg",
@@ -282,16 +283,16 @@ export default {
           "title": "Company",
           "items": [
             {
-              "href": "https://tableland.xyz",
-              "label": "Main site"
-            },
-            {
               "href": "https://dev.tableland.xyz",
               "label": "Tech Blog"
             },
             {
               "href": "https://mirror.xyz/tableland.eth",
               "label": "Main Blog"
+            },
+            {
+              "href": "https://tableland.xyz",
+              "label": "Main site"
             },
             {
               "label": "GitHub",
@@ -411,27 +412,17 @@ export default {
       },
       "darkTheme": {
         "plain": {
-          "color": "#F8F8F2",
-          "backgroundColor": "#282A36"
+          "color": "#82aaff",
+          "backgroundColor": "#2D1339"
         },
         "styles": [
           {
             "types": [
-              "prolog",
-              "constant",
-              "builtin"
+              "changed"
             ],
             "style": {
-              "color": "rgb(189, 147, 249)"
-            }
-          },
-          {
-            "types": [
-              "inserted",
-              "function"
-            ],
-            "style": {
-              "color": "rgb(80, 250, 123)"
+              "color": "rgb(162, 191, 252)",
+              "fontStyle": "italic"
             }
           },
           {
@@ -439,44 +430,17 @@ export default {
               "deleted"
             ],
             "style": {
-              "color": "rgb(255, 85, 85)"
+              "color": "rgba(239, 83, 80, 0.56)",
+              "fontStyle": "italic"
             }
           },
           {
             "types": [
-              "changed"
+              "inserted",
+              "attr-name"
             ],
             "style": {
-              "color": "rgb(255, 184, 108)"
-            }
-          },
-          {
-            "types": [
-              "punctuation",
-              "symbol"
-            ],
-            "style": {
-              "color": "rgb(248, 248, 242)"
-            }
-          },
-          {
-            "types": [
-              "string",
-              "char",
-              "tag",
-              "selector"
-            ],
-            "style": {
-              "color": "rgb(255, 121, 198)"
-            }
-          },
-          {
-            "types": [
-              "keyword",
-              "variable"
-            ],
-            "style": {
-              "color": "rgb(189, 147, 249)",
+              "color": "#beffad",
               "fontStyle": "italic"
             }
           },
@@ -485,15 +449,104 @@ export default {
               "comment"
             ],
             "style": {
-              "color": "rgb(98, 114, 164)"
+              "color": "rgba(255, 255, 255, 0.5)"
             }
           },
           {
             "types": [
-              "attr-name"
+              "string",
+              "url"
             ],
             "style": {
-              "color": "rgb(241, 250, 140)"
+              "color": "#beffad"
+            }
+          },
+          {
+            "types": [
+              "variable"
+            ],
+            "style": {
+              "color": "rgb(214, 222, 235)"
+            }
+          },
+          {
+            "types": [
+              "number"
+            ],
+            "style": {
+              "color": "rgb(247, 140, 108)"
+            }
+          },
+          {
+            "types": [
+              "builtin",
+              "char",
+              "constant",
+              "function"
+            ],
+            "style": {
+              "color": "#ff5e5e"
+            }
+          },
+          {
+            "types": [
+              "punctuation"
+            ],
+            "style": {
+              "color": "#fff"
+            }
+          },
+          {
+            "types": [
+              "selector",
+              "doctype"
+            ],
+            "style": {
+              "color": "rgb(199, 146, 234)",
+              "fontStyle": "italic"
+            }
+          },
+          {
+            "types": [
+              "class-name",
+              "delimiter"
+            ],
+            "style": {
+              "color": "#ffcb6b"
+            }
+          },
+          {
+            "types": [
+              "tag",
+              "operator",
+              "keyword"
+            ],
+            "style": {
+              "color": "#ca79ee"
+            }
+          },
+          {
+            "types": [
+              "boolean"
+            ],
+            "style": {
+              "color": "rgb(255, 88, 116)"
+            }
+          },
+          {
+            "types": [
+              "property"
+            ],
+            "style": {
+              "color": "rgb(128, 203, 196)"
+            }
+          },
+          {
+            "types": [
+              "namespace"
+            ],
+            "style": {
+              "color": "rgb(178, 204, 214)"
             }
           }
         ]

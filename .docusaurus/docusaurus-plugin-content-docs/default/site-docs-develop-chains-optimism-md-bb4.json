@@ -1,0 +1,35 @@
+{
+  "unversionedId": "develop/chains/optimism",
+  "id": "develop/chains/optimism",
+  "title": "Optimism",
+  "description": "Openly readable tables by your applications.",
+  "source": "@site/docs/develop/chains/optimism.md",
+  "sourceDirName": "develop/chains",
+  "slug": "/develop/chains/optimism",
+  "permalink": "/develop/chains/optimism",
+  "draft": false,
+  "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/develop/chains/optimism.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "title": "Optimism",
+    "description": "Openly readable tables by your applications.",
+    "synopsis": "Reading from tables is entirely open (for anyone), allowing for true composability. Write SQL qeuries—but with some limitations that are due to the nature of decentralized networks and deterministic requirements.",
+    "keywords": [
+      "write to table",
+      "mutate table"
+    ]
+  },
+  "sidebar": "develop",
+  "previous": {
+    "title": "Arbitrum",
+    "permalink": "/develop/chains/arbitrum"
+  },
+  "next": {
+    "title": "Polygon",
+    "permalink": "/develop/chains/polygon"
+  }
+}

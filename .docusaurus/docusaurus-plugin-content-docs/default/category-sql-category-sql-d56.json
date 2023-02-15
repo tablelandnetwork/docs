@@ -4,8 +4,8 @@
   "permalink": "/category/sql",
   "navigation": {
     "next": {
-      "title": "SQL specification",
-      "permalink": "/sql/sql-spec"
+      "title": "Overview",
+      "permalink": "/sql/creating-tables"
     }
   }
 }

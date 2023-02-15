@@ -1,0 +1,36 @@
+{
+  "unversionedId": "concepts/network/roadmap",
+  "id": "concepts/network/roadmap",
+  "title": "Vision & roadmap",
+  "description": "The protocol is still being developed and progressively decentralized.",
+  "source": "@site/docs/concepts/network/roadmap.md",
+  "sourceDirName": "concepts/network",
+  "slug": "/concepts/network/roadmap",
+  "permalink": "/concepts/network/roadmap",
+  "draft": false,
+  "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/concepts/network/roadmap.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "title": "Vision & roadmap",
+    "sidebar_label": "Roadmap",
+    "description": "The protocol is still being developed and progressively decentralized.",
+    "synopsis": "Tableland's inception came in late 2021. It's consistently growing in terms of the core protocol itself and development activity on top of the protocol, and there is still plenty in store in the coming months and years.",
+    "keywords": [
+      "roadmap",
+      "vision"
+    ]
+  },
+  "sidebar": "concepts",
+  "previous": {
+    "title": "Open beta",
+    "permalink": "/concepts/network/open-beta"
+  },
+  "next": {
+    "title": "Quick start",
+    "permalink": "/concepts/sql/"
+  }
+}

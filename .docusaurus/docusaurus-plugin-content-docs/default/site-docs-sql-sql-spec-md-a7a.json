@@ -24,10 +24,5 @@
       "sqlite",
       "specification"
     ]
-  },
-  "sidebar": "sql",
-  "previous": {
-    "title": "SQL",
-    "permalink": "/category/sql"
   }
 }

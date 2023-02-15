@@ -1,0 +1,35 @@
+{
+  "unversionedId": "build/integrations/chainlink",
+  "id": "build/integrations/chainlink",
+  "title": "Chainlink",
+  "description": "Openly readable tables by your applications.",
+  "source": "@site/docs/build/integrations/chainlink.md",
+  "sourceDirName": "build/integrations",
+  "slug": "/build/integrations/chainlink",
+  "permalink": "/build/integrations/chainlink",
+  "draft": false,
+  "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/build/integrations/chainlink.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "title": "Chainlink",
+    "description": "Openly readable tables by your applications.",
+    "synopsis": "Reading from tables is entirely open (for anyone), allowing for true composability. Write SQL qeuries—but with some limitations that are due to the nature of decentralized networks and deterministic requirements.",
+    "keywords": [
+      "write to table",
+      "mutate table"
+    ]
+  },
+  "sidebar": "build",
+  "previous": {
+    "title": "Filecoin",
+    "permalink": "/build/integrations/filecoin"
+  },
+  "next": {
+    "title": "Lit Protocol",
+    "permalink": "/build/integrations/lit-protocol"
+  }
+}

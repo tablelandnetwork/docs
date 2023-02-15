@@ -21,21 +21,21 @@ export default function Home(): JSX.Element {
           </div>
           <div className="row row-landing margin-top--lg">
             <div className="col column--6 padding-left--none padding-right--none">
-              <h2>A new way to store web3 data</h2>
+              <h2>Supercharge your web3 data</h2>
               <p>
-                Build applications on your chain of choice while adding
+                Build dynamic applications on your chain of choice by adding
                 Tableland to your stack, allowing developers to:
               </p>
               <ul>
                 <li>
                   Stop storing data in contracts that doesn't belong there, and
-                  offload it to a decentralized database with native SQL
-                  queries.
+                  offload it to a decentralized database with native SQL queries
+                  & mutability.
                 </li>
                 <li>
                   Eliminate centralized server dependence, or complex
-                  decentralized storage workflows (static JSON files) but
-                  without database features.
+                  decentralized storage workflows (static JSON files) without
+                  database features.
                 </li>
                 <li>
                   Use on-chain rules to control who or what can change certain
@@ -45,13 +45,11 @@ export default function Home(): JSX.Element {
               </ul>{" "}
               <p></p>
               <p>
-                Write SQL to EVM chains and <i>openly</i> read table data
-                off-chain within your application. Tableland validator nodes
-                listen to events at registry smart contracts, process SQL
-                queries, and store data in SQLite—enabling
-                <b> mutable</b> data with <b>immutable</b> rules.
+                Enhance data storage on Ethereum & EVM chains by creating,
+                writing to, and reading from tables using SQL. <b> Mutable</b>{" "}
+                data with <b>immutable</b> rules.
               </p>
-              <ArrowButton text="Get started" to="sdk/getting-started" />
+              <ArrowButton text="Get started" to="develop" />
             </div>
             <div
               className="col column--6"
@@ -64,7 +62,7 @@ export default function Home(): JSX.Element {
               <img
                 alt="Tableland code snippet"
                 className={clsx(styles.landingImage)}
-                src={useBaseUrl("/img/tableland/landing-image.png")}
+                src={useBaseUrl("/img/landing/landing-image.png")}
               ></img>
             </div>
           </div>

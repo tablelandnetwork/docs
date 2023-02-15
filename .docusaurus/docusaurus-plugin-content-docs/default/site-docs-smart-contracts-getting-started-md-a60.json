@@ -23,10 +23,10 @@
       "Tableland SDK"
     ]
   },
-  "sidebar": "build",
+  "sidebar": "develop",
   "previous": {
-    "title": "Smart contracts",
-    "permalink": "/category/smart-contracts"
+    "title": "Overview",
+    "permalink": "/smart-contracts/"
   },
   "next": {
     "title": "Connecting to Tableland",

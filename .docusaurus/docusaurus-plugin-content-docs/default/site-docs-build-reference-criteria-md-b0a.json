@@ -1,0 +1,26 @@
+{
+  "unversionedId": "build/reference/criteria",
+  "id": "build/reference/criteria",
+  "title": "Tradeoffs & considerations",
+  "description": "Openly readable tables by your applications.",
+  "source": "@site/docs/build/reference/criteria.md",
+  "sourceDirName": "build/reference",
+  "slug": "/build/reference/criteria",
+  "permalink": "/build/reference/criteria",
+  "draft": false,
+  "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/build/reference/criteria.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "title": "Tradeoffs & considerations",
+    "description": "Openly readable tables by your applications.",
+    "synopsis": "Reading from tables is entirely open (for anyone), allowing for true composability. Write SQL qeuries—but with some limitations that are due to the nature of decentralized networks and deterministic requirements.",
+    "keywords": [
+      "write to table",
+      "mutate table"
+    ]
+  }
+}

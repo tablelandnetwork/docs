@@ -1,0 +1,25 @@
+{
+  "unversionedId": "develop/concepts/README copy",
+  "id": "develop/concepts/README copy",
+  "title": "Concepts",
+  "description": "Learn about what Tableland is.",
+  "source": "@site/docs/develop/concepts/README copy.md",
+  "sourceDirName": "develop/concepts",
+  "slug": "/develop/concepts/README copy",
+  "permalink": "/develop/concepts/README copy",
+  "draft": false,
+  "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/develop/concepts/README copy.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "title": "Concepts",
+    "description": "Learn about what Tableland is.",
+    "synopsis": "Structured Query Language (SQL) is a language that allows developers to interact with databases for extracting and mutating values.",
+    "keywords": [
+      "protocol"
+    ]
+  }
+}

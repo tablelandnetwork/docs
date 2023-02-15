@@ -25,20 +25,14 @@ const navbar = {
     {
       type: "docSidebar",
       position: "left",
-      sidebarId: "about",
-      label: "About",
+      sidebarId: "concepts",
+      label: "Concepts",
     },
     {
       type: "docSidebar",
       position: "left",
-      sidebarId: "build",
-      label: "Build",
-    },
-    {
-      type: "doc",
-      docId: "/category/sql",
-      position: "left",
-      label: "SQL",
+      sidebarId: "develop",
+      label: "Develop",
     },
     {
       type: "doc",
@@ -47,19 +41,24 @@ const navbar = {
       label: "Tutorials",
     },
     {
-      href: "https://dev.tableland.xyz",
-      position: "right",
-      label: "Tech Blog",
-      target: "_blank",
-      rel: null,
-    },
-    {
       label: "Community",
       position: "right",
       items: [
         {
-          to: "contribute/guidelines/",
+          type: "docSidebar",
+          sidebarId: "contribute",
           label: "Contribute",
+        },
+        {
+          type: "docSidebar",
+          sidebarId: "rigs",
+          label: "Rigs NFT",
+        },
+        {
+          href: "https://dev.tableland.xyz",
+          label: "Tech blog",
+          target: "_blank",
+          rel: null,
         },
         {
           href: "https://discord.com/invite/dc8EBEhGbg",
@@ -70,12 +69,6 @@ const navbar = {
         {
           href: "https://twitter.com/tableland__",
           label: "Twitter",
-          target: "_blank",
-          rel: null,
-        },
-        {
-          href: "https://www.youtube.com/@tablelandxyz",
-          label: "YouTube",
           target: "_blank",
           rel: null,
         },

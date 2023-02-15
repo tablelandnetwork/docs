@@ -34,10 +34,10 @@
       "contributing"
     ]
   },
-  "sidebar": "contributing",
+  "sidebar": "contribute",
   "previous": {
     "title": "Contributor guidelines",
-    "permalink": "/contribute/guidelines"
+    "permalink": "/contribute/"
   },
   "next": {
     "title": "Maintainers",

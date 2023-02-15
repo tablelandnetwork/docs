@@ -1,0 +1,35 @@
+{
+  "unversionedId": "develop/chains/README",
+  "id": "develop/chains/README",
+  "title": "Choosing a chain",
+  "description": "Openly readable tables by your applications.",
+  "source": "@site/docs/develop/chains/README.md",
+  "sourceDirName": "develop/chains",
+  "slug": "/develop/chains/",
+  "permalink": "/develop/chains/",
+  "draft": false,
+  "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/develop/chains/README.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "title": "Choosing a chain",
+    "description": "Openly readable tables by your applications.",
+    "synopsis": "Reading from tables is entirely open (for anyone), allowing for true composability. Write SQL qeuries—but with some limitations that are due to the nature of decentralized networks and deterministic requirements.",
+    "keywords": [
+      "write to table",
+      "mutate table"
+    ]
+  },
+  "sidebar": "develop",
+  "previous": {
+    "title": "Reading tables",
+    "permalink": "/smart-contracts/read"
+  },
+  "next": {
+    "title": "Ethereum",
+    "permalink": "/develop/chains/ethereum"
+  }
+}

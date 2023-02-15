@@ -1,0 +1,35 @@
+{
+  "unversionedId": "build/reference/limits",
+  "id": "build/reference/limits",
+  "title": "Limits",
+  "description": "Openly readable tables by your applications.",
+  "source": "@site/docs/build/reference/limits.md",
+  "sourceDirName": "build/reference",
+  "slug": "/build/reference/limits",
+  "permalink": "/build/reference/limits",
+  "draft": false,
+  "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/build/reference/limits.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "title": "Limits",
+    "description": "Openly readable tables by your applications.",
+    "synopsis": "Reading from tables is entirely open (for anyone), allowing for true composability. Write SQL qeuries—but with some limitations that are due to the nature of decentralized networks and deterministic requirements.",
+    "keywords": [
+      "write to table",
+      "mutate table"
+    ]
+  },
+  "sidebar": "build",
+  "previous": {
+    "title": "Deployed contracts",
+    "permalink": "/build/reference/deployed-contracts"
+  },
+  "next": {
+    "title": "Response times",
+    "permalink": "/build/reference/response-times"
+  }
+}

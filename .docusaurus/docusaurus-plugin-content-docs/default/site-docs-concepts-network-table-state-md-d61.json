@@ -1,0 +1,35 @@
+{
+  "unversionedId": "concepts/network/table-state",
+  "id": "concepts/network/table-state",
+  "title": "Network state",
+  "description": "Learn about the basics of the Tableland network.",
+  "source": "@site/docs/concepts/network/table-state.md",
+  "sourceDirName": "concepts/network",
+  "slug": "/concepts/network/table-state",
+  "permalink": "/concepts/network/table-state",
+  "draft": false,
+  "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/concepts/network/table-state.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "title": "Network state",
+    "description": "Learn about the basics of the Tableland network.",
+    "synopsis": "Tableland is a web3 native SQL database.",
+    "keywords": [
+      "Tableland",
+      "about"
+    ]
+  },
+  "sidebar": "concepts",
+  "previous": {
+    "title": "Overview",
+    "permalink": "/concepts/"
+  },
+  "next": {
+    "title": "Creating tables",
+    "permalink": "/concepts/network/creating-tables"
+  }
+}

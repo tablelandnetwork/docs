@@ -206,152 +206,368 @@
     },
     "config": "config---5-e-9-4f3"
   },
-  "/-d44": {
+  "/-3fb": {
     "__comp": "__comp---theme-doc-page-1-be-9be",
     "__context": {
       "plugin": "plugin---tags-54-b-0a7"
     },
     "versionMetadata": "versionMetadata---935-fcf"
   },
-  "/about/-e76": {
+  "/about/-c95": {
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---about-3-cc-ef1"
   },
-  "/about/blockchain/what-is-blockchain-7e7": {
+  "/about/blockchain/what-is-blockchain-fd0": {
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---about-blockchain-what-is-blockchaina-39-1fc"
+  },
+  "/about/faqs/community-faqs-53e": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---about-faqs-community-faqs-4-db-6ec"
+  },
+  "/about/faqs/protocol-faqs-707": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---about-faqs-protocol-faqs-80-a-400"
+  },
+  "/about/faqs/rigs-faqs-453": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---about-faqs-rigs-faqs-3-ff-11f"
   },
   "/about/rigs/overview-b2d": {
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---about-rigs-overview-4-b-8-263"
   },
+  "/about/rigs/rigs-discord-6e9": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---about-rigs-rigs-discord-5-a-3-f50"
+  },
+  "/about/rigs/the-garage-847": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---about-rigs-the-garage-7-ac-8ef"
+  },
+  "/about/rigs/what-are-rigs-732": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---about-rigs-what-are-rigs-012-e7b"
+  },
   "/about/sql/what-is-sql-5ec": {
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---about-sql-what-is-sql-2-f-1-bbb"
   },
-  "/about/tableland/what-is-tableland-658": {
+  "/about/tableland/how-does-tableland-work-775": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---about-tableland-how-does-tableland-work-390-4a5"
+  },
+  "/about/tableland/open-beta-d2f": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---about-tableland-open-beta-354-fcd"
+  },
+  "/about/tableland/overview-8a6": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---about-tableland-overview-287-196"
+  },
+  "/about/tableland/vision-roadmap-691": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---about-tableland-vision-roadmap-329-63f"
+  },
+  "/about/tableland/what-is-tableland-d88": {
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---about-tableland-what-is-tableland-1-ba-907"
   },
-  "/build/-eda": {
+  "/api/-fac": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---build-80-c-67e"
+    "content": "content---api-982-b6d"
   },
-  "/category/blockchain-basics-e7a": {
-    "__comp": "__comp---theme-doc-category-generated-index-page-14-e-640",
-    "categoryGeneratedIndex": "categoryGeneratedIndex---category-blockchain-basics-20-c-76e"
+  "/api/endpoints-137": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---api-endpointsd-04-6ad"
   },
-  "/category/cli-20d": {
-    "__comp": "__comp---theme-doc-category-generated-index-page-14-e-640",
-    "categoryGeneratedIndex": "categoryGeneratedIndex---category-cli-92-c-d69"
+  "/api/errors-0c9": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---api-errors-807-8b2"
   },
-  "/category/contributing-b2e": {
-    "__comp": "__comp---theme-doc-category-generated-index-page-14-e-640",
-    "categoryGeneratedIndex": "categoryGeneratedIndex---category-contributingb-8-f-dd4"
-  },
-  "/category/smart-contracts-441": {
-    "__comp": "__comp---theme-doc-category-generated-index-page-14-e-640",
-    "categoryGeneratedIndex": "categoryGeneratedIndex---category-smart-contractsbbd-d46"
-  },
-  "/category/sql-5bb": {
-    "__comp": "__comp---theme-doc-category-generated-index-page-14-e-640",
-    "categoryGeneratedIndex": "categoryGeneratedIndex---category-sqla-37-b1e"
+  "/api/gateways-489": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---api-gateways-4-c-3-c3f"
   },
   "/category/tutorials-710": {
     "__comp": "__comp---theme-doc-category-generated-index-page-14-e-640",
     "categoryGeneratedIndex": "categoryGeneratedIndex---category-tutorials-69-a-29f"
   },
-  "/cli/connect-049": {
+  "/cli/-41a": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---cli-86-b-5e6"
+  },
+  "/cli/connect-3cc": {
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---cli-connect-5-bd-f77"
   },
-  "/cli/create-e24": {
+  "/cli/create-145": {
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---cli-createece-51c"
   },
-  "/cli/getting-started-ddf": {
+  "/cli/getting-started-6c2": {
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---cli-getting-started-9-f-0-026"
   },
-  "/cli/overview-fa3": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---cli-overview-2-c-1-786"
-  },
-  "/cli/read-da8": {
+  "/cli/read-3a3": {
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---cli-read-9-be-4e7"
   },
-  "/cli/write-69b": {
+  "/cli/write-5c0": {
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---cli-write-346-213"
   },
-  "/contribute/guidelines-7cb": {
+  "/concepts/-725": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---contribute-guidelinesa-6-f-50f"
+    "content": "content---concepts-023-a81"
   },
-  "/contribute/maintainers-ea1": {
+  "/concepts/network/considerations-tradeoffs-26b": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---concepts-network-considerations-tradeoffs-4-fe-029"
+  },
+  "/concepts/network/databases-236": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---concepts-network-databasesa-29-aba"
+  },
+  "/concepts/network/open-beta-781": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---concepts-network-open-beta-94-b-eb9"
+  },
+  "/concepts/network/roadmap-902": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---concepts-network-roadmap-79-a-06e"
+  },
+  "/concepts/network/tableland-state-f8c": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---concepts-network-tableland-state-2-b-4-f4e"
+  },
+  "/concepts/network/what-is-tableland-6f2": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---concepts-network-what-is-tablelanda-71-216"
+  },
+  "/concepts/sql/-ca2": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---concepts-sql-0-c-1-64a"
+  },
+  "/concepts/sql/access-control-69f": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---concepts-sql-access-control-716-e9e"
+  },
+  "/concepts/sql/create-a-table-b2e": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---concepts-sql-create-a-table-23-a-4cd"
+  },
+  "/concepts/sql/delete-a1b": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---concepts-sql-delete-06-d-0df"
+  },
+  "/concepts/sql/insert-6ea": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---concepts-sql-insertbc-2-3dc"
+  },
+  "/concepts/sql/mutating-data-ebe": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---concepts-sql-mutating-dataafb-256"
+  },
+  "/concepts/sql/read-fa5": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---concepts-sql-read-67-d-7e3"
+  },
+  "/concepts/sql/sql-spec-94f": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---concepts-sql-sql-spec-886-0e5"
+  },
+  "/concepts/sql/update-768": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---concepts-sql-update-4-dd-0a9"
+  },
+  "/concepts/sql/upsert-b95": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---concepts-sql-upsert-7-d-7-e21"
+  },
+  "/contribute/-126": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---contribute-b-76-d2a"
+  },
+  "/contribute/maintainers-b9e": {
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---contribute-maintainers-4-f-9-3b0"
   },
-  "/contribute/style-guide-fe4": {
+  "/contribute/style-guide-2fc": {
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---contribute-style-guided-01-728"
+  },
+  "/develop/-b14": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---develop-853-770"
+  },
+  "/develop/chains/-b58": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---develop-chains-21-b-24b"
+  },
+  "/develop/chains/arbitrum-9b2": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---develop-chains-arbitrum-62-a-18a"
+  },
+  "/develop/chains/ethereum-13a": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---develop-chains-ethereumb-62-b49"
+  },
+  "/develop/chains/optimism-d2e": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---develop-chains-optimismbb-4-9e5"
+  },
+  "/develop/chains/polygon-65e": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---develop-chains-polygon-041-a0a"
+  },
+  "/develop/integrations/chainlink-82f": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---develop-integrations-chainlinkbf-6-275"
+  },
+  "/develop/integrations/filecoin-cd6": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---develop-integrations-filecoina-3-e-7c3"
+  },
+  "/develop/integrations/ipfs-69f": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---develop-integrations-ipfs-4-f-0-4d4"
+  },
+  "/develop/integrations/lit-protocol-da8": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---develop-integrations-lit-protocol-5-bb-738"
+  },
+  "/develop/integrations/nucypher-540": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---develop-integrations-nucypher-201-099"
+  },
+  "/develop/integrations/overview-2ea": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---develop-integrations-overviewd-7-c-262"
+  },
+  "/develop/integrations/toucan-c3b": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---develop-integrations-toucan-115-46f"
+  },
+  "/develop/reference/-b57": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---develop-reference-2-ca-7f9"
+  },
+  "/develop/reference/chains-contracts-978": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---develop-reference-chains-contracts-900-5d8"
+  },
+  "/develop/reference/limits-4d7": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---develop-reference-limits-5-e-5-d12"
+  },
+  "/develop/reference/open-beta-82e": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---develop-reference-open-beta-042-869"
+  },
+  "/develop/reference/repos-9fb": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---develop-reference-repos-08-c-c0e"
+  },
+  "/develop/reference/response-times-183": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---develop-reference-response-times-396-e6b"
+  },
+  "/develop/reference/table-names-27c": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---develop-reference-table-names-515-9c6"
+  },
+  "/products/rigs/-518": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---products-rigs-429-2da"
+  },
+  "/products/rigs/rigs-discord-08a": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---products-rigs-rigs-discord-188-37b"
+  },
+  "/products/rigs/the-garage-b27": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---products-rigs-the-garagef-7-f-5da"
+  },
+  "/products/rigs/what-are-rigs-e4b": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---products-rigs-what-are-rigs-29-d-23c"
   },
   "/protocol/validator-spec-7ce": {
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---protocol-validator-spec-72-c-c80"
   },
-  "/sdk/-3a9": {
+  "/sdk/-54d": {
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---sdk-538-e94"
   },
-  "/sdk/connect-be9": {
+  "/sdk/connect-59e": {
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---sdk-connectdb-2-18a"
   },
-  "/sdk/create-b25": {
+  "/sdk/create-8b4": {
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---sdk-create-0-b-1-7fd"
   },
-  "/sdk/getting-started-f34": {
+  "/sdk/getting-started-a82": {
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---sdk-getting-started-14-b-cc1"
   },
-  "/sdk/read-f5f": {
+  "/sdk/read-fc0": {
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---sdk-read-969-efb"
   },
-  "/sdk/write-d41": {
+  "/sdk/write-731": {
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---sdk-writee-93-ca5"
   },
-  "/smart-contracts/connect-51c": {
+  "/smart-contracts/-a04": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---smart-contracts-605-49d"
+  },
+  "/smart-contracts/connect-3dd": {
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---smart-contracts-connect-69-b-47b"
   },
-  "/smart-contracts/create-724": {
+  "/smart-contracts/create-a7b": {
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---smart-contracts-create-601-8a3"
   },
-  "/smart-contracts/getting-started-736": {
+  "/smart-contracts/getting-started-c96": {
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---smart-contracts-getting-starteda-60-faf"
   },
-  "/smart-contracts/overview-eb9": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---smart-contracts-overview-7-da-784"
-  },
-  "/smart-contracts/read-502": {
+  "/smart-contracts/read-568": {
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---smart-contracts-read-994-cc0"
   },
-  "/smart-contracts/write-8d3": {
+  "/smart-contracts/write-b6c": {
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---smart-contracts-write-5-fb-988"
   },
-  "/sql/sql-spec-4a8": {
+  "/sql/access-control-b16": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---sql-access-control-16-f-34a"
+  },
+  "/sql/creating-tables-a29": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---sql-creating-tablesc-1-f-efd"
+  },
+  "/sql/overview-f0f": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---sql-overview-2-b-5-043"
+  },
+  "/sql/read-queries-738": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---sql-read-queries-652-e0f"
+  },
+  "/sql/sql-spec-b23": {
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---sql-sql-speca-7-a-0e2"
+  },
+  "/sql/write-queries-a1a": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---sql-write-queries-53-e-ec4"
   },
   "/template-731": {
     "__comp": "__comp---theme-doc-item-178-a40",

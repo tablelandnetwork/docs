@@ -297,29 +297,33 @@ npm run start
 
 ## Assets & images
 
-All [static assets](https://docusaurus.io/docs/next/static-assets) should be placed in the `src/static` directory. Images should be placed in the `src/static/img` folder, although, it _is_ possible to reference images placed within the `docs` folder (not recommended for maintainability purposes).
+All [static assets](https://docusaurus.io/docs/next/static-assets) should be placed in the `src/static/assets` directory, including images. Although it _is_ possible to reference images placed within the `docs` folder, it is not recommended for maintainability purposes. If you move a markdown page around, the image links will break, whereas placing them in `src/static` will ensure the path is fixed.
 
-These files will be will be copied into the root of the generated `build` folder with the directory hierarchy preserved (e.g., some image `/static/img/tableland.png` will be served at `/img/tableland.png`).
+These files will be will be copied into the root of the generated `build` folder with the directory hierarchy preserved (e.g., some image `/static/assets/example-image.png` will be served at `/assets/example-image.png`).
 Content, such as images, can be displayed directly through either markdown syntax, CJS require, ES imports syntax, or the built-in `useBaseUrl` method. SVGs can also be directly imported. The following demonstrate how to do this, and note the `@site` prefix can be used to access the root `src` directory:
 
 ```jsx
 import useBaseUrl from "@docusaurus/useBaseUrl";
-import myImage from "@site/static/img/tableland/example-image.png";
+import myImage from "@site/static/assets/example-image.png";
+import localDocsImage from "../some-relative-path-in-docs/dont-do-this-though.png";
 
-<img src={useBaseUrl("/img/tableland/example-image.png")} />
-<img src={require("@site/static/img/tableland/example-image.png").default} />
-<img src={myImage} />
+<img src={useBaseUrl("/assets/example-image.png")} />
+<img src={require("@site/static/assets/example-image.png").default} />
+<img src={localDocsImage} />
 
 <!-- Or, use standard markdown -->
 
-![Example image](@site/static/img/tableland/example-image.png)
+![Example image](@site/static/assets/example-image.png)
 ```
 
-All of these render the same image:
+Note the `localDocsImage` example is demonstrated, but you should opt for the absolute `@site` paths. All of these will render an image:
 
-![Example image](@site/static/img/tableland/example-image.png)
+import myImage from "@site/static/assets/example-image.png";
 
-And for direct SVG imports, import the image and use accordingly—it may be useful to attach the `width` property to properly size the image (or use CSS in `src/css/custom.css` accomplish this):
+<img src={require("/assets/example-image.png").default} />
+<br />
+
+For direct SVG imports, you can import the image and use accordingly—it may be useful to attach the `width` property to properly size the image (or use CSS in `src/css/custom.css` accomplish this):
 
 ```jsx
 import Logo from "@site/static/img/tableland/logo-black.svg";

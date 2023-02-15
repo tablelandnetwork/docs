@@ -1,0 +1,31 @@
+{
+  "unversionedId": "build/integrations/toucan",
+  "id": "build/integrations/toucan",
+  "title": "Toucan Protocol",
+  "description": "Openly readable tables by your applications.",
+  "source": "@site/docs/build/integrations/toucan.md",
+  "sourceDirName": "build/integrations",
+  "slug": "/build/integrations/toucan",
+  "permalink": "/build/integrations/toucan",
+  "draft": false,
+  "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/build/integrations/toucan.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "title": "Toucan Protocol",
+    "description": "Openly readable tables by your applications.",
+    "synopsis": "Reading from tables is entirely open (for anyone), allowing for true composability. Write SQL qeuries—but with some limitations that are due to the nature of decentralized networks and deterministic requirements.",
+    "keywords": [
+      "write to table",
+      "mutate table"
+    ]
+  },
+  "sidebar": "build",
+  "previous": {
+    "title": "NyCypher",
+    "permalink": "/build/integrations/nucypher"
+  }
+}

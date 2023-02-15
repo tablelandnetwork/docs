@@ -23,7 +23,7 @@
       "mutate table"
     ]
   },
-  "sidebar": "build",
+  "sidebar": "develop",
   "previous": {
     "title": "Creating tables",
     "permalink": "/smart-contracts/create"

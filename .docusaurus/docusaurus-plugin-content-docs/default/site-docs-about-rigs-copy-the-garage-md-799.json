@@ -1,0 +1,27 @@
+{
+  "unversionedId": "about/rigs copy/the-garage",
+  "id": "about/rigs copy/the-garage",
+  "title": "The Garage",
+  "description": "Learn about the basics of SQL.",
+  "source": "@site/docs/about/rigs copy/the-garage.md",
+  "sourceDirName": "about/rigs copy",
+  "slug": "/about/rigs copy/the-garage",
+  "permalink": "/about/rigs copy/the-garage",
+  "draft": false,
+  "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/about/rigs copy/the-garage.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "title": "The Garage",
+    "description": "Learn about the basics of SQL.",
+    "synopsis": "Structured Query Language (SQL) is a language that allows developers to interact with databases for extracting and mutating values.",
+    "keywords": [
+      "SQL",
+      "SQLite",
+      "about"
+    ]
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "unversionedId": "concepts/sql/delete",
+  "id": "concepts/sql/delete",
+  "title": "Deleting table data",
+  "description": "Learn about what Tableland is.",
+  "source": "@site/docs/concepts/sql/delete.md",
+  "sourceDirName": "concepts/sql",
+  "slug": "/concepts/sql/delete",
+  "permalink": "/concepts/sql/delete",
+  "draft": false,
+  "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/concepts/sql/delete.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "title": "Deleting table data",
+    "sidebar_label": "DELETE",
+    "description": "Learn about what Tableland is.",
+    "synopsis": "Structured Query Language (SQL) is a language that allows developers to interact with databases for extracting and mutating values.",
+    "keywords": [
+      "protocol"
+    ]
+  },
+  "sidebar": "concepts",
+  "previous": {
+    "title": "UPSERT",
+    "permalink": "/concepts/sql/upsert"
+  },
+  "next": {
+    "title": "Reading table data",
+    "permalink": "/concepts/sql/read"
+  }
+}

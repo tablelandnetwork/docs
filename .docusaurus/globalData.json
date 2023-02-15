@@ -8,79 +8,334 @@
           "label": "Next",
           "isLast": true,
           "path": "/",
-          "mainDocId": "about/README",
+          "mainDocId": "concepts/README",
           "docs": [
             {
               "id": "about/blockchain/what-is-blockchain",
-              "path": "/about/blockchain/what-is-blockchain",
-              "sidebar": "about"
+              "path": "/about/blockchain/what-is-blockchain"
+            },
+            {
+              "id": "about/faqs/community-faqs",
+              "path": "/about/faqs/community-faqs"
+            },
+            {
+              "id": "about/faqs/protocol-faqs",
+              "path": "/about/faqs/protocol-faqs"
+            },
+            {
+              "id": "about/faqs/rigs-faqs",
+              "path": "/about/faqs/rigs-faqs"
             },
             {
               "id": "about/README",
-              "path": "/about/",
-              "sidebar": "about"
+              "path": "/about/"
             },
             {
               "id": "about/rigs/overview",
               "path": "/about/rigs/overview"
             },
             {
+              "id": "about/rigs/rigs-discord",
+              "path": "/about/rigs/rigs-discord"
+            },
+            {
+              "id": "about/rigs/the-garage",
+              "path": "/about/rigs/the-garage"
+            },
+            {
+              "id": "about/rigs/what-are-rigs",
+              "path": "/about/rigs/what-are-rigs"
+            },
+            {
               "id": "about/sql/what-is-sql",
               "path": "/about/sql/what-is-sql"
             },
             {
-              "id": "about/tableland/what-is-tableland",
-              "path": "/about/tableland/what-is-tableland",
-              "sidebar": "about"
+              "id": "about/tableland/how-does-tableland-work",
+              "path": "/about/tableland/how-does-tableland-work"
             },
             {
-              "id": "build/README",
-              "path": "/build/",
-              "sidebar": "build"
+              "id": "about/tableland/open-beta",
+              "path": "/about/tableland/open-beta"
+            },
+            {
+              "id": "about/tableland/overview",
+              "path": "/about/tableland/overview"
+            },
+            {
+              "id": "about/tableland/vision-roadmap",
+              "path": "/about/tableland/vision-roadmap"
+            },
+            {
+              "id": "about/tableland/what-is-tableland",
+              "path": "/about/tableland/what-is-tableland"
+            },
+            {
+              "id": "api/endpoints",
+              "path": "/api/endpoints",
+              "sidebar": "develop"
+            },
+            {
+              "id": "api/errors",
+              "path": "/api/errors",
+              "sidebar": "develop"
+            },
+            {
+              "id": "api/gateways",
+              "path": "/api/gateways",
+              "sidebar": "develop"
+            },
+            {
+              "id": "api/README",
+              "path": "/api/",
+              "sidebar": "develop"
             },
             {
               "id": "cli/connect",
               "path": "/cli/connect",
-              "sidebar": "build"
+              "sidebar": "develop"
             },
             {
               "id": "cli/create",
               "path": "/cli/create",
-              "sidebar": "build"
+              "sidebar": "develop"
             },
             {
               "id": "cli/getting-started",
               "path": "/cli/getting-started",
-              "sidebar": "build"
-            },
-            {
-              "id": "cli/overview",
-              "path": "/cli/overview"
+              "sidebar": "develop"
             },
             {
               "id": "cli/read",
               "path": "/cli/read",
-              "sidebar": "build"
+              "sidebar": "develop"
+            },
+            {
+              "id": "cli/README",
+              "path": "/cli/",
+              "sidebar": "develop"
             },
             {
               "id": "cli/write",
               "path": "/cli/write",
-              "sidebar": "build"
+              "sidebar": "develop"
             },
             {
-              "id": "contribute/guidelines",
-              "path": "/contribute/guidelines",
-              "sidebar": "contributing"
+              "id": "concepts/network/considerations-tradeoffs",
+              "path": "/concepts/network/considerations-tradeoffs",
+              "sidebar": "concepts"
+            },
+            {
+              "id": "concepts/network/databases",
+              "path": "/concepts/network/databases",
+              "sidebar": "concepts"
+            },
+            {
+              "id": "concepts/network/open-beta",
+              "path": "/concepts/network/open-beta",
+              "sidebar": "concepts"
+            },
+            {
+              "id": "concepts/network/roadmap",
+              "path": "/concepts/network/roadmap",
+              "sidebar": "concepts"
+            },
+            {
+              "id": "concepts/network/tableland-state",
+              "path": "/concepts/network/tableland-state",
+              "sidebar": "concepts"
+            },
+            {
+              "id": "concepts/network/what-is-tableland",
+              "path": "/concepts/network/what-is-tableland",
+              "sidebar": "concepts"
+            },
+            {
+              "id": "concepts/README",
+              "path": "/concepts/",
+              "sidebar": "concepts"
+            },
+            {
+              "id": "concepts/sql/access-control",
+              "path": "/concepts/sql/access-control",
+              "sidebar": "concepts"
+            },
+            {
+              "id": "concepts/sql/create-a-table",
+              "path": "/concepts/sql/create-a-table",
+              "sidebar": "concepts"
+            },
+            {
+              "id": "concepts/sql/delete",
+              "path": "/concepts/sql/delete",
+              "sidebar": "concepts"
+            },
+            {
+              "id": "concepts/sql/insert",
+              "path": "/concepts/sql/insert",
+              "sidebar": "concepts"
+            },
+            {
+              "id": "concepts/sql/mutating-data",
+              "path": "/concepts/sql/mutating-data",
+              "sidebar": "concepts"
+            },
+            {
+              "id": "concepts/sql/read",
+              "path": "/concepts/sql/read",
+              "sidebar": "concepts"
+            },
+            {
+              "id": "concepts/sql/README",
+              "path": "/concepts/sql/",
+              "sidebar": "concepts"
+            },
+            {
+              "id": "concepts/sql/sql-spec",
+              "path": "/concepts/sql/sql-spec",
+              "sidebar": "concepts"
+            },
+            {
+              "id": "concepts/sql/update",
+              "path": "/concepts/sql/update",
+              "sidebar": "concepts"
+            },
+            {
+              "id": "concepts/sql/upsert",
+              "path": "/concepts/sql/upsert",
+              "sidebar": "concepts"
             },
             {
               "id": "contribute/maintainers",
               "path": "/contribute/maintainers",
-              "sidebar": "contributing"
+              "sidebar": "contribute"
+            },
+            {
+              "id": "contribute/README",
+              "path": "/contribute/",
+              "sidebar": "contribute"
             },
             {
               "id": "contribute/style-guide",
               "path": "/contribute/style-guide",
-              "sidebar": "contributing"
+              "sidebar": "contribute"
+            },
+            {
+              "id": "develop/chains/arbitrum",
+              "path": "/develop/chains/arbitrum",
+              "sidebar": "develop"
+            },
+            {
+              "id": "develop/chains/ethereum",
+              "path": "/develop/chains/ethereum",
+              "sidebar": "develop"
+            },
+            {
+              "id": "develop/chains/optimism",
+              "path": "/develop/chains/optimism",
+              "sidebar": "develop"
+            },
+            {
+              "id": "develop/chains/polygon",
+              "path": "/develop/chains/polygon",
+              "sidebar": "develop"
+            },
+            {
+              "id": "develop/chains/README",
+              "path": "/develop/chains/",
+              "sidebar": "develop"
+            },
+            {
+              "id": "develop/integrations/chainlink",
+              "path": "/develop/integrations/chainlink",
+              "sidebar": "develop"
+            },
+            {
+              "id": "develop/integrations/filecoin",
+              "path": "/develop/integrations/filecoin",
+              "sidebar": "develop"
+            },
+            {
+              "id": "develop/integrations/ipfs",
+              "path": "/develop/integrations/ipfs",
+              "sidebar": "develop"
+            },
+            {
+              "id": "develop/integrations/lit-protocol",
+              "path": "/develop/integrations/lit-protocol",
+              "sidebar": "develop"
+            },
+            {
+              "id": "develop/integrations/nucypher",
+              "path": "/develop/integrations/nucypher",
+              "sidebar": "develop"
+            },
+            {
+              "id": "develop/integrations/overview",
+              "path": "/develop/integrations/overview"
+            },
+            {
+              "id": "develop/integrations/toucan",
+              "path": "/develop/integrations/toucan",
+              "sidebar": "develop"
+            },
+            {
+              "id": "develop/README",
+              "path": "/develop/",
+              "sidebar": "develop"
+            },
+            {
+              "id": "develop/reference/chains-contracts",
+              "path": "/develop/reference/chains-contracts",
+              "sidebar": "develop"
+            },
+            {
+              "id": "develop/reference/limits",
+              "path": "/develop/reference/limits",
+              "sidebar": "develop"
+            },
+            {
+              "id": "develop/reference/open-beta",
+              "path": "/develop/reference/open-beta"
+            },
+            {
+              "id": "develop/reference/README",
+              "path": "/develop/reference/",
+              "sidebar": "develop"
+            },
+            {
+              "id": "develop/reference/repos",
+              "path": "/develop/reference/repos",
+              "sidebar": "develop"
+            },
+            {
+              "id": "develop/reference/response-times",
+              "path": "/develop/reference/response-times",
+              "sidebar": "develop"
+            },
+            {
+              "id": "develop/reference/table-names",
+              "path": "/develop/reference/table-names"
+            },
+            {
+              "id": "products/rigs/README",
+              "path": "/products/rigs/",
+              "sidebar": "rigs"
+            },
+            {
+              "id": "products/rigs/rigs-discord",
+              "path": "/products/rigs/rigs-discord",
+              "sidebar": "rigs"
+            },
+            {
+              "id": "products/rigs/the-garage",
+              "path": "/products/rigs/the-garage",
+              "sidebar": "rigs"
+            },
+            {
+              "id": "products/rigs/what-are-rigs",
+              "path": "/products/rigs/what-are-rigs",
+              "sidebar": "rigs"
             },
             {
               "id": "protocol/validator-spec",
@@ -89,66 +344,86 @@
             {
               "id": "sdk/connect",
               "path": "/sdk/connect",
-              "sidebar": "build"
+              "sidebar": "develop"
             },
             {
               "id": "sdk/create",
               "path": "/sdk/create",
-              "sidebar": "build"
+              "sidebar": "develop"
             },
             {
               "id": "sdk/getting-started",
               "path": "/sdk/getting-started",
-              "sidebar": "build"
+              "sidebar": "develop"
             },
             {
               "id": "sdk/read",
               "path": "/sdk/read",
-              "sidebar": "build"
+              "sidebar": "develop"
             },
             {
               "id": "sdk/README",
               "path": "/sdk/",
-              "sidebar": "build"
+              "sidebar": "develop"
             },
             {
               "id": "sdk/write",
               "path": "/sdk/write",
-              "sidebar": "build"
+              "sidebar": "develop"
             },
             {
               "id": "smart-contracts/connect",
               "path": "/smart-contracts/connect",
-              "sidebar": "build"
+              "sidebar": "develop"
             },
             {
               "id": "smart-contracts/create",
               "path": "/smart-contracts/create",
-              "sidebar": "build"
+              "sidebar": "develop"
             },
             {
               "id": "smart-contracts/getting-started",
               "path": "/smart-contracts/getting-started",
-              "sidebar": "build"
-            },
-            {
-              "id": "smart-contracts/overview",
-              "path": "/smart-contracts/overview"
+              "sidebar": "develop"
             },
             {
               "id": "smart-contracts/read",
               "path": "/smart-contracts/read",
-              "sidebar": "build"
+              "sidebar": "develop"
+            },
+            {
+              "id": "smart-contracts/README",
+              "path": "/smart-contracts/",
+              "sidebar": "develop"
             },
             {
               "id": "smart-contracts/write",
               "path": "/smart-contracts/write",
-              "sidebar": "build"
+              "sidebar": "develop"
+            },
+            {
+              "id": "sql/access-control",
+              "path": "/sql/access-control"
+            },
+            {
+              "id": "sql/creating-tables",
+              "path": "/sql/creating-tables"
+            },
+            {
+              "id": "sql/overview",
+              "path": "/sql/overview"
+            },
+            {
+              "id": "sql/read-queries",
+              "path": "/sql/read-queries"
             },
             {
               "id": "sql/sql-spec",
-              "path": "/sql/sql-spec",
-              "sidebar": "sql"
+              "path": "/sql/sql-spec"
+            },
+            {
+              "id": "sql/write-queries",
+              "path": "/sql/write-queries"
             },
             {
               "id": "template",
@@ -173,54 +448,23 @@
               "path": "/tutorials/"
             },
             {
-              "id": "/category/blockchain-basics",
-              "path": "/category/blockchain-basics",
-              "sidebar": "about"
-            },
-            {
-              "id": "/category/cli",
-              "path": "/category/cli",
-              "sidebar": "build"
-            },
-            {
-              "id": "/category/smart-contracts",
-              "path": "/category/smart-contracts",
-              "sidebar": "build"
-            },
-            {
-              "id": "/category/sql",
-              "path": "/category/sql",
-              "sidebar": "sql"
-            },
-            {
               "id": "/category/tutorials",
               "path": "/category/tutorials",
               "sidebar": "tutorials"
-            },
-            {
-              "id": "/category/contributing",
-              "path": "/category/contributing",
-              "sidebar": "contributing"
             }
           ],
           "draftIds": [],
           "sidebars": {
-            "about": {
+            "concepts": {
               "link": {
-                "path": "/about/",
-                "label": "about/README"
+                "path": "/concepts/",
+                "label": "concepts/README"
               }
             },
-            "build": {
+            "develop": {
               "link": {
-                "path": "/build/",
-                "label": "build/README"
-              }
-            },
-            "sql": {
-              "link": {
-                "path": "/category/sql",
-                "label": "SQL"
+                "path": "/develop/",
+                "label": "develop/README"
               }
             },
             "tutorials": {
@@ -229,10 +473,16 @@
                 "label": "Tutorials"
               }
             },
-            "contributing": {
+            "contribute": {
               "link": {
-                "path": "/category/contributing",
-                "label": "Contributing"
+                "path": "/contribute/",
+                "label": "contribute/README"
+              }
+            },
+            "rigs": {
+              "link": {
+                "path": "/products/rigs/",
+                "label": "Tableland Rigs NFT"
               }
             }
           }

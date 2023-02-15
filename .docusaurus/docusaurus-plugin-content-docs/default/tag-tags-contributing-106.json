@@ -5,10 +5,10 @@
   "count": 2,
   "items": [
     {
-      "id": "contribute/guidelines",
+      "id": "contribute/README",
       "title": "How to contribute",
       "description": "Get involved and contribute to the Tableland ecosystem.",
-      "permalink": "/contribute/guidelines"
+      "permalink": "/contribute/"
     },
     {
       "id": "contribute/style-guide",

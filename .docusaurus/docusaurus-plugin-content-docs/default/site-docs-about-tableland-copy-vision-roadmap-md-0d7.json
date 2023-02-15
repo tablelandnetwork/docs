@@ -1,0 +1,27 @@
+{
+  "unversionedId": "about/tableland copy/vision-roadmap",
+  "id": "about/tableland copy/vision-roadmap",
+  "title": "Vision & roadmap",
+  "description": "Learn about the basics of SQL.",
+  "source": "@site/docs/about/tableland copy/vision-roadmap.md",
+  "sourceDirName": "about/tableland copy",
+  "slug": "/about/tableland copy/vision-roadmap",
+  "permalink": "/about/tableland copy/vision-roadmap",
+  "draft": false,
+  "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/about/tableland copy/vision-roadmap.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "title": "Vision & roadmap",
+    "description": "Learn about the basics of SQL.",
+    "synopsis": "Structured Query Language (SQL) is a language that allows developers to interact with databases for extracting and mutating values.",
+    "keywords": [
+      "SQL",
+      "SQLite",
+      "about"
+    ]
+  }
+}

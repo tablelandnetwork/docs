@@ -35,10 +35,10 @@
       "contributing"
     ]
   },
-  "sidebar": "contributing",
+  "sidebar": "contribute",
   "previous": {
-    "title": "Contributing",
-    "permalink": "/category/contributing"
+    "title": "Overview",
+    "permalink": "/contribute/"
   },
   "next": {
     "title": "Style guide",
