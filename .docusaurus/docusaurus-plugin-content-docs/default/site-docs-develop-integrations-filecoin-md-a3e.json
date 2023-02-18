@@ -22,14 +22,5 @@
       "write to table",
       "mutate table"
     ]
-  },
-  "sidebar": "develop",
-  "previous": {
-    "title": "IPFS",
-    "permalink": "/develop/integrations/ipfs"
-  },
-  "next": {
-    "title": "Chainlink",
-    "permalink": "/develop/integrations/chainlink"
   }
 }

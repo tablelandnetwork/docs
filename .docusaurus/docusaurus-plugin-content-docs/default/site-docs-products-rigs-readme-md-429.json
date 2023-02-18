@@ -2,7 +2,7 @@
   "unversionedId": "products/rigs/README",
   "id": "products/rigs/README",
   "title": "Tableland Rigs",
-  "description": "Learn about the basics of SQL.",
+  "description": "A developer-first NFT, inherently rewarding builders and community members of the Tableland network.",
   "source": "@site/docs/products/rigs/README.md",
   "sourceDirName": "products/rigs",
   "slug": "/products/rigs/",
@@ -16,17 +16,11 @@
   "formattedLastUpdatedAt": "Oct 14, 2018",
   "frontMatter": {
     "title": "Tableland Rigs",
-    "description": "Learn about the basics of SQL.",
-    "synopsis": "Structured Query Language (SQL) is a language that allows developers to interact with databases for extracting and mutating values.",
+    "description": "A developer-first NFT, inherently rewarding builders and community members of the Tableland network.",
+    "synopsis": "Rigs are a generative collection of 3k NFTs designed for those who build on Tableland. They set a foundation to help reward developers for building high value applications and to those contributing to the ecosystem as a whole.",
     "keywords": [
-      "SQL",
-      "SQLite",
-      "about"
+      "rigs",
+      "the garage"
     ]
-  },
-  "sidebar": "rigs",
-  "next": {
-    "title": "What are Rigs?",
-    "permalink": "/products/rigs/what-are-rigs"
   }
 }

@@ -2,7 +2,7 @@
   "unversionedId": "develop/reference/response-times",
   "id": "develop/reference/response-times",
   "title": "Response times",
-  "description": "Openly readable tables by your applications.",
+  "description": "Processing times for creates & writes are largely dependent on the base chain, but read responses are standard.",
   "source": "@site/docs/develop/reference/response-times.md",
   "sourceDirName": "develop/reference",
   "slug": "/develop/reference/response-times",
@@ -16,20 +16,10 @@
   "formattedLastUpdatedAt": "Oct 14, 2018",
   "frontMatter": {
     "title": "Response times",
-    "description": "Openly readable tables by your applications.",
-    "synopsis": "Reading from tables is entirely open (for anyone), allowing for true composability. Write SQL qeuries—but with some limitations that are due to the nature of decentralized networks and deterministic requirements.",
+    "description": "Processing times for creates & writes are largely dependent on the base chain, but read responses are standard.",
+    "synopsis": "Tableland is always dependent on the base chain for the speed at which transactions are finalized. For each chan, nodes listen and process emitted events. When that data is materialized in Tableland node's SQLite databases, it becomes immediately accessible and queryable with high responsiveness.",
     "keywords": [
-      "write to table",
-      "mutate table"
+      "response times"
     ]
-  },
-  "sidebar": "develop",
-  "previous": {
-    "title": "Limits",
-    "permalink": "/develop/reference/limits"
-  },
-  "next": {
-    "title": "Repos",
-    "permalink": "/develop/reference/repos"
   }
 }

@@ -109,339 +109,259 @@ export default [
   },
   {
     path: '/',
-    component: ComponentCreator('/', 'c40'),
-    exact: true
-  },
-  {
-    path: '/',
-    component: ComponentCreator('/', '3fb'),
+    component: ComponentCreator('/', '230'),
     routes: [
       {
-        path: '/about/',
-        component: ComponentCreator('/about/', 'c95'),
-        exact: true
-      },
-      {
-        path: '/about/blockchain/what-is-blockchain',
-        component: ComponentCreator('/about/blockchain/what-is-blockchain', 'fd0'),
-        exact: true
-      },
-      {
-        path: '/about/faqs/community-faqs',
-        component: ComponentCreator('/about/faqs/community-faqs', '53e'),
-        exact: true
-      },
-      {
-        path: '/about/faqs/protocol-faqs',
-        component: ComponentCreator('/about/faqs/protocol-faqs', '707'),
-        exact: true
-      },
-      {
-        path: '/about/faqs/rigs-faqs',
-        component: ComponentCreator('/about/faqs/rigs-faqs', '453'),
-        exact: true
-      },
-      {
-        path: '/about/rigs/overview',
-        component: ComponentCreator('/about/rigs/overview', 'b2d'),
-        exact: true
-      },
-      {
-        path: '/about/rigs/rigs-discord',
-        component: ComponentCreator('/about/rigs/rigs-discord', '6e9'),
-        exact: true
-      },
-      {
-        path: '/about/rigs/the-garage',
-        component: ComponentCreator('/about/rigs/the-garage', '847'),
-        exact: true
-      },
-      {
-        path: '/about/rigs/what-are-rigs',
-        component: ComponentCreator('/about/rigs/what-are-rigs', '732'),
-        exact: true
-      },
-      {
-        path: '/about/sql/what-is-sql',
-        component: ComponentCreator('/about/sql/what-is-sql', '5ec'),
-        exact: true
-      },
-      {
-        path: '/about/tableland/how-does-tableland-work',
-        component: ComponentCreator('/about/tableland/how-does-tableland-work', '775'),
-        exact: true
-      },
-      {
-        path: '/about/tableland/open-beta',
-        component: ComponentCreator('/about/tableland/open-beta', 'd2f'),
-        exact: true
-      },
-      {
-        path: '/about/tableland/overview',
-        component: ComponentCreator('/about/tableland/overview', '8a6'),
-        exact: true
-      },
-      {
-        path: '/about/tableland/vision-roadmap',
-        component: ComponentCreator('/about/tableland/vision-roadmap', '691'),
-        exact: true
-      },
-      {
-        path: '/about/tableland/what-is-tableland',
-        component: ComponentCreator('/about/tableland/what-is-tableland', 'd88'),
-        exact: true
+        path: '/',
+        component: ComponentCreator('/', '18e'),
+        exact: true,
+        sidebar: "home"
       },
       {
         path: '/api/',
-        component: ComponentCreator('/api/', 'fac'),
-        exact: true,
-        sidebar: "develop"
+        component: ComponentCreator('/api/', '289'),
+        exact: true
       },
       {
         path: '/api/endpoints',
-        component: ComponentCreator('/api/endpoints', '137'),
-        exact: true,
-        sidebar: "develop"
+        component: ComponentCreator('/api/endpoints', '9a0'),
+        exact: true
       },
       {
         path: '/api/errors',
-        component: ComponentCreator('/api/errors', '0c9'),
-        exact: true,
-        sidebar: "develop"
+        component: ComponentCreator('/api/errors', 'ec4'),
+        exact: true
       },
       {
         path: '/api/gateways',
-        component: ComponentCreator('/api/gateways', '489'),
-        exact: true,
-        sidebar: "develop"
-      },
-      {
-        path: '/category/tutorials',
-        component: ComponentCreator('/category/tutorials', '710'),
-        exact: true,
-        sidebar: "tutorials"
+        component: ComponentCreator('/api/gateways', 'c85'),
+        exact: true
       },
       {
         path: '/cli/',
-        component: ComponentCreator('/cli/', '41a'),
-        exact: true,
-        sidebar: "develop"
+        component: ComponentCreator('/cli/', '743'),
+        exact: true
       },
       {
         path: '/cli/connect',
-        component: ComponentCreator('/cli/connect', '3cc'),
-        exact: true,
-        sidebar: "develop"
+        component: ComponentCreator('/cli/connect', 'd61'),
+        exact: true
       },
       {
         path: '/cli/create',
-        component: ComponentCreator('/cli/create', '145'),
-        exact: true,
-        sidebar: "develop"
+        component: ComponentCreator('/cli/create', '523'),
+        exact: true
       },
       {
         path: '/cli/getting-started',
-        component: ComponentCreator('/cli/getting-started', '6c2'),
-        exact: true,
-        sidebar: "develop"
+        component: ComponentCreator('/cli/getting-started', 'b9b'),
+        exact: true
       },
       {
         path: '/cli/read',
-        component: ComponentCreator('/cli/read', '3a3'),
-        exact: true,
-        sidebar: "develop"
+        component: ComponentCreator('/cli/read', '46b'),
+        exact: true
       },
       {
         path: '/cli/write',
-        component: ComponentCreator('/cli/write', '5c0'),
-        exact: true,
-        sidebar: "develop"
+        component: ComponentCreator('/cli/write', '537'),
+        exact: true
       },
       {
         path: '/concepts/',
-        component: ComponentCreator('/concepts/', '725'),
-        exact: true,
-        sidebar: "concepts"
+        component: ComponentCreator('/concepts/', 'f21'),
+        exact: true
+      },
+      {
+        path: '/concepts/faqs',
+        component: ComponentCreator('/concepts/faqs', '7fb'),
+        exact: true
       },
       {
         path: '/concepts/network/considerations-tradeoffs',
-        component: ComponentCreator('/concepts/network/considerations-tradeoffs', '26b'),
-        exact: true,
-        sidebar: "concepts"
-      },
-      {
-        path: '/concepts/network/databases',
-        component: ComponentCreator('/concepts/network/databases', '236'),
-        exact: true,
-        sidebar: "concepts"
+        component: ComponentCreator('/concepts/network/considerations-tradeoffs', 'a6a'),
+        exact: true
       },
       {
         path: '/concepts/network/open-beta',
-        component: ComponentCreator('/concepts/network/open-beta', '781'),
-        exact: true,
-        sidebar: "concepts"
-      },
-      {
-        path: '/concepts/network/roadmap',
-        component: ComponentCreator('/concepts/network/roadmap', '902'),
-        exact: true,
-        sidebar: "concepts"
+        component: ComponentCreator('/concepts/network/open-beta', '763'),
+        exact: true
       },
       {
         path: '/concepts/network/tableland-state',
-        component: ComponentCreator('/concepts/network/tableland-state', 'f8c'),
-        exact: true,
-        sidebar: "concepts"
+        component: ComponentCreator('/concepts/network/tableland-state', '020'),
+        exact: true
+      },
+      {
+        path: '/concepts/network/use-cases',
+        component: ComponentCreator('/concepts/network/use-cases', '9fa'),
+        exact: true
       },
       {
         path: '/concepts/network/what-is-tableland',
-        component: ComponentCreator('/concepts/network/what-is-tableland', '6f2'),
-        exact: true,
-        sidebar: "concepts"
+        component: ComponentCreator('/concepts/network/what-is-tableland', '3ea'),
+        exact: true
+      },
+      {
+        path: '/concepts/related/',
+        component: ComponentCreator('/concepts/related/', '5f0'),
+        exact: true
+      },
+      {
+        path: '/concepts/related/databases',
+        component: ComponentCreator('/concepts/related/databases', '79f'),
+        exact: true
+      },
+      {
+        path: '/concepts/related/roadmap',
+        component: ComponentCreator('/concepts/related/roadmap', 'b8c'),
+        exact: true
+      },
+      {
+        path: '/concepts/related/uri-encoding',
+        component: ComponentCreator('/concepts/related/uri-encoding', '877'),
+        exact: true
       },
       {
         path: '/concepts/sql/',
-        component: ComponentCreator('/concepts/sql/', 'ca2'),
+        component: ComponentCreator('/concepts/sql/', '084'),
         exact: true,
-        sidebar: "concepts"
+        sidebar: "sql"
       },
       {
         path: '/concepts/sql/access-control',
-        component: ComponentCreator('/concepts/sql/access-control', '69f'),
+        component: ComponentCreator('/concepts/sql/access-control', '6b8'),
         exact: true,
-        sidebar: "concepts"
+        sidebar: "sql"
       },
       {
         path: '/concepts/sql/create-a-table',
-        component: ComponentCreator('/concepts/sql/create-a-table', 'b2e'),
+        component: ComponentCreator('/concepts/sql/create-a-table', 'a30'),
         exact: true,
-        sidebar: "concepts"
+        sidebar: "sql"
       },
       {
         path: '/concepts/sql/delete',
-        component: ComponentCreator('/concepts/sql/delete', 'a1b'),
+        component: ComponentCreator('/concepts/sql/delete', 'b5a'),
         exact: true,
-        sidebar: "concepts"
+        sidebar: "sql"
+      },
+      {
+        path: '/concepts/sql/incrementing-values',
+        component: ComponentCreator('/concepts/sql/incrementing-values', '300'),
+        exact: true,
+        sidebar: "sql"
       },
       {
         path: '/concepts/sql/insert',
-        component: ComponentCreator('/concepts/sql/insert', '6ea'),
+        component: ComponentCreator('/concepts/sql/insert', '87f'),
         exact: true,
-        sidebar: "concepts"
+        sidebar: "sql"
       },
       {
         path: '/concepts/sql/mutating-data',
-        component: ComponentCreator('/concepts/sql/mutating-data', 'ebe'),
+        component: ComponentCreator('/concepts/sql/mutating-data', '4ea'),
         exact: true,
-        sidebar: "concepts"
+        sidebar: "sql"
       },
       {
         path: '/concepts/sql/read',
-        component: ComponentCreator('/concepts/sql/read', 'fa5'),
+        component: ComponentCreator('/concepts/sql/read', '32a'),
         exact: true,
-        sidebar: "concepts"
+        sidebar: "sql"
       },
       {
         path: '/concepts/sql/sql-spec',
-        component: ComponentCreator('/concepts/sql/sql-spec', '94f'),
+        component: ComponentCreator('/concepts/sql/sql-spec', '99a'),
         exact: true,
-        sidebar: "concepts"
+        sidebar: "sql"
       },
       {
         path: '/concepts/sql/update',
-        component: ComponentCreator('/concepts/sql/update', '768'),
+        component: ComponentCreator('/concepts/sql/update', '81d'),
         exact: true,
-        sidebar: "concepts"
+        sidebar: "sql"
       },
       {
         path: '/concepts/sql/upsert',
-        component: ComponentCreator('/concepts/sql/upsert', 'b95'),
+        component: ComponentCreator('/concepts/sql/upsert', '05d'),
         exact: true,
-        sidebar: "concepts"
+        sidebar: "sql"
       },
       {
         path: '/contribute/',
-        component: ComponentCreator('/contribute/', '126'),
-        exact: true,
-        sidebar: "contribute"
+        component: ComponentCreator('/contribute/', '5d4'),
+        exact: true
       },
       {
         path: '/contribute/maintainers',
-        component: ComponentCreator('/contribute/maintainers', 'b9e'),
-        exact: true,
-        sidebar: "contribute"
+        component: ComponentCreator('/contribute/maintainers', '595'),
+        exact: true
       },
       {
         path: '/contribute/style-guide',
-        component: ComponentCreator('/contribute/style-guide', '2fc'),
-        exact: true,
-        sidebar: "contribute"
+        component: ComponentCreator('/contribute/style-guide', 'dbc'),
+        exact: true
       },
       {
         path: '/develop/',
-        component: ComponentCreator('/develop/', 'b14'),
-        exact: true,
-        sidebar: "develop"
+        component: ComponentCreator('/develop/', 'f18'),
+        exact: true
       },
       {
         path: '/develop/chains/',
-        component: ComponentCreator('/develop/chains/', 'b58'),
-        exact: true,
-        sidebar: "develop"
+        component: ComponentCreator('/develop/chains/', '4f2'),
+        exact: true
       },
       {
         path: '/develop/chains/arbitrum',
-        component: ComponentCreator('/develop/chains/arbitrum', '9b2'),
-        exact: true,
-        sidebar: "develop"
+        component: ComponentCreator('/develop/chains/arbitrum', '206'),
+        exact: true
       },
       {
         path: '/develop/chains/ethereum',
-        component: ComponentCreator('/develop/chains/ethereum', '13a'),
-        exact: true,
-        sidebar: "develop"
+        component: ComponentCreator('/develop/chains/ethereum', '4bf'),
+        exact: true
+      },
+      {
+        path: '/develop/chains/local',
+        component: ComponentCreator('/develop/chains/local', '29f'),
+        exact: true
       },
       {
         path: '/develop/chains/optimism',
-        component: ComponentCreator('/develop/chains/optimism', 'd2e'),
-        exact: true,
-        sidebar: "develop"
+        component: ComponentCreator('/develop/chains/optimism', '196'),
+        exact: true
       },
       {
         path: '/develop/chains/polygon',
-        component: ComponentCreator('/develop/chains/polygon', '65e'),
-        exact: true,
-        sidebar: "develop"
+        component: ComponentCreator('/develop/chains/polygon', '6a5'),
+        exact: true
       },
       {
         path: '/develop/integrations/chainlink',
-        component: ComponentCreator('/develop/integrations/chainlink', '82f'),
-        exact: true,
-        sidebar: "develop"
+        component: ComponentCreator('/develop/integrations/chainlink', 'f1b'),
+        exact: true
       },
       {
         path: '/develop/integrations/filecoin',
-        component: ComponentCreator('/develop/integrations/filecoin', 'cd6'),
-        exact: true,
-        sidebar: "develop"
+        component: ComponentCreator('/develop/integrations/filecoin', 'ce4'),
+        exact: true
       },
       {
         path: '/develop/integrations/ipfs',
-        component: ComponentCreator('/develop/integrations/ipfs', '69f'),
-        exact: true,
-        sidebar: "develop"
+        component: ComponentCreator('/develop/integrations/ipfs', '4a7'),
+        exact: true
       },
       {
         path: '/develop/integrations/lit-protocol',
-        component: ComponentCreator('/develop/integrations/lit-protocol', 'da8'),
-        exact: true,
-        sidebar: "develop"
+        component: ComponentCreator('/develop/integrations/lit-protocol', '83e'),
+        exact: true
       },
       {
         path: '/develop/integrations/nucypher',
-        component: ComponentCreator('/develop/integrations/nucypher', '540'),
-        exact: true,
-        sidebar: "develop"
+        component: ComponentCreator('/develop/integrations/nucypher', 'dd4'),
+        exact: true
       },
       {
         path: '/develop/integrations/overview',
@@ -450,44 +370,33 @@ export default [
       },
       {
         path: '/develop/integrations/toucan',
-        component: ComponentCreator('/develop/integrations/toucan', 'c3b'),
-        exact: true,
-        sidebar: "develop"
+        component: ComponentCreator('/develop/integrations/toucan', '405'),
+        exact: true
       },
       {
         path: '/develop/reference/',
-        component: ComponentCreator('/develop/reference/', 'b57'),
-        exact: true,
-        sidebar: "develop"
+        component: ComponentCreator('/develop/reference/', '786'),
+        exact: true
       },
       {
-        path: '/develop/reference/chains-contracts',
-        component: ComponentCreator('/develop/reference/chains-contracts', '978'),
-        exact: true,
-        sidebar: "develop"
+        path: '/develop/reference/contracts',
+        component: ComponentCreator('/develop/reference/contracts', '5e2'),
+        exact: true
       },
       {
         path: '/develop/reference/limits',
-        component: ComponentCreator('/develop/reference/limits', '4d7'),
-        exact: true,
-        sidebar: "develop"
-      },
-      {
-        path: '/develop/reference/open-beta',
-        component: ComponentCreator('/develop/reference/open-beta', '82e'),
+        component: ComponentCreator('/develop/reference/limits', '6f7'),
         exact: true
       },
       {
         path: '/develop/reference/repos',
-        component: ComponentCreator('/develop/reference/repos', '9fb'),
-        exact: true,
-        sidebar: "develop"
+        component: ComponentCreator('/develop/reference/repos', '2ed'),
+        exact: true
       },
       {
         path: '/develop/reference/response-times',
-        component: ComponentCreator('/develop/reference/response-times', '183'),
-        exact: true,
-        sidebar: "develop"
+        component: ComponentCreator('/develop/reference/response-times', '1d5'),
+        exact: true
       },
       {
         path: '/develop/reference/table-names',
@@ -495,28 +404,34 @@ export default [
         exact: true
       },
       {
+        path: '/develop/tools/',
+        component: ComponentCreator('/develop/tools/', '83b'),
+        exact: true
+      },
+      {
+        path: '/develop/tools/local-tableland',
+        component: ComponentCreator('/develop/tools/local-tableland', '88b'),
+        exact: true
+      },
+      {
         path: '/products/rigs/',
-        component: ComponentCreator('/products/rigs/', '518'),
-        exact: true,
-        sidebar: "rigs"
+        component: ComponentCreator('/products/rigs/', '1a3'),
+        exact: true
       },
       {
         path: '/products/rigs/rigs-discord',
-        component: ComponentCreator('/products/rigs/rigs-discord', '08a'),
-        exact: true,
-        sidebar: "rigs"
+        component: ComponentCreator('/products/rigs/rigs-discord', '537'),
+        exact: true
       },
       {
         path: '/products/rigs/the-garage',
-        component: ComponentCreator('/products/rigs/the-garage', 'b27'),
-        exact: true,
-        sidebar: "rigs"
+        component: ComponentCreator('/products/rigs/the-garage', 'a10'),
+        exact: true
       },
       {
         path: '/products/rigs/what-are-rigs',
-        component: ComponentCreator('/products/rigs/what-are-rigs', 'e4b'),
-        exact: true,
-        sidebar: "rigs"
+        component: ComponentCreator('/products/rigs/what-are-rigs', '6d8'),
+        exact: true
       },
       {
         path: '/protocol/validator-spec',
@@ -525,75 +440,63 @@ export default [
       },
       {
         path: '/sdk/',
-        component: ComponentCreator('/sdk/', '54d'),
-        exact: true,
-        sidebar: "develop"
+        component: ComponentCreator('/sdk/', '783'),
+        exact: true
       },
       {
         path: '/sdk/connect',
-        component: ComponentCreator('/sdk/connect', '59e'),
-        exact: true,
-        sidebar: "develop"
+        component: ComponentCreator('/sdk/connect', '2d1'),
+        exact: true
       },
       {
         path: '/sdk/create',
-        component: ComponentCreator('/sdk/create', '8b4'),
-        exact: true,
-        sidebar: "develop"
+        component: ComponentCreator('/sdk/create', '783'),
+        exact: true
       },
       {
         path: '/sdk/getting-started',
-        component: ComponentCreator('/sdk/getting-started', 'a82'),
-        exact: true,
-        sidebar: "develop"
+        component: ComponentCreator('/sdk/getting-started', '4e5'),
+        exact: true
       },
       {
         path: '/sdk/read',
-        component: ComponentCreator('/sdk/read', 'fc0'),
-        exact: true,
-        sidebar: "develop"
+        component: ComponentCreator('/sdk/read', 'd06'),
+        exact: true
       },
       {
         path: '/sdk/write',
-        component: ComponentCreator('/sdk/write', '731'),
-        exact: true,
-        sidebar: "develop"
+        component: ComponentCreator('/sdk/write', '946'),
+        exact: true
       },
       {
         path: '/smart-contracts/',
-        component: ComponentCreator('/smart-contracts/', 'a04'),
-        exact: true,
-        sidebar: "develop"
+        component: ComponentCreator('/smart-contracts/', 'b28'),
+        exact: true
       },
       {
         path: '/smart-contracts/connect',
-        component: ComponentCreator('/smart-contracts/connect', '3dd'),
-        exact: true,
-        sidebar: "develop"
+        component: ComponentCreator('/smart-contracts/connect', '7ae'),
+        exact: true
       },
       {
         path: '/smart-contracts/create',
-        component: ComponentCreator('/smart-contracts/create', 'a7b'),
-        exact: true,
-        sidebar: "develop"
+        component: ComponentCreator('/smart-contracts/create', '06f'),
+        exact: true
       },
       {
         path: '/smart-contracts/getting-started',
-        component: ComponentCreator('/smart-contracts/getting-started', 'c96'),
-        exact: true,
-        sidebar: "develop"
+        component: ComponentCreator('/smart-contracts/getting-started', '90c'),
+        exact: true
       },
       {
         path: '/smart-contracts/read',
-        component: ComponentCreator('/smart-contracts/read', '568'),
-        exact: true,
-        sidebar: "develop"
+        component: ComponentCreator('/smart-contracts/read', 'b30'),
+        exact: true
       },
       {
         path: '/smart-contracts/write',
-        component: ComponentCreator('/smart-contracts/write', 'b6c'),
-        exact: true,
-        sidebar: "develop"
+        component: ComponentCreator('/smart-contracts/write', '186'),
+        exact: true
       },
       {
         path: '/sql/access-control',
@@ -626,26 +529,24 @@ export default [
         exact: true
       },
       {
-        path: '/template',
-        component: ComponentCreator('/template', '731'),
-        exact: true
-      },
-      {
         path: '/tutorials/',
         component: ComponentCreator('/tutorials/', 'eec'),
         exact: true
       },
       {
+        path: '/tutorials/dynamic-nft-chainlink',
+        component: ComponentCreator('/tutorials/dynamic-nft-chainlink', 'f0f'),
+        exact: true
+      },
+      {
         path: '/tutorials/dynamic-nft-p5js',
-        component: ComponentCreator('/tutorials/dynamic-nft-p5js', '054'),
-        exact: true,
-        sidebar: "tutorials"
+        component: ComponentCreator('/tutorials/dynamic-nft-p5js', 'afd'),
+        exact: true
       },
       {
         path: '/tutorials/dynamic-nft-solidity',
-        component: ComponentCreator('/tutorials/dynamic-nft-solidity', '466'),
-        exact: true,
-        sidebar: "tutorials"
+        component: ComponentCreator('/tutorials/dynamic-nft-solidity', '48b'),
+        exact: true
       },
       {
         path: '/tutorials/overview',

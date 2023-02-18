@@ -4,7 +4,7 @@
   "permalink": "/category/tutorials",
   "navigation": {
     "next": {
-      "title": "Creating a dynamic NFT with p5.js",
+      "title": "Build a dynamic NFT in Solidity",
       "permalink": "/tutorials/dynamic-nft-solidity"
     }
   }

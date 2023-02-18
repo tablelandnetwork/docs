@@ -2,7 +2,7 @@
   "unversionedId": "develop/reference/limits",
   "id": "develop/reference/limits",
   "title": "Limits",
-  "description": "Openly readable tables by your applications.",
+  "description": "A listing of the table/data limits and smart contract deployment locations on supported chains.",
   "source": "@site/docs/develop/reference/limits.md",
   "sourceDirName": "develop/reference",
   "slug": "/develop/reference/limits",
@@ -16,20 +16,13 @@
   "formattedLastUpdatedAt": "Oct 14, 2018",
   "frontMatter": {
     "title": "Limits",
-    "description": "Openly readable tables by your applications.",
-    "synopsis": "Reading from tables is entirely open (for anyone), allowing for true composability. Write SQL qeuries—but with some limitations that are due to the nature of decentralized networks and deterministic requirements.",
+    "description": "A listing of the table/data limits and smart contract deployment locations on supported chains.",
+    "synopsis": "Since Tableland is still in open beta, each table is limited to the following constraints while the full production network is further clarified. These are temporary limits while the production mainnet is further researched.",
     "keywords": [
-      "write to table",
-      "mutate table"
+      "limits",
+      "cell limit",
+      "row limit",
+      "column limit"
     ]
-  },
-  "sidebar": "develop",
-  "previous": {
-    "title": "Chains & contracts",
-    "permalink": "/develop/reference/chains-contracts"
-  },
-  "next": {
-    "title": "Response times",
-    "permalink": "/develop/reference/response-times"
   }
 }

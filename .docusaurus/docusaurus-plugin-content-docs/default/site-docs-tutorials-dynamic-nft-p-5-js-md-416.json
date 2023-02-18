@@ -1,8 +1,8 @@
 {
   "unversionedId": "tutorials/dynamic-nft-p5js",
   "id": "tutorials/dynamic-nft-p5js",
-  "title": "Build a Dynamic NFT in Solidity",
-  "description": "Openly readable tables by your applications.",
+  "title": "Creating a dynamic NFT with p5.js",
+  "description": "Use p5.js to render data from an NFT that holds global game state in a table.",
   "source": "@site/docs/tutorials/dynamic-nft-p5js.md",
   "sourceDirName": "tutorials",
   "slug": "/tutorials/dynamic-nft-p5js",
@@ -15,18 +15,13 @@
   "lastUpdatedAt": 1539502055,
   "formattedLastUpdatedAt": "Oct 14, 2018",
   "frontMatter": {
-    "title": "Build a Dynamic NFT in Solidity",
-    "description": "Openly readable tables by your applications.",
-    "synopsis": "Reading from tables is entirely open (for anyone), allowing for true composability. Write SQL qeuries—but with some limitations that are due to the nature of decentralized networks and deterministic requirements.",
+    "title": "Creating a dynamic NFT with p5.js",
+    "description": "Use p5.js to render data from an NFT that holds global game state in a table.",
+    "synopsis": "We want to now write a simple web app that will be used to dynamically render a single NFT in our collection. When the NFT renders, the web app should check the requested token, grab the latest data from Tableland, and render some dynamic content.",
     "keywords": [
       "tutorial",
       "solidity",
       "dynamic NFT"
     ]
-  },
-  "sidebar": "tutorials",
-  "previous": {
-    "title": "Creating a dynamic NFT with p5.js",
-    "permalink": "/tutorials/dynamic-nft-solidity"
   }
 }

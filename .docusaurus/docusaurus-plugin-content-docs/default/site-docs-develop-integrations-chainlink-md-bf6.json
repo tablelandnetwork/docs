@@ -22,14 +22,5 @@
       "write to table",
       "mutate table"
     ]
-  },
-  "sidebar": "develop",
-  "previous": {
-    "title": "Filecoin",
-    "permalink": "/develop/integrations/filecoin"
-  },
-  "next": {
-    "title": "Lit Protocol",
-    "permalink": "/develop/integrations/lit-protocol"
   }
 }

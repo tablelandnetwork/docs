@@ -22,14 +22,5 @@
       "write to table",
       "mutate table"
     ]
-  },
-  "sidebar": "develop",
-  "previous": {
-    "title": "Writing to tables",
-    "permalink": "/smart-contracts/write"
-  },
-  "next": {
-    "title": "Choosing a chain",
-    "permalink": "/develop/chains/"
   }
 }

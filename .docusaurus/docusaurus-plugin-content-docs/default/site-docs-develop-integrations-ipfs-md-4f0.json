@@ -22,14 +22,5 @@
       "write to table",
       "mutate table"
     ]
-  },
-  "sidebar": "develop",
-  "previous": {
-    "title": "Polygon",
-    "permalink": "/develop/chains/polygon"
-  },
-  "next": {
-    "title": "Filecoin",
-    "permalink": "/develop/integrations/filecoin"
   }
 }

@@ -20,401 +20,9 @@
           "contentPathLocalized": "/Users/dtb/tbl/docs/i18n/en/docusaurus-plugin-content-docs/current",
           "docs": [
             {
-              "unversionedId": "about/blockchain/what-is-blockchain",
-              "id": "about/blockchain/what-is-blockchain",
-              "title": "What is blockchain",
-              "description": "Learn about the basics of blockchains.",
-              "source": "@site/docs/about/blockchain/what-is-blockchain.md",
-              "sourceDirName": "about/blockchain",
-              "slug": "/about/blockchain/what-is-blockchain",
-              "permalink": "/about/blockchain/what-is-blockchain",
-              "draft": false,
-              "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/about/blockchain/what-is-blockchain.md",
-              "tags": [],
-              "version": "current",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
-              "formattedLastUpdatedAt": "Oct 14, 2018",
-              "frontMatter": {
-                "title": "What is blockchain",
-                "description": "Learn about the basics of blockchains.",
-                "synopsis": "Blockchains offer distributed computing with incentives, thus, decentralizing computing into a global network.",
-                "keywords": [
-                  "blockchains",
-                  "about"
-                ]
-              }
-            },
-            {
-              "unversionedId": "about/faqs/community-faqs",
-              "id": "about/faqs/community-faqs",
-              "title": "Community FAQs",
-              "description": "Openly readable tables by your applications.",
-              "source": "@site/docs/about/faqs/community-faqs.md",
-              "sourceDirName": "about/faqs",
-              "slug": "/about/faqs/community-faqs",
-              "permalink": "/about/faqs/community-faqs",
-              "draft": false,
-              "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/about/faqs/community-faqs.md",
-              "tags": [],
-              "version": "current",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
-              "formattedLastUpdatedAt": "Oct 14, 2018",
-              "frontMatter": {
-                "title": "Community FAQs",
-                "description": "Openly readable tables by your applications.",
-                "synopsis": "Reading from tables is entirely open (for anyone), allowing for true composability. Write SQL qeuries—but with some limitations that are due to the nature of decentralized networks and deterministic requirements.",
-                "keywords": [
-                  "write to table",
-                  "mutate table"
-                ]
-              }
-            },
-            {
-              "unversionedId": "about/faqs/protocol-faqs",
-              "id": "about/faqs/protocol-faqs",
-              "title": "Protocol FAQs",
-              "description": "Openly readable tables by your applications.",
-              "source": "@site/docs/about/faqs/protocol-faqs.md",
-              "sourceDirName": "about/faqs",
-              "slug": "/about/faqs/protocol-faqs",
-              "permalink": "/about/faqs/protocol-faqs",
-              "draft": false,
-              "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/about/faqs/protocol-faqs.md",
-              "tags": [],
-              "version": "current",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
-              "formattedLastUpdatedAt": "Oct 14, 2018",
-              "frontMatter": {
-                "title": "Protocol FAQs",
-                "description": "Openly readable tables by your applications.",
-                "synopsis": "Reading from tables is entirely open (for anyone), allowing for true composability. Write SQL qeuries—but with some limitations that are due to the nature of decentralized networks and deterministic requirements.",
-                "keywords": [
-                  "write to table",
-                  "mutate table"
-                ]
-              }
-            },
-            {
-              "unversionedId": "about/faqs/rigs-faqs",
-              "id": "about/faqs/rigs-faqs",
-              "title": "Rigs NFT FAQs",
-              "description": "Learn about the basics of SQL.",
-              "source": "@site/docs/about/faqs/rigs-faqs.md",
-              "sourceDirName": "about/faqs",
-              "slug": "/about/faqs/rigs-faqs",
-              "permalink": "/about/faqs/rigs-faqs",
-              "draft": false,
-              "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/about/faqs/rigs-faqs.md",
-              "tags": [],
-              "version": "current",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
-              "formattedLastUpdatedAt": "Oct 14, 2018",
-              "frontMatter": {
-                "title": "Rigs NFT FAQs",
-                "description": "Learn about the basics of SQL.",
-                "synopsis": "Structured Query Language (SQL) is a language that allows developers to interact with databases for extracting and mutating values.",
-                "keywords": [
-                  "SQL",
-                  "SQLite",
-                  "about"
-                ]
-              }
-            },
-            {
-              "unversionedId": "about/README",
-              "id": "about/README",
-              "title": "Overview",
-              "description": "Learn the ins and outs of contributing to the Tableland docs site.",
-              "source": "@site/docs/about/README.md",
-              "sourceDirName": "about",
-              "slug": "/about/",
-              "permalink": "/about/",
-              "draft": false,
-              "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/about/README.md",
-              "tags": [],
-              "version": "current",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
-              "formattedLastUpdatedAt": "Oct 14, 2018",
-              "frontMatter": {
-                "title": "Overview",
-                "description": "Learn the ins and outs of contributing to the Tableland docs site.",
-                "synopsis": "The docs site is built using Docusaurus, a static site generator developed by Meta that is specifically designed for documentation. It offers a number of features, including MDX support (embed JSX in markdown) and various content-friendly plugins. Please ensure you follow the guidelines on writing style as well."
-              }
-            },
-            {
-              "unversionedId": "about/rigs/overview",
-              "id": "about/rigs/overview",
-              "title": "Tableland Rigs",
-              "description": "Learn about the basics of SQL.",
-              "source": "@site/docs/about/rigs/overview.md",
-              "sourceDirName": "about/rigs",
-              "slug": "/about/rigs/overview",
-              "permalink": "/about/rigs/overview",
-              "draft": false,
-              "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/about/rigs/overview.md",
-              "tags": [],
-              "version": "current",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
-              "formattedLastUpdatedAt": "Oct 14, 2018",
-              "frontMatter": {
-                "title": "Tableland Rigs",
-                "description": "Learn about the basics of SQL.",
-                "synopsis": "Structured Query Language (SQL) is a language that allows developers to interact with databases for extracting and mutating values.",
-                "keywords": [
-                  "SQL",
-                  "SQLite",
-                  "about"
-                ]
-              }
-            },
-            {
-              "unversionedId": "about/rigs/rigs-discord",
-              "id": "about/rigs/rigs-discord",
-              "title": "Rigs in Discord",
-              "description": "Learn about the basics of SQL.",
-              "source": "@site/docs/about/rigs/rigs-discord.md",
-              "sourceDirName": "about/rigs",
-              "slug": "/about/rigs/rigs-discord",
-              "permalink": "/about/rigs/rigs-discord",
-              "draft": false,
-              "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/about/rigs/rigs-discord.md",
-              "tags": [],
-              "version": "current",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
-              "formattedLastUpdatedAt": "Oct 14, 2018",
-              "frontMatter": {
-                "title": "Rigs in Discord",
-                "description": "Learn about the basics of SQL.",
-                "synopsis": "Structured Query Language (SQL) is a language that allows developers to interact with databases for extracting and mutating values.",
-                "keywords": [
-                  "SQL",
-                  "SQLite",
-                  "about"
-                ]
-              }
-            },
-            {
-              "unversionedId": "about/rigs/the-garage",
-              "id": "about/rigs/the-garage",
-              "title": "The Garage",
-              "description": "Learn about the basics of SQL.",
-              "source": "@site/docs/about/rigs/the-garage.md",
-              "sourceDirName": "about/rigs",
-              "slug": "/about/rigs/the-garage",
-              "permalink": "/about/rigs/the-garage",
-              "draft": false,
-              "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/about/rigs/the-garage.md",
-              "tags": [],
-              "version": "current",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
-              "formattedLastUpdatedAt": "Oct 14, 2018",
-              "frontMatter": {
-                "title": "The Garage",
-                "description": "Learn about the basics of SQL.",
-                "synopsis": "Structured Query Language (SQL) is a language that allows developers to interact with databases for extracting and mutating values.",
-                "keywords": [
-                  "SQL",
-                  "SQLite",
-                  "about"
-                ]
-              }
-            },
-            {
-              "unversionedId": "about/rigs/what-are-rigs",
-              "id": "about/rigs/what-are-rigs",
-              "title": "What are Rigs?",
-              "description": "Learn about the basics of SQL.",
-              "source": "@site/docs/about/rigs/what-are-rigs.md",
-              "sourceDirName": "about/rigs",
-              "slug": "/about/rigs/what-are-rigs",
-              "permalink": "/about/rigs/what-are-rigs",
-              "draft": false,
-              "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/about/rigs/what-are-rigs.md",
-              "tags": [],
-              "version": "current",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
-              "formattedLastUpdatedAt": "Oct 14, 2018",
-              "frontMatter": {
-                "title": "What are Rigs?",
-                "description": "Learn about the basics of SQL.",
-                "synopsis": "Structured Query Language (SQL) is a language that allows developers to interact with databases for extracting and mutating values.",
-                "keywords": [
-                  "SQL",
-                  "SQLite",
-                  "about"
-                ]
-              }
-            },
-            {
-              "unversionedId": "about/sql/what-is-sql",
-              "id": "about/sql/what-is-sql",
-              "title": "What is SQL",
-              "description": "Learn about the basics of SQL.",
-              "source": "@site/docs/about/sql/what-is-sql.md",
-              "sourceDirName": "about/sql",
-              "slug": "/about/sql/what-is-sql",
-              "permalink": "/about/sql/what-is-sql",
-              "draft": false,
-              "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/about/sql/what-is-sql.md",
-              "tags": [],
-              "version": "current",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
-              "formattedLastUpdatedAt": "Oct 14, 2018",
-              "frontMatter": {
-                "title": "What is SQL",
-                "description": "Learn about the basics of SQL.",
-                "synopsis": "Structured Query Language (SQL) is a language that allows developers to interact with databases for extracting and mutating values.",
-                "keywords": [
-                  "SQL",
-                  "SQLite",
-                  "about"
-                ]
-              }
-            },
-            {
-              "unversionedId": "about/tableland/how-does-tableland-work",
-              "id": "about/tableland/how-does-tableland-work",
-              "title": "How does it work?",
-              "description": "Learn about the basics of the Tableland network.",
-              "source": "@site/docs/about/tableland/how-does-tableland-work.md",
-              "sourceDirName": "about/tableland",
-              "slug": "/about/tableland/how-does-tableland-work",
-              "permalink": "/about/tableland/how-does-tableland-work",
-              "draft": false,
-              "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/about/tableland/how-does-tableland-work.md",
-              "tags": [],
-              "version": "current",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
-              "formattedLastUpdatedAt": "Oct 14, 2018",
-              "frontMatter": {
-                "title": "How does it work?",
-                "description": "Learn about the basics of the Tableland network.",
-                "synopsis": "Tableland is a web3 native SQL database.",
-                "keywords": [
-                  "Tableland",
-                  "about"
-                ]
-              }
-            },
-            {
-              "unversionedId": "about/tableland/open-beta",
-              "id": "about/tableland/open-beta",
-              "title": "Open beta",
-              "description": "Learn about the basics of the Tableland network.",
-              "source": "@site/docs/about/tableland/open-beta.md",
-              "sourceDirName": "about/tableland",
-              "slug": "/about/tableland/open-beta",
-              "permalink": "/about/tableland/open-beta",
-              "draft": false,
-              "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/about/tableland/open-beta.md",
-              "tags": [],
-              "version": "current",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
-              "formattedLastUpdatedAt": "Oct 14, 2018",
-              "frontMatter": {
-                "title": "Open beta",
-                "description": "Learn about the basics of the Tableland network.",
-                "synopsis": "Tableland is a web3 native SQL database.",
-                "keywords": [
-                  "Tableland",
-                  "about"
-                ]
-              }
-            },
-            {
-              "unversionedId": "about/tableland/overview",
-              "id": "about/tableland/overview",
-              "title": "Tableland protocol",
-              "description": "Learn about what Tableland is.",
-              "source": "@site/docs/about/tableland/overview.md",
-              "sourceDirName": "about/tableland",
-              "slug": "/about/tableland/overview",
-              "permalink": "/about/tableland/overview",
-              "draft": false,
-              "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/about/tableland/overview.md",
-              "tags": [],
-              "version": "current",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
-              "formattedLastUpdatedAt": "Oct 14, 2018",
-              "frontMatter": {
-                "title": "Tableland protocol",
-                "description": "Learn about what Tableland is.",
-                "synopsis": "Structured Query Language (SQL) is a language that allows developers to interact with databases for extracting and mutating values.",
-                "keywords": [
-                  "protocol"
-                ]
-              }
-            },
-            {
-              "unversionedId": "about/tableland/vision-roadmap",
-              "id": "about/tableland/vision-roadmap",
-              "title": "Vision & roadmap",
-              "description": "Learn about the basics of SQL.",
-              "source": "@site/docs/about/tableland/vision-roadmap.md",
-              "sourceDirName": "about/tableland",
-              "slug": "/about/tableland/vision-roadmap",
-              "permalink": "/about/tableland/vision-roadmap",
-              "draft": false,
-              "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/about/tableland/vision-roadmap.md",
-              "tags": [],
-              "version": "current",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
-              "formattedLastUpdatedAt": "Oct 14, 2018",
-              "frontMatter": {
-                "title": "Vision & roadmap",
-                "description": "Learn about the basics of SQL.",
-                "synopsis": "Structured Query Language (SQL) is a language that allows developers to interact with databases for extracting and mutating values.",
-                "keywords": [
-                  "SQL",
-                  "SQLite",
-                  "about"
-                ]
-              }
-            },
-            {
-              "unversionedId": "about/tableland/what-is-tableland",
-              "id": "about/tableland/what-is-tableland",
-              "title": "What is Tableland?",
-              "description": "Learn about the basics of the Tableland network.",
-              "source": "@site/docs/about/tableland/what-is-tableland.md",
-              "sourceDirName": "about/tableland",
-              "slug": "/about/tableland/what-is-tableland",
-              "permalink": "/about/tableland/what-is-tableland",
-              "draft": false,
-              "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/about/tableland/what-is-tableland.md",
-              "tags": [],
-              "version": "current",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
-              "formattedLastUpdatedAt": "Oct 14, 2018",
-              "frontMatter": {
-                "title": "What is Tableland?",
-                "description": "Learn about the basics of the Tableland network.",
-                "synopsis": "Tableland is a web3 native SQL database.",
-                "keywords": [
-                  "Tableland",
-                  "about"
-                ]
-              }
-            },
-            {
               "unversionedId": "api/endpoints",
               "id": "api/endpoints",
-              "title": "Overview",
+              "title": "Endpoints",
               "description": "Openly readable tables by your applications.",
               "source": "@site/docs/api/endpoints.md",
               "sourceDirName": "api",
@@ -428,28 +36,19 @@
               "lastUpdatedAt": 1539502055,
               "formattedLastUpdatedAt": "Oct 14, 2018",
               "frontMatter": {
-                "title": "Overview",
+                "title": "Endpoints",
                 "description": "Openly readable tables by your applications.",
                 "synopsis": "Reading from tables is entirely open (for anyone), allowing for true composability. Write SQL qeuries—but with some limitations that are due to the nature of decentralized networks and deterministic requirements.",
                 "keywords": [
                   "write to table",
                   "mutate table"
                 ]
-              },
-              "sidebar": "develop",
-              "previous": {
-                "title": "Overview",
-                "permalink": "/api/gateways"
-              },
-              "next": {
-                "title": "Overview",
-                "permalink": "/api/errors"
               }
             },
             {
               "unversionedId": "api/errors",
               "id": "api/errors",
-              "title": "Overview",
+              "title": "Errors",
               "description": "Openly readable tables by your applications.",
               "source": "@site/docs/api/errors.md",
               "sourceDirName": "api",
@@ -463,28 +62,19 @@
               "lastUpdatedAt": 1539502055,
               "formattedLastUpdatedAt": "Oct 14, 2018",
               "frontMatter": {
-                "title": "Overview",
+                "title": "Errors",
                 "description": "Openly readable tables by your applications.",
                 "synopsis": "Reading from tables is entirely open (for anyone), allowing for true composability. Write SQL qeuries—but with some limitations that are due to the nature of decentralized networks and deterministic requirements.",
                 "keywords": [
                   "write to table",
                   "mutate table"
                 ]
-              },
-              "sidebar": "develop",
-              "previous": {
-                "title": "Overview",
-                "permalink": "/api/endpoints"
-              },
-              "next": {
-                "title": "Overview",
-                "permalink": "/smart-contracts/"
               }
             },
             {
               "unversionedId": "api/gateways",
               "id": "api/gateways",
-              "title": "Overview",
+              "title": "Gateways",
               "description": "Openly readable tables by your applications.",
               "source": "@site/docs/api/gateways.md",
               "sourceDirName": "api",
@@ -498,28 +88,19 @@
               "lastUpdatedAt": 1539502055,
               "formattedLastUpdatedAt": "Oct 14, 2018",
               "frontMatter": {
-                "title": "Overview",
+                "title": "Gateways",
                 "description": "Openly readable tables by your applications.",
                 "synopsis": "Reading from tables is entirely open (for anyone), allowing for true composability. Write SQL qeuries—but with some limitations that are due to the nature of decentralized networks and deterministic requirements.",
                 "keywords": [
                   "write to table",
                   "mutate table"
                 ]
-              },
-              "sidebar": "develop",
-              "previous": {
-                "title": "Overview",
-                "permalink": "/api/"
-              },
-              "next": {
-                "title": "Overview",
-                "permalink": "/api/endpoints"
               }
             },
             {
               "unversionedId": "api/README",
               "id": "api/README",
-              "title": "Overview",
+              "title": "Quick start",
               "description": "Openly readable tables by your applications.",
               "source": "@site/docs/api/README.md",
               "sourceDirName": "api",
@@ -533,22 +114,14 @@
               "lastUpdatedAt": 1539502055,
               "formattedLastUpdatedAt": "Oct 14, 2018",
               "frontMatter": {
-                "title": "Overview",
+                "title": "Quick start",
+                "sidebar_label": "Validator API",
                 "description": "Openly readable tables by your applications.",
                 "synopsis": "Reading from tables is entirely open (for anyone), allowing for true composability. Write SQL qeuries—but with some limitations that are due to the nature of decentralized networks and deterministic requirements.",
                 "keywords": [
                   "write to table",
                   "mutate table"
                 ]
-              },
-              "sidebar": "develop",
-              "previous": {
-                "title": "Reading tables",
-                "permalink": "/cli/read"
-              },
-              "next": {
-                "title": "Overview",
-                "permalink": "/api/gateways"
               }
             },
             {
@@ -575,15 +148,6 @@
                   "read table",
                   "SQL query"
                 ]
-              },
-              "sidebar": "develop",
-              "previous": {
-                "title": "Getting started",
-                "permalink": "/cli/getting-started"
-              },
-              "next": {
-                "title": "Creating tables",
-                "permalink": "/cli/create"
               }
             },
             {
@@ -609,15 +173,6 @@
                 "keywords": [
                   "create table"
                 ]
-              },
-              "sidebar": "develop",
-              "previous": {
-                "title": "Connecting to Tableland",
-                "permalink": "/cli/connect"
-              },
-              "next": {
-                "title": "Writing to tables",
-                "permalink": "/cli/write"
               }
             },
             {
@@ -644,15 +199,6 @@
                   "SQL query",
                   "Tableland SDK"
                 ]
-              },
-              "sidebar": "develop",
-              "previous": {
-                "title": "Overview",
-                "permalink": "/cli/"
-              },
-              "next": {
-                "title": "Connecting to Tableland",
-                "permalink": "/cli/connect"
               }
             },
             {
@@ -679,22 +225,13 @@
                   "write to table",
                   "mutate table"
                 ]
-              },
-              "sidebar": "develop",
-              "previous": {
-                "title": "Writing to tables",
-                "permalink": "/cli/write"
-              },
-              "next": {
-                "title": "Overview",
-                "permalink": "/api/"
               }
             },
             {
               "unversionedId": "cli/README",
               "id": "cli/README",
-              "title": "Overview",
-              "description": "Openly readable tables by your applications.",
+              "title": "Quick start",
+              "description": "Experiment with creating, editing, and querying tables from the comfort of the command line.",
               "source": "@site/docs/cli/README.md",
               "sourceDirName": "cli",
               "slug": "/cli/",
@@ -707,22 +244,14 @@
               "lastUpdatedAt": 1539502055,
               "formattedLastUpdatedAt": "Oct 14, 2018",
               "frontMatter": {
-                "title": "Overview",
-                "description": "Openly readable tables by your applications.",
+                "title": "Quick start",
+                "sidebar_label": "CLI",
+                "description": "Experiment with creating, editing, and querying tables from the comfort of the command line.",
                 "synopsis": "The JavaScript / TypeScript SDK allows developers to create tables on their chain of choice. Connect, create, and then interact with your tables thereafter with table writes and reads.",
                 "keywords": [
-                  "SQL query",
-                  "Tableland SDK"
+                  "CLI",
+                  "command line"
                 ]
-              },
-              "sidebar": "develop",
-              "previous": {
-                "title": "Reading tables",
-                "permalink": "/sdk/read"
-              },
-              "next": {
-                "title": "Getting started",
-                "permalink": "/cli/getting-started"
               }
             },
             {
@@ -749,22 +278,38 @@
                   "write to table",
                   "mutate table"
                 ]
-              },
-              "sidebar": "develop",
-              "previous": {
-                "title": "Creating tables",
-                "permalink": "/cli/create"
-              },
-              "next": {
-                "title": "Reading tables",
-                "permalink": "/cli/read"
+              }
+            },
+            {
+              "unversionedId": "concepts/faqs",
+              "id": "concepts/faqs",
+              "title": "FAQs",
+              "description": "Review commonly asked questions about the Tableland network and community.",
+              "source": "@site/docs/concepts/faqs.md",
+              "sourceDirName": "concepts",
+              "slug": "/concepts/faqs",
+              "permalink": "/concepts/faqs",
+              "draft": false,
+              "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/concepts/faqs.md",
+              "tags": [],
+              "version": "current",
+              "lastUpdatedBy": "Author",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "Oct 14, 2018",
+              "frontMatter": {
+                "title": "FAQs",
+                "description": "Review commonly asked questions about the Tableland network and community.",
+                "keywords": [
+                  "faq",
+                  "faqs"
+                ]
               }
             },
             {
               "unversionedId": "concepts/network/considerations-tradeoffs",
               "id": "concepts/network/considerations-tradeoffs",
               "title": "Considerations & tradeoffs",
-              "description": "Tableland offers a solution to the suboptimal standards, and choosing a chain greatly impacts user experience & costs.",
+              "description": "Tableland offers a new solution to suboptimal web3 data storage standards.",
               "source": "@site/docs/concepts/network/considerations-tradeoffs.md",
               "sourceDirName": "concepts/network",
               "slug": "/concepts/network/considerations-tradeoffs",
@@ -778,52 +323,9 @@
               "formattedLastUpdatedAt": "Oct 14, 2018",
               "frontMatter": {
                 "title": "Considerations & tradeoffs",
-                "description": "Tableland offers a solution to the suboptimal standards, and choosing a chain greatly impacts user experience & costs.",
+                "sidebar_label": "Why use Tableland?",
+                "description": "Tableland offers a new solution to suboptimal web3 data storage standards.",
                 "synopsis": "Selecting the chain to deploy tables on has a significant impact on the subsequent usage of the table. But before selecting a chain to then use Tableland’s capabilities, it may be helpful to consider the alternatives to Tableland in the first place."
-              },
-              "sidebar": "concepts",
-              "previous": {
-                "title": "Databases & SQL",
-                "permalink": "/concepts/network/databases"
-              },
-              "next": {
-                "title": "Open beta",
-                "permalink": "/concepts/network/open-beta"
-              }
-            },
-            {
-              "unversionedId": "concepts/network/databases",
-              "id": "concepts/network/databases",
-              "title": "Databases & SQL",
-              "description": "Briefly look under the hood at relational databases.",
-              "source": "@site/docs/concepts/network/databases.md",
-              "sourceDirName": "concepts/network",
-              "slug": "/concepts/network/databases",
-              "permalink": "/concepts/network/databases",
-              "draft": false,
-              "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/concepts/network/databases.md",
-              "tags": [],
-              "version": "current",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
-              "formattedLastUpdatedAt": "Oct 14, 2018",
-              "frontMatter": {
-                "title": "Databases & SQL",
-                "description": "Briefly look under the hood at relational databases.",
-                "synopsis": "The network is akin to a bunch of databases communicating & agreeing with one another about things that happened on-chain. Although it's an oversimplification, the core premise behind it all is a relational database, which isn't flashy by any means but adds a new dimension to web3 storage.",
-                "keywords": [
-                  "databases",
-                  "relational database"
-                ]
-              },
-              "sidebar": "concepts",
-              "previous": {
-                "title": "Hybrid state",
-                "permalink": "/concepts/network/tableland-state"
-              },
-              "next": {
-                "title": "Considerations & tradeoffs",
-                "permalink": "/concepts/network/considerations-tradeoffs"
               }
             },
             {
@@ -845,56 +347,11 @@
               "frontMatter": {
                 "title": "Open beta",
                 "description": "Use Tableland on testnet and mainnet chains while the protocol is in development.",
-                "synopsis": "The Tableland network is actively being developed and plans to launch a production (mainnet) in 2023. Prior to that launch, the protocol can still be used on supported chains, but its important to note what's in store in the future.",
+                "synopsis": "The Tableland network is actively being developed and plans to launch a production (mainnet) in 2024. Prior to that launch, the protocol can still be used on supported chains, but its important to note what's in store in the future.",
                 "keywords": [
                   "open beta",
                   "production"
                 ]
-              },
-              "sidebar": "concepts",
-              "previous": {
-                "title": "Considerations & tradeoffs",
-                "permalink": "/concepts/network/considerations-tradeoffs"
-              },
-              "next": {
-                "title": "Roadmap",
-                "permalink": "/concepts/network/roadmap"
-              }
-            },
-            {
-              "unversionedId": "concepts/network/roadmap",
-              "id": "concepts/network/roadmap",
-              "title": "Vision & roadmap",
-              "description": "The protocol is still being developed and progressively decentralized.",
-              "source": "@site/docs/concepts/network/roadmap.md",
-              "sourceDirName": "concepts/network",
-              "slug": "/concepts/network/roadmap",
-              "permalink": "/concepts/network/roadmap",
-              "draft": false,
-              "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/concepts/network/roadmap.md",
-              "tags": [],
-              "version": "current",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
-              "formattedLastUpdatedAt": "Oct 14, 2018",
-              "frontMatter": {
-                "title": "Vision & roadmap",
-                "sidebar_label": "Roadmap",
-                "description": "The protocol is still being developed and progressively decentralized.",
-                "synopsis": "Tableland's inception came in late 2021. It's consistently growing in terms of the core protocol itself and development activity on top of the protocol, and there is still plenty in store in the coming months and years.",
-                "keywords": [
-                  "roadmap",
-                  "vision"
-                ]
-              },
-              "sidebar": "concepts",
-              "previous": {
-                "title": "Open beta",
-                "permalink": "/concepts/network/open-beta"
-              },
-              "next": {
-                "title": "Quick start",
-                "permalink": "/concepts/sql/"
               }
             },
             {
@@ -922,15 +379,31 @@
                   "Tableland",
                   "about"
                 ]
-              },
-              "sidebar": "concepts",
-              "previous": {
-                "title": "What is Tableland?",
-                "permalink": "/concepts/network/what-is-tableland"
-              },
-              "next": {
-                "title": "Databases & SQL",
-                "permalink": "/concepts/network/databases"
+              }
+            },
+            {
+              "unversionedId": "concepts/network/use-cases",
+              "id": "concepts/network/use-cases",
+              "title": "Use cases",
+              "description": "A series of general use cases to consider.",
+              "source": "@site/docs/concepts/network/use-cases.md",
+              "sourceDirName": "concepts/network",
+              "slug": "/concepts/network/use-cases",
+              "permalink": "/concepts/network/use-cases",
+              "draft": false,
+              "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/concepts/network/use-cases.md",
+              "tags": [],
+              "version": "current",
+              "lastUpdatedBy": "Author",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "Oct 14, 2018",
+              "frontMatter": {
+                "title": "Use cases",
+                "description": "A series of general use cases to consider.",
+                "synopsis": "This page identifies some potential use cases. It is non-exhaustive but provides guidelines / considerations for where developers can use Tableland, and as always, consider the host chain as part of the use case criteria (e.g., Ethereum is more expensive to write to than an L2).",
+                "keywords": [
+                  "use cases"
+                ]
               }
             },
             {
@@ -957,15 +430,6 @@
                   "Tableland",
                   "about"
                 ]
-              },
-              "sidebar": "concepts",
-              "previous": {
-                "title": "Overview",
-                "permalink": "/concepts/"
-              },
-              "next": {
-                "title": "Hybrid state",
-                "permalink": "/concepts/network/tableland-state"
               }
             },
             {
@@ -991,11 +455,109 @@
                 "keywords": [
                   "protocol"
                 ]
-              },
-              "sidebar": "concepts",
-              "next": {
-                "title": "What is Tableland?",
-                "permalink": "/concepts/network/what-is-tableland"
+              }
+            },
+            {
+              "unversionedId": "concepts/related/databases",
+              "id": "concepts/related/databases",
+              "title": "Databases & SQL",
+              "description": "Briefly look under the hood at relational databases.",
+              "source": "@site/docs/concepts/related/databases.md",
+              "sourceDirName": "concepts/related",
+              "slug": "/concepts/related/databases",
+              "permalink": "/concepts/related/databases",
+              "draft": false,
+              "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/concepts/related/databases.md",
+              "tags": [],
+              "version": "current",
+              "lastUpdatedBy": "Author",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "Oct 14, 2018",
+              "frontMatter": {
+                "title": "Databases & SQL",
+                "description": "Briefly look under the hood at relational databases.",
+                "synopsis": "The network is akin to a bunch of databases communicating & agreeing with one another about things that happened on-chain. Although it's an oversimplification, the core premise behind it all is a relational database, which isn't flashy by any means but adds a new dimension to web3 storage.",
+                "keywords": [
+                  "databases",
+                  "relational database"
+                ]
+              }
+            },
+            {
+              "unversionedId": "concepts/related/README",
+              "id": "concepts/related/README",
+              "title": "Related topics",
+              "description": "Learn about what Tableland is.",
+              "source": "@site/docs/concepts/related/README.md",
+              "sourceDirName": "concepts/related",
+              "slug": "/concepts/related/",
+              "permalink": "/concepts/related/",
+              "draft": false,
+              "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/concepts/related/README.md",
+              "tags": [],
+              "version": "current",
+              "lastUpdatedBy": "Author",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "Oct 14, 2018",
+              "frontMatter": {
+                "title": "Related topics",
+                "description": "Learn about what Tableland is.",
+                "synopsis": "Structured Query Language (SQL) is a language that allows developers to interact with databases for extracting and mutating values.",
+                "keywords": [
+                  "protocol"
+                ]
+              }
+            },
+            {
+              "unversionedId": "concepts/related/roadmap",
+              "id": "concepts/related/roadmap",
+              "title": "Vision & roadmap",
+              "description": "The protocol is still being developed and progressively decentralized.",
+              "source": "@site/docs/concepts/related/roadmap.md",
+              "sourceDirName": "concepts/related",
+              "slug": "/concepts/related/roadmap",
+              "permalink": "/concepts/related/roadmap",
+              "draft": false,
+              "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/concepts/related/roadmap.md",
+              "tags": [],
+              "version": "current",
+              "lastUpdatedBy": "Author",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "Oct 14, 2018",
+              "frontMatter": {
+                "title": "Vision & roadmap",
+                "sidebar_label": "Roadmap",
+                "description": "The protocol is still being developed and progressively decentralized.",
+                "synopsis": "Tableland's inception came in late 2021. It's consistently growing in terms of the core protocol itself and development activity on top of the protocol, and there is still plenty in store in the coming months and years.",
+                "keywords": [
+                  "roadmap",
+                  "vision"
+                ]
+              }
+            },
+            {
+              "unversionedId": "concepts/related/uri-encoding",
+              "id": "concepts/related/uri-encoding",
+              "title": "URI encoding",
+              "description": "SQL queries written at the query endpoint must have the proper encoding.",
+              "source": "@site/docs/concepts/related/uri-encoding.md",
+              "sourceDirName": "concepts/related",
+              "slug": "/concepts/related/uri-encoding",
+              "permalink": "/concepts/related/uri-encoding",
+              "draft": false,
+              "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/concepts/related/uri-encoding.md",
+              "tags": [],
+              "version": "current",
+              "lastUpdatedBy": "Author",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "Oct 14, 2018",
+              "frontMatter": {
+                "title": "URI encoding",
+                "description": "SQL queries written at the query endpoint must have the proper encoding.",
+                "synopsis": "Developer can write SQL read statement using the query REST API. This creates a truly flexible API where the response object can have fully custom keys that are hydrated with query values.",
+                "keywords": [
+                  "uri encoding"
+                ]
               }
             },
             {
@@ -1023,14 +585,14 @@
                   "protocol"
                 ]
               },
-              "sidebar": "concepts",
+              "sidebar": "sql",
               "previous": {
                 "title": "Reading table data",
                 "permalink": "/concepts/sql/read"
               },
               "next": {
-                "title": "SQL specification",
-                "permalink": "/concepts/sql/sql-spec"
+                "title": "Auto-incrementing",
+                "permalink": "/concepts/sql/incrementing-values"
               }
             },
             {
@@ -1057,7 +619,7 @@
                   "protocol"
                 ]
               },
-              "sidebar": "concepts",
+              "sidebar": "sql",
               "previous": {
                 "title": "Quick start",
                 "permalink": "/concepts/sql/"
@@ -1092,7 +654,7 @@
                   "protocol"
                 ]
               },
-              "sidebar": "concepts",
+              "sidebar": "sql",
               "previous": {
                 "title": "UPSERT",
                 "permalink": "/concepts/sql/upsert"
@@ -1100,6 +662,42 @@
               "next": {
                 "title": "Reading table data",
                 "permalink": "/concepts/sql/read"
+              }
+            },
+            {
+              "unversionedId": "concepts/sql/incrementing-values",
+              "id": "concepts/sql/incrementing-values",
+              "title": "Incrementing values automatically",
+              "description": "Tableland allows developers to automatically increment a cell, with some restrictions.",
+              "source": "@site/docs/concepts/sql/incrementing-values.md",
+              "sourceDirName": "concepts/sql",
+              "slug": "/concepts/sql/incrementing-values",
+              "permalink": "/concepts/sql/incrementing-values",
+              "draft": false,
+              "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/concepts/sql/incrementing-values.md",
+              "tags": [],
+              "version": "current",
+              "lastUpdatedBy": "Author",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "Oct 14, 2018",
+              "frontMatter": {
+                "title": "Incrementing values automatically",
+                "sidebar_label": "Auto-incrementing",
+                "description": "Tableland allows developers to automatically increment a cell, with some restrictions.",
+                "synopsis": "Developers often want to insert a row with a cell that automatically increases by a value of 1. There are some intricacies to be aware of, but this is fully possible with Tableland SQL and makes it easy to insert a row with an automatically generated identifier.",
+                "keywords": [
+                  "auto-increment",
+                  "autoincrement"
+                ]
+              },
+              "sidebar": "sql",
+              "previous": {
+                "title": "Access control",
+                "permalink": "/concepts/sql/access-control"
+              },
+              "next": {
+                "title": "SQL specification",
+                "permalink": "/concepts/sql/sql-spec"
               }
             },
             {
@@ -1127,7 +725,7 @@
                   "protocol"
                 ]
               },
-              "sidebar": "concepts",
+              "sidebar": "sql",
               "previous": {
                 "title": "Mutating data",
                 "permalink": "/concepts/sql/mutating-data"
@@ -1162,7 +760,7 @@
                   "protocol"
                 ]
               },
-              "sidebar": "concepts",
+              "sidebar": "sql",
               "previous": {
                 "title": "Create a table",
                 "permalink": "/concepts/sql/create-a-table"
@@ -1196,7 +794,7 @@
                   "protocol"
                 ]
               },
-              "sidebar": "concepts",
+              "sidebar": "sql",
               "previous": {
                 "title": "DELETE",
                 "permalink": "/concepts/sql/delete"
@@ -1230,11 +828,7 @@
                   "protocol"
                 ]
               },
-              "sidebar": "concepts",
-              "previous": {
-                "title": "Roadmap",
-                "permalink": "/concepts/network/roadmap"
-              },
+              "sidebar": "sql",
               "next": {
                 "title": "Create a table",
                 "permalink": "/concepts/sql/create-a-table"
@@ -1264,10 +858,10 @@
                   "protocol"
                 ]
               },
-              "sidebar": "concepts",
+              "sidebar": "sql",
               "previous": {
-                "title": "Access control",
-                "permalink": "/concepts/sql/access-control"
+                "title": "Auto-incrementing",
+                "permalink": "/concepts/sql/incrementing-values"
               }
             },
             {
@@ -1295,7 +889,7 @@
                   "protocol"
                 ]
               },
-              "sidebar": "concepts",
+              "sidebar": "sql",
               "previous": {
                 "title": "INSERT",
                 "permalink": "/concepts/sql/insert"
@@ -1330,7 +924,7 @@
                   "protocol"
                 ]
               },
-              "sidebar": "concepts",
+              "sidebar": "sql",
               "previous": {
                 "title": "UPDATE",
                 "permalink": "/concepts/sql/update"
@@ -1365,11 +959,6 @@
                   "maintainers",
                   "contributors"
                 ]
-              },
-              "sidebar": "contribute",
-              "previous": {
-                "title": "Style guide",
-                "permalink": "/contribute/style-guide"
               }
             },
             {
@@ -1408,11 +997,6 @@
                 "tags": [
                   "contributing"
                 ]
-              },
-              "sidebar": "contribute",
-              "next": {
-                "title": "Style guide",
-                "permalink": "/contribute/style-guide"
               }
             },
             {
@@ -1450,22 +1034,13 @@
                 "tags": [
                   "contributing"
                 ]
-              },
-              "sidebar": "contribute",
-              "previous": {
-                "title": "Contributor guidelines",
-                "permalink": "/contribute/"
-              },
-              "next": {
-                "title": "Maintainers",
-                "permalink": "/contribute/maintainers"
               }
             },
             {
               "unversionedId": "develop/chains/arbitrum",
               "id": "develop/chains/arbitrum",
               "title": "Arbitrum",
-              "description": "Openly readable tables by your applications.",
+              "description": "An overview of using Arbitrum with Tableland.",
               "source": "@site/docs/develop/chains/arbitrum.md",
               "sourceDirName": "develop/chains",
               "slug": "/develop/chains/arbitrum",
@@ -1479,28 +1054,18 @@
               "formattedLastUpdatedAt": "Oct 14, 2018",
               "frontMatter": {
                 "title": "Arbitrum",
-                "description": "Openly readable tables by your applications.",
-                "synopsis": "Reading from tables is entirely open (for anyone), allowing for true composability. Write SQL qeuries—but with some limitations that are due to the nature of decentralized networks and deterministic requirements.",
+                "description": "An overview of using Arbitrum with Tableland.",
+                "synopsis": "Arbitrum is one of the EVM-compatible Layer 2 solutions that Tableland currently supports. Check out the overview of what this network is and relevant information when using it.",
                 "keywords": [
-                  "write to table",
-                  "mutate table"
+                  "arbitrum"
                 ]
-              },
-              "sidebar": "develop",
-              "previous": {
-                "title": "Ethereum",
-                "permalink": "/develop/chains/ethereum"
-              },
-              "next": {
-                "title": "Optimism",
-                "permalink": "/develop/chains/optimism"
               }
             },
             {
               "unversionedId": "develop/chains/ethereum",
               "id": "develop/chains/ethereum",
               "title": "Ethereum",
-              "description": "Openly readable tables by your applications.",
+              "description": "An overview of using Ethereum with Tableland.",
               "source": "@site/docs/develop/chains/ethereum.md",
               "sourceDirName": "develop/chains",
               "slug": "/develop/chains/ethereum",
@@ -1514,28 +1079,45 @@
               "formattedLastUpdatedAt": "Oct 14, 2018",
               "frontMatter": {
                 "title": "Ethereum",
-                "description": "Openly readable tables by your applications.",
-                "synopsis": "Reading from tables is entirely open (for anyone), allowing for true composability. Write SQL qeuries—but with some limitations that are due to the nature of decentralized networks and deterministic requirements.",
+                "description": "An overview of using Ethereum with Tableland.",
+                "synopsis": "Ethereum and its EVM is what drives Tableland's approach for chain compatibility. With its data and network hardness, it's a great case for many projects, but not all use cases can occur here due to cost constraints.",
                 "keywords": [
-                  "write to table",
-                  "mutate table"
+                  "ethereum"
                 ]
-              },
-              "sidebar": "develop",
-              "previous": {
-                "title": "Choosing a chain",
-                "permalink": "/develop/chains/"
-              },
-              "next": {
-                "title": "Arbitrum",
-                "permalink": "/develop/chains/arbitrum"
+              }
+            },
+            {
+              "unversionedId": "develop/chains/local",
+              "id": "develop/chains/local",
+              "title": "Using a local chain",
+              "description": "An overview of using a Hardhat node and a local Tableland instance.",
+              "source": "@site/docs/develop/chains/local.md",
+              "sourceDirName": "develop/chains",
+              "slug": "/develop/chains/local",
+              "permalink": "/develop/chains/local",
+              "draft": false,
+              "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/develop/chains/local.md",
+              "tags": [],
+              "version": "current",
+              "lastUpdatedBy": "Author",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "Oct 14, 2018",
+              "frontMatter": {
+                "title": "Using a local chain",
+                "sidebar_label": "Local node",
+                "description": "An overview of using a Hardhat node and a local Tableland instance.",
+                "synopsis": "Developing locally should happen as a step prior to deploying to any testnet and/or mainnet. Developers can use Local Tableland to accomplish this, which spins up a Hardhat node for a local Tableland node to use.",
+                "keywords": [
+                  "local tableland",
+                  "hardhat"
+                ]
               }
             },
             {
               "unversionedId": "develop/chains/optimism",
               "id": "develop/chains/optimism",
               "title": "Optimism",
-              "description": "Openly readable tables by your applications.",
+              "description": "An overview of using Optimism with Tableland.",
               "source": "@site/docs/develop/chains/optimism.md",
               "sourceDirName": "develop/chains",
               "slug": "/develop/chains/optimism",
@@ -1549,28 +1131,18 @@
               "formattedLastUpdatedAt": "Oct 14, 2018",
               "frontMatter": {
                 "title": "Optimism",
-                "description": "Openly readable tables by your applications.",
-                "synopsis": "Reading from tables is entirely open (for anyone), allowing for true composability. Write SQL qeuries—but with some limitations that are due to the nature of decentralized networks and deterministic requirements.",
+                "description": "An overview of using Optimism with Tableland.",
+                "synopsis": "Optimism is one of the EVM-compatible Layer 2 solutions that Tableland currently supports. Check out the overview of what this network is and relevant information when using it.",
                 "keywords": [
-                  "write to table",
-                  "mutate table"
+                  "optimism"
                 ]
-              },
-              "sidebar": "develop",
-              "previous": {
-                "title": "Arbitrum",
-                "permalink": "/develop/chains/arbitrum"
-              },
-              "next": {
-                "title": "Polygon",
-                "permalink": "/develop/chains/polygon"
               }
             },
             {
               "unversionedId": "develop/chains/polygon",
               "id": "develop/chains/polygon",
               "title": "Polygon",
-              "description": "Openly readable tables by your applications.",
+              "description": "An overview of using Polygon with Tableland.",
               "source": "@site/docs/develop/chains/polygon.md",
               "sourceDirName": "develop/chains",
               "slug": "/develop/chains/polygon",
@@ -1584,28 +1156,18 @@
               "formattedLastUpdatedAt": "Oct 14, 2018",
               "frontMatter": {
                 "title": "Polygon",
-                "description": "Openly readable tables by your applications.",
-                "synopsis": "Reading from tables is entirely open (for anyone), allowing for true composability. Write SQL qeuries—but with some limitations that are due to the nature of decentralized networks and deterministic requirements.",
+                "description": "An overview of using Polygon with Tableland.",
+                "synopsis": "Polygon is one of the EVM-compatible Layer 2 solutions that Tableland currently supports. Check out the overview of what this network is and relevant information when using it.",
                 "keywords": [
-                  "write to table",
-                  "mutate table"
+                  "polygon"
                 ]
-              },
-              "sidebar": "develop",
-              "previous": {
-                "title": "Optimism",
-                "permalink": "/develop/chains/optimism"
-              },
-              "next": {
-                "title": "IPFS",
-                "permalink": "/develop/integrations/ipfs"
               }
             },
             {
               "unversionedId": "develop/chains/README",
               "id": "develop/chains/README",
               "title": "Choosing a chain",
-              "description": "Openly readable tables by your applications.",
+              "description": "Selecting a base chain is an important step in any application’s design and, especially, for tables.",
               "source": "@site/docs/develop/chains/README.md",
               "sourceDirName": "develop/chains",
               "slug": "/develop/chains/",
@@ -1619,21 +1181,12 @@
               "formattedLastUpdatedAt": "Oct 14, 2018",
               "frontMatter": {
                 "title": "Choosing a chain",
-                "description": "Openly readable tables by your applications.",
-                "synopsis": "Reading from tables is entirely open (for anyone), allowing for true composability. Write SQL qeuries—but with some limitations that are due to the nature of decentralized networks and deterministic requirements.",
+                "description": "Selecting a base chain is an important step in any application’s design and, especially, for tables.",
+                "synopsis": "Chain selection makes a significant impact on a table’s usability. Choose a chain that’s too slow or expensive, and it won’t be feasible for table writes to occur frequently. Deploy a cross-chain data model for value layering purposes, and certain on-chain access control features are lost.",
                 "keywords": [
-                  "write to table",
-                  "mutate table"
+                  "evm",
+                  "chains"
                 ]
-              },
-              "sidebar": "develop",
-              "previous": {
-                "title": "Reading tables",
-                "permalink": "/smart-contracts/read"
-              },
-              "next": {
-                "title": "Ethereum",
-                "permalink": "/develop/chains/ethereum"
               }
             },
             {
@@ -1660,15 +1213,6 @@
                   "write to table",
                   "mutate table"
                 ]
-              },
-              "sidebar": "develop",
-              "previous": {
-                "title": "Filecoin",
-                "permalink": "/develop/integrations/filecoin"
-              },
-              "next": {
-                "title": "Lit Protocol",
-                "permalink": "/develop/integrations/lit-protocol"
               }
             },
             {
@@ -1695,15 +1239,6 @@
                   "write to table",
                   "mutate table"
                 ]
-              },
-              "sidebar": "develop",
-              "previous": {
-                "title": "IPFS",
-                "permalink": "/develop/integrations/ipfs"
-              },
-              "next": {
-                "title": "Chainlink",
-                "permalink": "/develop/integrations/chainlink"
               }
             },
             {
@@ -1730,15 +1265,6 @@
                   "write to table",
                   "mutate table"
                 ]
-              },
-              "sidebar": "develop",
-              "previous": {
-                "title": "Polygon",
-                "permalink": "/develop/chains/polygon"
-              },
-              "next": {
-                "title": "Filecoin",
-                "permalink": "/develop/integrations/filecoin"
               }
             },
             {
@@ -1765,15 +1291,6 @@
                   "write to table",
                   "mutate table"
                 ]
-              },
-              "sidebar": "develop",
-              "previous": {
-                "title": "Chainlink",
-                "permalink": "/develop/integrations/chainlink"
-              },
-              "next": {
-                "title": "NyCypher",
-                "permalink": "/develop/integrations/nucypher"
               }
             },
             {
@@ -1800,15 +1317,6 @@
                   "write to table",
                   "mutate table"
                 ]
-              },
-              "sidebar": "develop",
-              "previous": {
-                "title": "Lit Protocol",
-                "permalink": "/develop/integrations/lit-protocol"
-              },
-              "next": {
-                "title": "Toucan Protocol",
-                "permalink": "/develop/integrations/toucan"
               }
             },
             {
@@ -1861,11 +1369,6 @@
                   "write to table",
                   "mutate table"
                 ]
-              },
-              "sidebar": "develop",
-              "previous": {
-                "title": "NyCypher",
-                "permalink": "/develop/integrations/nucypher"
               }
             },
             {
@@ -1888,24 +1391,19 @@
                 "title": "Overview",
                 "description": "Learn the ins and outs of contributing to the Tableland docs site.",
                 "synopsis": "The docs site is built using Docusaurus, a static site generator developed by Meta that is specifically designed for documentation. It offers a number of features, including MDX support (embed JSX in markdown) and various content-friendly plugins. Please ensure you follow the guidelines on writing style as well."
-              },
-              "sidebar": "develop",
-              "next": {
-                "title": "Tableland protocol",
-                "permalink": "/develop/reference/"
               }
             },
             {
-              "unversionedId": "develop/reference/chains-contracts",
-              "id": "develop/reference/chains-contracts",
+              "unversionedId": "develop/reference/contracts",
+              "id": "develop/reference/contracts",
               "title": "Chains & contracts",
-              "description": "Openly readable tables by your applications.",
-              "source": "@site/docs/develop/reference/chains-contracts.md",
+              "description": "A list of deployed contracts for each supported chain.",
+              "source": "@site/docs/develop/reference/contracts.md",
               "sourceDirName": "develop/reference",
-              "slug": "/develop/reference/chains-contracts",
-              "permalink": "/develop/reference/chains-contracts",
+              "slug": "/develop/reference/contracts",
+              "permalink": "/develop/reference/contracts",
               "draft": false,
-              "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/develop/reference/chains-contracts.md",
+              "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/develop/reference/contracts.md",
               "tags": [],
               "version": "current",
               "lastUpdatedBy": "Author",
@@ -1913,28 +1411,20 @@
               "formattedLastUpdatedAt": "Oct 14, 2018",
               "frontMatter": {
                 "title": "Chains & contracts",
-                "description": "Openly readable tables by your applications.",
-                "synopsis": "Reading from tables is entirely open (for anyone), allowing for true composability. Write SQL qeuries—but with some limitations that are due to the nature of decentralized networks and deterministic requirements.",
+                "sidebar_label": "Contracts",
+                "description": "A list of deployed contracts for each supported chain.",
+                "synopsis": "The following table highlight which chains Tableland has smart contracts deployed on, which is currently Ethereum and a subset of its scaling solutions. Over time, additional EVM compatible chains will be added based on developer demand.",
                 "keywords": [
-                  "write to table",
-                  "mutate table"
+                  "chains",
+                  "contract"
                 ]
-              },
-              "sidebar": "develop",
-              "previous": {
-                "title": "Tableland protocol",
-                "permalink": "/develop/reference/"
-              },
-              "next": {
-                "title": "Limits",
-                "permalink": "/develop/reference/limits"
               }
             },
             {
               "unversionedId": "develop/reference/limits",
               "id": "develop/reference/limits",
               "title": "Limits",
-              "description": "Openly readable tables by your applications.",
+              "description": "A listing of the table/data limits and smart contract deployment locations on supported chains.",
               "source": "@site/docs/develop/reference/limits.md",
               "sourceDirName": "develop/reference",
               "slug": "/develop/reference/limits",
@@ -1948,46 +1438,13 @@
               "formattedLastUpdatedAt": "Oct 14, 2018",
               "frontMatter": {
                 "title": "Limits",
-                "description": "Openly readable tables by your applications.",
-                "synopsis": "Reading from tables is entirely open (for anyone), allowing for true composability. Write SQL qeuries—but with some limitations that are due to the nature of decentralized networks and deterministic requirements.",
+                "description": "A listing of the table/data limits and smart contract deployment locations on supported chains.",
+                "synopsis": "Since Tableland is still in open beta, each table is limited to the following constraints while the full production network is further clarified. These are temporary limits while the production mainnet is further researched.",
                 "keywords": [
-                  "write to table",
-                  "mutate table"
-                ]
-              },
-              "sidebar": "develop",
-              "previous": {
-                "title": "Chains & contracts",
-                "permalink": "/develop/reference/chains-contracts"
-              },
-              "next": {
-                "title": "Response times",
-                "permalink": "/develop/reference/response-times"
-              }
-            },
-            {
-              "unversionedId": "develop/reference/open-beta",
-              "id": "develop/reference/open-beta",
-              "title": "Open beta",
-              "description": "Openly readable tables by your applications.",
-              "source": "@site/docs/develop/reference/open-beta.md",
-              "sourceDirName": "develop/reference",
-              "slug": "/develop/reference/open-beta",
-              "permalink": "/develop/reference/open-beta",
-              "draft": false,
-              "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/develop/reference/open-beta.md",
-              "tags": [],
-              "version": "current",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
-              "formattedLastUpdatedAt": "Oct 14, 2018",
-              "frontMatter": {
-                "title": "Open beta",
-                "description": "Openly readable tables by your applications.",
-                "synopsis": "Reading from tables is entirely open (for anyone), allowing for true composability. Write SQL qeuries—but with some limitations that are due to the nature of decentralized networks and deterministic requirements.",
-                "keywords": [
-                  "write to table",
-                  "mutate table"
+                  "limits",
+                  "cell limit",
+                  "row limit",
+                  "column limit"
                 ]
               }
             },
@@ -2014,15 +1471,6 @@
                 "keywords": [
                   "protocol"
                 ]
-              },
-              "sidebar": "develop",
-              "previous": {
-                "title": "Overview",
-                "permalink": "/develop/"
-              },
-              "next": {
-                "title": "Chains & contracts",
-                "permalink": "/develop/reference/chains-contracts"
               }
             },
             {
@@ -2049,22 +1497,13 @@
                   "write to table",
                   "mutate table"
                 ]
-              },
-              "sidebar": "develop",
-              "previous": {
-                "title": "Response times",
-                "permalink": "/develop/reference/response-times"
-              },
-              "next": {
-                "title": "Overview",
-                "permalink": "/sdk/"
               }
             },
             {
               "unversionedId": "develop/reference/response-times",
               "id": "develop/reference/response-times",
               "title": "Response times",
-              "description": "Openly readable tables by your applications.",
+              "description": "Processing times for creates & writes are largely dependent on the base chain, but read responses are standard.",
               "source": "@site/docs/develop/reference/response-times.md",
               "sourceDirName": "develop/reference",
               "slug": "/develop/reference/response-times",
@@ -2078,21 +1517,11 @@
               "formattedLastUpdatedAt": "Oct 14, 2018",
               "frontMatter": {
                 "title": "Response times",
-                "description": "Openly readable tables by your applications.",
-                "synopsis": "Reading from tables is entirely open (for anyone), allowing for true composability. Write SQL qeuries—but with some limitations that are due to the nature of decentralized networks and deterministic requirements.",
+                "description": "Processing times for creates & writes are largely dependent on the base chain, but read responses are standard.",
+                "synopsis": "Tableland is always dependent on the base chain for the speed at which transactions are finalized. For each chan, nodes listen and process emitted events. When that data is materialized in Tableland node's SQLite databases, it becomes immediately accessible and queryable with high responsiveness.",
                 "keywords": [
-                  "write to table",
-                  "mutate table"
+                  "response times"
                 ]
-              },
-              "sidebar": "develop",
-              "previous": {
-                "title": "Limits",
-                "permalink": "/develop/reference/limits"
-              },
-              "next": {
-                "title": "Repos",
-                "permalink": "/develop/reference/repos"
               }
             },
             {
@@ -2121,10 +1550,95 @@
               }
             },
             {
+              "unversionedId": "develop/tools/local-tableland",
+              "id": "develop/tools/local-tableland",
+              "title": "Local development & testing",
+              "description": "Build with Local Tableland to quickly iterate with Tableland using a local environment.",
+              "source": "@site/docs/develop/tools/local-tableland.md",
+              "sourceDirName": "develop/tools",
+              "slug": "/develop/tools/local-tableland",
+              "permalink": "/develop/tools/local-tableland",
+              "draft": false,
+              "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/develop/tools/local-tableland.md",
+              "tags": [],
+              "version": "current",
+              "lastUpdatedBy": "Author",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "Oct 14, 2018",
+              "frontMatter": {
+                "title": "Local development & testing",
+                "sidebar_label": "Local Tableland",
+                "description": "Build with Local Tableland to quickly iterate with Tableland using a local environment.",
+                "synopsis": "Developers can leverage a local-only instance of the Tableland network that spins up a local Hardhat node in the process. This allows for quickly iterating while developing (create, write, and read local tables) and also allows for integrating Local Tableland into your testing flow.",
+                "keywords": [
+                  "local tableland",
+                  "hardhat"
+                ]
+              }
+            },
+            {
+              "unversionedId": "develop/tools/README",
+              "id": "develop/tools/README",
+              "title": "Development tools",
+              "description": "Leverage various tooling to ease the developer experience.",
+              "source": "@site/docs/develop/tools/README.md",
+              "sourceDirName": "develop/tools",
+              "slug": "/develop/tools/",
+              "permalink": "/develop/tools/",
+              "draft": false,
+              "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/develop/tools/README.md",
+              "tags": [],
+              "version": "current",
+              "lastUpdatedBy": "Author",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "Oct 14, 2018",
+              "frontMatter": {
+                "title": "Development tools",
+                "sidebar_label": "Tools",
+                "description": "Leverage various tooling to ease the developer experience.",
+                "synopsis": "There are quite a few different tools that can be used while developing with Tableland. Each of these are intended to further smooth the developer experience and make it easier to use the various APIs and clients built on top of the protocol.",
+                "keywords": [
+                  "tooling"
+                ]
+              }
+            },
+            {
+              "unversionedId": "landing",
+              "id": "landing",
+              "title": "landing",
+              "description": "",
+              "source": "@site/docs/README.md",
+              "sourceDirName": ".",
+              "slug": "/",
+              "permalink": "/",
+              "draft": false,
+              "editUrl": null,
+              "tags": [],
+              "version": "current",
+              "lastUpdatedBy": "Author",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "Oct 14, 2018",
+              "frontMatter": {
+                "id": "landing",
+                "sidebar_label": "Home",
+                "hide_title": true,
+                "hide_bread_crumb": true,
+                "hide_table_of_contents": true,
+                "pagination_prev": null,
+                "pagination_next": null,
+                "custom_edit_url": null,
+                "slug": "/",
+                "keywords": [
+                  "protocol"
+                ]
+              },
+              "sidebar": "home"
+            },
+            {
               "unversionedId": "products/rigs/README",
               "id": "products/rigs/README",
               "title": "Tableland Rigs",
-              "description": "Learn about the basics of SQL.",
+              "description": "A developer-first NFT, inherently rewarding builders and community members of the Tableland network.",
               "source": "@site/docs/products/rigs/README.md",
               "sourceDirName": "products/rigs",
               "slug": "/products/rigs/",
@@ -2138,18 +1652,12 @@
               "formattedLastUpdatedAt": "Oct 14, 2018",
               "frontMatter": {
                 "title": "Tableland Rigs",
-                "description": "Learn about the basics of SQL.",
-                "synopsis": "Structured Query Language (SQL) is a language that allows developers to interact with databases for extracting and mutating values.",
+                "description": "A developer-first NFT, inherently rewarding builders and community members of the Tableland network.",
+                "synopsis": "Rigs are a generative collection of 3k NFTs designed for those who build on Tableland. They set a foundation to help reward developers for building high value applications and to those contributing to the ecosystem as a whole.",
                 "keywords": [
-                  "SQL",
-                  "SQLite",
-                  "about"
+                  "rigs",
+                  "the garage"
                 ]
-              },
-              "sidebar": "rigs",
-              "next": {
-                "title": "What are Rigs?",
-                "permalink": "/products/rigs/what-are-rigs"
               }
             },
             {
@@ -2177,11 +1685,6 @@
                   "SQLite",
                   "about"
                 ]
-              },
-              "sidebar": "rigs",
-              "previous": {
-                "title": "The Garage",
-                "permalink": "/products/rigs/the-garage"
               }
             },
             {
@@ -2209,15 +1712,6 @@
                   "SQLite",
                   "about"
                 ]
-              },
-              "sidebar": "rigs",
-              "previous": {
-                "title": "What are Rigs?",
-                "permalink": "/products/rigs/what-are-rigs"
-              },
-              "next": {
-                "title": "Rigs in Discord",
-                "permalink": "/products/rigs/rigs-discord"
               }
             },
             {
@@ -2245,15 +1739,6 @@
                   "SQLite",
                   "about"
                 ]
-              },
-              "sidebar": "rigs",
-              "previous": {
-                "title": "Tableland Rigs",
-                "permalink": "/products/rigs/"
-              },
-              "next": {
-                "title": "The Garage",
-                "permalink": "/products/rigs/the-garage"
               }
             },
             {
@@ -2308,15 +1793,6 @@
                   "read table",
                   "SQL query"
                 ]
-              },
-              "sidebar": "develop",
-              "previous": {
-                "title": "Getting started",
-                "permalink": "/sdk/getting-started"
-              },
-              "next": {
-                "title": "Creating tables",
-                "permalink": "/sdk/create"
               }
             },
             {
@@ -2342,15 +1818,6 @@
                 "keywords": [
                   "create table"
                 ]
-              },
-              "sidebar": "develop",
-              "previous": {
-                "title": "Connecting to Tableland",
-                "permalink": "/sdk/connect"
-              },
-              "next": {
-                "title": "Writing to tables",
-                "permalink": "/sdk/write"
               }
             },
             {
@@ -2377,15 +1844,6 @@
                   "SQL query",
                   "Tableland SDK"
                 ]
-              },
-              "sidebar": "develop",
-              "previous": {
-                "title": "Overview",
-                "permalink": "/sdk/"
-              },
-              "next": {
-                "title": "Connecting to Tableland",
-                "permalink": "/sdk/connect"
               }
             },
             {
@@ -2412,21 +1870,12 @@
                   "write to table",
                   "mutate table"
                 ]
-              },
-              "sidebar": "develop",
-              "previous": {
-                "title": "Writing to tables",
-                "permalink": "/sdk/write"
-              },
-              "next": {
-                "title": "Overview",
-                "permalink": "/cli/"
               }
             },
             {
               "unversionedId": "sdk/README",
               "id": "sdk/README",
-              "title": "Overview",
+              "title": "Quick start",
               "description": "Openly readable tables by your applications.",
               "source": "@site/docs/sdk/README.md",
               "sourceDirName": "sdk",
@@ -2440,22 +1889,14 @@
               "lastUpdatedAt": 1539502055,
               "formattedLastUpdatedAt": "Oct 14, 2018",
               "frontMatter": {
-                "title": "Overview",
+                "title": "Quick start",
+                "sidebar_label": "SDK",
                 "description": "Openly readable tables by your applications.",
                 "synopsis": "Reading from tables is entirely open (for anyone), allowing for true composability. Write SQL qeuries—but with some limitations that are due to the nature of decentralized networks and deterministic requirements.",
                 "keywords": [
                   "write to table",
                   "mutate table"
                 ]
-              },
-              "sidebar": "develop",
-              "previous": {
-                "title": "Repos",
-                "permalink": "/develop/reference/repos"
-              },
-              "next": {
-                "title": "Getting started",
-                "permalink": "/sdk/getting-started"
               }
             },
             {
@@ -2482,15 +1923,6 @@
                   "write to table",
                   "mutate table"
                 ]
-              },
-              "sidebar": "develop",
-              "previous": {
-                "title": "Creating tables",
-                "permalink": "/sdk/create"
-              },
-              "next": {
-                "title": "Reading tables",
-                "permalink": "/sdk/read"
               }
             },
             {
@@ -2517,15 +1949,6 @@
                   "read table",
                   "SQL query"
                 ]
-              },
-              "sidebar": "develop",
-              "previous": {
-                "title": "Getting started",
-                "permalink": "/smart-contracts/getting-started"
-              },
-              "next": {
-                "title": "Creating tables",
-                "permalink": "/smart-contracts/create"
               }
             },
             {
@@ -2551,15 +1974,6 @@
                 "keywords": [
                   "create table"
                 ]
-              },
-              "sidebar": "develop",
-              "previous": {
-                "title": "Connecting to Tableland",
-                "permalink": "/smart-contracts/connect"
-              },
-              "next": {
-                "title": "Writing to tables",
-                "permalink": "/smart-contracts/write"
               }
             },
             {
@@ -2586,15 +2000,6 @@
                   "SQL query",
                   "Tableland SDK"
                 ]
-              },
-              "sidebar": "develop",
-              "previous": {
-                "title": "Overview",
-                "permalink": "/smart-contracts/"
-              },
-              "next": {
-                "title": "Connecting to Tableland",
-                "permalink": "/smart-contracts/connect"
               }
             },
             {
@@ -2621,15 +2026,6 @@
                   "write to table",
                   "mutate table"
                 ]
-              },
-              "sidebar": "develop",
-              "previous": {
-                "title": "Writing to tables",
-                "permalink": "/smart-contracts/write"
-              },
-              "next": {
-                "title": "Choosing a chain",
-                "permalink": "/develop/chains/"
               }
             },
             {
@@ -2656,15 +2052,6 @@
                   "SQL query",
                   "Tableland SDK"
                 ]
-              },
-              "sidebar": "develop",
-              "previous": {
-                "title": "Overview",
-                "permalink": "/api/errors"
-              },
-              "next": {
-                "title": "Getting started",
-                "permalink": "/smart-contracts/getting-started"
               }
             },
             {
@@ -2691,15 +2078,6 @@
                   "write to table",
                   "mutate table"
                 ]
-              },
-              "sidebar": "develop",
-              "previous": {
-                "title": "Creating tables",
-                "permalink": "/smart-contracts/create"
-              },
-              "next": {
-                "title": "Reading tables",
-                "permalink": "/smart-contracts/read"
               }
             },
             {
@@ -2866,39 +2244,37 @@
               }
             },
             {
-              "unversionedId": "template",
-              "id": "template",
-              "title": "template",
-              "description": "Example description.",
-              "source": "@site/docs/template.md",
-              "sourceDirName": ".",
-              "slug": "/template",
-              "permalink": "/template",
+              "unversionedId": "tutorials/dynamic-nft-chainlink",
+              "id": "tutorials/dynamic-nft-chainlink",
+              "title": "Dynamic NFT with Chainlink Automation",
+              "description": "Leverage Chainlink for automated NFT mutations.",
+              "source": "@site/docs/tutorials/dynamic-nft-chainlink.md",
+              "sourceDirName": "tutorials",
+              "slug": "/tutorials/dynamic-nft-chainlink",
+              "permalink": "/tutorials/dynamic-nft-chainlink",
               "draft": false,
-              "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/template.md",
+              "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/tutorials/dynamic-nft-chainlink.md",
               "tags": [],
               "version": "current",
               "lastUpdatedBy": "Author",
               "lastUpdatedAt": 1539502055,
               "formattedLastUpdatedAt": "Oct 14, 2018",
-              "sidebarPosition": 1,
               "frontMatter": {
-                "id": "template",
-                "sidebar_position": 1,
-                "sidebar_label": "Page Title",
-                "description": "Example description.",
+                "title": "Dynamic NFT with Chainlink Automation",
+                "sidebar_label": "Dynamic NFT with Chainlink Automation",
+                "description": "Leverage Chainlink for automated NFT mutations.",
+                "synopsis": "The Chainlink network can help make autonomous on-chain calls and enable truly dynamic NFTs. All of the logic can be created with smart contracts and registered in the Chainlink automation portal, enabling dynamic NFTs using on-chain logic, only.",
                 "keywords": [
-                  "example"
-                ],
-                "image": "img/tableland/example-image.png",
-                "slug": "template"
+                  "chainlink",
+                  "dynamic nft"
+                ]
               }
             },
             {
               "unversionedId": "tutorials/dynamic-nft-p5js",
               "id": "tutorials/dynamic-nft-p5js",
-              "title": "Build a Dynamic NFT in Solidity",
-              "description": "Openly readable tables by your applications.",
+              "title": "Creating a dynamic NFT with p5.js",
+              "description": "Use p5.js to render data from an NFT that holds global game state in a table.",
               "source": "@site/docs/tutorials/dynamic-nft-p5js.md",
               "sourceDirName": "tutorials",
               "slug": "/tutorials/dynamic-nft-p5js",
@@ -2911,26 +2287,21 @@
               "lastUpdatedAt": 1539502055,
               "formattedLastUpdatedAt": "Oct 14, 2018",
               "frontMatter": {
-                "title": "Build a Dynamic NFT in Solidity",
-                "description": "Openly readable tables by your applications.",
-                "synopsis": "Reading from tables is entirely open (for anyone), allowing for true composability. Write SQL qeuries—but with some limitations that are due to the nature of decentralized networks and deterministic requirements.",
+                "title": "Creating a dynamic NFT with p5.js",
+                "description": "Use p5.js to render data from an NFT that holds global game state in a table.",
+                "synopsis": "We want to now write a simple web app that will be used to dynamically render a single NFT in our collection. When the NFT renders, the web app should check the requested token, grab the latest data from Tableland, and render some dynamic content.",
                 "keywords": [
                   "tutorial",
                   "solidity",
                   "dynamic NFT"
                 ]
-              },
-              "sidebar": "tutorials",
-              "previous": {
-                "title": "Creating a dynamic NFT with p5.js",
-                "permalink": "/tutorials/dynamic-nft-solidity"
               }
             },
             {
               "unversionedId": "tutorials/dynamic-nft-solidity",
               "id": "tutorials/dynamic-nft-solidity",
-              "title": "Creating a dynamic NFT with p5.js",
-              "description": "Openly readable tables by your applications.",
+              "title": "Build a dynamic NFT in Solidity",
+              "description": "Create an on-chain game that uses SQL queries to create and populate a table of game state.",
               "source": "@site/docs/tutorials/dynamic-nft-solidity.md",
               "sourceDirName": "tutorials",
               "slug": "/tutorials/dynamic-nft-solidity",
@@ -2943,24 +2314,15 @@
               "lastUpdatedAt": 1539502055,
               "formattedLastUpdatedAt": "Oct 14, 2018",
               "frontMatter": {
-                "title": "Creating a dynamic NFT with p5.js",
-                "description": "Openly readable tables by your applications.",
-                "synopsis": "Reading from tables is entirely open (for anyone), allowing for true composability. Write SQL qeuries—but with some limitations that are due to the nature of decentralized networks and deterministic requirements.",
+                "title": "Build a dynamic NFT in Solidity",
+                "description": "Create an on-chain game that uses SQL queries to create and populate a table of game state.",
+                "synopsis": "Tableland enables ownership & on-chain rules to dictate table state mutation. For every mutation, the data is accessible with off-chain queries that can be displayed in an interface, such as an NFT-based game board. This tutorial walks through the basics of Solidity ERC721s and an app with shared state.",
                 "keywords": [
                   "tutorial",
                   "solidity",
                   "dynamic NFT",
                   "p5.js"
                 ]
-              },
-              "sidebar": "tutorials",
-              "previous": {
-                "title": "Tutorials",
-                "permalink": "/category/tutorials"
-              },
-              "next": {
-                "title": "Build a Dynamic NFT in Solidity",
-                "permalink": "/tutorials/dynamic-nft-p5js"
               }
             },
             {
@@ -3018,395 +2380,85 @@
           ],
           "drafts": [],
           "sidebars": {
-            "concepts": [
+            "home": [
               {
                 "type": "doc",
-                "id": "concepts/README"
+                "id": "landing",
+                "className": "menu-item-home"
+              },
+              {
+                "type": "doc",
+                "id": "concepts/sql/README"
+              },
+              {
+                "type": "link",
+                "label": "SQL",
+                "href": "/concepts/sql"
+              }
+            ],
+            "sql": [
+              {
+                "type": "link",
+                "label": "← Home",
+                "href": "/"
               },
               {
                 "type": "html",
-                "value": "<h6 class=\"margin-top--sm margin-bottom--none sidebar-section\">BASICS</h6>",
-                "defaultStyle": true
-              },
-              {
-                "type": "category",
-                "label": "What is Tableland",
-                "link": {
-                  "type": "doc",
-                  "id": "concepts/network/what-is-tableland"
-                },
-                "items": [
-                  {
-                    "type": "doc",
-                    "id": "concepts/network/tableland-state"
-                  },
-                  {
-                    "type": "doc",
-                    "id": "concepts/network/databases"
-                  },
-                  {
-                    "type": "doc",
-                    "id": "concepts/network/considerations-tradeoffs"
-                  },
-                  {
-                    "type": "doc",
-                    "id": "concepts/network/open-beta"
-                  },
-                  {
-                    "type": "doc",
-                    "id": "concepts/network/roadmap"
-                  }
-                ],
-                "collapsed": true,
-                "collapsible": true
-              },
-              {
-                "type": "category",
-                "label": "Using SQL",
-                "link": {
-                  "type": "doc",
-                  "id": "concepts/sql/README"
-                },
-                "items": [
-                  {
-                    "type": "doc",
-                    "id": "concepts/sql/create-a-table"
-                  },
-                  {
-                    "type": "category",
-                    "label": "Mutating table data",
-                    "link": {
-                      "type": "doc",
-                      "id": "concepts/sql/mutating-data"
-                    },
-                    "items": [
-                      {
-                        "type": "doc",
-                        "id": "concepts/sql/insert"
-                      },
-                      {
-                        "type": "doc",
-                        "id": "concepts/sql/update"
-                      },
-                      {
-                        "type": "doc",
-                        "id": "concepts/sql/upsert"
-                      },
-                      {
-                        "type": "doc",
-                        "id": "concepts/sql/delete"
-                      }
-                    ],
-                    "collapsed": true,
-                    "collapsible": true
-                  },
-                  {
-                    "type": "doc",
-                    "id": "concepts/sql/read"
-                  },
-                  {
-                    "type": "doc",
-                    "id": "concepts/sql/access-control"
-                  },
-                  {
-                    "type": "doc",
-                    "id": "concepts/sql/sql-spec"
-                  }
-                ],
-                "collapsed": true,
-                "collapsible": true
-              }
-            ],
-            "develop": [
-              {
-                "type": "doc",
-                "id": "develop/README"
-              },
-              {
-                "type": "html",
-                "value": "<h6 class=\"margin-top--sm margin-bottom--none sidebar-section\"></h6>",
-                "defaultStyle": true
-              },
-              {
-                "type": "category",
-                "label": "Reference",
-                "link": {
-                  "type": "doc",
-                  "id": "develop/reference/README"
-                },
-                "items": [
-                  {
-                    "type": "doc",
-                    "id": "develop/reference/chains-contracts"
-                  },
-                  {
-                    "type": "doc",
-                    "id": "develop/reference/limits"
-                  },
-                  {
-                    "type": "doc",
-                    "id": "develop/reference/response-times"
-                  },
-                  {
-                    "type": "doc",
-                    "id": "develop/reference/repos"
-                  }
-                ],
-                "collapsed": true,
-                "collapsible": true
-              },
-              {
-                "type": "html",
-                "value": "<h6 class=\"margin-top--sm margin-bottom--none sidebar-section\">BUILD</h6>",
-                "defaultStyle": true
-              },
-              {
-                "type": "category",
-                "label": "SDK",
-                "link": {
-                  "type": "doc",
-                  "id": "sdk/README"
-                },
-                "items": [
-                  {
-                    "type": "doc",
-                    "id": "sdk/getting-started"
-                  },
-                  {
-                    "type": "doc",
-                    "id": "sdk/connect"
-                  },
-                  {
-                    "type": "doc",
-                    "id": "sdk/create"
-                  },
-                  {
-                    "type": "doc",
-                    "id": "sdk/write"
-                  },
-                  {
-                    "type": "doc",
-                    "id": "sdk/read"
-                  }
-                ],
-                "collapsed": true,
-                "collapsible": true
-              },
-              {
-                "type": "category",
-                "label": "CLI",
-                "link": {
-                  "type": "doc",
-                  "id": "cli/README"
-                },
-                "items": [
-                  {
-                    "type": "doc",
-                    "id": "cli/getting-started"
-                  },
-                  {
-                    "type": "doc",
-                    "id": "cli/connect"
-                  },
-                  {
-                    "type": "doc",
-                    "id": "cli/create"
-                  },
-                  {
-                    "type": "doc",
-                    "id": "cli/write"
-                  },
-                  {
-                    "type": "doc",
-                    "id": "cli/read"
-                  }
-                ],
-                "collapsed": true,
-                "collapsible": true
-              },
-              {
-                "type": "category",
-                "label": "REST API",
-                "link": {
-                  "type": "doc",
-                  "id": "api/README"
-                },
-                "items": [
-                  {
-                    "type": "doc",
-                    "id": "api/gateways"
-                  },
-                  {
-                    "type": "doc",
-                    "id": "api/endpoints"
-                  },
-                  {
-                    "type": "doc",
-                    "id": "api/errors"
-                  }
-                ],
-                "collapsed": true,
-                "collapsible": true
-              },
-              {
-                "type": "category",
-                "label": "Smart contracts",
-                "link": {
-                  "type": "doc",
-                  "id": "smart-contracts/README"
-                },
-                "items": [
-                  {
-                    "type": "doc",
-                    "id": "smart-contracts/getting-started"
-                  },
-                  {
-                    "type": "doc",
-                    "id": "smart-contracts/connect"
-                  },
-                  {
-                    "type": "doc",
-                    "id": "smart-contracts/create"
-                  },
-                  {
-                    "type": "doc",
-                    "id": "smart-contracts/write"
-                  },
-                  {
-                    "type": "doc",
-                    "id": "smart-contracts/read"
-                  }
-                ],
-                "collapsed": true,
-                "collapsible": true
-              },
-              {
-                "type": "html",
-                "value": "<h6 class=\"margin-top--sm margin-bottom--none sidebar-section\">INTEGRATIONS</h6>",
-                "defaultStyle": true
-              },
-              {
-                "type": "category",
-                "label": "Chains",
-                "link": {
-                  "type": "doc",
-                  "id": "develop/chains/README"
-                },
-                "items": [
-                  {
-                    "type": "doc",
-                    "id": "develop/chains/ethereum"
-                  },
-                  {
-                    "type": "doc",
-                    "id": "develop/chains/arbitrum"
-                  },
-                  {
-                    "type": "doc",
-                    "id": "develop/chains/optimism"
-                  },
-                  {
-                    "type": "doc",
-                    "id": "develop/chains/polygon"
-                  }
-                ],
-                "collapsed": true,
-                "collapsible": true
-              },
-              {
-                "type": "category",
-                "label": "Protocols",
-                "link": {
-                  "type": "doc",
-                  "id": "develop/integrations/ipfs"
-                },
-                "items": [
-                  {
-                    "type": "doc",
-                    "id": "develop/integrations/filecoin"
-                  },
-                  {
-                    "type": "doc",
-                    "id": "develop/integrations/chainlink"
-                  },
-                  {
-                    "type": "doc",
-                    "id": "develop/integrations/lit-protocol"
-                  },
-                  {
-                    "type": "doc",
-                    "id": "develop/integrations/nucypher"
-                  },
-                  {
-                    "type": "doc",
-                    "id": "develop/integrations/toucan"
-                  }
-                ],
-                "collapsed": true,
-                "collapsible": true
-              }
-            ],
-            "tutorials": [
-              {
-                "type": "category",
-                "label": "Tutorials",
-                "link": {
-                  "type": "generated-index",
-                  "slug": "/category/tutorials",
-                  "permalink": "/category/tutorials"
-                },
-                "items": [
-                  {
-                    "type": "doc",
-                    "id": "tutorials/dynamic-nft-solidity"
-                  },
-                  {
-                    "type": "doc",
-                    "id": "tutorials/dynamic-nft-p5js"
-                  }
-                ],
-                "collapsed": true,
-                "collapsible": true
-              }
-            ],
-            "contribute": [
-              {
-                "type": "doc",
-                "id": "contribute/README"
+                "value": "<hr />",
+                "defaultStyle": false,
+                "className": "menu-hr"
               },
               {
                 "type": "doc",
-                "id": "contribute/style-guide"
+                "id": "concepts/sql/README"
               },
               {
                 "type": "doc",
-                "id": "contribute/maintainers"
-              }
-            ],
-            "rigs": [
+                "id": "concepts/sql/create-a-table"
+              },
               {
                 "type": "category",
-                "label": "Tableland Rigs NFT",
+                "label": "Mutating table data",
                 "link": {
                   "type": "doc",
-                  "id": "products/rigs/README"
+                  "id": "concepts/sql/mutating-data"
                 },
                 "items": [
                   {
                     "type": "doc",
-                    "id": "products/rigs/what-are-rigs"
+                    "id": "concepts/sql/insert"
                   },
                   {
                     "type": "doc",
-                    "id": "products/rigs/the-garage"
+                    "id": "concepts/sql/update"
                   },
                   {
                     "type": "doc",
-                    "id": "products/rigs/rigs-discord"
+                    "id": "concepts/sql/upsert"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "concepts/sql/delete"
                   }
                 ],
                 "collapsed": true,
                 "collapsible": true
+              },
+              {
+                "type": "doc",
+                "id": "concepts/sql/read"
+              },
+              {
+                "type": "doc",
+                "id": "concepts/sql/access-control"
+              },
+              {
+                "type": "doc",
+                "id": "concepts/sql/incrementing-values"
+              },
+              {
+                "type": "doc",
+                "id": "concepts/sql/sql-spec"
               }
             ]
           }
@@ -3758,13 +2810,7 @@
     }
   },
   "docusaurus-plugin-content-pages": {
-    "default": [
-      {
-        "type": "jsx",
-        "permalink": "/",
-        "source": "@site/src/pages/index.tsx"
-      }
-    ]
+    "default": null
   },
   "docusaurus-plugin-debug": {},
   "docusaurus-theme-classic": {},

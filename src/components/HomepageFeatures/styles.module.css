@@ -4,6 +4,7 @@
 }
 
 .product {
+  min-height: 130px;
   background-color: var(--ifm-card-background-color);
   border-radius: var(--ifm-card-border-radius);
   box-shadow: var(--ifm-global-shadow-lw);

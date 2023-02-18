@@ -23,13 +23,13 @@
       "protocol"
     ]
   },
-  "sidebar": "concepts",
+  "sidebar": "sql",
   "previous": {
     "title": "Reading table data",
     "permalink": "/concepts/sql/read"
   },
   "next": {
-    "title": "SQL specification",
-    "permalink": "/concepts/sql/sql-spec"
+    "title": "Auto-incrementing",
+    "permalink": "/concepts/sql/incrementing-values"
   }
 }

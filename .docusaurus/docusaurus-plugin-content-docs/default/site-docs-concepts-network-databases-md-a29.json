@@ -22,14 +22,5 @@
       "databases",
       "relational database"
     ]
-  },
-  "sidebar": "concepts",
-  "previous": {
-    "title": "Hybrid state",
-    "permalink": "/concepts/network/tableland-state"
-  },
-  "next": {
-    "title": "Considerations & tradeoffs",
-    "permalink": "/concepts/network/considerations-tradeoffs"
   }
 }

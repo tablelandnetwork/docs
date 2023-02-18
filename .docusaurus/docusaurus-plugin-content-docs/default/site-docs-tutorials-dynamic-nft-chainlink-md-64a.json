@@ -1,0 +1,27 @@
+{
+  "unversionedId": "tutorials/dynamic-nft-chainlink",
+  "id": "tutorials/dynamic-nft-chainlink",
+  "title": "Dynamic NFT with Chainlink Automation",
+  "description": "Leverage Chainlink for automated NFT mutations.",
+  "source": "@site/docs/tutorials/dynamic-nft-chainlink.md",
+  "sourceDirName": "tutorials",
+  "slug": "/tutorials/dynamic-nft-chainlink",
+  "permalink": "/tutorials/dynamic-nft-chainlink",
+  "draft": false,
+  "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/tutorials/dynamic-nft-chainlink.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "title": "Dynamic NFT with Chainlink Automation",
+    "sidebar_label": "Dynamic NFT with Chainlink Automation",
+    "description": "Leverage Chainlink for automated NFT mutations.",
+    "synopsis": "The Chainlink network can help make autonomous on-chain calls and enable truly dynamic NFTs. All of the logic can be created with smart contracts and registered in the Chainlink automation portal, enabling dynamic NFTs using on-chain logic, only.",
+    "keywords": [
+      "chainlink",
+      "dynamic nft"
+    ]
+  }
+}

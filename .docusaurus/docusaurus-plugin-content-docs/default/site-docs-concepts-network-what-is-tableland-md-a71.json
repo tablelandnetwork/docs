@@ -22,14 +22,5 @@
       "Tableland",
       "about"
     ]
-  },
-  "sidebar": "concepts",
-  "previous": {
-    "title": "Overview",
-    "permalink": "/concepts/"
-  },
-  "next": {
-    "title": "Hybrid state",
-    "permalink": "/concepts/network/tableland-state"
   }
 }

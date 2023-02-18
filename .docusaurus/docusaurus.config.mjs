@@ -136,176 +136,24 @@ export default {
     },
     "navbar": {
       "hideOnScroll": false,
-      "title": "",
+      "title": "DOCS",
       "logo": {
         "alt": "Tableland logo",
         "src": "/img/tableland/logo-black.svg",
         "srcDark": "/img/tableland/logo-white.svg",
-        "width": 200,
+        "width": 180,
         "target": "_self"
       },
       "items": [
         {
-          "type": "docSidebar",
-          "position": "left",
-          "sidebarId": "concepts",
-          "label": "Concepts"
-        },
-        {
-          "type": "docSidebar",
-          "position": "left",
-          "sidebarId": "develop",
-          "label": "Develop"
-        },
-        {
-          "type": "doc",
-          "docId": "/category/tutorials",
-          "position": "left",
-          "label": "Tutorials"
-        },
-        {
-          "label": "Community",
-          "position": "right",
-          "items": [
-            {
-              "type": "docSidebar",
-              "sidebarId": "contribute",
-              "label": "Contribute"
-            },
-            {
-              "type": "docSidebar",
-              "sidebarId": "rigs",
-              "label": "Rigs NFT"
-            },
-            {
-              "href": "https://dev.tableland.xyz",
-              "label": "Tech blog",
-              "target": "_blank",
-              "rel": null
-            },
-            {
-              "href": "https://discord.com/invite/dc8EBEhGbg",
-              "label": "Discord",
-              "target": "_blank",
-              "rel": null
-            },
-            {
-              "href": "https://twitter.com/tableland__",
-              "label": "Twitter",
-              "target": "_blank",
-              "rel": null
-            },
-            {
-              "href": "https://tableland.xyz/pilot-program/",
-              "label": "Pilot Program",
-              "target": "_blank",
-              "rel": null
-            }
-          ]
-        },
-        {
-          "href": "https://github.com/tablelandnetwork/",
-          "position": "right",
-          "className": "header-github-link",
-          "aria-label": "GitHub repository"
-        },
-        {
           "type": "search",
-          "position": "right"
+          "position": "left"
         }
       ]
     },
     "tableOfContents": {
       "minHeadingLevel": 2,
       "maxHeadingLevel": 4
-    },
-    "customFooter": {
-      "links": [
-        {
-          "title": "Developers",
-          "items": [
-            {
-              "to": "/category/sdk",
-              "label": "SDK"
-            },
-            {
-              "to": "/category/cli",
-              "label": "CLI"
-            },
-            {
-              "to": "/category/api",
-              "label": "API"
-            },
-            {
-              "to": "/category/smart-contracts",
-              "label": "Smart contracts"
-            },
-            {
-              "to": "/concepts/sql/sql-spec",
-              "label": "SQL spec"
-            }
-          ]
-        },
-        {
-          "title": "Community",
-          "items": [
-            {
-              "to": "contribute",
-              "label": "Contribute"
-            },
-            {
-              "to": "rigs",
-              "label": "Rigs NFT"
-            },
-            {
-              "href": "https://discord.com/invite/dc8EBEhGbg",
-              "label": "Discord"
-            },
-            {
-              "href": "https://twitter.com/tableland__",
-              "label": "Twitter"
-            },
-            {
-              "href": "https://www.youtube.com/@tablelandxyz",
-              "label": "YouTube"
-            },
-            {
-              "href": "https://tableland.xyz/pilot-program/",
-              "label": "Pilot Program"
-            },
-            {
-              "href": "https://dev.tableland.xyz/showcase/",
-              "label": "Showcase"
-            }
-          ]
-        },
-        {
-          "title": "Company",
-          "items": [
-            {
-              "href": "https://dev.tableland.xyz",
-              "label": "Tech Blog"
-            },
-            {
-              "href": "https://mirror.xyz/tableland.eth",
-              "label": "Main Blog"
-            },
-            {
-              "href": "https://tableland.xyz",
-              "label": "Main site"
-            },
-            {
-              "label": "GitHub",
-              "href": "https://github.com/tablelandnetwork/"
-            },
-            {
-              "href": "https://linktr.ee/textileio",
-              "label": "Team"
-            }
-          ]
-        }
-      ],
-      "copyright": "Copyright © 2023 Tableland Network"
     },
     "prism": {
       "theme": {

@@ -52,14 +52,14 @@ Note that these EVM events are part of the transaction execution receipt in the 
 
 ### Transaction execution by validators
 
-Any EVM transaction execution can have two results: _Success_ or _Failure_. For example, if you try to send some funds from your wallet address but you don’t have enough balance, that transaction will fail. Similarly, if you call a smart-contract method and run out of gas in the middle of the execution, all the pending affected states are rollbacked.
+Any EVM transaction execution can have two results: _Success_ or _Failure_. For example, if you try to send some funds from your wallet address but you don’t have enough balance, that transaction will fail. Similarly, if you call a smart-contract method and run out of gas in the middle of the execution, all the pending affected states are rolled back.
 
-Tableland works in the same way. Tableland validators **watch for successful transaction executions** and apply those changes in the Tableland state. This explains some apparent fact: failed transactions don’t affect the state. This means there won’t be dangling changes in the Tableland network compared to the rollbacked on-chain state that this transaction tried to change; both _commit_ or _rollback_ decisions will be aligned.
+Tableland works in the same way. Tableland validators **watch for successful transaction executions** and apply those changes in the Tableland state. This explains some apparent fact: failed transactions don’t affect the state. This means there won’t be dangling changes in the Tableland network compared to the rolled back on-chain state that this transaction tried to change; both _commit_ or _rollback_ decisions will be aligned.
 
 Recall that in the previous section, we mentioned that we could have one or more events emitted in a single EVM transaction. The following are some examples of how this can happen:
 
-- If you send an EVM transaction to the _`runSQL(…)`_ smart contract, this method only emits one event. This is precisely the example [shown before](https://www.notion.so/Affecting-Tableland-State-fb8cf62da96d4175a22c9a3b953d6c76).
-- Suppose you created a smart contract with a method `mintTwoTables(...)` where the implementation calls twice the `createTable(...)` method of the _Registry smart contract._ In that case, this transaction receipt will have two events emitted.
+- If you send an EVM transaction to the _`runSQL(...)`_ smart contract, this method only emits one event. This is precisely the example shown before.
+- Suppose you created a smart contract with a method `mintTwoTables(...)` where the implementation calls twice the `createTable(...)` method of the _registry smart contract._ In that case, this transaction receipt will have two events emitted.
 
 A validator will take this successful EVM transaction packed with N events and **execute all of them atomically in the Tableland state**. But what does this mean?
 
@@ -75,14 +75,13 @@ Executing these transaction _T_ events can have two results:
 - Failed: generating a Tableland receipt for this transaction with a _failed_ status and auxiliary information of why.
 
 :::tip
-💡 You can get the Tableland transaction receipt with the `[tableland_getReceipt](https://docs.tableland.xyz/json-rpc-api#e605cf56de154dd49c72361fcd10fd5b)` RPC call.
-
+You can get the Tableland transaction receipt with the [receipt REST API endpoint](/develop/api/endpoints).
 :::
 
-**A Tableland transaction execution is successful if executing all the events emitted in that transaction is succeeded. On the contrary, a Tableland transaction execution has failed if any event execution fails.** You can relate this behavior exactly as SQL transactions work: the transaction is usually committed if all the queries succeed or rollbacked if any fail.
+A Tableland transaction execution is successful if executing all the events emitted in that transaction is succeeded. On the contrary, a Tableland transaction execution has failed if **any event execution fails.** You can relate this behavior exactly as SQL transactions work: the transaction is usually committed if all the queries succeed or rolled back if any fail.
 
 :::tip
-💡 Some simple reasons why executing an event can fail:
+Some simple reasons why executing an event can fail:
 
 - The write-query has invalid SQL syntax.
 - You don’t have enough permissions to do the operation.

@@ -1,0 +1,11 @@
+{
+  "title": "Tutorials",
+  "slug": "/category/tutorials",
+  "permalink": "/docs/category/tutorials",
+  "navigation": {
+    "next": {
+      "title": "Build a dynamic NFT in Solidity",
+      "permalink": "/docs/tutorials/dynamic-nft-solidity"
+    }
+  }
+}

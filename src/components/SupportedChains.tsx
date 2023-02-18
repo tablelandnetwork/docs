@@ -36,7 +36,7 @@ interface FormattedChains {
   chainNameFormatted: string;
   chainName: string;
   chainId: number;
-  contract: string;
+  contractAddress: string;
   blockExplorer: string;
 }
 
@@ -57,8 +57,9 @@ export const supportedChains = (): FormattedChains[] => {
       chainNameFormatted: c.chainName.replace(/-/g, " "),
       chainName: c.chainName,
       chainId: c.chainId,
-      contract: c.contractAddress,
+      contractAddress: c.contractAddress,
       blockExplorer: "",
+      baseUrl: c.baseUrl,
     };
     if (format.chainName === "local-tableland") format.location = "local";
     if (format.chainName === "mainnet") format.chainNameFormatted = "ethereum";
@@ -70,11 +71,31 @@ export const supportedChains = (): FormattedChains[] => {
     format.blockExplorer = getChainExplorer(
       format.chainNameFormatted.split(" ")[0],
       format.location,
-      format.contract
+      format.contractAddress
     );
     return format;
   });
   return formatChains;
+};
+
+// Get a single piece of chain related data by passing the `chainName` and the type
+export const ChainInfo = ({
+  chain,
+  info,
+}: {
+  chain: string;
+  info: string;
+}): JSX.Element => {
+  const chains = supportedChains();
+  const c: any = chains.find((x) => x.chainName === chain);
+  const data = c[info];
+  return c ? (
+    <>
+      <span>{data}</span>
+    </>
+  ) : (
+    <></>
+  );
 };
 
 // A simple unordered list of mainnet chains by "pretty" name.
@@ -149,10 +170,10 @@ export function SupportedChains(): JSX.Element {
               <td>{chains[chain].chainId}</td>
               <td style={{ fontWeight: "var(--ifm-font-weight-semibold)" }}>
                 {chains[chain].location === "local" ? (
-                  chains[chain].contract
+                  chains[chain].contractAddress
                 ) : (
                   <Link to={chains[chain].blockExplorer}>
-                    {chains[chain].contract}
+                    {chains[chain].contractAddress}
                   </Link>
                 )}
               </td>

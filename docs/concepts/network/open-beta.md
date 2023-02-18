@@ -1,7 +1,7 @@
 ---
 title: Open beta
 description: Use Tableland on testnet and mainnet chains while the protocol is in development.
-synopsis: The Tableland network is actively being developed and plans to launch a production (mainnet) in 2023. Prior to that launch, the protocol can still be used on supported chains, but its important to note what's in store in the future.
+synopsis: The Tableland network is actively being developed and plans to launch a production (mainnet) in 2024. Prior to that launch, the protocol can still be used on supported chains, but its important to note what's in store in the future.
 keywords:
   - open beta
   - production
@@ -11,7 +11,7 @@ import { ChainsList } from '@site/src/components/SupportedChains'
 
 ## Synopsis
 
-Tableland is currently in _open beta._ It’s live on many mainnet chains (including <ChainsList type={'mainnet'} format={'string'} />), allowing developers to use Tableland as their permissionless relational database. Tableland is planning to move into _production_ (the _Tableland_ mainnet) **at the end of 2023 (subject to change)**. This launch will include a data migration process and introduces a new cost component for table writes.
+Tableland is currently in _open beta._ It’s live on many mainnet chains (including <ChainsList type={'mainnet'} format={'string'} />), allowing developers to use Tableland as their permissionless relational database. Tableland is planning to move into _production_ (the _Tableland_ mainnet) **in 2024 (subject to change)**. This launch will include a data migration process and introduces a new cost component for table writes.
 
 During the open beta phase (between now and the production release), projects deployed on both testnet _and_ mainnet chains will, essentially, use the **_same_ Tableland network** (ignoring some validator node nuances). However, _only_ projects that created tables on _mainnet_ chains during the beta period will be migrated to production. The Tableland team will provide the necessary tooling and support for developers during this process.
 
@@ -22,11 +22,11 @@ During the open beta phase (between now and the production release), projects de
 
 ## Migrating to Production
 
-#### What tables are in scope?
+### What tables are in scope?
 
-**_Only projects using Tableland on mainnets will be in scope_**. Namely, tables that were minted on mainnet chains will be the only ones included in the transition plan from beta to production. This _should_ happen sometime in toward the end of 2023, and we will do our best to deliver on the ensuing points.
+**_Only projects using Tableland on mainnets will be in scope_**. Namely, tables that were minted on mainnet chains will be the only ones included in the transition plan from beta to production. This _should_ happen sometime in 2024, and we will do our best to deliver on the ensuing points.
 
-#### What will Tableland be responsible for?
+### What will Tableland be responsible for?
 
 **TL;DR**—Coordinating & executing the data migration from the Tableland beta environment to the production environment.
 
@@ -34,7 +34,7 @@ During the open beta phase (between now and the production release), projects de
 - The data migration _should_ be handled automatically—if a table was minted on a mainnet chain, we will do our best to port the data from beta to production Tableland without any developer actions required.
 - The Tableland team will also provide developer support, as needed.
 
-#### As a developer, what do I need to do?
+### As a developer, what do I need to do?
 
 **TL;DR**—The data migration process _should_ happen automatically (with one caveat), and we will do our best to auto-redirect queries from mainnet chains to the Tableland production environment…but to be safe, ensure you’ve taken the proper precautions.
 
@@ -47,7 +47,7 @@ During the open beta phase (between now and the production release), projects de
 - Another option is to future-proof your smart contracts to make sure [upgradeability patterns](https://docs.openzeppelin.com/upgrades-plugins/1.x/writing-upgradeable) are possible. This is not required but a potentially useful pattern to implement.
 - Note—Since this is a future endeavor, documentation on how to make these changes in your project does not exist yet but will be shared closer to the migration date. In the meantime, check out OpenZeppelin’s `[Ownable](https://docs.openzeppelin.com/contracts/2.x/api/ownership#Ownable)` (e.g., an `onlyOwner` modifier for altering a `baseURI`) and [upgradable contracts](https://github.com/OpenZeppelin/openzeppelin-contracts-upgradeable).
 
-#### Are there costs involved?
+### Are there costs involved?
 
 **TL;DR**—There is not a cost to migrating data to Tableland’s production environment, and this process _should_ be automatic. There is, however, a cost to keeping data available in production, and this process is _not_ automatic (it requires the developer to take action) and is _not_ free.
 
@@ -57,12 +57,12 @@ During the open beta phase (between now and the production release), projects de
   - With the Tableland production launch, there will be an additional cost for writing to tables that are stored by validator nodes. Thus, every write query comes with an on-chain transaction cost _plus_ an additional fee; this additive cost is still being researched.
   - For example, a table deployed on a mainnet chain during the beta period _should_ automatically be moved to a production table. Thus, once the table has transitioned, all _new_ writes from that point onward must take into account these new additive costs and will require developers to take action.
 
-#### Will there be "downtime"?
+### Will there be "downtime"?
 
 Tableland is a decentralized network, so validator nodes will already be live and running during the Tableland beta phase. The primary action validators must take is to copy the table data (from a database dedicated to the beta period) to a production database. Validators _should_ be able to seamlessly transition tables from the beta to production.
 
 As with any software release that requires social coordination, we will do our best to make sure there are no bumps in the road.
 
-#### What happens to the open beta version of Tableland? Can I still use Tableland on testnet chains & contracts?
+### What happens to the open beta version of Tableland? Can I still use Tableland on testnet chains & contracts?
 
 Yes, you can still use Tableland on testnet chains. With the production launch, two Tableland environments will exist: one intended for production, and one intended for testing. A validator’s database that was used during the open beta phase will transition to _only_ supporting testing-related environments, whereas before, a single database supported _both_ testnets and mainnets. Meaning, the database used during the beta phase will _only_ be used to support testnet chains.

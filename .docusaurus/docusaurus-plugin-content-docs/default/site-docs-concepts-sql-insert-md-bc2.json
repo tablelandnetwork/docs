@@ -23,7 +23,7 @@
       "protocol"
     ]
   },
-  "sidebar": "concepts",
+  "sidebar": "sql",
   "previous": {
     "title": "Mutating data",
     "permalink": "/concepts/sql/mutating-data"

@@ -22,14 +22,5 @@
       "write to table",
       "mutate table"
     ]
-  },
-  "sidebar": "develop",
-  "previous": {
-    "title": "Chainlink",
-    "permalink": "/develop/integrations/chainlink"
-  },
-  "next": {
-    "title": "NyCypher",
-    "permalink": "/develop/integrations/nucypher"
   }
 }

@@ -1,0 +1,23 @@
+{
+  "unversionedId": "Header",
+  "id": "Header",
+  "title": "Tableland SQL Language Specification",
+  "description": "stable",
+  "source": "@site/specs/sql/Header.md",
+  "sourceDirName": ".",
+  "slug": "/Header",
+  "permalink": "/sqls/Header",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "defaultSidebar",
+  "previous": {
+    "title": "Encoding",
+    "permalink": "/sqls/Encoding"
+  },
+  "next": {
+    "title": "Tableland SQL Language Specification",
+    "permalink": "/sqls/"
+  }
+}

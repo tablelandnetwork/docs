@@ -22,11 +22,7 @@
       "protocol"
     ]
   },
-  "sidebar": "concepts",
-  "previous": {
-    "title": "Roadmap",
-    "permalink": "/concepts/network/roadmap"
-  },
+  "sidebar": "sql",
   "next": {
     "title": "Create a table",
     "permalink": "/concepts/sql/create-a-table"

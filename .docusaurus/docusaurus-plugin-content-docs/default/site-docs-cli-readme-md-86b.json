@@ -1,8 +1,8 @@
 {
   "unversionedId": "cli/README",
   "id": "cli/README",
-  "title": "Overview",
-  "description": "Openly readable tables by your applications.",
+  "title": "Quick start",
+  "description": "Experiment with creating, editing, and querying tables from the comfort of the command line.",
   "source": "@site/docs/cli/README.md",
   "sourceDirName": "cli",
   "slug": "/cli/",
@@ -15,21 +15,13 @@
   "lastUpdatedAt": 1539502055,
   "formattedLastUpdatedAt": "Oct 14, 2018",
   "frontMatter": {
-    "title": "Overview",
-    "description": "Openly readable tables by your applications.",
+    "title": "Quick start",
+    "sidebar_label": "CLI",
+    "description": "Experiment with creating, editing, and querying tables from the comfort of the command line.",
     "synopsis": "The JavaScript / TypeScript SDK allows developers to create tables on their chain of choice. Connect, create, and then interact with your tables thereafter with table writes and reads.",
     "keywords": [
-      "SQL query",
-      "Tableland SDK"
+      "CLI",
+      "command line"
     ]
-  },
-  "sidebar": "develop",
-  "previous": {
-    "title": "Reading tables",
-    "permalink": "/sdk/read"
-  },
-  "next": {
-    "title": "Getting started",
-    "permalink": "/cli/getting-started"
   }
 }

@@ -21,14 +21,5 @@
     "keywords": [
       "protocol"
     ]
-  },
-  "sidebar": "develop",
-  "previous": {
-    "title": "Overview",
-    "permalink": "/develop/"
-  },
-  "next": {
-    "title": "Chains & contracts",
-    "permalink": "/develop/reference/chains-contracts"
   }
 }

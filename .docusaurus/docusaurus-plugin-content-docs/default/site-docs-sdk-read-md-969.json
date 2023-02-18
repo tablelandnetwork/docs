@@ -22,14 +22,5 @@
       "write to table",
       "mutate table"
     ]
-  },
-  "sidebar": "develop",
-  "previous": {
-    "title": "Writing to tables",
-    "permalink": "/sdk/write"
-  },
-  "next": {
-    "title": "Overview",
-    "permalink": "/cli/"
   }
 }

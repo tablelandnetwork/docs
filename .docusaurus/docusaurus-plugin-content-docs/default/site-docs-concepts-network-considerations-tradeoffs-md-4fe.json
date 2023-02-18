@@ -2,7 +2,7 @@
   "unversionedId": "concepts/network/considerations-tradeoffs",
   "id": "concepts/network/considerations-tradeoffs",
   "title": "Considerations & tradeoffs",
-  "description": "Tableland offers a solution to the suboptimal standards, and choosing a chain greatly impacts user experience & costs.",
+  "description": "Tableland offers a new solution to suboptimal web3 data storage standards.",
   "source": "@site/docs/concepts/network/considerations-tradeoffs.md",
   "sourceDirName": "concepts/network",
   "slug": "/concepts/network/considerations-tradeoffs",
@@ -16,16 +16,8 @@
   "formattedLastUpdatedAt": "Oct 14, 2018",
   "frontMatter": {
     "title": "Considerations & tradeoffs",
-    "description": "Tableland offers a solution to the suboptimal standards, and choosing a chain greatly impacts user experience & costs.",
+    "sidebar_label": "Why use Tableland?",
+    "description": "Tableland offers a new solution to suboptimal web3 data storage standards.",
     "synopsis": "Selecting the chain to deploy tables on has a significant impact on the subsequent usage of the table. But before selecting a chain to then use Tableland’s capabilities, it may be helpful to consider the alternatives to Tableland in the first place."
-  },
-  "sidebar": "concepts",
-  "previous": {
-    "title": "Databases & SQL",
-    "permalink": "/concepts/network/databases"
-  },
-  "next": {
-    "title": "Open beta",
-    "permalink": "/concepts/network/open-beta"
   }
 }

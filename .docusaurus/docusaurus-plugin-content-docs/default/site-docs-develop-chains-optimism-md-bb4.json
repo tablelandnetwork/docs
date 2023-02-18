@@ -2,7 +2,7 @@
   "unversionedId": "develop/chains/optimism",
   "id": "develop/chains/optimism",
   "title": "Optimism",
-  "description": "Openly readable tables by your applications.",
+  "description": "An overview of using Optimism with Tableland.",
   "source": "@site/docs/develop/chains/optimism.md",
   "sourceDirName": "develop/chains",
   "slug": "/develop/chains/optimism",
@@ -16,20 +16,10 @@
   "formattedLastUpdatedAt": "Oct 14, 2018",
   "frontMatter": {
     "title": "Optimism",
-    "description": "Openly readable tables by your applications.",
-    "synopsis": "Reading from tables is entirely open (for anyone), allowing for true composability. Write SQL qeuries—but with some limitations that are due to the nature of decentralized networks and deterministic requirements.",
+    "description": "An overview of using Optimism with Tableland.",
+    "synopsis": "Optimism is one of the EVM-compatible Layer 2 solutions that Tableland currently supports. Check out the overview of what this network is and relevant information when using it.",
     "keywords": [
-      "write to table",
-      "mutate table"
+      "optimism"
     ]
-  },
-  "sidebar": "develop",
-  "previous": {
-    "title": "Arbitrum",
-    "permalink": "/develop/chains/arbitrum"
-  },
-  "next": {
-    "title": "Polygon",
-    "permalink": "/develop/chains/polygon"
   }
 }

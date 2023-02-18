@@ -25,5 +25,10 @@
     ],
     "image": "img/tableland/example-image.png",
     "slug": "template"
+  },
+  "sidebar": "docs",
+  "next": {
+    "title": "Home",
+    "permalink": "/"
   }
 }

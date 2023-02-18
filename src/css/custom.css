@@ -48,27 +48,37 @@
   --ifm-color-secondary-lighter: rgb(241, 242, 245);
   --ifm-color-secondary-lightest: rgb(245, 246, 248);
   /* Decrease sidebar width and padding; change color to match table of contents */
-  --doc-sidebar-width: 17rem !important;
   --ifm-menu-link-padding-vertical: 0.3rem;
   --ifm-menu-color: var(--ifm-color-content-secondary);
+  /* --ifm-navbar-shadow: transparent; */
   /* Custom navbar and footer color */
-  --ifm-navbar-background-color: var(--ifm-color-secondary-lightest);
-  --ifm-footer-background-color: var(--ifm-navbar-background-color);
-  --ifm-hover-overlay: var(--ifm-navbar-background-color);
+  /* --ifm-navbar-background-color: transparent; */
+  --ifm-footer-background-color: var(--ifm-color-secondary-lighter);
+  /* --ifm-hover-overlay: var(--ifm-color-secondary-lightest); */
   /* Change `hr` section divider to be the same color as sidebar & TOC dividers */
   --ifm-hr-background-color: var(--ifm-toc-border-color);
   --ifm-button-border-radius: 0.4rem;
 }
 
+.menu-hr hr {
+  margin: 1rem auto !important;
+}
+
+.menu-item-home {
+  color: red !important;
+}
+
 /* Change the font color of the content to a dark grey but keep headings black*/
 [data-theme="light"] {
   --ifm-color-content: var(--ifm-color-gray-800);
+  --ifm-menu-color: var(--ifm-color-gray-800);
   --ifm-heading-color: var(--ifm-color-gray-1000);
 }
 
 /* Dark mode */
 [data-theme="dark"] {
   /* Colors */
+  --ifm-color-content: #ededed !important;
   --color-primary-rgb: 117, 182, 181;
   --ifm-color-primary: #75b6b5;
   --ifm-color-primary-dark: #3b706f;
@@ -77,12 +87,14 @@
   --ifm-color-primary-light: #4a8c8b;
   --ifm-color-primary-lighter: #59a7a6;
   --ifm-color-primary-lightest: #77dddc;
-  --ifm-heading-color: var(--ifm-color-content);
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
-  /* Make the navbar the same color as the background; include bottom box shadow */
-  --ifm-navbar-background-color: var(--ifm-background-surface-color);
-  --ifm-navbar-shadow: 0 1px 2px 0 var(--ifm-color-emphasis-200);
+  --ifm-heading-color: #e3e3e3;
   --ifm-menu-color: var(--ifm-color-gray-500);
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+  /* Make the navbar the same color as the background; include bottom box */
+  --ifm-navbar-shadow: 0 1px 2px 0 var(--ifm-toc-border-color);
+  --ifm-sidebar-background-color: var(--ifm-background-color);
+  --ifm-navbar-background-color: var(--ifm-background-color);
+  --ifm-footer-background-color: var(--ifm-background-surface-color);
 }
 
 /* A few general CSS fixes */
@@ -105,7 +117,7 @@ html {
 
 /* All docs pages are the first `.container` in `main`; reduce the max width for some visual spacing */
 main > .container {
-  max-width: 1100px;
+  max-width: 1125px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -145,6 +157,37 @@ main > .container h6 {
 .markdown h1:first-child {
   --ifm-h1-font-size: var(--h1-font-size);
   margin-bottom: calc(var(--ifm-h1-vertical-rhythm-bottom) * 0.3rem);
+}
+
+/* For the landing page, hide some unneeded content by looking if the
+`landing-page` class is being used */
+.theme-doc-breadcrumbs:has(~ div > .landing-page) {
+  display: none;
+}
+
+article:has(.markdown:has(.landing-page)) ~ .pagination-nav {
+  display: none;
+}
+
+.markdown:has(.landing-page) ~ footer > div > div > .theme-last-updated {
+  display: none;
+}
+
+.markdown:has(.landing-page) ~ .theme-doc-footer {
+  display: none;
+}
+
+/* Make it so that the footer horizontally lines up with preceding content */
+.footer {
+  background-color: inherit;
+  padding-left: 0;
+  padding-right: 0;
+  font-size: var(--ifm-h5-font-size);
+  font-weight: var(--ifm-font-weight-semibold);
+}
+
+.footer__col {
+  padding-left: 0;
 }
 
 /* Inline code snippets should not wrap */
@@ -229,31 +272,24 @@ html[data-theme="dark"] .header-github-link:before {
     no-repeat;
 }
 
-/* Change the search box outline color on focus */
-.navbar__search-input:focus-visible {
-  outline: var(--ifm-color-primary) auto 2px;
-}
-
-/* Don't darken button on hover */
-.button--secondary:hover {
-  background-color: var(--ifm-color-secondary);
-  border-color: var(--ifm-color-secondary);
-}
-
 /* Custom style for buttons */
-.btn {
-  display: flex;
-  align-items: center;
-  white-space: pre-wrap;
-  cursor: pointer;
-  font-weight: 600;
-  border-radius: 0.25rem;
-  padding: 0.3rem 0.4rem;
+.button {
+  font-weight: var(--ifm-font-weight-bold);
+  border-color: var(--ifm-color-secondary);
   border: none;
   outline: none;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+}
+
+.button--primary {
   background-color: var(--ifm-color-primary-dark);
-  color: #ffffff !important;
+}
+
+.button--secondary:hover {
+  background-color: var(--ifm-color-secondary);
+}
+
+[data-theme="dark"] .button--primary {
+  color: var(--ifm-color-content);
 }
 
 /* Change the `Tab` component's border radius to be more square */
@@ -271,15 +307,9 @@ html[data-theme="dark"] .header-github-link:before {
   font-size: var(--h1-font-size);
 }
 
-@media (max-width: 992px) {
-  .hero {
-    padding: 4rem 2rem;
-  }
-}
-
 /* Every markdown page with front matter `description` uses a larger font size */
 .page-description {
-  font-size: var(--h2-font-size);
+  font-size: var(--h3-font-size);
 }
 
 /* Reduce font size in sidebar, bold the active sidebar page, and don't change active link color on hover */
@@ -315,7 +345,7 @@ html[data-theme="dark"] .header-github-link:before {
 
 /* Pagination fixes background color, do not change font color on hover, and change icons */
 .pagination-nav__link {
-  background-color: var(--ifm-navbar-background-color);
+  background-color: var(--ifm-hover-overlay);
 }
 
 .pagination-nav__link:hover {
@@ -332,7 +362,31 @@ html[data-theme="dark"] .header-github-link:before {
 
 /* Decrease the width of the search bar */
 .navbar__search-input {
-  width: 10rem;
+  width: 20rem;
+}
+
+.navbar__search-input,
+input {
+  border: 1px solid var(--ifm-toc-border-color);
+  border-radius: 5px !important;
+  transition: filter var(--ifm-transition-fast);
+  background-color: var(--ifm-navbar-search-input-background-color);
+}
+
+[data-theme="dark"] .navbar__search-input,
+input {
+  --ifm-navbar-search-input-background-color: var(--ifm-hover-overlay);
+}
+
+/* Change the search box outline color on focus */
+.navbar__search-input:focus-visible {
+  outline: none;
+}
+
+@media (max-width: 997px) {
+  .navbar__search-input {
+    width: 10rem;
+  }
 }
 
 /* Make navbar text smaller */
@@ -340,15 +394,28 @@ html[data-theme="dark"] .header-github-link:before {
   font-size: var(--ifm-h5-font-size);
 }
 
+.navbar__brand {
+  font-size: 1.1rem;
+  margin-right: 17px;
+  color: var(--ifm-color-primary);
+}
+
+.navbar__title {
+  overflow: visible !important;
+}
+
 /* Horizontally center all images by default */
 img {
   display: block;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto 20px auto;
 }
 
 figcaption {
   font-size: var(--ifm-h5-font-size);
+  text-align: center;
+}
+
+table {
   text-align: center;
 }
 

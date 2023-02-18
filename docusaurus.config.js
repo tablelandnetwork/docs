@@ -5,7 +5,6 @@ const { lightCodeTheme, darkCodeTheme } = require("./src/theme/codeTheme");
 const math = require("remark-math");
 const katex = require("rehype-katex");
 // Imports for configuring the footer, site metadata, and navbar
-const footer = require("./config/footer");
 const metadata = require("./config/metadata");
 const navbar = require("./config/navbar");
 
@@ -60,6 +59,7 @@ const config = {
         path: "./.env", // Path to your environment variables in `.env` file
       },
     ],
+    // "docusaurus-plugin-fathom",
     /* TODO -- need to add redirects from old site pages to new site pages
     [
       "@docusaurus/plugin-client-redirects",
@@ -134,6 +134,10 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
+      // fathomAnalytics: {
+      //   siteId: "",
+      //   customDomain: "", // Use a custom domain, see https://usefathom.com/support/custom-domains
+      // },
       image: "img/tableland/site-banner.png", // Default image used in metadata, e.g., links shared on socials
       metadata,
       mermaid: {
@@ -157,10 +161,6 @@ const config = {
         minHeadingLevel: 2,
         maxHeadingLevel: 4,
       },
-      // Change this from `footer` to `customFooter`, and use `CustomFooter` over `Footer`
-      // Only render `CustomFooter` on the site landing page and `NotFound` page (instead of every page)
-      // In other words, since `footer` is not included, the `Footer` component is not rendered everywhere
-      customFooter: footer,
       prism: {
         theme: lightCodeTheme,
         darkTheme: darkCodeTheme,

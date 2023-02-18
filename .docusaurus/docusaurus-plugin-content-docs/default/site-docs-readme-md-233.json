@@ -1,0 +1,32 @@
+{
+  "unversionedId": "landing",
+  "id": "landing",
+  "title": "landing",
+  "description": "",
+  "source": "@site/docs/README.md",
+  "sourceDirName": ".",
+  "slug": "/",
+  "permalink": "/",
+  "draft": false,
+  "editUrl": null,
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "id": "landing",
+    "sidebar_label": "Home",
+    "hide_title": true,
+    "hide_bread_crumb": true,
+    "hide_table_of_contents": true,
+    "pagination_prev": null,
+    "pagination_next": null,
+    "custom_edit_url": null,
+    "slug": "/",
+    "keywords": [
+      "protocol"
+    ]
+  },
+  "sidebar": "home"
+}

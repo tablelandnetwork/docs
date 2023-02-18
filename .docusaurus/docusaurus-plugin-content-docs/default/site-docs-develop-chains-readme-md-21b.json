@@ -2,7 +2,7 @@
   "unversionedId": "develop/chains/README",
   "id": "develop/chains/README",
   "title": "Choosing a chain",
-  "description": "Openly readable tables by your applications.",
+  "description": "Selecting a base chain is an important step in any application’s design and, especially, for tables.",
   "source": "@site/docs/develop/chains/README.md",
   "sourceDirName": "develop/chains",
   "slug": "/develop/chains/",
@@ -16,20 +16,11 @@
   "formattedLastUpdatedAt": "Oct 14, 2018",
   "frontMatter": {
     "title": "Choosing a chain",
-    "description": "Openly readable tables by your applications.",
-    "synopsis": "Reading from tables is entirely open (for anyone), allowing for true composability. Write SQL qeuries—but with some limitations that are due to the nature of decentralized networks and deterministic requirements.",
+    "description": "Selecting a base chain is an important step in any application’s design and, especially, for tables.",
+    "synopsis": "Chain selection makes a significant impact on a table’s usability. Choose a chain that’s too slow or expensive, and it won’t be feasible for table writes to occur frequently. Deploy a cross-chain data model for value layering purposes, and certain on-chain access control features are lost.",
     "keywords": [
-      "write to table",
-      "mutate table"
+      "evm",
+      "chains"
     ]
-  },
-  "sidebar": "develop",
-  "previous": {
-    "title": "Reading tables",
-    "permalink": "/smart-contracts/read"
-  },
-  "next": {
-    "title": "Ethereum",
-    "permalink": "/develop/chains/ethereum"
   }
 }

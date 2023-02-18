@@ -245,7 +245,7 @@ export default function HomepageFeatures(): JSX.Element {
   return (
     <>
       <div
-        className="container padding-left--none padding-right--none"
+        className="container padding-left--none padding-right--none margin-top--lg"
         style={{ maxWidth: "1175px" }}
       >
         <div>

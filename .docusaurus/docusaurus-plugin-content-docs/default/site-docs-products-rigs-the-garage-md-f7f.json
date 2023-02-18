@@ -23,14 +23,5 @@
       "SQLite",
       "about"
     ]
-  },
-  "sidebar": "rigs",
-  "previous": {
-    "title": "What are Rigs?",
-    "permalink": "/products/rigs/what-are-rigs"
-  },
-  "next": {
-    "title": "Rigs in Discord",
-    "permalink": "/products/rigs/rigs-discord"
   }
 }

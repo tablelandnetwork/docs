@@ -23,14 +23,5 @@
       "Tableland",
       "about"
     ]
-  },
-  "sidebar": "concepts",
-  "previous": {
-    "title": "What is Tableland?",
-    "permalink": "/concepts/network/what-is-tableland"
-  },
-  "next": {
-    "title": "Databases & SQL",
-    "permalink": "/concepts/network/databases"
   }
 }

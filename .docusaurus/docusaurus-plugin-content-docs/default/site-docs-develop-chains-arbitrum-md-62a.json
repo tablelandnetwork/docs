@@ -2,7 +2,7 @@
   "unversionedId": "develop/chains/arbitrum",
   "id": "develop/chains/arbitrum",
   "title": "Arbitrum",
-  "description": "Openly readable tables by your applications.",
+  "description": "An overview of using Arbitrum with Tableland.",
   "source": "@site/docs/develop/chains/arbitrum.md",
   "sourceDirName": "develop/chains",
   "slug": "/develop/chains/arbitrum",
@@ -16,20 +16,10 @@
   "formattedLastUpdatedAt": "Oct 14, 2018",
   "frontMatter": {
     "title": "Arbitrum",
-    "description": "Openly readable tables by your applications.",
-    "synopsis": "Reading from tables is entirely open (for anyone), allowing for true composability. Write SQL qeuries—but with some limitations that are due to the nature of decentralized networks and deterministic requirements.",
+    "description": "An overview of using Arbitrum with Tableland.",
+    "synopsis": "Arbitrum is one of the EVM-compatible Layer 2 solutions that Tableland currently supports. Check out the overview of what this network is and relevant information when using it.",
     "keywords": [
-      "write to table",
-      "mutate table"
+      "arbitrum"
     ]
-  },
-  "sidebar": "develop",
-  "previous": {
-    "title": "Ethereum",
-    "permalink": "/develop/chains/ethereum"
-  },
-  "next": {
-    "title": "Optimism",
-    "permalink": "/develop/chains/optimism"
   }
 }

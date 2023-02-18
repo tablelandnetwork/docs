@@ -22,14 +22,5 @@
       "write to table",
       "mutate table"
     ]
-  },
-  "sidebar": "develop",
-  "previous": {
-    "title": "Response times",
-    "permalink": "/develop/reference/response-times"
-  },
-  "next": {
-    "title": "Overview",
-    "permalink": "/sdk/"
   }
 }

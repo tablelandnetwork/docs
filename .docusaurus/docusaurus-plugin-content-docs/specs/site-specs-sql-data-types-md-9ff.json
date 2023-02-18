@@ -1,0 +1,19 @@
+{
+  "unversionedId": "DataTypes",
+  "id": "DataTypes",
+  "title": "Data Types",
+  "description": "Tableland supports a small set of accepted column types in user-defined tables. The currently supported types are listed below and can be used to represent most, if not all, common SQL types:",
+  "source": "@site/specs/sql/DataTypes.md",
+  "sourceDirName": ".",
+  "slug": "/DataTypes",
+  "permalink": "/sqls/DataTypes",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "defaultSidebar",
+  "next": {
+    "title": "Encoding",
+    "permalink": "/sqls/Encoding"
+  }
+}

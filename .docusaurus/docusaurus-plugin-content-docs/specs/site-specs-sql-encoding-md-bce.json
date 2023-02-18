@@ -1,0 +1,23 @@
+{
+  "unversionedId": "Encoding",
+  "id": "Encoding",
+  "title": "Encoding",
+  "description": "As mentioned in the section on Statement Types, the core Tableland SQL parser accepts a semicolon-separated list of statements, which are then parsed and evaluated according to this Tableland SQL Specification. Internally, the statements are represented using an abstract syntax tree (AST). The internal representation of the nodes of this AST is outside the bounds of the Tableland SQL Specification, however, further details can be found in the Go Tableland SQL Parser reference implementation.",
+  "source": "@site/specs/sql/Encoding.md",
+  "sourceDirName": ".",
+  "slug": "/Encoding",
+  "permalink": "/sqls/Encoding",
+  "draft": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "defaultSidebar",
+  "previous": {
+    "title": "Data Types",
+    "permalink": "/sqls/DataTypes"
+  },
+  "next": {
+    "title": "Tableland SQL Language Specification",
+    "permalink": "/sqls/Header"
+  }
+}

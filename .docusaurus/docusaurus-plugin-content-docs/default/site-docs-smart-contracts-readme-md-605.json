@@ -22,14 +22,5 @@
       "SQL query",
       "Tableland SDK"
     ]
-  },
-  "sidebar": "develop",
-  "previous": {
-    "title": "Overview",
-    "permalink": "/api/errors"
-  },
-  "next": {
-    "title": "Getting started",
-    "permalink": "/smart-contracts/getting-started"
   }
 }

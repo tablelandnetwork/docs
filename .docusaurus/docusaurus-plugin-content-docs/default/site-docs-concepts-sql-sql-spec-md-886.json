@@ -22,9 +22,9 @@
       "protocol"
     ]
   },
-  "sidebar": "concepts",
+  "sidebar": "sql",
   "previous": {
-    "title": "Access control",
-    "permalink": "/concepts/sql/access-control"
+    "title": "Auto-incrementing",
+    "permalink": "/concepts/sql/incrementing-values"
   }
 }
