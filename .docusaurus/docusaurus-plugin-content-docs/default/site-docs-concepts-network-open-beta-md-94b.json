@@ -22,5 +22,10 @@
       "open beta",
       "production"
     ]
+  },
+  "sidebar": "concepts",
+  "previous": {
+    "title": "Use cases",
+    "permalink": "/concepts/network/use-cases"
   }
 }

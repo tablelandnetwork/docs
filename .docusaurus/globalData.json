@@ -11,44 +11,34 @@
           "mainDocId": "landing",
           "docs": [
             {
-              "id": "api/endpoints",
-              "path": "/api/endpoints"
-            },
-            {
-              "id": "api/errors",
-              "path": "/api/errors"
-            },
-            {
-              "id": "api/gateways",
-              "path": "/api/gateways"
-            },
-            {
-              "id": "api/README",
-              "path": "/api/"
-            },
-            {
               "id": "cli/connect",
-              "path": "/cli/connect"
+              "path": "/cli/connect",
+              "sidebar": "guides"
             },
             {
               "id": "cli/create",
-              "path": "/cli/create"
+              "path": "/cli/create",
+              "sidebar": "guides"
             },
             {
               "id": "cli/getting-started",
-              "path": "/cli/getting-started"
+              "path": "/cli/getting-started",
+              "sidebar": "guides"
             },
             {
               "id": "cli/read",
-              "path": "/cli/read"
+              "path": "/cli/read",
+              "sidebar": "guides"
             },
             {
               "id": "cli/README",
-              "path": "/cli/"
+              "path": "/cli/",
+              "sidebar": "guides"
             },
             {
               "id": "cli/write",
-              "path": "/cli/write"
+              "path": "/cli/write",
+              "sidebar": "guides"
             },
             {
               "id": "concepts/faqs",
@@ -56,27 +46,33 @@
             },
             {
               "id": "concepts/network/considerations-tradeoffs",
-              "path": "/concepts/network/considerations-tradeoffs"
+              "path": "/concepts/network/considerations-tradeoffs",
+              "sidebar": "concepts"
             },
             {
               "id": "concepts/network/open-beta",
-              "path": "/concepts/network/open-beta"
+              "path": "/concepts/network/open-beta",
+              "sidebar": "concepts"
             },
             {
               "id": "concepts/network/tableland-state",
-              "path": "/concepts/network/tableland-state"
+              "path": "/concepts/network/tableland-state",
+              "sidebar": "concepts"
             },
             {
               "id": "concepts/network/use-cases",
-              "path": "/concepts/network/use-cases"
+              "path": "/concepts/network/use-cases",
+              "sidebar": "concepts"
             },
             {
               "id": "concepts/network/what-is-tableland",
-              "path": "/concepts/network/what-is-tableland"
+              "path": "/concepts/network/what-is-tableland",
+              "sidebar": "concepts"
             },
             {
               "id": "concepts/README",
-              "path": "/concepts/"
+              "path": "/concepts/",
+              "sidebar": "concepts"
             },
             {
               "id": "concepts/related/databases",
@@ -151,15 +147,18 @@
             },
             {
               "id": "contribute/maintainers",
-              "path": "/contribute/maintainers"
+              "path": "/contribute/maintainers",
+              "sidebar": "contribute"
             },
             {
               "id": "contribute/README",
-              "path": "/contribute/"
+              "path": "/contribute/",
+              "sidebar": "contribute"
             },
             {
               "id": "contribute/style-guide",
-              "path": "/contribute/style-guide"
+              "path": "/contribute/style-guide",
+              "sidebar": "contribute"
             },
             {
               "id": "develop/chains/arbitrum",
@@ -218,36 +217,17 @@
               "path": "/develop/"
             },
             {
-              "id": "develop/reference/contracts",
-              "path": "/develop/reference/contracts"
-            },
-            {
-              "id": "develop/reference/limits",
-              "path": "/develop/reference/limits"
-            },
-            {
-              "id": "develop/reference/README",
-              "path": "/develop/reference/"
-            },
-            {
-              "id": "develop/reference/repos",
-              "path": "/develop/reference/repos"
-            },
-            {
-              "id": "develop/reference/response-times",
-              "path": "/develop/reference/response-times"
-            },
-            {
-              "id": "develop/reference/table-names",
-              "path": "/develop/reference/table-names"
-            },
-            {
               "id": "develop/tools/local-tableland",
               "path": "/develop/tools/local-tableland"
             },
             {
               "id": "develop/tools/README",
               "path": "/develop/tools/"
+            },
+            {
+              "id": "guides/README",
+              "path": "/guides/",
+              "sidebar": "guides"
             },
             {
               "id": "landing",
@@ -275,52 +255,94 @@
               "path": "/protocol/validator-spec"
             },
             {
+              "id": "reference/contracts",
+              "path": "/reference/contracts",
+              "sidebar": "reference"
+            },
+            {
+              "id": "reference/limits",
+              "path": "/reference/limits",
+              "sidebar": "reference"
+            },
+            {
+              "id": "reference/README",
+              "path": "/reference/",
+              "sidebar": "reference"
+            },
+            {
+              "id": "reference/repos",
+              "path": "/reference/repos",
+              "sidebar": "reference"
+            },
+            {
+              "id": "reference/response-times",
+              "path": "/reference/response-times",
+              "sidebar": "reference"
+            },
+            {
+              "id": "reference/table-names",
+              "path": "/reference/table-names",
+              "sidebar": "reference"
+            },
+            {
               "id": "sdk/connect",
-              "path": "/sdk/connect"
+              "path": "/sdk/connect",
+              "sidebar": "guides"
             },
             {
               "id": "sdk/create",
-              "path": "/sdk/create"
+              "path": "/sdk/create",
+              "sidebar": "guides"
             },
             {
               "id": "sdk/getting-started",
-              "path": "/sdk/getting-started"
+              "path": "/sdk/getting-started",
+              "sidebar": "guides"
             },
             {
               "id": "sdk/read",
-              "path": "/sdk/read"
+              "path": "/sdk/read",
+              "sidebar": "guides"
             },
             {
               "id": "sdk/README",
-              "path": "/sdk/"
+              "path": "/sdk/",
+              "sidebar": "guides"
             },
             {
               "id": "sdk/write",
-              "path": "/sdk/write"
+              "path": "/sdk/write",
+              "sidebar": "guides"
             },
             {
               "id": "smart-contracts/connect",
-              "path": "/smart-contracts/connect"
+              "path": "/smart-contracts/connect",
+              "sidebar": "guides"
             },
             {
               "id": "smart-contracts/create",
-              "path": "/smart-contracts/create"
+              "path": "/smart-contracts/create",
+              "sidebar": "guides"
             },
             {
               "id": "smart-contracts/getting-started",
-              "path": "/smart-contracts/getting-started"
+              "path": "/smart-contracts/getting-started",
+              "sidebar": "guides"
             },
             {
               "id": "smart-contracts/read",
-              "path": "/smart-contracts/read"
+              "path": "/smart-contracts/read",
+              "sidebar": "guides"
             },
             {
               "id": "smart-contracts/README",
-              "path": "/smart-contracts/"
+              "path": "/smart-contracts/",
+              "sidebar": "guides"
             },
             {
               "id": "smart-contracts/write",
-              "path": "/smart-contracts/write"
+              "path": "/smart-contracts/write",
+              "sidebar": "guides"
             },
             {
               "id": "sql/access-control",
@@ -348,15 +370,18 @@
             },
             {
               "id": "tutorials/dynamic-nft-chainlink",
-              "path": "/tutorials/dynamic-nft-chainlink"
+              "path": "/tutorials/dynamic-nft-chainlink",
+              "sidebar": "tutorials"
             },
             {
               "id": "tutorials/dynamic-nft-p5js",
-              "path": "/tutorials/dynamic-nft-p5js"
+              "path": "/tutorials/dynamic-nft-p5js",
+              "sidebar": "tutorials"
             },
             {
               "id": "tutorials/dynamic-nft-solidity",
-              "path": "/tutorials/dynamic-nft-solidity"
+              "path": "/tutorials/dynamic-nft-solidity",
+              "sidebar": "tutorials"
             },
             {
               "id": "tutorials/overview",
@@ -364,7 +389,28 @@
             },
             {
               "id": "tutorials/README",
-              "path": "/tutorials/"
+              "path": "/tutorials/",
+              "sidebar": "tutorials"
+            },
+            {
+              "id": "validator-api/endpoints",
+              "path": "/validator-api/endpoints",
+              "sidebar": "guides"
+            },
+            {
+              "id": "validator-api/errors",
+              "path": "/validator-api/errors",
+              "sidebar": "guides"
+            },
+            {
+              "id": "validator-api/gateways",
+              "path": "/validator-api/gateways",
+              "sidebar": "guides"
+            },
+            {
+              "id": "validator-api/README",
+              "path": "/validator-api/",
+              "sidebar": "guides"
             }
           ],
           "draftIds": [],
@@ -375,10 +421,64 @@
                 "label": "landing"
               }
             },
+            "concepts": {
+              "link": {
+                "path": "/concepts/",
+                "label": "concepts/README"
+              }
+            },
+            "sdk": {
+              "link": {
+                "path": "/sdk/",
+                "label": "sdk/README"
+              }
+            },
+            "cli": {
+              "link": {
+                "path": "/cli/",
+                "label": "cli/README"
+              }
+            },
+            "validatorApi": {
+              "link": {
+                "path": "/validator-api/",
+                "label": "validator-api/README"
+              }
+            },
+            "smartContracts": {
+              "link": {
+                "path": "/smart-contracts/",
+                "label": "smart-contracts/README"
+              }
+            },
             "sql": {
               "link": {
                 "path": "/concepts/sql/",
                 "label": "concepts/sql/README"
+              }
+            },
+            "guides": {
+              "link": {
+                "path": "/guides/",
+                "label": "guides/README"
+              }
+            },
+            "reference": {
+              "link": {
+                "path": "/reference/",
+                "label": "reference/README"
+              }
+            },
+            "tutorials": {
+              "link": {
+                "path": "/tutorials/",
+                "label": "tutorials/README"
+              }
+            },
+            "contribute": {
+              "link": {
+                "path": "/contribute/",
+                "label": "contribute/README"
               }
             }
           }

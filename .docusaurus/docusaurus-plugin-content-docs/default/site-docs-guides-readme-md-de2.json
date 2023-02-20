@@ -1,0 +1,31 @@
+{
+  "unversionedId": "guides/README",
+  "id": "guides/README",
+  "title": "Get started",
+  "description": "Openly readable tables by your applications.",
+  "source": "@site/docs/guides/README.md",
+  "sourceDirName": "guides",
+  "slug": "/guides/",
+  "permalink": "/guides/",
+  "draft": false,
+  "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/guides/README.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "title": "Get started",
+    "description": "Openly readable tables by your applications.",
+    "synopsis": "Reading from tables is entirely open (for anyone), allowing for true composability. Write SQL qeuries—but with some limitations that are due to the nature of decentralized networks and deterministic requirements.",
+    "keywords": [
+      "write to table",
+      "mutate table"
+    ]
+  },
+  "sidebar": "guides",
+  "next": {
+    "title": "Quick start",
+    "permalink": "/sdk/"
+  }
+}

@@ -21,5 +21,14 @@
     "keywords": [
       "create table"
     ]
+  },
+  "sidebar": "guides",
+  "previous": {
+    "title": "Connecting to Tableland",
+    "permalink": "/cli/connect"
+  },
+  "next": {
+    "title": "Writing to tables",
+    "permalink": "/cli/write"
   }
 }

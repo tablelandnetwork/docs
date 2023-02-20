@@ -16,13 +16,18 @@
   border-radius: 5px 5px !important;
   background-color: var(--ifm-hover-overlay) !important;
   color: var(--ifm-content-color) !important;
-  padding-right: 1rem;
+}
+
+.formBoxBtn:disabled {
+  opacity: 1;
+  color: rgba(var(--ifm-color-content-rgb), 0.6) !important;
 }
 
 @media (min-width: 997px) {
   .formBoxBtn {
     border-left: none;
     border-radius: 0 5px 5px 0 !important;
+    padding-right: 1rem;
   }
 
   .formBoxInput {
@@ -31,7 +36,7 @@
   }
 }
 
-@media (max-width: 997px) {
+@media (max-width: 996px) {
   .formBoxInput {
     width: 20rem;
   }

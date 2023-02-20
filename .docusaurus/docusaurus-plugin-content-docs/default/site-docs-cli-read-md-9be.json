@@ -22,5 +22,14 @@
       "write to table",
       "mutate table"
     ]
+  },
+  "sidebar": "guides",
+  "previous": {
+    "title": "Writing to tables",
+    "permalink": "/cli/write"
+  },
+  "next": {
+    "title": "Overview",
+    "permalink": "/smart-contracts/"
   }
 }

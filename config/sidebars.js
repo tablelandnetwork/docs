@@ -10,43 +10,52 @@
  */
 
 // For text section headers / dividers, pass the name of the section
-function section(text) {
-  return `<h6 class="margin-top--sm margin-bottom--none sidebar-section">${text.toUpperCase()}</h6>`;
+function sectionTitle(text) {
+  return {
+    type: "html",
+    value: `<h6 class="margin-top--md margin-bottom--none sidebar-section">${text.toUpperCase()}</h6>`,
+    defaultStyle: true,
+  };
 }
 
-const DiJsBadge = require("react-icons/di");
+function hr() {
+  return {
+    type: "html",
+    value: "<hr />",
+    defaultStyle: true,
+    className: "sidebar-hr",
+  };
+}
 
-const reference = {
-  type: "category",
-  label: "Reference",
-  link: {
-    type: "doc",
-    id: "develop/reference/README",
-  },
-  items: [
-    "develop/reference/contracts",
-    "develop/reference/limits",
-    "develop/reference/response-times",
-    "develop/reference/table-names",
-    "develop/reference/repos",
-  ],
-};
+function section(text) {
+  return [sectionTitle(text), hr()];
+}
 
-const network = [
-  {
-    type: "category",
-    label: "What is Tableland?",
-    link: {
-      type: "doc",
-      id: "concepts/network/what-is-tableland",
+function sidepageHeader(text) {
+  return [
+    {
+      type: "link",
+      label: "Back to Home",
+      className: "sidepage-back-home",
+      href: "/",
     },
-    items: [
-      "concepts/network/considerations-tradeoffs",
-      "concepts/network/tableland-state",
-      "concepts/network/use-cases",
-      "concepts/network/open-beta",
-    ],
-  },
+    {
+      type: "html",
+      value: `<h4 class="margin-top--md margin-bottom--sm sidepage-heading">${text}</h4>`,
+      defaultStyle: true,
+    },
+  ];
+}
+
+const concepts = [
+  ...sidepageHeader("Concepts"),
+  "concepts/README",
+  ...section("Concepts"),
+  "concepts/network/what-is-tableland",
+  "concepts/network/considerations-tradeoffs",
+  "concepts/network/tableland-state",
+  "concepts/network/use-cases",
+  "concepts/network/open-beta",
 ];
 
 const related = [
@@ -76,17 +85,7 @@ const tools = {
 };
 
 const sql = [
-  {
-    type: "link",
-    label: "← Home",
-    href: "/",
-  },
-  {
-    type: "html",
-    value: "<hr />",
-    defaultStyle: false,
-    className: "menu-hr",
-  },
+  ...sidepageHeader("SQL"),
   "concepts/sql/README",
   "concepts/sql/create-a-table",
   {
@@ -109,63 +108,74 @@ const sql = [
   "concepts/sql/sql-spec",
 ];
 
-const sdk = {
-  type: "category",
-  label: "SDK",
-  link: {
-    type: "doc",
-    id: "sdk/README",
-  },
-  items: [
-    "sdk/getting-started",
-    "sdk/connect",
-    "sdk/create",
-    "sdk/write",
-    "sdk/read",
-  ],
-};
+const sdk = [
+  ...section("SDK"),
+  "sdk/README",
+  "sdk/getting-started",
+  "sdk/connect",
+  "sdk/create",
+  "sdk/write",
+  "sdk/read",
+];
 
-const cli = {
-  type: "category",
-  label: "CLI",
-  link: {
-    type: "doc",
-    id: "cli/README",
-  },
-  items: [
-    "cli/getting-started",
-    "cli/connect",
-    "cli/create",
-    "cli/write",
-    "cli/read",
-  ],
-};
+const cli = [
+  ...section("CLI"),
+  "cli/README",
+  "cli/getting-started",
+  "cli/connect",
+  "cli/create",
+  "cli/write",
+  "cli/read",
+];
 
-const api = {
-  type: "category",
-  label: "REST API",
-  link: {
-    type: "doc",
-    id: "api/README",
-  },
-  items: ["api/gateways", "api/endpoints", "api/errors"],
-};
+const validatorApi = [
+  ...section("Validator API"),
+  "validator-api/README",
+  "validator-api/gateways",
+  "validator-api/endpoints",
+  "validator-api/errors",
+];
 
-const contracts = {
-  type: "category",
-  label: "Smart contracts",
-  link: {
-    type: "doc",
-    id: "smart-contracts/README",
-  },
-  items: [
-    "smart-contracts/getting-started",
-    "smart-contracts/connect",
-    "smart-contracts/create",
-    "smart-contracts/write",
-    "smart-contracts/read",
-  ],
-};
+const smartContracts = [
+  ...section("Smart contracts"),
+  "smart-contracts/README",
+  "smart-contracts/getting-started",
+  "smart-contracts/connect",
+  "smart-contracts/create",
+  "smart-contracts/write",
+  "smart-contracts/read",
+];
+
+const guides = [
+  ...sidepageHeader("Guides"),
+  "guides/README",
+  ...sdk,
+  ...validatorApi,
+  ...cli,
+  ...smartContracts,
+];
+
+const reference = [
+  ...sidepageHeader("Reference"),
+  ...section("Protocol"),
+  "reference/README",
+  "reference/contracts",
+  "reference/limits",
+  ...section("Protocol"),
+  "reference/README",
+  "reference/response-times",
+  "reference/table-names",
+  "reference/repos",
+];
+
+const tutorials = [
+  ...sidepageHeader("Tutorials"),
+  "tutorials/README",
+  ...section("Dynamic NFTs"),
+  "tutorials/dynamic-nft-solidity",
+  "tutorials/dynamic-nft-p5js",
+  "tutorials/dynamic-nft-chainlink",
+];
 
 // @ts-check
 /** @type {import('@docusaurus/plugin-content-docs').SidebarsConfig} */
@@ -174,16 +184,54 @@ const sidebars = {
     {
       type: "doc",
       id: "landing", // Custom ID for the `README` page in `docs` root
-      className: "menu-item-home",
+      className: "sidebar-landing",
     },
-    "concepts/sql/README",
     {
-      type: "link",
-      label: "SQL",
-      href: "/concepts/sql",
+      type: "doc",
+      id: "concepts/README",
+      label: "Get started",
+      className: "sidebar-landing",
+    },
+    {
+      type: "html",
+      value: "<hr />",
+      defaultStyle: true,
+      className: "sidebar-hr",
+    },
+    {
+      type: "doc",
+      id: "concepts/README",
+      label: "Concepts",
+      className: "sidebar-landing",
+    },
+    {
+      type: "doc",
+      id: "guides/README",
+      label: "Guides",
+      className: "sidebar-landing",
+    },
+    {
+      type: "doc",
+      id: "tutorials/README",
+      label: "Tutorials",
+      className: "sidebar-landing",
+    },
+    {
+      type: "doc",
+      id: "reference/README",
+      label: "Reference",
+      className: "sidebar-landing",
     },
   ],
+  concepts: concepts,
+  sdk: sdk,
+  cli: cli,
+  validatorApi: validatorApi,
+  smartContracts: smartContracts,
   sql: sql,
+  guides: guides,
+  reference: reference,
+  tutorials: tutorials,
   // // By default, Docusaurus generates a sidebar from the docs folder structure
   // // tutorialSidebar: [{type: 'autogenerated', dirName: '.'}],
   // a: [
@@ -191,7 +239,7 @@ const sidebars = {
   //   "concepts/faqs",
   //   {
   //     type: "html",
-  //     value: section("Basics"),
+  //     value: ...section("Basics"),
   //     defaultStyle: true,
   //   },
   //   network,
@@ -208,7 +256,7 @@ const sidebars = {
   //   },
   //   {
   //     type: "html",
-  //     value: section("Basics"),
+  //     value: ...section("Basics"),
   //     defaultStyle: true,
   //   },
   //   network,
@@ -220,13 +268,13 @@ const sidebars = {
   //   "develop/README",
   //   {
   //     type: "html",
-  //     value: section(""),
+  //     value: ...section(""),
   //     defaultStyle: true,
   //   },
   //   reference,
   //   {
   //     type: "html",
-  //     value: section("Build"),
+  //     value: ...section("Build"),
   //     defaultStyle: true,
   //   },
   //   sdk,
@@ -239,7 +287,7 @@ const sidebars = {
   //   contracts,
   //   {
   //     type: "html",
-  //     value: section("Integrations"),
+  //     value: ...section("Integrations"),
   //     defaultStyle: true,
   //   },
   //   {
@@ -274,7 +322,7 @@ const sidebars = {
   //   },
   //   {
   //     type: "html",
-  //     value: section("Tools"),
+  //     value: ...section("Tools"),
   //     defaultStyle: true,
   //   },
   //   tools,
@@ -293,11 +341,12 @@ const sidebars = {
   //     ],
   //   },
   // ],
-  // contribute: [
-  //   "contribute/README",
-  //   "contribute/style-guide",
-  //   "contribute/maintainers",
-  // ],
+  contribute: [
+    ...sidepageHeader("Contribute"),
+    "contribute/README",
+    "contribute/style-guide",
+    "contribute/maintainers",
+  ],
   // rigs: [
   //   {
   //     type: "category",

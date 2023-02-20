@@ -22,5 +22,14 @@
       "Tableland",
       "about"
     ]
+  },
+  "sidebar": "concepts",
+  "previous": {
+    "title": "Overview",
+    "permalink": "/concepts/"
+  },
+  "next": {
+    "title": "Why use Tableland?",
+    "permalink": "/concepts/network/considerations-tradeoffs"
   }
 }

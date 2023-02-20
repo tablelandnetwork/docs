@@ -16,12 +16,20 @@
   "formattedLastUpdatedAt": "Oct 14, 2018",
   "frontMatter": {
     "title": "Quick start",
-    "sidebar_label": "CLI",
     "description": "Experiment with creating, editing, and querying tables from the comfort of the command line.",
     "synopsis": "The JavaScript / TypeScript SDK allows developers to create tables on their chain of choice. Connect, create, and then interact with your tables thereafter with table writes and reads.",
     "keywords": [
       "CLI",
       "command line"
     ]
+  },
+  "sidebar": "guides",
+  "previous": {
+    "title": "Errors",
+    "permalink": "/validator-api/errors"
+  },
+  "next": {
+    "title": "Getting started",
+    "permalink": "/cli/getting-started"
   }
 }

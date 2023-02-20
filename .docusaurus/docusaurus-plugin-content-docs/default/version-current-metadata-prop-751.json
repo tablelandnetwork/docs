@@ -13,32 +13,306 @@
         "type": "link",
         "label": "Home",
         "href": "/",
-        "className": "menu-item-home",
+        "className": "sidebar-landing",
         "docId": "landing"
       },
       {
         "type": "link",
-        "label": "Quick start",
-        "href": "/concepts/sql/",
-        "docId": "concepts/sql/README"
+        "label": "Get started",
+        "href": "/concepts/",
+        "className": "sidebar-landing",
+        "docId": "concepts/README"
+      },
+      {
+        "type": "html",
+        "value": "<hr />",
+        "defaultStyle": true,
+        "className": "sidebar-hr"
       },
       {
         "type": "link",
-        "label": "SQL",
-        "href": "/concepts/sql"
+        "label": "Concepts",
+        "href": "/concepts/",
+        "className": "sidebar-landing",
+        "docId": "concepts/README"
+      },
+      {
+        "type": "link",
+        "label": "Guides",
+        "href": "/guides/",
+        "className": "sidebar-landing",
+        "docId": "guides/README"
+      },
+      {
+        "type": "link",
+        "label": "Tutorials",
+        "href": "/tutorials/",
+        "className": "sidebar-landing",
+        "docId": "tutorials/README"
+      },
+      {
+        "type": "link",
+        "label": "Reference",
+        "href": "/reference/",
+        "className": "sidebar-landing",
+        "docId": "reference/README"
+      }
+    ],
+    "concepts": [
+      {
+        "type": "link",
+        "label": "Back to Home",
+        "className": "sidepage-back-home",
+        "href": "/"
+      },
+      {
+        "type": "html",
+        "value": "<h4 class=\"margin-top--md margin-bottom--sm sidepage-heading\">Concepts</h4>",
+        "defaultStyle": true
+      },
+      {
+        "type": "link",
+        "label": "Overview",
+        "href": "/concepts/",
+        "docId": "concepts/README"
+      },
+      {
+        "type": "html",
+        "value": "<h6 class=\"margin-top--md margin-bottom--none sidebar-section\">CONCEPTS</h6>",
+        "defaultStyle": true
+      },
+      {
+        "type": "html",
+        "value": "<hr />",
+        "defaultStyle": true,
+        "className": "sidebar-hr"
+      },
+      {
+        "type": "link",
+        "label": "What is Tableland?",
+        "href": "/concepts/network/what-is-tableland",
+        "docId": "concepts/network/what-is-tableland"
+      },
+      {
+        "type": "link",
+        "label": "Why use Tableland?",
+        "href": "/concepts/network/considerations-tradeoffs",
+        "docId": "concepts/network/considerations-tradeoffs"
+      },
+      {
+        "type": "link",
+        "label": "Hybrid state",
+        "href": "/concepts/network/tableland-state",
+        "docId": "concepts/network/tableland-state"
+      },
+      {
+        "type": "link",
+        "label": "Use cases",
+        "href": "/concepts/network/use-cases",
+        "docId": "concepts/network/use-cases"
+      },
+      {
+        "type": "link",
+        "label": "Open beta",
+        "href": "/concepts/network/open-beta",
+        "docId": "concepts/network/open-beta"
+      }
+    ],
+    "sdk": [
+      {
+        "type": "html",
+        "value": "<h6 class=\"margin-top--md margin-bottom--none sidebar-section\">SDK</h6>",
+        "defaultStyle": true
+      },
+      {
+        "type": "html",
+        "value": "<hr />",
+        "defaultStyle": true,
+        "className": "sidebar-hr"
+      },
+      {
+        "type": "link",
+        "label": "Quick start",
+        "href": "/sdk/",
+        "docId": "sdk/README"
+      },
+      {
+        "type": "link",
+        "label": "Getting started",
+        "href": "/sdk/getting-started",
+        "docId": "sdk/getting-started"
+      },
+      {
+        "type": "link",
+        "label": "Connecting to Tableland",
+        "href": "/sdk/connect",
+        "docId": "sdk/connect"
+      },
+      {
+        "type": "link",
+        "label": "Creating tables",
+        "href": "/sdk/create",
+        "docId": "sdk/create"
+      },
+      {
+        "type": "link",
+        "label": "Writing to tables",
+        "href": "/sdk/write",
+        "docId": "sdk/write"
+      },
+      {
+        "type": "link",
+        "label": "Reading tables",
+        "href": "/sdk/read",
+        "docId": "sdk/read"
+      }
+    ],
+    "cli": [
+      {
+        "type": "html",
+        "value": "<h6 class=\"margin-top--md margin-bottom--none sidebar-section\">CLI</h6>",
+        "defaultStyle": true
+      },
+      {
+        "type": "html",
+        "value": "<hr />",
+        "defaultStyle": true,
+        "className": "sidebar-hr"
+      },
+      {
+        "type": "link",
+        "label": "Quick start",
+        "href": "/cli/",
+        "docId": "cli/README"
+      },
+      {
+        "type": "link",
+        "label": "Getting started",
+        "href": "/cli/getting-started",
+        "docId": "cli/getting-started"
+      },
+      {
+        "type": "link",
+        "label": "Connecting to Tableland",
+        "href": "/cli/connect",
+        "docId": "cli/connect"
+      },
+      {
+        "type": "link",
+        "label": "Creating tables",
+        "href": "/cli/create",
+        "docId": "cli/create"
+      },
+      {
+        "type": "link",
+        "label": "Writing to tables",
+        "href": "/cli/write",
+        "docId": "cli/write"
+      },
+      {
+        "type": "link",
+        "label": "Reading tables",
+        "href": "/cli/read",
+        "docId": "cli/read"
+      }
+    ],
+    "validatorApi": [
+      {
+        "type": "html",
+        "value": "<h6 class=\"margin-top--md margin-bottom--none sidebar-section\">VALIDATOR API</h6>",
+        "defaultStyle": true
+      },
+      {
+        "type": "html",
+        "value": "<hr />",
+        "defaultStyle": true,
+        "className": "sidebar-hr"
+      },
+      {
+        "type": "link",
+        "label": "Quick start",
+        "href": "/validator-api/",
+        "docId": "validator-api/README"
+      },
+      {
+        "type": "link",
+        "label": "Gateways",
+        "href": "/validator-api/gateways",
+        "docId": "validator-api/gateways"
+      },
+      {
+        "type": "link",
+        "label": "Endpoints",
+        "href": "/validator-api/endpoints",
+        "docId": "validator-api/endpoints"
+      },
+      {
+        "type": "link",
+        "label": "Errors",
+        "href": "/validator-api/errors",
+        "docId": "validator-api/errors"
+      }
+    ],
+    "smartContracts": [
+      {
+        "type": "html",
+        "value": "<h6 class=\"margin-top--md margin-bottom--none sidebar-section\">SMART CONTRACTS</h6>",
+        "defaultStyle": true
+      },
+      {
+        "type": "html",
+        "value": "<hr />",
+        "defaultStyle": true,
+        "className": "sidebar-hr"
+      },
+      {
+        "type": "link",
+        "label": "Overview",
+        "href": "/smart-contracts/",
+        "docId": "smart-contracts/README"
+      },
+      {
+        "type": "link",
+        "label": "Getting started",
+        "href": "/smart-contracts/getting-started",
+        "docId": "smart-contracts/getting-started"
+      },
+      {
+        "type": "link",
+        "label": "Connecting to Tableland",
+        "href": "/smart-contracts/connect",
+        "docId": "smart-contracts/connect"
+      },
+      {
+        "type": "link",
+        "label": "Creating tables",
+        "href": "/smart-contracts/create",
+        "docId": "smart-contracts/create"
+      },
+      {
+        "type": "link",
+        "label": "Writing to tables",
+        "href": "/smart-contracts/write",
+        "docId": "smart-contracts/write"
+      },
+      {
+        "type": "link",
+        "label": "Reading tables",
+        "href": "/smart-contracts/read",
+        "docId": "smart-contracts/read"
       }
     ],
     "sql": [
       {
         "type": "link",
-        "label": "← Home",
+        "label": "Back to Home",
+        "className": "sidepage-back-home",
         "href": "/"
       },
       {
         "type": "html",
-        "value": "<hr />",
-        "defaultStyle": false,
-        "className": "menu-hr"
+        "value": "<h4 class=\"margin-top--md margin-bottom--sm sidepage-heading\">SQL</h4>",
+        "defaultStyle": true
       },
       {
         "type": "link",
@@ -109,58 +383,395 @@
         "href": "/concepts/sql/sql-spec",
         "docId": "concepts/sql/sql-spec"
       }
+    ],
+    "guides": [
+      {
+        "type": "link",
+        "label": "Back to Home",
+        "className": "sidepage-back-home",
+        "href": "/"
+      },
+      {
+        "type": "html",
+        "value": "<h4 class=\"margin-top--md margin-bottom--sm sidepage-heading\">Guides</h4>",
+        "defaultStyle": true
+      },
+      {
+        "type": "link",
+        "label": "Get started",
+        "href": "/guides/",
+        "docId": "guides/README"
+      },
+      {
+        "type": "html",
+        "value": "<h6 class=\"margin-top--md margin-bottom--none sidebar-section\">SDK</h6>",
+        "defaultStyle": true
+      },
+      {
+        "type": "html",
+        "value": "<hr />",
+        "defaultStyle": true,
+        "className": "sidebar-hr"
+      },
+      {
+        "type": "link",
+        "label": "Quick start",
+        "href": "/sdk/",
+        "docId": "sdk/README"
+      },
+      {
+        "type": "link",
+        "label": "Getting started",
+        "href": "/sdk/getting-started",
+        "docId": "sdk/getting-started"
+      },
+      {
+        "type": "link",
+        "label": "Connecting to Tableland",
+        "href": "/sdk/connect",
+        "docId": "sdk/connect"
+      },
+      {
+        "type": "link",
+        "label": "Creating tables",
+        "href": "/sdk/create",
+        "docId": "sdk/create"
+      },
+      {
+        "type": "link",
+        "label": "Writing to tables",
+        "href": "/sdk/write",
+        "docId": "sdk/write"
+      },
+      {
+        "type": "link",
+        "label": "Reading tables",
+        "href": "/sdk/read",
+        "docId": "sdk/read"
+      },
+      {
+        "type": "html",
+        "value": "<h6 class=\"margin-top--md margin-bottom--none sidebar-section\">VALIDATOR API</h6>",
+        "defaultStyle": true
+      },
+      {
+        "type": "html",
+        "value": "<hr />",
+        "defaultStyle": true,
+        "className": "sidebar-hr"
+      },
+      {
+        "type": "link",
+        "label": "Quick start",
+        "href": "/validator-api/",
+        "docId": "validator-api/README"
+      },
+      {
+        "type": "link",
+        "label": "Gateways",
+        "href": "/validator-api/gateways",
+        "docId": "validator-api/gateways"
+      },
+      {
+        "type": "link",
+        "label": "Endpoints",
+        "href": "/validator-api/endpoints",
+        "docId": "validator-api/endpoints"
+      },
+      {
+        "type": "link",
+        "label": "Errors",
+        "href": "/validator-api/errors",
+        "docId": "validator-api/errors"
+      },
+      {
+        "type": "html",
+        "value": "<h6 class=\"margin-top--md margin-bottom--none sidebar-section\">CLI</h6>",
+        "defaultStyle": true
+      },
+      {
+        "type": "html",
+        "value": "<hr />",
+        "defaultStyle": true,
+        "className": "sidebar-hr"
+      },
+      {
+        "type": "link",
+        "label": "Quick start",
+        "href": "/cli/",
+        "docId": "cli/README"
+      },
+      {
+        "type": "link",
+        "label": "Getting started",
+        "href": "/cli/getting-started",
+        "docId": "cli/getting-started"
+      },
+      {
+        "type": "link",
+        "label": "Connecting to Tableland",
+        "href": "/cli/connect",
+        "docId": "cli/connect"
+      },
+      {
+        "type": "link",
+        "label": "Creating tables",
+        "href": "/cli/create",
+        "docId": "cli/create"
+      },
+      {
+        "type": "link",
+        "label": "Writing to tables",
+        "href": "/cli/write",
+        "docId": "cli/write"
+      },
+      {
+        "type": "link",
+        "label": "Reading tables",
+        "href": "/cli/read",
+        "docId": "cli/read"
+      },
+      {
+        "type": "html",
+        "value": "<h6 class=\"margin-top--md margin-bottom--none sidebar-section\">SMART CONTRACTS</h6>",
+        "defaultStyle": true
+      },
+      {
+        "type": "html",
+        "value": "<hr />",
+        "defaultStyle": true,
+        "className": "sidebar-hr"
+      },
+      {
+        "type": "link",
+        "label": "Overview",
+        "href": "/smart-contracts/",
+        "docId": "smart-contracts/README"
+      },
+      {
+        "type": "link",
+        "label": "Getting started",
+        "href": "/smart-contracts/getting-started",
+        "docId": "smart-contracts/getting-started"
+      },
+      {
+        "type": "link",
+        "label": "Connecting to Tableland",
+        "href": "/smart-contracts/connect",
+        "docId": "smart-contracts/connect"
+      },
+      {
+        "type": "link",
+        "label": "Creating tables",
+        "href": "/smart-contracts/create",
+        "docId": "smart-contracts/create"
+      },
+      {
+        "type": "link",
+        "label": "Writing to tables",
+        "href": "/smart-contracts/write",
+        "docId": "smart-contracts/write"
+      },
+      {
+        "type": "link",
+        "label": "Reading tables",
+        "href": "/smart-contracts/read",
+        "docId": "smart-contracts/read"
+      }
+    ],
+    "reference": [
+      {
+        "type": "link",
+        "label": "Back to Home",
+        "className": "sidepage-back-home",
+        "href": "/"
+      },
+      {
+        "type": "html",
+        "value": "<h4 class=\"margin-top--md margin-bottom--sm sidepage-heading\">Reference</h4>",
+        "defaultStyle": true
+      },
+      {
+        "type": "html",
+        "value": "<h6 class=\"margin-top--md margin-bottom--none sidebar-section\">PROTOCOL</h6>",
+        "defaultStyle": true
+      },
+      {
+        "type": "html",
+        "value": "<hr />",
+        "defaultStyle": true,
+        "className": "sidebar-hr"
+      },
+      {
+        "type": "link",
+        "label": "Tableland protocol",
+        "href": "/reference/",
+        "docId": "reference/README"
+      },
+      {
+        "type": "link",
+        "label": "Contracts",
+        "href": "/reference/contracts",
+        "docId": "reference/contracts"
+      },
+      {
+        "type": "link",
+        "label": "Limits",
+        "href": "/reference/limits",
+        "docId": "reference/limits"
+      },
+      {
+        "type": "html",
+        "value": "<h6 class=\"margin-top--md margin-bottom--none sidebar-section\">PROTOCOL</h6>",
+        "defaultStyle": true
+      },
+      {
+        "type": "html",
+        "value": "<hr />",
+        "defaultStyle": true,
+        "className": "sidebar-hr"
+      },
+      {
+        "type": "link",
+        "label": "Tableland protocol",
+        "href": "/reference/",
+        "docId": "reference/README"
+      },
+      {
+        "type": "link",
+        "label": "Response times",
+        "href": "/reference/response-times",
+        "docId": "reference/response-times"
+      },
+      {
+        "type": "link",
+        "label": "Table names",
+        "href": "/reference/table-names",
+        "docId": "reference/table-names"
+      },
+      {
+        "type": "link",
+        "label": "Repos",
+        "href": "/reference/repos",
+        "docId": "reference/repos"
+      }
+    ],
+    "tutorials": [
+      {
+        "type": "link",
+        "label": "Back to Home",
+        "className": "sidepage-back-home",
+        "href": "/"
+      },
+      {
+        "type": "html",
+        "value": "<h4 class=\"margin-top--md margin-bottom--sm sidepage-heading\">Tutorials</h4>",
+        "defaultStyle": true
+      },
+      {
+        "type": "link",
+        "label": "Overview",
+        "href": "/tutorials/",
+        "docId": "tutorials/README"
+      },
+      {
+        "type": "html",
+        "value": "<h6 class=\"margin-top--md margin-bottom--none sidebar-section\">DYNAMIC NFTS</h6>",
+        "defaultStyle": true
+      },
+      {
+        "type": "html",
+        "value": "<hr />",
+        "defaultStyle": true,
+        "className": "sidebar-hr"
+      },
+      {
+        "type": "link",
+        "label": "Build a dynamic NFT in Solidity",
+        "href": "/tutorials/dynamic-nft-solidity",
+        "docId": "tutorials/dynamic-nft-solidity"
+      },
+      {
+        "type": "link",
+        "label": "Creating a dynamic NFT with p5.js",
+        "href": "/tutorials/dynamic-nft-p5js",
+        "docId": "tutorials/dynamic-nft-p5js"
+      },
+      {
+        "type": "link",
+        "label": "Dynamic NFT with Chainlink Automation",
+        "href": "/tutorials/dynamic-nft-chainlink",
+        "docId": "tutorials/dynamic-nft-chainlink"
+      }
+    ],
+    "contribute": [
+      {
+        "type": "link",
+        "label": "Back to Home",
+        "className": "sidepage-back-home",
+        "href": "/"
+      },
+      {
+        "type": "html",
+        "value": "<h4 class=\"margin-top--md margin-bottom--sm sidepage-heading\">Contribute</h4>",
+        "defaultStyle": true
+      },
+      {
+        "type": "link",
+        "label": "Contributor guidelines",
+        "href": "/contribute/",
+        "docId": "contribute/README"
+      },
+      {
+        "type": "link",
+        "label": "Style guide",
+        "href": "/contribute/style-guide",
+        "docId": "contribute/style-guide"
+      },
+      {
+        "type": "link",
+        "label": "Maintainers",
+        "href": "/contribute/maintainers",
+        "docId": "contribute/maintainers"
+      }
     ]
   },
   "docs": {
-    "api/endpoints": {
-      "id": "api/endpoints",
-      "title": "Endpoints",
-      "description": "Openly readable tables by your applications."
-    },
-    "api/errors": {
-      "id": "api/errors",
-      "title": "Errors",
-      "description": "Openly readable tables by your applications."
-    },
-    "api/gateways": {
-      "id": "api/gateways",
-      "title": "Gateways",
-      "description": "Openly readable tables by your applications."
-    },
-    "api/README": {
-      "id": "api/README",
-      "title": "Quick start",
-      "description": "Openly readable tables by your applications."
-    },
     "cli/connect": {
       "id": "cli/connect",
       "title": "Connecting to Tableland",
-      "description": "Access the Tableland network by first connecting to the base chain."
+      "description": "Access the Tableland network by first connecting to the base chain.",
+      "sidebar": "guides"
     },
     "cli/create": {
       "id": "cli/create",
       "title": "Creating tables",
-      "description": "Learn how to create tables from the SDK."
+      "description": "Learn how to create tables from the SDK.",
+      "sidebar": "guides"
     },
     "cli/getting-started": {
       "id": "cli/getting-started",
       "title": "Getting started",
-      "description": "Get up an running with the Tableland SDK."
+      "description": "Get up an running with the Tableland SDK.",
+      "sidebar": "guides"
     },
     "cli/read": {
       "id": "cli/read",
       "title": "Reading tables",
-      "description": "Openly readable tables by your applications."
+      "description": "Openly readable tables by your applications.",
+      "sidebar": "guides"
     },
     "cli/README": {
       "id": "cli/README",
       "title": "Quick start",
-      "description": "Experiment with creating, editing, and querying tables from the comfort of the command line."
+      "description": "Experiment with creating, editing, and querying tables from the comfort of the command line.",
+      "sidebar": "guides"
     },
     "cli/write": {
       "id": "cli/write",
       "title": "Writing to tables",
-      "description": "Mutate your table values with additional access control."
+      "description": "Mutate your table values with additional access control.",
+      "sidebar": "guides"
     },
     "concepts/faqs": {
       "id": "concepts/faqs",
@@ -170,32 +781,38 @@
     "concepts/network/considerations-tradeoffs": {
       "id": "concepts/network/considerations-tradeoffs",
       "title": "Considerations & tradeoffs",
-      "description": "Tableland offers a new solution to suboptimal web3 data storage standards."
+      "description": "Tableland offers a new solution to suboptimal web3 data storage standards.",
+      "sidebar": "concepts"
     },
     "concepts/network/open-beta": {
       "id": "concepts/network/open-beta",
       "title": "Open beta",
-      "description": "Use Tableland on testnet and mainnet chains while the protocol is in development."
+      "description": "Use Tableland on testnet and mainnet chains while the protocol is in development.",
+      "sidebar": "concepts"
     },
     "concepts/network/tableland-state": {
       "id": "concepts/network/tableland-state",
       "title": "Data availability & network state",
-      "description": "Understand the basic model behind on-chain writes and off-chain reads."
+      "description": "Understand the basic model behind on-chain writes and off-chain reads.",
+      "sidebar": "concepts"
     },
     "concepts/network/use-cases": {
       "id": "concepts/network/use-cases",
       "title": "Use cases",
-      "description": "A series of general use cases to consider."
+      "description": "A series of general use cases to consider.",
+      "sidebar": "concepts"
     },
     "concepts/network/what-is-tableland": {
       "id": "concepts/network/what-is-tableland",
       "title": "What is Tableland?",
-      "description": "Learn about the basics of the Tableland network."
+      "description": "Learn about the basics of the Tableland network.",
+      "sidebar": "concepts"
     },
     "concepts/README": {
       "id": "concepts/README",
       "title": "Overview",
-      "description": "Learn about what Tableland is."
+      "description": "Learn about what Tableland is.",
+      "sidebar": "concepts"
     },
     "concepts/related/databases": {
       "id": "concepts/related/databases",
@@ -286,17 +903,20 @@
     "contribute/maintainers": {
       "id": "contribute/maintainers",
       "title": "Maintainers",
-      "description": "Core contributors to the Tableland protocol's documentation."
+      "description": "Core contributors to the Tableland protocol's documentation.",
+      "sidebar": "contribute"
     },
     "contribute/README": {
       "id": "contribute/README",
       "title": "How to contribute",
-      "description": "Get involved and contribute to the Tableland ecosystem."
+      "description": "Get involved and contribute to the Tableland ecosystem.",
+      "sidebar": "contribute"
     },
     "contribute/style-guide": {
       "id": "contribute/style-guide",
       "title": "Style guide",
-      "description": "Learn the ins and outs of contributing to the Tableland docs site."
+      "description": "Learn the ins and outs of contributing to the Tableland docs site.",
+      "sidebar": "contribute"
     },
     "develop/chains/arbitrum": {
       "id": "develop/chains/arbitrum",
@@ -368,36 +988,6 @@
       "title": "Overview",
       "description": "Learn the ins and outs of contributing to the Tableland docs site."
     },
-    "develop/reference/contracts": {
-      "id": "develop/reference/contracts",
-      "title": "Chains & contracts",
-      "description": "A list of deployed contracts for each supported chain."
-    },
-    "develop/reference/limits": {
-      "id": "develop/reference/limits",
-      "title": "Limits",
-      "description": "A listing of the table/data limits and smart contract deployment locations on supported chains."
-    },
-    "develop/reference/README": {
-      "id": "develop/reference/README",
-      "title": "Tableland protocol",
-      "description": "Learn about what Tableland is."
-    },
-    "develop/reference/repos": {
-      "id": "develop/reference/repos",
-      "title": "Repos",
-      "description": "Openly readable tables by your applications."
-    },
-    "develop/reference/response-times": {
-      "id": "develop/reference/response-times",
-      "title": "Response times",
-      "description": "Processing times for creates & writes are largely dependent on the base chain, but read responses are standard."
-    },
-    "develop/reference/table-names": {
-      "id": "develop/reference/table-names",
-      "title": "Table names",
-      "description": "Learn about what Tableland is."
-    },
     "develop/tools/local-tableland": {
       "id": "develop/tools/local-tableland",
       "title": "Local development & testing",
@@ -407,6 +997,12 @@
       "id": "develop/tools/README",
       "title": "Development tools",
       "description": "Leverage various tooling to ease the developer experience."
+    },
+    "guides/README": {
+      "id": "guides/README",
+      "title": "Get started",
+      "description": "Openly readable tables by your applications.",
+      "sidebar": "guides"
     },
     "landing": {
       "id": "landing",
@@ -439,65 +1035,113 @@
       "title": "validator-spec",
       "description": "The Tableland protocol validator specification."
     },
+    "reference/contracts": {
+      "id": "reference/contracts",
+      "title": "Chains & contracts",
+      "description": "A list of deployed contracts for each supported chain.",
+      "sidebar": "reference"
+    },
+    "reference/limits": {
+      "id": "reference/limits",
+      "title": "Limits",
+      "description": "A listing of the table/data limits and smart contract deployment locations on supported chains.",
+      "sidebar": "reference"
+    },
+    "reference/README": {
+      "id": "reference/README",
+      "title": "Tableland protocol",
+      "description": "Learn about what Tableland is.",
+      "sidebar": "reference"
+    },
+    "reference/repos": {
+      "id": "reference/repos",
+      "title": "Repos",
+      "description": "Openly readable tables by your applications.",
+      "sidebar": "reference"
+    },
+    "reference/response-times": {
+      "id": "reference/response-times",
+      "title": "Response times",
+      "description": "Processing times for creates & writes are largely dependent on the base chain, but read responses are standard.",
+      "sidebar": "reference"
+    },
+    "reference/table-names": {
+      "id": "reference/table-names",
+      "title": "Table names",
+      "description": "Learn about what Tableland is.",
+      "sidebar": "reference"
+    },
     "sdk/connect": {
       "id": "sdk/connect",
       "title": "Connecting to Tableland",
-      "description": "Access the Tableland network by first connecting to the base chain."
+      "description": "Access the Tableland network by first connecting to the base chain.",
+      "sidebar": "guides"
     },
     "sdk/create": {
       "id": "sdk/create",
       "title": "Creating tables",
-      "description": "Learn how to create tables from the SDK."
+      "description": "Learn how to create tables from the SDK.",
+      "sidebar": "guides"
     },
     "sdk/getting-started": {
       "id": "sdk/getting-started",
       "title": "Getting started",
-      "description": "Get up an running with the Tableland SDK."
+      "description": "Get up an running with the Tableland SDK.",
+      "sidebar": "guides"
     },
     "sdk/read": {
       "id": "sdk/read",
       "title": "Reading tables",
-      "description": "Openly readable tables by your applications."
+      "description": "Openly readable tables by your applications.",
+      "sidebar": "guides"
     },
     "sdk/README": {
       "id": "sdk/README",
       "title": "Quick start",
-      "description": "Openly readable tables by your applications."
+      "description": "Openly readable tables by your applications.",
+      "sidebar": "guides"
     },
     "sdk/write": {
       "id": "sdk/write",
       "title": "Writing to tables",
-      "description": "Mutate your table values with additional access control."
+      "description": "Mutate your table values with additional access control.",
+      "sidebar": "guides"
     },
     "smart-contracts/connect": {
       "id": "smart-contracts/connect",
       "title": "Connecting to Tableland",
-      "description": "Access the Tableland network by first connecting to the base chain."
+      "description": "Access the Tableland network by first connecting to the base chain.",
+      "sidebar": "guides"
     },
     "smart-contracts/create": {
       "id": "smart-contracts/create",
       "title": "Creating tables",
-      "description": "Learn how to create tables from the SDK."
+      "description": "Learn how to create tables from the SDK.",
+      "sidebar": "guides"
     },
     "smart-contracts/getting-started": {
       "id": "smart-contracts/getting-started",
       "title": "Getting started",
-      "description": "Get up an running with the Tableland SDK."
+      "description": "Get up an running with the Tableland SDK.",
+      "sidebar": "guides"
     },
     "smart-contracts/read": {
       "id": "smart-contracts/read",
       "title": "Reading tables",
-      "description": "Openly readable tables by your applications."
+      "description": "Openly readable tables by your applications.",
+      "sidebar": "guides"
     },
     "smart-contracts/README": {
       "id": "smart-contracts/README",
       "title": "Overview",
-      "description": "Openly readable tables by your applications."
+      "description": "Openly readable tables by your applications.",
+      "sidebar": "guides"
     },
     "smart-contracts/write": {
       "id": "smart-contracts/write",
       "title": "Writing to tables",
-      "description": "Mutate your table values with additional access control."
+      "description": "Mutate your table values with additional access control.",
+      "sidebar": "guides"
     },
     "sql/access-control": {
       "id": "sql/access-control",
@@ -532,17 +1176,20 @@
     "tutorials/dynamic-nft-chainlink": {
       "id": "tutorials/dynamic-nft-chainlink",
       "title": "Dynamic NFT with Chainlink Automation",
-      "description": "Leverage Chainlink for automated NFT mutations."
+      "description": "Leverage Chainlink for automated NFT mutations.",
+      "sidebar": "tutorials"
     },
     "tutorials/dynamic-nft-p5js": {
       "id": "tutorials/dynamic-nft-p5js",
       "title": "Creating a dynamic NFT with p5.js",
-      "description": "Use p5.js to render data from an NFT that holds global game state in a table."
+      "description": "Use p5.js to render data from an NFT that holds global game state in a table.",
+      "sidebar": "tutorials"
     },
     "tutorials/dynamic-nft-solidity": {
       "id": "tutorials/dynamic-nft-solidity",
       "title": "Build a dynamic NFT in Solidity",
-      "description": "Create an on-chain game that uses SQL queries to create and populate a table of game state."
+      "description": "Create an on-chain game that uses SQL queries to create and populate a table of game state.",
+      "sidebar": "tutorials"
     },
     "tutorials/overview": {
       "id": "tutorials/overview",
@@ -552,7 +1199,32 @@
     "tutorials/README": {
       "id": "tutorials/README",
       "title": "Overview",
-      "description": "Openly readable tables by your applications."
+      "description": "Openly readable tables by your applications.",
+      "sidebar": "tutorials"
+    },
+    "validator-api/endpoints": {
+      "id": "validator-api/endpoints",
+      "title": "Endpoints",
+      "description": "Openly readable tables by your applications.",
+      "sidebar": "guides"
+    },
+    "validator-api/errors": {
+      "id": "validator-api/errors",
+      "title": "Errors",
+      "description": "Openly readable tables by your applications.",
+      "sidebar": "guides"
+    },
+    "validator-api/gateways": {
+      "id": "validator-api/gateways",
+      "title": "Gateways",
+      "description": "Openly readable tables by your applications.",
+      "sidebar": "guides"
+    },
+    "validator-api/README": {
+      "id": "validator-api/README",
+      "title": "Quick start",
+      "description": "Openly readable tables by your applications.",
+      "sidebar": "guides"
     }
   }
 }

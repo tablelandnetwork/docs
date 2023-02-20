@@ -21,5 +21,14 @@
     "keywords": [
       "create table"
     ]
+  },
+  "sidebar": "guides",
+  "previous": {
+    "title": "Connecting to Tableland",
+    "permalink": "/sdk/connect"
+  },
+  "next": {
+    "title": "Writing to tables",
+    "permalink": "/sdk/write"
   }
 }

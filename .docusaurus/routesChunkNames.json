@@ -199,7 +199,7 @@
     },
     "tag": "tag---tags-contributing-9-d-7-88b"
   },
-  "/-230": {
+  "/-b92": {
     "__comp": "__comp---theme-doc-page-1-be-9be",
     "__context": {
       "plugin": "plugin---tags-54-b-0a7"
@@ -210,47 +210,31 @@
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---233-28b"
   },
-  "/api/-289": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---api-982-b6d"
-  },
-  "/api/endpoints-9a0": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---api-endpointsd-04-6ad"
-  },
-  "/api/errors-ec4": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---api-errors-807-8b2"
-  },
-  "/api/gateways-c85": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---api-gateways-4-c-3-c3f"
-  },
-  "/cli/-743": {
+  "/cli/-149": {
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---cli-86-b-5e6"
   },
-  "/cli/connect-d61": {
+  "/cli/connect-412": {
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---cli-connect-5-bd-f77"
   },
-  "/cli/create-523": {
+  "/cli/create-895": {
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---cli-createece-51c"
   },
-  "/cli/getting-started-b9b": {
+  "/cli/getting-started-044": {
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---cli-getting-started-9-f-0-026"
   },
-  "/cli/read-46b": {
+  "/cli/read-2dc": {
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---cli-read-9-be-4e7"
   },
-  "/cli/write-537": {
+  "/cli/write-18f": {
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---cli-write-346-213"
   },
-  "/concepts/-f21": {
+  "/concepts/-725": {
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---concepts-023-a81"
   },
@@ -258,23 +242,23 @@
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---concepts-faqs-94-a-b1c"
   },
-  "/concepts/network/considerations-tradeoffs-a6a": {
+  "/concepts/network/considerations-tradeoffs-26b": {
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---concepts-network-considerations-tradeoffs-4-fe-029"
   },
-  "/concepts/network/open-beta-763": {
+  "/concepts/network/open-beta-781": {
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---concepts-network-open-beta-94-b-eb9"
   },
-  "/concepts/network/tableland-state-020": {
+  "/concepts/network/tableland-state-f8c": {
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---concepts-network-tableland-state-2-b-4-f4e"
   },
-  "/concepts/network/use-cases-9fa": {
+  "/concepts/network/use-cases-924": {
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---concepts-network-use-cases-34-c-d5d"
   },
-  "/concepts/network/what-is-tableland-3ea": {
+  "/concepts/network/what-is-tableland-6f2": {
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---concepts-network-what-is-tablelanda-71-216"
   },
@@ -338,15 +322,15 @@
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---concepts-sql-upsert-7-d-7-e21"
   },
-  "/contribute/-5d4": {
+  "/contribute/-126": {
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---contribute-b-76-d2a"
   },
-  "/contribute/maintainers-595": {
+  "/contribute/maintainers-b9e": {
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---contribute-maintainers-4-f-9-3b0"
   },
-  "/contribute/style-guide-dbc": {
+  "/contribute/style-guide-2fc": {
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---contribute-style-guided-01-728"
   },
@@ -406,30 +390,6 @@
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---develop-integrations-toucan-115-46f"
   },
-  "/develop/reference/-786": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---develop-reference-2-ca-7f9"
-  },
-  "/develop/reference/contracts-5e2": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---develop-reference-contracts-498-769"
-  },
-  "/develop/reference/limits-6f7": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---develop-reference-limits-5-e-5-d12"
-  },
-  "/develop/reference/repos-2ed": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---develop-reference-repos-08-c-c0e"
-  },
-  "/develop/reference/response-times-1d5": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---develop-reference-response-times-396-e6b"
-  },
-  "/develop/reference/table-names-27c": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---develop-reference-table-names-515-9c6"
-  },
   "/develop/tools/-83b": {
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---develop-tools-78-d-37e"
@@ -437,6 +397,10 @@
   "/develop/tools/local-tableland-88b": {
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---develop-tools-local-tablelandfb-3-05c"
+  },
+  "/guides/-5f0": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---guides-de-2-d99"
   },
   "/products/rigs/-1a3": {
     "__comp": "__comp---theme-doc-item-178-a40",
@@ -458,51 +422,75 @@
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---protocol-validator-spec-72-c-c80"
   },
-  "/sdk/-783": {
+  "/reference/-1b0": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---reference-9-bd-c20"
+  },
+  "/reference/contracts-33a": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---reference-contractse-74-75f"
+  },
+  "/reference/limits-060": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---reference-limits-42-f-c03"
+  },
+  "/reference/repos-654": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---reference-repos-0-f-1-fd3"
+  },
+  "/reference/response-times-7b6": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---reference-response-times-0-a-1-1c4"
+  },
+  "/reference/table-names-fee": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---reference-table-names-854-a7f"
+  },
+  "/sdk/-68e": {
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---sdk-538-e94"
   },
-  "/sdk/connect-2d1": {
+  "/sdk/connect-d65": {
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---sdk-connectdb-2-18a"
   },
-  "/sdk/create-783": {
+  "/sdk/create-5b5": {
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---sdk-create-0-b-1-7fd"
   },
-  "/sdk/getting-started-4e5": {
+  "/sdk/getting-started-194": {
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---sdk-getting-started-14-b-cc1"
   },
-  "/sdk/read-d06": {
+  "/sdk/read-e59": {
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---sdk-read-969-efb"
   },
-  "/sdk/write-946": {
+  "/sdk/write-e38": {
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---sdk-writee-93-ca5"
   },
-  "/smart-contracts/-b28": {
+  "/smart-contracts/-41f": {
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---smart-contracts-605-49d"
   },
-  "/smart-contracts/connect-7ae": {
+  "/smart-contracts/connect-9a2": {
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---smart-contracts-connect-69-b-47b"
   },
-  "/smart-contracts/create-06f": {
+  "/smart-contracts/create-8bb": {
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---smart-contracts-create-601-8a3"
   },
-  "/smart-contracts/getting-started-90c": {
+  "/smart-contracts/getting-started-af8": {
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---smart-contracts-getting-starteda-60-faf"
   },
-  "/smart-contracts/read-b30": {
+  "/smart-contracts/read-78a": {
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---smart-contracts-read-994-cc0"
   },
-  "/smart-contracts/write-186": {
+  "/smart-contracts/write-cee": {
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---smart-contracts-write-5-fb-988"
   },
@@ -530,24 +518,40 @@
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---sql-write-queries-53-e-ec4"
   },
-  "/tutorials/-eec": {
+  "/tutorials/-7a8": {
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---tutorials-87-f-157"
   },
-  "/tutorials/dynamic-nft-chainlink-f0f": {
+  "/tutorials/dynamic-nft-chainlink-93d": {
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---tutorials-dynamic-nft-chainlink-64-a-42d"
   },
-  "/tutorials/dynamic-nft-p5js-afd": {
+  "/tutorials/dynamic-nft-p5js-054": {
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---tutorials-dynamic-nft-p-5-js-416-3a6"
   },
-  "/tutorials/dynamic-nft-solidity-48b": {
+  "/tutorials/dynamic-nft-solidity-466": {
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---tutorials-dynamic-nft-solidity-3-ee-f08"
   },
   "/tutorials/overview-6b6": {
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---tutorials-overview-036-037"
+  },
+  "/validator-api/-914": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---validator-api-f-09-837"
+  },
+  "/validator-api/endpoints-583": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---validator-api-endpointsbc-6-b15"
+  },
+  "/validator-api/errors-b67": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---validator-api-errorsa-73-6cd"
+  },
+  "/validator-api/gateways-5ca": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---validator-api-gateways-26-e-8ac"
   }
 }

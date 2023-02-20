@@ -19,5 +19,14 @@
     "sidebar_label": "Why use Tableland?",
     "description": "Tableland offers a new solution to suboptimal web3 data storage standards.",
     "synopsis": "Selecting the chain to deploy tables on has a significant impact on the subsequent usage of the table. But before selecting a chain to then use Tableland’s capabilities, it may be helpful to consider the alternatives to Tableland in the first place."
+  },
+  "sidebar": "concepts",
+  "previous": {
+    "title": "What is Tableland?",
+    "permalink": "/concepts/network/what-is-tableland"
+  },
+  "next": {
+    "title": "Hybrid state",
+    "permalink": "/concepts/network/tableland-state"
   }
 }

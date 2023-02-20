@@ -21,5 +21,14 @@
     "keywords": [
       "use cases"
     ]
+  },
+  "sidebar": "concepts",
+  "previous": {
+    "title": "Hybrid state",
+    "permalink": "/concepts/network/tableland-state"
+  },
+  "next": {
+    "title": "Open beta",
+    "permalink": "/concepts/network/open-beta"
   }
 }

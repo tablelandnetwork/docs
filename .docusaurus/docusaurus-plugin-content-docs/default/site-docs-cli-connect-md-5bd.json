@@ -22,5 +22,14 @@
       "read table",
       "SQL query"
     ]
+  },
+  "sidebar": "guides",
+  "previous": {
+    "title": "Getting started",
+    "permalink": "/cli/getting-started"
+  },
+  "next": {
+    "title": "Creating tables",
+    "permalink": "/cli/create"
   }
 }

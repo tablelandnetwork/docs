@@ -20,111 +20,6 @@
           "contentPathLocalized": "/Users/dtb/tbl/docs/i18n/en/docusaurus-plugin-content-docs/current",
           "docs": [
             {
-              "unversionedId": "api/endpoints",
-              "id": "api/endpoints",
-              "title": "Endpoints",
-              "description": "Openly readable tables by your applications.",
-              "source": "@site/docs/api/endpoints.md",
-              "sourceDirName": "api",
-              "slug": "/api/endpoints",
-              "permalink": "/api/endpoints",
-              "draft": false,
-              "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/api/endpoints.md",
-              "tags": [],
-              "version": "current",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
-              "formattedLastUpdatedAt": "Oct 14, 2018",
-              "frontMatter": {
-                "title": "Endpoints",
-                "description": "Openly readable tables by your applications.",
-                "synopsis": "Reading from tables is entirely open (for anyone), allowing for true composability. Write SQL qeuries—but with some limitations that are due to the nature of decentralized networks and deterministic requirements.",
-                "keywords": [
-                  "write to table",
-                  "mutate table"
-                ]
-              }
-            },
-            {
-              "unversionedId": "api/errors",
-              "id": "api/errors",
-              "title": "Errors",
-              "description": "Openly readable tables by your applications.",
-              "source": "@site/docs/api/errors.md",
-              "sourceDirName": "api",
-              "slug": "/api/errors",
-              "permalink": "/api/errors",
-              "draft": false,
-              "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/api/errors.md",
-              "tags": [],
-              "version": "current",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
-              "formattedLastUpdatedAt": "Oct 14, 2018",
-              "frontMatter": {
-                "title": "Errors",
-                "description": "Openly readable tables by your applications.",
-                "synopsis": "Reading from tables is entirely open (for anyone), allowing for true composability. Write SQL qeuries—but with some limitations that are due to the nature of decentralized networks and deterministic requirements.",
-                "keywords": [
-                  "write to table",
-                  "mutate table"
-                ]
-              }
-            },
-            {
-              "unversionedId": "api/gateways",
-              "id": "api/gateways",
-              "title": "Gateways",
-              "description": "Openly readable tables by your applications.",
-              "source": "@site/docs/api/gateways.md",
-              "sourceDirName": "api",
-              "slug": "/api/gateways",
-              "permalink": "/api/gateways",
-              "draft": false,
-              "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/api/gateways.md",
-              "tags": [],
-              "version": "current",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
-              "formattedLastUpdatedAt": "Oct 14, 2018",
-              "frontMatter": {
-                "title": "Gateways",
-                "description": "Openly readable tables by your applications.",
-                "synopsis": "Reading from tables is entirely open (for anyone), allowing for true composability. Write SQL qeuries—but with some limitations that are due to the nature of decentralized networks and deterministic requirements.",
-                "keywords": [
-                  "write to table",
-                  "mutate table"
-                ]
-              }
-            },
-            {
-              "unversionedId": "api/README",
-              "id": "api/README",
-              "title": "Quick start",
-              "description": "Openly readable tables by your applications.",
-              "source": "@site/docs/api/README.md",
-              "sourceDirName": "api",
-              "slug": "/api/",
-              "permalink": "/api/",
-              "draft": false,
-              "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/api/README.md",
-              "tags": [],
-              "version": "current",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
-              "formattedLastUpdatedAt": "Oct 14, 2018",
-              "frontMatter": {
-                "title": "Quick start",
-                "sidebar_label": "Validator API",
-                "description": "Openly readable tables by your applications.",
-                "synopsis": "Reading from tables is entirely open (for anyone), allowing for true composability. Write SQL qeuries—but with some limitations that are due to the nature of decentralized networks and deterministic requirements.",
-                "keywords": [
-                  "write to table",
-                  "mutate table"
-                ]
-              }
-            },
-            {
               "unversionedId": "cli/connect",
               "id": "cli/connect",
               "title": "Connecting to Tableland",
@@ -148,6 +43,15 @@
                   "read table",
                   "SQL query"
                 ]
+              },
+              "sidebar": "guides",
+              "previous": {
+                "title": "Getting started",
+                "permalink": "/cli/getting-started"
+              },
+              "next": {
+                "title": "Creating tables",
+                "permalink": "/cli/create"
               }
             },
             {
@@ -173,6 +77,15 @@
                 "keywords": [
                   "create table"
                 ]
+              },
+              "sidebar": "guides",
+              "previous": {
+                "title": "Connecting to Tableland",
+                "permalink": "/cli/connect"
+              },
+              "next": {
+                "title": "Writing to tables",
+                "permalink": "/cli/write"
               }
             },
             {
@@ -199,6 +112,15 @@
                   "SQL query",
                   "Tableland SDK"
                 ]
+              },
+              "sidebar": "guides",
+              "previous": {
+                "title": "Quick start",
+                "permalink": "/cli/"
+              },
+              "next": {
+                "title": "Connecting to Tableland",
+                "permalink": "/cli/connect"
               }
             },
             {
@@ -225,6 +147,15 @@
                   "write to table",
                   "mutate table"
                 ]
+              },
+              "sidebar": "guides",
+              "previous": {
+                "title": "Writing to tables",
+                "permalink": "/cli/write"
+              },
+              "next": {
+                "title": "Overview",
+                "permalink": "/smart-contracts/"
               }
             },
             {
@@ -245,13 +176,21 @@
               "formattedLastUpdatedAt": "Oct 14, 2018",
               "frontMatter": {
                 "title": "Quick start",
-                "sidebar_label": "CLI",
                 "description": "Experiment with creating, editing, and querying tables from the comfort of the command line.",
                 "synopsis": "The JavaScript / TypeScript SDK allows developers to create tables on their chain of choice. Connect, create, and then interact with your tables thereafter with table writes and reads.",
                 "keywords": [
                   "CLI",
                   "command line"
                 ]
+              },
+              "sidebar": "guides",
+              "previous": {
+                "title": "Errors",
+                "permalink": "/validator-api/errors"
+              },
+              "next": {
+                "title": "Getting started",
+                "permalink": "/cli/getting-started"
               }
             },
             {
@@ -278,6 +217,15 @@
                   "write to table",
                   "mutate table"
                 ]
+              },
+              "sidebar": "guides",
+              "previous": {
+                "title": "Creating tables",
+                "permalink": "/cli/create"
+              },
+              "next": {
+                "title": "Reading tables",
+                "permalink": "/cli/read"
               }
             },
             {
@@ -326,6 +274,15 @@
                 "sidebar_label": "Why use Tableland?",
                 "description": "Tableland offers a new solution to suboptimal web3 data storage standards.",
                 "synopsis": "Selecting the chain to deploy tables on has a significant impact on the subsequent usage of the table. But before selecting a chain to then use Tableland’s capabilities, it may be helpful to consider the alternatives to Tableland in the first place."
+              },
+              "sidebar": "concepts",
+              "previous": {
+                "title": "What is Tableland?",
+                "permalink": "/concepts/network/what-is-tableland"
+              },
+              "next": {
+                "title": "Hybrid state",
+                "permalink": "/concepts/network/tableland-state"
               }
             },
             {
@@ -352,6 +309,11 @@
                   "open beta",
                   "production"
                 ]
+              },
+              "sidebar": "concepts",
+              "previous": {
+                "title": "Use cases",
+                "permalink": "/concepts/network/use-cases"
               }
             },
             {
@@ -379,6 +341,15 @@
                   "Tableland",
                   "about"
                 ]
+              },
+              "sidebar": "concepts",
+              "previous": {
+                "title": "Why use Tableland?",
+                "permalink": "/concepts/network/considerations-tradeoffs"
+              },
+              "next": {
+                "title": "Use cases",
+                "permalink": "/concepts/network/use-cases"
               }
             },
             {
@@ -404,6 +375,15 @@
                 "keywords": [
                   "use cases"
                 ]
+              },
+              "sidebar": "concepts",
+              "previous": {
+                "title": "Hybrid state",
+                "permalink": "/concepts/network/tableland-state"
+              },
+              "next": {
+                "title": "Open beta",
+                "permalink": "/concepts/network/open-beta"
               }
             },
             {
@@ -430,6 +410,15 @@
                   "Tableland",
                   "about"
                 ]
+              },
+              "sidebar": "concepts",
+              "previous": {
+                "title": "Overview",
+                "permalink": "/concepts/"
+              },
+              "next": {
+                "title": "Why use Tableland?",
+                "permalink": "/concepts/network/considerations-tradeoffs"
               }
             },
             {
@@ -455,6 +444,11 @@
                 "keywords": [
                   "protocol"
                 ]
+              },
+              "sidebar": "concepts",
+              "next": {
+                "title": "What is Tableland?",
+                "permalink": "/concepts/network/what-is-tableland"
               }
             },
             {
@@ -959,6 +953,11 @@
                   "maintainers",
                   "contributors"
                 ]
+              },
+              "sidebar": "contribute",
+              "previous": {
+                "title": "Style guide",
+                "permalink": "/contribute/style-guide"
               }
             },
             {
@@ -997,6 +996,11 @@
                 "tags": [
                   "contributing"
                 ]
+              },
+              "sidebar": "contribute",
+              "next": {
+                "title": "Style guide",
+                "permalink": "/contribute/style-guide"
               }
             },
             {
@@ -1034,6 +1038,15 @@
                 "tags": [
                   "contributing"
                 ]
+              },
+              "sidebar": "contribute",
+              "previous": {
+                "title": "Contributor guidelines",
+                "permalink": "/contribute/"
+              },
+              "next": {
+                "title": "Maintainers",
+                "permalink": "/contribute/maintainers"
               }
             },
             {
@@ -1394,162 +1407,6 @@
               }
             },
             {
-              "unversionedId": "develop/reference/contracts",
-              "id": "develop/reference/contracts",
-              "title": "Chains & contracts",
-              "description": "A list of deployed contracts for each supported chain.",
-              "source": "@site/docs/develop/reference/contracts.md",
-              "sourceDirName": "develop/reference",
-              "slug": "/develop/reference/contracts",
-              "permalink": "/develop/reference/contracts",
-              "draft": false,
-              "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/develop/reference/contracts.md",
-              "tags": [],
-              "version": "current",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
-              "formattedLastUpdatedAt": "Oct 14, 2018",
-              "frontMatter": {
-                "title": "Chains & contracts",
-                "sidebar_label": "Contracts",
-                "description": "A list of deployed contracts for each supported chain.",
-                "synopsis": "The following table highlight which chains Tableland has smart contracts deployed on, which is currently Ethereum and a subset of its scaling solutions. Over time, additional EVM compatible chains will be added based on developer demand.",
-                "keywords": [
-                  "chains",
-                  "contract"
-                ]
-              }
-            },
-            {
-              "unversionedId": "develop/reference/limits",
-              "id": "develop/reference/limits",
-              "title": "Limits",
-              "description": "A listing of the table/data limits and smart contract deployment locations on supported chains.",
-              "source": "@site/docs/develop/reference/limits.md",
-              "sourceDirName": "develop/reference",
-              "slug": "/develop/reference/limits",
-              "permalink": "/develop/reference/limits",
-              "draft": false,
-              "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/develop/reference/limits.md",
-              "tags": [],
-              "version": "current",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
-              "formattedLastUpdatedAt": "Oct 14, 2018",
-              "frontMatter": {
-                "title": "Limits",
-                "description": "A listing of the table/data limits and smart contract deployment locations on supported chains.",
-                "synopsis": "Since Tableland is still in open beta, each table is limited to the following constraints while the full production network is further clarified. These are temporary limits while the production mainnet is further researched.",
-                "keywords": [
-                  "limits",
-                  "cell limit",
-                  "row limit",
-                  "column limit"
-                ]
-              }
-            },
-            {
-              "unversionedId": "develop/reference/README",
-              "id": "develop/reference/README",
-              "title": "Tableland protocol",
-              "description": "Learn about what Tableland is.",
-              "source": "@site/docs/develop/reference/README.md",
-              "sourceDirName": "develop/reference",
-              "slug": "/develop/reference/",
-              "permalink": "/develop/reference/",
-              "draft": false,
-              "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/develop/reference/README.md",
-              "tags": [],
-              "version": "current",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
-              "formattedLastUpdatedAt": "Oct 14, 2018",
-              "frontMatter": {
-                "title": "Tableland protocol",
-                "description": "Learn about what Tableland is.",
-                "synopsis": "Structured Query Language (SQL) is a language that allows developers to interact with databases for extracting and mutating values.",
-                "keywords": [
-                  "protocol"
-                ]
-              }
-            },
-            {
-              "unversionedId": "develop/reference/repos",
-              "id": "develop/reference/repos",
-              "title": "Repos",
-              "description": "Openly readable tables by your applications.",
-              "source": "@site/docs/develop/reference/repos.md",
-              "sourceDirName": "develop/reference",
-              "slug": "/develop/reference/repos",
-              "permalink": "/develop/reference/repos",
-              "draft": false,
-              "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/develop/reference/repos.md",
-              "tags": [],
-              "version": "current",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
-              "formattedLastUpdatedAt": "Oct 14, 2018",
-              "frontMatter": {
-                "title": "Repos",
-                "description": "Openly readable tables by your applications.",
-                "synopsis": "Reading from tables is entirely open (for anyone), allowing for true composability. Write SQL qeuries—but with some limitations that are due to the nature of decentralized networks and deterministic requirements.",
-                "keywords": [
-                  "write to table",
-                  "mutate table"
-                ]
-              }
-            },
-            {
-              "unversionedId": "develop/reference/response-times",
-              "id": "develop/reference/response-times",
-              "title": "Response times",
-              "description": "Processing times for creates & writes are largely dependent on the base chain, but read responses are standard.",
-              "source": "@site/docs/develop/reference/response-times.md",
-              "sourceDirName": "develop/reference",
-              "slug": "/develop/reference/response-times",
-              "permalink": "/develop/reference/response-times",
-              "draft": false,
-              "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/develop/reference/response-times.md",
-              "tags": [],
-              "version": "current",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
-              "formattedLastUpdatedAt": "Oct 14, 2018",
-              "frontMatter": {
-                "title": "Response times",
-                "description": "Processing times for creates & writes are largely dependent on the base chain, but read responses are standard.",
-                "synopsis": "Tableland is always dependent on the base chain for the speed at which transactions are finalized. For each chan, nodes listen and process emitted events. When that data is materialized in Tableland node's SQLite databases, it becomes immediately accessible and queryable with high responsiveness.",
-                "keywords": [
-                  "response times"
-                ]
-              }
-            },
-            {
-              "unversionedId": "develop/reference/table-names",
-              "id": "develop/reference/table-names",
-              "title": "Table names",
-              "description": "Learn about what Tableland is.",
-              "source": "@site/docs/develop/reference/table-names.md",
-              "sourceDirName": "develop/reference",
-              "slug": "/develop/reference/table-names",
-              "permalink": "/develop/reference/table-names",
-              "draft": false,
-              "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/develop/reference/table-names.md",
-              "tags": [],
-              "version": "current",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
-              "formattedLastUpdatedAt": "Oct 14, 2018",
-              "frontMatter": {
-                "title": "Table names",
-                "description": "Learn about what Tableland is.",
-                "synopsis": "Structured Query Language (SQL) is a language that allows developers to interact with databases for extracting and mutating values.",
-                "keywords": [
-                  "protocol"
-                ]
-              }
-            },
-            {
               "unversionedId": "develop/tools/local-tableland",
               "id": "develop/tools/local-tableland",
               "title": "Local development & testing",
@@ -1603,6 +1460,37 @@
               }
             },
             {
+              "unversionedId": "guides/README",
+              "id": "guides/README",
+              "title": "Get started",
+              "description": "Openly readable tables by your applications.",
+              "source": "@site/docs/guides/README.md",
+              "sourceDirName": "guides",
+              "slug": "/guides/",
+              "permalink": "/guides/",
+              "draft": false,
+              "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/guides/README.md",
+              "tags": [],
+              "version": "current",
+              "lastUpdatedBy": "Author",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "Oct 14, 2018",
+              "frontMatter": {
+                "title": "Get started",
+                "description": "Openly readable tables by your applications.",
+                "synopsis": "Reading from tables is entirely open (for anyone), allowing for true composability. Write SQL qeuries—but with some limitations that are due to the nature of decentralized networks and deterministic requirements.",
+                "keywords": [
+                  "write to table",
+                  "mutate table"
+                ]
+              },
+              "sidebar": "guides",
+              "next": {
+                "title": "Quick start",
+                "permalink": "/sdk/"
+              }
+            },
+            {
               "unversionedId": "landing",
               "id": "landing",
               "title": "landing",
@@ -1629,7 +1517,9 @@
                 "custom_edit_url": null,
                 "slug": "/",
                 "keywords": [
-                  "protocol"
+                  "tableland",
+                  "docs",
+                  "documentation"
                 ]
               },
               "sidebar": "home"
@@ -1770,6 +1660,208 @@
               }
             },
             {
+              "unversionedId": "reference/contracts",
+              "id": "reference/contracts",
+              "title": "Chains & contracts",
+              "description": "A list of deployed contracts for each supported chain.",
+              "source": "@site/docs/reference/contracts.md",
+              "sourceDirName": "reference",
+              "slug": "/reference/contracts",
+              "permalink": "/reference/contracts",
+              "draft": false,
+              "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/reference/contracts.md",
+              "tags": [],
+              "version": "current",
+              "lastUpdatedBy": "Author",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "Oct 14, 2018",
+              "frontMatter": {
+                "title": "Chains & contracts",
+                "sidebar_label": "Contracts",
+                "description": "A list of deployed contracts for each supported chain.",
+                "synopsis": "The following table highlight which chains Tableland has smart contracts deployed on, which is currently Ethereum and a subset of its scaling solutions. Over time, additional EVM compatible chains will be added based on developer demand.",
+                "keywords": [
+                  "chains",
+                  "contract"
+                ]
+              },
+              "sidebar": "reference",
+              "previous": {
+                "title": "Tableland protocol",
+                "permalink": "/reference/"
+              },
+              "next": {
+                "title": "Limits",
+                "permalink": "/reference/limits"
+              }
+            },
+            {
+              "unversionedId": "reference/limits",
+              "id": "reference/limits",
+              "title": "Limits",
+              "description": "A listing of the table/data limits and smart contract deployment locations on supported chains.",
+              "source": "@site/docs/reference/limits.md",
+              "sourceDirName": "reference",
+              "slug": "/reference/limits",
+              "permalink": "/reference/limits",
+              "draft": false,
+              "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/reference/limits.md",
+              "tags": [],
+              "version": "current",
+              "lastUpdatedBy": "Author",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "Oct 14, 2018",
+              "frontMatter": {
+                "title": "Limits",
+                "description": "A listing of the table/data limits and smart contract deployment locations on supported chains.",
+                "synopsis": "Since Tableland is still in open beta, each table is limited to the following constraints while the full production network is further clarified. These are temporary limits while the production mainnet is further researched.",
+                "keywords": [
+                  "limits",
+                  "cell limit",
+                  "row limit",
+                  "column limit"
+                ]
+              },
+              "sidebar": "reference",
+              "previous": {
+                "title": "Contracts",
+                "permalink": "/reference/contracts"
+              },
+              "next": {
+                "title": "Tableland protocol",
+                "permalink": "/reference/"
+              }
+            },
+            {
+              "unversionedId": "reference/README",
+              "id": "reference/README",
+              "title": "Tableland protocol",
+              "description": "Learn about what Tableland is.",
+              "source": "@site/docs/reference/README.md",
+              "sourceDirName": "reference",
+              "slug": "/reference/",
+              "permalink": "/reference/",
+              "draft": false,
+              "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/reference/README.md",
+              "tags": [],
+              "version": "current",
+              "lastUpdatedBy": "Author",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "Oct 14, 2018",
+              "frontMatter": {
+                "title": "Tableland protocol",
+                "description": "Learn about what Tableland is.",
+                "synopsis": "Structured Query Language (SQL) is a language that allows developers to interact with databases for extracting and mutating values.",
+                "keywords": [
+                  "protocol"
+                ]
+              },
+              "sidebar": "reference",
+              "next": {
+                "title": "Contracts",
+                "permalink": "/reference/contracts"
+              }
+            },
+            {
+              "unversionedId": "reference/repos",
+              "id": "reference/repos",
+              "title": "Repos",
+              "description": "Openly readable tables by your applications.",
+              "source": "@site/docs/reference/repos.md",
+              "sourceDirName": "reference",
+              "slug": "/reference/repos",
+              "permalink": "/reference/repos",
+              "draft": false,
+              "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/reference/repos.md",
+              "tags": [],
+              "version": "current",
+              "lastUpdatedBy": "Author",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "Oct 14, 2018",
+              "frontMatter": {
+                "title": "Repos",
+                "description": "Openly readable tables by your applications.",
+                "synopsis": "Reading from tables is entirely open (for anyone), allowing for true composability. Write SQL qeuries—but with some limitations that are due to the nature of decentralized networks and deterministic requirements.",
+                "keywords": [
+                  "write to table",
+                  "mutate table"
+                ]
+              },
+              "sidebar": "reference",
+              "previous": {
+                "title": "Table names",
+                "permalink": "/reference/table-names"
+              }
+            },
+            {
+              "unversionedId": "reference/response-times",
+              "id": "reference/response-times",
+              "title": "Response times",
+              "description": "Processing times for creates & writes are largely dependent on the base chain, but read responses are standard.",
+              "source": "@site/docs/reference/response-times.md",
+              "sourceDirName": "reference",
+              "slug": "/reference/response-times",
+              "permalink": "/reference/response-times",
+              "draft": false,
+              "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/reference/response-times.md",
+              "tags": [],
+              "version": "current",
+              "lastUpdatedBy": "Author",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "Oct 14, 2018",
+              "frontMatter": {
+                "title": "Response times",
+                "description": "Processing times for creates & writes are largely dependent on the base chain, but read responses are standard.",
+                "synopsis": "Tableland is always dependent on the base chain for the speed at which transactions are finalized. For each chan, nodes listen and process emitted events. When that data is materialized in Tableland node's SQLite databases, it becomes immediately accessible and queryable with high responsiveness.",
+                "keywords": [
+                  "response times"
+                ]
+              },
+              "sidebar": "reference",
+              "previous": {
+                "title": "Tableland protocol",
+                "permalink": "/reference/"
+              },
+              "next": {
+                "title": "Table names",
+                "permalink": "/reference/table-names"
+              }
+            },
+            {
+              "unversionedId": "reference/table-names",
+              "id": "reference/table-names",
+              "title": "Table names",
+              "description": "Learn about what Tableland is.",
+              "source": "@site/docs/reference/table-names.md",
+              "sourceDirName": "reference",
+              "slug": "/reference/table-names",
+              "permalink": "/reference/table-names",
+              "draft": false,
+              "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/reference/table-names.md",
+              "tags": [],
+              "version": "current",
+              "lastUpdatedBy": "Author",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "Oct 14, 2018",
+              "frontMatter": {
+                "title": "Table names",
+                "description": "Learn about what Tableland is.",
+                "synopsis": "Structured Query Language (SQL) is a language that allows developers to interact with databases for extracting and mutating values.",
+                "keywords": [
+                  "protocol"
+                ]
+              },
+              "sidebar": "reference",
+              "previous": {
+                "title": "Response times",
+                "permalink": "/reference/response-times"
+              },
+              "next": {
+                "title": "Repos",
+                "permalink": "/reference/repos"
+              }
+            },
+            {
               "unversionedId": "sdk/connect",
               "id": "sdk/connect",
               "title": "Connecting to Tableland",
@@ -1793,6 +1885,15 @@
                   "read table",
                   "SQL query"
                 ]
+              },
+              "sidebar": "guides",
+              "previous": {
+                "title": "Getting started",
+                "permalink": "/sdk/getting-started"
+              },
+              "next": {
+                "title": "Creating tables",
+                "permalink": "/sdk/create"
               }
             },
             {
@@ -1818,6 +1919,15 @@
                 "keywords": [
                   "create table"
                 ]
+              },
+              "sidebar": "guides",
+              "previous": {
+                "title": "Connecting to Tableland",
+                "permalink": "/sdk/connect"
+              },
+              "next": {
+                "title": "Writing to tables",
+                "permalink": "/sdk/write"
               }
             },
             {
@@ -1844,6 +1954,15 @@
                   "SQL query",
                   "Tableland SDK"
                 ]
+              },
+              "sidebar": "guides",
+              "previous": {
+                "title": "Quick start",
+                "permalink": "/sdk/"
+              },
+              "next": {
+                "title": "Connecting to Tableland",
+                "permalink": "/sdk/connect"
               }
             },
             {
@@ -1870,6 +1989,15 @@
                   "write to table",
                   "mutate table"
                 ]
+              },
+              "sidebar": "guides",
+              "previous": {
+                "title": "Writing to tables",
+                "permalink": "/sdk/write"
+              },
+              "next": {
+                "title": "Quick start",
+                "permalink": "/validator-api/"
               }
             },
             {
@@ -1890,13 +2018,21 @@
               "formattedLastUpdatedAt": "Oct 14, 2018",
               "frontMatter": {
                 "title": "Quick start",
-                "sidebar_label": "SDK",
                 "description": "Openly readable tables by your applications.",
                 "synopsis": "Reading from tables is entirely open (for anyone), allowing for true composability. Write SQL qeuries—but with some limitations that are due to the nature of decentralized networks and deterministic requirements.",
                 "keywords": [
                   "write to table",
                   "mutate table"
                 ]
+              },
+              "sidebar": "guides",
+              "previous": {
+                "title": "Get started",
+                "permalink": "/guides/"
+              },
+              "next": {
+                "title": "Getting started",
+                "permalink": "/sdk/getting-started"
               }
             },
             {
@@ -1923,6 +2059,15 @@
                   "write to table",
                   "mutate table"
                 ]
+              },
+              "sidebar": "guides",
+              "previous": {
+                "title": "Creating tables",
+                "permalink": "/sdk/create"
+              },
+              "next": {
+                "title": "Reading tables",
+                "permalink": "/sdk/read"
               }
             },
             {
@@ -1949,6 +2094,15 @@
                   "read table",
                   "SQL query"
                 ]
+              },
+              "sidebar": "guides",
+              "previous": {
+                "title": "Getting started",
+                "permalink": "/smart-contracts/getting-started"
+              },
+              "next": {
+                "title": "Creating tables",
+                "permalink": "/smart-contracts/create"
               }
             },
             {
@@ -1974,6 +2128,15 @@
                 "keywords": [
                   "create table"
                 ]
+              },
+              "sidebar": "guides",
+              "previous": {
+                "title": "Connecting to Tableland",
+                "permalink": "/smart-contracts/connect"
+              },
+              "next": {
+                "title": "Writing to tables",
+                "permalink": "/smart-contracts/write"
               }
             },
             {
@@ -2000,6 +2163,15 @@
                   "SQL query",
                   "Tableland SDK"
                 ]
+              },
+              "sidebar": "guides",
+              "previous": {
+                "title": "Overview",
+                "permalink": "/smart-contracts/"
+              },
+              "next": {
+                "title": "Connecting to Tableland",
+                "permalink": "/smart-contracts/connect"
               }
             },
             {
@@ -2026,6 +2198,11 @@
                   "write to table",
                   "mutate table"
                 ]
+              },
+              "sidebar": "guides",
+              "previous": {
+                "title": "Writing to tables",
+                "permalink": "/smart-contracts/write"
               }
             },
             {
@@ -2052,6 +2229,15 @@
                   "SQL query",
                   "Tableland SDK"
                 ]
+              },
+              "sidebar": "guides",
+              "previous": {
+                "title": "Reading tables",
+                "permalink": "/cli/read"
+              },
+              "next": {
+                "title": "Getting started",
+                "permalink": "/smart-contracts/getting-started"
               }
             },
             {
@@ -2078,6 +2264,15 @@
                   "write to table",
                   "mutate table"
                 ]
+              },
+              "sidebar": "guides",
+              "previous": {
+                "title": "Creating tables",
+                "permalink": "/smart-contracts/create"
+              },
+              "next": {
+                "title": "Reading tables",
+                "permalink": "/smart-contracts/read"
               }
             },
             {
@@ -2268,6 +2463,11 @@
                   "chainlink",
                   "dynamic nft"
                 ]
+              },
+              "sidebar": "tutorials",
+              "previous": {
+                "title": "Creating a dynamic NFT with p5.js",
+                "permalink": "/tutorials/dynamic-nft-p5js"
               }
             },
             {
@@ -2295,6 +2495,15 @@
                   "solidity",
                   "dynamic NFT"
                 ]
+              },
+              "sidebar": "tutorials",
+              "previous": {
+                "title": "Build a dynamic NFT in Solidity",
+                "permalink": "/tutorials/dynamic-nft-solidity"
+              },
+              "next": {
+                "title": "Dynamic NFT with Chainlink Automation",
+                "permalink": "/tutorials/dynamic-nft-chainlink"
               }
             },
             {
@@ -2323,6 +2532,15 @@
                   "dynamic NFT",
                   "p5.js"
                 ]
+              },
+              "sidebar": "tutorials",
+              "previous": {
+                "title": "Overview",
+                "permalink": "/tutorials/"
+              },
+              "next": {
+                "title": "Creating a dynamic NFT with p5.js",
+                "permalink": "/tutorials/dynamic-nft-p5js"
               }
             },
             {
@@ -2375,6 +2593,151 @@
                   "write to table",
                   "mutate table"
                 ]
+              },
+              "sidebar": "tutorials",
+              "next": {
+                "title": "Build a dynamic NFT in Solidity",
+                "permalink": "/tutorials/dynamic-nft-solidity"
+              }
+            },
+            {
+              "unversionedId": "validator-api/endpoints",
+              "id": "validator-api/endpoints",
+              "title": "Endpoints",
+              "description": "Openly readable tables by your applications.",
+              "source": "@site/docs/validator-api/endpoints.md",
+              "sourceDirName": "validator-api",
+              "slug": "/validator-api/endpoints",
+              "permalink": "/validator-api/endpoints",
+              "draft": false,
+              "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/validator-api/endpoints.md",
+              "tags": [],
+              "version": "current",
+              "lastUpdatedBy": "Author",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "Oct 14, 2018",
+              "frontMatter": {
+                "title": "Endpoints",
+                "description": "Openly readable tables by your applications.",
+                "synopsis": "Reading from tables is entirely open (for anyone), allowing for true composability. Write SQL qeuries—but with some limitations that are due to the nature of decentralized networks and deterministic requirements.",
+                "keywords": [
+                  "write to table",
+                  "mutate table"
+                ]
+              },
+              "sidebar": "guides",
+              "previous": {
+                "title": "Gateways",
+                "permalink": "/validator-api/gateways"
+              },
+              "next": {
+                "title": "Errors",
+                "permalink": "/validator-api/errors"
+              }
+            },
+            {
+              "unversionedId": "validator-api/errors",
+              "id": "validator-api/errors",
+              "title": "Errors",
+              "description": "Openly readable tables by your applications.",
+              "source": "@site/docs/validator-api/errors.md",
+              "sourceDirName": "validator-api",
+              "slug": "/validator-api/errors",
+              "permalink": "/validator-api/errors",
+              "draft": false,
+              "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/validator-api/errors.md",
+              "tags": [],
+              "version": "current",
+              "lastUpdatedBy": "Author",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "Oct 14, 2018",
+              "frontMatter": {
+                "title": "Errors",
+                "description": "Openly readable tables by your applications.",
+                "synopsis": "Reading from tables is entirely open (for anyone), allowing for true composability. Write SQL qeuries—but with some limitations that are due to the nature of decentralized networks and deterministic requirements.",
+                "keywords": [
+                  "write to table",
+                  "mutate table"
+                ]
+              },
+              "sidebar": "guides",
+              "previous": {
+                "title": "Endpoints",
+                "permalink": "/validator-api/endpoints"
+              },
+              "next": {
+                "title": "Quick start",
+                "permalink": "/cli/"
+              }
+            },
+            {
+              "unversionedId": "validator-api/gateways",
+              "id": "validator-api/gateways",
+              "title": "Gateways",
+              "description": "Openly readable tables by your applications.",
+              "source": "@site/docs/validator-api/gateways.md",
+              "sourceDirName": "validator-api",
+              "slug": "/validator-api/gateways",
+              "permalink": "/validator-api/gateways",
+              "draft": false,
+              "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/validator-api/gateways.md",
+              "tags": [],
+              "version": "current",
+              "lastUpdatedBy": "Author",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "Oct 14, 2018",
+              "frontMatter": {
+                "title": "Gateways",
+                "description": "Openly readable tables by your applications.",
+                "synopsis": "Reading from tables is entirely open (for anyone), allowing for true composability. Write SQL qeuries—but with some limitations that are due to the nature of decentralized networks and deterministic requirements.",
+                "keywords": [
+                  "write to table",
+                  "mutate table"
+                ]
+              },
+              "sidebar": "guides",
+              "previous": {
+                "title": "Quick start",
+                "permalink": "/validator-api/"
+              },
+              "next": {
+                "title": "Endpoints",
+                "permalink": "/validator-api/endpoints"
+              }
+            },
+            {
+              "unversionedId": "validator-api/README",
+              "id": "validator-api/README",
+              "title": "Quick start",
+              "description": "Openly readable tables by your applications.",
+              "source": "@site/docs/validator-api/README.md",
+              "sourceDirName": "validator-api",
+              "slug": "/validator-api/",
+              "permalink": "/validator-api/",
+              "draft": false,
+              "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/validator-api/README.md",
+              "tags": [],
+              "version": "current",
+              "lastUpdatedBy": "Author",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "Oct 14, 2018",
+              "frontMatter": {
+                "title": "Quick start",
+                "description": "Openly readable tables by your applications.",
+                "synopsis": "Reading from tables is entirely open (for anyone), allowing for true composability. Write SQL qeuries—but with some limitations that are due to the nature of decentralized networks and deterministic requirements.",
+                "keywords": [
+                  "write to table",
+                  "mutate table"
+                ]
+              },
+              "sidebar": "guides",
+              "previous": {
+                "title": "Reading tables",
+                "permalink": "/sdk/read"
+              },
+              "next": {
+                "title": "Gateways",
+                "permalink": "/validator-api/gateways"
               }
             }
           ],
@@ -2384,29 +2747,249 @@
               {
                 "type": "doc",
                 "id": "landing",
-                "className": "menu-item-home"
+                "className": "sidebar-landing"
               },
               {
                 "type": "doc",
-                "id": "concepts/sql/README"
+                "id": "concepts/README",
+                "label": "Get started",
+                "className": "sidebar-landing",
+                "translatable": true
               },
               {
+                "type": "html",
+                "value": "<hr />",
+                "defaultStyle": true,
+                "className": "sidebar-hr"
+              },
+              {
+                "type": "doc",
+                "id": "concepts/README",
+                "label": "Concepts",
+                "className": "sidebar-landing",
+                "translatable": true
+              },
+              {
+                "type": "doc",
+                "id": "guides/README",
+                "label": "Guides",
+                "className": "sidebar-landing",
+                "translatable": true
+              },
+              {
+                "type": "doc",
+                "id": "tutorials/README",
+                "label": "Tutorials",
+                "className": "sidebar-landing",
+                "translatable": true
+              },
+              {
+                "type": "doc",
+                "id": "reference/README",
+                "label": "Reference",
+                "className": "sidebar-landing",
+                "translatable": true
+              }
+            ],
+            "concepts": [
+              {
                 "type": "link",
-                "label": "SQL",
-                "href": "/concepts/sql"
+                "label": "Back to Home",
+                "className": "sidepage-back-home",
+                "href": "/"
+              },
+              {
+                "type": "html",
+                "value": "<h4 class=\"margin-top--md margin-bottom--sm sidepage-heading\">Concepts</h4>",
+                "defaultStyle": true
+              },
+              {
+                "type": "doc",
+                "id": "concepts/README"
+              },
+              {
+                "type": "html",
+                "value": "<h6 class=\"margin-top--md margin-bottom--none sidebar-section\">CONCEPTS</h6>",
+                "defaultStyle": true
+              },
+              {
+                "type": "html",
+                "value": "<hr />",
+                "defaultStyle": true,
+                "className": "sidebar-hr"
+              },
+              {
+                "type": "doc",
+                "id": "concepts/network/what-is-tableland"
+              },
+              {
+                "type": "doc",
+                "id": "concepts/network/considerations-tradeoffs"
+              },
+              {
+                "type": "doc",
+                "id": "concepts/network/tableland-state"
+              },
+              {
+                "type": "doc",
+                "id": "concepts/network/use-cases"
+              },
+              {
+                "type": "doc",
+                "id": "concepts/network/open-beta"
+              }
+            ],
+            "sdk": [
+              {
+                "type": "html",
+                "value": "<h6 class=\"margin-top--md margin-bottom--none sidebar-section\">SDK</h6>",
+                "defaultStyle": true
+              },
+              {
+                "type": "html",
+                "value": "<hr />",
+                "defaultStyle": true,
+                "className": "sidebar-hr"
+              },
+              {
+                "type": "doc",
+                "id": "sdk/README"
+              },
+              {
+                "type": "doc",
+                "id": "sdk/getting-started"
+              },
+              {
+                "type": "doc",
+                "id": "sdk/connect"
+              },
+              {
+                "type": "doc",
+                "id": "sdk/create"
+              },
+              {
+                "type": "doc",
+                "id": "sdk/write"
+              },
+              {
+                "type": "doc",
+                "id": "sdk/read"
+              }
+            ],
+            "cli": [
+              {
+                "type": "html",
+                "value": "<h6 class=\"margin-top--md margin-bottom--none sidebar-section\">CLI</h6>",
+                "defaultStyle": true
+              },
+              {
+                "type": "html",
+                "value": "<hr />",
+                "defaultStyle": true,
+                "className": "sidebar-hr"
+              },
+              {
+                "type": "doc",
+                "id": "cli/README"
+              },
+              {
+                "type": "doc",
+                "id": "cli/getting-started"
+              },
+              {
+                "type": "doc",
+                "id": "cli/connect"
+              },
+              {
+                "type": "doc",
+                "id": "cli/create"
+              },
+              {
+                "type": "doc",
+                "id": "cli/write"
+              },
+              {
+                "type": "doc",
+                "id": "cli/read"
+              }
+            ],
+            "validatorApi": [
+              {
+                "type": "html",
+                "value": "<h6 class=\"margin-top--md margin-bottom--none sidebar-section\">VALIDATOR API</h6>",
+                "defaultStyle": true
+              },
+              {
+                "type": "html",
+                "value": "<hr />",
+                "defaultStyle": true,
+                "className": "sidebar-hr"
+              },
+              {
+                "type": "doc",
+                "id": "validator-api/README"
+              },
+              {
+                "type": "doc",
+                "id": "validator-api/gateways"
+              },
+              {
+                "type": "doc",
+                "id": "validator-api/endpoints"
+              },
+              {
+                "type": "doc",
+                "id": "validator-api/errors"
+              }
+            ],
+            "smartContracts": [
+              {
+                "type": "html",
+                "value": "<h6 class=\"margin-top--md margin-bottom--none sidebar-section\">SMART CONTRACTS</h6>",
+                "defaultStyle": true
+              },
+              {
+                "type": "html",
+                "value": "<hr />",
+                "defaultStyle": true,
+                "className": "sidebar-hr"
+              },
+              {
+                "type": "doc",
+                "id": "smart-contracts/README"
+              },
+              {
+                "type": "doc",
+                "id": "smart-contracts/getting-started"
+              },
+              {
+                "type": "doc",
+                "id": "smart-contracts/connect"
+              },
+              {
+                "type": "doc",
+                "id": "smart-contracts/create"
+              },
+              {
+                "type": "doc",
+                "id": "smart-contracts/write"
+              },
+              {
+                "type": "doc",
+                "id": "smart-contracts/read"
               }
             ],
             "sql": [
               {
                 "type": "link",
-                "label": "← Home",
+                "label": "Back to Home",
+                "className": "sidepage-back-home",
                 "href": "/"
               },
               {
                 "type": "html",
-                "value": "<hr />",
-                "defaultStyle": false,
-                "className": "menu-hr"
+                "value": "<h4 class=\"margin-top--md margin-bottom--sm sidepage-heading\">SQL</h4>",
+                "defaultStyle": true
               },
               {
                 "type": "doc",
@@ -2459,6 +3042,283 @@
               {
                 "type": "doc",
                 "id": "concepts/sql/sql-spec"
+              }
+            ],
+            "guides": [
+              {
+                "type": "link",
+                "label": "Back to Home",
+                "className": "sidepage-back-home",
+                "href": "/"
+              },
+              {
+                "type": "html",
+                "value": "<h4 class=\"margin-top--md margin-bottom--sm sidepage-heading\">Guides</h4>",
+                "defaultStyle": true
+              },
+              {
+                "type": "doc",
+                "id": "guides/README"
+              },
+              {
+                "type": "html",
+                "value": "<h6 class=\"margin-top--md margin-bottom--none sidebar-section\">SDK</h6>",
+                "defaultStyle": true
+              },
+              {
+                "type": "html",
+                "value": "<hr />",
+                "defaultStyle": true,
+                "className": "sidebar-hr"
+              },
+              {
+                "type": "doc",
+                "id": "sdk/README"
+              },
+              {
+                "type": "doc",
+                "id": "sdk/getting-started"
+              },
+              {
+                "type": "doc",
+                "id": "sdk/connect"
+              },
+              {
+                "type": "doc",
+                "id": "sdk/create"
+              },
+              {
+                "type": "doc",
+                "id": "sdk/write"
+              },
+              {
+                "type": "doc",
+                "id": "sdk/read"
+              },
+              {
+                "type": "html",
+                "value": "<h6 class=\"margin-top--md margin-bottom--none sidebar-section\">VALIDATOR API</h6>",
+                "defaultStyle": true
+              },
+              {
+                "type": "html",
+                "value": "<hr />",
+                "defaultStyle": true,
+                "className": "sidebar-hr"
+              },
+              {
+                "type": "doc",
+                "id": "validator-api/README"
+              },
+              {
+                "type": "doc",
+                "id": "validator-api/gateways"
+              },
+              {
+                "type": "doc",
+                "id": "validator-api/endpoints"
+              },
+              {
+                "type": "doc",
+                "id": "validator-api/errors"
+              },
+              {
+                "type": "html",
+                "value": "<h6 class=\"margin-top--md margin-bottom--none sidebar-section\">CLI</h6>",
+                "defaultStyle": true
+              },
+              {
+                "type": "html",
+                "value": "<hr />",
+                "defaultStyle": true,
+                "className": "sidebar-hr"
+              },
+              {
+                "type": "doc",
+                "id": "cli/README"
+              },
+              {
+                "type": "doc",
+                "id": "cli/getting-started"
+              },
+              {
+                "type": "doc",
+                "id": "cli/connect"
+              },
+              {
+                "type": "doc",
+                "id": "cli/create"
+              },
+              {
+                "type": "doc",
+                "id": "cli/write"
+              },
+              {
+                "type": "doc",
+                "id": "cli/read"
+              },
+              {
+                "type": "html",
+                "value": "<h6 class=\"margin-top--md margin-bottom--none sidebar-section\">SMART CONTRACTS</h6>",
+                "defaultStyle": true
+              },
+              {
+                "type": "html",
+                "value": "<hr />",
+                "defaultStyle": true,
+                "className": "sidebar-hr"
+              },
+              {
+                "type": "doc",
+                "id": "smart-contracts/README"
+              },
+              {
+                "type": "doc",
+                "id": "smart-contracts/getting-started"
+              },
+              {
+                "type": "doc",
+                "id": "smart-contracts/connect"
+              },
+              {
+                "type": "doc",
+                "id": "smart-contracts/create"
+              },
+              {
+                "type": "doc",
+                "id": "smart-contracts/write"
+              },
+              {
+                "type": "doc",
+                "id": "smart-contracts/read"
+              }
+            ],
+            "reference": [
+              {
+                "type": "link",
+                "label": "Back to Home",
+                "className": "sidepage-back-home",
+                "href": "/"
+              },
+              {
+                "type": "html",
+                "value": "<h4 class=\"margin-top--md margin-bottom--sm sidepage-heading\">Reference</h4>",
+                "defaultStyle": true
+              },
+              {
+                "type": "html",
+                "value": "<h6 class=\"margin-top--md margin-bottom--none sidebar-section\">PROTOCOL</h6>",
+                "defaultStyle": true
+              },
+              {
+                "type": "html",
+                "value": "<hr />",
+                "defaultStyle": true,
+                "className": "sidebar-hr"
+              },
+              {
+                "type": "doc",
+                "id": "reference/README"
+              },
+              {
+                "type": "doc",
+                "id": "reference/contracts"
+              },
+              {
+                "type": "doc",
+                "id": "reference/limits"
+              },
+              {
+                "type": "html",
+                "value": "<h6 class=\"margin-top--md margin-bottom--none sidebar-section\">PROTOCOL</h6>",
+                "defaultStyle": true
+              },
+              {
+                "type": "html",
+                "value": "<hr />",
+                "defaultStyle": true,
+                "className": "sidebar-hr"
+              },
+              {
+                "type": "doc",
+                "id": "reference/README"
+              },
+              {
+                "type": "doc",
+                "id": "reference/response-times"
+              },
+              {
+                "type": "doc",
+                "id": "reference/table-names"
+              },
+              {
+                "type": "doc",
+                "id": "reference/repos"
+              }
+            ],
+            "tutorials": [
+              {
+                "type": "link",
+                "label": "Back to Home",
+                "className": "sidepage-back-home",
+                "href": "/"
+              },
+              {
+                "type": "html",
+                "value": "<h4 class=\"margin-top--md margin-bottom--sm sidepage-heading\">Tutorials</h4>",
+                "defaultStyle": true
+              },
+              {
+                "type": "doc",
+                "id": "tutorials/README"
+              },
+              {
+                "type": "html",
+                "value": "<h6 class=\"margin-top--md margin-bottom--none sidebar-section\">DYNAMIC NFTS</h6>",
+                "defaultStyle": true
+              },
+              {
+                "type": "html",
+                "value": "<hr />",
+                "defaultStyle": true,
+                "className": "sidebar-hr"
+              },
+              {
+                "type": "doc",
+                "id": "tutorials/dynamic-nft-solidity"
+              },
+              {
+                "type": "doc",
+                "id": "tutorials/dynamic-nft-p5js"
+              },
+              {
+                "type": "doc",
+                "id": "tutorials/dynamic-nft-chainlink"
+              }
+            ],
+            "contribute": [
+              {
+                "type": "link",
+                "label": "Back to Home",
+                "className": "sidepage-back-home",
+                "href": "/"
+              },
+              {
+                "type": "html",
+                "value": "<h4 class=\"margin-top--md margin-bottom--sm sidepage-heading\">Contribute</h4>",
+                "defaultStyle": true
+              },
+              {
+                "type": "doc",
+                "id": "contribute/README"
+              },
+              {
+                "type": "doc",
+                "id": "contribute/style-guide"
+              },
+              {
+                "type": "doc",
+                "id": "contribute/maintainers"
               }
             ]
           }

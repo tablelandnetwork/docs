@@ -24,7 +24,9 @@
     "@docusaurus/theme-search-algolia": "^2.3.1",
     "@easyops-cn/docusaurus-search-local": "^0.33.6",
     "@mdx-js/react": "^1.6.22",
+    "@rainbow-me/rainbowkit": "^0.11.0",
     "@tableland/sdk": "^4.0.0-pre.8",
+    "buffer": "^6.0.3",
     "clsx": "^1.2.1",
     "docusaurus-plugin-dotenv": "^1.0.1",
     "docusaurus-plugin-fathom": "^1.1.0",
@@ -34,7 +36,8 @@
     "react-dom": "^17.0.2",
     "react-icons": "^4.7.1",
     "rehype-katex": "^4.0.0",
-    "remark-math": "^3.0.1"
+    "remark-math": "^3.0.1",
+    "wagmi": "^0.11.5"
   },
   "devDependencies": {
     "@docusaurus/module-type-aliases": "^2.3.1",

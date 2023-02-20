@@ -11,3 +11,9 @@
   display: flex;
   padding: 2rem 2rem;
 }
+
+.getStartedBtn::after {
+  display: inline-block;
+  content: "→";
+  padding-left: 0.2rem;
+}

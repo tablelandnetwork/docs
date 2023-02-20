@@ -44,7 +44,7 @@ const FeatureList: FeatureItem[] = [
       <>
         Dynamically change table data using on-chain actions—the host chain
         provides data availability for mutating SQL statements—while table state
-        is accessed with read queries made directly to Tableland (network of
+        is accessed with read queries made directly to Tableland (a network of
         nodes running SQLite).
       </>
     ),

@@ -22,5 +22,14 @@
       "write to table",
       "mutate table"
     ]
+  },
+  "sidebar": "guides",
+  "previous": {
+    "title": "Creating tables",
+    "permalink": "/sdk/create"
+  },
+  "next": {
+    "title": "Reading tables",
+    "permalink": "/sdk/read"
   }
 }

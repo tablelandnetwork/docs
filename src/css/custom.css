@@ -40,17 +40,22 @@
   --ifm-h4-font-size: var(--h4-font-size);
   --ifm-h5-font-size: var(--h5-font-size);
   --ifm-h6-font-size: var(--h6-font-size);
-  /* Default secondary colors */
+  /* Default secondary colors, listed since some are used throughout */
   --ifm-color-secondary-dark: rgb(212, 213, 216);
   --ifm-color-secondary-darker: rgb(200, 201, 204);
   --ifm-color-secondary-darkest: rgb(164, 166, 168);
   --ifm-color-secondary-light: rgb(238, 240, 242);
   --ifm-color-secondary-lighter: rgb(241, 242, 245);
   --ifm-color-secondary-lightest: rgb(245, 246, 248);
+  --ifm-color-content-secondary: #525860;
+  --ifm-color-gray-300: #dadde1;
+  --ifm-color-gray-300-rgb: 218, 221, 225;
+  --ifm-color-emphasis-300: var(--ifm-color-gray-300);
   /* Decrease sidebar width and padding; change color to match table of contents */
   --ifm-menu-link-padding-vertical: 0.3rem;
+  --ifm-toc-border-color: var(--ifm-color-emphasis-300);
   --ifm-menu-color: var(--ifm-color-content-secondary);
-  /* --ifm-navbar-shadow: transparent; */
+  --ifm-navbar-shadow: 0 1px 2px 0 rgba(var(--ifm-color-gray-300-rgb), 1);
   /* Custom navbar and footer color */
   /* --ifm-navbar-background-color: transparent; */
   --ifm-footer-background-color: var(--ifm-color-secondary-lighter);
@@ -58,19 +63,23 @@
   /* Change `hr` section divider to be the same color as sidebar & TOC dividers */
   --ifm-hr-background-color: var(--ifm-toc-border-color);
   --ifm-button-border-radius: 0.4rem;
-}
-
-.menu-hr hr {
-  margin: 1rem auto !important;
-}
-
-.menu-item-home {
-  color: red !important;
+  /* These are used as the dark mode colors; putting here so they can be
+  accessed in light mode, if needed */
+  --ifm-color-dark-primary: #75b6b5;
+  --ifm-color-dark-primary-dark: #3b706f;
+  --ifm-color-dark-primary-darker: #2c5453;
+  --ifm-color-dark-primary-darkest: #1e3837;
+  --ifm-color-dark-primary-light: #4a8c8b;
+  --ifm-color-dark-primary-lighter: #59a7a6;
+  --ifm-color-dark-primary-lightest: #77dddc;
+  --ifm-color-gray-800: #444950;
+  --ifm-color-gray-800-rgb: 68, 73, 80;
 }
 
 /* Change the font color of the content to a dark grey but keep headings black*/
 [data-theme="light"] {
-  --ifm-color-content: var(--ifm-color-gray-800);
+  --ifm-color-content-rgb: var(--ifm-color-gray-800-rgb);
+  --ifm-color-content: rgb(var(--ifm-color-content-rgb)) !important;
   --ifm-menu-color: var(--ifm-color-gray-800);
   --ifm-heading-color: var(--ifm-color-gray-1000);
 }
@@ -78,37 +87,36 @@
 /* Dark mode */
 [data-theme="dark"] {
   /* Colors */
-  --ifm-color-content: #ededed !important;
+  --ifm-color-content-rgb: 237, 237, 237;
+  --ifm-color-content: rgb(var(--ifm-color-content-rgb)) !important;
   --color-primary-rgb: 117, 182, 181;
-  --ifm-color-primary: #75b6b5;
-  --ifm-color-primary-dark: #3b706f;
-  --ifm-color-primary-darker: #2c5453;
-  --ifm-color-primary-darkest: #1e3837;
-  --ifm-color-primary-light: #4a8c8b;
-  --ifm-color-primary-lighter: #59a7a6;
-  --ifm-color-primary-lightest: #77dddc;
+  --ifm-color-primary: var(--ifm-color-dark-primary);
+  --ifm-color-primary-dark: var(--ifm-color-dark-primary-dark);
+  --ifm-color-primary-darker: var(--ifm-color-dark-primary-darker);
+  --ifm-color-primary-darkest: var(--ifm-color-dark-primary-darkest);
+  --ifm-color-primary-light: var(--ifm-color-dark-primary-light);
+  --ifm-color-primary-lighter: var(--ifm-color-dark-primary-lighter);
+  --ifm-color-primary-lightest: var(--ifm-color-dark-primary-lightest);
   --ifm-heading-color: #e3e3e3;
   --ifm-menu-color: var(--ifm-color-gray-500);
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
   /* Make the navbar the same color as the background; include bottom box */
-  --ifm-navbar-shadow: 0 1px 2px 0 var(--ifm-toc-border-color);
+  --ifm-color-content-secondary: rgba(255, 255, 255, 1);
+  --ifm-toc-link-color: var(--ifm-color-content-secondary);
+  --ifm-navbar-shadow: 0 1px 2px 0 rgba(255, 255, 255, 0.1);
   --ifm-sidebar-background-color: var(--ifm-background-color);
   --ifm-navbar-background-color: var(--ifm-background-color);
   --ifm-footer-background-color: var(--ifm-background-surface-color);
 }
 
-/* A few general CSS fixes */
-html {
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  -ms-overflow-style: scrollbar;
-}
-
+/* A few general CSS resets */
 *,
 ::after,
 ::before {
-  -webkit-box-sizing: inherit;
-  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
 }
 
 @-ms-viewport {
@@ -175,6 +183,25 @@ article:has(.markdown:has(.landing-page)) ~ .pagination-nav {
 
 .markdown:has(.landing-page) ~ .theme-doc-footer {
   display: none;
+}
+
+.menu-hr hr {
+  margin: 1rem auto !important;
+}
+
+.sidepage-back-home > a {
+  font-size: 0.75rem !important;
+  font-weight: var(--ifm-font-weight-normal) !important;
+}
+
+.sidepage-back-home > a::before {
+  content: "← ";
+  padding-right: 0.2rem;
+  transition: transform var(--ifm-transition-fast);
+}
+
+.sidepage-back-home > a:hover::before {
+  transform: translate(-0.2rem);
 }
 
 /* Make it so that the footer horizontally lines up with preceding content */
@@ -252,19 +279,26 @@ a:hover {
   color: var(--ifm-link-color);
 }
 
-/* GitHub class / SVG, used in `docusaurus.config.js */
-.header-github-link:hover {
-  opacity: 0.6;
-  transition: opacity var(--ifm-transition-fast);
-}
-
+/* GitHub class / SVG used in navbar */
 .header-github-link:before {
   content: "";
-  width: 24px;
-  height: 24px;
+  width: 18px;
+  height: 18px;
   display: flex;
   background: url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12'/%3E%3C/svg%3E")
     no-repeat;
+}
+
+.header-github-link {
+  transition: opacity var(--ifm-transition-fast);
+}
+
+.header-github-link:hover {
+  opacity: 0.6;
+}
+
+.clean-btn:hover {
+  background: var(--docusaurus-collapse-button-bg-hover) !important;
 }
 
 html[data-theme="dark"] .header-github-link:before {
@@ -280,7 +314,12 @@ html[data-theme="dark"] .header-github-link:before {
   outline: none;
 }
 
+/* Force no darken on hover */
 .button--primary {
+  background-color: var(--ifm-color-primary);
+}
+
+html[data-theme="dark"] .button--primary {
   background-color: var(--ifm-color-primary-dark);
 }
 
@@ -312,6 +351,18 @@ html[data-theme="dark"] .header-github-link:before {
   font-size: var(--h3-font-size);
 }
 
+/* Hack a way to make the search bar's icons (⌘ K) vertically centered */
+kbd {
+  box-shadow: none !important;
+  width: 1.4rem;
+  text-align: center;
+}
+
+kbd::before {
+  content: "";
+  vertical-align: middle;
+}
+
 /* Reduce font size in sidebar, bold the active sidebar page, and don't change active link color on hover */
 .menu {
   padding-top: var(--ifm-pre-padding) !important;
@@ -334,13 +385,21 @@ html[data-theme="dark"] .header-github-link:before {
   background: var(--ifm-menu-link-sublist-icon) 50% / 1.25rem 1.25rem;
 }
 
+.menu__link:hover {
+  transition: background, color var(--ifm-transition-fast);
+}
+
 .menu__caret::before {
   background: var(--ifm-menu-link-sublist-icon) 50% / 1.25rem 1.25rem;
 }
 
-/* Style for the section / divider text */
-.sidebar-section {
-  font-weight: var(--ifm-font-weight-bold);
+/* If a sidebar section heading is the third child in the sidebar (behind the
+"Back to home" button and the sidebar's main heading), then decrease the top
+spacing. */
+.menu__list:has(.menu__list-item:nth-child(3) > .sidebar-section)
+  .menu__list-item:nth-child(3) {
+  padding-top: 0;
+  margin-top: 0;
 }
 
 /* Pagination fixes background color, do not change font color on hover, and change icons */
@@ -350,14 +409,29 @@ html[data-theme="dark"] .header-github-link:before {
 
 .pagination-nav__link:hover {
   color: var(--ifm-link-color);
+  border-color: var(--ifm-color-emphasis-300);
 }
 
 .pagination-nav__link--next .pagination-nav__label::after {
-  content: " →";
+  display: inline-block;
+  content: "→";
+  padding-left: 0.3rem;
+  transition: transform var(--ifm-transition-fast);
+}
+
+.pagination-nav__link--next:hover .pagination-nav__label::after {
+  transform: translate(0.2rem);
 }
 
 .pagination-nav__link--prev .pagination-nav__label::before {
-  content: "← ";
+  display: inline-block;
+  content: "←";
+  padding-right: 0.3rem;
+  transition: transform var(--ifm-transition-fast);
+}
+
+.pagination-nav__link--prev:hover .pagination-nav__label::before {
+  transform: translate(-0.2rem);
 }
 
 /* Decrease the width of the search bar */
@@ -369,7 +443,7 @@ html[data-theme="dark"] .header-github-link:before {
 input {
   border: 1px solid var(--ifm-toc-border-color);
   border-radius: 5px !important;
-  transition: filter var(--ifm-transition-fast);
+  transition: border var(--ifm-transition-fast);
   background-color: var(--ifm-navbar-search-input-background-color);
 }
 
@@ -381,9 +455,10 @@ input {
 /* Change the search box outline color on focus */
 .navbar__search-input:focus-visible {
   outline: none;
+  border-color: var(--ifm-color-primary);
 }
 
-@media (max-width: 997px) {
+@media (max-width: 768px) {
   .navbar__search-input {
     width: 10rem;
   }
@@ -404,6 +479,38 @@ input {
   overflow: visible !important;
 }
 
+/* Style for the section / divider text */
+.sidebar-section {
+  font-weight: var(--ifm-font-weight-bold);
+}
+
+.sidebar-landing .menu__link {
+  font-size: var(--ifm-h4-font-size);
+  /* background-color: transparent; */
+  color: var(--ifm-menu-color);
+  margin-top: 7px;
+  margin-bottom: 7px;
+  font-weight: var(--ifm-font-weight-semibold);
+}
+
+.sidebar-landing .menu__link--active {
+  background-color: transparent;
+}
+
+.sidebar-landing .menu__link:hover {
+  background-color: transparent;
+  color: var(--ifm-color-primary);
+}
+
+.sidebar-hr hr {
+  margin: 0 auto 0 0 !important;
+  width: 80%;
+}
+
+.sidepage-title {
+  color: var(--ifm-color-primary);
+}
+
 /* Horizontally center all images by default */
 img {
   display: block;
@@ -417,6 +524,10 @@ figcaption {
 
 table {
   text-align: center;
+}
+
+.navbar-sidebar__back {
+  display: none;
 }
 
 /* Custom fonts for the site */

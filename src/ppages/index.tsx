@@ -2,7 +2,7 @@ import React from "react";
 import clsx from "clsx";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import Layout from "@theme/Layout";
-import HomepageFeatures from "@site/src/components/HomepageFeatures";
+import HomepageFeatures from "@site/src/components/Home/HomepageFeatures";
 import ArrowButton from "@site/src/components/ArrowButton";
 import CustomFooter from "@site/src/theme/CustomFooter";
 import useBaseUrl from "@docusaurus/useBaseUrl";

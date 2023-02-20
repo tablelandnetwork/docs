@@ -19,7 +19,7 @@ To get started with contributing, you can do the following:
 
 - View the [open issues](https://github.com/tablelandnetwork/docs/issues) in the docs (or other) repositories and browse issues by labels (example [here](https://github.com/tablelandnetwork/js-tableland/labels)).
 - Create an issue if there is a specific contribution in mind. One of the Tableland [documentation maintainers](/docs/contribute/maintainers) will reach out and help find an area for you to contribute.
-- Dive into our Discord and ask in open a ticket in [`#contact-team`](https://discord.com/channels/592843512312102924/1000182412795445378) if you don't want to open a GitHub issue yet but want to discuss potential contributions.
+- Dive into our Discord and open a ticket ([`#contact-team`](https://discord.com/channels/592843512312102924/1000182412795445378)) if you don't want to open a GitHub issue yet but want to discuss potential contributions.
 
 ## Add to the Tableland docs
 

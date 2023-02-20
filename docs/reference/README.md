@@ -8,6 +8,7 @@ keywords:
 
 ## Overview
 
+<!--
 import DocCardList from '@theme/DocCardList';
 
-<DocCardList />
+<DocCardList /> -->

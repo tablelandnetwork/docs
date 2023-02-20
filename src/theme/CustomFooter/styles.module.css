@@ -1,0 +1,30 @@
+.footerIconLeft svg,
+.footerIconLeft span {
+  vertical-align: middle;
+  line-height: 1.7rem;
+}
+
+.footerIconLeft svg {
+  margin-right: 10px;
+}
+
+.footerIconsRight > li {
+  margin-bottom: 3px !important;
+}
+
+.footerIconRight {
+  -webkit-tap-highlight-color: transparent;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  transition: background var(--ifm-transition-fast);
+}
+
+@media (max-width: 996px) {
+  .colorModeToggle {
+    display: none;
+  }
+}

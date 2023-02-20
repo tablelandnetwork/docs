@@ -22,5 +22,10 @@
       "write to table",
       "mutate table"
     ]
+  },
+  "sidebar": "tutorials",
+  "next": {
+    "title": "Build a dynamic NFT in Solidity",
+    "permalink": "/tutorials/dynamic-nft-solidity"
   }
 }

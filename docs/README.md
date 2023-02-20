@@ -1,5 +1,5 @@
 ---
-# This page is all just JSX being import, so hide the defaults so as to not treat it like a standard docs page
+# This page is all just a JSX import, so hide the defaults so as to not treat it like a standard docs page
 id: landing
 sidebar_label: Home
 hide_title: true
@@ -10,8 +10,12 @@ pagination_next: null
 custom_edit_url: null
 slug: /
 keywords:
-  - protocol
+  - tableland
+  - docs
+  - documentation
 ---
+
+<!-- This page's content is generated from the JSX component found at the following import -->
 
 import Home from "@site/src/components/Home"
 

@@ -22,5 +22,14 @@
       "write to table",
       "mutate table"
     ]
+  },
+  "sidebar": "guides",
+  "previous": {
+    "title": "Creating tables",
+    "permalink": "/smart-contracts/create"
+  },
+  "next": {
+    "title": "Reading tables",
+    "permalink": "/smart-contracts/read"
   }
 }

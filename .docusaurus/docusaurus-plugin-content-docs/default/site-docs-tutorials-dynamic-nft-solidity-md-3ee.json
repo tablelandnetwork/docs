@@ -24,5 +24,14 @@
       "dynamic NFT",
       "p5.js"
     ]
+  },
+  "sidebar": "tutorials",
+  "previous": {
+    "title": "Overview",
+    "permalink": "/tutorials/"
+  },
+  "next": {
+    "title": "Creating a dynamic NFT with p5.js",
+    "permalink": "/tutorials/dynamic-nft-p5js"
   }
 }

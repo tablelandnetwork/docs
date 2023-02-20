@@ -3,11 +3,11 @@ import styles from "./styles.module.css";
 import React, { useState } from "react";
 
 export default function NewsletterForm() {
-  const [name, setName] = useState("");
+  const [email, setEmail] = useState();
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    alert(`Stay tuned, ${name}—we haven't set up our newsletter, yet!`);
+    alert(`Stay tuned, ${email}—we haven't set up our newsletter, yet!`);
   };
 
   return (
@@ -16,9 +16,9 @@ export default function NewsletterForm() {
       <div className="row row--no-gutters margin-top--sm">
         <div className="col margin-top--sm">
           <input
-            type="text"
-            value={name}
-            onChange={(e) => setName(e.target.value)}
+            type="email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
             className={styles.formBoxInput}
           />
         </div>
@@ -27,6 +27,7 @@ export default function NewsletterForm() {
             type="submit"
             className={clsx("button button--secondary", styles.formBoxBtn)}
             onClick={handleSubmit}
+            disabled={email ? false : true}
           >
             Sign up
           </button>

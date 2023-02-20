@@ -20,6 +20,24 @@ const navbar = {
       type: "search",
       position: "left",
     },
+    {
+      to: "https://console.tableland.xyz",
+      position: "right",
+      label: "Console",
+    },
+    {
+      href: "https://github.com/tablelandnetwork/",
+      position: "right",
+      className: "header-github-link",
+      "aria-label": "GitHub repository",
+    },
+    // This is a custom workaround detailed at:
+    // https://github.com/facebook/docusaurus/issues/7227
+    // It is a SIWE connect button.
+    {
+      type: "custom-ConnectWallet",
+      position: "right",
+    },
     //   {
     //     type: "docSidebar",
     //     position: "left",
@@ -71,12 +89,6 @@ const navbar = {
     //         rel: null,
     //       },
     //     ],
-    //   },
-    //   {
-    //     href: "https://github.com/tablelandnetwork/",
-    //     position: "right",
-    //     className: "header-github-link",
-    //     "aria-label": "GitHub repository",
     //   },
   ],
 };

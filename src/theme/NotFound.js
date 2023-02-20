@@ -2,11 +2,11 @@ import React from "react";
 import Translate, { translate } from "@docusaurus/Translate";
 import { PageMetadata } from "@docusaurus/theme-common";
 import Layout from "@theme/Layout";
-import CustomFooter from "@theme/CustomFooter";
 import Link from "@docusaurus/Link";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 
 // This is an ejected `NotFound` component that customizes the 404 page
+
 export default function NotFound() {
   const { siteConfig } = useDocusaurusContext();
 
@@ -42,13 +42,11 @@ export default function NotFound() {
                 <Translate id="theme.NotFound.p2">
                   If this is a broken site link, please
                 </Translate>
-                <a
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  href={`https://github.com/${siteConfig.organizationName}/${siteConfig.projectName}/issues`}
+                <Link
+                  to={`https://github.com/${siteConfig.organizationName}/${siteConfig.projectName}/issues`}
                 >
                   <Translate> open an issue on GitHub</Translate>
-                </a>{" "}
+                </Link>{" "}
                 <Translate>and let the </Translate>
                 {siteConfig.title}{" "}
                 <Translate>
@@ -68,12 +66,11 @@ export default function NotFound() {
             }}
           >
             <Link className="button button--secondary button--lg" to="/">
-              ← <Translate>Back to homepage</Translate>
+              ← <Translate>Back to home</Translate>
             </Link>
           </div>
         </main>
       </Layout>
-      <CustomFooter />
     </>
   );
 }

@@ -1,12 +1,19 @@
 ---
 title: Quick start
-sidebar_label: CLI
 description: Experiment with creating, editing, and querying tables from the comfort of the command line.
 synopsis: The JavaScript / TypeScript SDK allows developers to create tables on their chain of choice. Connect, create, and then interact with your tables thereafter with table writes and reads.
 keywords:
   - CLI
   - command line
 ---
+
+import {Address} from '@site/src/components/Wallet'
+
+export const address = <Address/>
+
+<code>
+const t = "{address}";
+</code>
 
 The `@tableland/cli` is a developer tool to help you connect, create, write, and read from The comfort of your command line. It’s simple, easy to use, and integrates nicely with tools like [jq](https://stedolan.github.io/jq/). When interacting with the Tableland CLI, you can also specify your own [provider endpoints](https://www.alchemy.com/blog/what-is-a-node-provider) for added control. Using the CLI, you can:
 

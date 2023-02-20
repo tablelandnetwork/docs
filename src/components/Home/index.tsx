@@ -1,7 +1,7 @@
 import React from "react";
 import clsx from "clsx";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
-import HomepageFeatures from "@site/src/components/HomepageFeatures";
+import HomepageFeatures from "./HomepageFeatures";
 import Link from "@docusaurus/Link";
 import useBaseUrl from "@docusaurus/useBaseUrl";
 import styles from "./index.module.css";
@@ -47,11 +47,13 @@ export default function Home(): JSX.Element {
                 data with <b>immutable</b> rules.
               </p>
               <Link
-                className="button button--primary padding-left--sm padding-right--sm"
+                className={clsx(
+                  "button button--primary padding-left--sm padding-right--sm",
+                  styles.getStartedBtn
+                )}
                 to="develop"
               >
                 Get started
-                <span style={{ marginLeft: ".3rem" }}></span>→
               </Link>
             </div>
             <div

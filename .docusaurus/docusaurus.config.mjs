@@ -148,6 +148,21 @@ export default {
         {
           "type": "search",
           "position": "left"
+        },
+        {
+          "to": "https://console.tableland.xyz",
+          "position": "right",
+          "label": "Console"
+        },
+        {
+          "href": "https://github.com/tablelandnetwork/",
+          "position": "right",
+          "className": "header-github-link",
+          "aria-label": "GitHub repository"
+        },
+        {
+          "type": "custom-ConnectWallet",
+          "position": "right"
         }
       ]
     },

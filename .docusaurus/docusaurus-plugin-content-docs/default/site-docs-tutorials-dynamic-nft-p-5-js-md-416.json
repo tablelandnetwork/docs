@@ -23,5 +23,14 @@
       "solidity",
       "dynamic NFT"
     ]
+  },
+  "sidebar": "tutorials",
+  "previous": {
+    "title": "Build a dynamic NFT in Solidity",
+    "permalink": "/tutorials/dynamic-nft-solidity"
+  },
+  "next": {
+    "title": "Dynamic NFT with Chainlink Automation",
+    "permalink": "/tutorials/dynamic-nft-chainlink"
   }
 }
