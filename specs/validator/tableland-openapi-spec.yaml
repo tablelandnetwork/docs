@@ -122,6 +122,49 @@ paths:
           description: Row Not Found
         "429":
           description: Too Many Requests
+  /proof/{chainId}/{tableId}/{row}:
+    get:
+      tags:
+        - proof
+      summary: Get inclusion proof of a row
+      description: Returns the inclusion proof of a given row
+      operationId: queryProof
+      parameters:
+        - name: chainId
+          in: path
+          description: The parent chain to target
+          required: true
+          schema:
+            type: integer
+            format: int32
+          example: 80001
+        - name: tableId
+          in: path
+          description: Table identifier
+          required: true
+          schema:
+            type: string
+          example: "1"
+        - name: row
+          in: path
+          description: Row content
+          required: true
+          schema:
+            type: string
+          example: "15c1fbab80565e5696b04d9e4fb0ca493106f60d942ec5cd7f40179b20a60e6418d98bf6735243590e6c911b91b324cd3c3b755616021630c836632ea"
+      responses:
+        "200":
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Proof"
+        "400":
+          description: Invalid query/statement value
+        "404":
+          description: Proof Not Found
+        "429":
+          description: Too Many Requests
   /receipt/{chainId}/{transactionHash}:
     get:
       tags:
@@ -266,6 +309,13 @@ components:
           type: integer
           format: int32
           example: 1
+    Proof:
+      type: object
+      properties:
+        proof:
+          type: array
+          items:
+            type: string
     Schema:
       type: object
       properties:
