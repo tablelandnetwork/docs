@@ -5,6 +5,9 @@
 // try to click the link item again——it only collapses by clicking the
 // button dropdown area on the the far right. Twas annoying.
 
+// Note: this small customization was removed due to a weird "jump" that occurs
+// when clicking between certain pages.
+
 import React, { useEffect, useMemo } from "react";
 import clsx from "clsx";
 import {
@@ -148,9 +151,11 @@ export default function DocSidebarItemCategory({
                   onItemClick?.(item);
                   if (href) {
                     // Fix: make all click on a menu item trigger a collapse,
-                    // not just that button area. The original line was
-                    // `updateCollapsed(false)`.
-                    updateCollapsed();
+                    // not just that button area. Do this with
+                    // `updateCollapsed()`. However, this caused a "jump" if
+                    // clicking between certain pages so was removed. Keeping
+                    // this comment for reference purposes.
+                    updateCollapsed(false);
                   } else {
                     e.preventDefault();
                     updateCollapsed();

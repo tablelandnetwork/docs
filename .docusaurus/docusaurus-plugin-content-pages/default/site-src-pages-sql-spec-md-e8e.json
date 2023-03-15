@@ -1,0 +1,8 @@
+{
+  "type": "mdx",
+  "permalink": "/sql-spec",
+  "source": "@site/src/pages/sql-spec.md",
+  "title": "Tableland SQL Language Specification",
+  "description": "stable",
+  "frontMatter": {}
+}

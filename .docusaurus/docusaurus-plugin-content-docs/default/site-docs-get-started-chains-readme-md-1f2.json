@@ -1,0 +1,34 @@
+{
+  "unversionedId": "get-started/chains/README",
+  "id": "get-started/chains/README",
+  "title": "Choosing a chain",
+  "description": "Selecting a base chain is an important step in any application’s design and, especially, for tables.",
+  "source": "@site/docs/get-started/chains/README.md",
+  "sourceDirName": "get-started/chains",
+  "slug": "/get-started/chains/",
+  "permalink": "/get-started/chains/",
+  "draft": false,
+  "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/get-started/chains/README.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "title": "Choosing a chain",
+    "description": "Selecting a base chain is an important step in any application’s design and, especially, for tables.",
+    "keywords": [
+      "evm",
+      "chains"
+    ]
+  },
+  "sidebar": "getStarted",
+  "previous": {
+    "title": "Response times",
+    "permalink": "/get-started/reference/response-times"
+  },
+  "next": {
+    "title": "Ethereum",
+    "permalink": "/get-started/chains/ethereum"
+  }
+}

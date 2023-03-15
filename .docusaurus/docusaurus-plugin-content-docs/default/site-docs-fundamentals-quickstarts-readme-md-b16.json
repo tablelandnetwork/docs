@@ -1,0 +1,30 @@
+{
+  "unversionedId": "fundamentals/quickstarts/README",
+  "id": "fundamentals/quickstarts/README",
+  "title": "Quickstarts",
+  "description": "Make sure you're ready to start building by properly setting up your development environment.",
+  "source": "@site/docs/fundamentals/quickstarts/README.md",
+  "sourceDirName": "fundamentals/quickstarts",
+  "slug": "/fundamentals/quickstarts/",
+  "permalink": "/fundamentals/quickstarts/",
+  "draft": false,
+  "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/fundamentals/quickstarts/README.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "title": "Quickstarts",
+    "description": "Make sure you're ready to start building by properly setting up your development environment."
+  },
+  "sidebar": "getStarted",
+  "previous": {
+    "title": "Databases & SQL",
+    "permalink": "/fundamentals/databases"
+  },
+  "next": {
+    "title": "SDK",
+    "permalink": "/fundamentals/quickstarts/sdk-quickstart"
+  }
+}

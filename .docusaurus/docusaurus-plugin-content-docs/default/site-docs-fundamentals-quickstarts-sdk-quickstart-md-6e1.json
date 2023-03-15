@@ -1,0 +1,31 @@
+{
+  "unversionedId": "fundamentals/quickstarts/sdk-quickstart",
+  "id": "fundamentals/quickstarts/sdk-quickstart",
+  "title": "SDK quickstart",
+  "description": "Learn how to create a table, add some sample data, and query the data using the SDK.",
+  "source": "@site/docs/fundamentals/quickstarts/sdk-quickstart.md",
+  "sourceDirName": "fundamentals/quickstarts",
+  "slug": "/fundamentals/quickstarts/sdk-quickstart",
+  "permalink": "/fundamentals/quickstarts/sdk-quickstart",
+  "draft": false,
+  "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/fundamentals/quickstarts/sdk-quickstart.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "title": "SDK quickstart",
+    "sidebar_label": "SDK",
+    "description": "Learn how to create a table, add some sample data, and query the data using the SDK."
+  },
+  "sidebar": "getStarted",
+  "previous": {
+    "title": "Quickstarts",
+    "permalink": "/fundamentals/quickstarts/"
+  },
+  "next": {
+    "title": "Smart contracts",
+    "permalink": "/fundamentals/quickstarts/smart-contract-quickstart"
+  }
+}

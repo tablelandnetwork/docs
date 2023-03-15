@@ -22,14 +22,5 @@
     "keywords": [
       "protocol"
     ]
-  },
-  "sidebar": "sql",
-  "previous": {
-    "title": "Create a table",
-    "permalink": "/concepts/sql/create-a-table"
-  },
-  "next": {
-    "title": "INSERT",
-    "permalink": "/concepts/sql/insert"
   }
 }

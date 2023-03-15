@@ -1,0 +1,37 @@
+{
+  "unversionedId": "get-started/reference/repos",
+  "id": "get-started/reference/repos",
+  "title": "Repositories",
+  "description": "Open source reference for all official Tableland network software.",
+  "source": "@site/docs/get-started/reference/repos.md",
+  "sourceDirName": "get-started/reference",
+  "slug": "/get-started/reference/repos",
+  "permalink": "/get-started/reference/repos",
+  "draft": false,
+  "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/get-started/reference/repos.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "title": "Repositories",
+    "sidebar_label": "Repos",
+    "description": "Open source reference for all official Tableland network software.",
+    "keywords": [
+      "repos",
+      "repo",
+      "repositories",
+      "repository"
+    ]
+  },
+  "sidebar": "getStarted",
+  "previous": {
+    "title": "Local node",
+    "permalink": "/get-started/chains/local"
+  },
+  "next": {
+    "title": "What is Tableland?",
+    "permalink": "/get-started/basics/what-is-tableland"
+  }
+}

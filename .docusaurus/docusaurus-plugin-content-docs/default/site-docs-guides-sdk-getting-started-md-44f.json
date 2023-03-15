@@ -1,0 +1,35 @@
+{
+  "unversionedId": "guides/sdk/getting-started",
+  "id": "guides/sdk/getting-started",
+  "title": "Getting started",
+  "description": "Get up an running with the Tableland SDK.",
+  "source": "@site/docs/guides/sdk/getting-started.md",
+  "sourceDirName": "guides/sdk",
+  "slug": "/guides/sdk/getting-started",
+  "permalink": "/guides/sdk/getting-started",
+  "draft": false,
+  "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/guides/sdk/getting-started.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "title": "Getting started",
+    "description": "Get up an running with the Tableland SDK.",
+    "synopsis": "The JavaScript / TypeScript SDK allows developers to create tables on their chain of choice. Connect, create, and then interact with your tables thereafter with table writes and reads. Dive into the basics for connecting, creating, writing, and reading from tables.",
+    "keywords": [
+      "SQL query",
+      "Tableland SDK"
+    ]
+  },
+  "sidebar": "guides",
+  "previous": {
+    "title": "Overview",
+    "permalink": "/guides/sdk/"
+  },
+  "next": {
+    "title": "Connecting to Tableland",
+    "permalink": "/guides/sdk/connect"
+  }
+}

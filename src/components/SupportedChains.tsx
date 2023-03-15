@@ -3,7 +3,7 @@ import Link from "@docusaurus/Link";
 import { helpers } from "@tableland/sdk";
 
 // Return the block explorer link for a given chain and contract while using a
-// "testnet" or "mainnet" flag to determine which explorer to use.
+// "testnets" or "mainnets" flag to determine which explorer to use.
 function getChainExplorer(
   chain: string,
   location: string,
@@ -78,7 +78,15 @@ export const supportedChains = (): FormattedChains[] => {
   return formatChains;
 };
 
-// Get a single piece of chain related data by passing the `chainName` and the type
+// Get info about a specific chain, passing the `FormattedChains` key.
+export function getChainInfo(chain: string, info: any): any {
+  const chains = supportedChains();
+  const c: any = chains.find((x) => x.chainName === chain);
+  return c ? c[info] : undefined;
+}
+
+// Get a single piece of chain related data by passing the `chainName` and the
+// type of info (`name`, `chainId`, etc.).
 export const ChainInfo = ({
   chain,
   info,
@@ -86,10 +94,8 @@ export const ChainInfo = ({
   chain: string;
   info: string;
 }): JSX.Element => {
-  const chains = supportedChains();
-  const c: any = chains.find((x) => x.chainName === chain);
-  const data = c[info];
-  return c ? (
+  const data = getChainInfo(chain, info);
+  return data ? (
     <>
       <span>{data}</span>
     </>
@@ -102,16 +108,20 @@ export const ChainInfo = ({
 export function ChainsList({
   type,
   format,
+  info,
 }: {
   type: string;
   format: string;
+  info: string;
 }): JSX.Element {
   let chains: FormattedChains[];
   // Return either testnet only, mainnet only, or both mainnet & testnet chains.
-  if (type === "testnet") {
+  if (type === "testnets") {
     chains = supportedChains().filter((chain) => chain.location === "testnet");
-  } else if (type === "mainnet") {
+  } else if (type === "mainnets") {
     chains = supportedChains().filter((chain) => chain.location === "mainnet");
+  } else if (type === "all") {
+    chains = supportedChains();
   } else {
     chains = supportedChains().filter(
       (chain) => chain.location === "mainnet" || chain.location === "testnet"
@@ -122,11 +132,32 @@ export function ChainsList({
   return format === "list" ? (
     <>
       <ul>
-        {Object.keys(chains).map((chain: any, i) => (
-          <li key={i} style={{ textTransform: "capitalize" }}>
-            {chains[chain].chainNameFormatted}
-          </li>
-        ))}
+        {Object.keys(chains).map((chain: any, i) => {
+          if (info === "ethersName") {
+            return (
+              <li key={i}>
+                <span style={{ textTransform: "capitalize" }}>
+                  {chains[chain].chainNameFormatted}{" "}
+                </span>
+                {`=>`} <code>{chains[chain].chainName}</code>
+              </li>
+            );
+          } else if (info === "chainId") {
+            return (
+              <li key={i}>
+                <span style={{ textTransform: "capitalize" }}>
+                  {chains[chain].chainNameFormatted}{" "}
+                </span>
+                {`=>`} <code>{chains[chain].chainId}</code>
+              </li>
+            );
+          } else
+            return (
+              <li key={i} style={{ textTransform: "capitalize" }}>
+                {chains[chain].chainNameFormatted}
+              </li>
+            );
+        })}
       </ul>
     </>
   ) : (
@@ -153,7 +184,7 @@ export function SupportedChains(): JSX.Element {
         <thead>
           <tr>
             <th>Chain</th>
-            <th>Location</th>
+            <th>Environment</th>
             <th>Chain ID</th>
             <th>Address</th>
           </tr>
@@ -170,13 +201,45 @@ export function SupportedChains(): JSX.Element {
               <td>{chains[chain].chainId}</td>
               <td style={{ fontWeight: "var(--ifm-font-weight-semibold)" }}>
                 {chains[chain].location === "local" ? (
-                  chains[chain].contractAddress
+                  <code>{chains[chain].contractAddress}</code>
                 ) : (
-                  <Link to={chains[chain].blockExplorer}>
-                    {chains[chain].contractAddress}
-                  </Link>
+                  <code>
+                    <Link to={chains[chain].blockExplorer}>
+                      {chains[chain].contractAddress}
+                    </Link>
+                  </code>
                 )}
               </td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </>
+  );
+}
+
+export function SupportedChainIds(): JSX.Element {
+  const chains = supportedChains();
+  return (
+    <>
+      <table>
+        <thead>
+          <tr>
+            <th>Chain</th>
+            <th>Environment</th>
+            <th>Chain ID</th>
+          </tr>
+        </thead>
+        <tbody>
+          {Object.keys(chains).map((chain: any, i) => (
+            <tr key={i}>
+              <td style={{ textTransform: "capitalize" }}>
+                {chains[chain].chainNameFormatted}
+              </td>
+              <td style={{ textTransform: "capitalize" }}>
+                {chains[chain].location}
+              </td>
+              <td>{chains[chain].chainId}</td>
             </tr>
           ))}
         </tbody>

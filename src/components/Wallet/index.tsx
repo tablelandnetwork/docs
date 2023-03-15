@@ -9,18 +9,14 @@ export function getWalletAddress(): string | undefined {
   // Get the user's connected wallet address.
   if (isConnected) {
     return address;
-  }
+  } else return "0xINSERT_ADDRESS";
 }
 
 export const Address = (): JSX.Element => {
   const address = getWalletAddress();
   // Return the user's connected wallet, or some default value (e.g., this is
   // the second Hardhat wallet address).
-  return address ? (
-    <>{address}</>
-  ) : (
-    <>0x70997970C51812dc3A010C7d01b50e0d17dc79C8</>
-  );
+  return address ? <>{address}</> : <>0xINSERT_ADDRESS</>;
 };
 
 export default function ConnectWallet() {

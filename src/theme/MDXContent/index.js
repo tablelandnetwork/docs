@@ -12,10 +12,11 @@ export default function MDXContent({ children }) {
           {children.type.frontMatter.description}
         </p>
       )}
+      {(children.type.frontMatter.description ||
+        children.type.frontMatter.synopsis) && <hr />}
       {children.type.frontMatter.synopsis && (
         <p>{children.type.frontMatter.synopsis}</p>
       )}
-      {children.type.frontMatter.description && <hr />}
       {children}
     </MDXProvider>
   );

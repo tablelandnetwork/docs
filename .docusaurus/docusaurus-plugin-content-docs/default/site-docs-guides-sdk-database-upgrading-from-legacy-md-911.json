@@ -1,0 +1,34 @@
+{
+  "unversionedId": "guides/sdk/database/upgrading-from-legacy",
+  "id": "guides/sdk/database/upgrading-from-legacy",
+  "title": "Upgrading from the legacy SDK",
+  "description": "There are breaking changes from the JavaScript SDK v3 to v4—make sure you know the differences.",
+  "source": "@site/docs/guides/sdk/database/upgrading-from-legacy.md",
+  "sourceDirName": "guides/sdk/database",
+  "slug": "/guides/sdk/database/upgrading-from-legacy",
+  "permalink": "/guides/sdk/database/upgrading-from-legacy",
+  "draft": false,
+  "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/guides/sdk/database/upgrading-from-legacy.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "title": "Upgrading from the legacy SDK",
+    "sidebar_label": "Legacy SDK",
+    "description": "There are breaking changes from the JavaScript SDK v3 to v4—make sure you know the differences.",
+    "keywords": [
+      "legacy"
+    ]
+  },
+  "sidebar": "guides",
+  "previous": {
+    "title": "ORM support",
+    "permalink": "/guides/sdk/database/orm"
+  },
+  "next": {
+    "title": "Validator API",
+    "permalink": "/guides/sdk/validator/"
+  }
+}

@@ -14,8 +14,10 @@
   "lastUpdatedBy": "Author",
   "lastUpdatedAt": 1539502055,
   "formattedLastUpdatedAt": "Oct 14, 2018",
+  "sidebarPosition": 4,
   "frontMatter": {
     "title": "Use cases",
+    "sidebar_position": 4,
     "description": "A series of general use cases to consider.",
     "synopsis": "This page identifies some potential use cases. It is non-exhaustive but provides guidelines / considerations for where developers can use Tableland, and as always, consider the host chain as part of the use case criteria (e.g., Ethereum is more expensive to write to than an L2).",
     "keywords": [
@@ -26,9 +28,5 @@
   "previous": {
     "title": "Hybrid state",
     "permalink": "/concepts/network/tableland-state"
-  },
-  "next": {
-    "title": "Open beta",
-    "permalink": "/concepts/network/open-beta"
   }
 }

@@ -1,0 +1,35 @@
+{
+  "unversionedId": "sdk/database/README",
+  "id": "sdk/database/README",
+  "title": "Database API",
+  "description": "Get up an running with the Tableland SDK.",
+  "source": "@site/docs/sdk/database/README.md",
+  "sourceDirName": "sdk/database",
+  "slug": "/sdk/database/",
+  "permalink": "/sdk/database/",
+  "draft": false,
+  "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/sdk/database/README.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "title": "Database API",
+    "description": "Get up an running with the Tableland SDK.",
+    "synopsis": "The JavaScript / TypeScript SDK allows developers to create tables on their chain of choice. Connect, create, and then interact with your tables thereafter with table writes and reads. Dive into the basics for connecting, creating, writing, and reading from tables.",
+    "keywords": [
+      "SQL query",
+      "Tableland SDK"
+    ]
+  },
+  "sidebar": "sdk",
+  "previous": {
+    "title": "Overview",
+    "permalink": "/sdk/"
+  },
+  "next": {
+    "title": "Signers",
+    "permalink": "/sdk/database/signers"
+  }
+}

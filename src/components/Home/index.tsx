@@ -25,9 +25,9 @@ export default function Home(): JSX.Element {
               </p>
               <ul>
                 <li>
-                  Stop storing data in contracts that doesn't belong there, and
-                  offload it to a decentralized database with native SQL queries
-                  & mutability.
+                  Stop storing data in smart contracts that doesn't belong
+                  there, and offload it to a decentralized database with native
+                  SQL queries & mutability.
                 </li>
                 <li>
                   Eliminate centralized server dependence, or complex
@@ -51,7 +51,7 @@ export default function Home(): JSX.Element {
                   "button button--primary padding-left--sm padding-right--sm",
                   styles.getStartedBtn
                 )}
-                to="develop"
+                to="fundamentals"
               >
                 Get started
               </Link>

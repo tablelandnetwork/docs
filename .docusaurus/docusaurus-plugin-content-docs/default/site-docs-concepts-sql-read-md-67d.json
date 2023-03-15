@@ -21,14 +21,5 @@
     "keywords": [
       "protocol"
     ]
-  },
-  "sidebar": "sql",
-  "previous": {
-    "title": "DELETE",
-    "permalink": "/concepts/sql/delete"
-  },
-  "next": {
-    "title": "Access control",
-    "permalink": "/concepts/sql/access-control"
   }
 }

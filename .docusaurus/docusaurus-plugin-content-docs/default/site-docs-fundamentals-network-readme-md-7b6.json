@@ -1,0 +1,25 @@
+{
+  "unversionedId": "fundamentals/network/README",
+  "id": "fundamentals/network/README",
+  "title": "Tableland protocol",
+  "description": "Learn about what Tableland is.",
+  "source": "@site/docs/fundamentals/network/README.md",
+  "sourceDirName": "fundamentals/network",
+  "slug": "/fundamentals/network/",
+  "permalink": "/fundamentals/network/",
+  "draft": false,
+  "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/fundamentals/network/README.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "title": "Tableland protocol",
+    "description": "Learn about what Tableland is.",
+    "synopsis": "Structured Query Language (SQL) is a language that allows developers to interact with databases for extracting and mutating values.",
+    "keywords": [
+      "protocol"
+    ]
+  }
+}

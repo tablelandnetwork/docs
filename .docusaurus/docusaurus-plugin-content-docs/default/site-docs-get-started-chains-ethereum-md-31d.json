@@ -1,0 +1,34 @@
+{
+  "unversionedId": "get-started/chains/ethereum",
+  "id": "get-started/chains/ethereum",
+  "title": "Ethereum",
+  "description": "An overview of using Ethereum with Tableland.",
+  "source": "@site/docs/get-started/chains/ethereum.md",
+  "sourceDirName": "get-started/chains",
+  "slug": "/get-started/chains/ethereum",
+  "permalink": "/get-started/chains/ethereum",
+  "draft": false,
+  "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/get-started/chains/ethereum.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "title": "Ethereum",
+    "description": "An overview of using Ethereum with Tableland.",
+    "synopsis": "Ethereum and its EVM is what drives Tableland's approach for chain compatibility. With its data and network hardness, it's a great case for many projects, but not all use cases can occur here due to cost constraints.",
+    "keywords": [
+      "ethereum"
+    ]
+  },
+  "sidebar": "getStarted",
+  "previous": {
+    "title": "Choosing a chain",
+    "permalink": "/get-started/chains/"
+  },
+  "next": {
+    "title": "Arbitrum",
+    "permalink": "/get-started/chains/arbitrum"
+  }
+}

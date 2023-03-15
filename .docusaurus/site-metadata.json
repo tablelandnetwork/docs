@@ -27,11 +27,6 @@
       "name": "@docusaurus/theme-classic",
       "version": "2.3.1"
     },
-    "docusaurus-theme-live-codeblock": {
-      "type": "package",
-      "name": "@docusaurus/theme-live-codeblock",
-      "version": "2.3.1"
-    },
     "docusaurus-plugin-dotenv": {
       "type": "package",
       "name": "docusaurus-plugin-dotenv",
@@ -45,6 +40,11 @@
     "docusaurus-theme-mermaid": {
       "type": "package",
       "name": "@docusaurus/theme-mermaid",
+      "version": "2.3.1"
+    },
+    "docusaurus-theme-live-codeblock": {
+      "type": "package",
+      "name": "@docusaurus/theme-live-codeblock",
       "version": "2.3.1"
     }
   }

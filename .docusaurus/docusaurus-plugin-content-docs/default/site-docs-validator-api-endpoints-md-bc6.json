@@ -2,7 +2,7 @@
   "unversionedId": "validator-api/endpoints",
   "id": "validator-api/endpoints",
   "title": "Endpoints",
-  "description": "Openly readable tables by your applications.",
+  "description": "Make API calls to get table and validator information.",
   "source": "@site/docs/validator-api/endpoints.md",
   "sourceDirName": "validator-api",
   "slug": "/validator-api/endpoints",
@@ -16,17 +16,16 @@
   "formattedLastUpdatedAt": "Oct 14, 2018",
   "frontMatter": {
     "title": "Endpoints",
-    "description": "Openly readable tables by your applications.",
-    "synopsis": "Reading from tables is entirely open (for anyone), allowing for true composability. Write SQL qeuries—but with some limitations that are due to the nature of decentralized networks and deterministic requirements.",
+    "description": "Make API calls to get table and validator information.",
     "keywords": [
-      "write to table",
-      "mutate table"
+      "validator api",
+      "rest api"
     ]
   },
-  "sidebar": "guides",
+  "sidebar": "validatorApi",
   "previous": {
-    "title": "Gateways",
-    "permalink": "/validator-api/gateways"
+    "title": "Get started",
+    "permalink": "/validator-api/"
   },
   "next": {
     "title": "Errors",

@@ -9,15 +9,7 @@
  Create as many sidebars as you want.
  */
 
-// For text section headers / dividers, pass the name of the section
-function sectionTitle(text) {
-  return {
-    type: "html",
-    value: `<h6 class="margin-top--md margin-bottom--none sidebar-section">${text.toUpperCase()}</h6>`,
-    defaultStyle: true,
-  };
-}
-
+// For text section headers / dividers, pass the name of the `section`
 function hr() {
   return {
     type: "html",
@@ -27,15 +19,27 @@ function hr() {
   };
 }
 
-function section(text) {
-  return [sectionTitle(text), hr()];
+function section(text, type = "sidebar") {
+  const sidebarClass =
+    type === "sidebar" ? "sidebar-section" : "landing-section";
+  return [
+    {
+      type: "html",
+      value: `<h6 class="margin-top--md margin-bottom--none ${sidebarClass}">${text.toUpperCase()}</h6>`,
+      defaultStyle: true,
+    },
+    hr(),
+  ];
 }
 
+// Only used as the "main" sidebar header—i.e., the landing page directs to a
+// number of side pages, like "Get started" and "Concepts". These sidebars have a
+// "Back to home" button followed by the passed name of the sidebar grouping.
 function sidepageHeader(text) {
   return [
     {
       type: "link",
-      label: "Back to Home",
+      label: "Back to home",
       className: "sidepage-back-home",
       href: "/",
     },
@@ -47,134 +51,200 @@ function sidepageHeader(text) {
   ];
 }
 
-const concepts = [
-  ...sidepageHeader("Concepts"),
-  "concepts/README",
-  ...section("Concepts"),
-  "concepts/network/what-is-tableland",
-  "concepts/network/considerations-tradeoffs",
-  "concepts/network/tableland-state",
-  "concepts/network/use-cases",
-  "concepts/network/open-beta",
-];
-
-const related = [
+// Concepts
+const getStarted = [
+  ...sidepageHeader("Fundamentals"),
   {
     type: "category",
-    label: "Related topics",
+    label: "Introduction",
+    collapsed: true,
     link: {
       type: "doc",
-      id: "concepts/related/README",
+      id: "fundamentals/README",
     },
     items: [
-      "concepts/related/databases",
-      "concepts/related/uri-encoding",
-      "concepts/related/roadmap",
+      "fundamentals/what-is-tableland",
+      "fundamentals/considerations-tradeoffs",
+      "fundamentals/databases",
     ],
   },
-];
-
-const tools = {
-  type: "category",
-  label: "Tools",
-  link: {
-    type: "doc",
-    id: "develop/tools/README",
-  },
-  items: ["develop/tools/local-tableland"],
-};
-
-const sql = [
-  ...sidepageHeader("SQL"),
-  "concepts/sql/README",
-  "concepts/sql/create-a-table",
   {
     type: "category",
-    label: "Mutating table data",
+    label: "Quickstarts",
     link: {
       type: "doc",
-      id: "concepts/sql/mutating-data",
+      id: "fundamentals/quickstarts/README",
     },
     items: [
-      "concepts/sql/insert",
-      "concepts/sql/update",
-      "concepts/sql/upsert",
-      "concepts/sql/delete",
+      "fundamentals/quickstarts/sdk-quickstart",
+      "fundamentals/quickstarts/smart-contract-quickstart",
+      "fundamentals/quickstarts/cli-quickstart",
+      "fundamentals/quickstarts/api-quickstart",
     ],
   },
-  "concepts/sql/read",
-  "concepts/sql/access-control",
-  "concepts/sql/incrementing-values",
-  "concepts/sql/sql-spec",
+  ...section("Architecture"),
+  "fundamentals/architecture/protocol-design",
+  "fundamentals/architecture/table-token",
+  "fundamentals/architecture/limits",
+  "fundamentals/architecture/gateway",
+  {
+    type: "category",
+    label: "Chains",
+    link: {
+      type: "doc",
+      id: "fundamentals/chains/README",
+    },
+    items: [
+      "fundamentals/chains/ethereum",
+      "fundamentals/chains/arbitrum",
+      "fundamentals/chains/optimism",
+      "fundamentals/chains/polygon",
+      "fundamentals/chains/local",
+    ],
+  },
+  "fundamentals/architecture/contracts",
+  ...section("About"),
+  "fundamentals/about/open-beta",
+  "fundamentals/about/use-cases",
+  "fundamentals/about/roadmap",
+  "fundamentals/about/general-faqs",
+  "fundamentals/about/repos",
 ];
+
+// Concepts
+
+// const related = [
+//   {
+//     type: "category",
+//     label: "Related topics",
+//     link: {
+//       type: "doc",
+//       id: "concepts/related/README",
+//     },
+//     items: [
+//       "concepts/related/databases",
+//       "concepts/related/uri-encoding",
+//       "concepts/related/roadmap",
+//     ],
+//   },
+// ];
+
+// const tools = {
+//   type: "category",
+//   label: "Tools",
+//   link: {
+//     type: "doc",
+//     id: "develop/tools/README",
+//   },
+//   items: ["develop/tools/local-tableland"],
+// };
+
+// const sql = [
+//   ...sidepageHeader("SQL"),
+//   "concepts/sql/README",
+//   "concepts/sql/create-a-table",
+//   {
+//     type: "category",
+//     label: "Mutating table data",
+//     link: {
+//       type: "doc",
+//       id: "concepts/sql/mutating-data",
+//     },
+//     items: [
+//       "concepts/sql/insert",
+//       "concepts/sql/update",
+//       "concepts/sql/upsert",
+//       "concepts/sql/delete",
+//     ],
+//   },
+//   "concepts/sql/read",
+//   "concepts/sql/access-control",
+//   "concepts/sql/incrementing-values",
+//   "concepts/sql/sql-spec",
+// ];
 
 const sdk = [
-  ...section("SDK"),
+  ...sidepageHeader("SDK"),
   "sdk/README",
-  "sdk/getting-started",
-  "sdk/connect",
-  "sdk/create",
-  "sdk/write",
-  "sdk/read",
+  {
+    type: "category",
+    label: "Database API",
+    link: {
+      type: "doc",
+      id: "sdk/database/README",
+    },
+    items: [
+      "sdk/database/signers",
+      "sdk/database/prepared-statements",
+      "sdk/database/query-statement-methods",
+      "sdk/database/batching",
+      "sdk/database/type-conversion",
+      "sdk/database/timeouts",
+      "sdk/database/orm",
+      "sdk/database/upgrading-from-legacy",
+    ],
+  },
+  {
+    type: "category",
+    label: "Validator API",
+    link: {
+      type: "doc",
+      id: "sdk/validator/README",
+    },
+    items: [],
+  },
+  {
+    type: "category",
+    label: "Registry API",
+    link: {
+      type: "doc",
+      id: "sdk/registry/README",
+    },
+    items: [],
+  },
+  "sdk/errors",
+  "sdk/sdk-faqs",
+  ...section("Frameworks"),
+  "sdk/frameworks/reactjs",
+  "sdk/frameworks/wagmi",
 ];
 
 const cli = [
-  ...section("CLI"),
+  ...sidepageHeader("CLI"),
+  ,
   "cli/README",
-  "cli/getting-started",
-  "cli/connect",
-  "cli/create",
-  "cli/write",
-  "cli/read",
+  "cli/commands",
+  "cli/errors",
 ];
 
 const validatorApi = [
-  ...section("Validator API"),
+  ...sidepageHeader("Validator API"),
   "validator-api/README",
-  "validator-api/gateways",
   "validator-api/endpoints",
   "validator-api/errors",
+  ...section("Guides"),
 ];
 
 const smartContracts = [
-  ...section("Smart contracts"),
+  ...sidepageHeader("Smart contracts"),
   "smart-contracts/README",
-  "smart-contracts/getting-started",
-  "smart-contracts/connect",
-  "smart-contracts/create",
-  "smart-contracts/write",
-  "smart-contracts/read",
-];
-
-const guides = [
-  ...sidepageHeader("Guides"),
-  "guides/README",
-  ...sdk,
-  ...validatorApi,
-  ...cli,
-  ...smartContracts,
-];
-
-const reference = [
-  ...sidepageHeader("Reference"),
-  ...section("Protocol"),
-  "reference/README",
-  "reference/contracts",
-  "reference/limits",
-  ...section("Protocol"),
-  "reference/README",
-  "reference/response-times",
-  "reference/table-names",
-  "reference/repos",
 ];
 
 const tutorials = [
   ...sidepageHeader("Tutorials"),
   "tutorials/README",
-  ...section("Dynamic NFTs"),
+  ...section("NFTs"),
   "tutorials/dynamic-nft-solidity",
   "tutorials/dynamic-nft-p5js",
+  "tutorials/deploying-nft-polygon",
   "tutorials/dynamic-nft-chainlink",
+  ...section("Utility"),
+  "tutorials/table-reads-chainlink",
+];
+
+const sqlSpecification = [
+  ...sidepageHeader("Reference"),
+  "reference/sql-specification",
 ];
 
 // @ts-check
@@ -188,50 +258,63 @@ const sidebars = {
     },
     {
       type: "doc",
-      id: "concepts/README",
-      label: "Get started",
+      id: "fundamentals/README",
+      label: "Fundamentals",
       className: "sidebar-landing",
     },
-    {
-      type: "html",
-      value: "<hr />",
-      defaultStyle: true,
-      className: "sidebar-hr",
-    },
+    ...section("Build", "landing"),
     {
       type: "doc",
-      id: "concepts/README",
-      label: "Concepts",
+      id: "sdk/README",
+      label: "SDK",
       className: "sidebar-landing",
     },
     {
       type: "doc",
-      id: "guides/README",
-      label: "Guides",
+      id: "smart-contracts/README",
+      label: "Smart contracts",
       className: "sidebar-landing",
     },
+    {
+      type: "doc",
+      id: "validator-api/README",
+      label: "Validator API",
+      className: "sidebar-landing",
+    },
+    {
+      type: "doc",
+      id: "cli/README",
+      label: "CLI",
+      className: "sidebar-landing",
+    },
+    ...section("Walkthroughs", "landing"),
     {
       type: "doc",
       id: "tutorials/README",
       label: "Tutorials",
       className: "sidebar-landing",
     },
+    ...section("Reference", "landing"),
     {
       type: "doc",
-      id: "reference/README",
-      label: "Reference",
+      id: "reference/sql-specification",
+      label: "SQL specification",
       className: "sidebar-landing",
     },
+    // {
+    //   type: "doc",
+    //   id: "reference/validator-api",
+    //   label: "Validator API",
+    //   className: "sidebar-landing",
+    // },
   ],
-  concepts: concepts,
+  getStarted: getStarted,
   sdk: sdk,
+  smartContracts: smartContracts,
   cli: cli,
   validatorApi: validatorApi,
-  smartContracts: smartContracts,
-  sql: sql,
-  guides: guides,
-  reference: reference,
   tutorials: tutorials,
+  sqlSpecification: sqlSpecification,
   // // By default, Docusaurus generates a sidebar from the docs folder structure
   // // tutorialSidebar: [{type: 'autogenerated', dirName: '.'}],
   // a: [

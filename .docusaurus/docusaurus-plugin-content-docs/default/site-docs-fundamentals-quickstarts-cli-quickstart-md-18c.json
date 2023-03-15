@@ -1,0 +1,31 @@
+{
+  "unversionedId": "fundamentals/quickstarts/cli-quickstart",
+  "id": "fundamentals/quickstarts/cli-quickstart",
+  "title": "Quickstart",
+  "description": "Learn how to create a table, add some sample data, and query the data using the CLI.",
+  "source": "@site/docs/fundamentals/quickstarts/cli-quickstart.md",
+  "sourceDirName": "fundamentals/quickstarts",
+  "slug": "/fundamentals/quickstarts/cli-quickstart",
+  "permalink": "/fundamentals/quickstarts/cli-quickstart",
+  "draft": false,
+  "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/fundamentals/quickstarts/cli-quickstart.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "title": "Quickstart",
+    "sidebar_label": "CLI",
+    "description": "Learn how to create a table, add some sample data, and query the data using the CLI."
+  },
+  "sidebar": "getStarted",
+  "previous": {
+    "title": "Smart contracts",
+    "permalink": "/fundamentals/quickstarts/smart-contract-quickstart"
+  },
+  "next": {
+    "title": "REST API",
+    "permalink": "/fundamentals/quickstarts/api-quickstart"
+  }
+}

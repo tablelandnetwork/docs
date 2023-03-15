@@ -1,0 +1,34 @@
+{
+  "unversionedId": "guides/sdk/database/signers",
+  "id": "guides/sdk/database/signers",
+  "title": "Signers",
+  "description": "Access the Tableland network by first connecting to the base chain.",
+  "source": "@site/docs/guides/sdk/database/signers.md",
+  "sourceDirName": "guides/sdk/database",
+  "slug": "/guides/sdk/database/signers",
+  "permalink": "/guides/sdk/database/signers",
+  "draft": false,
+  "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/guides/sdk/database/signers.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "title": "Signers",
+    "description": "Access the Tableland network by first connecting to the base chain.",
+    "keywords": [
+      "read table",
+      "SQL query"
+    ]
+  },
+  "sidebar": "guides",
+  "previous": {
+    "title": "Database API",
+    "permalink": "/guides/sdk/database/"
+  },
+  "next": {
+    "title": "Prepared statements",
+    "permalink": "/guides/sdk/database/prepared-statements"
+  }
+}

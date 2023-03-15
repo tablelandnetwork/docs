@@ -5,7 +5,7 @@
  */
 export default {
   "title": "Tableland Docs",
-  "tagline": "Explore how to store and query data on Tableland—the SQL database for blockchains.",
+  "tagline": "Explore how to store & query data on Tableland—the decentralized SQL database.",
   "url": "http://localhost:3000",
   "baseUrl": "/",
   "onBrokenLinks": "log",
@@ -31,7 +31,8 @@ export default {
         "hashed": true
       }
     ],
-    "@docusaurus/theme-mermaid"
+    "@docusaurus/theme-mermaid",
+    "@docusaurus/theme-live-codeblock"
   ],
   "stylesheets": [
     {
@@ -42,7 +43,6 @@ export default {
     }
   ],
   "plugins": [
-    "@docusaurus/theme-live-codeblock",
     [
       "docusaurus-plugin-dotenv",
       {
@@ -99,7 +99,7 @@ export default {
       },
       {
         "name": "og:title",
-        "content": "Tableland Docs: API Reference, Quickstart Guides, and Integrations"
+        "content": "Tableland Docs: API reference, quickstart guides, and protocol integrations"
       },
       {
         "name": "twitter:title",

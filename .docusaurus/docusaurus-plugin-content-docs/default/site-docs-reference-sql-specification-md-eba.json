@@ -1,0 +1,27 @@
+{
+  "unversionedId": "reference/sql-specification",
+  "id": "reference/sql-specification",
+  "title": "SQL specification",
+  "description": "The Tableland SQL language specification offers a unique set of SQL that is a subset of the SQLite language.",
+  "source": "@site/docs/reference/sql-specification.md",
+  "sourceDirName": "reference",
+  "slug": "/reference/sql-specification",
+  "permalink": "/reference/sql-specification",
+  "draft": false,
+  "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/reference/sql-specification.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "title": "SQL specification",
+    "description": "The Tableland SQL language specification offers a unique set of SQL that is a subset of the SQLite language.",
+    "keywords": [
+      "sql",
+      "sqlite",
+      "specification"
+    ]
+  },
+  "sidebar": "sqlSpecification"
+}

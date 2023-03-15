@@ -1,16 +1,16 @@
-# Tableland SQL Language Specification
+### Tableland SQL Language Specification
 
 ![stable](https://img.shields.io/badge/status-stable-brightgreen.svg?style=flat-square)
 
 Author(s): [@carsonfarmer](https://github.com/carsonfarmer), [@brunocalza](https://github.com/brunocalza), [@jsign](https://github.com/jsign)
 
-## Synopsis
+#### Synopsis
 
 Tableland understands a small subset of the standard SQL language. It does omit many features while at the same time adding a few features of its own. This document attempts to describe precisely what parts of the SQL language Tableland does and does not support. A list of supported data types is also provided. The SQL language supported by Tableland is a [subset of the SQLite SQL language specification](https://www.sqlite.org/lang.html) (and as such, we borrow heavily from their documentation with attribution), with additional constraints specific to Tableland operations.
 
 This general SQL specification is broken down into two core sub-documents (which are linked below). This specification is a living document, and as such, may be updated over time. Proposals for the addition of SQL language features and data types may be submitted by the Tableland community over time. These proposals will be evaluated for technical feasibility, utility to the community, and longer-term sustainability.
 
-### Table of Contents
+#### Table of Contents
 
 -   [Statement Types](#statement-types)
     -   [CREATE TABLE](#create-table)
@@ -59,7 +59,7 @@ This general SQL specification is broken down into two core sub-documents (which
     -   [Solidity](#solidity)
 -   [Encoding](#encoding)
 
-# Statement Types
+### Statement Types
 
 The core Tableland SQL parser accepts an SQL statement list which is a
 semicolon-separated list of statements. Each SQL statement in the
@@ -76,7 +76,7 @@ be summarized in seven command/statement types: `CREATE TABLE`,
 > rely on SQL features outside of this minimal specification in the
 > long-term.
 
-## CREATE TABLE
+#### CREATE TABLE
 
 The `CREATE TABLE` command is used to create a new table on Tableland. A
 `CREATE TABLE` command specifies the following attributes of the new
@@ -97,7 +97,7 @@ table:
     previous bullet).
 -   Optionally, a [generated column constraint](#generated-columns).
 
-### Structure
+#### Structure
 
 ``` sql
 CREATE TABLE *table_name* ( [
@@ -128,7 +128,7 @@ and `table_constraint` has structure
   PRIMARY KEY ( column_name [, ... ] )
 ```
 
-### Details
+#### Details
 
 #### Table Identifiers/Names
 
@@ -480,30 +480,30 @@ subsequent inserts, resulting in gaps in the `ROWID` sequence. Tableland
 guarantees that automatically chosen `ROWID`s will be increasing but not
 that they will be sequential.
 
-## DELETE
+#### DELETE
 
 The `DELETE` command removes records from the table identified by
 the table id.
 
-### Structure
+#### Structure
 
 ``` sql
 DELETE FROM table_name [ WHERE condition ]
 ```
 
-### Details
+#### Details
 
 If the [`WHERE` clause](#where-clause) is not present, all records in
 the table are deleted. If a `WHERE` clause is supplied, then only those
 rows for which the `WHERE` clause boolean expression is true are
 deleted. Rows for which the expression is false or `NULL` are retained.
 
-## INSERT
+#### INSERT
 
 The `INSERT` command creates new rows in a table identified by the table
 name.
 
-### Structure
+#### Structure
 
 ``` sql
 INSERT INTO table_name [ ( *column_name* [, ...] ) ] VALUES (
@@ -525,7 +525,7 @@ INSERT INTO table_name [ ( *column_name* [, ...] ) ] SELECT [ * | expression [, 
     [ WHERE where_clause ];
 ```
 
-### Details
+#### Details
 
 An `INSERT` statement creates one or more new rows in an existing table.
 If the `column_name` list after `table_name` is omitted then the number
@@ -566,7 +566,7 @@ supported.
 > the Tableland Specification forces an implicit `ORDER BY rowid` clause
 > on the `SELECT` statement.
 
-## UPSERT
+#### UPSERT
 
 `UPSERT` is a special syntax addition to `INSERT` that causes the
 `INSERT` to behave as an `UPDATE` or a no-op if the `INSERT` would
@@ -574,7 +574,7 @@ violate a uniqueness constraint. `UPSERT` is not standard SQL. `UPSERT`
 in Tableland follows the [syntax used in
 SQLite](https://www.sqlite.org/lang_UPSERT.html).
 
-### Structure
+#### Structure
 
 ``` sql
 INSERT INTO table_name [ ( *column_name* [, ...] ) ] VALUES (
@@ -607,7 +607,7 @@ DO UPDATE SET { column_name = { expression | DEFAULT } } [, ...]
     [ WHERE condition ];
 ```
 
-### Details
+#### Details
 
 An `UPSERT` is an ordinary `INSERT` statement that is followed by the
 special `ON CONFLICT` clause shown above.
@@ -642,12 +642,12 @@ only use for the `WHERE` clause at the end of the `DO UPDATE` is to
 optionally change the `DO UPDATE` into a no-op depending on the original
 and/or new values.
 
-## UPDATE
+#### UPDATE
 
 An `UPDATE` statement is used to modify a subset of the values stored in
 zero or more rows of the database table identified by the table name.
 
-### Structure
+#### Structure
 
 ``` sql
 UPDATE table_name
@@ -655,7 +655,7 @@ UPDATE table_name
     [ WHERE condition ];
 ```
 
-### Details
+#### Details
 
 If the `UPDATE` statement does not have a [`WHERE`
 clause](#where-clause), all rows in the table are modified by the
@@ -682,12 +682,12 @@ assignments are made.
 > statements: `UPDATE table_id SET (a,b)=(b,a);` or
 > `UPDATE table_id SET a=b, b=a;`.
 
-## GRANT/REVOKE
+#### GRANT/REVOKE
 
 The `GRANT` and `REVOKE` commands are used to define low-level access
 privileges for a table identified by table name and id.
 
-### Structure
+#### Structure
 
 ``` sql
 GRANT { INSERT | UPDATE | DELETE } [, ...]
@@ -699,7 +699,7 @@ REVOKE { INSERT | UPDATE | DELETE } [, ...]
     FROM role [, ...]
 ```
 
-### Details
+#### Details
 
 The `GRANT` command gives specific privileges on a table to one or more
 `role`. These privileges are added to those already granted, if any. By
@@ -735,14 +735,14 @@ specific, previously granted access privileges on a table from one or
 more roles. All role definitions and allowable privileges associated
 with granting privileges also apply to revoking them.
 
-## SELECT
+#### SELECT
 
 The `SELECT` statement is used to query the database. The result of a
 `SELECT` is zero or more rows of data where each row has a fixed number
 of columns. A `SELECT` statement does not make any changes to the
 database.
 
-### Structure
+#### Structure
 
 The `SELECT` statement is the work-house of the SQL query model, and as
 such, the available syntax is extremely complex. In practice, most
@@ -763,7 +763,7 @@ See the standalone sections on [`WHERE`](#where-clause),
 [`FROM`](#from-clause), and [`JOIN`](#join-clause) clauses for further
 details on query structure.
 
-### Details
+#### Details
 
 Generating the results of a simple `SELECT` statement is presented as a
 four step process in the description below:
@@ -805,15 +805,15 @@ is as if `ALL` were specified. If the simple `SELECT` is a
 result rows before it is returned. For the purposes of detecting
 duplicate rows, two `NULL` values are considered to be equal.
 
-## `WHERE` clause
+#### `WHERE` clause
 
-### Structure
+#### Structure
 
 ``` sql
 WHERE condition
 ```
 
-### Details
+#### Details
 
 The SQL `WHERE` clause is an optional clause of the `SELECT`, `DELETE`,
 and/or `UPDATE` statements. It appears after the primary clauses of the
@@ -837,15 +837,15 @@ uses the following steps:
 > of comparisons (=, &lt;, &gt;, LIKE, IN, etc), combined using a range
 > of logical operators (e.g., OR, AND, ALL, ANY, etc).
 
-## `FROM` clause
+#### `FROM` clause
 
-### Structure
+#### Structure
 
 ``` sql
 FROM { table_name [ * ] [ [ AS ] alias ] | ( sub_select ) [ AS ] alias }
 ```
 
-### Details
+#### Details
 
 The input data used by a simple `SELECT` query is a set of *N* rows
 each *M* columns wide. If the `FROM` clause is omitted from a simple
@@ -870,9 +870,9 @@ specific [`JOIN` clause](#join-clause) (i.e., the combination of join
 operator and join constraint) used to connect the tables or sub-queries
 together.
 
-## `JOIN` clause
+#### `JOIN` clause
 
-### Structure
+#### Structure
 
 ``` sql
 [ NATURAL ] join_type table_or_subquery [ ON on_expression | USING ( column_name [, ...] ) ]
@@ -904,7 +904,7 @@ The `table_or_subquery` is a table or sub-query of the form:
 { table_name [ [ AS ] alias ] | ( sub_select ) [ AS ] alias }
 ```
 
-### Details
+#### Details
 
 All joins in Tableland are based on the cartesian product of the left-
 and right-want databsets. The columns of the cartesian product dataset
@@ -990,7 +990,7 @@ $((A + B) + C)$.
 > handling of `CROSS JOIN` is an implementation detail. It is not a part
 > of standard SQL, and should not be relied upon.
 
-## Compound Select Statements
+#### Compound Select Statements
 
 Two or more simple `SELECT` statements may be connected together to form
 a compound `SELECT` using the `UNION`, `UNION ALL`, `INTERSECT` or
@@ -1029,13 +1029,13 @@ When three or more simple `SELECT`s are connected into a compound
 $C$ are all simple `SELECT` statements, $(A ⋆ B ⋆ C)$ is processed as
 $((A ⋆ B) ⋆ C)$.
 
-## Custom functions
+#### Custom functions
 
 The Tableland SQL Specification includes several web3 native functions
 that simplify working with blockchain transactions. The list of custom
 functions may grow over time.
 
-### `TXN_HASH()`
+#### `TXN_HASH()`
 
 The Validator will replace this text with the hash of the transaction
 that delivered the SQL event (only available in write queries).
@@ -1044,7 +1044,7 @@ that delivered the SQL event (only available in write queries).
 INSERT INTO {table_name} VALUES (TXN_HASH());
 ```
 
-### `BLOCK_NUM()`
+#### `BLOCK_NUM()`
 
 The Validator will replace this text with the number of the block that
 delivered the SQL event (only available in write queries).
@@ -1058,7 +1058,7 @@ If `BLOCK_NUM` is called with an integer argument (i.e.,
 number of the *last seen* block for the given chain (only available to
 read queries).
 
-# Data Types
+### Data Types
 
 Tableland supports a small set of accepted column types in user-defined
 tables. The currently supported types are listed below and can be used
@@ -1071,7 +1071,7 @@ to represent most, if not all, common SQL types:
 | `TEXT`    | Text string, stored using the database encoding (UTF-8).                                               |
 | `BLOB`    | A blob of data, stored exactly as it was input. Useful for byte slices etc.                            |
 
-## Details
+#### Details
 
 When creating tables, every column definition *must specify a data type*
 for that column, and the data type must be one of the above types. No
@@ -1085,7 +1085,7 @@ using the usual affinity rules, as most SQL engines all do. However, if
 the value cannot be losslessly converted in the specified datatype, then
 an error will be raised.
 
-## Common Types
+#### Common Types
 
 For users looking for more nuanced data types in tables, the following
 set of recommendations will help guide table schema design.
@@ -1093,7 +1093,7 @@ Additionally, new types might be added in future versions of the
 Tableland SQL Specification, and users are able to make
 requests/suggestions via Tableland TIPs.
 
-### Character
+#### Character
 
 Tableland represents all character/text types using the single
 variable-length `TEXT` type. Although the type `TEXT` is not in any SQL
@@ -1102,14 +1102,14 @@ You can store any text/character-based data as `TEXT`. Additionally,
 more complex data types such as dates, timestamps, JSON strings, and
 more can be represented using `TEXT` (or in some cases `BLOB`).
 
-### Integers
+#### Integers
 
 Numeric types often consist of integer and floating-point (float/real)
 numbers. On Tableland, two-, four-, and eight-byte integers are all
 represented by the `INTEGER` type, and their storage size depends on the
 magnitude of the value itself.
 
-### Floats
+#### Floats
 
 Tableland does not have a separate data type to represent float/real
 types. This is because in practice **floating point values are
@@ -1129,13 +1129,13 @@ hard](https://docs.oracle.com/cd/E19957-01/806-3568/ncg_goldberg.html).
 storage data type in create statements, the Tableland specification also
 does not allow `REAL` value *literals* in read or write queries.
 
-### Boolean
+#### Boolean
 
 Tableland does not have a separate data type to represent boolean
 values. Instead, Tableland users should represent true and false values
 using the integers `1` (true) and `0` (false).
 
-### Date/Time
+#### Date/Time
 
 Tableland does not have a storage class set aside for storing dates
 and/or times. Instead, users of Tableland can store dates and times as
@@ -1150,7 +1150,7 @@ functions](https://sqlite.org/lang_datefunc.html)** provided by the
 SQLite database engine. Namely, these functions can lead to
 non-deterministic behavior, so they are not available.
 
-### JSON
+#### JSON
 
 JSON data types are for storing JSON (JavaScript Object Notation) data,
 as specified in [RFC 7159](https://tools.ietf.org/html/rfc7159). In
@@ -1172,7 +1172,7 @@ engine.
 > the Tableland SQL language specification. You are welcome to use them
 > for now, but they should be considered unstable features.
 
-## Solidity
+#### Solidity
 
 To prevent overflows while working with Solidity numbers, it is
 recommended to use a `text` type in certain scenarios. Anything larger
@@ -1214,7 +1214,7 @@ Other best practices have also been defined below:
 > Solidity `bool`, consider using a `uint8` to represent a true/false as
 > `1` or `0`, which is then stored in Tableland as an `INTEGER`.
 
-# Encoding
+### Encoding
 
 As mentioned in the section on [Statement Types](#statement-types), the
 core Tableland SQL parser accepts a semicolon-separated list of

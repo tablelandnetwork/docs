@@ -1,0 +1,34 @@
+{
+  "unversionedId": "guides/sdk/prepared-statements",
+  "id": "guides/sdk/prepared-statements",
+  "title": "Prepared statements",
+  "description": "Mutate your table values with additional access control.",
+  "source": "@site/docs/guides/sdk/prepared-statements.md",
+  "sourceDirName": "guides/sdk",
+  "slug": "/guides/sdk/prepared-statements",
+  "permalink": "/guides/sdk/prepared-statements",
+  "draft": false,
+  "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/guides/sdk/prepared-statements.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "title": "Prepared statements",
+    "description": "Mutate your table values with additional access control.",
+    "keywords": [
+      "write to table",
+      "mutate table"
+    ]
+  },
+  "sidebar": "guides",
+  "previous": {
+    "title": "Database API",
+    "permalink": "/guides/sdk/database-api"
+  },
+  "next": {
+    "title": "Query statement methods",
+    "permalink": "/guides/sdk/query-statement-methods"
+  }
+}

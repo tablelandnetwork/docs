@@ -1,0 +1,18 @@
+{
+  "unversionedId": "guides/sdk/polling",
+  "id": "guides/sdk/polling",
+  "title": "polling",
+  "description": "",
+  "source": "@site/docs/guides/sdk/polling.md",
+  "sourceDirName": "guides/sdk",
+  "slug": "/guides/sdk/polling",
+  "permalink": "/guides/sdk/polling",
+  "draft": false,
+  "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/guides/sdk/polling.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {}
+}

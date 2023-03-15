@@ -1,0 +1,36 @@
+{
+  "unversionedId": "get-started/reference/contracts",
+  "id": "get-started/reference/contracts",
+  "title": "Contracts",
+  "description": "A list of deployed Tableland registry contracts for each supported chain.",
+  "source": "@site/docs/get-started/reference/contracts.md",
+  "sourceDirName": "get-started/reference",
+  "slug": "/get-started/reference/contracts",
+  "permalink": "/get-started/reference/contracts",
+  "draft": false,
+  "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/get-started/reference/contracts.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "title": "Contracts",
+    "sidebar_label": "Contracts",
+    "description": "A list of deployed Tableland registry contracts for each supported chain.",
+    "synopsis": "The following page highlights which chains Tableland has smart contracts deployed on, which is currently Ethereum and a subset of its scaling solutions. Over time, additional EVM compatible chains will be added based on developer demand.",
+    "keywords": [
+      "chains",
+      "contract"
+    ]
+  },
+  "sidebar": "getStarted",
+  "previous": {
+    "title": "Table names",
+    "permalink": "/get-started/reference/table-names"
+  },
+  "next": {
+    "title": "Limits",
+    "permalink": "/get-started/reference/limits"
+  }
+}

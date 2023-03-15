@@ -1,0 +1,33 @@
+{
+  "unversionedId": "sdk/validator/README",
+  "id": "sdk/validator/README",
+  "title": "Validator API",
+  "description": "The Validator API allows for direct access to a Tableland Validator node. This does not involve any on-chain actions and directly connects to a validator node.",
+  "source": "@site/docs/sdk/validator/README.md",
+  "sourceDirName": "sdk/validator",
+  "slug": "/sdk/validator/",
+  "permalink": "/sdk/validator/",
+  "draft": false,
+  "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/sdk/validator/README.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "title": "Validator API",
+    "description": "The Validator API allows for direct access to a Tableland Validator node. This does not involve any on-chain actions and directly connects to a validator node.",
+    "keywords": [
+      "create table"
+    ]
+  },
+  "sidebar": "sdk",
+  "previous": {
+    "title": "Legacy SDK",
+    "permalink": "/sdk/database/upgrading-from-legacy"
+  },
+  "next": {
+    "title": "Registry API",
+    "permalink": "/sdk/registry/"
+  }
+}

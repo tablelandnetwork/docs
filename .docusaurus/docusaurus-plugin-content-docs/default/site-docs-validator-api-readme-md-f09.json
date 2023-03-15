@@ -1,8 +1,8 @@
 {
   "unversionedId": "validator-api/README",
   "id": "validator-api/README",
-  "title": "Quick start",
-  "description": "Openly readable tables by your applications.",
+  "title": "Get started",
+  "description": "Leverage REST APIs to interact directly with Tableland network validator nodes.",
   "source": "@site/docs/validator-api/README.md",
   "sourceDirName": "validator-api",
   "slug": "/validator-api/",
@@ -15,21 +15,17 @@
   "lastUpdatedAt": 1539502055,
   "formattedLastUpdatedAt": "Oct 14, 2018",
   "frontMatter": {
-    "title": "Quick start",
-    "description": "Openly readable tables by your applications.",
-    "synopsis": "Reading from tables is entirely open (for anyone), allowing for true composability. Write SQL qeuries—but with some limitations that are due to the nature of decentralized networks and deterministic requirements.",
+    "title": "Get started",
+    "description": "Leverage REST APIs to interact directly with Tableland network validator nodes.",
+    "synopsis": "Table reads occur at a gateway—use SQL to compose data into the right format. Additionally, other APIs are available to retrieve validator-specific information.",
     "keywords": [
-      "write to table",
-      "mutate table"
+      "rest api",
+      "validator api"
     ]
   },
-  "sidebar": "guides",
-  "previous": {
-    "title": "Reading tables",
-    "permalink": "/sdk/read"
-  },
+  "sidebar": "validatorApi",
   "next": {
-    "title": "Gateways",
-    "permalink": "/validator-api/gateways"
+    "title": "Endpoints",
+    "permalink": "/validator-api/endpoints"
   }
 }

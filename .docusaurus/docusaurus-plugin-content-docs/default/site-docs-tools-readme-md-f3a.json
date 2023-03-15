@@ -1,0 +1,26 @@
+{
+  "unversionedId": "tools/README",
+  "id": "tools/README",
+  "title": "Development tools",
+  "description": "Leverage various tooling to ease the developer experience.",
+  "source": "@site/docs/tools/README.md",
+  "sourceDirName": "tools",
+  "slug": "/tools/",
+  "permalink": "/tools/",
+  "draft": false,
+  "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/tools/README.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "title": "Development tools",
+    "sidebar_label": "Tools",
+    "description": "Leverage various tooling to ease the developer experience.",
+    "synopsis": "There are quite a few different tools that can be used while developing with Tableland. Each of these are intended to further smooth the developer experience and make it easier to use the various APIs and clients built on top of the protocol.",
+    "keywords": [
+      "tooling"
+    ]
+  }
+}

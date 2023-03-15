@@ -22,10 +22,5 @@
       "write to table",
       "mutate table"
     ]
-  },
-  "sidebar": "guides",
-  "next": {
-    "title": "Quick start",
-    "permalink": "/sdk/"
   }
 }

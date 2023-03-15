@@ -1,0 +1,36 @@
+{
+  "unversionedId": "sdk/frameworks/reactjs",
+  "id": "sdk/frameworks/reactjs",
+  "title": "Use Tableland with React",
+  "description": "Quickly set up a React application with Tableland by setting up an account and database connection.",
+  "source": "@site/docs/sdk/frameworks/reactjs.md",
+  "sourceDirName": "sdk/frameworks",
+  "slug": "/sdk/frameworks/reactjs",
+  "permalink": "/sdk/frameworks/reactjs",
+  "draft": false,
+  "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/sdk/frameworks/reactjs.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "title": "Use Tableland with React",
+    "sidebar_label": "React",
+    "description": "Quickly set up a React application with Tableland by setting up an account and database connection.",
+    "keywords": [
+      "quickstart",
+      "quickstarts",
+      "react"
+    ]
+  },
+  "sidebar": "sdk",
+  "previous": {
+    "title": "FAQs",
+    "permalink": "/sdk/sdk-faqs"
+  },
+  "next": {
+    "title": "wagmi",
+    "permalink": "/sdk/frameworks/wagmi"
+  }
+}

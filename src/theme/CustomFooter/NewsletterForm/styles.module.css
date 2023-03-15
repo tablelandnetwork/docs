@@ -9,10 +9,15 @@
 
 .formBoxInput:focus-visible {
   outline: none;
+  border-color: var(--ifm-toc-border-color);
+}
+
+div:has(.formBoxInput:focus-visible) ~ div:has(.formBoxBtn) .formBoxBtn {
+  border-color: var(--ifm-toc-border-color);
 }
 
 .formBoxBtn {
-  border: 1px solid var(--ifm-toc-border-color);
+  border: 1px solid transparent;
   border-radius: 5px 5px !important;
   background-color: var(--ifm-hover-overlay) !important;
   color: var(--ifm-content-color) !important;
@@ -40,4 +45,8 @@
   .formBoxInput {
     width: 20rem;
   }
+}
+
+.substack {
+  border-radius: 5px !important;
 }

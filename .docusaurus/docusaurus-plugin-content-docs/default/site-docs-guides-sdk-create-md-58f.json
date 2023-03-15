@@ -1,0 +1,34 @@
+{
+  "unversionedId": "guides/sdk/create",
+  "id": "guides/sdk/create",
+  "title": "Creating tables",
+  "description": "Learn how to create tables from the SDK.",
+  "source": "@site/docs/guides/sdk/create.md",
+  "sourceDirName": "guides/sdk",
+  "slug": "/guides/sdk/create",
+  "permalink": "/guides/sdk/create",
+  "draft": false,
+  "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/guides/sdk/create.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "title": "Creating tables",
+    "description": "Learn how to create tables from the SDK.",
+    "synopsis": "All tables are created through on-chain actions that create a table (ERC721 token). The SDK abstracts this from the developer's point of view, but it's important to understand this context for why a chain connection is required for table creation.",
+    "keywords": [
+      "create table"
+    ]
+  },
+  "sidebar": "guides",
+  "previous": {
+    "title": "Connecting to Tableland",
+    "permalink": "/guides/sdk/connect"
+  },
+  "next": {
+    "title": "Writing to tables",
+    "permalink": "/guides/sdk/write"
+  }
+}

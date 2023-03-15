@@ -1,0 +1,25 @@
+{
+  "unversionedId": "get-started/basics/general-faqs",
+  "id": "get-started/basics/general-faqs",
+  "title": "General FAQs",
+  "description": "Review commonly asked questions about the Tableland network and community.",
+  "source": "@site/docs/get-started/basics/general-faqs.md",
+  "sourceDirName": "get-started/basics",
+  "slug": "/get-started/basics/general-faqs",
+  "permalink": "/get-started/basics/general-faqs",
+  "draft": false,
+  "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/get-started/basics/general-faqs.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "title": "General FAQs",
+    "description": "Review commonly asked questions about the Tableland network and community.",
+    "keywords": [
+      "faq",
+      "faqs"
+    ]
+  }
+}

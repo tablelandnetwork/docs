@@ -18,19 +18,10 @@
     "title": "Data availability & network state",
     "sidebar_label": "Hybrid state",
     "description": "Understand the basic model behind on-chain writes and off-chain reads.",
-    "synopsis": "Blockchains are designed so that anyone can run some arbitrary programs and share computation; they are not designed to be databases. With a hybrid model, applications can inherit components (like security & execution) from the host chain while making the data itself dynamic & accessible on the Tableland network.",
+    "synopsis": "Blockchains are designed so that anyone can execute somewhat arbitrary programs and share global state; they are not designed to be databases. With a hybrid model, applications can inherit components (like security & execution) from the host chain while making the data itself dynamic & accessible on the Tableland network.",
     "keywords": [
       "Tableland",
       "about"
     ]
-  },
-  "sidebar": "concepts",
-  "previous": {
-    "title": "Why use Tableland?",
-    "permalink": "/concepts/network/considerations-tradeoffs"
-  },
-  "next": {
-    "title": "Use cases",
-    "permalink": "/concepts/network/use-cases"
   }
 }

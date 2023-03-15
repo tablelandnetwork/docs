@@ -11,28 +11,30 @@ export default function NewsletterForm() {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <label>Sign up for developer updates:</label>
-      <div className="row row--no-gutters margin-top--sm">
-        <div className="col margin-top--sm">
-          <input
-            type="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            className={styles.formBoxInput}
-          />
+    <>
+      <form onSubmit={handleSubmit}>
+        <label>Sign up for developer updates:</label>
+        <div className="row row--no-gutters margin-top--sm">
+          <div className="col margin-top--sm">
+            <input
+              type="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              className={styles.formBoxInput}
+            />
+          </div>
+          <div className="col margin-top--sm">
+            <button
+              type="submit"
+              className={clsx("button button--secondary", styles.formBoxBtn)}
+              onClick={handleSubmit}
+              disabled={email ? false : true}
+            >
+              Sign up
+            </button>
+          </div>
         </div>
-        <div className="col margin-top--sm">
-          <button
-            type="submit"
-            className={clsx("button button--secondary", styles.formBoxBtn)}
-            onClick={handleSubmit}
-            disabled={email ? false : true}
-          >
-            Sign up
-          </button>
-        </div>
-      </div>
-    </form>
+      </form>
+    </>
   );
 }

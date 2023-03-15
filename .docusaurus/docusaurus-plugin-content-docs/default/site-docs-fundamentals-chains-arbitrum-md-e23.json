@@ -1,0 +1,34 @@
+{
+  "unversionedId": "fundamentals/chains/arbitrum",
+  "id": "fundamentals/chains/arbitrum",
+  "title": "Arbitrum",
+  "description": "An overview of using Arbitrum with Tableland.",
+  "source": "@site/docs/fundamentals/chains/arbitrum.md",
+  "sourceDirName": "fundamentals/chains",
+  "slug": "/fundamentals/chains/arbitrum",
+  "permalink": "/fundamentals/chains/arbitrum",
+  "draft": false,
+  "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/fundamentals/chains/arbitrum.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "title": "Arbitrum",
+    "description": "An overview of using Arbitrum with Tableland.",
+    "synopsis": "Arbitrum is one of the leading EVM-compatible Layer 2 solutions that Tableland currently supports. Check out the overview of what this network is and relevant information when using it.",
+    "keywords": [
+      "arbitrum"
+    ]
+  },
+  "sidebar": "getStarted",
+  "previous": {
+    "title": "Ethereum",
+    "permalink": "/fundamentals/chains/ethereum"
+  },
+  "next": {
+    "title": "Optimism",
+    "permalink": "/fundamentals/chains/optimism"
+  }
+}

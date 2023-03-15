@@ -1,7 +1,7 @@
 {
   "unversionedId": "cli/README",
   "id": "cli/README",
-  "title": "Quick start",
+  "title": "CLI installation & setup",
   "description": "Experiment with creating, editing, and querying tables from the comfort of the command line.",
   "source": "@site/docs/cli/README.md",
   "sourceDirName": "cli",
@@ -15,21 +15,16 @@
   "lastUpdatedAt": 1539502055,
   "formattedLastUpdatedAt": "Oct 14, 2018",
   "frontMatter": {
-    "title": "Quick start",
+    "title": "CLI installation & setup",
     "description": "Experiment with creating, editing, and querying tables from the comfort of the command line.",
-    "synopsis": "The JavaScript / TypeScript SDK allows developers to create tables on their chain of choice. Connect, create, and then interact with your tables thereafter with table writes and reads.",
     "keywords": [
       "CLI",
       "command line"
     ]
   },
-  "sidebar": "guides",
-  "previous": {
-    "title": "Errors",
-    "permalink": "/validator-api/errors"
-  },
+  "sidebar": "cli",
   "next": {
-    "title": "Getting started",
-    "permalink": "/cli/getting-started"
+    "title": "Commands",
+    "permalink": "/cli/commands"
   }
 }

@@ -1,0 +1,11 @@
+{
+  "title": "Docusaurus Guides",
+  "slug": "/category/test",
+  "permalink": "/category/test",
+  "navigation": {
+    "next": {
+      "title": "Overview",
+      "permalink": "/concepts/"
+    }
+  }
+}

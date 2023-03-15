@@ -14,17 +14,14 @@
   "lastUpdatedBy": "Author",
   "lastUpdatedAt": 1539502055,
   "formattedLastUpdatedAt": "Oct 14, 2018",
+  "sidebarPosition": 1,
   "frontMatter": {
     "title": "Quick start",
+    "sidebar_position": 1,
     "description": "Learn about what Tableland is.",
     "synopsis": "Structured Query Language (SQL) is a language that allows developers to interact with databases for extracting and mutating values.",
     "keywords": [
       "protocol"
     ]
-  },
-  "sidebar": "sql",
-  "next": {
-    "title": "Create a table",
-    "permalink": "/concepts/sql/create-a-table"
   }
 }

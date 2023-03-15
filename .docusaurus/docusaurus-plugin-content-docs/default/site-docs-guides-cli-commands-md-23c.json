@@ -1,0 +1,35 @@
+{
+  "unversionedId": "guides/cli/commands",
+  "id": "guides/cli/commands",
+  "title": "CLI commands",
+  "description": "The Tableland CLI comes with purpose built commands, which slightly differs from the convention in other clients.",
+  "source": "@site/docs/guides/cli/commands.md",
+  "sourceDirName": "guides/cli",
+  "slug": "/guides/cli/commands",
+  "permalink": "/guides/cli/commands",
+  "draft": false,
+  "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/guides/cli/commands.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "title": "CLI commands",
+    "sidebar_label": "Commands",
+    "description": "The Tableland CLI comes with purpose built commands, which slightly differs from the convention in other clients.",
+    "keywords": [
+      "cli",
+      "command line"
+    ]
+  },
+  "sidebar": "guides",
+  "previous": {
+    "title": "Installation",
+    "permalink": "/guides/cli/"
+  },
+  "next": {
+    "title": "Errors",
+    "permalink": "/guides/cli/errors"
+  }
+}

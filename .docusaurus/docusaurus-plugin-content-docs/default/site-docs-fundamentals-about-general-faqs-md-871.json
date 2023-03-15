@@ -1,0 +1,34 @@
+{
+  "unversionedId": "fundamentals/about/general-faqs",
+  "id": "fundamentals/about/general-faqs",
+  "title": "General FAQs",
+  "description": "Review commonly asked questions about the Tableland network and community.",
+  "source": "@site/docs/fundamentals/about/general-faqs.md",
+  "sourceDirName": "fundamentals/about",
+  "slug": "/fundamentals/about/general-faqs",
+  "permalink": "/fundamentals/about/general-faqs",
+  "draft": false,
+  "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/fundamentals/about/general-faqs.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "title": "General FAQs",
+    "description": "Review commonly asked questions about the Tableland network and community.",
+    "keywords": [
+      "faq",
+      "faqs"
+    ]
+  },
+  "sidebar": "getStarted",
+  "previous": {
+    "title": "Roadmap",
+    "permalink": "/fundamentals/about/roadmap"
+  },
+  "next": {
+    "title": "Repos",
+    "permalink": "/fundamentals/about/repos"
+  }
+}

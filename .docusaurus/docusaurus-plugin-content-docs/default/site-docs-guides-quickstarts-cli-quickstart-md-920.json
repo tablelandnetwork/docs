@@ -1,0 +1,21 @@
+{
+  "unversionedId": "guides/quickstarts/cli-quickstart",
+  "id": "guides/quickstarts/cli-quickstart",
+  "title": "CLI quickstart",
+  "description": "Learn how to create a table, add some sample data, and query the data using the CLI.",
+  "source": "@site/docs/guides/quickstarts/cli-quickstart.md",
+  "sourceDirName": "guides/quickstarts",
+  "slug": "/guides/quickstarts/cli-quickstart",
+  "permalink": "/guides/quickstarts/cli-quickstart",
+  "draft": false,
+  "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/guides/quickstarts/cli-quickstart.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "title": "CLI quickstart",
+    "description": "Learn how to create a table, add some sample data, and query the data using the CLI."
+  }
+}

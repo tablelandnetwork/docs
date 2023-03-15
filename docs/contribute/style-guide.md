@@ -146,7 +146,7 @@ function HighlightSomeText(highlight) {
 }
 ```
 
-Alternatively, the range syntax can be used within the meta string (e.g., `{3-4,7}` will include lines 3 to 4 and line 7). Another optional flag is `showLineNumbers` to show the code's line numbers:
+Alternatively, the range syntax `{}` can be used within the meta string. For example, `{3-4,7}` will include lines 3 to 4 and line 7); be sure to _not_ include spaces (i.e., `{3-4, 7}` will not work, but `{3-4,7}` will). Another optional flag is `showLineNumbers` to show the code's line numbers.
 
 ````md
 ```js title="/src/components/Hello.js" {3-4,7} showLineNumbers
@@ -194,9 +194,54 @@ console.log(name.toUpperCase());
 // Uncaught TypeError: Cannot read properties of null (reading 'toUpperCase')
 ```
 
+### Global variables
+
+Custom variables are replaced in code blocks. These are simply strings that are prefixed with `DOCS_` and fully capitalized:
+
+- `DOCS_ADDR`: replaces the string in a code block with the connected wallet's address; if no wallet is connected, it uses a default string of `0xINSERT_ADDRESS`.
+- `DOCS_CHAIN_NAME`: replaces the string in a code block with the specified chain's name, which defaults to `maticmum`.
+- `DOCS_CHAIN_ID`: replaces the string in a code block with the specified chain's ID, which defaults to `maticmum`'s `80001`.
+
+Under the hood, there is a simple regex replace method that takes the `DOCS_` strings and replaces them with an account's address or the specified chain. It is only available in code _blocks_ but not inline strings nor standard page content. For example, the following snippet sets a `const address = "DOCS_ADDR"`. As you can see, the inline code throughout this subsection maintains the `DOCS_ADDR` string itself, but within the code block, it is replaced by one of the values noted above.
+
+```js
+const address = "DOCS_ADDR";
+const chain = "DOCS_CHAIN_NAME";
+const chainId = "DOCS_CHAIN_ID";
+```
+
+import { Address } from '@site/src/components/Wallet'
+import { SupportedChains, ChainsList, ChainInfo } from '@site/src/components/SupportedChains'
+
+## Components
+
+There do exist some custom components that can be imported and used in markdown. For example, although you can't use `DOCS_ADDR` in inline text, you _can_ use `<Address />` to render the connected wallet or some default value—for example, the following uses `<Address />` (try connecting & disconnecting your wallet): <Address />. The `Wallet` component holds this logic, so you'll have to import it from `@site/src/components/Wallet`.
+
+Some other utilities exist in the `SupportedChains` component, such as importing `<ChainsList />`, `<ChainInfo />`, or `<SupportedChains />`. With `<ChainsList />`, you can pass optional strings of either `testnets` or `mainnets` for `type`, which will only include testnet or mainnet chains; similarly, the `format` prop can use either `list` or `string`. With `<ChainInfo />`, you pass a `name` prop for the chain's name (matching `ethersjs`) along with the info desired (`name`, `chainId`, etc.). The `getChainInfo()` method is used under the hood and takes the same parameters.
+
+```js
+import { ChainsList, ChainInfo, getChainInfo, SupportedChains } from '@site/src/components/SupportedChains'
+
+<ChainsList type={'testnets'} format={'string'} />
+
+<ChainsList type={'mainnets'} format={'list'} />
+
+<ChainInfo chain='goerli' info='chainId' />
+
+<SupportedChains />
+```
+
+The `<ChainsList />` will render a string (aka it renders: <ChainsList type={'testnets'} format={'string'} />) or a list of chains:
+
+<ChainsList type={'mainnets'} format={'list'} />
+
+And `<ChainInfo />` can render something like Ethereum Goerli's chain ID: <ChainInfo chain='goerli' info='chainId' />. If you want to access the raw data, you can use the exported `getChainInfo()` method, which `<ChainsList />` uses under the hood to render a `<span>` containing the data. And `<SupportedChains />` renders a table of chain values:
+
+<SupportedChains />
+
 ## Links
 
-You can use either a URL path (`./example`) or file path (`./example.md`). If you're referencing another page, you can opt for a relative path such that it will be resolved against the current file's directory. And as with standard markdown, you can link to a heading within the page by referencing the heading in [kebab case](https://en.wikipedia.org/wiki/Letter_case#Kebab_case).
+You can use either a URL path (`./example`) or file path (`./example.md`); but, always opt for the extension-less import. If you're referencing another page, you can opt for a relative path such that it will be resolved against the current file's directory. And as with standard markdown, you can link to a heading within the page by referencing the heading in [kebab case](https://en.wikipedia.org/wiki/Letter_case#Kebab_case).
 
 ```md title="docs/folder/doc1.md"
 ## My page
@@ -392,7 +437,7 @@ $$
 
 ## Diagrams
 
-[Mermaid](https://mermaid.js.org/intro/) support exists. Simply create a code block with the `mermaid` language—the example below is from left-to-right (`LR`) with various [shapes](https://mermaid.js.org/syntax/mindmap.html#icons):
+[Mermaid](https://mermaid.js.org/intro/) support exists. Simply create a code block with the `mermaid` language—the example below is from left-to-right (`LR`) with various [shapes](https://mermaid.js.org/syntax/mindmap.html#icons). Check out this [Mermaid cheat sheet](https://jojozhuang.github.io/tutorial/mermaid-cheat-sheet/) for more pointers.
 
 ````md
 ```mermaid
@@ -454,6 +499,41 @@ chain--"Emit event\n (SQL)" -->offchain
 ```
 
 See the [mermaid docs](https://mermaid.js.org/syntax/classDiagram.html) for more details.
+
+## Visual browser window
+
+A custom `BrowserWindow` component can be imported such that you can render a browser window within the site. This is useful purely for visual purposes. You can specify the URL displayed by specifying the `url` prop, which defaults to `http://localhost:3000`.
+
+import BrowserWindow from "@site/src/components/BrowserWindow";
+
+````md
+<BrowserWindow url="http://localhost:8080/query?s=select%20*%20from%20healthbot_31337_1">
+
+```json
+[
+  {
+    "counter": 123
+  }
+]
+```
+
+</BrowserWindow>
+```
+````
+
+This will render the following:
+
+<BrowserWindow url="http://localhost:8080/query?s=select%20*%20from%20healthbot_31337_1">
+
+```json
+[
+  {
+    "counter": 123
+  }
+]
+```
+
+</BrowserWindow>
 
 ## Swizzling
 

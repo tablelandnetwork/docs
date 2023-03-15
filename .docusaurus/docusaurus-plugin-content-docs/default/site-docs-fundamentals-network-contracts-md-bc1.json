@@ -1,0 +1,36 @@
+{
+  "unversionedId": "fundamentals/network/contracts",
+  "id": "fundamentals/network/contracts",
+  "title": "Tableland contracts",
+  "description": "A list of deployed Tableland registry contracts for each supported chain.",
+  "source": "@site/docs/fundamentals/network/contracts.md",
+  "sourceDirName": "fundamentals/network",
+  "slug": "/fundamentals/network/contracts",
+  "permalink": "/fundamentals/network/contracts",
+  "draft": false,
+  "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/fundamentals/network/contracts.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "title": "Tableland contracts",
+    "sidebar_label": "Contracts",
+    "description": "A list of deployed Tableland registry contracts for each supported chain.",
+    "synopsis": "The following page highlights which chains Tableland has smart contracts deployed on, which is currently Ethereum and a subset of its scaling solutions. Over time, additional EVM compatible chains will be added based on developer demand.",
+    "keywords": [
+      "chains",
+      "contract"
+    ]
+  },
+  "sidebar": "getStarted",
+  "previous": {
+    "title": "Local node",
+    "permalink": "/fundamentals/chains/local"
+  },
+  "next": {
+    "title": "Open beta",
+    "permalink": "/fundamentals/about/open-beta"
+  }
+}

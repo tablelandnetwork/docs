@@ -1,0 +1,33 @@
+{
+  "unversionedId": "sdk/registry/README",
+  "id": "sdk/registry/README",
+  "title": "Registry API",
+  "description": "Learn how to create tables from the SDK.",
+  "source": "@site/docs/sdk/registry/README.md",
+  "sourceDirName": "sdk/registry",
+  "slug": "/sdk/registry/",
+  "permalink": "/sdk/registry/",
+  "draft": false,
+  "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/sdk/registry/README.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "title": "Registry API",
+    "description": "Learn how to create tables from the SDK.",
+    "keywords": [
+      "create table"
+    ]
+  },
+  "sidebar": "sdk",
+  "previous": {
+    "title": "Validator API",
+    "permalink": "/sdk/validator/"
+  },
+  "next": {
+    "title": "Errors",
+    "permalink": "/sdk/errors"
+  }
+}

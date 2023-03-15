@@ -1,0 +1,28 @@
+{
+  "unversionedId": "fundamentals/basics/what-is-tableland",
+  "id": "fundamentals/basics/what-is-tableland",
+  "title": "What is Tableland?",
+  "description": "Learn about the basics of the Tableland network.",
+  "source": "@site/docs/fundamentals/basics/what-is-tableland.md",
+  "sourceDirName": "fundamentals/basics",
+  "slug": "/fundamentals/basics/what-is-tableland",
+  "permalink": "/fundamentals/basics/what-is-tableland",
+  "draft": false,
+  "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/fundamentals/basics/what-is-tableland.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "title": "What is Tableland?",
+    "sidebar_position": 1,
+    "description": "Learn about the basics of the Tableland network.",
+    "synopsis": "Tableland is a web3 native SQL database that can be used on EVM chains like Ethereum and Layer 2 solutions. It helps extend data storage using SQL while offloading accessibility to a decentralized network of validator nodes that watch the host chain for updates, which is where SQL mutation data is made available.",
+    "keywords": [
+      "Tableland",
+      "about"
+    ]
+  }
+}

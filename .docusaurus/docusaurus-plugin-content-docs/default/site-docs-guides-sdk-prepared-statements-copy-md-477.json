@@ -1,0 +1,26 @@
+{
+  "unversionedId": "guides/sdk/prepared-statements copy",
+  "id": "guides/sdk/prepared-statements copy",
+  "title": "Prepared statements",
+  "description": "Mutate your table values with additional access control.",
+  "source": "@site/docs/guides/sdk/prepared-statements copy.md",
+  "sourceDirName": "guides/sdk",
+  "slug": "/guides/sdk/prepared-statements copy",
+  "permalink": "/guides/sdk/prepared-statements copy",
+  "draft": false,
+  "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/guides/sdk/prepared-statements copy.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "title": "Prepared statements",
+    "description": "Mutate your table values with additional access control.",
+    "synopsis": "Table values can be mutated by the table owner or provisioned actors.",
+    "keywords": [
+      "write to table",
+      "mutate table"
+    ]
+  }
+}

@@ -23,13 +23,5 @@
       "Tableland SDK"
     ]
   },
-  "sidebar": "guides",
-  "previous": {
-    "title": "Reading tables",
-    "permalink": "/cli/read"
-  },
-  "next": {
-    "title": "Getting started",
-    "permalink": "/smart-contracts/getting-started"
-  }
+  "sidebar": "smartContracts"
 }

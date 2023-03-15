@@ -1,0 +1,34 @@
+{
+  "unversionedId": "guides/sdk/signers",
+  "id": "guides/sdk/signers",
+  "title": "Signers",
+  "description": "Access the Tableland network by first connecting to the base chain.",
+  "source": "@site/docs/guides/sdk/signers.md",
+  "sourceDirName": "guides/sdk",
+  "slug": "/guides/sdk/signers",
+  "permalink": "/guides/sdk/signers",
+  "draft": false,
+  "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/guides/sdk/signers.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "title": "Signers",
+    "description": "Access the Tableland network by first connecting to the base chain.",
+    "keywords": [
+      "read table",
+      "SQL query"
+    ]
+  },
+  "sidebar": "guides",
+  "previous": {
+    "title": "Registry API",
+    "permalink": "/guides/sdk/registry/registry-api"
+  },
+  "next": {
+    "title": "Web app frameworks",
+    "permalink": "/category/web-app-frameworks"
+  }
+}

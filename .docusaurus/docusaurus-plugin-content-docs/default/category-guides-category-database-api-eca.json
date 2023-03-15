@@ -1,0 +1,15 @@
+{
+  "title": "Database API",
+  "slug": "/category/database-api",
+  "permalink": "/category/database-api",
+  "navigation": {
+    "previous": {
+      "title": "Overview",
+      "permalink": "/guides/sdk/"
+    },
+    "next": {
+      "title": "Database API",
+      "permalink": "/guides/sdk/database-api"
+    }
+  }
+}

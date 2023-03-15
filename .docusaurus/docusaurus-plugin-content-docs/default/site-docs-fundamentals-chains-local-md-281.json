@@ -1,0 +1,36 @@
+{
+  "unversionedId": "fundamentals/chains/local",
+  "id": "fundamentals/chains/local",
+  "title": "Using a local chain",
+  "description": "An overview of using a Hardhat node and a local Tableland instance.",
+  "source": "@site/docs/fundamentals/chains/local.md",
+  "sourceDirName": "fundamentals/chains",
+  "slug": "/fundamentals/chains/local",
+  "permalink": "/fundamentals/chains/local",
+  "draft": false,
+  "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/fundamentals/chains/local.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "title": "Using a local chain",
+    "sidebar_label": "Local node",
+    "description": "An overview of using a Hardhat node and a local Tableland instance.",
+    "synopsis": "Developing locally should happen as a step prior to deploying to any testnet and/or mainnet. Developers can use Local Tableland to accomplish this, which spins up a Hardhat node for a local Tableland node to use.",
+    "keywords": [
+      "local tableland",
+      "hardhat"
+    ]
+  },
+  "sidebar": "getStarted",
+  "previous": {
+    "title": "Polygon",
+    "permalink": "/fundamentals/chains/polygon"
+  },
+  "next": {
+    "title": "Contracts",
+    "permalink": "/fundamentals/architecture/contracts"
+  }
+}

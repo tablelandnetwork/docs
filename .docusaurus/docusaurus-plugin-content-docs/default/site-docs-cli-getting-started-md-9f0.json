@@ -22,14 +22,5 @@
       "SQL query",
       "Tableland SDK"
     ]
-  },
-  "sidebar": "guides",
-  "previous": {
-    "title": "Quick start",
-    "permalink": "/cli/"
-  },
-  "next": {
-    "title": "Connecting to Tableland",
-    "permalink": "/cli/connect"
   }
 }

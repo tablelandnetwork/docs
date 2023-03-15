@@ -1,0 +1,15 @@
+{
+  "title": "Quickstarts",
+  "slug": "/category/quickstarts",
+  "permalink": "/category/quickstarts",
+  "navigation": {
+    "previous": {
+      "title": "Introduction",
+      "permalink": "/get-started/"
+    },
+    "next": {
+      "title": "Quickstart",
+      "permalink": "/get-started/api-quickstart"
+    }
+  }
+}

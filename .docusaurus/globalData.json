@@ -11,80 +11,43 @@
           "mainDocId": "landing",
           "docs": [
             {
-              "id": "cli/connect",
-              "path": "/cli/connect",
-              "sidebar": "guides"
+              "id": "cli/commands",
+              "path": "/cli/commands",
+              "sidebar": "cli"
             },
             {
-              "id": "cli/create",
-              "path": "/cli/create",
-              "sidebar": "guides"
+              "id": "cli/errors",
+              "path": "/cli/errors",
+              "sidebar": "cli"
             },
             {
               "id": "cli/getting-started",
-              "path": "/cli/getting-started",
-              "sidebar": "guides"
+              "path": "/cli/getting-started"
             },
             {
               "id": "cli/read",
-              "path": "/cli/read",
-              "sidebar": "guides"
+              "path": "/cli/read"
             },
             {
               "id": "cli/README",
               "path": "/cli/",
-              "sidebar": "guides"
+              "sidebar": "cli"
             },
             {
               "id": "cli/write",
-              "path": "/cli/write",
-              "sidebar": "guides"
+              "path": "/cli/write"
             },
             {
-              "id": "concepts/faqs",
-              "path": "/concepts/faqs"
-            },
-            {
-              "id": "concepts/network/considerations-tradeoffs",
-              "path": "/concepts/network/considerations-tradeoffs",
-              "sidebar": "concepts"
-            },
-            {
-              "id": "concepts/network/open-beta",
-              "path": "/concepts/network/open-beta",
-              "sidebar": "concepts"
-            },
-            {
-              "id": "concepts/network/tableland-state",
-              "path": "/concepts/network/tableland-state",
-              "sidebar": "concepts"
-            },
-            {
-              "id": "concepts/network/use-cases",
-              "path": "/concepts/network/use-cases",
-              "sidebar": "concepts"
-            },
-            {
-              "id": "concepts/network/what-is-tableland",
-              "path": "/concepts/network/what-is-tableland",
-              "sidebar": "concepts"
+              "id": "concepts/nfts/README",
+              "path": "/concepts/nfts/"
             },
             {
               "id": "concepts/README",
-              "path": "/concepts/",
-              "sidebar": "concepts"
-            },
-            {
-              "id": "concepts/related/databases",
-              "path": "/concepts/related/databases"
+              "path": "/concepts/"
             },
             {
               "id": "concepts/related/README",
               "path": "/concepts/related/"
-            },
-            {
-              "id": "concepts/related/roadmap",
-              "path": "/concepts/related/roadmap"
             },
             {
               "id": "concepts/related/uri-encoding",
@@ -92,58 +55,47 @@
             },
             {
               "id": "concepts/sql/access-control",
-              "path": "/concepts/sql/access-control",
-              "sidebar": "sql"
+              "path": "/concepts/sql/access-control"
             },
             {
               "id": "concepts/sql/create-a-table",
-              "path": "/concepts/sql/create-a-table",
-              "sidebar": "sql"
+              "path": "/concepts/sql/create-a-table"
             },
             {
               "id": "concepts/sql/delete",
-              "path": "/concepts/sql/delete",
-              "sidebar": "sql"
+              "path": "/concepts/sql/delete"
             },
             {
               "id": "concepts/sql/incrementing-values",
-              "path": "/concepts/sql/incrementing-values",
-              "sidebar": "sql"
+              "path": "/concepts/sql/incrementing-values"
             },
             {
               "id": "concepts/sql/insert",
-              "path": "/concepts/sql/insert",
-              "sidebar": "sql"
+              "path": "/concepts/sql/insert"
             },
             {
               "id": "concepts/sql/mutating-data",
-              "path": "/concepts/sql/mutating-data",
-              "sidebar": "sql"
+              "path": "/concepts/sql/mutating-data"
             },
             {
               "id": "concepts/sql/read",
-              "path": "/concepts/sql/read",
-              "sidebar": "sql"
+              "path": "/concepts/sql/read"
             },
             {
               "id": "concepts/sql/README",
-              "path": "/concepts/sql/",
-              "sidebar": "sql"
+              "path": "/concepts/sql/"
             },
             {
               "id": "concepts/sql/sql-spec",
-              "path": "/concepts/sql/sql-spec",
-              "sidebar": "sql"
+              "path": "/concepts/sql/sql-spec"
             },
             {
               "id": "concepts/sql/update",
-              "path": "/concepts/sql/update",
-              "sidebar": "sql"
+              "path": "/concepts/sql/update"
             },
             {
               "id": "concepts/sql/upsert",
-              "path": "/concepts/sql/upsert",
-              "sidebar": "sql"
+              "path": "/concepts/sql/upsert"
             },
             {
               "id": "contribute/maintainers",
@@ -161,73 +113,133 @@
               "sidebar": "contribute"
             },
             {
-              "id": "develop/chains/arbitrum",
-              "path": "/develop/chains/arbitrum"
+              "id": "fundamentals/about/general-faqs",
+              "path": "/fundamentals/about/general-faqs",
+              "sidebar": "getStarted"
             },
             {
-              "id": "develop/chains/ethereum",
-              "path": "/develop/chains/ethereum"
+              "id": "fundamentals/about/open-beta",
+              "path": "/fundamentals/about/open-beta",
+              "sidebar": "getStarted"
             },
             {
-              "id": "develop/chains/local",
-              "path": "/develop/chains/local"
+              "id": "fundamentals/about/repos",
+              "path": "/fundamentals/about/repos",
+              "sidebar": "getStarted"
             },
             {
-              "id": "develop/chains/optimism",
-              "path": "/develop/chains/optimism"
+              "id": "fundamentals/about/roadmap",
+              "path": "/fundamentals/about/roadmap",
+              "sidebar": "getStarted"
             },
             {
-              "id": "develop/chains/polygon",
-              "path": "/develop/chains/polygon"
+              "id": "fundamentals/about/use-cases",
+              "path": "/fundamentals/about/use-cases",
+              "sidebar": "getStarted"
             },
             {
-              "id": "develop/chains/README",
-              "path": "/develop/chains/"
+              "id": "fundamentals/architecture/contracts",
+              "path": "/fundamentals/architecture/contracts",
+              "sidebar": "getStarted"
             },
             {
-              "id": "develop/integrations/chainlink",
-              "path": "/develop/integrations/chainlink"
+              "id": "fundamentals/architecture/gateway",
+              "path": "/fundamentals/architecture/gateway",
+              "sidebar": "getStarted"
             },
             {
-              "id": "develop/integrations/filecoin",
-              "path": "/develop/integrations/filecoin"
+              "id": "fundamentals/architecture/limits",
+              "path": "/fundamentals/architecture/limits",
+              "sidebar": "getStarted"
             },
             {
-              "id": "develop/integrations/ipfs",
-              "path": "/develop/integrations/ipfs"
+              "id": "fundamentals/architecture/protocol-design",
+              "path": "/fundamentals/architecture/protocol-design",
+              "sidebar": "getStarted"
             },
             {
-              "id": "develop/integrations/lit-protocol",
-              "path": "/develop/integrations/lit-protocol"
+              "id": "fundamentals/architecture/README",
+              "path": "/fundamentals/architecture/"
             },
             {
-              "id": "develop/integrations/nucypher",
-              "path": "/develop/integrations/nucypher"
+              "id": "fundamentals/architecture/table-token",
+              "path": "/fundamentals/architecture/table-token",
+              "sidebar": "getStarted"
             },
             {
-              "id": "develop/integrations/overview",
-              "path": "/develop/integrations/overview"
+              "id": "fundamentals/chains/arbitrum",
+              "path": "/fundamentals/chains/arbitrum",
+              "sidebar": "getStarted"
             },
             {
-              "id": "develop/integrations/toucan",
-              "path": "/develop/integrations/toucan"
+              "id": "fundamentals/chains/ethereum",
+              "path": "/fundamentals/chains/ethereum",
+              "sidebar": "getStarted"
             },
             {
-              "id": "develop/README",
-              "path": "/develop/"
+              "id": "fundamentals/chains/local",
+              "path": "/fundamentals/chains/local",
+              "sidebar": "getStarted"
             },
             {
-              "id": "develop/tools/local-tableland",
-              "path": "/develop/tools/local-tableland"
+              "id": "fundamentals/chains/optimism",
+              "path": "/fundamentals/chains/optimism",
+              "sidebar": "getStarted"
             },
             {
-              "id": "develop/tools/README",
-              "path": "/develop/tools/"
+              "id": "fundamentals/chains/polygon",
+              "path": "/fundamentals/chains/polygon",
+              "sidebar": "getStarted"
             },
             {
-              "id": "guides/README",
-              "path": "/guides/",
-              "sidebar": "guides"
+              "id": "fundamentals/chains/README",
+              "path": "/fundamentals/chains/",
+              "sidebar": "getStarted"
+            },
+            {
+              "id": "fundamentals/considerations-tradeoffs",
+              "path": "/fundamentals/considerations-tradeoffs",
+              "sidebar": "getStarted"
+            },
+            {
+              "id": "fundamentals/databases",
+              "path": "/fundamentals/databases",
+              "sidebar": "getStarted"
+            },
+            {
+              "id": "fundamentals/quickstarts/api-quickstart",
+              "path": "/fundamentals/quickstarts/api-quickstart",
+              "sidebar": "getStarted"
+            },
+            {
+              "id": "fundamentals/quickstarts/cli-quickstart",
+              "path": "/fundamentals/quickstarts/cli-quickstart",
+              "sidebar": "getStarted"
+            },
+            {
+              "id": "fundamentals/quickstarts/README",
+              "path": "/fundamentals/quickstarts/",
+              "sidebar": "getStarted"
+            },
+            {
+              "id": "fundamentals/quickstarts/sdk-quickstart",
+              "path": "/fundamentals/quickstarts/sdk-quickstart",
+              "sidebar": "getStarted"
+            },
+            {
+              "id": "fundamentals/quickstarts/smart-contract-quickstart",
+              "path": "/fundamentals/quickstarts/smart-contract-quickstart",
+              "sidebar": "getStarted"
+            },
+            {
+              "id": "fundamentals/README",
+              "path": "/fundamentals/",
+              "sidebar": "getStarted"
+            },
+            {
+              "id": "fundamentals/what-is-tableland",
+              "path": "/fundamentals/what-is-tableland",
+              "sidebar": "getStarted"
             },
             {
               "id": "landing",
@@ -251,98 +263,122 @@
               "path": "/products/rigs/what-are-rigs"
             },
             {
-              "id": "protocol/validator-spec",
-              "path": "/protocol/validator-spec"
+              "id": "reference/sql-specification",
+              "path": "/reference/sql-specification",
+              "sidebar": "sqlSpecification"
             },
             {
-              "id": "reference/contracts",
-              "path": "/reference/contracts",
-              "sidebar": "reference"
+              "id": "reference/validator-api",
+              "path": "/reference/validator-api"
             },
             {
-              "id": "reference/limits",
-              "path": "/reference/limits",
-              "sidebar": "reference"
+              "id": "sdk/database/batching",
+              "path": "/sdk/database/batching",
+              "sidebar": "sdk"
             },
             {
-              "id": "reference/README",
-              "path": "/reference/",
-              "sidebar": "reference"
+              "id": "sdk/database/orm",
+              "path": "/sdk/database/orm",
+              "sidebar": "sdk"
             },
             {
-              "id": "reference/repos",
-              "path": "/reference/repos",
-              "sidebar": "reference"
+              "id": "sdk/database/prepared-statements",
+              "path": "/sdk/database/prepared-statements",
+              "sidebar": "sdk"
             },
             {
-              "id": "reference/response-times",
-              "path": "/reference/response-times",
-              "sidebar": "reference"
+              "id": "sdk/database/query-statement-methods",
+              "path": "/sdk/database/query-statement-methods",
+              "sidebar": "sdk"
             },
             {
-              "id": "reference/table-names",
-              "path": "/reference/table-names",
-              "sidebar": "reference"
+              "id": "sdk/database/README",
+              "path": "/sdk/database/",
+              "sidebar": "sdk"
             },
             {
-              "id": "sdk/connect",
-              "path": "/sdk/connect",
-              "sidebar": "guides"
+              "id": "sdk/database/signers",
+              "path": "/sdk/database/signers",
+              "sidebar": "sdk"
             },
             {
-              "id": "sdk/create",
-              "path": "/sdk/create",
-              "sidebar": "guides"
+              "id": "sdk/database/timeouts",
+              "path": "/sdk/database/timeouts",
+              "sidebar": "sdk"
             },
             {
-              "id": "sdk/getting-started",
-              "path": "/sdk/getting-started",
-              "sidebar": "guides"
+              "id": "sdk/database/type-conversion",
+              "path": "/sdk/database/type-conversion",
+              "sidebar": "sdk"
             },
             {
-              "id": "sdk/read",
-              "path": "/sdk/read",
-              "sidebar": "guides"
+              "id": "sdk/database/upgrading-from-legacy",
+              "path": "/sdk/database/upgrading-from-legacy",
+              "sidebar": "sdk"
+            },
+            {
+              "id": "sdk/errors",
+              "path": "/sdk/errors",
+              "sidebar": "sdk"
+            },
+            {
+              "id": "sdk/frameworks/reactjs",
+              "path": "/sdk/frameworks/reactjs",
+              "sidebar": "sdk"
+            },
+            {
+              "id": "sdk/frameworks/wagmi",
+              "path": "/sdk/frameworks/wagmi",
+              "sidebar": "sdk"
+            },
+            {
+              "id": "sdk/polling",
+              "path": "/sdk/polling"
             },
             {
               "id": "sdk/README",
               "path": "/sdk/",
-              "sidebar": "guides"
+              "sidebar": "sdk"
             },
             {
-              "id": "sdk/write",
-              "path": "/sdk/write",
-              "sidebar": "guides"
+              "id": "sdk/registry/README",
+              "path": "/sdk/registry/",
+              "sidebar": "sdk"
+            },
+            {
+              "id": "sdk/sdk-faqs",
+              "path": "/sdk/sdk-faqs",
+              "sidebar": "sdk"
+            },
+            {
+              "id": "sdk/validator/README",
+              "path": "/sdk/validator/",
+              "sidebar": "sdk"
             },
             {
               "id": "smart-contracts/connect",
-              "path": "/smart-contracts/connect",
-              "sidebar": "guides"
+              "path": "/smart-contracts/connect"
             },
             {
               "id": "smart-contracts/create",
-              "path": "/smart-contracts/create",
-              "sidebar": "guides"
+              "path": "/smart-contracts/create"
             },
             {
               "id": "smart-contracts/getting-started",
-              "path": "/smart-contracts/getting-started",
-              "sidebar": "guides"
+              "path": "/smart-contracts/getting-started"
             },
             {
               "id": "smart-contracts/read",
-              "path": "/smart-contracts/read",
-              "sidebar": "guides"
+              "path": "/smart-contracts/read"
             },
             {
               "id": "smart-contracts/README",
               "path": "/smart-contracts/",
-              "sidebar": "guides"
+              "sidebar": "smartContracts"
             },
             {
               "id": "smart-contracts/write",
-              "path": "/smart-contracts/write",
-              "sidebar": "guides"
+              "path": "/smart-contracts/write"
             },
             {
               "id": "sql/access-control",
@@ -353,12 +389,12 @@
               "path": "/sql/creating-tables"
             },
             {
-              "id": "sql/overview",
-              "path": "/sql/overview"
-            },
-            {
               "id": "sql/read-queries",
               "path": "/sql/read-queries"
+            },
+            {
+              "id": "sql/README",
+              "path": "/sql/"
             },
             {
               "id": "sql/sql-spec",
@@ -367,6 +403,19 @@
             {
               "id": "sql/write-queries",
               "path": "/sql/write-queries"
+            },
+            {
+              "id": "tools/local-tableland",
+              "path": "/tools/local-tableland"
+            },
+            {
+              "id": "tools/README",
+              "path": "/tools/"
+            },
+            {
+              "id": "tutorials/deploying-nft-polygon",
+              "path": "/tutorials/deploying-nft-polygon",
+              "sidebar": "tutorials"
             },
             {
               "id": "tutorials/dynamic-nft-chainlink",
@@ -384,33 +433,29 @@
               "sidebar": "tutorials"
             },
             {
-              "id": "tutorials/overview",
-              "path": "/tutorials/overview"
-            },
-            {
               "id": "tutorials/README",
               "path": "/tutorials/",
               "sidebar": "tutorials"
             },
             {
+              "id": "tutorials/table-reads-chainlink",
+              "path": "/tutorials/table-reads-chainlink",
+              "sidebar": "tutorials"
+            },
+            {
               "id": "validator-api/endpoints",
               "path": "/validator-api/endpoints",
-              "sidebar": "guides"
+              "sidebar": "validatorApi"
             },
             {
               "id": "validator-api/errors",
               "path": "/validator-api/errors",
-              "sidebar": "guides"
-            },
-            {
-              "id": "validator-api/gateways",
-              "path": "/validator-api/gateways",
-              "sidebar": "guides"
+              "sidebar": "validatorApi"
             },
             {
               "id": "validator-api/README",
               "path": "/validator-api/",
-              "sidebar": "guides"
+              "sidebar": "validatorApi"
             }
           ],
           "draftIds": [],
@@ -421,16 +466,22 @@
                 "label": "landing"
               }
             },
-            "concepts": {
+            "getStarted": {
               "link": {
-                "path": "/concepts/",
-                "label": "concepts/README"
+                "path": "/fundamentals/",
+                "label": "Introduction"
               }
             },
             "sdk": {
               "link": {
                 "path": "/sdk/",
                 "label": "sdk/README"
+              }
+            },
+            "smartContracts": {
+              "link": {
+                "path": "/smart-contracts/",
+                "label": "smart-contracts/README"
               }
             },
             "cli": {
@@ -445,34 +496,16 @@
                 "label": "validator-api/README"
               }
             },
-            "smartContracts": {
-              "link": {
-                "path": "/smart-contracts/",
-                "label": "smart-contracts/README"
-              }
-            },
-            "sql": {
-              "link": {
-                "path": "/concepts/sql/",
-                "label": "concepts/sql/README"
-              }
-            },
-            "guides": {
-              "link": {
-                "path": "/guides/",
-                "label": "guides/README"
-              }
-            },
-            "reference": {
-              "link": {
-                "path": "/reference/",
-                "label": "reference/README"
-              }
-            },
             "tutorials": {
               "link": {
                 "path": "/tutorials/",
                 "label": "tutorials/README"
+              }
+            },
+            "sqlSpecification": {
+              "link": {
+                "path": "/reference/sql-specification",
+                "label": "reference/sql-specification"
               }
             },
             "contribute": {

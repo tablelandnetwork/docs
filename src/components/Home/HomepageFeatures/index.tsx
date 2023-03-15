@@ -84,17 +84,13 @@ const BuildList: ProductItem[] = [
     name: "SDK",
     icon: <DiJsBadge size={30} />,
     description: (
-      <>JavaScript / TypeScript SDK for client-side or Node.js applications</>
+      <>
+        JavaScript / TypeScript SDK with Cloudflare D1 compatibility & web3
+        specific features
+      </>
     ),
 
     url: "sdk/getting-started",
-  },
-  {
-    name: "CLI",
-    icon: <FaTerminal size={30} />,
-    description: <>CLI & shell to use Tableland from the command line</>,
-
-    url: "cli/getting-started",
   },
   {
     name: "Smart contracts",
@@ -104,6 +100,13 @@ const BuildList: ProductItem[] = [
     ),
 
     url: "smart-contracts/getting-started",
+  },
+  {
+    name: "CLI",
+    icon: <FaTerminal size={30} />,
+    description: <>CLI & shell to use Tableland from the command line</>,
+
+    url: "cli/getting-started",
   },
   {
     name: "Validator API",

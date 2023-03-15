@@ -1,0 +1,26 @@
+{
+  "unversionedId": "tutorials/deploying-nft-on-polygon",
+  "id": "tutorials/deploying-nft-on-polygon",
+  "title": "Deploying an NFT on Polygon",
+  "description": "Take local JSON files, parse them into tables, and deploy the collection on Polygon.",
+  "source": "@site/docs/tutorials/deploying-nft-on-polygon.md",
+  "sourceDirName": "tutorials",
+  "slug": "/tutorials/deploying-nft-on-polygon",
+  "permalink": "/tutorials/deploying-nft-on-polygon",
+  "draft": false,
+  "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/tutorials/deploying-nft-on-polygon.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "title": "Deploying an NFT on Polygon",
+    "sidebar_label": "JSON files to NFT metadata",
+    "description": "Take local JSON files, parse them into tables, and deploy the collection on Polygon.",
+    "keywords": [
+      "chainlink",
+      "dynamic nft"
+    ]
+  }
+}

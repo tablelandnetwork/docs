@@ -1,0 +1,32 @@
+{
+  "unversionedId": "guides/cli/errors",
+  "id": "guides/cli/errors",
+  "title": "CLI errors",
+  "description": "Understand commons errors that occur when using the Tableland CLI.",
+  "source": "@site/docs/guides/cli/errors.md",
+  "sourceDirName": "guides/cli",
+  "slug": "/guides/cli/errors",
+  "permalink": "/guides/cli/errors",
+  "draft": false,
+  "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/guides/cli/errors.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "title": "CLI errors",
+    "sidebar_label": "Errors",
+    "description": "Understand commons errors that occur when using the Tableland CLI.",
+    "keywords": [
+      "cli",
+      "command line",
+      "errors"
+    ]
+  },
+  "sidebar": "guides",
+  "previous": {
+    "title": "Commands",
+    "permalink": "/guides/cli/commands"
+  }
+}

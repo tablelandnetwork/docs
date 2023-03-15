@@ -1,0 +1,33 @@
+{
+  "unversionedId": "guides/sdk/registry/registry-api",
+  "id": "guides/sdk/registry/registry-api",
+  "title": "Registry API",
+  "description": "Learn how to create tables from the SDK.",
+  "source": "@site/docs/guides/sdk/registry/registry-api.md",
+  "sourceDirName": "guides/sdk/registry",
+  "slug": "/guides/sdk/registry/registry-api",
+  "permalink": "/guides/sdk/registry/registry-api",
+  "draft": false,
+  "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/guides/sdk/registry/registry-api.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "title": "Registry API",
+    "description": "Learn how to create tables from the SDK.",
+    "keywords": [
+      "create table"
+    ]
+  },
+  "sidebar": "guides",
+  "previous": {
+    "title": "Validator API",
+    "permalink": "/guides/sdk/validator/validator-api"
+  },
+  "next": {
+    "title": "Web app frameworks",
+    "permalink": "/category/web-app-frameworks"
+  }
+}

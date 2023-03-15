@@ -1,0 +1,34 @@
+{
+  "unversionedId": "fundamentals/basics/protocol-design",
+  "id": "fundamentals/basics/protocol-design",
+  "title": "Protocol design",
+  "description": "The Tableland protocol operates as a data scaling solution with chain-driven database actions.",
+  "source": "@site/docs/fundamentals/basics/protocol-design.md",
+  "sourceDirName": "fundamentals/basics",
+  "slug": "/fundamentals/basics/protocol-design",
+  "permalink": "/fundamentals/basics/protocol-design",
+  "draft": false,
+  "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/fundamentals/basics/protocol-design.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "title": "Protocol design",
+    "description": "The Tableland protocol operates as a data scaling solution with chain-driven database actions.",
+    "keywords": [
+      "open beta",
+      "production"
+    ]
+  },
+  "sidebar": "getStarted",
+  "previous": {
+    "title": "REST API",
+    "permalink": "/fundamentals/quickstarts/api-quickstart"
+  },
+  "next": {
+    "title": "Table uniqueness",
+    "permalink": "/fundamentals/basics/table-token"
+  }
+}

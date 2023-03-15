@@ -1,0 +1,18 @@
+{
+  "unversionedId": "concepts/nfts/README",
+  "id": "concepts/nfts/README",
+  "title": "README",
+  "description": "",
+  "source": "@site/docs/concepts/nfts/README.md",
+  "sourceDirName": "concepts/nfts",
+  "slug": "/concepts/nfts/",
+  "permalink": "/concepts/nfts/",
+  "draft": false,
+  "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/concepts/nfts/README.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {}
+}

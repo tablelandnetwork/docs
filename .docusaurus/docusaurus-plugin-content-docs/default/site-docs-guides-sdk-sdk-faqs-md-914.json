@@ -1,0 +1,35 @@
+{
+  "unversionedId": "guides/sdk/sdk-faqs",
+  "id": "guides/sdk/sdk-faqs",
+  "title": "SDK FAQs",
+  "description": "Review commonly asked questions about the Tableland SDK.",
+  "source": "@site/docs/guides/sdk/sdk-faqs.md",
+  "sourceDirName": "guides/sdk",
+  "slug": "/guides/sdk/sdk-faqs",
+  "permalink": "/guides/sdk/sdk-faqs",
+  "draft": false,
+  "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/guides/sdk/sdk-faqs.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "title": "SDK FAQs",
+    "sidebar_label": "FAQs",
+    "description": "Review commonly asked questions about the Tableland SDK.",
+    "keywords": [
+      "faq",
+      "faqs"
+    ]
+  },
+  "sidebar": "guides",
+  "previous": {
+    "title": "Errors",
+    "permalink": "/guides/sdk/errors"
+  },
+  "next": {
+    "title": "Overview",
+    "permalink": "/guides/smart-contracts/"
+  }
+}

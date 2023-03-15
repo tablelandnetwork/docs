@@ -1,0 +1,30 @@
+{
+  "unversionedId": "get-started/quickstarts/smart-contract-quickstart",
+  "id": "get-started/quickstarts/smart-contract-quickstart",
+  "title": "Smart contract quickstart",
+  "description": "Learn how to create a table and insert add some sample data using the Solidity.",
+  "source": "@site/docs/get-started/quickstarts/smart-contract-quickstart.md",
+  "sourceDirName": "get-started/quickstarts",
+  "slug": "/get-started/quickstarts/smart-contract-quickstart",
+  "permalink": "/get-started/quickstarts/smart-contract-quickstart",
+  "draft": false,
+  "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/get-started/quickstarts/smart-contract-quickstart.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "title": "Smart contract quickstart",
+    "description": "Learn how to create a table and insert add some sample data using the Solidity."
+  },
+  "sidebar": "getStarted",
+  "previous": {
+    "title": "CLI quickstart",
+    "permalink": "/get-started/quickstarts/cli-quickstart"
+  },
+  "next": {
+    "title": "Validator API quickstart",
+    "permalink": "/get-started/quickstarts/validator-api-quickstart"
+  }
+}

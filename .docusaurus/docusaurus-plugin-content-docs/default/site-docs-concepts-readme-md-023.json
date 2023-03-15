@@ -21,10 +21,5 @@
     "keywords": [
       "protocol"
     ]
-  },
-  "sidebar": "concepts",
-  "next": {
-    "title": "What is Tableland?",
-    "permalink": "/concepts/network/what-is-tableland"
   }
 }

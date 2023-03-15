@@ -1,0 +1,26 @@
+{
+  "unversionedId": "guides/sdk/query-statements",
+  "id": "guides/sdk/query-statements",
+  "title": "Prepared statements",
+  "description": "Mutate your table values with additional access control.",
+  "source": "@site/docs/guides/sdk/query-statements.md",
+  "sourceDirName": "guides/sdk",
+  "slug": "/guides/sdk/query-statements",
+  "permalink": "/guides/sdk/query-statements",
+  "draft": false,
+  "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/guides/sdk/query-statements.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "title": "Prepared statements",
+    "description": "Mutate your table values with additional access control.",
+    "synopsis": "Table values can be mutated by the table owner or provisioned actors.",
+    "keywords": [
+      "write to table",
+      "mutate table"
+    ]
+  }
+}

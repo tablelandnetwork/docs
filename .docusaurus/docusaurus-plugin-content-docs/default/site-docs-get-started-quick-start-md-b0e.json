@@ -1,0 +1,22 @@
+{
+  "unversionedId": "get-started/quick-start",
+  "id": "get-started/quick-start",
+  "title": "Quickstart",
+  "description": "Learn the ins and outs of contributing to the Tableland docs site.",
+  "source": "@site/docs/get-started/quick-start.md",
+  "sourceDirName": "get-started",
+  "slug": "/get-started/quick-start",
+  "permalink": "/get-started/quick-start",
+  "draft": false,
+  "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/get-started/quick-start.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "title": "Quickstart",
+    "description": "Learn the ins and outs of contributing to the Tableland docs site.",
+    "synopsis": "The docs site is built using Docusaurus, a static site generator developed by Meta that is specifically designed for documentation. It offers a number of features, including MDX support (embed JSX in markdown) and various content-friendly plugins. Please ensure you follow the guidelines on writing style as well."
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "unversionedId": "fundamentals/network/table-token",
+  "id": "fundamentals/network/table-token",
+  "title": "TABLE token & identification",
+  "description": "Tables are guaranteed unique across all chains based on a combination of developer and environment defined information.",
+  "source": "@site/docs/fundamentals/network/table-token.md",
+  "sourceDirName": "fundamentals/network",
+  "slug": "/fundamentals/network/table-token",
+  "permalink": "/fundamentals/network/table-token",
+  "draft": false,
+  "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/fundamentals/network/table-token.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "title": "TABLE token & identification",
+    "sidebar_label": "Table uniqueness",
+    "description": "Tables are guaranteed unique across all chains based on a combination of developer and environment defined information.",
+    "keywords": [
+      "table",
+      "erc721"
+    ]
+  },
+  "sidebar": "getStarted",
+  "previous": {
+    "title": "Protocol design",
+    "permalink": "/fundamentals/network/protocol-design"
+  },
+  "next": {
+    "title": "Limits",
+    "permalink": "/fundamentals/network/limits"
+  }
+}

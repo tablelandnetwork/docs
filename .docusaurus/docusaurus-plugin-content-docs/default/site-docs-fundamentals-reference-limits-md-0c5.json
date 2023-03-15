@@ -1,0 +1,37 @@
+{
+  "unversionedId": "fundamentals/reference/limits",
+  "id": "fundamentals/reference/limits",
+  "title": "Limits",
+  "description": "A listing of the table/data limits and smart contract deployment locations on supported chains.",
+  "source": "@site/docs/fundamentals/reference/limits.md",
+  "sourceDirName": "fundamentals/reference",
+  "slug": "/fundamentals/reference/limits",
+  "permalink": "/fundamentals/reference/limits",
+  "draft": false,
+  "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/fundamentals/reference/limits.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "title": "Limits",
+    "description": "A listing of the table/data limits and smart contract deployment locations on supported chains.",
+    "synopsis": "Since Tableland is still in open beta, each table is limited to the following constraints while the full production network is further clarified. These are temporary limits while the production mainnet is further researched.",
+    "keywords": [
+      "limits",
+      "cell limit",
+      "row limit",
+      "column limit"
+    ]
+  },
+  "sidebar": "getStarted",
+  "previous": {
+    "title": "Table uniqueness",
+    "permalink": "/fundamentals/reference/table-token"
+  },
+  "next": {
+    "title": "Gateway response",
+    "permalink": "/fundamentals/reference/gateway"
+  }
+}

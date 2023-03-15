@@ -1,0 +1,35 @@
+{
+  "unversionedId": "fundamentals/databases",
+  "id": "fundamentals/databases",
+  "title": "Databases & SQL",
+  "description": "Briefly look under the hood at relational databases.",
+  "source": "@site/docs/fundamentals/databases.md",
+  "sourceDirName": "fundamentals",
+  "slug": "/fundamentals/databases",
+  "permalink": "/fundamentals/databases",
+  "draft": false,
+  "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/fundamentals/databases.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "title": "Databases & SQL",
+    "description": "Briefly look under the hood at relational databases.",
+    "synopsis": "Although it's an oversimplification, the network is like a bunch of SQL databases communicating & agreeing with one another about things that happened on-chain. It's important to understand the very basics of what databases are and why a relational is a perfect solution for scaling structured web3 data.",
+    "keywords": [
+      "databases",
+      "relational database"
+    ]
+  },
+  "sidebar": "getStarted",
+  "previous": {
+    "title": "Why use Tableland?",
+    "permalink": "/fundamentals/considerations-tradeoffs"
+  },
+  "next": {
+    "title": "Quickstarts",
+    "permalink": "/fundamentals/quickstarts/"
+  }
+}

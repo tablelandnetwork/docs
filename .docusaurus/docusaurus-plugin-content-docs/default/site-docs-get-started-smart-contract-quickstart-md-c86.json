@@ -1,0 +1,31 @@
+{
+  "unversionedId": "get-started/smart-contract-quickstart",
+  "id": "get-started/smart-contract-quickstart",
+  "title": "Smart contract quickstart",
+  "description": "Learn how to create a table and insert add some sample data using the Solidity.",
+  "source": "@site/docs/get-started/smart-contract-quickstart.md",
+  "sourceDirName": "get-started",
+  "slug": "/get-started/smart-contract-quickstart",
+  "permalink": "/get-started/smart-contract-quickstart",
+  "draft": false,
+  "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/get-started/smart-contract-quickstart.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "title": "Smart contract quickstart",
+    "sidebar_label": "Smart contracts",
+    "description": "Learn how to create a table and insert add some sample data using the Solidity."
+  },
+  "sidebar": "getStarted",
+  "previous": {
+    "title": "SDK",
+    "permalink": "/get-started/sdk-quickstart"
+  },
+  "next": {
+    "title": "CLI",
+    "permalink": "/get-started/cli-quickstart"
+  }
+}

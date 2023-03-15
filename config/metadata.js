@@ -7,7 +7,7 @@ const metadata = [
   {
     name: "og:title",
     content:
-      "Tableland Docs: API Reference, Quickstart Guides, and Integrations",
+      "Tableland Docs: API reference, quickstart guides, and protocol integrations",
   },
   {
     name: "twitter:title",

@@ -33,7 +33,7 @@ const links = [
   {
     html: (
       <>
-        Want to help? <Link to="contribute">Contribute.</Link>
+        Want to help? <Link to="/contribute">Contribute.</Link>
       </>
     ),
     icon: <FaHandshake size={16} />,

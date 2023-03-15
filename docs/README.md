@@ -1,6 +1,7 @@
 ---
 # This page is all just a JSX import, so hide the defaults so as to not treat it like a standard docs page
 id: landing
+title: Home
 sidebar_label: Home
 hide_title: true
 hide_bread_crumb: true

@@ -1,0 +1,21 @@
+{
+  "unversionedId": "get-started/quickstarts/sdk-quickstart copy",
+  "id": "get-started/quickstarts/sdk-quickstart copy",
+  "title": "SDK quickstart",
+  "description": "Learn how to create a table, add some sample data, and query the data using the SDK.",
+  "source": "@site/docs/get-started/quickstarts/sdk-quickstart copy.md",
+  "sourceDirName": "get-started/quickstarts",
+  "slug": "/get-started/quickstarts/sdk-quickstart copy",
+  "permalink": "/get-started/quickstarts/sdk-quickstart copy",
+  "draft": false,
+  "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/get-started/quickstarts/sdk-quickstart copy.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "title": "SDK quickstart",
+    "description": "Learn how to create a table, add some sample data, and query the data using the SDK."
+  }
+}

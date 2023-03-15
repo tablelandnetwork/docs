@@ -1,0 +1,34 @@
+{
+  "unversionedId": "get-started/chains/optimism",
+  "id": "get-started/chains/optimism",
+  "title": "Optimism",
+  "description": "An overview of using Optimism with Tableland.",
+  "source": "@site/docs/get-started/chains/optimism.md",
+  "sourceDirName": "get-started/chains",
+  "slug": "/get-started/chains/optimism",
+  "permalink": "/get-started/chains/optimism",
+  "draft": false,
+  "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/get-started/chains/optimism.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "title": "Optimism",
+    "description": "An overview of using Optimism with Tableland.",
+    "synopsis": "Optimism is one of the EVM-compatible Layer 2 solutions that Tableland currently supports. Check out the overview of what this network is and relevant information when using it.",
+    "keywords": [
+      "optimism"
+    ]
+  },
+  "sidebar": "getStarted",
+  "previous": {
+    "title": "Arbitrum",
+    "permalink": "/get-started/chains/arbitrum"
+  },
+  "next": {
+    "title": "Polygon",
+    "permalink": "/get-started/chains/polygon"
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "unversionedId": "guides/sdk/database/batching",
+  "id": "guides/sdk/database/batching",
+  "title": "Batching statement & operations",
+  "description": "Get up an running with the Tableland SDK.",
+  "source": "@site/docs/guides/sdk/database/batching.md",
+  "sourceDirName": "guides/sdk/database",
+  "slug": "/guides/sdk/database/batching",
+  "permalink": "/guides/sdk/database/batching",
+  "draft": false,
+  "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/guides/sdk/database/batching.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "title": "Batching statement & operations",
+    "sidebar_label": "Batching",
+    "description": "Get up an running with the Tableland SDK."
+  },
+  "sidebar": "guides",
+  "previous": {
+    "title": "Query statement methods",
+    "permalink": "/guides/sdk/database/query-statement-methods"
+  },
+  "next": {
+    "title": "Type conversion",
+    "permalink": "/guides/sdk/database/type-conversion"
+  }
+}

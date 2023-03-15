@@ -23,13 +23,9 @@
       "mutate table"
     ]
   },
-  "sidebar": "guides",
+  "sidebar": "validatorApi",
   "previous": {
     "title": "Endpoints",
     "permalink": "/validator-api/endpoints"
-  },
-  "next": {
-    "title": "Quick start",
-    "permalink": "/cli/"
   }
 }

@@ -1,0 +1,26 @@
+{
+  "unversionedId": "guides/cli/read",
+  "id": "guides/cli/read",
+  "title": "Reading tables",
+  "description": "Openly readable tables by your applications.",
+  "source": "@site/docs/guides/cli/read.md",
+  "sourceDirName": "guides/cli",
+  "slug": "/guides/cli/read",
+  "permalink": "/guides/cli/read",
+  "draft": false,
+  "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/guides/cli/read.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "title": "Reading tables",
+    "description": "Openly readable tables by your applications.",
+    "synopsis": "Reading from tables is entirely open (for anyone), allowing for true composability. Write SQL qeuries—but with some limitations that are due to the nature of decentralized networks and deterministic requirements.",
+    "keywords": [
+      "write to table",
+      "mutate table"
+    ]
+  }
+}

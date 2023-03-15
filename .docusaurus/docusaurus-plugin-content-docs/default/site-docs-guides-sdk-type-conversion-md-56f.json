@@ -1,0 +1,35 @@
+{
+  "unversionedId": "guides/sdk/type-conversion",
+  "id": "guides/sdk/type-conversion",
+  "title": "Type conversion",
+  "description": "Openly readable tables by your applications.",
+  "source": "@site/docs/guides/sdk/type-conversion.md",
+  "sourceDirName": "guides/sdk",
+  "slug": "/guides/sdk/type-conversion",
+  "permalink": "/guides/sdk/type-conversion",
+  "draft": false,
+  "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/guides/sdk/type-conversion.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "title": "Type conversion",
+    "description": "Openly readable tables by your applications.",
+    "synopsis": "Reading from tables is entirely open (for anyone), allowing for true composability. Write SQL qeuries—but with some limitations that are due to the nature of decentralized networks and deterministic requirements.",
+    "keywords": [
+      "write to table",
+      "mutate table"
+    ]
+  },
+  "sidebar": "guides",
+  "previous": {
+    "title": "Batching",
+    "permalink": "/guides/sdk/batching"
+  },
+  "next": {
+    "title": "Timeouts",
+    "permalink": "/guides/sdk/timeouts"
+  }
+}

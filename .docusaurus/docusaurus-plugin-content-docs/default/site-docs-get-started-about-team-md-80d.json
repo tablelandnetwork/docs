@@ -1,0 +1,24 @@
+{
+  "unversionedId": "get-started/about/team",
+  "id": "get-started/about/team",
+  "title": "Team",
+  "description": "Understand who is the primary maintainer of the Tableland protocol and what they've built in the past.",
+  "source": "@site/docs/get-started/about/team.md",
+  "sourceDirName": "get-started/about",
+  "slug": "/get-started/about/team",
+  "permalink": "/get-started/about/team",
+  "draft": false,
+  "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/get-started/about/team.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "title": "Team",
+    "description": "Understand who is the primary maintainer of the Tableland protocol and what they've built in the past.",
+    "keywords": [
+      "team"
+    ]
+  }
+}

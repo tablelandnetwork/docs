@@ -1,0 +1,26 @@
+{
+  "unversionedId": "reference/cli/README",
+  "id": "reference/cli/README",
+  "title": "Quick start",
+  "description": "Experiment with creating, editing, and querying tables from the comfort of the command line.",
+  "source": "@site/docs/reference/cli/README.md",
+  "sourceDirName": "reference/cli",
+  "slug": "/reference/cli/",
+  "permalink": "/reference/cli/",
+  "draft": false,
+  "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/reference/cli/README.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "title": "Quick start",
+    "description": "Experiment with creating, editing, and querying tables from the comfort of the command line.",
+    "keywords": [
+      "CLI",
+      "command line"
+    ]
+  },
+  "sidebar": "cli"
+}

@@ -12,7 +12,7 @@ const navbar = require("./config/navbar");
 const config = {
   title: "Tableland Docs",
   tagline:
-    "Explore how to store and query data on Tableland—the SQL database for blockchains.",
+    "Explore how to store & query data on Tableland—the decentralized SQL database.",
   url: "http://localhost:3000", // https://docs.tableland.xyz
   baseUrl: "/",
   onBrokenLinks: "log", // Or, could `throw`
@@ -34,12 +34,13 @@ const config = {
   },
   themes: [
     [
-      "@easyops-cn/docusaurus-search-local",
+      "@easyops-cn/docusaurus-search-local", // Used for site search
       {
         hashed: true,
       },
-    ], // Used for site search
-    "@docusaurus/theme-mermaid",
+    ],
+    "@docusaurus/theme-mermaid", // Used for diagrams
+    "@docusaurus/theme-live-codeblock", // Used for live / editable code
   ],
   stylesheets: [
     // Used for math / KaTeX formulas
@@ -52,7 +53,6 @@ const config = {
     },
   ],
   plugins: [
-    "@docusaurus/theme-live-codeblock",
     [
       "docusaurus-plugin-dotenv",
       {

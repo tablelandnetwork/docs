@@ -20,6 +20,8 @@
   /* Change the Tab component to be less vertically padded */
   --ifm-tabs-padding-vertical: 0.3rem;
   --ifm-global-radius: 0.1rem;
+  /* Faster transition speed on hovers etc */
+  --ifm-transition-fast: 0.15s;
   /* Don't underline links on hover */
   --ifm-link-hover-decoration: none;
   /* Font edits, including font size variables, used down below with `md` files, too */
@@ -57,7 +59,6 @@
   --ifm-menu-color: var(--ifm-color-content-secondary);
   --ifm-navbar-shadow: 0 1px 2px 0 rgba(var(--ifm-color-gray-300-rgb), 1);
   /* Custom navbar and footer color */
-  /* --ifm-navbar-background-color: transparent; */
   --ifm-footer-background-color: var(--ifm-color-secondary-lighter);
   /* --ifm-hover-overlay: var(--ifm-color-secondary-lightest); */
   /* Change `hr` section divider to be the same color as sidebar & TOC dividers */
@@ -87,6 +88,7 @@
 /* Dark mode */
 [data-theme="dark"] {
   /* Colors */
+  /* --ifm-background-color: !important; */
   --ifm-color-content-rgb: 237, 237, 237;
   --ifm-color-content: rgb(var(--ifm-color-content-rgb)) !important;
   --color-primary-rgb: 117, 182, 181;
@@ -102,7 +104,7 @@
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
   /* Make the navbar the same color as the background; include bottom box */
   --ifm-color-content-secondary: rgba(255, 255, 255, 1);
-  --ifm-toc-link-color: var(--ifm-color-content-secondary);
+  --ifm-toc-link-color: var(--ifm-menu-color);
   --ifm-navbar-shadow: 0 1px 2px 0 rgba(255, 255, 255, 0.1);
   --ifm-sidebar-background-color: var(--ifm-background-color);
   --ifm-navbar-background-color: var(--ifm-background-color);
@@ -441,9 +443,8 @@ spacing. */
 
 .navbar__search-input,
 input {
-  border: 1px solid var(--ifm-toc-border-color);
+  border: 1px solid transparent;
   border-radius: 5px !important;
-  transition: border var(--ifm-transition-fast);
   background-color: var(--ifm-navbar-search-input-background-color);
 }
 
@@ -455,7 +456,7 @@ input {
 /* Change the search box outline color on focus */
 .navbar__search-input:focus-visible {
   outline: none;
-  border-color: var(--ifm-color-primary);
+  border-color: var(--ifm-toc-border-color);
 }
 
 @media (max-width: 768px) {
@@ -481,13 +482,23 @@ input {
 
 /* Style for the section / divider text */
 .sidebar-section {
-  font-weight: var(--ifm-font-weight-bold);
+  font-weight: var(--ifm-font-weight-semibold);
+}
+
+.landing-section {
+  font-weight: var(--ifm-font-weight-semibold);
+  color: var(--ifm-menu-color);
+}
+
+.menu__list-item:has(.sidebar-section),
+.menu__list-item:has(.landing-section) {
+  padding-bottom: 0 !important;
 }
 
 .sidebar-landing .menu__link {
   font-size: var(--ifm-h4-font-size);
   /* background-color: transparent; */
-  color: var(--ifm-menu-color);
+  color: var(--ifm-heading-color);
   margin-top: 7px;
   margin-bottom: 7px;
   font-weight: var(--ifm-font-weight-semibold);
@@ -502,8 +513,12 @@ input {
   color: var(--ifm-color-primary);
 }
 
+.sidebar-hr {
+  margin-top: 0 !important;
+}
+
 .sidebar-hr hr {
-  margin: 0 auto 0 0 !important;
+  margin: 0 !important;
   width: 80%;
 }
 
@@ -517,6 +532,14 @@ img {
   margin: 0 auto 20px auto;
 }
 
+img:has(~ figcaption) {
+  margin: 0 auto;
+}
+
+img ~ figcaption {
+  margin-bottom: 20px;
+}
+
 figcaption {
   font-size: var(--ifm-h5-font-size);
   text-align: center;
@@ -528,6 +551,50 @@ table {
 
 .navbar-sidebar__back {
   display: none;
+}
+
+.docusaurus-mermaid-container svg {
+  display: block;
+  margin: 10px auto;
+}
+
+.circle-red {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0 auto;
+  -webkit-border-radius: 1rem;
+  -moz-border-radius: 1rem;
+  border-radius: 1rem;
+  border: 1px solid var(--ifm-color-danger-dark);
+  background-color: var(--ifm-color-danger-dark);
+  width: 1rem;
+  height: 1rem;
+}
+
+.circle-yellow {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0 auto;
+  -webkit-border-radius: 1rem;
+  -moz-border-radius: 1rem;
+  border-radius: 1rem;
+  border: 1px solid var(--ifm-color-warning-light);
+  background-color: var(--ifm-color-warning-light);
+  width: 1rem;
+  height: 1rem;
+}
+
+.circle-green {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0 auto;
+  -webkit-border-radius: 1rem;
+  -moz-border-radius: 1rem;
+  border-radius: 1rem;
+  border: 1px solid var(--ifm-color-success-dark);
+  background-color: var(--ifm-color-success-dark);
+  width: 1rem;
+  height: 1rem;
 }
 
 /* Custom fonts for the site */

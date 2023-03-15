@@ -1,0 +1,34 @@
+{
+  "unversionedId": "fundamentals/chains/polygon",
+  "id": "fundamentals/chains/polygon",
+  "title": "Polygon",
+  "description": "An overview of using Polygon with Tableland.",
+  "source": "@site/docs/fundamentals/chains/polygon.md",
+  "sourceDirName": "fundamentals/chains",
+  "slug": "/fundamentals/chains/polygon",
+  "permalink": "/fundamentals/chains/polygon",
+  "draft": false,
+  "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/fundamentals/chains/polygon.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "title": "Polygon",
+    "description": "An overview of using Polygon with Tableland.",
+    "synopsis": "Polygon is one of the EVM-compatible Layer 2 solutions that Tableland currently supports. Check out the overview of what this network is and relevant information when using it.",
+    "keywords": [
+      "polygon"
+    ]
+  },
+  "sidebar": "getStarted",
+  "previous": {
+    "title": "Optimism",
+    "permalink": "/fundamentals/chains/optimism"
+  },
+  "next": {
+    "title": "Local node",
+    "permalink": "/fundamentals/chains/local"
+  }
+}

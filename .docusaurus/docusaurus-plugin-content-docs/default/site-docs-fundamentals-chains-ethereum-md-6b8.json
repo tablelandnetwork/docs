@@ -1,0 +1,34 @@
+{
+  "unversionedId": "fundamentals/chains/ethereum",
+  "id": "fundamentals/chains/ethereum",
+  "title": "Ethereum",
+  "description": "An overview of using Ethereum with Tableland.",
+  "source": "@site/docs/fundamentals/chains/ethereum.md",
+  "sourceDirName": "fundamentals/chains",
+  "slug": "/fundamentals/chains/ethereum",
+  "permalink": "/fundamentals/chains/ethereum",
+  "draft": false,
+  "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/fundamentals/chains/ethereum.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "title": "Ethereum",
+    "description": "An overview of using Ethereum with Tableland.",
+    "synopsis": "Ethereum and its EVM is what drives Tableland's approach for chain compatibility. With its data and network hardness, it's a great case for many projects, but not all use cases can occur here due to cost constraints.",
+    "keywords": [
+      "ethereum"
+    ]
+  },
+  "sidebar": "getStarted",
+  "previous": {
+    "title": "Choosing a chain",
+    "permalink": "/fundamentals/chains/"
+  },
+  "next": {
+    "title": "Arbitrum",
+    "permalink": "/fundamentals/chains/arbitrum"
+  }
+}

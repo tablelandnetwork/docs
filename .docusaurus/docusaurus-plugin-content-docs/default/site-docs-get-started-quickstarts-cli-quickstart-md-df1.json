@@ -1,0 +1,30 @@
+{
+  "unversionedId": "get-started/quickstarts/cli-quickstart",
+  "id": "get-started/quickstarts/cli-quickstart",
+  "title": "CLI quickstart",
+  "description": "Learn how to create a table, add some sample data, and query the data using the CLI.",
+  "source": "@site/docs/get-started/quickstarts/cli-quickstart.md",
+  "sourceDirName": "get-started/quickstarts",
+  "slug": "/get-started/quickstarts/cli-quickstart",
+  "permalink": "/get-started/quickstarts/cli-quickstart",
+  "draft": false,
+  "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/get-started/quickstarts/cli-quickstart.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "title": "CLI quickstart",
+    "description": "Learn how to create a table, add some sample data, and query the data using the CLI."
+  },
+  "sidebar": "getStarted",
+  "previous": {
+    "title": "SDK quickstart",
+    "permalink": "/get-started/quickstarts/sdk-quickstart"
+  },
+  "next": {
+    "title": "Smart contract quickstart",
+    "permalink": "/get-started/quickstarts/smart-contract-quickstart"
+  }
+}

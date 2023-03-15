@@ -22,14 +22,5 @@
       "write to table",
       "mutate table"
     ]
-  },
-  "sidebar": "guides",
-  "previous": {
-    "title": "Creating tables",
-    "permalink": "/cli/create"
-  },
-  "next": {
-    "title": "Reading tables",
-    "permalink": "/cli/read"
   }
 }

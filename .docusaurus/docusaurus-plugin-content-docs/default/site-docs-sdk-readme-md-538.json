@@ -1,8 +1,8 @@
 {
   "unversionedId": "sdk/README",
   "id": "sdk/README",
-  "title": "Quick start",
-  "description": "Openly readable tables by your applications.",
+  "title": "Overview",
+  "description": "Use the Tableland SDK in your JavaScript / TypeScript projects, with full Cloudflare D1 client compatibility.",
   "source": "@site/docs/sdk/README.md",
   "sourceDirName": "sdk",
   "slug": "/sdk/",
@@ -15,21 +15,20 @@
   "lastUpdatedAt": 1539502055,
   "formattedLastUpdatedAt": "Oct 14, 2018",
   "frontMatter": {
-    "title": "Quick start",
-    "description": "Openly readable tables by your applications.",
-    "synopsis": "Reading from tables is entirely open (for anyone), allowing for true composability. Write SQL qeuries—but with some limitations that are due to the nature of decentralized networks and deterministic requirements.",
+    "title": "Overview",
+    "description": "Use the Tableland SDK in your JavaScript / TypeScript projects, with full Cloudflare D1 client compatibility.",
+    "synopsis": "The Tableland SDK provides a minimal client that implements the Cloudflare D1 Database interface on top of the Tableland network. It can be used as a drop-in replacement to work with many community-created D1 tools and libraries. It also comes with a set of helper utilities for working with Tableland.",
     "keywords": [
-      "write to table",
-      "mutate table"
+      "sdk",
+      "javascript",
+      "typescript",
+      "web app",
+      "mobile app"
     ]
   },
-  "sidebar": "guides",
-  "previous": {
-    "title": "Get started",
-    "permalink": "/guides/"
-  },
+  "sidebar": "sdk",
   "next": {
-    "title": "Getting started",
-    "permalink": "/sdk/getting-started"
+    "title": "Database API",
+    "permalink": "/sdk/database/"
   }
 }

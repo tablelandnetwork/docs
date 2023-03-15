@@ -23,14 +23,5 @@
       "auto-increment",
       "autoincrement"
     ]
-  },
-  "sidebar": "sql",
-  "previous": {
-    "title": "Access control",
-    "permalink": "/concepts/sql/access-control"
-  },
-  "next": {
-    "title": "SQL specification",
-    "permalink": "/concepts/sql/sql-spec"
   }
 }

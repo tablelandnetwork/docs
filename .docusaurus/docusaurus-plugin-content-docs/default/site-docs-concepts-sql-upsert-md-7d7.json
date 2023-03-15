@@ -22,14 +22,5 @@
     "keywords": [
       "protocol"
     ]
-  },
-  "sidebar": "sql",
-  "previous": {
-    "title": "UPDATE",
-    "permalink": "/concepts/sql/update"
-  },
-  "next": {
-    "title": "DELETE",
-    "permalink": "/concepts/sql/delete"
   }
 }

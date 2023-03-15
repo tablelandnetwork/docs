@@ -1,0 +1,35 @@
+{
+  "unversionedId": "sdk/errors",
+  "id": "sdk/errors",
+  "title": "Errors",
+  "description": "Mutate your table values with additional access control.",
+  "source": "@site/docs/sdk/errors.md",
+  "sourceDirName": "sdk",
+  "slug": "/sdk/errors",
+  "permalink": "/sdk/errors",
+  "draft": false,
+  "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/sdk/errors.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "title": "Errors",
+    "description": "Mutate your table values with additional access control.",
+    "synopsis": "Table values can be mutated by the table owner or provisioned actors.",
+    "keywords": [
+      "write to table",
+      "mutate table"
+    ]
+  },
+  "sidebar": "sdk",
+  "previous": {
+    "title": "Registry API",
+    "permalink": "/sdk/registry/"
+  },
+  "next": {
+    "title": "FAQs",
+    "permalink": "/sdk/sdk-faqs"
+  }
+}

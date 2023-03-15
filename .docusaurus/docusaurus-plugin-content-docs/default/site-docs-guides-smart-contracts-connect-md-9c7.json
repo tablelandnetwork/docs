@@ -1,0 +1,26 @@
+{
+  "unversionedId": "guides/smart-contracts/connect",
+  "id": "guides/smart-contracts/connect",
+  "title": "Connecting to Tableland",
+  "description": "Access the Tableland network by first connecting to the base chain.",
+  "source": "@site/docs/guides/smart-contracts/connect.md",
+  "sourceDirName": "guides/smart-contracts",
+  "slug": "/guides/smart-contracts/connect",
+  "permalink": "/guides/smart-contracts/connect",
+  "draft": false,
+  "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/guides/smart-contracts/connect.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "title": "Connecting to Tableland",
+    "description": "Access the Tableland network by first connecting to the base chain.",
+    "synopsis": "Tableland is an extension of the chains it supports. Namely, every table creation and write occurs through on-chain actions, so it is a requirement for every developer to connect and interact with a supported blockchain. From there, reads happen off-chain by way of directly accessing the Tableland node network.",
+    "keywords": [
+      "read table",
+      "SQL query"
+    ]
+  }
+}

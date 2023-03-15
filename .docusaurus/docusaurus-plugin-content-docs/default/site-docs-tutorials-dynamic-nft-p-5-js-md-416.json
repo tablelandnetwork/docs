@@ -30,7 +30,7 @@
     "permalink": "/tutorials/dynamic-nft-solidity"
   },
   "next": {
-    "title": "Dynamic NFT with Chainlink Automation",
-    "permalink": "/tutorials/dynamic-nft-chainlink"
+    "title": "JSON files to NFT metadata",
+    "permalink": "/tutorials/deploying-nft-polygon"
   }
 }

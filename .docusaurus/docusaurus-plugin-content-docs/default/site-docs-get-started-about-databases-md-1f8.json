@@ -1,0 +1,26 @@
+{
+  "unversionedId": "get-started/about/databases",
+  "id": "get-started/about/databases",
+  "title": "Databases & SQL",
+  "description": "Briefly look under the hood at relational databases.",
+  "source": "@site/docs/get-started/about/databases.md",
+  "sourceDirName": "get-started/about",
+  "slug": "/get-started/about/databases",
+  "permalink": "/get-started/about/databases",
+  "draft": false,
+  "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/get-started/about/databases.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "title": "Databases & SQL",
+    "description": "Briefly look under the hood at relational databases.",
+    "synopsis": "The network is akin to a bunch of databases communicating & agreeing with one another about things that happened on-chain. Although it's an oversimplification, the core premise behind it all is a relational database, which isn't flashy by any means but adds a new dimension to web3 storage.",
+    "keywords": [
+      "databases",
+      "relational database"
+    ]
+  }
+}

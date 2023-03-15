@@ -16,7 +16,7 @@
   "formattedLastUpdatedAt": "Oct 14, 2018",
   "frontMatter": {
     "title": "Dynamic NFT with Chainlink Automation",
-    "sidebar_label": "Dynamic NFT with Chainlink Automation",
+    "sidebar_label": "Dynamic NFT with Chainlink",
     "description": "Leverage Chainlink for automated NFT mutations.",
     "synopsis": "The Chainlink network can help make autonomous on-chain calls and enable truly dynamic NFTs. All of the logic can be created with smart contracts and registered in the Chainlink automation portal, enabling dynamic NFTs using on-chain logic, only.",
     "keywords": [
@@ -26,7 +26,11 @@
   },
   "sidebar": "tutorials",
   "previous": {
-    "title": "Creating a dynamic NFT with p5.js",
-    "permalink": "/tutorials/dynamic-nft-p5js"
+    "title": "JSON files to NFT metadata",
+    "permalink": "/tutorials/deploying-nft-polygon"
+  },
+  "next": {
+    "title": "Table reads with Chainlink + Arbitrum",
+    "permalink": "/tutorials/table-reads-chainlink"
   }
 }
