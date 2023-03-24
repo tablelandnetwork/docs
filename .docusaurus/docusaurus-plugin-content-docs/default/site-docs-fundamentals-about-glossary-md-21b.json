@@ -1,0 +1,30 @@
+{
+  "unversionedId": "fundamentals/about/glossary",
+  "id": "fundamentals/about/glossary",
+  "title": "Glossary",
+  "description": "Get familiar with common words and phrases in web3, databases, and Tableland.",
+  "source": "@site/docs/fundamentals/about/glossary.md",
+  "sourceDirName": "fundamentals/about",
+  "slug": "/fundamentals/about/glossary",
+  "permalink": "/fundamentals/about/glossary",
+  "draft": false,
+  "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/fundamentals/about/glossary.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "title": "Glossary",
+    "description": "Get familiar with common words and phrases in web3, databases, and Tableland."
+  },
+  "sidebar": "fundamentals",
+  "previous": {
+    "title": "General FAQs",
+    "permalink": "/fundamentals/about/general-faqs"
+  },
+  "next": {
+    "title": "Open beta",
+    "permalink": "/fundamentals/about/open-beta"
+  }
+}

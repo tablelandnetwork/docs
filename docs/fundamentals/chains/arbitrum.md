@@ -1,10 +1,11 @@
 ---
 title: Arbitrum
 description: An overview of using Arbitrum with Tableland.
-synopsis: Arbitrum is one of the leading EVM-compatible Layer 2 solutions that Tableland currently supports. Check out the overview of what this network is and relevant information when using it.
 keywords:
   - arbitrum
 ---
+
+Arbitrum is one of the leading EVM-compatible Layer 2 solutions that Tableland currently supports. Check out the overview of what this network is and relevant information when using it.
 
 import { ChainInfo } from '@site/src/components/SupportedChains'
 

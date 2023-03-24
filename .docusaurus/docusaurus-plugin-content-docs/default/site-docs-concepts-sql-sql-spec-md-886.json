@@ -21,5 +21,14 @@
     "keywords": [
       "protocol"
     ]
+  },
+  "sidebar": "concepts",
+  "previous": {
+    "title": "Auto-incrementing",
+    "permalink": "/concepts/sql/incrementing-values"
+  },
+  "next": {
+    "title": "Related topics",
+    "permalink": "/concepts/related/"
   }
 }

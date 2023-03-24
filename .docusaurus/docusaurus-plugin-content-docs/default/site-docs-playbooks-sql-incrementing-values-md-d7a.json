@@ -1,0 +1,35 @@
+{
+  "unversionedId": "playbooks/sql/incrementing-values",
+  "id": "playbooks/sql/incrementing-values",
+  "title": "Incrementing values automatically",
+  "description": "Tableland allows developers to automatically increment a cell, with some restrictions.",
+  "source": "@site/docs/playbooks/sql/incrementing-values.md",
+  "sourceDirName": "playbooks/sql",
+  "slug": "/playbooks/sql/incrementing-values",
+  "permalink": "/playbooks/sql/incrementing-values",
+  "draft": false,
+  "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/playbooks/sql/incrementing-values.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "title": "Incrementing values automatically",
+    "sidebar_label": "Auto-incrementing",
+    "description": "Tableland allows developers to automatically increment a cell, with some restrictions.",
+    "keywords": [
+      "auto-increment",
+      "autoincrement"
+    ]
+  },
+  "sidebar": "playbooks",
+  "previous": {
+    "title": "Access control",
+    "permalink": "/playbooks/sql/access-control"
+  },
+  "next": {
+    "title": "NFT metadata",
+    "permalink": "/playbooks/walkthroughs/nft-metadata"
+  }
+}

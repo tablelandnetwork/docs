@@ -1,7 +1,6 @@
 ---
 title: Get started
-description: Leverage REST APIs to interact directly with Tableland network validator nodes.
-synopsis: Table reads occur at a gateway—use SQL to compose data into the right format. Additionally, other APIs are available to retrieve validator-specific information.
+description: Leverage REST APIs to interact directly with Tableland validator nodes at a gateway.
 keywords:
   - rest api
   - validator api

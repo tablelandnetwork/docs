@@ -1,0 +1,26 @@
+{
+  "unversionedId": "playbooks/sql/update",
+  "id": "playbooks/sql/update",
+  "title": "Updating table data",
+  "description": "Learn about what Tableland is.",
+  "source": "@site/docs/playbooks/sql/update.md",
+  "sourceDirName": "playbooks/sql",
+  "slug": "/playbooks/sql/update",
+  "permalink": "/playbooks/sql/update",
+  "draft": false,
+  "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/playbooks/sql/update.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "title": "Updating table data",
+    "sidebar_label": "UPDATE",
+    "description": "Learn about what Tableland is.",
+    "synopsis": "Structured Query Language (SQL) is a language that allows developers to interact with databases for extracting and mutating values.",
+    "keywords": [
+      "protocol"
+    ]
+  }
+}

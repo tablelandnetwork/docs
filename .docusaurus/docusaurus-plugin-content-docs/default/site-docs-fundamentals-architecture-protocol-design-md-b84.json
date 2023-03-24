@@ -2,7 +2,7 @@
   "unversionedId": "fundamentals/architecture/protocol-design",
   "id": "fundamentals/architecture/protocol-design",
   "title": "Protocol design",
-  "description": "The Tableland protocol operates as a data scaling solution with chain-driven database actions.",
+  "description": "The Tableland protocol operates as a data scaling solution using chain-powered database mutations and a parallel adjacent network.",
   "source": "@site/docs/fundamentals/architecture/protocol-design.md",
   "sourceDirName": "fundamentals/architecture",
   "slug": "/fundamentals/architecture/protocol-design",
@@ -16,13 +16,13 @@
   "formattedLastUpdatedAt": "Oct 14, 2018",
   "frontMatter": {
     "title": "Protocol design",
-    "description": "The Tableland protocol operates as a data scaling solution with chain-driven database actions.",
+    "description": "The Tableland protocol operates as a data scaling solution using chain-powered database mutations and a parallel adjacent network.",
     "keywords": [
-      "open beta",
-      "production"
+      "protocol",
+      "protocol design"
     ]
   },
-  "sidebar": "getStarted",
+  "sidebar": "fundamentals",
   "previous": {
     "title": "REST API",
     "permalink": "/fundamentals/quickstarts/api-quickstart"

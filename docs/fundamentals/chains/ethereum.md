@@ -1,12 +1,13 @@
 ---
 title: Ethereum
 description: An overview of using Ethereum with Tableland.
-synopsis: Ethereum and its EVM is what drives Tableland's approach for chain compatibility. With its data and network hardness, it's a great case for many projects, but not all use cases can occur here due to cost constraints.
 keywords:
   - ethereum
 ---
 
 import { ChainInfo } from '@site/src/components/SupportedChains'
+
+Ethereum and its EVM is what drives Tableland's approach for chain compatibility. With its data and network hardness, it's a great case for many projects, but not all use cases can occur here due to cost and throughput constraints.
 
 ## Overview
 

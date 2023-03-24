@@ -1,0 +1,36 @@
+{
+  "unversionedId": "tutorials/key-value-store-nft",
+  "id": "tutorials/key-value-store-nft",
+  "title": "Key-value store database",
+  "description": "Create a key-value store database that is actually an NFT with collaborative features.",
+  "source": "@site/docs/tutorials/key-value-store-nft.md",
+  "sourceDirName": "tutorials",
+  "slug": "/tutorials/key-value-store-nft",
+  "permalink": "/tutorials/key-value-store-nft",
+  "draft": false,
+  "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/tutorials/key-value-store-nft.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "title": "Key-value store database",
+    "sidebar_label": "Key-value store as NFT",
+    "description": "Create a key-value store database that is actually an NFT with collaborative features.",
+    "keywords": [
+      "key-value store",
+      "database",
+      "nft"
+    ]
+  },
+  "sidebar": "tutorials",
+  "previous": {
+    "title": "Building a Data DAO",
+    "permalink": "/tutorials/data-dao-polygon"
+  },
+  "next": {
+    "title": "On-chain reads with Chainlink",
+    "permalink": "/tutorials/table-reads-chainlink"
+  }
+}

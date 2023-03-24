@@ -17,12 +17,11 @@
   "frontMatter": {
     "title": "Polygon",
     "description": "An overview of using Polygon with Tableland.",
-    "synopsis": "Polygon is one of the EVM-compatible Layer 2 solutions that Tableland currently supports. Check out the overview of what this network is and relevant information when using it.",
     "keywords": [
       "polygon"
     ]
   },
-  "sidebar": "getStarted",
+  "sidebar": "fundamentals",
   "previous": {
     "title": "Optimism",
     "permalink": "/fundamentals/chains/optimism"

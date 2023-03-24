@@ -1,0 +1,15 @@
+{
+  "title": "Datab",
+  "slug": "/category/database-api",
+  "permalink": "/category/database-api",
+  "navigation": {
+    "previous": {
+      "title": "Overview",
+      "permalink": "/sdk/"
+    },
+    "next": {
+      "title": "Signers",
+      "permalink": "/sdk/database/signers"
+    }
+  }
+}

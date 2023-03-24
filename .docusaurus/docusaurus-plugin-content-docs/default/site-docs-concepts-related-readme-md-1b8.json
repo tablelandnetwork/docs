@@ -21,5 +21,14 @@
     "keywords": [
       "protocol"
     ]
+  },
+  "sidebar": "concepts",
+  "previous": {
+    "title": "SQL specification",
+    "permalink": "/concepts/sql/sql-spec"
+  },
+  "next": {
+    "title": "URI encoding",
+    "permalink": "/concepts/related/uri-encoding"
   }
 }

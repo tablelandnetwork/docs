@@ -1,8 +1,8 @@
 {
   "unversionedId": "smart-contracts/README",
   "id": "smart-contracts/README",
-  "title": "Overview",
-  "description": "Openly readable tables by your applications.",
+  "title": "Get started",
+  "description": "Interact with Tableland using smart contracts.",
   "source": "@site/docs/smart-contracts/README.md",
   "sourceDirName": "smart-contracts",
   "slug": "/smart-contracts/",
@@ -15,13 +15,12 @@
   "lastUpdatedAt": 1539502055,
   "formattedLastUpdatedAt": "Oct 14, 2018",
   "frontMatter": {
-    "title": "Overview",
-    "description": "Openly readable tables by your applications.",
-    "synopsis": "The JavaScript / TypeScript SDK allows developers to create tables on their chain of choice. Connect, create, and then interact with your tables thereafter with table writes and reads.",
-    "keywords": [
-      "SQL query",
-      "Tableland SDK"
-    ]
+    "title": "Get started",
+    "description": "Interact with Tableland using smart contracts."
   },
-  "sidebar": "smartContracts"
+  "sidebar": "smartContracts",
+  "next": {
+    "title": "Deployed contracts",
+    "permalink": "/smart-contracts/contracts"
+  }
 }

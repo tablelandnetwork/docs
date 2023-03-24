@@ -1,12 +1,13 @@
 ---
 title: Polygon
 description: An overview of using Polygon with Tableland.
-synopsis: Polygon is one of the EVM-compatible Layer 2 solutions that Tableland currently supports. Check out the overview of what this network is and relevant information when using it.
 keywords:
   - polygon
 ---
 
 import { ChainInfo } from '@site/src/components/SupportedChains'
+
+Polygon is one of the EVM-compatible Layer 2 solutions that Tableland currently supports. Check out the overview of what this network is and relevant information when using it.
 
 ## Overview
 

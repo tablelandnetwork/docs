@@ -2,7 +2,7 @@
   "unversionedId": "tutorials/README",
   "id": "tutorials/README",
   "title": "Overview",
-  "description": "Openly readable tables by your applications.",
+  "description": "Tutorials and example apps to help kickstart your development process.",
   "source": "@site/docs/tutorials/README.md",
   "sourceDirName": "tutorials",
   "slug": "/tutorials/",
@@ -16,11 +16,10 @@
   "formattedLastUpdatedAt": "Oct 14, 2018",
   "frontMatter": {
     "title": "Overview",
-    "description": "Openly readable tables by your applications.",
-    "synopsis": "Reading from tables is entirely open (for anyone), allowing for true composability. Write SQL qeuries—but with some limitations that are due to the nature of decentralized networks and deterministic requirements.",
+    "description": "Tutorials and example apps to help kickstart your development process.",
     "keywords": [
-      "write to table",
-      "mutate table"
+      "tutorials",
+      "example apps"
     ]
   },
   "sidebar": "tutorials",

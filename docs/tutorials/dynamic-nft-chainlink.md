@@ -2,11 +2,12 @@
 title: Dynamic NFT with Chainlink Automation
 sidebar_label: Dynamic NFT with Chainlink
 description: Leverage Chainlink for automated NFT mutations.
-synopsis: The Chainlink network can help make autonomous on-chain calls and enable truly dynamic NFTs. All of the logic can be created with smart contracts and registered in the Chainlink automation portal, enabling dynamic NFTs using on-chain logic, only.
 keywords:
   - chainlink
   - dynamic nft
 ---
+
+The Chainlink network can help make autonomous on-chain calls and enable truly dynamic NFTs. All of the logic can be created with smart contracts and registered in the Chainlink automation portal, enabling dynamic NFTs using on-chain logic, only.
 
 ## Setup
 

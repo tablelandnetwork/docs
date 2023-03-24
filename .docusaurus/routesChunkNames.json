@@ -199,7 +199,7 @@
     },
     "tag": "tag---tags-contributing-9-d-7-88b"
   },
-  "/-c17": {
+  "/-389": {
     "__comp": "__comp---theme-doc-page-1-be-9be",
     "__context": {
       "plugin": "plugin---tags-54-b-0a7"
@@ -222,78 +222,6 @@
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---cli-errors-75-a-225"
   },
-  "/cli/getting-started-b9b": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---cli-getting-started-9-f-0-026"
-  },
-  "/cli/read-46b": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---cli-read-9-be-4e7"
-  },
-  "/cli/write-537": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---cli-write-346-213"
-  },
-  "/concepts/-f21": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---concepts-023-a81"
-  },
-  "/concepts/nfts/-f24": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---concepts-nfts-7-e-0-4e1"
-  },
-  "/concepts/related/-5f0": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---concepts-related-1-b-8-82d"
-  },
-  "/concepts/related/uri-encoding-877": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---concepts-related-uri-encodingdc-7-05e"
-  },
-  "/concepts/sql/-754": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---concepts-sql-0-c-1-64a"
-  },
-  "/concepts/sql/access-control-ecb": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---concepts-sql-access-control-716-e9e"
-  },
-  "/concepts/sql/create-a-table-4b6": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---concepts-sql-create-a-table-23-a-4cd"
-  },
-  "/concepts/sql/delete-db1": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---concepts-sql-delete-06-d-0df"
-  },
-  "/concepts/sql/incrementing-values-53b": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---concepts-sql-incrementing-values-0-eb-d81"
-  },
-  "/concepts/sql/insert-005": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---concepts-sql-insertbc-2-3dc"
-  },
-  "/concepts/sql/mutating-data-924": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---concepts-sql-mutating-dataafb-256"
-  },
-  "/concepts/sql/read-057": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---concepts-sql-read-67-d-7e3"
-  },
-  "/concepts/sql/sql-spec-049": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---concepts-sql-sql-spec-886-0e5"
-  },
-  "/concepts/sql/update-960": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---concepts-sql-update-4-dd-0a9"
-  },
-  "/concepts/sql/upsert-059": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---concepts-sql-upsert-7-d-7-e21"
-  },
   "/contribute/-126": {
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---contribute-b-76-d2a"
@@ -306,177 +234,193 @@
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---contribute-style-guided-01-728"
   },
-  "/fundamentals/-f07": {
+  "/fundamentals/-4df": {
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---fundamentals-c-81-378"
   },
-  "/fundamentals/about/general-faqs-3be": {
+  "/fundamentals/about/general-faqs-718": {
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---fundamentals-about-general-faqs-871-390"
   },
-  "/fundamentals/about/open-beta-faf": {
+  "/fundamentals/about/glossary-a6b": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---fundamentals-about-glossary-21-b-7c3"
+  },
+  "/fundamentals/about/open-beta-2b2": {
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---fundamentals-about-open-beta-771-780"
   },
-  "/fundamentals/about/repos-27e": {
+  "/fundamentals/about/repos-e74": {
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---fundamentals-about-reposccc-8bf"
   },
-  "/fundamentals/about/roadmap-153": {
+  "/fundamentals/about/roadmap-5d4": {
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---fundamentals-about-roadmap-634-04c"
   },
-  "/fundamentals/about/use-cases-cd7": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---fundamentals-about-use-cases-718-2ca"
-  },
-  "/fundamentals/architecture/-683": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---fundamentals-architecture-eb-5-1c3"
-  },
-  "/fundamentals/architecture/contracts-570": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---fundamentals-architecture-contracts-9-d-6-a52"
-  },
-  "/fundamentals/architecture/gateway-5c3": {
+  "/fundamentals/architecture/gateway-5db": {
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---fundamentals-architecture-gatewayb-6-d-757"
   },
-  "/fundamentals/architecture/limits-53c": {
+  "/fundamentals/architecture/limits-5bc": {
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---fundamentals-architecture-limitsf-30-1ad"
   },
-  "/fundamentals/architecture/protocol-design-1bd": {
+  "/fundamentals/architecture/protocol-design-8ef": {
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---fundamentals-architecture-protocol-designb-84-552"
   },
-  "/fundamentals/architecture/table-token-45b": {
+  "/fundamentals/architecture/table-token-4c3": {
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---fundamentals-architecture-table-token-607-526"
   },
-  "/fundamentals/chains/-fdc": {
+  "/fundamentals/chains/-8a1": {
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---fundamentals-chains-b-22-621"
   },
-  "/fundamentals/chains/arbitrum-833": {
+  "/fundamentals/chains/arbitrum-a8e": {
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---fundamentals-chains-arbitrume-23-650"
   },
-  "/fundamentals/chains/ethereum-744": {
+  "/fundamentals/chains/ethereum-945": {
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---fundamentals-chains-ethereum-6-b-8-76d"
   },
-  "/fundamentals/chains/local-76a": {
+  "/fundamentals/chains/local-73d": {
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---fundamentals-chains-local-281-97f"
   },
-  "/fundamentals/chains/optimism-4fd": {
+  "/fundamentals/chains/optimism-cf6": {
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---fundamentals-chains-optimism-30-c-54a"
   },
-  "/fundamentals/chains/polygon-70d": {
+  "/fundamentals/chains/polygon-8d6": {
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---fundamentals-chains-polygon-500-c53"
   },
-  "/fundamentals/considerations-tradeoffs-86b": {
+  "/fundamentals/concepts/nft-metadata-ab3": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---fundamentals-concepts-nft-metadatac-4-c-694"
+  },
+  "/fundamentals/concepts/use-cases-da1": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---fundamentals-concepts-use-casese-99-b1e"
+  },
+  "/fundamentals/considerations-tradeoffs-bb2": {
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---fundamentals-considerations-tradeoffs-078-4b3"
   },
-  "/fundamentals/databases-a28": {
+  "/fundamentals/databases-690": {
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---fundamentals-databases-5-f-7-f3e"
   },
-  "/fundamentals/quickstarts/-a9d": {
+  "/fundamentals/quickstarts/-401": {
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---fundamentals-quickstarts-b-16-0b7"
   },
-  "/fundamentals/quickstarts/api-quickstart-668": {
+  "/fundamentals/quickstarts/api-quickstart-008": {
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---fundamentals-quickstarts-api-quickstarte-03-21e"
   },
-  "/fundamentals/quickstarts/cli-quickstart-954": {
+  "/fundamentals/quickstarts/cli-quickstart-0f1": {
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---fundamentals-quickstarts-cli-quickstart-18-c-d6e"
   },
-  "/fundamentals/quickstarts/sdk-quickstart-3f1": {
+  "/fundamentals/quickstarts/sdk-quickstart-dcd": {
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---fundamentals-quickstarts-sdk-quickstart-6-e-1-891"
   },
-  "/fundamentals/quickstarts/smart-contract-quickstart-401": {
+  "/fundamentals/quickstarts/smart-contract-quickstart-2b5": {
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---fundamentals-quickstarts-smart-contract-quickstart-877-c3a"
   },
-  "/fundamentals/what-is-tableland-3b0": {
+  "/fundamentals/what-is-tableland-ced": {
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---fundamentals-what-is-tableland-37-d-804"
   },
-  "/products/rigs/-1a3": {
+  "/playbooks/-96b": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---products-rigs-429-2da"
+    "content": "content---playbooks-c-91-3f3"
   },
-  "/products/rigs/rigs-discord-537": {
+  "/playbooks/sql/-4ae": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---products-rigs-rigs-discord-188-37b"
+    "content": "content---playbooks-sql-6-ae-158"
   },
-  "/products/rigs/the-garage-a10": {
+  "/playbooks/sql/access-control-2a7": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---products-rigs-the-garagef-7-f-5da"
+    "content": "content---playbooks-sql-access-controlf-9-b-d1d"
   },
-  "/products/rigs/what-are-rigs-6d8": {
+  "/playbooks/sql/composing-data-d93": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---products-rigs-what-are-rigs-29-d-23c"
+    "content": "content---playbooks-sql-composing-data-2-d-8-5ba"
   },
-  "/reference/sql-specification-1ea": {
+  "/playbooks/sql/create-cb4": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---reference-sql-specificationeba-35f"
+    "content": "content---playbooks-sql-create-219-100"
   },
-  "/reference/validator-api-d1f": {
+  "/playbooks/sql/functions-924": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---reference-validator-apibbf-cf7"
+    "content": "content---playbooks-sql-functions-7-d-2-5a5"
+  },
+  "/playbooks/sql/incrementing-values-954": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---playbooks-sql-incrementing-valuesd-7-a-a01"
+  },
+  "/playbooks/sql/read-942": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---playbooks-sql-read-393-c9f"
+  },
+  "/playbooks/sql/write-0aa": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---playbooks-sql-writebce-189"
+  },
+  "/playbooks/walkthroughs/key-value-c8f": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---playbooks-walkthroughs-key-value-234-69f"
+  },
+  "/playbooks/walkthroughs/nft-metadata-960": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---playbooks-walkthroughs-nft-metadata-801-bb8"
+  },
+  "/playbooks/walkthroughs/sql-faqs-ad2": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---playbooks-walkthroughs-sql-faqs-8-eb-b06"
   },
   "/sdk/-155": {
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---sdk-538-e94"
   },
-  "/sdk/database/-341": {
+  "/sdk/core/-e23": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---sdk-database-0-d-4-428"
+    "content": "content---sdk-core-0-d-5-1ef"
   },
-  "/sdk/database/batching-dbe": {
+  "/sdk/core/batching-a8a": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---sdk-database-batchingccc-970"
+    "content": "content---sdk-core-batching-91-b-91d"
   },
-  "/sdk/database/orm-b10": {
+  "/sdk/core/prepared-statements-f95": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---sdk-database-orm-574-c69"
+    "content": "content---sdk-core-prepared-statements-436-a7d"
   },
-  "/sdk/database/prepared-statements-c80": {
+  "/sdk/core/query-statement-methods-d35": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---sdk-database-prepared-statements-0-f-6-aa4"
+    "content": "content---sdk-core-query-statement-methodsaab-b47"
   },
-  "/sdk/database/query-statement-methods-47f": {
+  "/sdk/core/registry-api-e80": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---sdk-database-query-statement-methods-1-d-0-ce2"
+    "content": "content---sdk-core-registry-apie-50-364"
   },
-  "/sdk/database/signers-fc6": {
+  "/sdk/core/signers-4b6": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---sdk-database-signers-71-b-35a"
+    "content": "content---sdk-core-signersf-48-3d9"
   },
-  "/sdk/database/timeouts-f35": {
+  "/sdk/core/timeouts-eb9": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---sdk-database-timeouts-469-b35"
+    "content": "content---sdk-core-timeouts-38-b-d3a"
   },
-  "/sdk/database/type-conversion-c62": {
+  "/sdk/core/validator-api-2bf": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---sdk-database-type-conversion-4-aa-80a"
-  },
-  "/sdk/database/upgrading-from-legacy-6f6": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---sdk-database-upgrading-from-legacye-9-b-1c4"
-  },
-  "/sdk/errors-177": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---sdk-errors-4-ab-bad"
+    "content": "content---sdk-core-validator-api-201-658"
   },
   "/sdk/frameworks/reactjs-8f4": {
     "__comp": "__comp---theme-doc-item-178-a40",
@@ -486,75 +430,67 @@
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---sdk-frameworks-wagmid-7-b-9c7"
   },
-  "/sdk/polling-2a3": {
+  "/sdk/reference/errors-683": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---sdk-polling-372-084"
+    "content": "content---sdk-reference-errors-47-f-8f7"
   },
-  "/sdk/registry/-e52": {
+  "/sdk/reference/orm-92d": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---sdk-registry-52-e-59b"
+    "content": "content---sdk-reference-orm-1-a-6-da3"
   },
-  "/sdk/sdk-faqs-0e1": {
+  "/sdk/reference/sdk-faqs-a29": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---sdk-sdk-faqs-79-b-3ba"
-  },
-  "/sdk/validator/-d92": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---sdk-validator-294-766"
+    "content": "content---sdk-reference-sdk-faqs-958-a4b"
   },
   "/smart-contracts/-269": {
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---smart-contracts-605-49d"
   },
-  "/smart-contracts/connect-7ae": {
+  "/smart-contracts/configuring-table-write-access-4d6": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---smart-contracts-connect-69-b-47b"
+    "content": "content---smart-contracts-configuring-table-write-accessf-12-e28"
   },
-  "/smart-contracts/create-06f": {
+  "/smart-contracts/contracts-31b": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---smart-contracts-create-601-8a3"
+    "content": "content---smart-contracts-contractsb-37-877"
+  },
+  "/smart-contracts/creating-tables-from-contracts-4c7": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---smart-contracts-creating-tables-from-contracts-05-f-b15"
   },
   "/smart-contracts/getting-started-90c": {
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---smart-contracts-getting-starteda-60-faf"
   },
-  "/smart-contracts/read-b30": {
+  "/smart-contracts/immutable-table-0be": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---smart-contracts-read-994-cc0"
+    "content": "content---smart-contracts-immutable-table-050-76a"
   },
-  "/smart-contracts/write-186": {
+  "/smart-contracts/serving-nft-metadata-31e": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---smart-contracts-write-5-fb-988"
+    "content": "content---smart-contracts-serving-nft-metadata-81-a-baa"
   },
-  "/sql/-71d": {
+  "/smart-contracts/solidity-to-sql-types-4ab": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---sql-0-af-6e4"
+    "content": "content---smart-contracts-solidity-to-sql-types-1-c-5-42d"
   },
-  "/sql/access-control-b16": {
+  "/smart-contracts/uri-encoding-eee": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---sql-access-control-16-f-34a"
+    "content": "content---smart-contracts-uri-encoding-9-de-491"
   },
-  "/sql/creating-tables-a29": {
+  "/smart-contracts/using-remix-c97": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---sql-creating-tablesc-1-f-efd"
+    "content": "content---smart-contracts-using-remixbbe-455"
   },
-  "/sql/read-queries-738": {
+  "/specs/sql/-f07": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---sql-read-queries-652-e0f"
+    "content": "content---specs-sql-373-cc9"
   },
-  "/sql/sql-spec-b23": {
+  "/specs/validator-api-421": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---sql-sql-speca-7-a-0e2"
+    "content": "content---specs-validator-apiead-15f"
   },
-  "/sql/write-queries-a1a": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---sql-write-queries-53-e-ec4"
-  },
-  "/tools/-45c": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---tools-f-3-a-5c4"
-  },
-  "/tools/local-tableland-221": {
+  "/tools/local-tableland-ce5": {
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---tools-local-tableland-735-172"
   },
@@ -562,9 +498,13 @@
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---tutorials-87-f-157"
   },
-  "/tutorials/deploying-nft-polygon-5ba": {
+  "/tutorials/building-games-on-arbitrum-695": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---tutorials-deploying-nft-polygon-159-f1d"
+    "content": "content---tutorials-building-games-on-arbitrum-4-d-2-5c0"
+  },
+  "/tutorials/data-dao-polygon-e8e": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---tutorials-data-dao-polygoneb-9-938"
   },
   "/tutorials/dynamic-nft-chainlink-93d": {
     "__comp": "__comp---theme-doc-item-178-a40",
@@ -578,6 +518,14 @@
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---tutorials-dynamic-nft-solidity-3-ee-f08"
   },
+  "/tutorials/json-files-nft-polygon-e80": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---tutorials-json-files-nft-polygoncca-8d7"
+  },
+  "/tutorials/key-value-store-nft-2ac": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---tutorials-key-value-store-nftd-30-78b"
+  },
   "/tutorials/table-reads-chainlink-a4f": {
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---tutorials-table-reads-chainlinkd-1-d-1d1"
@@ -590,8 +538,16 @@
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---validator-api-endpointsbc-6-b15"
   },
-  "/validator-api/errors-114": {
+  "/validator-api/errors-076": {
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---validator-api-errorsa-73-6cd"
+  },
+  "/validator-api/query-formatting-d39": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---validator-api-query-formatting-162-416"
+  },
+  "/validator/-8e2": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---validator-e-7-b-b2a"
   }
 }

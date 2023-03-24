@@ -1,0 +1,29 @@
+{
+  "unversionedId": "playbooks/README",
+  "id": "playbooks/README",
+  "title": "Overview",
+  "description": "Get started with playbooks that outline how to use Tableland SQL and other common concepts.",
+  "source": "@site/docs/playbooks/README.md",
+  "sourceDirName": "playbooks",
+  "slug": "/playbooks/",
+  "permalink": "/playbooks/",
+  "draft": false,
+  "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/playbooks/README.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "title": "Overview",
+    "description": "Get started with playbooks that outline how to use Tableland SQL and other common concepts.",
+    "keywords": [
+      "playbooks"
+    ]
+  },
+  "sidebar": "playbooks",
+  "next": {
+    "title": "Get started",
+    "permalink": "/playbooks/sql/"
+  }
+}

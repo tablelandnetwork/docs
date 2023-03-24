@@ -25,9 +25,9 @@
       "repository"
     ]
   },
-  "sidebar": "getStarted",
+  "sidebar": "fundamentals",
   "previous": {
-    "title": "General FAQs",
-    "permalink": "/fundamentals/about/general-faqs"
+    "title": "Roadmap",
+    "permalink": "/fundamentals/about/roadmap"
   }
 }

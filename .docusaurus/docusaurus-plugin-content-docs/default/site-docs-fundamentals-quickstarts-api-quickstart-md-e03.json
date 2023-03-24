@@ -19,7 +19,7 @@
     "sidebar_label": "REST API",
     "description": "Learn how to read table data or retrieve relevant validator information."
   },
-  "sidebar": "getStarted",
+  "sidebar": "fundamentals",
   "previous": {
     "title": "CLI",
     "permalink": "/fundamentals/quickstarts/cli-quickstart"

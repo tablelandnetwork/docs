@@ -1,0 +1,26 @@
+{
+  "unversionedId": "playbooks/sql/insert",
+  "id": "playbooks/sql/insert",
+  "title": "Inserting table data",
+  "description": "Learn about what Tableland is.",
+  "source": "@site/docs/playbooks/sql/insert.md",
+  "sourceDirName": "playbooks/sql",
+  "slug": "/playbooks/sql/insert",
+  "permalink": "/playbooks/sql/insert",
+  "draft": false,
+  "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/playbooks/sql/insert.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "title": "Inserting table data",
+    "sidebar_label": "INSERT",
+    "description": "Learn about what Tableland is.",
+    "synopsis": "Structured Query Language (SQL) is a language that allows developers to interact with databases for extracting and mutating values.",
+    "keywords": [
+      "protocol"
+    ]
+  }
+}

@@ -2,7 +2,7 @@
   "unversionedId": "validator-api/README",
   "id": "validator-api/README",
   "title": "Get started",
-  "description": "Leverage REST APIs to interact directly with Tableland network validator nodes.",
+  "description": "Leverage REST APIs to interact directly with Tableland validator nodes at a gateway.",
   "source": "@site/docs/validator-api/README.md",
   "sourceDirName": "validator-api",
   "slug": "/validator-api/",
@@ -16,8 +16,7 @@
   "formattedLastUpdatedAt": "Oct 14, 2018",
   "frontMatter": {
     "title": "Get started",
-    "description": "Leverage REST APIs to interact directly with Tableland network validator nodes.",
-    "synopsis": "Table reads occur at a gateway—use SQL to compose data into the right format. Additionally, other APIs are available to retrieve validator-specific information.",
+    "description": "Leverage REST APIs to interact directly with Tableland validator nodes at a gateway.",
     "keywords": [
       "rest api",
       "validator api"

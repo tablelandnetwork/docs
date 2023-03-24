@@ -2,13 +2,14 @@
 title: Using a local chain
 sidebar_label: Local node
 description: An overview of using a Hardhat node and a local Tableland instance.
-synopsis: Developing locally should happen as a step prior to deploying to any testnet and/or mainnet. Developers can use Local Tableland to accomplish this, which spins up a Hardhat node for a local Tableland node to use.
 keywords:
   - local tableland
   - hardhat
 ---
 
 import { ChainInfo } from '@site/src/components/SupportedChains'
+
+Developing locally should happen as a step prior to deploying to any testnet and/or mainnet. Developers can use Local Tableland to accomplish this, which spins up a Hardhat node for a local Tableland node to use.
 
 ## Overview
 

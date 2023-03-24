@@ -1,0 +1,33 @@
+{
+  "unversionedId": "playbooks/sql/create-a-table",
+  "id": "playbooks/sql/create-a-table",
+  "title": "Creating a table",
+  "description": "Define a set of columns, their types, and constraints for a table.",
+  "source": "@site/docs/playbooks/sql/create-a-table.md",
+  "sourceDirName": "playbooks/sql",
+  "slug": "/playbooks/sql/create-a-table",
+  "permalink": "/playbooks/sql/create-a-table",
+  "draft": false,
+  "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/playbooks/sql/create-a-table.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "title": "Creating a table",
+    "description": "Define a set of columns, their types, and constraints for a table.",
+    "keywords": [
+      "create a table"
+    ]
+  },
+  "sidebar": "playbooks",
+  "previous": {
+    "title": "Get started",
+    "permalink": "/playbooks/sql/"
+  },
+  "next": {
+    "title": "Writing data",
+    "permalink": "/playbooks/sql/writing-data"
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "unversionedId": "sdk/core/registry-api",
+  "id": "sdk/core/registry-api",
+  "title": "Registry API",
+  "description": "Use the Registry API for directly calling the Tableland registry smart contract.",
+  "source": "@site/docs/sdk/core/registry-api.md",
+  "sourceDirName": "sdk/core",
+  "slug": "/sdk/core/registry-api",
+  "permalink": "/sdk/core/registry-api",
+  "draft": false,
+  "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/sdk/core/registry-api.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "title": "Registry API",
+    "description": "Use the Registry API for directly calling the Tableland registry smart contract."
+  },
+  "sidebar": "sdk",
+  "previous": {
+    "title": "Validator API",
+    "permalink": "/sdk/core/validator-api"
+  },
+  "next": {
+    "title": "Timeouts",
+    "permalink": "/sdk/core/timeouts"
+  }
+}

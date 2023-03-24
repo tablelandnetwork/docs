@@ -17,7 +17,6 @@
   "frontMatter": {
     "title": "Overview",
     "description": "Use the Tableland SDK in your JavaScript / TypeScript projects, with full Cloudflare D1 client compatibility.",
-    "synopsis": "The Tableland SDK provides a minimal client that implements the Cloudflare D1 Database interface on top of the Tableland network. It can be used as a drop-in replacement to work with many community-created D1 tools and libraries. It also comes with a set of helper utilities for working with Tableland.",
     "keywords": [
       "sdk",
       "javascript",
@@ -28,7 +27,7 @@
   },
   "sidebar": "sdk",
   "next": {
-    "title": "Database API",
-    "permalink": "/sdk/database/"
+    "title": "Get started",
+    "permalink": "/sdk/core/"
   }
 }

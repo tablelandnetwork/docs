@@ -23,7 +23,7 @@
       "erc721"
     ]
   },
-  "sidebar": "getStarted",
+  "sidebar": "fundamentals",
   "previous": {
     "title": "Protocol design",
     "permalink": "/fundamentals/architecture/protocol-design"

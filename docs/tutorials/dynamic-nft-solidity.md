@@ -1,7 +1,6 @@
 ---
 title: Build a dynamic NFT in Solidity
 description: Create an on-chain game that uses SQL queries to create and populate a table of game state.
-synopsis: Tableland enables ownership & on-chain rules to dictate table state mutation. For every mutation, the data is accessible with off-chain queries that can be displayed in an interface, such as an NFT-based game board. This tutorial walks through the basics of Solidity ERC721s and an app with shared state.
 keywords:
   - tutorial
   - solidity
@@ -9,7 +8,7 @@ keywords:
   - p5.js
 ---
 
-import Link from "@docusaurus/Link";
+Tableland enables ownership & on-chain rules to dictate table state mutation. For every mutation, the data is accessible with off-chain queries that can be displayed in an interface, such as an NFT-based game board. This tutorial walks through the basics of Solidity ERC721s and an app with shared state.
 
 ## Overview
 
@@ -180,7 +179,7 @@ constructor(address registry) ERC721("Pixel", "ITM") {
 We handled a few steps here.
 
 1. We created global variables in our contract to track the `tableId` and final name. Table names are assigned on create time, so you’ll need to do a bit of string concatenation to get your final name.
-2. We added an `address` input to our `constructor` method. This is the address of the Tableland protocol on our current chain. You can fine those here: <Link to="/develop/reference/chain-contracts">currently supported chains</Link>
+2. We added an `address` input to our `constructor` method. This is the address of the Tableland protocol on our current chain. You can fine those here: [currently supported chains](/smart-contracts/contracts).
 3. Next, we connected to Tableland using the address provided above.
 4. We called the `createTable` method and gave it a table prefix ("_canvas_") and a schema, just like any CREATE table command in SQL: `id int, external_link text, x int, y int`. Schemas match our SQL spec.
 

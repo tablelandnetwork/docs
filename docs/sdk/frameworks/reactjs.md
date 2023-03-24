@@ -1,12 +1,15 @@
 ---
 title: Use Tableland with React
 sidebar_label: React
-description: Quickly set up a React application with Tableland by setting up an account and database connection.
+description: Quickly set up a React application with Tableland via an account and database connection.
 keywords:
   - quickstart
   - quickstarts
   - react
 ---
+
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
 
 ## 1. Installation & setup
 
@@ -384,7 +387,7 @@ async function connectSigner() {
   // Import the private key, available in `.env. using `REACT_APP` prefix.
   const privateKey = process.env.REACT_APP_PRIVATE_KEY;
   // Define the signer and connect to the provider.
-  const wallet = new Wallet(privateKey!);
+  const wallet = new Wallet(privateKey);
   // Replace with any provider URL (e.g., Alchemy, Infura, etc.).
   const provider = getDefaultProvider("http://127.0.0.1:8545");
   const signer = wallet.connect(provider);

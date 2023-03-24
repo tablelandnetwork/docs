@@ -28,7 +28,7 @@
     "permalink": "/validator-api/"
   },
   "next": {
-    "title": "Errors",
-    "permalink": "/validator-api/errors"
+    "title": "Query formatting",
+    "permalink": "/validator-api/query-formatting"
   }
 }

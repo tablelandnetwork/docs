@@ -22,5 +22,14 @@
     "keywords": [
       "protocol"
     ]
+  },
+  "sidebar": "concepts",
+  "previous": {
+    "title": "Mutating data",
+    "permalink": "/concepts/sql/mutating-data"
+  },
+  "next": {
+    "title": "UPDATE",
+    "permalink": "/concepts/sql/update"
   }
 }

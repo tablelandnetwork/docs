@@ -2,7 +2,7 @@
   "unversionedId": "sdk/errors",
   "id": "sdk/errors",
   "title": "Errors",
-  "description": "Mutate your table values with additional access control.",
+  "description": "Review SDK error handling setup and what types of messages will bubble up.",
   "source": "@site/docs/sdk/errors.md",
   "sourceDirName": "sdk",
   "slug": "/sdk/errors",
@@ -16,17 +16,16 @@
   "formattedLastUpdatedAt": "Oct 14, 2018",
   "frontMatter": {
     "title": "Errors",
-    "description": "Mutate your table values with additional access control.",
-    "synopsis": "Table values can be mutated by the table owner or provisioned actors.",
+    "description": "Review SDK error handling setup and what types of messages will bubble up.",
     "keywords": [
-      "write to table",
-      "mutate table"
+      "error",
+      "error handling"
     ]
   },
   "sidebar": "sdk",
   "previous": {
-    "title": "Registry API",
-    "permalink": "/sdk/registry/"
+    "title": "ORM support",
+    "permalink": "/sdk/core/orm"
   },
   "next": {
     "title": "FAQs",

@@ -17,7 +17,6 @@
   "frontMatter": {
     "title": "Creating a dynamic NFT with p5.js",
     "description": "Use p5.js to render data from an NFT that holds global game state in a table.",
-    "synopsis": "We want to now write a simple web app that will be used to dynamically render a single NFT in our collection. When the NFT renders, the web app should check the requested token, grab the latest data from Tableland, and render some dynamic content.",
     "keywords": [
       "tutorial",
       "solidity",
@@ -30,7 +29,7 @@
     "permalink": "/tutorials/dynamic-nft-solidity"
   },
   "next": {
-    "title": "JSON files to NFT metadata",
-    "permalink": "/tutorials/deploying-nft-polygon"
+    "title": "Building a game on Arbitrum",
+    "permalink": "/tutorials/building-games-on-arbitrum"
   }
 }

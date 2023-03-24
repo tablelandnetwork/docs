@@ -1,16 +1,16 @@
 ---
 title: Protocol design
-description: The Tableland protocol operates as a data scaling solution with chain-driven database actions.
+description: The Tableland protocol operates as a data scaling solution using chain-powered database mutations and a parallel adjacent network.
 keywords:
-  - open beta
-  - production
+  - protocol
+  - protocol design
 ---
 
 import { ChainsList } from '@site/src/components/SupportedChains'
 
 ## Background
 
-Tableland is a permissionless web3 database. It sits on top of Ethereum and Layer 2 (L2) chains but is purely focused on data storage and retrieval. Namely, Tableland helps scale smart contract storage by offloading data accessibility to a decentralized network that executes database instructions, signaled by on-chain interactions and access policies. The SQL execution summary is stored a chain's transaction event logs (an inexpensive form of chain-secured storage).
+Tableland is a permissionless web3 database. It sits alongside Ethereum and Layer 2 (L2) chains but is purely focused on data storage and retrieval. Namely, Tableland helps scale smart contract storage by offloading data accessibility to a decentralized network that executes database instructions, signaled by on-chain interactions and access policies. The SQL execution summary is stored a chain's transaction event logs (an inexpensive form of chain-secured storage).
 
 This design makes it more cost effective to store data in a web3 native solution while allowing it to be queryable with SQL. Ownership is also an inherent feature due to ERC721 token-based tables. Instead of running your own siloed database, you share a network of free flowing data but _own_ your data and can fully control the table's representation. All data is openly readable to enable full composability and interoperability between your application and anyone else's data stored on Tableland.
 
@@ -22,11 +22,11 @@ Tableland has _registry_ contracts deployed on each chain (currently live on <Ch
 - **Off-chain**: Statements for table creates and writes are materialized by Tableland validator nodes—these nodes simply watch the registry and mutate a local SQLite database with the database instructions. Here, the _data is accessible_ using SQL read queries at an HTTPS gateway.
 
 ```mermaid
-flowchart LR
+flowchart TB
 
 subgraph chain[On-chain]
 direction LR
-  A((EOA)) -- Create or write --> B(Tableland\n Registry\n)
+  A((EOA)) -- Create or write --> B(Tableland\n registry\n)
   A -- Calls --> C(Contract)
   C --> B
 end
@@ -35,19 +35,24 @@ subgraph offchain[Off-chain]
 direction BT
   subgraph tbl[Tableland]
   direction LR
-    subgraph node[Validator Node]
+    subgraph node[Validator node]
     direction LR
       D{{Event}} --Process--> E[(SQLite)]
     end
     F[/Gateway/]
   end
 
-  G(dapp)
-  G<-.Read data .->F --> node
+  direction RL
+  subgraph dapp[dapp]
+    H((User)) --> G(Frontend)
+    G-."Read data\n (SQL)".->F --> node
+    F-."Return data\n (JSON)".->G
+    end
 end
 
 chain--"Emit event\n (SQL)" -->offchain
 
+style offchain margin-bottom:10px;
 ```
 
 In other words, you can recreate a table's state by replaying all of the events at a chain's registry contract; this is how unstoppable networks are built on top of each other. As long as the host chain survives, the table's state can deterministically be collated. Keep in mind that table data is **not** accessible from _within_ smart contract calls—you can't query a table from a contract without using some off-chain [oracle](https://ethereum.org/en/developers/docs/oracles/)-like setup. Much like how smart contracts can't read transaction data, they also cannot read table data since [data is available](https://www.alchemy.com/overviews/data-availability-layer) in event logs. Thus, data accessibility is only possible using read queries directly to any Tableland node.
@@ -83,7 +88,7 @@ Perhaps, `0x1234` would like to provision access so that `0x5678` can also mutat
 flowchart LR
 subgraph Z["On-chain"]
 direction LR
-  A((0x1234)) -- \nCREATE TABLE --> B(Tableland\nRegistry)
+  A((0x1234)) -- \nCREATE TABLE --> B(Tableland\nregistry)
   A((0x1234)) -- \nGRANT 0x5678 --> B
   C((0x5678)) -- INSERT INTO --> B
   D((0x90ab)) -- INSERT INTO --> B
@@ -133,6 +138,6 @@ Tableland's core protocol is designed to extend and enhance EVM chain storage. W
 
 If you were to "leave" the data in event logs, you'd still run into issues when it comes to retrieving and making use of it. There is no statefulness to the table's data since its part of an append-only log, so there's not a whole lot of functionality without additional infrastructure. To efficiently operate on event-driven data that exists in logs, you still need some purpose-built layer, which is why indexing tools like Etherscan (centralized) and The Graph (decentralized) exist.
 
-Tableland takes a similar approach by adding dimensionality to chain-driven data. For example, the diagram above shows how some SQL events are emitted on-chain, and maybe some table's `data` is updated from `1` to `2`. Every transaction submitted and included in a block provides the exact order of database and underlying table operations. Without using additional infrastructure, there wouldn't be a great way to access `data` since it'd still be in flat logs.
+Tableland takes a similar approach by adding dimensionality to chain-driven data. For example, the diagram above shows how some SQL events are emitted on-chain, and maybe some table's `data` is updated from `1` to `2`. Every transaction submitted and included in a block provides the exact order of database and underlying table operations. Without using additional infrastructure, there wouldn't be a great way to access `data` since it'd still be in flat logs and require you determine the data's state on your own using all of the historical events.
 
-Think of Tableland, sort of, as a queryable cache for blockchain-powered data—or even a full index driven by on-chain actions, if designed in the correct way! Query, aggregate, and compose table data across any chain for truly multichain interoperable applications.
+Think of Tableland, sort of, as a queryable cache for blockchain-powered data. It's a way to access live state from what's happening on-chain—or even build a full index, if designed in the correct way! Query, aggregate, and compose table data across any chain and table for truly multichain interoperable applications.

@@ -5,7 +5,7 @@
  */
 export default {
   "title": "Tableland Docs",
-  "tagline": "Explore how to store & query data on Tableland—the decentralized SQL database.",
+  "tagline": "Explore how to store & query data on Tableland—the serverless database for web3 apps.",
   "url": "http://localhost:3000",
   "baseUrl": "/",
   "onBrokenLinks": "log",
@@ -150,15 +150,73 @@ export default {
           "position": "left"
         },
         {
-          "to": "https://console.tableland.xyz",
+          "to": "/",
           "position": "right",
-          "label": "Console"
+          "label": "Home",
+          "activeBaseRegex": "^/$"
         },
         {
-          "href": "https://github.com/tablelandnetwork/",
+          "label": "Learn",
           "position": "right",
-          "className": "header-github-link",
-          "aria-label": "GitHub repository"
+          "items": [
+            {
+              "type": "docSidebar",
+              "sidebarId": "fundamentals",
+              "label": "Fundamentals"
+            },
+            {
+              "type": "docSidebar",
+              "sidebarId": "playbooks",
+              "label": "Playbooks"
+            }
+          ]
+        },
+        {
+          "label": "Develop",
+          "position": "right",
+          "items": [
+            {
+              "type": "docSidebar",
+              "sidebarId": "sdk",
+              "label": "SDK"
+            },
+            {
+              "type": "docSidebar",
+              "sidebarId": "smartContracts",
+              "label": "Smart contracts"
+            },
+            {
+              "type": "docSidebar",
+              "sidebarId": "validatorApi",
+              "label": "Validator API"
+            },
+            {
+              "type": "docSidebar",
+              "sidebarId": "cli",
+              "label": "CLI"
+            },
+            {
+              "type": "docSidebar",
+              "sidebarId": "tutorials",
+              "label": "Tutorials"
+            }
+          ]
+        },
+        {
+          "label": "Protocol",
+          "position": "right",
+          "items": [
+            {
+              "type": "docSidebar",
+              "sidebarId": "validator",
+              "label": "Validator node"
+            },
+            {
+              "type": "docSidebar",
+              "sidebarId": "sqlSpecification",
+              "label": "SQL specification"
+            }
+          ]
         },
         {
           "type": "custom-ConnectWallet",

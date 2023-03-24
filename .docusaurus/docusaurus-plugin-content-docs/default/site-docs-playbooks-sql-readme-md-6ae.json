@@ -1,0 +1,33 @@
+{
+  "unversionedId": "playbooks/sql/README",
+  "id": "playbooks/sql/README",
+  "title": "Get started",
+  "description": "Dive into SQL and start using it to build web3 applications.",
+  "source": "@site/docs/playbooks/sql/README.md",
+  "sourceDirName": "playbooks/sql",
+  "slug": "/playbooks/sql/",
+  "permalink": "/playbooks/sql/",
+  "draft": false,
+  "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/playbooks/sql/README.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "title": "Get started",
+    "description": "Dive into SQL and start using it to build web3 applications.",
+    "keywords": [
+      "sql"
+    ]
+  },
+  "sidebar": "playbooks",
+  "previous": {
+    "title": "Overview",
+    "permalink": "/playbooks/"
+  },
+  "next": {
+    "title": "Creating a table",
+    "permalink": "/playbooks/sql/create"
+  }
+}

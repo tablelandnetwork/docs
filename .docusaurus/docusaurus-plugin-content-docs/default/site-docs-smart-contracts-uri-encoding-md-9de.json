@@ -1,0 +1,33 @@
+{
+  "unversionedId": "smart-contracts/uri-encoding",
+  "id": "smart-contracts/uri-encoding",
+  "title": "URI encoding",
+  "description": "SQL queries written at the query endpoint must have the proper encoding.",
+  "source": "@site/docs/smart-contracts/uri-encoding.md",
+  "sourceDirName": "smart-contracts",
+  "slug": "/smart-contracts/uri-encoding",
+  "permalink": "/smart-contracts/uri-encoding",
+  "draft": false,
+  "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/smart-contracts/uri-encoding.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "title": "URI encoding",
+    "description": "SQL queries written at the query endpoint must have the proper encoding.",
+    "keywords": [
+      "uri encoding"
+    ]
+  },
+  "sidebar": "smartContracts",
+  "previous": {
+    "title": "Solidity to SQL Types",
+    "permalink": "/smart-contracts/solidity-to-sql-types"
+  },
+  "next": {
+    "title": "Using Remix",
+    "permalink": "/smart-contracts/using-remix"
+  }
+}

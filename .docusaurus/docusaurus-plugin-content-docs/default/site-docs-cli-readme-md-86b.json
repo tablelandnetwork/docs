@@ -1,7 +1,7 @@
 {
   "unversionedId": "cli/README",
   "id": "cli/README",
-  "title": "CLI installation & setup",
+  "title": "Installation",
   "description": "Experiment with creating, editing, and querying tables from the comfort of the command line.",
   "source": "@site/docs/cli/README.md",
   "sourceDirName": "cli",
@@ -15,7 +15,7 @@
   "lastUpdatedAt": 1539502055,
   "formattedLastUpdatedAt": "Oct 14, 2018",
   "frontMatter": {
-    "title": "CLI installation & setup",
+    "title": "Installation",
     "description": "Experiment with creating, editing, and querying tables from the comfort of the command line.",
     "keywords": [
       "CLI",

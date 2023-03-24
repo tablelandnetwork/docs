@@ -1,14 +1,15 @@
 ---
 title: Introduction
 description: Figure out where to begin with Tableland, whether that's starting to build or figuring out how it all works.
-synopsis: Tableland is a web3 SQL database that can be used on EVM chains like Ethereum and Layer 2 (L2) solutions. It helps extend and enhance data storage while offloading accessibility to a decentralized network of validator nodes that watch the host chain for updates, which is where SQL data is made available. Developers can use Tableland to help scale, mutate, and effectively access chain-driven data—with on-chain rules and SQL.
 ---
 
 import { ChainsList } from '@site/src/components/SupportedChains'
 
+Tableland is a web3 SQL database that can be used on EVM chains like Ethereum and Layer 2 (L2) solutions. It helps extend and enhance data storage while offloading accessibility to a decentralized network of validator nodes that watch the host chain for updates, which is where SQL data is made available. Developers can use Tableland to help scale, mutate, and effectively access chain-driven data—including on-chain rules and identity—across <ChainsList type={'mainnets'} format={'string'} />.
+
 ## Get started
 
-If you're eager to get building and use the Tableland protocol (live on <ChainsList type={'mainnets'} format={'string'} />), you can dive right in with any of these [quickstarts](quickstarts):
+If you're eager to get building and use the Tableland protocol, you can dive right in with any of these [quickstarts](quickstarts):
 
 - **SDK**: use JavaScript or TypeScript in your web apps to create, write, and read web3 native data.
 - **Smart contracts**: create and mutate tables directly with Solidity.
@@ -28,8 +29,10 @@ Developers should still proceed with caution due to the nature of an open beta, 
 
 ## Learn
 
-Once you get up and running, it's ideal to understand the network interactions, considerations, and tradeoffs before building things out further. Check out these introductory resources to learn the very basics.
+It's ideal to understand the network interactions, considerations, and tradeoffs before building things out further. Check out these introductory resources to learn the very basics about the Tableland protocol:
 
 import DocCardList from '@theme/DocCardList';
 
 <DocCardList />
+
+Be sure to also review the [playbooks section about Tableland SQL](../playbooks), which describes how to use SQL and details some web3 constraints that are important to understand when writing queries. If you're new to Tableland, there are a lot terms used throughout the protocol and documentation. The [glossary](/fundamentals/about/glossary) provides a description of various terms, and the [general FAQs](/fundamentals/about/gneral-faqs) are high-level common questions & answers. Note that more specific FAQs are scattered about the docs that are located within a specific topic's documentation.

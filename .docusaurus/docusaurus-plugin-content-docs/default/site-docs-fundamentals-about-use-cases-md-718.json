@@ -19,18 +19,8 @@
     "title": "Use cases",
     "sidebar_position": 4,
     "description": "A series of general use cases to consider.",
-    "synopsis": "This page identifies some potential use cases. It is non-exhaustive but provides guidelines / considerations for where developers can use Tableland, and as always, consider the host chain as part of the use case criteria (e.g., Ethereum is more expensive to write to than an L2).",
     "keywords": [
       "use cases"
     ]
-  },
-  "sidebar": "getStarted",
-  "previous": {
-    "title": "Open beta",
-    "permalink": "/fundamentals/about/open-beta"
-  },
-  "next": {
-    "title": "Roadmap",
-    "permalink": "/fundamentals/about/roadmap"
   }
 }

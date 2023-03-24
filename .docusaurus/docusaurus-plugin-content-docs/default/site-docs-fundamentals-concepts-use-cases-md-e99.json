@@ -1,0 +1,35 @@
+{
+  "unversionedId": "fundamentals/concepts/use-cases",
+  "id": "fundamentals/concepts/use-cases",
+  "title": "Use cases",
+  "description": "A series of general use cases to consider.",
+  "source": "@site/docs/fundamentals/concepts/use-cases.md",
+  "sourceDirName": "fundamentals/concepts",
+  "slug": "/fundamentals/concepts/use-cases",
+  "permalink": "/fundamentals/concepts/use-cases",
+  "draft": false,
+  "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/fundamentals/concepts/use-cases.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "sidebarPosition": 4,
+  "frontMatter": {
+    "title": "Use cases",
+    "sidebar_position": 4,
+    "description": "A series of general use cases to consider.",
+    "keywords": [
+      "use cases"
+    ]
+  },
+  "sidebar": "fundamentals",
+  "previous": {
+    "title": "Local node",
+    "permalink": "/fundamentals/chains/local"
+  },
+  "next": {
+    "title": "NFT metadata",
+    "permalink": "/fundamentals/concepts/nft-metadata"
+  }
+}

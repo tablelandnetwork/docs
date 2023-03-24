@@ -9,7 +9,7 @@ keywords:
   - repository
 ---
 
-The following page highlights Tableland's GitHub repos and their purpose. If you're interested in [contributing](/contribute), free free to raise an issue or drop into our Discord to chat!
+The following page highlights [Tableland's GitHub repos](https://github.com/tablelandnetwork) and their purpose. If you're interested in [contributing](/contribute), free free to raise an issue or drop into our Discord to chat!
 
 | Name                | Link                                                  | Description                                                        |
 | ------------------- | ----------------------------------------------------- | ------------------------------------------------------------------ |

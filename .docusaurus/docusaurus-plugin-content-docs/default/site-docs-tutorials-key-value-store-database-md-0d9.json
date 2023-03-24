@@ -1,0 +1,26 @@
+{
+  "unversionedId": "tutorials/key-value-store-database",
+  "id": "tutorials/key-value-store-database",
+  "title": "Key-value store database that is an NFT",
+  "description": "Create a key-value store database that is an NFT",
+  "source": "@site/docs/tutorials/key-value-store-database.md",
+  "sourceDirName": "tutorials",
+  "slug": "/tutorials/key-value-store-database",
+  "permalink": "/tutorials/key-value-store-database",
+  "draft": false,
+  "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/tutorials/key-value-store-database.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "title": "Key-value store database that is an NFT",
+    "description": "Create a key-value store database that is an NFT",
+    "keywords": [
+      "key-value store",
+      "database",
+      "nft"
+    ]
+  }
+}

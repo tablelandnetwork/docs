@@ -17,13 +17,13 @@
   "frontMatter": {
     "title": "Choosing a chain",
     "description": "Selecting a base chain is an important step in any application’s design and, especially, for tables.",
-    "synopsis": "Chain selection makes a significant impact on a table’s usability. Choose a chain that’s too slow or expensive, and it won’t be feasible for table writes to occur frequently. Deploy a cross-chain data model for value layering purposes, and certain on-chain access control features are lost.",
     "keywords": [
       "evm",
-      "chains"
+      "chains",
+      "blockchains"
     ]
   },
-  "sidebar": "getStarted",
+  "sidebar": "fundamentals",
   "previous": {
     "title": "Gateway",
     "permalink": "/fundamentals/architecture/gateway"

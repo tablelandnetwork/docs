@@ -1,0 +1,24 @@
+{
+  "unversionedId": "smart-contracts/remix",
+  "id": "smart-contracts/remix",
+  "title": "Using Remix",
+  "description": "Remix is an online IDE that makes it easy to tinker with and deploy smart contracts.",
+  "source": "@site/docs/smart-contracts/remix.md",
+  "sourceDirName": "smart-contracts",
+  "slug": "/smart-contracts/remix",
+  "permalink": "/smart-contracts/remix",
+  "draft": false,
+  "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/smart-contracts/remix.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "title": "Using Remix",
+    "description": "Remix is an online IDE that makes it easy to tinker with and deploy smart contracts.",
+    "keywords": [
+      "remix"
+    ]
+  }
+}

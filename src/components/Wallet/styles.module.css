@@ -2,7 +2,7 @@
   width: 6rem;
 }
 
-@media (max-width: 997px) {
+@media (max-width: 996px) {
   .profileBtn {
     display: none;
   }

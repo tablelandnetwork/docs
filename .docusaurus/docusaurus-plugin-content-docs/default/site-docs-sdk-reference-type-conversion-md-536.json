@@ -1,0 +1,24 @@
+{
+  "unversionedId": "sdk/reference/type-conversion",
+  "id": "sdk/reference/type-conversion",
+  "title": "Type conversion",
+  "description": "Understand how JavaScript and SQL types should align.",
+  "source": "@site/docs/sdk/reference/type-conversion.md",
+  "sourceDirName": "sdk/reference",
+  "slug": "/sdk/reference/type-conversion",
+  "permalink": "/sdk/reference/type-conversion",
+  "draft": false,
+  "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/sdk/reference/type-conversion.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "title": "Type conversion",
+    "description": "Understand how JavaScript and SQL types should align.",
+    "keywords": [
+      "javascript types"
+    ]
+  }
+}

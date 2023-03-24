@@ -19,7 +19,7 @@
     "sidebar_label": "CLI",
     "description": "Learn how to create a table, add some sample data, and query the data using the CLI."
   },
-  "sidebar": "getStarted",
+  "sidebar": "fundamentals",
   "previous": {
     "title": "Smart contracts",
     "permalink": "/fundamentals/quickstarts/smart-contract-quickstart"

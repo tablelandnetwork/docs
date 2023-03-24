@@ -1,0 +1,33 @@
+{
+  "unversionedId": "playbooks/sql/key-value",
+  "id": "playbooks/sql/key-value",
+  "title": "Key-value store",
+  "description": "Store arbitrary key-value data in a table.",
+  "source": "@site/docs/playbooks/sql/key-value.md",
+  "sourceDirName": "playbooks/sql",
+  "slug": "/playbooks/sql/key-value",
+  "permalink": "/playbooks/sql/key-value",
+  "draft": false,
+  "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/playbooks/sql/key-value.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "title": "Key-value store",
+    "description": "Store arbitrary key-value data in a table.",
+    "keywords": [
+      "key value store"
+    ]
+  },
+  "sidebar": "playbooks",
+  "previous": {
+    "title": "NFT metadata",
+    "permalink": "/playbooks/sql/nft-metadata"
+  },
+  "next": {
+    "title": "URI encoding",
+    "permalink": "/playbooks/related/uri-encoding"
+  }
+}

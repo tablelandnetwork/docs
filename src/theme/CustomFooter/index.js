@@ -4,7 +4,13 @@ import Link from "@docusaurus/Link";
 import NewsletterForm from "@theme/CustomFooter/NewsletterForm";
 import { useColorMode, useThemeConfig } from "@docusaurus/theme-common";
 import ColorModeToggle from "@theme/ColorModeToggle";
-import { FaTwitter, FaDiscord, FaYoutube, FaHandshake } from "react-icons/fa";
+import {
+  FaTwitter,
+  FaDiscord,
+  FaYoutube,
+  FaHandshake,
+  FaGithub,
+} from "react-icons/fa";
 import styles from "./styles.module.css";
 
 const links = [
@@ -104,16 +110,16 @@ export default function CustomFooter() {
                         onChange={setColorMode}
                       />
                     </li>
-                    {/* <li className="footer__item">
+                    <li className="footer__item">
                       <div>
                         <Link
-                          to="https://twitter.com/tableland__"
+                          to="https://github.com/tablelandnetwork"
                           className={clsx("clean-btn", styles.footerIconRight)}
                         >
-                          <FaTwitter size={18} />
+                          <FaGithub size={18} />
                         </Link>
                       </div>
-                    </li> */}
+                    </li>
                   </ul>
                 </div>
               </div>

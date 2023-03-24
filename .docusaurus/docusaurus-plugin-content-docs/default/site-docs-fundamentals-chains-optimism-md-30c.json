@@ -17,12 +17,11 @@
   "frontMatter": {
     "title": "Optimism",
     "description": "An overview of using Optimism with Tableland.",
-    "synopsis": "Optimism is one of the EVM-compatible Layer 2 solutions that Tableland currently supports. Check out the overview of what this network is and relevant information when using it.",
     "keywords": [
       "optimism"
     ]
   },
-  "sidebar": "getStarted",
+  "sidebar": "fundamentals",
   "previous": {
     "title": "Arbitrum",
     "permalink": "/fundamentals/chains/arbitrum"

@@ -18,7 +18,6 @@
     "title": "Dynamic NFT with Chainlink Automation",
     "sidebar_label": "Dynamic NFT with Chainlink",
     "description": "Leverage Chainlink for automated NFT mutations.",
-    "synopsis": "The Chainlink network can help make autonomous on-chain calls and enable truly dynamic NFTs. All of the logic can be created with smart contracts and registered in the Chainlink automation portal, enabling dynamic NFTs using on-chain logic, only.",
     "keywords": [
       "chainlink",
       "dynamic nft"
@@ -26,11 +25,11 @@
   },
   "sidebar": "tutorials",
   "previous": {
-    "title": "JSON files to NFT metadata",
-    "permalink": "/tutorials/deploying-nft-polygon"
+    "title": "Building a game on Arbitrum",
+    "permalink": "/tutorials/building-games-on-arbitrum"
   },
   "next": {
-    "title": "Table reads with Chainlink + Arbitrum",
-    "permalink": "/tutorials/table-reads-chainlink"
+    "title": "Building a Data DAO",
+    "permalink": "/tutorials/data-dao-polygon"
   }
 }

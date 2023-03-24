@@ -1,0 +1,32 @@
+{
+  "unversionedId": "playbooks/sql/sql-faqs",
+  "id": "playbooks/sql/sql-faqs",
+  "title": "SQL FAQs",
+  "description": "Check out helpful pointers when dealing with SQL.",
+  "source": "@site/docs/playbooks/sql/sql-faqs.md",
+  "sourceDirName": "playbooks/sql",
+  "slug": "/playbooks/sql/sql-faqs",
+  "permalink": "/playbooks/sql/sql-faqs",
+  "draft": false,
+  "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/playbooks/sql/sql-faqs.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "title": "SQL FAQs",
+    "sidebar_label": "FAQs",
+    "description": "Check out helpful pointers when dealing with SQL.",
+    "keywords": [
+      "grant",
+      "revoke",
+      "access control"
+    ]
+  },
+  "sidebar": "playbooks",
+  "previous": {
+    "title": "Key-value store",
+    "permalink": "/playbooks/walkthroughs/key-value"
+  }
+}

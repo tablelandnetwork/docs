@@ -1,6 +1,11 @@
 .youtubeEmbed {
-  padding-top: 56.25%;
   position: relative;
+  width: 75%;
+  margin: 20px auto;
+}
+.youtubeEmbed div {
+  position: relative;
+  padding: 0% 0% 56.25%; /* 16:9 ratio */
 }
 
 .youtubeEmbed iframe {
@@ -9,4 +14,5 @@
   left: 0;
   width: 100%;
   height: 100%;
+  border: 0;
 }

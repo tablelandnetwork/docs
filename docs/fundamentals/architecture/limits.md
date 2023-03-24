@@ -1,13 +1,15 @@
 ---
 title: Limits
-description: A listing of the table/data limits and smart contract deployment locations on supported chains.
-synopsis: Since Tableland is still in open beta, each table is limited to the following constraints while the full production network is further clarified. These are temporary limits while the production mainnet is further researched.
+description: A listing of table, data, and query limits.
 keywords:
   - limits
   - cell limit
   - row limit
   - column limit
+  - data limit
 ---
+
+Since Tableland is still in open beta, each table is limited to the following constraints while the full production network is further clarified. These are temporary limits while the production mainnet is further researched.
 
 <div className="row margin-bottom--lg">
 <div className="col">
@@ -64,9 +66,9 @@ When a table is created or written to, there will be a "lag" between calling the
 
 **All table reads** must happen through an off-chain interaction using an unauthenticated REST API call to a Tableland validator node's gateway.
 
-The TL;DR is that table _reads_ directly access the Tableland network, and mutating database instructions (_create_ & _write_ transactions) are on-chain actions. You can make read queries at a gateway, such as the one hosted by the core Tableland team. For more information, see the docs on [gateways](gateway).
+The TL;DR is that table _reads_ directly access the Tableland network, and mutating database instructions (_create_ & _write_ transactions) are on-chain actions. You can make read queries at a gateway, such as the one hosted by the core Tableland team. For more information, see the docs on [gateways](/fundamentals/archiceture/gateway).
 
-:::tip
+:::note
 **It is not possible** for a smart contract to read data from a table created in Tableland. Using an oracle or some off-chain logic to write data back on chain (e.g., inbox-outbox type of setup) is an alternative.
 
 :::

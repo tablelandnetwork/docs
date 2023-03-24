@@ -1,8 +1,6 @@
 ---
 title: Open beta
-sidebar_position: 5
 description: Use Tableland on testnet and mainnet chains while the protocol is in development.
-synopsis: The Tableland network is actively being developed and plans to launch a production (mainnet) in 2024. Prior to that launch, the protocol can still be used on supported chains, but its important to note what's in store in the future.
 keywords:
   - open beta
   - production

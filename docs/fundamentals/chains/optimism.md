@@ -1,12 +1,13 @@
 ---
 title: Optimism
 description: An overview of using Optimism with Tableland.
-synopsis: Optimism is one of the EVM-compatible Layer 2 solutions that Tableland currently supports. Check out the overview of what this network is and relevant information when using it.
 keywords:
   - optimism
 ---
 
 import { ChainInfo } from '@site/src/components/SupportedChains'
+
+Optimism is one of the EVM-compatible Layer 2 solutions that Tableland currently supports. Check out the overview of what this network is and relevant information when using it.
 
 ## Overview
 

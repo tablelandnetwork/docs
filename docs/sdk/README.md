@@ -1,7 +1,6 @@
 ---
 title: Overview
 description: Use the Tableland SDK in your JavaScript / TypeScript projects, with full Cloudflare D1 client compatibility.
-synopsis: The Tableland SDK provides a minimal client that implements the Cloudflare D1 Database interface on top of the Tableland network. It can be used as a drop-in replacement to work with many community-created D1 tools and libraries. It also comes with a set of helper utilities for working with Tableland.
 keywords:
   - sdk
   - javascript
@@ -10,7 +9,11 @@ keywords:
   - mobile app
 ---
 
-The `@tableland/sdk` comes with a few APIs: a "primary" [Cloudflare D1 client compatible](https://developers.cloudflare.com/d1/platform/client-api/) API for [`Database`](database) connections, and two additional "secondary" APIs ([`Validator`](validator) and [`Registry`](registry)) that are unique to Tableland operations. Generally, users will leverage the primary database API for typical SQL operations, and the secondary APIs are useful when needing to interact directly with a Tableland Validator node or directly calling Tableland’s smart contracts (on-chain access control, direct contract calls, etc.).
+The Tableland SDK provides a minimal client that implements the Cloudflare D1 Database interface on top of the Tableland network. It can be used as a drop-in replacement to work with many community-created D1 tools and libraries. It also comes with a set of helper utilities for working with Tableland.
+
+## Synopsis
+
+The `@tableland/sdk` comes with a few APIs: a "primary" [Cloudflare D1 client compatible](https://developers.cloudflare.com/d1/platform/client-api/) API for [`Database`](core) connections, and two additional "secondary" APIs ([`Validator`](core/validator-api) and [`Registry`](core/registry-api)) that are unique to Tableland operations. Generally, users will leverage the primary database API for typical SQL operations, and the secondary APIs are useful when needing to interact directly with a Tableland Validator node or directly calling Tableland’s smart contracts (on-chain access control, direct contract calls, etc.).
 
 ## Chains
 

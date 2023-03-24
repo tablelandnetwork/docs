@@ -8,6 +8,9 @@ keywords:
   - react
 ---
 
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+
 One great library to use in React apps is [wagmi](https://wagmi.sh/). It offers a very straightforward way to connect a user's wallet and access account information using React hooks. Start by installing wagmi in your React app, and then create and connect to a client.
 
 ## 1. Installation & setup

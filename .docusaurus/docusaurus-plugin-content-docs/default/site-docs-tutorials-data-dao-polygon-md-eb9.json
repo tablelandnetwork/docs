@@ -1,0 +1,35 @@
+{
+  "unversionedId": "tutorials/data-dao-polygon",
+  "id": "tutorials/data-dao-polygon",
+  "title": "Building a Data DAO on Polygon",
+  "description": "Create a DAO that mints Tableland tables and makes them mutable only through successful DAO votes.",
+  "source": "@site/docs/tutorials/data-dao-polygon.md",
+  "sourceDirName": "tutorials",
+  "slug": "/tutorials/data-dao-polygon",
+  "permalink": "/tutorials/data-dao-polygon",
+  "draft": false,
+  "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/tutorials/data-dao-polygon.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "title": "Building a Data DAO on Polygon",
+    "sidebar_label": "Building a Data DAO",
+    "description": "Create a DAO that mints Tableland tables and makes them mutable only through successful DAO votes.",
+    "keywords": [
+      "polygon",
+      "data dao"
+    ]
+  },
+  "sidebar": "tutorials",
+  "previous": {
+    "title": "Dynamic NFT with Chainlink",
+    "permalink": "/tutorials/dynamic-nft-chainlink"
+  },
+  "next": {
+    "title": "Key-value store as NFT",
+    "permalink": "/tutorials/key-value-store-nft"
+  }
+}

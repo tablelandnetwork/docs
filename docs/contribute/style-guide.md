@@ -1,7 +1,6 @@
 ---
 title: Style guide
 description: Learn the ins and outs of contributing to the Tableland docs site.
-synopsis: The docs site is built using Docusaurus, a static site generator developed by Meta that is specifically designed for documentation. It offers a number of features, including MDX support (embed JSX in markdown) and various content-friendly plugins. Please ensure you follow the guidelines on writing style as well.
 keywords:
   - docs
   - tableland
@@ -12,6 +11,8 @@ tags:
   - contributing
 ---
 
+The docs site is built using Docusaurus, a static site generator developed by Meta that is specifically designed for documentation. It offers a number of features, including MDX support (embed JSX in markdown) and various content-friendly plugins. Please ensure you follow the guidelines on writing style as well.
+
 ## Front matter
 
 Every markdown page should include [front matter](https://docusaurus.io/docs/next/markdown-features#front-matter) at the beginning of the document, which should be valid YAML and between triple dashed lines (`---`). This information is used in the content itself, page routes, and to generate site metadata (for [SEO](https://docusaurus.io/docs/next/seo)). Every page should include a `title`, `description`, and (often) `synopsis` since these are used when generating the page's content. For example, this page has the following front matter:
@@ -20,7 +21,6 @@ Every markdown page should include [front matter](https://docusaurus.io/docs/nex
 ---
 title: Style guide
 description: Learn the ins and outs of contributing to the Tableland docs site.
-synopsis: The docs site is built using Docusaurus, a static site generator developed by Meta that is specifically designed for documentation. It offers a number of features, including MDX support (embed JSX in markdown) and various content-friendly plugins. Please ensure you follow the guidelines on writing style as well.
 keywords:
   - docs
   - tableland
@@ -41,7 +41,6 @@ You'll notice only a few are commonly used, and the full list can be found [here
 | -------- | ----------- |
 | `title`  | The page's title gets automatically displayed in the content as a primary header at the top (`# Your Title`) and is also used in the page's metadata. It **should always** be included since this value is used in the sidebar as well as displayed at the top of the page. |
 | `description`| A brief about the page, kept to around 60 to 120 characters (a sentence). This **should always** be included since it is displayed on the page at the top (under the main title), and it is also used in page metadata.
-| `synopsis`| A summary about the page, kept to a few sentences (a paragraph). This **should almost always** be included since it is displayed on the page at the top (under the `description`) but it can be excluded, if needed. The content cannot contain line breaks (e.g., no bulleted lists) nor embedded links, so keep it to simple strings.
 | `keywords`| _(Optional)_ Keywords help with SEO and are part of the page's metadata. Simply add a bulleted list of keywords, or provide an array of comma-separated values (e.g., `keywords: [docs, tableland]`).
 | [`tags`](https://docusaurus.io/docs/next/create-doc#doc-tags)| _(Optional)_ Similarly, tags help with categorization and search within the site. Simply add a bulleted list of tags, or provide an array of comma-separated values (e.g., `tags: [docs, tableland]`). These are displayed at the bottom of each page, and viewing a grouping is possible by clicking on the tag or visiting the `/docs/tags` URI on the site.
 | `sidebar_label`| _(Optional)_ A page's `title` can have a different display value in the sidebar. For example, this page has a title of `How to contribute` but a `sidebar_label` of `Contributor guidelines`. Often, this field is used for long page titles that should be condensed within the sidebar section.
@@ -49,6 +48,7 @@ You'll notice only a few are commonly used, and the full list can be found [here
 | [`slug`](https://docusaurus.io/docs/next/create-doc#doc-urls)| _(Optional)_ The default slug will be the file path. For example, an `example` folder within the `docs` directory that contains `test.md` with have a slug `docs/example/test`. Instead, you can set a custom slug. If you set the `slug` to `my-new-slug`, the slug will now be `docs/example/my-new-slug` (`docs/my-new-slug`) or a specific name (`docs/specific-name/my-new-slug`). Generally, you can expect to use the default behavior.
 | `image`| _(Optional)_ A thumbnail image to be shown in social media cards. A default image is configured such that this is not required, unless desired by the page creator (e.g., a custom tutorial or a page with tailored imanges already present).
 | `hide_title`| _(Optional)_ A boolean value can be passed to hide the default `title`. This is only really used in case of an imported markdown file that begins with a `#`, which should then be used as the page's `title`. In other words, only use this if for some reason, you need to hide the first `#` of some imported markdown file.
+| `sidebar_position`| _(Optional)_ This should not be used in these docs because the sidebar ordering is managed in a `sidebars.js` configuration file. But, for any [autogenerated sidebars](/contribute#autogenerated), you can have the ordering defined in the front matter to ensure sidebar ordering is not simply alphatbetical filenames.
 
 ## Page headings
 
@@ -64,7 +64,7 @@ For most of the documentation, writers should address the user directly with (e.
 
 - Get to the point. Docs are meant to quickly explain how to do something.
 - The language should resemble your spoken voice and not sound robotic.
-- When in doubt, don't captitalize (i.e., sentence-style capitalization).
+- When in doubt, don't capitalize (i.e., sentence-style capitalization).
 - Use the [Oxford comma](https://en.wikipedia.org/wiki/Serial_comma).
 - End all sentences with a period; headings should not end in punctuation.
 - When using the em dash (—), don't put spaces around it but "connected" to the word(s) its between.
@@ -291,22 +291,50 @@ import TabItem from "@theme/TabItem";
 </Tabs>
 ```
 
-Which will then display:
+Notice how the content in each tab didn't have a language specified (the `TabItem`'s `value` has no impact on language styles). If you want to add a language type or use the `title` or line highlighting feature, you need to make the tabs wrap code snippets.
+
+````md
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+
+<Tabs>
+<TabItem value="esm" label="Node.js (import)" default>
+
+```js title="/src/components/Hello1.js"
+import abc from "abc";
+```
+
+</TabItem>
+<TabItem value="require" label="Node.js (require)">
+
+```js title="/src/components/Hello2.js"
+const abc = require("abc");
+```
+
+</TabItem>
+</Tabs>
+````
+
+Note that `Tabs` and `TabItems` can be a little picky with spacing and return lines, so if something isn't rendering as expected, this could be the issue.
 
 import Tabs from "@theme/Tabs";
 import TabItem from "@theme/TabItem";
 
 <Tabs>
-  <TabItem value="esm" label="Node.js (import)" default>
+<TabItem value="esm" label="Node.js (import)" default>
 
-    import abc from "abc";
+```js title="/src/components/Hello1.js"
+import abc from "abc";
+```
 
-  </TabItem>
-    <TabItem value="require" label="Node.js (require)">
+</TabItem>
+  <TabItem value="require" label="Node.js (require)">
 
-    const abc = require("abc");
+```js title="/src/components/Hello2.js"
+const abc = require("abc");
+```
 
-  </TabItem>
+</TabItem>
 </Tabs>
 
 You can alternatively pass `defaultValue` and an array of objects with keys `label` and `value` to `Tabs`:

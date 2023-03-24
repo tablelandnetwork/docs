@@ -18,10 +18,18 @@
     "title": "Local development & testing",
     "sidebar_label": "Local Tableland",
     "description": "Build with Local Tableland to quickly iterate with Tableland using a local environment.",
-    "synopsis": "Developers can leverage a local-only instance of the Tableland network that spins up a local Hardhat node in the process. This allows for quickly iterating while developing (create, write, and read local tables) and also allows for integrating Local Tableland into your testing flow.",
     "keywords": [
       "local tableland",
       "hardhat"
     ]
+  },
+  "sidebar": "home",
+  "previous": {
+    "title": "Overview",
+    "permalink": "/tutorials/"
+  },
+  "next": {
+    "title": "SQL specification",
+    "permalink": "/specs/sql/"
   }
 }

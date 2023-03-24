@@ -17,7 +17,6 @@
   "frontMatter": {
     "title": "Build a dynamic NFT in Solidity",
     "description": "Create an on-chain game that uses SQL queries to create and populate a table of game state.",
-    "synopsis": "Tableland enables ownership & on-chain rules to dictate table state mutation. For every mutation, the data is accessible with off-chain queries that can be displayed in an interface, such as an NFT-based game board. This tutorial walks through the basics of Solidity ERC721s and an app with shared state.",
     "keywords": [
       "tutorial",
       "solidity",

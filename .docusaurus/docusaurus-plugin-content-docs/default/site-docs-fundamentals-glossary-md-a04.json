@@ -1,0 +1,21 @@
+{
+  "unversionedId": "fundamentals/glossary",
+  "id": "fundamentals/glossary",
+  "title": "Taxonomy",
+  "description": "Get familiar with common words and phrases in web3, databases, and Tableland.",
+  "source": "@site/docs/fundamentals/glossary.md",
+  "sourceDirName": "fundamentals",
+  "slug": "/fundamentals/glossary",
+  "permalink": "/fundamentals/glossary",
+  "draft": false,
+  "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/fundamentals/glossary.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "title": "Taxonomy",
+    "description": "Get familiar with common words and phrases in web3, databases, and Tableland."
+  }
+}

@@ -21,14 +21,5 @@
     "keywords": [
       "legacy"
     ]
-  },
-  "sidebar": "sdk",
-  "previous": {
-    "title": "ORM support",
-    "permalink": "/sdk/database/orm"
-  },
-  "next": {
-    "title": "Validator API",
-    "permalink": "/sdk/validator/"
   }
 }

@@ -1,6 +1,6 @@
 ---
 title: On-Chain reads with Chainlink + Arbitrum
-sidebar_label: Table reads with Chainlink + Arbitrum
+sidebar_label: On-chain reads with Chainlink
 description: Use Chainlink’s node operator network to get table state back on-chain to the Arbitrum network.
 keywords:
   - chainlink
@@ -157,7 +157,7 @@ contract TableState is ChainlinkClient, ConfirmedOwner {
 
 A number of helper methods are included for setting the request URL, path, fee, and oracle:
 
-- `setRequestUrl` ⇒ Set the `url` to some HTTPS URL (e.g., the one [noted above](On-Chain%20Reads%20with%20Chainlink%20+%20Arbitrum%20550d4878facc467d860dca6703919349.md) for the Tableland `healthbot` table).
+- `setRequestUrl` ⇒ Set the `url` to some HTTPS URL (e.g., the one noted above) for the Tableland `healthbot` table).
 - setRequestPath ⇒ Set the `path` to a single word response that maps to a `uint256`.
 - `setOracle` ⇒ Set the oracle contract address by which to make the off-chain request.
 - `setJobId` ⇒ Set the `_jobId` as specified by the oracle.

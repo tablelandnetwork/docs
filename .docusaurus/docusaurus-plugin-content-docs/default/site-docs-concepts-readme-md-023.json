@@ -21,5 +21,10 @@
     "keywords": [
       "protocol"
     ]
+  },
+  "sidebar": "concepts",
+  "next": {
+    "title": "Quick start",
+    "permalink": "/concepts/sql/"
   }
 }

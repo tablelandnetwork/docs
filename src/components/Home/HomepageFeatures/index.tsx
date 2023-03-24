@@ -58,8 +58,8 @@ const FeatureList: FeatureItem[] = [
         <Link to="https://opensea.io/collection/tableland-tables">
           ERC721 tokens{" "}
         </Link>
-        by a Tableland registry smart contract on each chain, so table ownership
-        and contract-defined mutability controllers (
+        by a Tableland registry smart contract on each chain, so identity,
+        ownership, and contract-defined mutability controllers (
         <Link to="https://en.wikipedia.org/wiki/Access-control_list">ACLs</Link>
         ) enable adaptable on-chain workflows for collaborative data.
       </>
@@ -70,9 +70,9 @@ const FeatureList: FeatureItem[] = [
     icon: <FaConnectdevelop size={30} />,
     description: (
       <>
-        Develop using the JavaScript / TypeScript SDK, REST API, CLI tool, or
-        purely smart contracts—and even choose to run your own Tableland
-        validator node (local, testnet, or mainnet) with relatively light
+        Develop using the JavaScript / TypeScript SDK, smart contracts, CLI
+        tool, or REST API—and even choose to run your own Tableland validator
+        node (for local, testnet, or mainnet chains) with relatively light
         hardware and setup requirements.
       </>
     ),
@@ -90,7 +90,7 @@ const BuildList: ProductItem[] = [
       </>
     ),
 
-    url: "sdk/getting-started",
+    url: "sdk",
   },
   {
     name: "Smart contracts",
@@ -99,14 +99,7 @@ const BuildList: ProductItem[] = [
       <>Develop and interact with the registry using smart contracts</>
     ),
 
-    url: "smart-contracts/getting-started",
-  },
-  {
-    name: "CLI",
-    icon: <FaTerminal size={30} />,
-    description: <>CLI & shell to use Tableland from the command line</>,
-
-    url: "cli/getting-started",
+    url: "smart-contracts",
   },
   {
     name: "Validator API",
@@ -117,14 +110,20 @@ const BuildList: ProductItem[] = [
       </>
     ),
 
-    url: "api/README",
+    url: "validator-api",
+  },
+  {
+    name: "CLI",
+    icon: <FaTerminal size={30} />,
+    description: <>CLI & shell to use Tableland from the command line</>,
+
+    url: "cli",
   },
   {
     name: "Validator node",
     icon: <GoDatabase size={30} />,
     description: <>Run your own Tableland node (written in Go) using Docker</>,
-
-    url: "https://github.com/tablelandnetwork/go-tableland",
+    url: "validator",
   },
 ];
 
@@ -179,7 +178,7 @@ const LearnList: ProductItem[] = [
     name: "Tableland protocol",
     icon: <GiWavyChains size={30} />,
     description: <>Understand what Tableland is and how it works</>,
-    url: "about/tableland/what-is-tableland",
+    url: "fundamentals/what-is-tableland",
   },
   {
     name: "SQL",
@@ -187,7 +186,7 @@ const LearnList: ProductItem[] = [
     description: (
       <>Get to know SQLite—the query language that drives the protocol</>
     ),
-    url: "about/sql/what-is-sql",
+    url: "playbooks",
   },
   {
     name: "Use cases",
@@ -196,14 +195,14 @@ const LearnList: ProductItem[] = [
       <>Common ways and starter ideas for when to use the protocol</>
     ),
 
-    url: "tutorials/overview",
+    url: "fundamentals/about/use-cases",
   },
   {
     name: "Tutorials",
     icon: <AiOutlineBuild size={30} />,
     description: <>Guides that showcase how to build with Tableland</>,
 
-    url: "tutorials/overview",
+    url: "tutorials",
   },
   {
     name: "Example apps",

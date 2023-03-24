@@ -22,5 +22,14 @@
     "keywords": [
       "protocol"
     ]
+  },
+  "sidebar": "concepts",
+  "previous": {
+    "title": "Reading table data",
+    "permalink": "/concepts/sql/read"
+  },
+  "next": {
+    "title": "Auto-incrementing",
+    "permalink": "/concepts/sql/incrementing-values"
   }
 }

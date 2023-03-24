@@ -1,0 +1,36 @@
+{
+  "unversionedId": "playbooks/sql/access-control",
+  "id": "playbooks/sql/access-control",
+  "title": "Grant & revoke access",
+  "description": "Grant or revoke access to table writes using SQL statements.",
+  "source": "@site/docs/playbooks/sql/access-control.md",
+  "sourceDirName": "playbooks/sql",
+  "slug": "/playbooks/sql/access-control",
+  "permalink": "/playbooks/sql/access-control",
+  "draft": false,
+  "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/playbooks/sql/access-control.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "title": "Grant & revoke access",
+    "sidebar_label": "Access control",
+    "description": "Grant or revoke access to table writes using SQL statements.",
+    "keywords": [
+      "grant",
+      "revoke",
+      "access control"
+    ]
+  },
+  "sidebar": "playbooks",
+  "previous": {
+    "title": "SQL functions",
+    "permalink": "/playbooks/sql/functions"
+  },
+  "next": {
+    "title": "Auto-incrementing",
+    "permalink": "/playbooks/sql/incrementing-values"
+  }
+}

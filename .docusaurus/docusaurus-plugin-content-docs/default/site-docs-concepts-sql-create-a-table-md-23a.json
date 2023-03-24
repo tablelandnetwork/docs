@@ -21,5 +21,14 @@
     "keywords": [
       "protocol"
     ]
+  },
+  "sidebar": "concepts",
+  "previous": {
+    "title": "Quick start",
+    "permalink": "/concepts/sql/"
+  },
+  "next": {
+    "title": "Mutating data",
+    "permalink": "/concepts/sql/mutating-data"
   }
 }

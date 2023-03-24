@@ -18,7 +18,7 @@
     "title": "What is Tableland?",
     "description": "A brief overview of what the Tableland network is and how it works."
   },
-  "sidebar": "getStarted",
+  "sidebar": "fundamentals",
   "previous": {
     "title": "Introduction",
     "permalink": "/fundamentals/"

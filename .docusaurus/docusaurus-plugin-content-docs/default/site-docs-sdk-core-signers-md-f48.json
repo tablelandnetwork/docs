@@ -1,0 +1,34 @@
+{
+  "unversionedId": "sdk/core/signers",
+  "id": "sdk/core/signers",
+  "title": "Signers",
+  "description": "Access the Tableland network by first connecting to the base chain.",
+  "source": "@site/docs/sdk/core/signers.md",
+  "sourceDirName": "sdk/core",
+  "slug": "/sdk/core/signers",
+  "permalink": "/sdk/core/signers",
+  "draft": false,
+  "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/sdk/core/signers.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "title": "Signers",
+    "description": "Access the Tableland network by first connecting to the base chain.",
+    "keywords": [
+      "read table",
+      "SQL query"
+    ]
+  },
+  "sidebar": "sdk",
+  "previous": {
+    "title": "Get started",
+    "permalink": "/sdk/core/"
+  },
+  "next": {
+    "title": "Prepared statements",
+    "permalink": "/sdk/core/prepared-statements"
+  }
+}

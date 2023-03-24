@@ -1,0 +1,33 @@
+{
+  "unversionedId": "fundamentals/sql/create-a-table",
+  "id": "fundamentals/sql/create-a-table",
+  "title": "Create a table",
+  "description": "A how-to for creating a table with SQL.",
+  "source": "@site/docs/fundamentals/sql/create-a-table.md",
+  "sourceDirName": "fundamentals/sql",
+  "slug": "/fundamentals/sql/create-a-table",
+  "permalink": "/fundamentals/sql/create-a-table",
+  "draft": false,
+  "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/fundamentals/sql/create-a-table.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "title": "Create a table",
+    "description": "A how-to for creating a table with SQL.",
+    "keywords": [
+      "create a table"
+    ]
+  },
+  "sidebar": "fundamentals",
+  "previous": {
+    "title": "Get started",
+    "permalink": "/fundamentals/sql/"
+  },
+  "next": {
+    "title": "Mutating data",
+    "permalink": "/fundamentals/sql/mutating-data"
+  }
+}

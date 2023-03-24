@@ -1,0 +1,34 @@
+{
+  "unversionedId": "sdk/reference/orm",
+  "id": "sdk/reference/orm",
+  "title": "ORM support",
+  "description": "Simplify working with data and writing SQL statements using an Object-Relational Mapping (ORM) tool.",
+  "source": "@site/docs/sdk/reference/orm.md",
+  "sourceDirName": "sdk/reference",
+  "slug": "/sdk/reference/orm",
+  "permalink": "/sdk/reference/orm",
+  "draft": false,
+  "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/sdk/reference/orm.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "title": "ORM support",
+    "description": "Simplify working with data and writing SQL statements using an Object-Relational Mapping (ORM) tool.",
+    "keywords": [
+      "orm",
+      "object relational mapping"
+    ]
+  },
+  "sidebar": "sdk",
+  "previous": {
+    "title": "Errors",
+    "permalink": "/sdk/reference/errors"
+  },
+  "next": {
+    "title": "FAQs",
+    "permalink": "/sdk/reference/sdk-faqs"
+  }
+}

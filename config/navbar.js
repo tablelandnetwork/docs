@@ -21,15 +21,73 @@ const navbar = {
       position: "left",
     },
     {
-      to: "https://console.tableland.xyz",
+      to: "/",
       position: "right",
-      label: "Console",
+      label: "Home",
+      activeBaseRegex: "^/$", // Ensures the "Home" navbar item is only "active" when on `/` route
     },
     {
-      href: "https://github.com/tablelandnetwork/",
+      label: "Learn",
       position: "right",
-      className: "header-github-link",
-      "aria-label": "GitHub repository",
+      items: [
+        {
+          type: "docSidebar",
+          sidebarId: "fundamentals",
+          label: "Fundamentals",
+        },
+        {
+          type: "docSidebar",
+          sidebarId: "playbooks",
+          label: "Playbooks",
+        },
+      ],
+    },
+    {
+      label: "Develop",
+      position: "right",
+      items: [
+        {
+          type: "docSidebar",
+          sidebarId: "sdk",
+          label: "SDK",
+        },
+        {
+          type: "docSidebar",
+          sidebarId: "smartContracts",
+          label: "Smart contracts",
+        },
+        {
+          type: "docSidebar",
+          sidebarId: "validatorApi",
+          label: "Validator API",
+        },
+        {
+          type: "docSidebar",
+          sidebarId: "cli",
+          label: "CLI",
+        },
+        {
+          type: "docSidebar",
+          sidebarId: "tutorials",
+          label: "Tutorials",
+        },
+      ],
+    },
+    {
+      label: "Protocol",
+      position: "right",
+      items: [
+        {
+          type: "docSidebar",
+          sidebarId: "validator",
+          label: "Validator node",
+        },
+        {
+          type: "docSidebar",
+          sidebarId: "sqlSpecification",
+          label: "SQL specification",
+        },
+      ],
     },
     // This is a custom workaround detailed at:
     // https://github.com/facebook/docusaurus/issues/7227
@@ -38,18 +96,6 @@ const navbar = {
       type: "custom-ConnectWallet",
       position: "right",
     },
-    //   {
-    //     type: "docSidebar",
-    //     position: "left",
-    //     sidebarId: "develop",
-    //     label: "Develop",
-    //   },
-    //   {
-    //     type: "doc",
-    //     docId: "/category/tutorials",
-    //     position: "left",
-    //     label: "Tutorials",
-    //   },
     //   {
     //     label: "Community",
     //     position: "right",

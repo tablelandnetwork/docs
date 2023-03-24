@@ -1,0 +1,34 @@
+{
+  "unversionedId": "sdk/core/prepared-statements",
+  "id": "sdk/core/prepared-statements",
+  "title": "Prepared statements",
+  "description": "Use a single method for all table creates, reads, and writes.",
+  "source": "@site/docs/sdk/core/prepared-statements.md",
+  "sourceDirName": "sdk/core",
+  "slug": "/sdk/core/prepared-statements",
+  "permalink": "/sdk/core/prepared-statements",
+  "draft": false,
+  "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/sdk/core/prepared-statements.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "title": "Prepared statements",
+    "description": "Use a single method for all table creates, reads, and writes.",
+    "keywords": [
+      "prepare",
+      "prepared statements"
+    ]
+  },
+  "sidebar": "sdk",
+  "previous": {
+    "title": "Signers",
+    "permalink": "/sdk/core/signers"
+  },
+  "next": {
+    "title": "Query statement methods",
+    "permalink": "/sdk/core/query-statement-methods"
+  }
+}

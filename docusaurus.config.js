@@ -12,7 +12,7 @@ const navbar = require("./config/navbar");
 const config = {
   title: "Tableland Docs",
   tagline:
-    "Explore how to store & query data on Tableland—the decentralized SQL database.",
+    "Explore how to store & query data on Tableland—the serverless database for web3 apps.",
   url: "http://localhost:3000", // https://docs.tableland.xyz
   baseUrl: "/",
   onBrokenLinks: "log", // Or, could `throw`

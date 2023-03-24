@@ -1,0 +1,34 @@
+{
+  "unversionedId": "sdk/core/query-statement-methods",
+  "id": "sdk/core/query-statement-methods",
+  "title": "Query statement methods",
+  "description": "Mutate your table values with additional access control.",
+  "source": "@site/docs/sdk/core/query-statement-methods.md",
+  "sourceDirName": "sdk/core",
+  "slug": "/sdk/core/query-statement-methods",
+  "permalink": "/sdk/core/query-statement-methods",
+  "draft": false,
+  "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/sdk/core/query-statement-methods.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "title": "Query statement methods",
+    "description": "Mutate your table values with additional access control.",
+    "keywords": [
+      "write to table",
+      "mutate table"
+    ]
+  },
+  "sidebar": "sdk",
+  "previous": {
+    "title": "Prepared statements",
+    "permalink": "/sdk/core/prepared-statements"
+  },
+  "next": {
+    "title": "Batching",
+    "permalink": "/sdk/core/batching"
+  }
+}

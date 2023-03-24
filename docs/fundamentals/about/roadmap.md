@@ -2,11 +2,12 @@
 title: Vision & roadmap
 sidebar_label: Roadmap
 description: The protocol is still being developed and progressively decentralized.
-synopsis: Tableland's inception came in late 2021. It's consistently growing in terms of the core protocol itself and development activity on top of the protocol, and there is still plenty in store in the coming months and years.
 keywords:
   - roadmap
   - vision
 ---
+
+Tableland's inception came in late 2021. It's consistently growing in terms of the core protocol itself and development activity on top of the protocol, and there is still plenty in store in the coming months and years.
 
 ## Vision
 

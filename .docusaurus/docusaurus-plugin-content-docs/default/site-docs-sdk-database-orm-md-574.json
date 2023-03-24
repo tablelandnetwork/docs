@@ -28,7 +28,7 @@
     "permalink": "/sdk/database/timeouts"
   },
   "next": {
-    "title": "Legacy SDK",
-    "permalink": "/sdk/database/upgrading-from-legacy"
+    "title": "Validator API",
+    "permalink": "/sdk/validator/"
   }
 }

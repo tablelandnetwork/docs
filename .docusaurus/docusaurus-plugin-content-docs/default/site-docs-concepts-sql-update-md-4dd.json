@@ -22,5 +22,14 @@
     "keywords": [
       "protocol"
     ]
+  },
+  "sidebar": "concepts",
+  "previous": {
+    "title": "INSERT",
+    "permalink": "/concepts/sql/insert"
+  },
+  "next": {
+    "title": "UPSERT",
+    "permalink": "/concepts/sql/upsert"
   }
 }

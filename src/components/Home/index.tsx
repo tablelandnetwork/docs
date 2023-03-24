@@ -14,37 +14,38 @@ export default function Home(): JSX.Element {
         <div className="container">
           <div className="row">
             <h1 className="hero__title">Documentation</h1>
-            <p className="hero__subtitle">{siteConfig.tagline}</p>
+            <p className="hero__subtitle">{siteConfig.tagline}</p>{" "}
+            {/* See `docusaurus.config.js` and `tagline` */}
           </div>
           <div className="row row-landing margin-top--lg">
             <div className="col col--6 padding-left--none padding-right--none">
-              <h2>Supercharge your web3 data</h2>
+              <h2>Program your web3 data</h2>
               <p>
-                Build dynamic applications on your chain of choice by adding
-                Tableland to your stack, allowing developers to:
+                Build permissionless & dynamic applications on your blockchain
+                of choice by adding Tableland to your stack, allowing developers
+                to:
               </p>
               <ul>
                 <li>
-                  Stop storing data in smart contracts that doesn't belong
-                  there, and offload it to a decentralized database with native
-                  SQL queries & mutability.
+                  Use a decentralized relational database with SQL queries and
+                  mutability, powered by chain-driven data and web3 identity.
                 </li>
                 <li>
-                  Eliminate centralized server dependence, or complex
-                  decentralized storage workflows (static JSON files) without
-                  database features.
+                  Configure custom rules to control who or what can change
+                  certain data, such as gating with account addresses, token
+                  ownership, balances, or whatever on-chain logic you'd like.
                 </li>
                 <li>
-                  Use on-chain rules to control who or what can change certain
-                  table data, such as gating with NFT ownership or an account's
-                  balance.
+                  Reduce smart contract storage, simplify complex distributed
+                  file system workflows—both of which lack robust database
+                  features—and stop relying on centralized service providers.
                 </li>
               </ul>{" "}
               <p></p>
               <p>
-                Enhance data storage on Ethereum & EVM chains by creating,
-                writing to, and reading from tables using SQL. <b> Mutable</b>{" "}
-                data with <b>immutable</b> rules.
+                Scale data storage on Ethereum + EVM chains by creating,
+                writing, and reading data using SQL. <b> Mutable</b> data with{" "}
+                <b>immutable</b> rules.
               </p>
               <Link
                 className={clsx(

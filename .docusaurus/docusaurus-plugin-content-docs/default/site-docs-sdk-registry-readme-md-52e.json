@@ -2,7 +2,7 @@
   "unversionedId": "sdk/registry/README",
   "id": "sdk/registry/README",
   "title": "Registry API",
-  "description": "Learn how to create tables from the SDK.",
+  "description": "Use the Registry API for directly calling the Tableland registry smart contract.",
   "source": "@site/docs/sdk/registry/README.md",
   "sourceDirName": "sdk/registry",
   "slug": "/sdk/registry/",
@@ -16,10 +16,7 @@
   "formattedLastUpdatedAt": "Oct 14, 2018",
   "frontMatter": {
     "title": "Registry API",
-    "description": "Learn how to create tables from the SDK.",
-    "keywords": [
-      "create table"
-    ]
+    "description": "Use the Registry API for directly calling the Tableland registry smart contract."
   },
   "sidebar": "sdk",
   "previous": {

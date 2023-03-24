@@ -1,5 +1,5 @@
 ---
-title: CLI installation & setup
+title: Installation
 description: Experiment with creating, editing, and querying tables from the comfort of the command line.
 keywords:
   - CLI

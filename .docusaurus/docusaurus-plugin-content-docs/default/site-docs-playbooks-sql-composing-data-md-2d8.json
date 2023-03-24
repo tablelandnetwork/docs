@@ -1,0 +1,35 @@
+{
+  "unversionedId": "playbooks/sql/composing-data",
+  "id": "playbooks/sql/composing-data",
+  "title": "Composing data across tables",
+  "description": "Extract data across multiple tables by joining them together.",
+  "source": "@site/docs/playbooks/sql/composing-data.md",
+  "sourceDirName": "playbooks/sql",
+  "slug": "/playbooks/sql/composing-data",
+  "permalink": "/playbooks/sql/composing-data",
+  "draft": false,
+  "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/playbooks/sql/composing-data.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "title": "Composing data across tables",
+    "sidebar_label": "Composing data",
+    "description": "Extract data across multiple tables by joining them together.",
+    "keywords": [
+      "reads",
+      "reading data"
+    ]
+  },
+  "sidebar": "playbooks",
+  "previous": {
+    "title": "Writing data",
+    "permalink": "/playbooks/sql/write"
+  },
+  "next": {
+    "title": "SQL functions",
+    "permalink": "/playbooks/sql/functions"
+  }
+}

@@ -22,13 +22,13 @@
       "faqs"
     ]
   },
-  "sidebar": "getStarted",
+  "sidebar": "fundamentals",
   "previous": {
-    "title": "Roadmap",
-    "permalink": "/fundamentals/about/roadmap"
+    "title": "NFT metadata",
+    "permalink": "/fundamentals/concepts/nft-metadata"
   },
   "next": {
-    "title": "Repos",
-    "permalink": "/fundamentals/about/repos"
+    "title": "Glossary",
+    "permalink": "/fundamentals/about/glossary"
   }
 }

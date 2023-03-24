@@ -1,0 +1,25 @@
+{
+  "unversionedId": "validator/README",
+  "id": "validator/README",
+  "title": "Validator node",
+  "description": "Tableland node",
+  "source": "@site/docs/validator/README.md",
+  "sourceDirName": "validator",
+  "slug": "/validator/",
+  "permalink": "/validator/",
+  "draft": false,
+  "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/validator/README.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "title": "Validator node",
+    "description": "Tableland node",
+    "keywords": [
+      "validator"
+    ]
+  },
+  "sidebar": "validator"
+}

@@ -1,12 +1,13 @@
 ---
 title: Gateway & response times
 sidebar_label: Gateway
-description: Processing times for creates & writes are largely dependent on the base chain, but read responses follow typical HTTPS response expectation.
-synopsis: Tableland is always dependent on the base chain for the speed at which transactions are finalized. For each chain, nodes listen and process emitted events. When that data is materialized in Tableland node's SQLite databases, it becomes immediately accessible and queryable with high responsiveness.
+description: Read responses follow typical HTTPS response expectation, but keep in mind that mutation processing (creates & writes) must occur before the data is made available.
 keywords:
   - response times
   - gateway
 ---
+
+Tableland is always dependent on the base chain for the speed at which transactions are finalized. For each chain, nodes listen and process emitted events. When that data is materialized in Tableland node's SQLite databases, it becomes immediately accessible and queryable with high responsiveness.
 
 ## Basics
 

@@ -1,0 +1,25 @@
+{
+  "unversionedId": "specs/validator-api",
+  "id": "specs/validator-api",
+  "title": "Validator API",
+  "description": "Interact directly with a Tableland validator node.",
+  "source": "@site/docs/specs/validator-api.md",
+  "sourceDirName": "specs",
+  "slug": "/specs/validator-api",
+  "permalink": "/specs/validator-api",
+  "draft": false,
+  "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/specs/validator-api.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "title": "Validator API",
+    "description": "Interact directly with a Tableland validator node.",
+    "keywords": [
+      "rest api",
+      "validator api"
+    ]
+  }
+}

@@ -22,5 +22,14 @@
     "keywords": [
       "protocol"
     ]
+  },
+  "sidebar": "concepts",
+  "previous": {
+    "title": "UPSERT",
+    "permalink": "/concepts/sql/upsert"
+  },
+  "next": {
+    "title": "Reading table data",
+    "permalink": "/concepts/sql/read"
   }
 }

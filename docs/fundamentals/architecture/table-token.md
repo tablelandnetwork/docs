@@ -13,7 +13,7 @@ A table’s full "name" is in the format: `{prefix}_{chainId}_{tableId}`.
 
 Tables are ERC721 TABLE tokens minted at a Tableland registry contract deployed on each respective chain. Every table has a unique name on both the chain it was minted on _and_ across any chain that Tableland supports. The name is comprised of three parts:
 
-- `prefix` ⇒ Defined by the developer / table creator at the time of table creation.
+- `prefix` ⇒ Optionally defined by the table creator at the time of table creation (maximum 32 bytes in length).
 - `chainId` ⇒ Identifier assigned to the table under the hood, based on the chain the table was created on.
 - `tableId` ⇒ Unique identifier for a table, assigned by the Tableland "registry" contract upon table creation (a table is minted as an ERC721 token).
 

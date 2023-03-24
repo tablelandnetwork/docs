@@ -2,26 +2,21 @@
 title: Local development & testing
 sidebar_label: Local Tableland
 description: Build with Local Tableland to quickly iterate with Tableland using a local environment.
-synopsis: Developers can leverage a local-only instance of the Tableland network that spins up a local Hardhat node in the process. This allows for quickly iterating while developing (create, write, and read local tables) and also allows for integrating Local Tableland into your testing flow.
 keywords:
   - local tableland
   - hardhat
 ---
 
+Developers can leverage a local-only instance of the Tableland network that spins up a local Hardhat node in the process. This allows for quickly iterating while developing (create, write, and read local tables) and also allows for integrating Local Tableland into your testing flow.
+
 ## Setup
 
-### Install
+### Installation
 
 You can install the `local-tableland` via `npm`:
 
-```bash
+```bash npm2yarn
 npm install --save-dev @tableland/local
-```
-
-Or `yarn`:
-
-```bash
-yarn add @tableland/local
 ```
 
 ## Usage
@@ -62,30 +57,15 @@ npx hardhat run --network localhost scripts/deploy.js
 
 ### REST API
 
-Once the local node is running, tables can be accessed just as they are with the Tableland testnet and mainnet network. But, instead of the Tableland-hosted gateway, the local Tableland network is accessible at `http://localhost:8080`. The network will always create a `healthbot` table as the first table, so you can easily test out this functionality from the get go:
+Once the local node is running, tables can be accessed just as they are with the Tableland testnet and mainnet network. But, instead of the Tableland-hosted gateway, the local Tableland network is accessible at `http://localhost:8080`. The network will always create a `healthbot` table as the first table, so you can easily test out this functionality from the get go.
 
-```bash
-curl http://localhost:8080/chain/31337/tables/1
-## Or, simply open your browser and paste the address
+## Using the `query` endpoint
 
-## This will provide the following response
-{
-  "name": "healthbot_31337_1",
-  "external_url": "http://localhost:8080/chain/31337/tables/1",
-  "image": "https://render.tableland.xyz/31337/1",
-  "attributes": [
-    {
-      "display_type": "date",
-      "trait_type": "created",
-      "value": 1668659178
-    }
-  ]
-}
-
-## Another example, using the `query` endpoint with URI encoding
-curl http://localhost:8080/query?s=select%20counter%20from%20healthbot_31337_1
+curl http://localhost:8080/api/v1/query?s=select%20counter%20from%20healthbot_31337_1
 
 ## Returns the table data
+
+```json
 [
   {
     "counter": 1
@@ -95,7 +75,7 @@ curl http://localhost:8080/query?s=select%20counter%20from%20healthbot_31337_1
 
 All of the Tableland APIs are available at this URL, so anything that you’d like to develop and test out locally is available on testnet / mainnet chains (and vice versa). Check out the [REST API](/develop/api) docs for more details! And if you’re unfamiliar with the encoding used, see the docs on [URI Encoding](/concepts/related/uri-encoding).
 
-### Wallets & nonce issues
+## Wallets & nonce issues
 
 When testing locally, you may want to import an account created during the hardhat process. These are publicly known accounts such that exposing the private key is not an issue as they’re meant for testing purposes. **Do not** use the first account (`0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266`) since this can lead to nonce issues. This account is the one "owned" by the validator upon creating the first `healthbot` table on the network, so it should be reserved for that and that alone.
 
@@ -118,7 +98,7 @@ For example, with the **_second_** account created, import the private key value
 - Public key: `0x70997970C51812dc3A010C7d01b50e0d17dc79C8`
 - Private key: `0x59c6995e998f97a5a0044966f0945389dc9e86dae88c7a8412f4603b6b78690d`
 
-#### Nonce too high
+### Nonce too high
 
 If, for some reason, "nonce" errors do occur, such as the "Nonce too high" warning, which might look like the snippet below. Basically, if you were interacting with a local node, the nonce gets tracked for each on-chain action. When you stop the node, that history is maintained such that a new node session is using old nonce tracking. The new node session wants the nonce to start at `0`, but old history says the nonce starts at some other number.
 
@@ -152,7 +132,7 @@ import WalletReset from "@site/static/assets/metamask-reset.png"
 3.  Enable a "custom nonce" to manually set the nonce upon sending a transaction. Go to _Settings_ → _Advanced_ → _Customize transaction nonce_.
 4.  Delete the wallet and re-import it using the private key—be sure to \***\*only\*\*** delete and reimport the wallet if you do know the private key, or the account could be lost forever.
 
-### Logging & Startup
+## Logging & Startup
 
 Starting `local-tableland` will provide logging for both the local hardhat blockchain and the local Tableland network. Note there are optional flags for silencing the logs or making them verbose:
 
@@ -184,7 +164,7 @@ First, you’ll notice that each line is prefixed with either `[Registry]` or `[
 
 For lines prefixed with **Validator**, these are corresponding to the local _Tableland validator node._ Thus, a line like `[Validator] 8:26PM DBG executing create-table event ...` is an action executed by the local Tableland network node. In this case, it’s relating to a create table statement that was made, but for any table creation, mutation, or read, there will be a corresponding log with the `[Validator]` prefix.
 
-#### Additional Context
+### Additional Context
 
 Any time you start `local-tableland`, you’ll notice the same series of events that occur after the _Tableland is running!_ message:
 

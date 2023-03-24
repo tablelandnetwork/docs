@@ -17,13 +17,12 @@
   "frontMatter": {
     "title": "Databases & SQL",
     "description": "Briefly look under the hood at relational databases.",
-    "synopsis": "Although it's an oversimplification, the network is like a bunch of SQL databases communicating & agreeing with one another about things that happened on-chain. It's important to understand the very basics of what databases are and why a relational is a perfect solution for scaling structured web3 data.",
     "keywords": [
       "databases",
       "relational database"
     ]
   },
-  "sidebar": "getStarted",
+  "sidebar": "fundamentals",
   "previous": {
     "title": "Why use Tableland?",
     "permalink": "/fundamentals/considerations-tradeoffs"

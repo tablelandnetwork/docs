@@ -28,5 +28,9 @@
   "previous": {
     "title": "React",
     "permalink": "/sdk/frameworks/reactjs"
+  },
+  "next": {
+    "title": "Errors",
+    "permalink": "/sdk/reference/errors"
   }
 }
