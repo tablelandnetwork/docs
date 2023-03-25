@@ -1,7 +1,7 @@
 {
   "unversionedId": "smart-contracts/README",
   "id": "smart-contracts/README",
-  "title": "Get started",
+  "title": "Overview",
   "description": "Interact with Tableland using smart contracts.",
   "source": "@site/docs/smart-contracts/README.md",
   "sourceDirName": "smart-contracts",
@@ -15,12 +15,12 @@
   "lastUpdatedAt": 1539502055,
   "formattedLastUpdatedAt": "Oct 14, 2018",
   "frontMatter": {
-    "title": "Get started",
+    "title": "Overview",
     "description": "Interact with Tableland using smart contracts."
   },
   "sidebar": "smartContracts",
   "next": {
-    "title": "Deployed contracts",
-    "permalink": "/smart-contracts/contracts"
+    "title": "Get started",
+    "permalink": "/smart-contracts/get-started"
   }
 }

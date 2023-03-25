@@ -1,0 +1,31 @@
+{
+  "unversionedId": "smart-contracts/controller/README",
+  "id": "smart-contracts/controller/README",
+  "title": "Configure table write access",
+  "description": "Everything you need to know to control access for programmable tables.",
+  "source": "@site/docs/smart-contracts/controller/README.md",
+  "sourceDirName": "smart-contracts/controller",
+  "slug": "/smart-contracts/controller/",
+  "permalink": "/smart-contracts/controller/",
+  "draft": false,
+  "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/smart-contracts/controller/README.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "title": "Configure table write access",
+    "sidebar_label": "Configure write access",
+    "description": "Everything you need to know to control access for programmable tables."
+  },
+  "sidebar": "smartContracts",
+  "previous": {
+    "title": "Contract owned tables",
+    "permalink": "/smart-contracts/creating-tables-from-contracts"
+  },
+  "next": {
+    "title": "Controller contract",
+    "permalink": "/smart-contracts/controller/contract-anatomy"
+  }
+}

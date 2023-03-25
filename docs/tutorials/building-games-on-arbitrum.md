@@ -1,5 +1,5 @@
 ---
-title: Building a game on Arbitrum
+title: Build a game on Arbitrum
 description: Deploy a smart contract-based game and interact with it a React app.
 keywords:
   - polygon

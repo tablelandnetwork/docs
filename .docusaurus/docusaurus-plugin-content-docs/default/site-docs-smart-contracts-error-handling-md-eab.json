@@ -1,0 +1,33 @@
+{
+  "unversionedId": "smart-contracts/error-handling",
+  "id": "smart-contracts/error-handling",
+  "title": "Error handling",
+  "description": "Look at some error handling strategies when writing on-chain SQL.",
+  "source": "@site/docs/smart-contracts/error-handling.md",
+  "sourceDirName": "smart-contracts",
+  "slug": "/smart-contracts/error-handling",
+  "permalink": "/smart-contracts/error-handling",
+  "draft": false,
+  "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/smart-contracts/error-handling.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "title": "Error handling",
+    "description": "Look at some error handling strategies when writing on-chain SQL.",
+    "keywords": [
+      "tableland smart contracts"
+    ]
+  },
+  "sidebar": "smartContracts",
+  "previous": {
+    "title": "Solidity to SQL types",
+    "permalink": "/smart-contracts/solidity-to-sql-types"
+  },
+  "next": {
+    "title": "Deployed contracts",
+    "permalink": "/smart-contracts/deployed-contracts"
+  }
+}

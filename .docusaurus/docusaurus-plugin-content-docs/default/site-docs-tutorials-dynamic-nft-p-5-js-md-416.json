@@ -1,7 +1,7 @@
 {
   "unversionedId": "tutorials/dynamic-nft-p5js",
   "id": "tutorials/dynamic-nft-p5js",
-  "title": "Creating a dynamic NFT with p5.js",
+  "title": "Create a dynamic NFT with p5.js",
   "description": "Use p5.js to render data from an NFT that holds global game state in a table.",
   "source": "@site/docs/tutorials/dynamic-nft-p5js.md",
   "sourceDirName": "tutorials",
@@ -15,7 +15,7 @@
   "lastUpdatedAt": 1539502055,
   "formattedLastUpdatedAt": "Oct 14, 2018",
   "frontMatter": {
-    "title": "Creating a dynamic NFT with p5.js",
+    "title": "Create a dynamic NFT with p5.js",
     "description": "Use p5.js to render data from an NFT that holds global game state in a table.",
     "keywords": [
       "tutorial",
@@ -29,7 +29,7 @@
     "permalink": "/tutorials/dynamic-nft-solidity"
   },
   "next": {
-    "title": "Building a game on Arbitrum",
+    "title": "Build a game on Arbitrum",
     "permalink": "/tutorials/building-games-on-arbitrum"
   }
 }

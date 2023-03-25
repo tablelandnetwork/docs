@@ -23,8 +23,8 @@
   },
   "sidebar": "sdk",
   "previous": {
-    "title": "Batching",
-    "permalink": "/sdk/core/batching"
+    "title": "Error handling",
+    "permalink": "/sdk/core/timeouts-error-handling"
   },
   "next": {
     "title": "Registry API",

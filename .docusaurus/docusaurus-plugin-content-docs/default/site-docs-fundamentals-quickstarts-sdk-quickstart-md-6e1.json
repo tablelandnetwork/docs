@@ -19,7 +19,7 @@
     "sidebar_label": "SDK",
     "description": "Learn how to create a table, add some sample data, and query the data using the SDK."
   },
-  "sidebar": "fundamentals",
+  "sidebar": "quickStarts",
   "previous": {
     "title": "Quickstarts",
     "permalink": "/fundamentals/quickstarts/"

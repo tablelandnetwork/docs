@@ -24,11 +24,7 @@
   },
   "sidebar": "sdk",
   "previous": {
-    "title": "Errors",
-    "permalink": "/sdk/reference/errors"
-  },
-  "next": {
-    "title": "FAQs",
-    "permalink": "/sdk/reference/sdk-faqs"
+    "title": "Testing",
+    "permalink": "/sdk/reference/testing"
   }
 }

@@ -499,12 +499,46 @@
               },
               "sidebar": "fundamentals",
               "previous": {
-                "title": "REST API",
-                "permalink": "/fundamentals/quickstarts/api-quickstart"
+                "title": "Use cases",
+                "permalink": "/fundamentals/use-cases"
               },
               "next": {
                 "title": "Table uniqueness",
                 "permalink": "/fundamentals/architecture/table-token"
+              }
+            },
+            {
+              "unversionedId": "fundamentals/architecture/query-optimization",
+              "id": "fundamentals/architecture/query-optimization",
+              "title": "Query optimization & gas",
+              "description": "Gas is paid for any on-chain query, so statement structure has an impact on cost.",
+              "source": "@site/docs/fundamentals/architecture/query-optimization.md",
+              "sourceDirName": "fundamentals/architecture",
+              "slug": "/fundamentals/architecture/query-optimization",
+              "permalink": "/fundamentals/architecture/query-optimization",
+              "draft": false,
+              "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/fundamentals/architecture/query-optimization.md",
+              "tags": [],
+              "version": "current",
+              "lastUpdatedBy": "Author",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "Oct 14, 2018",
+              "frontMatter": {
+                "title": "Query optimization & gas",
+                "sidebar_label": "Queries & gas",
+                "description": "Gas is paid for any on-chain query, so statement structure has an impact on cost.",
+                "keywords": [
+                  "query optimization"
+                ]
+              },
+              "sidebar": "fundamentals",
+              "previous": {
+                "title": "Local node",
+                "permalink": "/fundamentals/chains/local"
+              },
+              "next": {
+                "title": "NFT metadata",
+                "permalink": "/fundamentals/concepts/nft-metadata"
               }
             },
             {
@@ -639,8 +673,8 @@
                 "permalink": "/fundamentals/chains/polygon"
               },
               "next": {
-                "title": "Use cases",
-                "permalink": "/fundamentals/concepts/use-cases"
+                "title": "Queries & gas",
+                "permalink": "/fundamentals/architecture/query-optimization"
               }
             },
             {
@@ -770,47 +804,12 @@
               },
               "sidebar": "fundamentals",
               "previous": {
-                "title": "Use cases",
-                "permalink": "/fundamentals/concepts/use-cases"
+                "title": "Queries & gas",
+                "permalink": "/fundamentals/architecture/query-optimization"
               },
               "next": {
                 "title": "General FAQs",
                 "permalink": "/fundamentals/about/general-faqs"
-              }
-            },
-            {
-              "unversionedId": "fundamentals/concepts/use-cases",
-              "id": "fundamentals/concepts/use-cases",
-              "title": "Use cases",
-              "description": "A series of general use cases to consider.",
-              "source": "@site/docs/fundamentals/concepts/use-cases.md",
-              "sourceDirName": "fundamentals/concepts",
-              "slug": "/fundamentals/concepts/use-cases",
-              "permalink": "/fundamentals/concepts/use-cases",
-              "draft": false,
-              "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/fundamentals/concepts/use-cases.md",
-              "tags": [],
-              "version": "current",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
-              "formattedLastUpdatedAt": "Oct 14, 2018",
-              "sidebarPosition": 4,
-              "frontMatter": {
-                "title": "Use cases",
-                "sidebar_position": 4,
-                "description": "A series of general use cases to consider.",
-                "keywords": [
-                  "use cases"
-                ]
-              },
-              "sidebar": "fundamentals",
-              "previous": {
-                "title": "Local node",
-                "permalink": "/fundamentals/chains/local"
-              },
-              "next": {
-                "title": "NFT metadata",
-                "permalink": "/fundamentals/concepts/nft-metadata"
               }
             },
             {
@@ -874,162 +873,8 @@
                 "permalink": "/fundamentals/considerations-tradeoffs"
               },
               "next": {
-                "title": "Quickstarts",
-                "permalink": "/fundamentals/quickstarts/"
-              }
-            },
-            {
-              "unversionedId": "fundamentals/quickstarts/api-quickstart",
-              "id": "fundamentals/quickstarts/api-quickstart",
-              "title": "Validator API quickstart",
-              "description": "Learn how to read table data or retrieve relevant validator information.",
-              "source": "@site/docs/fundamentals/quickstarts/api-quickstart.md",
-              "sourceDirName": "fundamentals/quickstarts",
-              "slug": "/fundamentals/quickstarts/api-quickstart",
-              "permalink": "/fundamentals/quickstarts/api-quickstart",
-              "draft": false,
-              "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/fundamentals/quickstarts/api-quickstart.md",
-              "tags": [],
-              "version": "current",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
-              "formattedLastUpdatedAt": "Oct 14, 2018",
-              "frontMatter": {
-                "title": "Validator API quickstart",
-                "sidebar_label": "REST API",
-                "description": "Learn how to read table data or retrieve relevant validator information."
-              },
-              "sidebar": "fundamentals",
-              "previous": {
-                "title": "CLI",
-                "permalink": "/fundamentals/quickstarts/cli-quickstart"
-              },
-              "next": {
-                "title": "Protocol design",
-                "permalink": "/fundamentals/architecture/protocol-design"
-              }
-            },
-            {
-              "unversionedId": "fundamentals/quickstarts/cli-quickstart",
-              "id": "fundamentals/quickstarts/cli-quickstart",
-              "title": "Quickstart",
-              "description": "Learn how to create a table, add some sample data, and query the data using the CLI.",
-              "source": "@site/docs/fundamentals/quickstarts/cli-quickstart.md",
-              "sourceDirName": "fundamentals/quickstarts",
-              "slug": "/fundamentals/quickstarts/cli-quickstart",
-              "permalink": "/fundamentals/quickstarts/cli-quickstart",
-              "draft": false,
-              "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/fundamentals/quickstarts/cli-quickstart.md",
-              "tags": [],
-              "version": "current",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
-              "formattedLastUpdatedAt": "Oct 14, 2018",
-              "frontMatter": {
-                "title": "Quickstart",
-                "sidebar_label": "CLI",
-                "description": "Learn how to create a table, add some sample data, and query the data using the CLI."
-              },
-              "sidebar": "fundamentals",
-              "previous": {
-                "title": "Smart contracts",
-                "permalink": "/fundamentals/quickstarts/smart-contract-quickstart"
-              },
-              "next": {
-                "title": "REST API",
-                "permalink": "/fundamentals/quickstarts/api-quickstart"
-              }
-            },
-            {
-              "unversionedId": "fundamentals/quickstarts/README",
-              "id": "fundamentals/quickstarts/README",
-              "title": "Quickstarts",
-              "description": "Make sure you're ready to start building by properly setting up your development environment.",
-              "source": "@site/docs/fundamentals/quickstarts/README.md",
-              "sourceDirName": "fundamentals/quickstarts",
-              "slug": "/fundamentals/quickstarts/",
-              "permalink": "/fundamentals/quickstarts/",
-              "draft": false,
-              "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/fundamentals/quickstarts/README.md",
-              "tags": [],
-              "version": "current",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
-              "formattedLastUpdatedAt": "Oct 14, 2018",
-              "frontMatter": {
-                "title": "Quickstarts",
-                "description": "Make sure you're ready to start building by properly setting up your development environment."
-              },
-              "sidebar": "fundamentals",
-              "previous": {
-                "title": "Databases & SQL",
-                "permalink": "/fundamentals/databases"
-              },
-              "next": {
-                "title": "SDK",
-                "permalink": "/fundamentals/quickstarts/sdk-quickstart"
-              }
-            },
-            {
-              "unversionedId": "fundamentals/quickstarts/sdk-quickstart",
-              "id": "fundamentals/quickstarts/sdk-quickstart",
-              "title": "SDK quickstart",
-              "description": "Learn how to create a table, add some sample data, and query the data using the SDK.",
-              "source": "@site/docs/fundamentals/quickstarts/sdk-quickstart.md",
-              "sourceDirName": "fundamentals/quickstarts",
-              "slug": "/fundamentals/quickstarts/sdk-quickstart",
-              "permalink": "/fundamentals/quickstarts/sdk-quickstart",
-              "draft": false,
-              "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/fundamentals/quickstarts/sdk-quickstart.md",
-              "tags": [],
-              "version": "current",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
-              "formattedLastUpdatedAt": "Oct 14, 2018",
-              "frontMatter": {
-                "title": "SDK quickstart",
-                "sidebar_label": "SDK",
-                "description": "Learn how to create a table, add some sample data, and query the data using the SDK."
-              },
-              "sidebar": "fundamentals",
-              "previous": {
-                "title": "Quickstarts",
-                "permalink": "/fundamentals/quickstarts/"
-              },
-              "next": {
-                "title": "Smart contracts",
-                "permalink": "/fundamentals/quickstarts/smart-contract-quickstart"
-              }
-            },
-            {
-              "unversionedId": "fundamentals/quickstarts/smart-contract-quickstart",
-              "id": "fundamentals/quickstarts/smart-contract-quickstart",
-              "title": "Smart contract quickstart",
-              "description": "Learn how to create a table and insert add some sample data using the Solidity.",
-              "source": "@site/docs/fundamentals/quickstarts/smart-contract-quickstart.md",
-              "sourceDirName": "fundamentals/quickstarts",
-              "slug": "/fundamentals/quickstarts/smart-contract-quickstart",
-              "permalink": "/fundamentals/quickstarts/smart-contract-quickstart",
-              "draft": false,
-              "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/fundamentals/quickstarts/smart-contract-quickstart.md",
-              "tags": [],
-              "version": "current",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
-              "formattedLastUpdatedAt": "Oct 14, 2018",
-              "frontMatter": {
-                "title": "Smart contract quickstart",
-                "sidebar_label": "Smart contracts",
-                "description": "Learn how to create a table and insert add some sample data using the Solidity."
-              },
-              "sidebar": "fundamentals",
-              "previous": {
-                "title": "SDK",
-                "permalink": "/fundamentals/quickstarts/sdk-quickstart"
-              },
-              "next": {
-                "title": "CLI",
-                "permalink": "/fundamentals/quickstarts/cli-quickstart"
+                "title": "Use cases",
+                "permalink": "/fundamentals/use-cases"
               }
             },
             {
@@ -1056,6 +901,39 @@
               "next": {
                 "title": "What is Tableland?",
                 "permalink": "/fundamentals/what-is-tableland"
+              }
+            },
+            {
+              "unversionedId": "fundamentals/use-cases",
+              "id": "fundamentals/use-cases",
+              "title": "Use cases",
+              "description": "A series of general use cases to consider.",
+              "source": "@site/docs/fundamentals/use-cases.md",
+              "sourceDirName": "fundamentals",
+              "slug": "/fundamentals/use-cases",
+              "permalink": "/fundamentals/use-cases",
+              "draft": false,
+              "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/fundamentals/use-cases.md",
+              "tags": [],
+              "version": "current",
+              "lastUpdatedBy": "Author",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "Oct 14, 2018",
+              "frontMatter": {
+                "title": "Use cases",
+                "description": "A series of general use cases to consider.",
+                "keywords": [
+                  "use cases"
+                ]
+              },
+              "sidebar": "fundamentals",
+              "previous": {
+                "title": "Databases & SQL",
+                "permalink": "/fundamentals/databases"
+              },
+              "next": {
+                "title": "Protocol design",
+                "permalink": "/fundamentals/architecture/protocol-design"
               }
             },
             {
@@ -1528,6 +1406,292 @@
               }
             },
             {
+              "unversionedId": "quickstarts/api-quickstart",
+              "id": "quickstarts/api-quickstart",
+              "title": "Validator API quickstart",
+              "description": "Learn how to read table data or retrieve relevant validator information.",
+              "source": "@site/docs/quickstarts/api-quickstart.md",
+              "sourceDirName": "quickstarts",
+              "slug": "/quickstarts/api-quickstart",
+              "permalink": "/quickstarts/api-quickstart",
+              "draft": false,
+              "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/quickstarts/api-quickstart.md",
+              "tags": [],
+              "version": "current",
+              "lastUpdatedBy": "Author",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "Oct 14, 2018",
+              "frontMatter": {
+                "title": "Validator API quickstart",
+                "sidebar_label": "REST API",
+                "description": "Learn how to read table data or retrieve relevant validator information."
+              },
+              "sidebar": "quickstarts",
+              "previous": {
+                "title": "CLI",
+                "permalink": "/quickstarts/cli-quickstart"
+              },
+              "next": {
+                "title": "Local Tableland",
+                "permalink": "/quickstarts/local-tableland"
+              }
+            },
+            {
+              "unversionedId": "quickstarts/cli-quickstart",
+              "id": "quickstarts/cli-quickstart",
+              "title": "CLI quickstart",
+              "description": "Learn how to create a table, add some sample data, and query the data using the CLI.",
+              "source": "@site/docs/quickstarts/cli-quickstart.md",
+              "sourceDirName": "quickstarts",
+              "slug": "/quickstarts/cli-quickstart",
+              "permalink": "/quickstarts/cli-quickstart",
+              "draft": false,
+              "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/quickstarts/cli-quickstart.md",
+              "tags": [],
+              "version": "current",
+              "lastUpdatedBy": "Author",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "Oct 14, 2018",
+              "frontMatter": {
+                "title": "CLI quickstart",
+                "sidebar_label": "CLI",
+                "description": "Learn how to create a table, add some sample data, and query the data using the CLI."
+              },
+              "sidebar": "quickstarts",
+              "previous": {
+                "title": "Smart contracts",
+                "permalink": "/quickstarts/smart-contract-quickstart"
+              },
+              "next": {
+                "title": "REST API",
+                "permalink": "/quickstarts/api-quickstart"
+              }
+            },
+            {
+              "unversionedId": "quickstarts/hardhat",
+              "id": "quickstarts/hardhat",
+              "title": "Hardhat",
+              "description": "Use Tableland smart contracts with Hardhat.",
+              "source": "@site/docs/quickstarts/hardhat.md",
+              "sourceDirName": "quickstarts",
+              "slug": "/quickstarts/hardhat",
+              "permalink": "/quickstarts/hardhat",
+              "draft": false,
+              "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/quickstarts/hardhat.md",
+              "tags": [],
+              "version": "current",
+              "lastUpdatedBy": "Author",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "Oct 14, 2018",
+              "frontMatter": {
+                "title": "Hardhat",
+                "description": "Use Tableland smart contracts with Hardhat.",
+                "keywords": [
+                  "hardhat"
+                ]
+              },
+              "sidebar": "quickstarts",
+              "previous": {
+                "title": "wagmi",
+                "permalink": "/quickstarts/wagmi"
+              }
+            },
+            {
+              "unversionedId": "quickstarts/local-tableland",
+              "id": "quickstarts/local-tableland",
+              "title": "Local development & testing",
+              "description": "Build with Local Tableland to quickly iterate with Tableland using a local environment.",
+              "source": "@site/docs/quickstarts/local-tableland.md",
+              "sourceDirName": "quickstarts",
+              "slug": "/quickstarts/local-tableland",
+              "permalink": "/quickstarts/local-tableland",
+              "draft": false,
+              "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/quickstarts/local-tableland.md",
+              "tags": [],
+              "version": "current",
+              "lastUpdatedBy": "Author",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "Oct 14, 2018",
+              "frontMatter": {
+                "title": "Local development & testing",
+                "sidebar_label": "Local Tableland",
+                "description": "Build with Local Tableland to quickly iterate with Tableland using a local environment.",
+                "keywords": [
+                  "local tableland",
+                  "hardhat"
+                ]
+              },
+              "sidebar": "quickstarts",
+              "previous": {
+                "title": "REST API",
+                "permalink": "/quickstarts/api-quickstart"
+              },
+              "next": {
+                "title": "React",
+                "permalink": "/quickstarts/reactjs"
+              }
+            },
+            {
+              "unversionedId": "quickstarts/reactjs",
+              "id": "quickstarts/reactjs",
+              "title": "Use Tableland with React",
+              "description": "Quickly set up a React application with Tableland via an account and database connection.",
+              "source": "@site/docs/quickstarts/reactjs.md",
+              "sourceDirName": "quickstarts",
+              "slug": "/quickstarts/reactjs",
+              "permalink": "/quickstarts/reactjs",
+              "draft": false,
+              "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/quickstarts/reactjs.md",
+              "tags": [],
+              "version": "current",
+              "lastUpdatedBy": "Author",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "Oct 14, 2018",
+              "frontMatter": {
+                "title": "Use Tableland with React",
+                "sidebar_label": "React",
+                "description": "Quickly set up a React application with Tableland via an account and database connection.",
+                "keywords": [
+                  "quickstart",
+                  "quickstarts",
+                  "react"
+                ]
+              },
+              "sidebar": "quickstarts",
+              "previous": {
+                "title": "Local Tableland",
+                "permalink": "/quickstarts/local-tableland"
+              },
+              "next": {
+                "title": "wagmi",
+                "permalink": "/quickstarts/wagmi"
+              }
+            },
+            {
+              "unversionedId": "quickstarts/README",
+              "id": "quickstarts/README",
+              "title": "Overview",
+              "description": "Make sure you're ready to start building by properly setting up your development environment.",
+              "source": "@site/docs/quickstarts/README.md",
+              "sourceDirName": "quickstarts",
+              "slug": "/quickstarts/",
+              "permalink": "/quickstarts/",
+              "draft": false,
+              "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/quickstarts/README.md",
+              "tags": [],
+              "version": "current",
+              "lastUpdatedBy": "Author",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "Oct 14, 2018",
+              "frontMatter": {
+                "title": "Overview",
+                "description": "Make sure you're ready to start building by properly setting up your development environment."
+              },
+              "sidebar": "quickstarts",
+              "next": {
+                "title": "SDK",
+                "permalink": "/quickstarts/sdk-quickstart"
+              }
+            },
+            {
+              "unversionedId": "quickstarts/sdk-quickstart",
+              "id": "quickstarts/sdk-quickstart",
+              "title": "SDK quickstart",
+              "description": "Learn how to create a table, add some sample data, and query the data using the SDK.",
+              "source": "@site/docs/quickstarts/sdk-quickstart.md",
+              "sourceDirName": "quickstarts",
+              "slug": "/quickstarts/sdk-quickstart",
+              "permalink": "/quickstarts/sdk-quickstart",
+              "draft": false,
+              "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/quickstarts/sdk-quickstart.md",
+              "tags": [],
+              "version": "current",
+              "lastUpdatedBy": "Author",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "Oct 14, 2018",
+              "frontMatter": {
+                "title": "SDK quickstart",
+                "sidebar_label": "SDK",
+                "description": "Learn how to create a table, add some sample data, and query the data using the SDK."
+              },
+              "sidebar": "quickstarts",
+              "previous": {
+                "title": "Overview",
+                "permalink": "/quickstarts/"
+              },
+              "next": {
+                "title": "Smart contracts",
+                "permalink": "/quickstarts/smart-contract-quickstart"
+              }
+            },
+            {
+              "unversionedId": "quickstarts/smart-contract-quickstart",
+              "id": "quickstarts/smart-contract-quickstart",
+              "title": "Smart contract quickstart",
+              "description": "Learn how to create a table and insert add some sample data using the Solidity.",
+              "source": "@site/docs/quickstarts/smart-contract-quickstart.md",
+              "sourceDirName": "quickstarts",
+              "slug": "/quickstarts/smart-contract-quickstart",
+              "permalink": "/quickstarts/smart-contract-quickstart",
+              "draft": false,
+              "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/quickstarts/smart-contract-quickstart.md",
+              "tags": [],
+              "version": "current",
+              "lastUpdatedBy": "Author",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "Oct 14, 2018",
+              "frontMatter": {
+                "title": "Smart contract quickstart",
+                "sidebar_label": "Smart contracts",
+                "description": "Learn how to create a table and insert add some sample data using the Solidity."
+              },
+              "sidebar": "quickstarts",
+              "previous": {
+                "title": "SDK",
+                "permalink": "/quickstarts/sdk-quickstart"
+              },
+              "next": {
+                "title": "CLI",
+                "permalink": "/quickstarts/cli-quickstart"
+              }
+            },
+            {
+              "unversionedId": "quickstarts/wagmi",
+              "id": "quickstarts/wagmi",
+              "title": "Use Tableland with wagmi",
+              "description": "Quickly add and use wagmi with Tableland and React.",
+              "source": "@site/docs/quickstarts/wagmi.md",
+              "sourceDirName": "quickstarts",
+              "slug": "/quickstarts/wagmi",
+              "permalink": "/quickstarts/wagmi",
+              "draft": false,
+              "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/quickstarts/wagmi.md",
+              "tags": [],
+              "version": "current",
+              "lastUpdatedBy": "Author",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "Oct 14, 2018",
+              "frontMatter": {
+                "title": "Use Tableland with wagmi",
+                "sidebar_label": "wagmi",
+                "description": "Quickly add and use wagmi with Tableland and React.",
+                "keywords": [
+                  "quickstart",
+                  "quickstarts",
+                  "react"
+                ]
+              },
+              "sidebar": "quickstarts",
+              "previous": {
+                "title": "React",
+                "permalink": "/quickstarts/reactjs"
+              },
+              "next": {
+                "title": "Hardhat",
+                "permalink": "/quickstarts/hardhat"
+              }
+            },
+            {
               "unversionedId": "sdk/core/batching",
               "id": "sdk/core/batching",
               "title": "Batching statement & operations",
@@ -1554,8 +1718,8 @@
                 "permalink": "/sdk/core/query-statement-methods"
               },
               "next": {
-                "title": "Validator API",
-                "permalink": "/sdk/core/validator-api"
+                "title": "Error handling",
+                "permalink": "/sdk/core/timeouts-error-handling"
               }
             },
             {
@@ -1686,8 +1850,8 @@
                 "permalink": "/sdk/core/validator-api"
               },
               "next": {
-                "title": "Timeouts",
-                "permalink": "/sdk/core/timeouts"
+                "title": "Type conversion",
+                "permalink": "/sdk/reference/type-conversion"
               }
             },
             {
@@ -1725,34 +1889,37 @@
               }
             },
             {
-              "unversionedId": "sdk/core/timeouts",
-              "id": "sdk/core/timeouts",
-              "title": "Aborting statement method calls",
-              "description": "Get up an running with the Tableland SDK.",
-              "source": "@site/docs/sdk/core/timeouts.md",
+              "unversionedId": "sdk/core/timeouts-error-handling",
+              "id": "sdk/core/timeouts-error-handling",
+              "title": "Error handling",
+              "description": "Review SDK error handling setup and what types of messages will bubble up.",
+              "source": "@site/docs/sdk/core/timeouts-error-handling.md",
               "sourceDirName": "sdk/core",
-              "slug": "/sdk/core/timeouts",
-              "permalink": "/sdk/core/timeouts",
+              "slug": "/sdk/core/timeouts-error-handling",
+              "permalink": "/sdk/core/timeouts-error-handling",
               "draft": false,
-              "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/sdk/core/timeouts.md",
+              "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/sdk/core/timeouts-error-handling.md",
               "tags": [],
               "version": "current",
               "lastUpdatedBy": "Author",
               "lastUpdatedAt": 1539502055,
               "formattedLastUpdatedAt": "Oct 14, 2018",
               "frontMatter": {
-                "title": "Aborting statement method calls",
-                "sidebar_label": "Timeouts",
-                "description": "Get up an running with the Tableland SDK."
+                "title": "Error handling",
+                "description": "Review SDK error handling setup and what types of messages will bubble up.",
+                "keywords": [
+                  "error",
+                  "error handling"
+                ]
               },
               "sidebar": "sdk",
               "previous": {
-                "title": "Registry API",
-                "permalink": "/sdk/core/registry-api"
+                "title": "Batching",
+                "permalink": "/sdk/core/batching"
               },
               "next": {
-                "title": "React",
-                "permalink": "/sdk/frameworks/reactjs"
+                "title": "Validator API",
+                "permalink": "/sdk/core/validator-api"
               }
             },
             {
@@ -1780,84 +1947,12 @@
               },
               "sidebar": "sdk",
               "previous": {
-                "title": "Batching",
-                "permalink": "/sdk/core/batching"
+                "title": "Error handling",
+                "permalink": "/sdk/core/timeouts-error-handling"
               },
               "next": {
                 "title": "Registry API",
                 "permalink": "/sdk/core/registry-api"
-              }
-            },
-            {
-              "unversionedId": "sdk/frameworks/reactjs",
-              "id": "sdk/frameworks/reactjs",
-              "title": "Use Tableland with React",
-              "description": "Quickly set up a React application with Tableland via an account and database connection.",
-              "source": "@site/docs/sdk/frameworks/reactjs.md",
-              "sourceDirName": "sdk/frameworks",
-              "slug": "/sdk/frameworks/reactjs",
-              "permalink": "/sdk/frameworks/reactjs",
-              "draft": false,
-              "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/sdk/frameworks/reactjs.md",
-              "tags": [],
-              "version": "current",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
-              "formattedLastUpdatedAt": "Oct 14, 2018",
-              "frontMatter": {
-                "title": "Use Tableland with React",
-                "sidebar_label": "React",
-                "description": "Quickly set up a React application with Tableland via an account and database connection.",
-                "keywords": [
-                  "quickstart",
-                  "quickstarts",
-                  "react"
-                ]
-              },
-              "sidebar": "sdk",
-              "previous": {
-                "title": "Timeouts",
-                "permalink": "/sdk/core/timeouts"
-              },
-              "next": {
-                "title": "wagmi",
-                "permalink": "/sdk/frameworks/wagmi"
-              }
-            },
-            {
-              "unversionedId": "sdk/frameworks/wagmi",
-              "id": "sdk/frameworks/wagmi",
-              "title": "Use Tableland with wagmi",
-              "description": "Quickly add and use wagmi with Tableland and React.",
-              "source": "@site/docs/sdk/frameworks/wagmi.md",
-              "sourceDirName": "sdk/frameworks",
-              "slug": "/sdk/frameworks/wagmi",
-              "permalink": "/sdk/frameworks/wagmi",
-              "draft": false,
-              "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/sdk/frameworks/wagmi.md",
-              "tags": [],
-              "version": "current",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
-              "formattedLastUpdatedAt": "Oct 14, 2018",
-              "frontMatter": {
-                "title": "Use Tableland with wagmi",
-                "sidebar_label": "wagmi",
-                "description": "Quickly add and use wagmi with Tableland and React.",
-                "keywords": [
-                  "quickstart",
-                  "quickstarts",
-                  "react"
-                ]
-              },
-              "sidebar": "sdk",
-              "previous": {
-                "title": "React",
-                "permalink": "/sdk/frameworks/reactjs"
-              },
-              "next": {
-                "title": "Errors",
-                "permalink": "/sdk/reference/errors"
               }
             },
             {
@@ -1894,40 +1989,6 @@
               }
             },
             {
-              "unversionedId": "sdk/reference/errors",
-              "id": "sdk/reference/errors",
-              "title": "Errors",
-              "description": "Review SDK error handling setup and what types of messages will bubble up.",
-              "source": "@site/docs/sdk/reference/errors.md",
-              "sourceDirName": "sdk/reference",
-              "slug": "/sdk/reference/errors",
-              "permalink": "/sdk/reference/errors",
-              "draft": false,
-              "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/sdk/reference/errors.md",
-              "tags": [],
-              "version": "current",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
-              "formattedLastUpdatedAt": "Oct 14, 2018",
-              "frontMatter": {
-                "title": "Errors",
-                "description": "Review SDK error handling setup and what types of messages will bubble up.",
-                "keywords": [
-                  "error",
-                  "error handling"
-                ]
-              },
-              "sidebar": "sdk",
-              "previous": {
-                "title": "wagmi",
-                "permalink": "/sdk/frameworks/wagmi"
-              },
-              "next": {
-                "title": "ORM support",
-                "permalink": "/sdk/reference/orm"
-              }
-            },
-            {
               "unversionedId": "sdk/reference/orm",
               "id": "sdk/reference/orm",
               "title": "ORM support",
@@ -1953,12 +2014,8 @@
               },
               "sidebar": "sdk",
               "previous": {
-                "title": "Errors",
-                "permalink": "/sdk/reference/errors"
-              },
-              "next": {
-                "title": "FAQs",
-                "permalink": "/sdk/reference/sdk-faqs"
+                "title": "Testing",
+                "permalink": "/sdk/reference/testing"
               }
             },
             {
@@ -1985,75 +2042,191 @@
                   "faq",
                   "faqs"
                 ]
+              }
+            },
+            {
+              "unversionedId": "sdk/reference/testing",
+              "id": "sdk/reference/testing",
+              "title": "Testing",
+              "description": "Learn how to create test scripts that use Local Tableland under the hood.",
+              "source": "@site/docs/sdk/reference/testing.md",
+              "sourceDirName": "sdk/reference",
+              "slug": "/sdk/reference/testing",
+              "permalink": "/sdk/reference/testing",
+              "draft": false,
+              "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/sdk/reference/testing.md",
+              "tags": [],
+              "version": "current",
+              "lastUpdatedBy": "Author",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "Oct 14, 2018",
+              "frontMatter": {
+                "title": "Testing",
+                "description": "Learn how to create test scripts that use Local Tableland under the hood."
               },
               "sidebar": "sdk",
               "previous": {
+                "title": "Type conversion",
+                "permalink": "/sdk/reference/type-conversion"
+              },
+              "next": {
                 "title": "ORM support",
                 "permalink": "/sdk/reference/orm"
               }
             },
             {
-              "unversionedId": "smart-contracts/configuring-table-write-access",
-              "id": "smart-contracts/configuring-table-write-access",
-              "title": "Configuring table write access",
-              "description": "Everything you need to know to control access for programmable tables.",
-              "source": "@site/docs/smart-contracts/configuring-table-write-access.md",
-              "sourceDirName": "smart-contracts",
-              "slug": "/smart-contracts/configuring-table-write-access",
-              "permalink": "/smart-contracts/configuring-table-write-access",
+              "unversionedId": "sdk/reference/type-conversion",
+              "id": "sdk/reference/type-conversion",
+              "title": "Type conversion",
+              "description": "Review converting from JavaScript to SQL types.",
+              "source": "@site/docs/sdk/reference/type-conversion.md",
+              "sourceDirName": "sdk/reference",
+              "slug": "/sdk/reference/type-conversion",
+              "permalink": "/sdk/reference/type-conversion",
               "draft": false,
-              "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/smart-contracts/configuring-table-write-access.md",
+              "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/sdk/reference/type-conversion.md",
               "tags": [],
               "version": "current",
               "lastUpdatedBy": "Author",
               "lastUpdatedAt": 1539502055,
               "formattedLastUpdatedAt": "Oct 14, 2018",
               "frontMatter": {
-                "title": "Configuring table write access",
+                "title": "Type conversion",
+                "description": "Review converting from JavaScript to SQL types.",
+                "keywords": [
+                  "type conversion"
+                ]
+              },
+              "sidebar": "sdk",
+              "previous": {
+                "title": "Registry API",
+                "permalink": "/sdk/core/registry-api"
+              },
+              "next": {
+                "title": "Testing",
+                "permalink": "/sdk/reference/testing"
+              }
+            },
+            {
+              "unversionedId": "smart-contracts/controller/contract-anatomy",
+              "id": "smart-contracts/controller/contract-anatomy",
+              "title": "Controller contract anatomy",
+              "description": "Dive into into the Tableland controller contract's design.",
+              "source": "@site/docs/smart-contracts/controller/contract-anatomy.md",
+              "sourceDirName": "smart-contracts/controller",
+              "slug": "/smart-contracts/controller/contract-anatomy",
+              "permalink": "/smart-contracts/controller/contract-anatomy",
+              "draft": false,
+              "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/smart-contracts/controller/contract-anatomy.md",
+              "tags": [],
+              "version": "current",
+              "lastUpdatedBy": "Author",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "Oct 14, 2018",
+              "frontMatter": {
+                "title": "Controller contract anatomy",
+                "sidebar_label": "Controller contract",
+                "description": "Dive into into the Tableland controller contract's design."
+              },
+              "sidebar": "smartContracts",
+              "previous": {
+                "title": "Configure write access",
+                "permalink": "/smart-contracts/controller/"
+              },
+              "next": {
+                "title": "Creating controllers",
+                "permalink": "/smart-contracts/controller/creating-controllers"
+              }
+            },
+            {
+              "unversionedId": "smart-contracts/controller/creating-controllers",
+              "id": "smart-contracts/controller/creating-controllers",
+              "title": "Creating controllers",
+              "description": "Understand how to create a controller contract.",
+              "source": "@site/docs/smart-contracts/controller/creating-controllers.md",
+              "sourceDirName": "smart-contracts/controller",
+              "slug": "/smart-contracts/controller/creating-controllers",
+              "permalink": "/smart-contracts/controller/creating-controllers",
+              "draft": false,
+              "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/smart-contracts/controller/creating-controllers.md",
+              "tags": [],
+              "version": "current",
+              "lastUpdatedBy": "Author",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "Oct 14, 2018",
+              "frontMatter": {
+                "title": "Creating controllers",
+                "description": "Understand how to create a controller contract."
+              },
+              "sidebar": "smartContracts",
+              "previous": {
+                "title": "Controller contract",
+                "permalink": "/smart-contracts/controller/contract-anatomy"
+              },
+              "next": {
+                "title": "Setting controllers",
+                "permalink": "/smart-contracts/controller/setting-controllers"
+              }
+            },
+            {
+              "unversionedId": "smart-contracts/controller/README",
+              "id": "smart-contracts/controller/README",
+              "title": "Configure table write access",
+              "description": "Everything you need to know to control access for programmable tables.",
+              "source": "@site/docs/smart-contracts/controller/README.md",
+              "sourceDirName": "smart-contracts/controller",
+              "slug": "/smart-contracts/controller/",
+              "permalink": "/smart-contracts/controller/",
+              "draft": false,
+              "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/smart-contracts/controller/README.md",
+              "tags": [],
+              "version": "current",
+              "lastUpdatedBy": "Author",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "Oct 14, 2018",
+              "frontMatter": {
+                "title": "Configure table write access",
+                "sidebar_label": "Configure write access",
                 "description": "Everything you need to know to control access for programmable tables."
               },
               "sidebar": "smartContracts",
               "previous": {
-                "title": "Creating tables from contracts",
+                "title": "Contract owned tables",
                 "permalink": "/smart-contracts/creating-tables-from-contracts"
               },
               "next": {
-                "title": "Serving NFT metadata from smart contracts",
-                "permalink": "/smart-contracts/serving-nft-metadata"
+                "title": "Controller contract",
+                "permalink": "/smart-contracts/controller/contract-anatomy"
               }
             },
             {
-              "unversionedId": "smart-contracts/contracts",
-              "id": "smart-contracts/contracts",
-              "title": "Deployed contracts",
-              "description": "A list of deployed Tableland registry contracts for each supported chain.",
-              "source": "@site/docs/smart-contracts/contracts.md",
-              "sourceDirName": "smart-contracts",
-              "slug": "/smart-contracts/contracts",
-              "permalink": "/smart-contracts/contracts",
+              "unversionedId": "smart-contracts/controller/setting-controllers",
+              "id": "smart-contracts/controller/setting-controllers",
+              "title": "Setting controllers",
+              "description": "Understand how to set or unset a controller contract.",
+              "source": "@site/docs/smart-contracts/controller/setting-controllers.md",
+              "sourceDirName": "smart-contracts/controller",
+              "slug": "/smart-contracts/controller/setting-controllers",
+              "permalink": "/smart-contracts/controller/setting-controllers",
               "draft": false,
-              "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/smart-contracts/contracts.md",
+              "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/smart-contracts/controller/setting-controllers.md",
               "tags": [],
               "version": "current",
               "lastUpdatedBy": "Author",
               "lastUpdatedAt": 1539502055,
               "formattedLastUpdatedAt": "Oct 14, 2018",
               "frontMatter": {
-                "title": "Deployed contracts",
-                "description": "A list of deployed Tableland registry contracts for each supported chain.",
-                "keywords": [
-                  "chains",
-                  "contract"
-                ]
+                "title": "Setting controllers",
+                "description": "Understand how to set or unset a controller contract."
               },
               "sidebar": "smartContracts",
               "previous": {
-                "title": "Get started",
-                "permalink": "/smart-contracts/"
+                "title": "Creating controllers",
+                "permalink": "/smart-contracts/controller/creating-controllers"
               },
               "next": {
-                "title": "Creating tables from contracts",
-                "permalink": "/smart-contracts/creating-tables-from-contracts"
+                "title": "Example contracts",
+                "permalink": "/smart-contracts/examples/"
               }
             },
             {
@@ -2074,6 +2247,7 @@
               "formattedLastUpdatedAt": "Oct 14, 2018",
               "frontMatter": {
                 "title": "Creating tables from contracts",
+                "sidebar_label": "Contract owned tables",
                 "description": "Learn how to create tables from and owned by a smart contract.",
                 "keywords": [
                   "create table"
@@ -2081,36 +2255,386 @@
               },
               "sidebar": "smartContracts",
               "previous": {
-                "title": "Deployed contracts",
-                "permalink": "/smart-contracts/contracts"
+                "title": "Get started",
+                "permalink": "/smart-contracts/get-started"
               },
               "next": {
-                "title": "Configuring table write access",
-                "permalink": "/smart-contracts/configuring-table-write-access"
+                "title": "Configure write access",
+                "permalink": "/smart-contracts/controller/"
               }
             },
             {
-              "unversionedId": "smart-contracts/getting-started",
-              "id": "smart-contracts/getting-started",
-              "title": "Getting started",
-              "description": "Get up an running with smart contracts and Tableland.",
-              "source": "@site/docs/smart-contracts/getting-started.md",
+              "unversionedId": "smart-contracts/deployed-contracts",
+              "id": "smart-contracts/deployed-contracts",
+              "title": "Deployed contracts",
+              "description": "A list of deployed Tableland registry contracts for each supported chain.",
+              "source": "@site/docs/smart-contracts/deployed-contracts.md",
               "sourceDirName": "smart-contracts",
-              "slug": "/smart-contracts/getting-started",
-              "permalink": "/smart-contracts/getting-started",
+              "slug": "/smart-contracts/deployed-contracts",
+              "permalink": "/smart-contracts/deployed-contracts",
               "draft": false,
-              "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/smart-contracts/getting-started.md",
+              "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/smart-contracts/deployed-contracts.md",
               "tags": [],
               "version": "current",
               "lastUpdatedBy": "Author",
               "lastUpdatedAt": 1539502055,
               "formattedLastUpdatedAt": "Oct 14, 2018",
               "frontMatter": {
-                "title": "Getting started",
+                "title": "Deployed contracts",
+                "description": "A list of deployed Tableland registry contracts for each supported chain.",
+                "keywords": [
+                  "chains",
+                  "contract"
+                ]
+              },
+              "sidebar": "smartContracts",
+              "previous": {
+                "title": "Error handling",
+                "permalink": "/smart-contracts/error-handling"
+              },
+              "next": {
+                "title": "Using Remix",
+                "permalink": "/smart-contracts/using-remix"
+              }
+            },
+            {
+              "unversionedId": "smart-contracts/error-handling",
+              "id": "smart-contracts/error-handling",
+              "title": "Error handling",
+              "description": "Look at some error handling strategies when writing on-chain SQL.",
+              "source": "@site/docs/smart-contracts/error-handling.md",
+              "sourceDirName": "smart-contracts",
+              "slug": "/smart-contracts/error-handling",
+              "permalink": "/smart-contracts/error-handling",
+              "draft": false,
+              "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/smart-contracts/error-handling.md",
+              "tags": [],
+              "version": "current",
+              "lastUpdatedBy": "Author",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "Oct 14, 2018",
+              "frontMatter": {
+                "title": "Error handling",
+                "description": "Look at some error handling strategies when writing on-chain SQL.",
+                "keywords": [
+                  "tableland smart contracts"
+                ]
+              },
+              "sidebar": "smartContracts",
+              "previous": {
+                "title": "Solidity to SQL types",
+                "permalink": "/smart-contracts/solidity-to-sql-types"
+              },
+              "next": {
+                "title": "Deployed contracts",
+                "permalink": "/smart-contracts/deployed-contracts"
+              }
+            },
+            {
+              "unversionedId": "smart-contracts/examples/allow-all-controller",
+              "id": "smart-contracts/examples/allow-all-controller",
+              "title": "Allow all controller",
+              "description": "Provision access so that any account can perform any action on a table.",
+              "source": "@site/docs/smart-contracts/examples/allow-all-controller.md",
+              "sourceDirName": "smart-contracts/examples",
+              "slug": "/smart-contracts/examples/allow-all-controller",
+              "permalink": "/smart-contracts/examples/allow-all-controller",
+              "draft": false,
+              "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/smart-contracts/examples/allow-all-controller.md",
+              "tags": [],
+              "version": "current",
+              "lastUpdatedBy": "Author",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "Oct 14, 2018",
+              "frontMatter": {
+                "title": "Allow all controller",
+                "description": "Provision access so that any account can perform any action on a table."
+              },
+              "sidebar": "smartContracts",
+              "previous": {
+                "title": "Example contracts",
+                "permalink": "/smart-contracts/examples/"
+              },
+              "next": {
+                "title": "Complex controller",
+                "permalink": "/smart-contracts/examples/complex-controller"
+              }
+            },
+            {
+              "unversionedId": "smart-contracts/examples/complex-controller",
+              "id": "smart-contracts/examples/complex-controller",
+              "title": "Complex controller",
+              "description": "Create a controller with balance and token ownership checks.",
+              "source": "@site/docs/smart-contracts/examples/complex-controller.md",
+              "sourceDirName": "smart-contracts/examples",
+              "slug": "/smart-contracts/examples/complex-controller",
+              "permalink": "/smart-contracts/examples/complex-controller",
+              "draft": false,
+              "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/smart-contracts/examples/complex-controller.md",
+              "tags": [],
+              "version": "current",
+              "lastUpdatedBy": "Author",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "Oct 14, 2018",
+              "frontMatter": {
+                "title": "Complex controller",
+                "description": "Create a controller with balance and token ownership checks."
+              },
+              "sidebar": "smartContracts",
+              "previous": {
+                "title": "Allow all controller",
+                "permalink": "/smart-contracts/examples/allow-all-controller"
+              },
+              "next": {
+                "title": "Raw controller",
+                "permalink": "/smart-contracts/examples/raw-controller"
+              }
+            },
+            {
+              "unversionedId": "smart-contracts/examples/create-from-contract",
+              "id": "smart-contracts/examples/create-from-contract",
+              "title": "Create from contract",
+              "description": "Create a table from a contract.",
+              "source": "@site/docs/smart-contracts/examples/create-from-contract.md",
+              "sourceDirName": "smart-contracts/examples",
+              "slug": "/smart-contracts/examples/create-from-contract",
+              "permalink": "/smart-contracts/examples/create-from-contract",
+              "draft": false,
+              "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/smart-contracts/examples/create-from-contract.md",
+              "tags": [],
+              "version": "current",
+              "lastUpdatedBy": "Author",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "Oct 14, 2018",
+              "frontMatter": {
+                "title": "Create from contract",
+                "description": "Create a table from a contract."
+              },
+              "sidebar": "smartContracts",
+              "previous": {
+                "title": "Gated voting",
+                "permalink": "/smart-contracts/examples/gated-voting"
+              },
+              "next": {
+                "title": "ERC721A Queryable",
+                "permalink": "/smart-contracts/examples/erc721a-queryable"
+              }
+            },
+            {
+              "unversionedId": "smart-contracts/examples/erc721a-enumerable",
+              "id": "smart-contracts/examples/erc721a-enumerable",
+              "title": "ERC721A enumerable",
+              "description": "Create an ERC721A enumerable contract.",
+              "source": "@site/docs/smart-contracts/examples/erc721a-enumerable.md",
+              "sourceDirName": "smart-contracts/examples",
+              "slug": "/smart-contracts/examples/erc721a-enumerable",
+              "permalink": "/smart-contracts/examples/erc721a-enumerable",
+              "draft": false,
+              "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/smart-contracts/examples/erc721a-enumerable.md",
+              "tags": [],
+              "version": "current",
+              "lastUpdatedBy": "Author",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "Oct 14, 2018",
+              "frontMatter": {
+                "title": "ERC721A enumerable",
+                "description": "Create an ERC721A enumerable contract."
+              },
+              "sidebar": "smartContracts",
+              "previous": {
+                "title": "ERC721A Queryable",
+                "permalink": "/smart-contracts/examples/erc721a-queryable"
+              },
+              "next": {
+                "title": "Using SQLHelpers",
+                "permalink": "/smart-contracts/examples/using-sql-helpers"
+              }
+            },
+            {
+              "unversionedId": "smart-contracts/examples/erc721a-queryable",
+              "id": "smart-contracts/examples/erc721a-queryable",
+              "title": "ERC721A Queryable",
+              "description": "Create an ERC721A queryable contract.",
+              "source": "@site/docs/smart-contracts/examples/erc721a-queryable.md",
+              "sourceDirName": "smart-contracts/examples",
+              "slug": "/smart-contracts/examples/erc721a-queryable",
+              "permalink": "/smart-contracts/examples/erc721a-queryable",
+              "draft": false,
+              "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/smart-contracts/examples/erc721a-queryable.md",
+              "tags": [],
+              "version": "current",
+              "lastUpdatedBy": "Author",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "Oct 14, 2018",
+              "frontMatter": {
+                "title": "ERC721A Queryable",
+                "description": "Create an ERC721A queryable contract."
+              },
+              "sidebar": "smartContracts",
+              "previous": {
+                "title": "Create from contract",
+                "permalink": "/smart-contracts/examples/create-from-contract"
+              },
+              "next": {
+                "title": "ERC721A enumerable",
+                "permalink": "/smart-contracts/examples/erc721a-enumerable"
+              }
+            },
+            {
+              "unversionedId": "smart-contracts/examples/gated-voting",
+              "id": "smart-contracts/examples/gated-voting",
+              "title": "Gated voting",
+              "description": "Create a contract that gates writes to a voting table based on ERC721 token ownership.",
+              "source": "@site/docs/smart-contracts/examples/gated-voting.md",
+              "sourceDirName": "smart-contracts/examples",
+              "slug": "/smart-contracts/examples/gated-voting",
+              "permalink": "/smart-contracts/examples/gated-voting",
+              "draft": false,
+              "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/smart-contracts/examples/gated-voting.md",
+              "tags": [],
+              "version": "current",
+              "lastUpdatedBy": "Author",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "Oct 14, 2018",
+              "frontMatter": {
+                "title": "Gated voting",
+                "description": "Create a contract that gates writes to a voting table based on ERC721 token ownership."
+              },
+              "sidebar": "smartContracts",
+              "previous": {
+                "title": "Raw controller",
+                "permalink": "/smart-contracts/examples/raw-controller"
+              },
+              "next": {
+                "title": "Create from contract",
+                "permalink": "/smart-contracts/examples/create-from-contract"
+              }
+            },
+            {
+              "unversionedId": "smart-contracts/examples/raw-controller",
+              "id": "smart-contracts/examples/raw-controller",
+              "title": "Raw controller",
+              "description": "Create an raw Tableland controller.",
+              "source": "@site/docs/smart-contracts/examples/raw-controller.md",
+              "sourceDirName": "smart-contracts/examples",
+              "slug": "/smart-contracts/examples/raw-controller",
+              "permalink": "/smart-contracts/examples/raw-controller",
+              "draft": false,
+              "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/smart-contracts/examples/raw-controller.md",
+              "tags": [],
+              "version": "current",
+              "lastUpdatedBy": "Author",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "Oct 14, 2018",
+              "frontMatter": {
+                "title": "Raw controller",
+                "description": "Create an raw Tableland controller."
+              },
+              "sidebar": "smartContracts",
+              "previous": {
+                "title": "Complex controller",
+                "permalink": "/smart-contracts/examples/complex-controller"
+              },
+              "next": {
+                "title": "Gated voting",
+                "permalink": "/smart-contracts/examples/gated-voting"
+              }
+            },
+            {
+              "unversionedId": "smart-contracts/examples/README",
+              "id": "smart-contracts/examples/README",
+              "title": "Example contracts",
+              "description": "Check out any of the starter contracts for Tableland controllers or registry interactions.",
+              "source": "@site/docs/smart-contracts/examples/README.md",
+              "sourceDirName": "smart-contracts/examples",
+              "slug": "/smart-contracts/examples/",
+              "permalink": "/smart-contracts/examples/",
+              "draft": false,
+              "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/smart-contracts/examples/README.md",
+              "tags": [],
+              "version": "current",
+              "lastUpdatedBy": "Author",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "Oct 14, 2018",
+              "frontMatter": {
+                "title": "Example contracts",
+                "description": "Check out any of the starter contracts for Tableland controllers or registry interactions.",
+                "keywords": [
+                  "controllers",
+                  "examples"
+                ]
+              },
+              "sidebar": "smartContracts",
+              "previous": {
+                "title": "Setting controllers",
+                "permalink": "/smart-contracts/controller/setting-controllers"
+              },
+              "next": {
+                "title": "Allow all controller",
+                "permalink": "/smart-contracts/examples/allow-all-controller"
+              }
+            },
+            {
+              "unversionedId": "smart-contracts/examples/using-sql-helpers",
+              "id": "smart-contracts/examples/using-sql-helpers",
+              "title": "Using SQLHelpers",
+              "description": "Create an contract that uses SQLHelpers library.",
+              "source": "@site/docs/smart-contracts/examples/using-sql-helpers.md",
+              "sourceDirName": "smart-contracts/examples",
+              "slug": "/smart-contracts/examples/using-sql-helpers",
+              "permalink": "/smart-contracts/examples/using-sql-helpers",
+              "draft": false,
+              "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/smart-contracts/examples/using-sql-helpers.md",
+              "tags": [],
+              "version": "current",
+              "lastUpdatedBy": "Author",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "Oct 14, 2018",
+              "frontMatter": {
+                "title": "Using SQLHelpers",
+                "description": "Create an contract that uses SQLHelpers library."
+              },
+              "sidebar": "smartContracts",
+              "previous": {
+                "title": "ERC721A enumerable",
+                "permalink": "/smart-contracts/examples/erc721a-enumerable"
+              },
+              "next": {
+                "title": "Serve NFT metadata",
+                "permalink": "/smart-contracts/serving-nft-metadata"
+              }
+            },
+            {
+              "unversionedId": "smart-contracts/get-started",
+              "id": "smart-contracts/get-started",
+              "title": "Get started",
+              "description": "Get up an running with smart contracts and Tableland.",
+              "source": "@site/docs/smart-contracts/get-started.md",
+              "sourceDirName": "smart-contracts",
+              "slug": "/smart-contracts/get-started",
+              "permalink": "/smart-contracts/get-started",
+              "draft": false,
+              "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/smart-contracts/get-started.md",
+              "tags": [],
+              "version": "current",
+              "lastUpdatedBy": "Author",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "Oct 14, 2018",
+              "frontMatter": {
+                "title": "Get started",
                 "description": "Get up an running with smart contracts and Tableland.",
                 "keywords": [
                   "tableland smart contracts"
                 ]
+              },
+              "sidebar": "smartContracts",
+              "previous": {
+                "title": "Overview",
+                "permalink": "/smart-contracts/"
+              },
+              "next": {
+                "title": "Contract owned tables",
+                "permalink": "/smart-contracts/creating-tables-from-contracts"
               }
             },
             {
@@ -2139,18 +2663,18 @@
               },
               "sidebar": "smartContracts",
               "previous": {
-                "title": "Serving NFT metadata from smart contracts",
+                "title": "Serve NFT metadata",
                 "permalink": "/smart-contracts/serving-nft-metadata"
               },
               "next": {
-                "title": "Solidity to SQL Types",
-                "permalink": "/smart-contracts/solidity-to-sql-types"
+                "title": "URI encoding",
+                "permalink": "/smart-contracts/uri-encoding"
               }
             },
             {
               "unversionedId": "smart-contracts/README",
               "id": "smart-contracts/README",
-              "title": "Get started",
+              "title": "Overview",
               "description": "Interact with Tableland using smart contracts.",
               "source": "@site/docs/smart-contracts/README.md",
               "sourceDirName": "smart-contracts",
@@ -2164,19 +2688,19 @@
               "lastUpdatedAt": 1539502055,
               "formattedLastUpdatedAt": "Oct 14, 2018",
               "frontMatter": {
-                "title": "Get started",
+                "title": "Overview",
                 "description": "Interact with Tableland using smart contracts."
               },
               "sidebar": "smartContracts",
               "next": {
-                "title": "Deployed contracts",
-                "permalink": "/smart-contracts/contracts"
+                "title": "Get started",
+                "permalink": "/smart-contracts/get-started"
               }
             },
             {
               "unversionedId": "smart-contracts/serving-nft-metadata",
               "id": "smart-contracts/serving-nft-metadata",
-              "title": "Serving NFT metadata from smart contracts",
+              "title": "Serve NFT metadata from smart contracts",
               "description": "Learn how to write, format, and deploy SQL in your smart contracts to produce NFT JSON metadata.",
               "source": "@site/docs/smart-contracts/serving-nft-metadata.md",
               "sourceDirName": "smart-contracts",
@@ -2190,7 +2714,8 @@
               "lastUpdatedAt": 1539502055,
               "formattedLastUpdatedAt": "Oct 14, 2018",
               "frontMatter": {
-                "title": "Serving NFT metadata from smart contracts",
+                "title": "Serve NFT metadata from smart contracts",
+                "sidebar_label": "Serve NFT metadata",
                 "description": "Learn how to write, format, and deploy SQL in your smart contracts to produce NFT JSON metadata.",
                 "keywords": [
                   "create table"
@@ -2198,8 +2723,8 @@
               },
               "sidebar": "smartContracts",
               "previous": {
-                "title": "Configuring table write access",
-                "permalink": "/smart-contracts/configuring-table-write-access"
+                "title": "Using SQLHelpers",
+                "permalink": "/smart-contracts/examples/using-sql-helpers"
               },
               "next": {
                 "title": "Create an immutable table",
@@ -2209,7 +2734,7 @@
             {
               "unversionedId": "smart-contracts/solidity-to-sql-types",
               "id": "smart-contracts/solidity-to-sql-types",
-              "title": "Solidity to SQL Types",
+              "title": "Solidity to SQL types",
               "description": "Review the best practices for Solidity types and SQL compatibility.",
               "source": "@site/docs/smart-contracts/solidity-to-sql-types.md",
               "sourceDirName": "smart-contracts",
@@ -2223,7 +2748,7 @@
               "lastUpdatedAt": 1539502055,
               "formattedLastUpdatedAt": "Oct 14, 2018",
               "frontMatter": {
-                "title": "Solidity to SQL Types",
+                "title": "Solidity to SQL types",
                 "description": "Review the best practices for Solidity types and SQL compatibility.",
                 "keywords": [
                   "create table"
@@ -2231,12 +2756,12 @@
               },
               "sidebar": "smartContracts",
               "previous": {
-                "title": "Create an immutable table",
-                "permalink": "/smart-contracts/immutable-table"
-              },
-              "next": {
                 "title": "URI encoding",
                 "permalink": "/smart-contracts/uri-encoding"
+              },
+              "next": {
+                "title": "Error handling",
+                "permalink": "/smart-contracts/error-handling"
               }
             },
             {
@@ -2264,12 +2789,12 @@
               },
               "sidebar": "smartContracts",
               "previous": {
-                "title": "Solidity to SQL Types",
-                "permalink": "/smart-contracts/solidity-to-sql-types"
+                "title": "Create an immutable table",
+                "permalink": "/smart-contracts/immutable-table"
               },
               "next": {
-                "title": "Using Remix",
-                "permalink": "/smart-contracts/using-remix"
+                "title": "Solidity to SQL types",
+                "permalink": "/smart-contracts/solidity-to-sql-types"
               }
             },
             {
@@ -2297,8 +2822,8 @@
               },
               "sidebar": "smartContracts",
               "previous": {
-                "title": "URI encoding",
-                "permalink": "/smart-contracts/uri-encoding"
+                "title": "Deployed contracts",
+                "permalink": "/smart-contracts/deployed-contracts"
               }
             },
             {
@@ -2329,69 +2854,9 @@
               "sidebar": "sqlSpecification"
             },
             {
-              "unversionedId": "specs/validator-api",
-              "id": "specs/validator-api",
-              "title": "Validator API",
-              "description": "Interact directly with a Tableland validator node.",
-              "source": "@site/docs/specs/validator-api.md",
-              "sourceDirName": "specs",
-              "slug": "/specs/validator-api",
-              "permalink": "/specs/validator-api",
-              "draft": false,
-              "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/specs/validator-api.md",
-              "tags": [],
-              "version": "current",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
-              "formattedLastUpdatedAt": "Oct 14, 2018",
-              "frontMatter": {
-                "title": "Validator API",
-                "description": "Interact directly with a Tableland validator node.",
-                "keywords": [
-                  "rest api",
-                  "validator api"
-                ]
-              }
-            },
-            {
-              "unversionedId": "tools/local-tableland",
-              "id": "tools/local-tableland",
-              "title": "Local development & testing",
-              "description": "Build with Local Tableland to quickly iterate with Tableland using a local environment.",
-              "source": "@site/docs/tools/local-tableland.md",
-              "sourceDirName": "tools",
-              "slug": "/tools/local-tableland",
-              "permalink": "/tools/local-tableland",
-              "draft": false,
-              "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/tools/local-tableland.md",
-              "tags": [],
-              "version": "current",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
-              "formattedLastUpdatedAt": "Oct 14, 2018",
-              "frontMatter": {
-                "title": "Local development & testing",
-                "sidebar_label": "Local Tableland",
-                "description": "Build with Local Tableland to quickly iterate with Tableland using a local environment.",
-                "keywords": [
-                  "local tableland",
-                  "hardhat"
-                ]
-              },
-              "sidebar": "home",
-              "previous": {
-                "title": "Overview",
-                "permalink": "/tutorials/"
-              },
-              "next": {
-                "title": "SQL specification",
-                "permalink": "/specs/sql/"
-              }
-            },
-            {
               "unversionedId": "tutorials/building-games-on-arbitrum",
               "id": "tutorials/building-games-on-arbitrum",
-              "title": "Building a game on Arbitrum",
+              "title": "Build a game on Arbitrum",
               "description": "Deploy a smart contract-based game and interact with it a React app.",
               "source": "@site/docs/tutorials/building-games-on-arbitrum.md",
               "sourceDirName": "tutorials",
@@ -2405,7 +2870,7 @@
               "lastUpdatedAt": 1539502055,
               "formattedLastUpdatedAt": "Oct 14, 2018",
               "frontMatter": {
-                "title": "Building a game on Arbitrum",
+                "title": "Build a game on Arbitrum",
                 "description": "Deploy a smart contract-based game and interact with it a React app.",
                 "keywords": [
                   "polygon",
@@ -2414,7 +2879,7 @@
               },
               "sidebar": "tutorials",
               "previous": {
-                "title": "Creating a dynamic NFT with p5.js",
+                "title": "Create a dynamic NFT with p5.js",
                 "permalink": "/tutorials/dynamic-nft-p5js"
               },
               "next": {
@@ -2425,7 +2890,7 @@
             {
               "unversionedId": "tutorials/data-dao-polygon",
               "id": "tutorials/data-dao-polygon",
-              "title": "Building a Data DAO on Polygon",
+              "title": "Build a Data DAO on Polygon",
               "description": "Create a DAO that mints Tableland tables and makes them mutable only through successful DAO votes.",
               "source": "@site/docs/tutorials/data-dao-polygon.md",
               "sourceDirName": "tutorials",
@@ -2439,8 +2904,8 @@
               "lastUpdatedAt": 1539502055,
               "formattedLastUpdatedAt": "Oct 14, 2018",
               "frontMatter": {
-                "title": "Building a Data DAO on Polygon",
-                "sidebar_label": "Building a Data DAO",
+                "title": "Build a Data DAO on Polygon",
+                "sidebar_label": "Build a Data DAO",
                 "description": "Create a DAO that mints Tableland tables and makes them mutable only through successful DAO votes.",
                 "keywords": [
                   "polygon",
@@ -2460,7 +2925,7 @@
             {
               "unversionedId": "tutorials/dynamic-nft-chainlink",
               "id": "tutorials/dynamic-nft-chainlink",
-              "title": "Dynamic NFT with Chainlink Automation",
+              "title": "Dynamic NFT with Chainlink automation",
               "description": "Leverage Chainlink for automated NFT mutations.",
               "source": "@site/docs/tutorials/dynamic-nft-chainlink.md",
               "sourceDirName": "tutorials",
@@ -2474,7 +2939,7 @@
               "lastUpdatedAt": 1539502055,
               "formattedLastUpdatedAt": "Oct 14, 2018",
               "frontMatter": {
-                "title": "Dynamic NFT with Chainlink Automation",
+                "title": "Dynamic NFT with Chainlink automation",
                 "sidebar_label": "Dynamic NFT with Chainlink",
                 "description": "Leverage Chainlink for automated NFT mutations.",
                 "keywords": [
@@ -2484,18 +2949,18 @@
               },
               "sidebar": "tutorials",
               "previous": {
-                "title": "Building a game on Arbitrum",
+                "title": "Build a game on Arbitrum",
                 "permalink": "/tutorials/building-games-on-arbitrum"
               },
               "next": {
-                "title": "Building a Data DAO",
+                "title": "Build a Data DAO",
                 "permalink": "/tutorials/data-dao-polygon"
               }
             },
             {
               "unversionedId": "tutorials/dynamic-nft-p5js",
               "id": "tutorials/dynamic-nft-p5js",
-              "title": "Creating a dynamic NFT with p5.js",
+              "title": "Create a dynamic NFT with p5.js",
               "description": "Use p5.js to render data from an NFT that holds global game state in a table.",
               "source": "@site/docs/tutorials/dynamic-nft-p5js.md",
               "sourceDirName": "tutorials",
@@ -2509,7 +2974,7 @@
               "lastUpdatedAt": 1539502055,
               "formattedLastUpdatedAt": "Oct 14, 2018",
               "frontMatter": {
-                "title": "Creating a dynamic NFT with p5.js",
+                "title": "Create a dynamic NFT with p5.js",
                 "description": "Use p5.js to render data from an NFT that holds global game state in a table.",
                 "keywords": [
                   "tutorial",
@@ -2523,7 +2988,7 @@
                 "permalink": "/tutorials/dynamic-nft-solidity"
               },
               "next": {
-                "title": "Building a game on Arbitrum",
+                "title": "Build a game on Arbitrum",
                 "permalink": "/tutorials/building-games-on-arbitrum"
               }
             },
@@ -2559,7 +3024,7 @@
                 "permalink": "/tutorials/"
               },
               "next": {
-                "title": "Creating a dynamic NFT with p5.js",
+                "title": "Create a dynamic NFT with p5.js",
                 "permalink": "/tutorials/dynamic-nft-p5js"
               }
             },
@@ -2623,7 +3088,7 @@
               },
               "sidebar": "tutorials",
               "previous": {
-                "title": "Building a Data DAO",
+                "title": "Build a Data DAO",
                 "permalink": "/tutorials/data-dao-polygon"
               },
               "next": {
@@ -2819,7 +3284,7 @@
               "unversionedId": "validator/README",
               "id": "validator/README",
               "title": "Validator node",
-              "description": "Tableland node",
+              "description": "Learn how to run you own Tableland validator node.",
               "source": "@site/docs/validator/README.md",
               "sourceDirName": "validator",
               "slug": "/validator/",
@@ -2833,7 +3298,7 @@
               "formattedLastUpdatedAt": "Oct 14, 2018",
               "frontMatter": {
                 "title": "Validator node",
-                "description": "Tableland node",
+                "description": "Learn how to run you own Tableland validator node.",
                 "keywords": [
                   "validator"
                 ]
@@ -2887,6 +3352,13 @@
               },
               {
                 "type": "doc",
+                "id": "quickstarts/README",
+                "label": "Quickstarts",
+                "className": "sidebar-landing",
+                "translatable": true
+              },
+              {
+                "type": "doc",
                 "id": "sdk/README",
                 "label": "SDK",
                 "className": "sidebar-landing",
@@ -2933,8 +3405,8 @@
               },
               {
                 "type": "doc",
-                "id": "tools/local-tableland",
-                "label": "Local Tableland",
+                "id": "validator/README",
+                "label": "Validator node",
                 "className": "sidebar-landing",
                 "translatable": true
               },
@@ -2955,8 +3427,14 @@
               },
               {
                 "type": "html",
-                "value": "<h4 class=\"margin-top--md margin-bottom--sm sidepage-heading\">Fundamentals</h4>",
+                "value": "<h4 class=\"margin-top--md margin-bottom--none sidepage-heading\">Fundamentals</h4>",
                 "defaultStyle": true
+              },
+              {
+                "type": "html",
+                "value": "<hr />",
+                "defaultStyle": true,
+                "className": "sidebar-hr"
               },
               {
                 "type": "category",
@@ -2983,32 +3461,8 @@
                 "collapsible": true
               },
               {
-                "type": "category",
-                "label": "Quickstarts",
-                "link": {
-                  "type": "doc",
-                  "id": "fundamentals/quickstarts/README"
-                },
-                "items": [
-                  {
-                    "type": "doc",
-                    "id": "fundamentals/quickstarts/sdk-quickstart"
-                  },
-                  {
-                    "type": "doc",
-                    "id": "fundamentals/quickstarts/smart-contract-quickstart"
-                  },
-                  {
-                    "type": "doc",
-                    "id": "fundamentals/quickstarts/cli-quickstart"
-                  },
-                  {
-                    "type": "doc",
-                    "id": "fundamentals/quickstarts/api-quickstart"
-                  }
-                ],
-                "collapsed": true,
-                "collapsible": true
+                "type": "doc",
+                "id": "fundamentals/use-cases"
               },
               {
                 "type": "html",
@@ -3070,6 +3524,10 @@
                 "collapsible": true
               },
               {
+                "type": "doc",
+                "id": "fundamentals/architecture/query-optimization"
+              },
+              {
                 "type": "html",
                 "value": "<h6 class=\"margin-top--md margin-bottom--none sidebar-section\">CONCEPTS</h6>",
                 "defaultStyle": true
@@ -3079,10 +3537,6 @@
                 "value": "<hr />",
                 "defaultStyle": true,
                 "className": "sidebar-hr"
-              },
-              {
-                "type": "doc",
-                "id": "fundamentals/concepts/use-cases"
               },
               {
                 "type": "doc",
@@ -3129,8 +3583,14 @@
               },
               {
                 "type": "html",
-                "value": "<h4 class=\"margin-top--md margin-bottom--sm sidepage-heading\">Playbooks</h4>",
+                "value": "<h4 class=\"margin-top--md margin-bottom--none sidepage-heading\">Playbooks</h4>",
                 "defaultStyle": true
+              },
+              {
+                "type": "html",
+                "value": "<hr />",
+                "defaultStyle": true,
+                "className": "sidebar-hr"
               },
               {
                 "type": "doc",
@@ -3203,7 +3663,7 @@
                 "id": "playbooks/walkthroughs/sql-faqs"
               }
             ],
-            "sdk": [
+            "quickstarts": [
               {
                 "type": "link",
                 "label": "Back to home",
@@ -3212,12 +3672,18 @@
               },
               {
                 "type": "html",
-                "value": "<h4 class=\"margin-top--md margin-bottom--sm sidepage-heading\">SDK</h4>",
+                "value": "<h4 class=\"margin-top--md margin-bottom--none sidepage-heading\">Quickstarts</h4>",
                 "defaultStyle": true
               },
               {
+                "type": "html",
+                "value": "<hr />",
+                "defaultStyle": true,
+                "className": "sidebar-hr"
+              },
+              {
                 "type": "doc",
-                "id": "sdk/README"
+                "id": "quickstarts/README"
               },
               {
                 "type": "html",
@@ -3229,6 +3695,83 @@
                 "value": "<hr />",
                 "defaultStyle": true,
                 "className": "sidebar-hr"
+              },
+              {
+                "type": "doc",
+                "id": "quickstarts/sdk-quickstart"
+              },
+              {
+                "type": "doc",
+                "id": "quickstarts/smart-contract-quickstart"
+              },
+              {
+                "type": "doc",
+                "id": "quickstarts/cli-quickstart"
+              },
+              {
+                "type": "doc",
+                "id": "quickstarts/api-quickstart"
+              },
+              {
+                "type": "doc",
+                "id": "quickstarts/local-tableland"
+              },
+              {
+                "type": "html",
+                "value": "<h6 class=\"margin-top--md margin-bottom--none sidebar-section\">WEB APP FRAMEWORKS</h6>",
+                "defaultStyle": true
+              },
+              {
+                "type": "html",
+                "value": "<hr />",
+                "defaultStyle": true,
+                "className": "sidebar-hr"
+              },
+              {
+                "type": "doc",
+                "id": "quickstarts/reactjs"
+              },
+              {
+                "type": "doc",
+                "id": "quickstarts/wagmi"
+              },
+              {
+                "type": "html",
+                "value": "<h6 class=\"margin-top--md margin-bottom--none sidebar-section\">CONTRACT FRAMEWORKS</h6>",
+                "defaultStyle": true
+              },
+              {
+                "type": "html",
+                "value": "<hr />",
+                "defaultStyle": true,
+                "className": "sidebar-hr"
+              },
+              {
+                "type": "doc",
+                "id": "quickstarts/hardhat"
+              }
+            ],
+            "sdk": [
+              {
+                "type": "link",
+                "label": "Back to home",
+                "className": "sidepage-back-home",
+                "href": "/"
+              },
+              {
+                "type": "html",
+                "value": "<h4 class=\"margin-top--md margin-bottom--none sidepage-heading\">SDK</h4>",
+                "defaultStyle": true
+              },
+              {
+                "type": "html",
+                "value": "<hr />",
+                "defaultStyle": true,
+                "className": "sidebar-hr"
+              },
+              {
+                "type": "doc",
+                "id": "sdk/README"
               },
               {
                 "type": "doc",
@@ -3252,34 +3795,15 @@
               },
               {
                 "type": "doc",
+                "id": "sdk/core/timeouts-error-handling"
+              },
+              {
+                "type": "doc",
                 "id": "sdk/core/validator-api"
               },
               {
                 "type": "doc",
                 "id": "sdk/core/registry-api"
-              },
-              {
-                "type": "doc",
-                "id": "sdk/core/timeouts"
-              },
-              {
-                "type": "html",
-                "value": "<h6 class=\"margin-top--md margin-bottom--none sidebar-section\">FRAMEWORKS</h6>",
-                "defaultStyle": true
-              },
-              {
-                "type": "html",
-                "value": "<hr />",
-                "defaultStyle": true,
-                "className": "sidebar-hr"
-              },
-              {
-                "type": "doc",
-                "id": "sdk/frameworks/reactjs"
-              },
-              {
-                "type": "doc",
-                "id": "sdk/frameworks/wagmi"
               },
               {
                 "type": "html",
@@ -3294,15 +3818,15 @@
               },
               {
                 "type": "doc",
-                "id": "sdk/reference/errors"
+                "id": "sdk/reference/type-conversion"
+              },
+              {
+                "type": "doc",
+                "id": "sdk/reference/testing"
               },
               {
                 "type": "doc",
                 "id": "sdk/reference/orm"
-              },
-              {
-                "type": "doc",
-                "id": "sdk/reference/sdk-faqs"
               }
             ],
             "smartContracts": [
@@ -3314,8 +3838,14 @@
               },
               {
                 "type": "html",
-                "value": "<h4 class=\"margin-top--md margin-bottom--sm sidepage-heading\">Smart contracts</h4>",
+                "value": "<h4 class=\"margin-top--md margin-bottom--none sidepage-heading\">Smart contracts</h4>",
                 "defaultStyle": true
+              },
+              {
+                "type": "html",
+                "value": "<hr />",
+                "defaultStyle": true,
+                "className": "sidebar-hr"
               },
               {
                 "type": "doc",
@@ -3323,15 +3853,90 @@
               },
               {
                 "type": "doc",
-                "id": "smart-contracts/contracts"
+                "id": "smart-contracts/get-started"
               },
               {
                 "type": "doc",
                 "id": "smart-contracts/creating-tables-from-contracts"
               },
               {
-                "type": "doc",
-                "id": "smart-contracts/configuring-table-write-access"
+                "type": "category",
+                "label": "Configure write access",
+                "link": {
+                  "type": "doc",
+                  "id": "smart-contracts/controller/README"
+                },
+                "items": [
+                  {
+                    "type": "doc",
+                    "id": "smart-contracts/controller/contract-anatomy"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "smart-contracts/controller/creating-controllers"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "smart-contracts/controller/setting-controllers"
+                  }
+                ],
+                "collapsed": true,
+                "collapsible": true
+              },
+              {
+                "type": "category",
+                "label": "Example contracts",
+                "link": {
+                  "type": "doc",
+                  "id": "smart-contracts/examples/README"
+                },
+                "items": [
+                  {
+                    "type": "doc",
+                    "id": "smart-contracts/examples/allow-all-controller"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "smart-contracts/examples/complex-controller"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "smart-contracts/examples/raw-controller"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "smart-contracts/examples/gated-voting"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "smart-contracts/examples/create-from-contract"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "smart-contracts/examples/erc721a-queryable"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "smart-contracts/examples/erc721a-enumerable"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "smart-contracts/examples/using-sql-helpers"
+                  }
+                ],
+                "collapsed": true,
+                "collapsible": true
+              },
+              {
+                "type": "html",
+                "value": "<h6 class=\"margin-top--md margin-bottom--none sidebar-section\">WALKTHROUGHS</h6>",
+                "defaultStyle": true
+              },
+              {
+                "type": "html",
+                "value": "<hr />",
+                "defaultStyle": true,
+                "className": "sidebar-hr"
               },
               {
                 "type": "doc",
@@ -3340,6 +3945,10 @@
               {
                 "type": "doc",
                 "id": "smart-contracts/immutable-table"
+              },
+              {
+                "type": "doc",
+                "id": "smart-contracts/uri-encoding"
               },
               {
                 "type": "html",
@@ -3358,7 +3967,11 @@
               },
               {
                 "type": "doc",
-                "id": "smart-contracts/uri-encoding"
+                "id": "smart-contracts/error-handling"
+              },
+              {
+                "type": "doc",
+                "id": "smart-contracts/deployed-contracts"
               },
               {
                 "type": "doc",
@@ -3374,8 +3987,14 @@
               },
               {
                 "type": "html",
-                "value": "<h4 class=\"margin-top--md margin-bottom--sm sidepage-heading\">CLI</h4>",
+                "value": "<h4 class=\"margin-top--md margin-bottom--none sidepage-heading\">CLI</h4>",
                 "defaultStyle": true
+              },
+              {
+                "type": "html",
+                "value": "<hr />",
+                "defaultStyle": true,
+                "className": "sidebar-hr"
               },
               {
                 "type": "doc",
@@ -3399,8 +4018,14 @@
               },
               {
                 "type": "html",
-                "value": "<h4 class=\"margin-top--md margin-bottom--sm sidepage-heading\">Validator API</h4>",
+                "value": "<h4 class=\"margin-top--md margin-bottom--none sidepage-heading\">Validator API</h4>",
                 "defaultStyle": true
+              },
+              {
+                "type": "html",
+                "value": "<hr />",
+                "defaultStyle": true,
+                "className": "sidebar-hr"
               },
               {
                 "type": "doc",
@@ -3424,8 +4049,14 @@
               },
               {
                 "type": "html",
-                "value": "<h4 class=\"margin-top--md margin-bottom--sm sidepage-heading\">Tutorials</h4>",
+                "value": "<h4 class=\"margin-top--md margin-bottom--none sidepage-heading\">Tutorials</h4>",
                 "defaultStyle": true
+              },
+              {
+                "type": "html",
+                "value": "<hr />",
+                "defaultStyle": true,
+                "className": "sidebar-hr"
               },
               {
                 "type": "doc",
@@ -3506,8 +4137,14 @@
               },
               {
                 "type": "html",
-                "value": "<h4 class=\"margin-top--md margin-bottom--sm sidepage-heading\">Reference</h4>",
+                "value": "<h4 class=\"margin-top--md margin-bottom--none sidepage-heading\">Reference</h4>",
                 "defaultStyle": true
+              },
+              {
+                "type": "html",
+                "value": "<hr />",
+                "defaultStyle": true,
+                "className": "sidebar-hr"
               },
               {
                 "type": "doc",
@@ -3523,8 +4160,14 @@
               },
               {
                 "type": "html",
-                "value": "<h4 class=\"margin-top--md margin-bottom--sm sidepage-heading\">Reference</h4>",
+                "value": "<h4 class=\"margin-top--md margin-bottom--none sidepage-heading\">Reference</h4>",
                 "defaultStyle": true
+              },
+              {
+                "type": "html",
+                "value": "<hr />",
+                "defaultStyle": true,
+                "className": "sidebar-hr"
               },
               {
                 "type": "doc",
@@ -3540,8 +4183,14 @@
               },
               {
                 "type": "html",
-                "value": "<h4 class=\"margin-top--md margin-bottom--sm sidepage-heading\">Contribute</h4>",
+                "value": "<h4 class=\"margin-top--md margin-bottom--none sidepage-heading\">Contribute</h4>",
                 "defaultStyle": true
+              },
+              {
+                "type": "html",
+                "value": "<hr />",
+                "defaultStyle": true,
+                "className": "sidebar-hr"
               },
               {
                 "type": "doc",

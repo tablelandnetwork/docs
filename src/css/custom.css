@@ -490,6 +490,7 @@ input {
 }
 
 .menu__list-item:has(.sidebar-section),
+.menu__list-item:has(.sidepage-heading),
 .menu__list-item:has(.landing-section) {
   padding-bottom: 0 !important;
 }

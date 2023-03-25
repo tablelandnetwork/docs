@@ -109,7 +109,7 @@ export default [
   },
   {
     path: '/',
-    component: ComponentCreator('/', '389'),
+    component: ComponentCreator('/', '4b9'),
     routes: [
       {
         path: '/',
@@ -208,6 +208,12 @@ export default [
         sidebar: "fundamentals"
       },
       {
+        path: '/fundamentals/architecture/query-optimization',
+        component: ComponentCreator('/fundamentals/architecture/query-optimization', '8a2'),
+        exact: true,
+        sidebar: "fundamentals"
+      },
+      {
         path: '/fundamentals/architecture/table-token',
         component: ComponentCreator('/fundamentals/architecture/table-token', '4c3'),
         exact: true,
@@ -256,12 +262,6 @@ export default [
         sidebar: "fundamentals"
       },
       {
-        path: '/fundamentals/concepts/use-cases',
-        component: ComponentCreator('/fundamentals/concepts/use-cases', 'da1'),
-        exact: true,
-        sidebar: "fundamentals"
-      },
-      {
         path: '/fundamentals/considerations-tradeoffs',
         component: ComponentCreator('/fundamentals/considerations-tradeoffs', 'bb2'),
         exact: true,
@@ -274,32 +274,8 @@ export default [
         sidebar: "fundamentals"
       },
       {
-        path: '/fundamentals/quickstarts/',
-        component: ComponentCreator('/fundamentals/quickstarts/', '401'),
-        exact: true,
-        sidebar: "fundamentals"
-      },
-      {
-        path: '/fundamentals/quickstarts/api-quickstart',
-        component: ComponentCreator('/fundamentals/quickstarts/api-quickstart', '008'),
-        exact: true,
-        sidebar: "fundamentals"
-      },
-      {
-        path: '/fundamentals/quickstarts/cli-quickstart',
-        component: ComponentCreator('/fundamentals/quickstarts/cli-quickstart', '0f1'),
-        exact: true,
-        sidebar: "fundamentals"
-      },
-      {
-        path: '/fundamentals/quickstarts/sdk-quickstart',
-        component: ComponentCreator('/fundamentals/quickstarts/sdk-quickstart', 'dcd'),
-        exact: true,
-        sidebar: "fundamentals"
-      },
-      {
-        path: '/fundamentals/quickstarts/smart-contract-quickstart',
-        component: ComponentCreator('/fundamentals/quickstarts/smart-contract-quickstart', '2b5'),
+        path: '/fundamentals/use-cases',
+        component: ComponentCreator('/fundamentals/use-cases', '781'),
         exact: true,
         sidebar: "fundamentals"
       },
@@ -382,6 +358,60 @@ export default [
         sidebar: "playbooks"
       },
       {
+        path: '/quickstarts/',
+        component: ComponentCreator('/quickstarts/', '357'),
+        exact: true,
+        sidebar: "quickstarts"
+      },
+      {
+        path: '/quickstarts/api-quickstart',
+        component: ComponentCreator('/quickstarts/api-quickstart', '907'),
+        exact: true,
+        sidebar: "quickstarts"
+      },
+      {
+        path: '/quickstarts/cli-quickstart',
+        component: ComponentCreator('/quickstarts/cli-quickstart', '14a'),
+        exact: true,
+        sidebar: "quickstarts"
+      },
+      {
+        path: '/quickstarts/hardhat',
+        component: ComponentCreator('/quickstarts/hardhat', '90a'),
+        exact: true,
+        sidebar: "quickstarts"
+      },
+      {
+        path: '/quickstarts/local-tableland',
+        component: ComponentCreator('/quickstarts/local-tableland', '9e2'),
+        exact: true,
+        sidebar: "quickstarts"
+      },
+      {
+        path: '/quickstarts/reactjs',
+        component: ComponentCreator('/quickstarts/reactjs', 'cca'),
+        exact: true,
+        sidebar: "quickstarts"
+      },
+      {
+        path: '/quickstarts/sdk-quickstart',
+        component: ComponentCreator('/quickstarts/sdk-quickstart', '790'),
+        exact: true,
+        sidebar: "quickstarts"
+      },
+      {
+        path: '/quickstarts/smart-contract-quickstart',
+        component: ComponentCreator('/quickstarts/smart-contract-quickstart', '965'),
+        exact: true,
+        sidebar: "quickstarts"
+      },
+      {
+        path: '/quickstarts/wagmi',
+        component: ComponentCreator('/quickstarts/wagmi', '1fc'),
+        exact: true,
+        sidebar: "quickstarts"
+      },
+      {
         path: '/sdk/',
         component: ComponentCreator('/sdk/', '155'),
         exact: true,
@@ -424,32 +454,14 @@ export default [
         sidebar: "sdk"
       },
       {
-        path: '/sdk/core/timeouts',
-        component: ComponentCreator('/sdk/core/timeouts', 'eb9'),
+        path: '/sdk/core/timeouts-error-handling',
+        component: ComponentCreator('/sdk/core/timeouts-error-handling', '1a9'),
         exact: true,
         sidebar: "sdk"
       },
       {
         path: '/sdk/core/validator-api',
         component: ComponentCreator('/sdk/core/validator-api', '2bf'),
-        exact: true,
-        sidebar: "sdk"
-      },
-      {
-        path: '/sdk/frameworks/reactjs',
-        component: ComponentCreator('/sdk/frameworks/reactjs', '8f4'),
-        exact: true,
-        sidebar: "sdk"
-      },
-      {
-        path: '/sdk/frameworks/wagmi',
-        component: ComponentCreator('/sdk/frameworks/wagmi', '92f'),
-        exact: true,
-        sidebar: "sdk"
-      },
-      {
-        path: '/sdk/reference/errors',
-        component: ComponentCreator('/sdk/reference/errors', '683'),
         exact: true,
         sidebar: "sdk"
       },
@@ -461,7 +473,18 @@ export default [
       },
       {
         path: '/sdk/reference/sdk-faqs',
-        component: ComponentCreator('/sdk/reference/sdk-faqs', 'a29'),
+        component: ComponentCreator('/sdk/reference/sdk-faqs', 'eeb'),
+        exact: true
+      },
+      {
+        path: '/sdk/reference/testing',
+        component: ComponentCreator('/sdk/reference/testing', 'b89'),
+        exact: true,
+        sidebar: "sdk"
+      },
+      {
+        path: '/sdk/reference/type-conversion',
+        component: ComponentCreator('/sdk/reference/type-conversion', 'd81'),
         exact: true,
         sidebar: "sdk"
       },
@@ -472,14 +495,26 @@ export default [
         sidebar: "smartContracts"
       },
       {
-        path: '/smart-contracts/configuring-table-write-access',
-        component: ComponentCreator('/smart-contracts/configuring-table-write-access', '4d6'),
+        path: '/smart-contracts/controller/',
+        component: ComponentCreator('/smart-contracts/controller/', '45f'),
         exact: true,
         sidebar: "smartContracts"
       },
       {
-        path: '/smart-contracts/contracts',
-        component: ComponentCreator('/smart-contracts/contracts', '31b'),
+        path: '/smart-contracts/controller/contract-anatomy',
+        component: ComponentCreator('/smart-contracts/controller/contract-anatomy', '704'),
+        exact: true,
+        sidebar: "smartContracts"
+      },
+      {
+        path: '/smart-contracts/controller/creating-controllers',
+        component: ComponentCreator('/smart-contracts/controller/creating-controllers', '4d7'),
+        exact: true,
+        sidebar: "smartContracts"
+      },
+      {
+        path: '/smart-contracts/controller/setting-controllers',
+        component: ComponentCreator('/smart-contracts/controller/setting-controllers', '650'),
         exact: true,
         sidebar: "smartContracts"
       },
@@ -490,9 +525,76 @@ export default [
         sidebar: "smartContracts"
       },
       {
-        path: '/smart-contracts/getting-started',
-        component: ComponentCreator('/smart-contracts/getting-started', '90c'),
-        exact: true
+        path: '/smart-contracts/deployed-contracts',
+        component: ComponentCreator('/smart-contracts/deployed-contracts', '3dc'),
+        exact: true,
+        sidebar: "smartContracts"
+      },
+      {
+        path: '/smart-contracts/error-handling',
+        component: ComponentCreator('/smart-contracts/error-handling', '19a'),
+        exact: true,
+        sidebar: "smartContracts"
+      },
+      {
+        path: '/smart-contracts/examples/',
+        component: ComponentCreator('/smart-contracts/examples/', '232'),
+        exact: true,
+        sidebar: "smartContracts"
+      },
+      {
+        path: '/smart-contracts/examples/allow-all-controller',
+        component: ComponentCreator('/smart-contracts/examples/allow-all-controller', '9fe'),
+        exact: true,
+        sidebar: "smartContracts"
+      },
+      {
+        path: '/smart-contracts/examples/complex-controller',
+        component: ComponentCreator('/smart-contracts/examples/complex-controller', 'b26'),
+        exact: true,
+        sidebar: "smartContracts"
+      },
+      {
+        path: '/smart-contracts/examples/create-from-contract',
+        component: ComponentCreator('/smart-contracts/examples/create-from-contract', '609'),
+        exact: true,
+        sidebar: "smartContracts"
+      },
+      {
+        path: '/smart-contracts/examples/erc721a-enumerable',
+        component: ComponentCreator('/smart-contracts/examples/erc721a-enumerable', 'aaa'),
+        exact: true,
+        sidebar: "smartContracts"
+      },
+      {
+        path: '/smart-contracts/examples/erc721a-queryable',
+        component: ComponentCreator('/smart-contracts/examples/erc721a-queryable', 'f74'),
+        exact: true,
+        sidebar: "smartContracts"
+      },
+      {
+        path: '/smart-contracts/examples/gated-voting',
+        component: ComponentCreator('/smart-contracts/examples/gated-voting', 'e16'),
+        exact: true,
+        sidebar: "smartContracts"
+      },
+      {
+        path: '/smart-contracts/examples/raw-controller',
+        component: ComponentCreator('/smart-contracts/examples/raw-controller', '49c'),
+        exact: true,
+        sidebar: "smartContracts"
+      },
+      {
+        path: '/smart-contracts/examples/using-sql-helpers',
+        component: ComponentCreator('/smart-contracts/examples/using-sql-helpers', 'cd1'),
+        exact: true,
+        sidebar: "smartContracts"
+      },
+      {
+        path: '/smart-contracts/get-started',
+        component: ComponentCreator('/smart-contracts/get-started', '7ce'),
+        exact: true,
+        sidebar: "smartContracts"
       },
       {
         path: '/smart-contracts/immutable-table',
@@ -529,17 +631,6 @@ export default [
         component: ComponentCreator('/specs/sql/', 'f07'),
         exact: true,
         sidebar: "sqlSpecification"
-      },
-      {
-        path: '/specs/validator-api',
-        component: ComponentCreator('/specs/validator-api', '421'),
-        exact: true
-      },
-      {
-        path: '/tools/local-tableland',
-        component: ComponentCreator('/tools/local-tableland', 'ce5'),
-        exact: true,
-        sidebar: "home"
       },
       {
         path: '/tutorials/',

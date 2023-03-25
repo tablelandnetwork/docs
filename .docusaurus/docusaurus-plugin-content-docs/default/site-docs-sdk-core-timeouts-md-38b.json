@@ -18,14 +18,5 @@
     "title": "Aborting statement method calls",
     "sidebar_label": "Timeouts",
     "description": "Get up an running with the Tableland SDK."
-  },
-  "sidebar": "sdk",
-  "previous": {
-    "title": "Registry API",
-    "permalink": "/sdk/core/registry-api"
-  },
-  "next": {
-    "title": "React",
-    "permalink": "/sdk/frameworks/reactjs"
   }
 }

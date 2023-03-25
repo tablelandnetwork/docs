@@ -199,7 +199,7 @@
     },
     "tag": "tag---tags-contributing-9-d-7-88b"
   },
-  "/-389": {
+  "/-4b9": {
     "__comp": "__comp---theme-doc-page-1-be-9be",
     "__context": {
       "plugin": "plugin---tags-54-b-0a7"
@@ -270,6 +270,10 @@
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---fundamentals-architecture-protocol-designb-84-552"
   },
+  "/fundamentals/architecture/query-optimization-8a2": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---fundamentals-architecture-query-optimizationa-8-b-061"
+  },
   "/fundamentals/architecture/table-token-4c3": {
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---fundamentals-architecture-table-token-607-526"
@@ -302,10 +306,6 @@
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---fundamentals-concepts-nft-metadatac-4-c-694"
   },
-  "/fundamentals/concepts/use-cases-da1": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---fundamentals-concepts-use-casese-99-b1e"
-  },
   "/fundamentals/considerations-tradeoffs-bb2": {
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---fundamentals-considerations-tradeoffs-078-4b3"
@@ -314,25 +314,9 @@
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---fundamentals-databases-5-f-7-f3e"
   },
-  "/fundamentals/quickstarts/-401": {
+  "/fundamentals/use-cases-781": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---fundamentals-quickstarts-b-16-0b7"
-  },
-  "/fundamentals/quickstarts/api-quickstart-008": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---fundamentals-quickstarts-api-quickstarte-03-21e"
-  },
-  "/fundamentals/quickstarts/cli-quickstart-0f1": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---fundamentals-quickstarts-cli-quickstart-18-c-d6e"
-  },
-  "/fundamentals/quickstarts/sdk-quickstart-dcd": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---fundamentals-quickstarts-sdk-quickstart-6-e-1-891"
-  },
-  "/fundamentals/quickstarts/smart-contract-quickstart-2b5": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---fundamentals-quickstarts-smart-contract-quickstart-877-c3a"
+    "content": "content---fundamentals-use-casesdf-3-313"
   },
   "/fundamentals/what-is-tableland-ced": {
     "__comp": "__comp---theme-doc-item-178-a40",
@@ -386,6 +370,42 @@
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---playbooks-walkthroughs-sql-faqs-8-eb-b06"
   },
+  "/quickstarts/-357": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---quickstarts-ce-9-990"
+  },
+  "/quickstarts/api-quickstart-907": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---quickstarts-api-quickstart-4-b-9-775"
+  },
+  "/quickstarts/cli-quickstart-14a": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---quickstarts-cli-quickstarta-0-d-1bf"
+  },
+  "/quickstarts/hardhat-90a": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---quickstarts-hardhat-755-52d"
+  },
+  "/quickstarts/local-tableland-9e2": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---quickstarts-local-tableland-2-a-3-5fa"
+  },
+  "/quickstarts/reactjs-cca": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---quickstarts-reactjsefc-1d7"
+  },
+  "/quickstarts/sdk-quickstart-790": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---quickstarts-sdk-quickstarta-70-b47"
+  },
+  "/quickstarts/smart-contract-quickstart-965": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---quickstarts-smart-contract-quickstartd-39-e72"
+  },
+  "/quickstarts/wagmi-1fc": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---quickstarts-wagmi-6-b-6-617"
+  },
   "/sdk/-155": {
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---sdk-538-e94"
@@ -414,53 +434,101 @@
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---sdk-core-signersf-48-3d9"
   },
-  "/sdk/core/timeouts-eb9": {
+  "/sdk/core/timeouts-error-handling-1a9": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---sdk-core-timeouts-38-b-d3a"
+    "content": "content---sdk-core-timeouts-error-handlingdfc-656"
   },
   "/sdk/core/validator-api-2bf": {
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---sdk-core-validator-api-201-658"
   },
-  "/sdk/frameworks/reactjs-8f4": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---sdk-frameworks-reactjs-42-f-2bd"
-  },
-  "/sdk/frameworks/wagmi-92f": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---sdk-frameworks-wagmid-7-b-9c7"
-  },
-  "/sdk/reference/errors-683": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---sdk-reference-errors-47-f-8f7"
-  },
   "/sdk/reference/orm-92d": {
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---sdk-reference-orm-1-a-6-da3"
   },
-  "/sdk/reference/sdk-faqs-a29": {
+  "/sdk/reference/sdk-faqs-eeb": {
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---sdk-reference-sdk-faqs-958-a4b"
+  },
+  "/sdk/reference/testing-b89": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---sdk-reference-testing-25-f-2cb"
+  },
+  "/sdk/reference/type-conversion-d81": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---sdk-reference-type-conversion-536-a24"
   },
   "/smart-contracts/-269": {
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---smart-contracts-605-49d"
   },
-  "/smart-contracts/configuring-table-write-access-4d6": {
+  "/smart-contracts/controller/-45f": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---smart-contracts-configuring-table-write-accessf-12-e28"
+    "content": "content---smart-contracts-controller-c-53-920"
   },
-  "/smart-contracts/contracts-31b": {
+  "/smart-contracts/controller/contract-anatomy-704": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---smart-contracts-contractsb-37-877"
+    "content": "content---smart-contracts-controller-contract-anatomy-74-e-404"
+  },
+  "/smart-contracts/controller/creating-controllers-4d7": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---smart-contracts-controller-creating-controllers-09-f-fee"
+  },
+  "/smart-contracts/controller/setting-controllers-650": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---smart-contracts-controller-setting-controllers-874-cc0"
   },
   "/smart-contracts/creating-tables-from-contracts-4c7": {
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---smart-contracts-creating-tables-from-contracts-05-f-b15"
   },
-  "/smart-contracts/getting-started-90c": {
+  "/smart-contracts/deployed-contracts-3dc": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---smart-contracts-getting-starteda-60-faf"
+    "content": "content---smart-contracts-deployed-contractsb-05-0b9"
+  },
+  "/smart-contracts/error-handling-19a": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---smart-contracts-error-handlingeab-0fe"
+  },
+  "/smart-contracts/examples/-232": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---smart-contracts-examples-055-7ce"
+  },
+  "/smart-contracts/examples/allow-all-controller-9fe": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---smart-contracts-examples-allow-all-controller-0-f-4-65e"
+  },
+  "/smart-contracts/examples/complex-controller-b26": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---smart-contracts-examples-complex-controller-61-b-869"
+  },
+  "/smart-contracts/examples/create-from-contract-609": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---smart-contracts-examples-create-from-contract-866-a59"
+  },
+  "/smart-contracts/examples/erc721a-enumerable-aaa": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---smart-contracts-examples-erc-721-a-enumerable-62-b-613"
+  },
+  "/smart-contracts/examples/erc721a-queryable-f74": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---smart-contracts-examples-erc-721-a-queryable-22-e-455"
+  },
+  "/smart-contracts/examples/gated-voting-e16": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---smart-contracts-examples-gated-voting-6-b-8-887"
+  },
+  "/smart-contracts/examples/raw-controller-49c": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---smart-contracts-examples-raw-controllerc-60-a12"
+  },
+  "/smart-contracts/examples/using-sql-helpers-cd1": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---smart-contracts-examples-using-sql-helpers-26-d-fdc"
+  },
+  "/smart-contracts/get-started-7ce": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---smart-contracts-get-started-00-f-610"
   },
   "/smart-contracts/immutable-table-0be": {
     "__comp": "__comp---theme-doc-item-178-a40",
@@ -485,14 +553,6 @@
   "/specs/sql/-f07": {
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---specs-sql-373-cc9"
-  },
-  "/specs/validator-api-421": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---specs-validator-apiead-15f"
-  },
-  "/tools/local-tableland-ce5": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---tools-local-tableland-735-172"
   },
   "/tutorials/-7a8": {
     "__comp": "__comp---theme-doc-item-178-a40",

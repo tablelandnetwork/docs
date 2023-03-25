@@ -1,0 +1,21 @@
+{
+  "unversionedId": "smart-contracts/examples/erc721-queryable",
+  "id": "smart-contracts/examples/erc721-queryable",
+  "title": "ERC721A Queryable",
+  "description": "Create an ERC721A queryable contract.",
+  "source": "@site/docs/smart-contracts/examples/erc721-queryable.md",
+  "sourceDirName": "smart-contracts/examples",
+  "slug": "/smart-contracts/examples/erc721-queryable",
+  "permalink": "/smart-contracts/examples/erc721-queryable",
+  "draft": false,
+  "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/smart-contracts/examples/erc721-queryable.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "title": "ERC721A Queryable",
+    "description": "Create an ERC721A queryable contract."
+  }
+}

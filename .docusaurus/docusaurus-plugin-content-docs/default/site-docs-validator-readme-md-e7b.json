@@ -2,7 +2,7 @@
   "unversionedId": "validator/README",
   "id": "validator/README",
   "title": "Validator node",
-  "description": "Tableland node",
+  "description": "Learn how to run you own Tableland validator node.",
   "source": "@site/docs/validator/README.md",
   "sourceDirName": "validator",
   "slug": "/validator/",
@@ -16,7 +16,7 @@
   "formattedLastUpdatedAt": "Oct 14, 2018",
   "frontMatter": {
     "title": "Validator node",
-    "description": "Tableland node",
+    "description": "Learn how to run you own Tableland validator node.",
     "keywords": [
       "validator"
     ]

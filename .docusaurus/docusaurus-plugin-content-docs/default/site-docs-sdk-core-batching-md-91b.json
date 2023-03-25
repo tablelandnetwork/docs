@@ -25,7 +25,7 @@
     "permalink": "/sdk/core/query-statement-methods"
   },
   "next": {
-    "title": "Validator API",
-    "permalink": "/sdk/core/validator-api"
+    "title": "Error handling",
+    "permalink": "/sdk/core/timeouts-error-handling"
   }
 }

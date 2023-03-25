@@ -9,7 +9,7 @@ Tableland is a web3 SQL database that can be used on EVM chains like Ethereum an
 
 ## Get started
 
-If you're eager to get building and use the Tableland protocol, you can dive right in with any of these [quickstarts](quickstarts):
+If you're eager to get building and use the Tableland protocol, you can dive right in with any of these [quickstarts](/quickstarts):
 
 - **SDK**: use JavaScript or TypeScript in your web apps to create, write, and read web3 native data.
 - **Smart contracts**: create and mutate tables directly with Solidity.

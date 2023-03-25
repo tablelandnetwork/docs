@@ -87,7 +87,7 @@ Sending a transaction is not free; you have to pay [gas](https://ethereum.org/en
 
 Layer 2 (L2) solutions are built on top of another chain to help [scale its performance](https://ethereum.org/en/developers/docs/scaling/). Generally, they refer to a network that is built on top of Ethereum and implement EVM compatability, allowing for easy porting from one chain to another. L2s make blockchains scalable by increasing throughput and lowering costs, opening the door for a broader range of applications to be built.
 
-# M
+## M
 
 ### Materialize
 

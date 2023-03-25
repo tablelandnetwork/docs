@@ -18,11 +18,7 @@
     "title": "Quickstarts",
     "description": "Make sure you're ready to start building by properly setting up your development environment."
   },
-  "sidebar": "fundamentals",
-  "previous": {
-    "title": "Databases & SQL",
-    "permalink": "/fundamentals/databases"
-  },
+  "sidebar": "quickStarts",
   "next": {
     "title": "SDK",
     "permalink": "/fundamentals/quickstarts/sdk-quickstart"

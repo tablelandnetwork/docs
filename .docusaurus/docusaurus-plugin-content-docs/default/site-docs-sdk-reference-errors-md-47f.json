@@ -24,11 +24,11 @@
   },
   "sidebar": "sdk",
   "previous": {
-    "title": "wagmi",
-    "permalink": "/sdk/frameworks/wagmi"
+    "title": "Timeouts",
+    "permalink": "/sdk/core/timeouts"
   },
   "next": {
-    "title": "ORM support",
-    "permalink": "/sdk/reference/orm"
+    "title": "React",
+    "permalink": "/sdk/frameworks/reactjs"
   }
 }

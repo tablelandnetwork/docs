@@ -8,7 +8,7 @@ keywords:
   - json metadata
 ---
 
-Tableland offers a dynamic and flexible way to store [NFT metadata](https://docs.opensea.io/docs/metadata-standards#metadata-structure). You can store the top-level metadata and nested attributes in tables and compose them together using a read query. In order to craft the data into ERC721 compliant metadata, developers can store NFT attributes (traits like integers or strings) and _pointers_ large media on IPFS (or similar) in table cells—with access controls to allow for data mutability.
+Tableland offers a dynamic and flexible way to store [NFT metadata](/fundamentals/concepts/nft-metadata). You can use Tableland for structuring the top-level metadata and nested attributes in tables and compose them together using a read query. In order to craft the data into ERC721 compliant metadata, developers can store NFT attributes (traits like integers or strings) and _pointers_ large media on IPFS (or similar) in table cells—with access controls to allow for data mutability.
 
 ## Table data
 
@@ -40,14 +40,14 @@ For these examples, let's assume there exists `attributes` where every `id` repr
 )
 ```
 
-It has data that defines its attributes, and the top-level data (`image` and `name`) can be composed within the `SELECT` statement.
+It has data that defines its attributes, and the top-level data (`image`, `name`, and `external_url`) can be composed within the `SELECT` statement.
 
 | id  | display_type | trait_type | value  |
 | --- | ------------ | ---------- | ------ |
 | 1   | string       | color      | blue   |
 | 2   | string       | color      | yellow |
 
-For example, the first represents a token with an `id` of `1` and some metadata that defines its `color` trait as the string `blue`.
+For example, the first row represents a token with an `id` of `1` and some metadata that defines its `color` trait as the string `blue`, the second is a token with an `id` of `2` and a `color` that's `yellow`, etc.
 
 ## JSON objects
 
@@ -85,11 +85,11 @@ This will create an object for only the rows where, for example, `id = 1` since 
 
 ## JSON array with objects
 
-NFT metadata has top-level keys of `name` and `image`, which often may incorporate the `id`. There is also an `attributes` key that is an array of objects that match the JSON object exemplified above. Note that other key-values are common in NFT metadata; for simplicity sake, these are ignored for the moment but could easily be incorporated (e.g., `description` or `external_url`).
+NFT metadata has top-level keys of `name`, `image`, and `external_url`, which often may incorporate the `id`. There is also an `attributes` key that is an array of objects which match the JSON object exemplified above. Note that other key-values are possible in NFT metadata. For simplicity sake, these are ignored for the moment but could easily be incorporated within the query itself (e.g., a top-level `description` that's the same for every NFT).
 
 You'll need to create an object that contains these top-level definitions, and the `attributes` will need to make use of the [JSON group array](/playbooks/sql/functions#objects) function. Namely, the `json_group_array()` will allow you to take one or more table rows that meet the `WHERE` clause condition and create JSON objects from them.
 
-Here, you're using both the JSON object and array functions along with the `||` operator to [concatenate values into strings](/playbooks/sql/functions#string-concatenation).
+Here, you're using both the JSON object and array functions along with the `||` operator to [concatenate values into strings](/playbooks/sql/functions#string-concatenation). Note that if you're _not_ using IPFS to store images (e.g., if storing on a hosted server), you should replace `'ipfs://QmVK.../'` with your base URL.
 
 ```sql
 SELECT
@@ -102,7 +102,7 @@ SELECT
       json_object(
         'display_type', display_type,
         'trait_type', trait_type,
-        'value', color
+        'value', value
       )
     )
   )
@@ -111,9 +111,9 @@ FROM
 WHERE id = <id>;
 ```
 
-Without going into too much detail on [IPFS](https://ipfs.tech/), the `image` is being stored in some directory where the path to the image can simply be appended to the end of the URL (e.g., `ipfs://QmVK.../1` would point to an image for an NFT `id` of `1`). Hence, when someone views the underlying value mapped to the `image` key, it'll be the [location of the actual media](https://bafybeidpnfh2zc6esvou3kfhhvxmy2qrmngrqczj7adnuygjsh3ulrrfeu.ipfs.nftstorage.link/100/image_full.png). The same pattern is often used for the `external_url` to point to some website landing page for the NFT.
+Without going into too much detail on [IPFS](https://ipfs.tech/), this assumes the `image` is being stored in some directory where the path to the image can simply be appended to the end of the URL (e.g., `ipfs://QmVK.../1` would point to an image for an NFT `id` of `1`). Hence, when someone views the underlying value mapped to the `image` key, it'll be the [location of the actual media](https://bafybeidpnfh2zc6esvou3kfhhvxmy2qrmngrqczj7adnuygjsh3ulrrfeu.ipfs.nftstorage.link/100/image_full.png). The same pattern is often used for the `external_url` to point to some website landing page for the NFT.
 
-If you queried for the row where `id = 1`in `attributes`, the result would look resemble the following:
+If you queried for the row where `id = 1` in `attributes`, the result would look resemble the following:
 
 ```json
 {
@@ -163,13 +163,34 @@ If you run the same query above, it'll produce an `attributes` array with two ob
 }
 ```
 
+## Dynamic metadata
+
+To make the metadata change, all it takes is an `UPDATE` statement. Perhaps the owner has permission to change the `color` of their owned token. You would then execute a statement like so:
+
+```sql
+UPDATE
+  attributes(color)
+SET
+  color = <color>
+WHERE
+  id = <id>;
+```
+
+For example, the owner of token ID `1` might want to set the color to `purple`—using these values in the query above would change the table's data for that row and column, thus, automatically returning the new `purple` attribute whenever that query is made.
+
+| id  | display_type | trait_type | value      |
+| --- | ------------ | ---------- | ---------- |
+| 1   | string       | color      | **purple** |
+
+In other words, once you set a read query in place, it will always pull the live table state and reflect its latest changes.
+
 ## More than one table
 
-In the preceding examples, some "static" metadata was composed with values defined _within_ the read query, including the (truncated) IPFS CID `QmVK...`. Instead, these static values could exist in a ["lookups" table and then composed](https://dev.tableland.xyz/blog/rigs-data-storage-design-update) with SQL.
+In the preceding examples, some "shared" metadata was composed with values defined _within_ the read query, including the (truncated) IPFS CID `QmVK...` and `external_url`. Instead, these shared values could exist in a ["lookups" table and then composed](https://dev.tableland.xyz/blog/rigs-data-storage-design-update) with SQL.
 
-If you want to change existing metadata, all it really takes is mutating table values. Thus, instead of the read query defining hard-coded values that _could_ change (such as updating what `QmVK...` CID is storing images), you can future-proof any changes by storing "static"-ish values in another table. In other words, the read query would handle composing data across multiple tables.
+If you want to change existing metadata, all it really takes is mutating table values. Thus, rather than the read query defining hard-coded values that _could_ change (such as updating the folder that's storing images and changing the `QmVK...` CID), you can future-proof any changes by storing shared values in another table. In other words, the read query would handle composing data across multiple tables that define potentially mutable commonalities.
 
-A new table can be created—call it `lookups`—with the following schema:
+A new table can be created—call it `lookups`—with the following schema.
 
 ```sql
 (
@@ -178,13 +199,13 @@ A new table can be created—call it `lookups`—with the following schema:
 )
 ```
 
-Thus, the table is pretty small (one total row):
+The table is pretty small (one total row) but could have more values included, based on your metadata needs.
 
 | cid       | external_base_url      |
 | --------- | ---------------------- |
 | `QmVK...` | `https://example.com/` |
 
-It has data that defines its attributes, and the top-level data (`image` and `name`) can be composed within the `SELECT` statement.
+This holds data that is now part the top-level data (`image` and `external_url`) and can be composed within the `SELECT` statement. Note that if you're _not_ using IPFS to store images, you can replace the `cid` column so that it mimics the `external_base_url` setup. This would slightly alter the query portion for `image` and resemble how the `external_url` is formed.
 
 ```sql
 SELECT
@@ -199,7 +220,7 @@ SELECT
       json_object(
         'display_type', display_type,
         'trait_type', trait_type,
-        'value', color
+        'value', value
       )
     )
   )

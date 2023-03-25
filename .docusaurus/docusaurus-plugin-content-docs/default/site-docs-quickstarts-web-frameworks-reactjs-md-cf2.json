@@ -1,0 +1,36 @@
+{
+  "unversionedId": "quickstarts/web-frameworks/reactjs",
+  "id": "quickstarts/web-frameworks/reactjs",
+  "title": "Use Tableland with React",
+  "description": "Quickly set up a React application with Tableland via an account and database connection.",
+  "source": "@site/docs/quickstarts/web-frameworks/reactjs.md",
+  "sourceDirName": "quickstarts/web-frameworks",
+  "slug": "/quickstarts/web-frameworks/reactjs",
+  "permalink": "/quickstarts/web-frameworks/reactjs",
+  "draft": false,
+  "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/quickstarts/web-frameworks/reactjs.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "title": "Use Tableland with React",
+    "sidebar_label": "React",
+    "description": "Quickly set up a React application with Tableland via an account and database connection.",
+    "keywords": [
+      "quickstart",
+      "quickstarts",
+      "react"
+    ]
+  },
+  "sidebar": "quickStarts",
+  "previous": {
+    "title": "REST API",
+    "permalink": "/quickstarts/api-quickstart"
+  },
+  "next": {
+    "title": "wagmi",
+    "permalink": "/quickstarts/web-frameworks/wagmi"
+  }
+}

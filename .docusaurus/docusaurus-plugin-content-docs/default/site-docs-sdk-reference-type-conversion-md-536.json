@@ -2,7 +2,7 @@
   "unversionedId": "sdk/reference/type-conversion",
   "id": "sdk/reference/type-conversion",
   "title": "Type conversion",
-  "description": "Understand how JavaScript and SQL types should align.",
+  "description": "Review converting from JavaScript to SQL types.",
   "source": "@site/docs/sdk/reference/type-conversion.md",
   "sourceDirName": "sdk/reference",
   "slug": "/sdk/reference/type-conversion",
@@ -16,9 +16,18 @@
   "formattedLastUpdatedAt": "Oct 14, 2018",
   "frontMatter": {
     "title": "Type conversion",
-    "description": "Understand how JavaScript and SQL types should align.",
+    "description": "Review converting from JavaScript to SQL types.",
     "keywords": [
-      "javascript types"
+      "type conversion"
     ]
+  },
+  "sidebar": "sdk",
+  "previous": {
+    "title": "Registry API",
+    "permalink": "/sdk/core/registry-api"
+  },
+  "next": {
+    "title": "Testing",
+    "permalink": "/sdk/reference/testing"
   }
 }

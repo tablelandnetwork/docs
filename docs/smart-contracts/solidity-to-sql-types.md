@@ -1,5 +1,5 @@
 ---
-title: Solidity to SQL Types
+title: Solidity to SQL types
 description: Review the best practices for Solidity types and SQL compatibility.
 keywords:
   - create table
@@ -13,6 +13,9 @@ Alternatively, consider casting the overflow-able numbers to or simply use a `in
 
 See the following tables for how each Solidity number should be defined in Tableland schemas:
 
+<div className="row margin-bottom--lg">
+<div className="col">
+
 | Solidity Type | SQL Type |
 | ------------- | -------- |
 | uint256       | text     |
@@ -21,6 +24,9 @@ See the following tables for how each Solidity number should be defined in Table
 | uint32        | integer  |
 | uint16        | integer  |
 | uint8         | integer  |
+
+</div>
+<div className="col">
 
 | Solidity Type | SQL Type |
 | ------------- | -------- |
@@ -31,6 +37,9 @@ See the following tables for how each Solidity number should be defined in Table
 | int16         | integer  |
 | uint8         | integer  |
 
+</div>
+</div>
+
 Other best practices have also been defined below:
 
 | Solidity Type | SQL Type |
@@ -39,20 +48,20 @@ Other best practices have also been defined below:
 | address       | text     |
 | bytes         | blob     |
 | bool          | text     |
-| bool int8     | integer  |
+| ~~bool~~ int8 | integer  |
 
 :::tip
 Tableland doesn’t support boolean values, so instead of using a Solidity `bool`, consider using a `uint8` to represent a true/false as `1` or `0`, which is then stored in Tableland as an `integer`.
 
 :::
 
-## Strings & Casting
+## Strings & casting
 
-A common practice is to use the `[Strings](https://docs.openzeppelin.com/contracts/3.x/api/utils#Strings)` library by OpenZeppelin when writing SQL statements in Solidity. This library has a number of useful methods, including `toString`, which takes a `uint256` and converts it into the `string` type.
+A common practice is to use the [`Strings`](https://docs.openzeppelin.com/contracts/3.x/api/utils#Strings) library by OpenZeppelin when writing SQL statements in Solidity. This library has a number of useful methods, including `toString`, which takes a `uint256` and converts it into the `string` type.
 
 For example, a quick and dirty "simple" cast from a `uint` to a `uint256` before calling the `Strings.toString()` method could resemble the following. The `multipleToString` method is simply an example of how to concatenate multiple strings together, which is often useful when generating SQL statements that use variables. Basically, use the `string` casting and `abi.encodePacked` with a comma-separated list of values with type `string`.
 
-```tsx
+```solidity
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.4;
 
@@ -70,7 +79,7 @@ contract SimpleCast {
 
 It's possible to cast any _unsigned_ integer to a `uint256` using `uint256(<number_here>)`. Since the `toString` method takes `uint256`, the casting is performed implicitly, meaning, `uint256(_i)` is unneeded in the example above (i.e., no need for `string(Strings.toString(uint256(_i)))`).
 
-For math reasons, there exists a `[SafeCast](https://docs.openzeppelin.com/contracts/3.x/api/utils#SafeCast)` library as well, which handles a full suite of number conversion possibilities. There are safety considerations to take into account since Solidity does not revert on overflows, so it’s always recommended to proceed with caution and ensure the proper testing has been performed in casting scenarios. Below is an example of how to use `SafeCast` to convert a signed integer `int8` to an unsigned `uint256`, thus, enabling `int8` to be used by the `Strings` library. Note that it still cannot convert a negative number into a positive one without some additional logic:
+For math reasons, there exists a [`SafeCast`](https://docs.openzeppelin.com/contracts/3.x/api/utils#SafeCast) library as well, which handles a full suite of number conversion possibilities. There are safety considerations to take into account since Solidity does not revert on overflows, so it’s always recommended to proceed with caution and ensure the proper testing has been performed in casting scenarios. Below is an example of how to use `SafeCast` to convert a signed integer `int8` to an unsigned `uint256`, thus, enabling `int8` to be used by the `Strings` library. Note that it still cannot convert a negative number into a positive one without some additional logic:
 
 ```tsx
 // SPDX-License-Identifier: MIT
@@ -94,12 +103,18 @@ contract SimpleCast {
 
 For reference, the `SafeCast` library comes equipped with all potential casting possibilities needed for number conversion. This includes the following:
 
+<div className="row margin-bottom--lg">
+<div className="col">
+
 - `toUint8`
 - `toUint16`
 - `toUint32`
 - `toUint64`
 - `toUint128`
 - `toUint256`
+
+</div>
+<div className="col">
 
 - `toInt8`
 - `toInt16`
@@ -108,33 +123,35 @@ For reference, the `SafeCast` library comes equipped with all potential casting 
 - `toInt128`
 - `toInt256`
 
+</div>
+</div>
+
 More information can be found in the `SafeCast` documentation: [here](https://docs.openzeppelin.com/contracts/3.x/api/utils#SafeCast).
 
-## Addresses & Casting
+## Addresses & casting
 
-The `Strings` library also comes with a `toHexString` method. This can be used to easily convert an address to a string and insert the value into a table. As a best practice, the `address` should be of type `text` in the Tableland world. For example, take some method that allows the calling address `_addr` to insert itself into a table:
+The `Strings` library also comes with a `toHexString` method. This can be used to easily convert an address to a string and insert the value into a table. As a best practice, the `address` should be of type `text` in the Tableland world. For example, take some method that allows the calling address `_addr` to insert itself into a table—assume the table's schema is a simple `address text`:
 
-```tsx
-/* schema: address text */
+```solidity
 function insertAddress(
-		address _addr,
-		unint256 tableId,
-		string tableName,
-		address tableland
-	) public {
-		string memory addr = Strings.toHexString(_addr);
-		tableland.runSQL(
-			_addr,
-			tableId,
-			// INSERT INTO {tableName} VALUES ('{addr}');
-			string.concat(
-				"INSERT INTO ",
-				tableName,
-				" VALUES ",
-				"('",
-				addr,
-				"');"
-			)
-		);
+	address _addr,
+	unint256 tableId,
+	string tableName,
+	address tableland
+) public {
+	string memory addr = Strings.toHexString(_addr);
+	tableland.runSQL(
+		_addr,
+		tableId,
+		// INSERT INTO {tableName} VALUES ('{addr}');
+		string.concat(
+			"INSERT INTO ",
+			tableName,
+			" VALUES ",
+			"('",
+			addr,
+			"');"
+		)
+	);
 }
 ```

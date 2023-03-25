@@ -1,0 +1,34 @@
+{
+  "unversionedId": "smart-contracts/deployed-contracts",
+  "id": "smart-contracts/deployed-contracts",
+  "title": "Deployed contracts",
+  "description": "A list of deployed Tableland registry contracts for each supported chain.",
+  "source": "@site/docs/smart-contracts/deployed-contracts.md",
+  "sourceDirName": "smart-contracts",
+  "slug": "/smart-contracts/deployed-contracts",
+  "permalink": "/smart-contracts/deployed-contracts",
+  "draft": false,
+  "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/smart-contracts/deployed-contracts.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "title": "Deployed contracts",
+    "description": "A list of deployed Tableland registry contracts for each supported chain.",
+    "keywords": [
+      "chains",
+      "contract"
+    ]
+  },
+  "sidebar": "smartContracts",
+  "previous": {
+    "title": "Error handling",
+    "permalink": "/smart-contracts/error-handling"
+  },
+  "next": {
+    "title": "Using Remix",
+    "permalink": "/smart-contracts/using-remix"
+  }
+}

@@ -19,13 +19,9 @@
     "sidebar_label": "REST API",
     "description": "Learn how to read table data or retrieve relevant validator information."
   },
-  "sidebar": "fundamentals",
+  "sidebar": "quickStarts",
   "previous": {
     "title": "CLI",
     "permalink": "/fundamentals/quickstarts/cli-quickstart"
-  },
-  "next": {
-    "title": "Protocol design",
-    "permalink": "/fundamentals/architecture/protocol-design"
   }
 }

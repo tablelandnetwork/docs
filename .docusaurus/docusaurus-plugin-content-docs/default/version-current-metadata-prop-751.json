@@ -54,6 +54,13 @@
       },
       {
         "type": "link",
+        "label": "Quickstarts",
+        "href": "/quickstarts/",
+        "className": "sidebar-landing",
+        "docId": "quickstarts/README"
+      },
+      {
+        "type": "link",
         "label": "SDK",
         "href": "/sdk/",
         "className": "sidebar-landing",
@@ -100,10 +107,10 @@
       },
       {
         "type": "link",
-        "label": "Local Tableland",
-        "href": "/tools/local-tableland",
+        "label": "Validator node",
+        "href": "/validator/",
         "className": "sidebar-landing",
-        "docId": "tools/local-tableland"
+        "docId": "validator/README"
       },
       {
         "type": "link",
@@ -122,8 +129,14 @@
       },
       {
         "type": "html",
-        "value": "<h4 class=\"margin-top--md margin-bottom--sm sidepage-heading\">Fundamentals</h4>",
+        "value": "<h4 class=\"margin-top--md margin-bottom--none sidepage-heading\">Fundamentals</h4>",
         "defaultStyle": true
+      },
+      {
+        "type": "html",
+        "value": "<hr />",
+        "defaultStyle": true,
+        "className": "sidebar-hr"
       },
       {
         "type": "category",
@@ -153,37 +166,10 @@
         "href": "/fundamentals/"
       },
       {
-        "type": "category",
-        "label": "Quickstarts",
-        "items": [
-          {
-            "type": "link",
-            "label": "SDK",
-            "href": "/fundamentals/quickstarts/sdk-quickstart",
-            "docId": "fundamentals/quickstarts/sdk-quickstart"
-          },
-          {
-            "type": "link",
-            "label": "Smart contracts",
-            "href": "/fundamentals/quickstarts/smart-contract-quickstart",
-            "docId": "fundamentals/quickstarts/smart-contract-quickstart"
-          },
-          {
-            "type": "link",
-            "label": "CLI",
-            "href": "/fundamentals/quickstarts/cli-quickstart",
-            "docId": "fundamentals/quickstarts/cli-quickstart"
-          },
-          {
-            "type": "link",
-            "label": "REST API",
-            "href": "/fundamentals/quickstarts/api-quickstart",
-            "docId": "fundamentals/quickstarts/api-quickstart"
-          }
-        ],
-        "collapsed": true,
-        "collapsible": true,
-        "href": "/fundamentals/quickstarts/"
+        "type": "link",
+        "label": "Use cases",
+        "href": "/fundamentals/use-cases",
+        "docId": "fundamentals/use-cases"
       },
       {
         "type": "html",
@@ -260,6 +246,12 @@
         "href": "/fundamentals/chains/"
       },
       {
+        "type": "link",
+        "label": "Queries & gas",
+        "href": "/fundamentals/architecture/query-optimization",
+        "docId": "fundamentals/architecture/query-optimization"
+      },
+      {
         "type": "html",
         "value": "<h6 class=\"margin-top--md margin-bottom--none sidebar-section\">CONCEPTS</h6>",
         "defaultStyle": true
@@ -269,12 +261,6 @@
         "value": "<hr />",
         "defaultStyle": true,
         "className": "sidebar-hr"
-      },
-      {
-        "type": "link",
-        "label": "Use cases",
-        "href": "/fundamentals/concepts/use-cases",
-        "docId": "fundamentals/concepts/use-cases"
       },
       {
         "type": "link",
@@ -333,8 +319,14 @@
       },
       {
         "type": "html",
-        "value": "<h4 class=\"margin-top--md margin-bottom--sm sidepage-heading\">Playbooks</h4>",
+        "value": "<h4 class=\"margin-top--md margin-bottom--none sidepage-heading\">Playbooks</h4>",
         "defaultStyle": true
+      },
+      {
+        "type": "html",
+        "value": "<hr />",
+        "defaultStyle": true,
+        "className": "sidebar-hr"
       },
       {
         "type": "link",
@@ -431,7 +423,7 @@
         "docId": "playbooks/walkthroughs/sql-faqs"
       }
     ],
-    "sdk": [
+    "quickstarts": [
       {
         "type": "link",
         "label": "Back to home",
@@ -440,14 +432,20 @@
       },
       {
         "type": "html",
-        "value": "<h4 class=\"margin-top--md margin-bottom--sm sidepage-heading\">SDK</h4>",
+        "value": "<h4 class=\"margin-top--md margin-bottom--none sidepage-heading\">Quickstarts</h4>",
         "defaultStyle": true
+      },
+      {
+        "type": "html",
+        "value": "<hr />",
+        "defaultStyle": true,
+        "className": "sidebar-hr"
       },
       {
         "type": "link",
         "label": "Overview",
-        "href": "/sdk/",
-        "docId": "sdk/README"
+        "href": "/quickstarts/",
+        "docId": "quickstarts/README"
       },
       {
         "type": "html",
@@ -459,6 +457,101 @@
         "value": "<hr />",
         "defaultStyle": true,
         "className": "sidebar-hr"
+      },
+      {
+        "type": "link",
+        "label": "SDK",
+        "href": "/quickstarts/sdk-quickstart",
+        "docId": "quickstarts/sdk-quickstart"
+      },
+      {
+        "type": "link",
+        "label": "Smart contracts",
+        "href": "/quickstarts/smart-contract-quickstart",
+        "docId": "quickstarts/smart-contract-quickstart"
+      },
+      {
+        "type": "link",
+        "label": "CLI",
+        "href": "/quickstarts/cli-quickstart",
+        "docId": "quickstarts/cli-quickstart"
+      },
+      {
+        "type": "link",
+        "label": "REST API",
+        "href": "/quickstarts/api-quickstart",
+        "docId": "quickstarts/api-quickstart"
+      },
+      {
+        "type": "link",
+        "label": "Local Tableland",
+        "href": "/quickstarts/local-tableland",
+        "docId": "quickstarts/local-tableland"
+      },
+      {
+        "type": "html",
+        "value": "<h6 class=\"margin-top--md margin-bottom--none sidebar-section\">WEB APP FRAMEWORKS</h6>",
+        "defaultStyle": true
+      },
+      {
+        "type": "html",
+        "value": "<hr />",
+        "defaultStyle": true,
+        "className": "sidebar-hr"
+      },
+      {
+        "type": "link",
+        "label": "React",
+        "href": "/quickstarts/reactjs",
+        "docId": "quickstarts/reactjs"
+      },
+      {
+        "type": "link",
+        "label": "wagmi",
+        "href": "/quickstarts/wagmi",
+        "docId": "quickstarts/wagmi"
+      },
+      {
+        "type": "html",
+        "value": "<h6 class=\"margin-top--md margin-bottom--none sidebar-section\">CONTRACT FRAMEWORKS</h6>",
+        "defaultStyle": true
+      },
+      {
+        "type": "html",
+        "value": "<hr />",
+        "defaultStyle": true,
+        "className": "sidebar-hr"
+      },
+      {
+        "type": "link",
+        "label": "Hardhat",
+        "href": "/quickstarts/hardhat",
+        "docId": "quickstarts/hardhat"
+      }
+    ],
+    "sdk": [
+      {
+        "type": "link",
+        "label": "Back to home",
+        "className": "sidepage-back-home",
+        "href": "/"
+      },
+      {
+        "type": "html",
+        "value": "<h4 class=\"margin-top--md margin-bottom--none sidepage-heading\">SDK</h4>",
+        "defaultStyle": true
+      },
+      {
+        "type": "html",
+        "value": "<hr />",
+        "defaultStyle": true,
+        "className": "sidebar-hr"
+      },
+      {
+        "type": "link",
+        "label": "Overview",
+        "href": "/sdk/",
+        "docId": "sdk/README"
       },
       {
         "type": "link",
@@ -492,6 +585,12 @@
       },
       {
         "type": "link",
+        "label": "Error handling",
+        "href": "/sdk/core/timeouts-error-handling",
+        "docId": "sdk/core/timeouts-error-handling"
+      },
+      {
+        "type": "link",
         "label": "Validator API",
         "href": "/sdk/core/validator-api",
         "docId": "sdk/core/validator-api"
@@ -503,35 +602,6 @@
         "docId": "sdk/core/registry-api"
       },
       {
-        "type": "link",
-        "label": "Timeouts",
-        "href": "/sdk/core/timeouts",
-        "docId": "sdk/core/timeouts"
-      },
-      {
-        "type": "html",
-        "value": "<h6 class=\"margin-top--md margin-bottom--none sidebar-section\">FRAMEWORKS</h6>",
-        "defaultStyle": true
-      },
-      {
-        "type": "html",
-        "value": "<hr />",
-        "defaultStyle": true,
-        "className": "sidebar-hr"
-      },
-      {
-        "type": "link",
-        "label": "React",
-        "href": "/sdk/frameworks/reactjs",
-        "docId": "sdk/frameworks/reactjs"
-      },
-      {
-        "type": "link",
-        "label": "wagmi",
-        "href": "/sdk/frameworks/wagmi",
-        "docId": "sdk/frameworks/wagmi"
-      },
-      {
         "type": "html",
         "value": "<h6 class=\"margin-top--md margin-bottom--none sidebar-section\">REFERENCE</h6>",
         "defaultStyle": true
@@ -544,21 +614,21 @@
       },
       {
         "type": "link",
-        "label": "Errors",
-        "href": "/sdk/reference/errors",
-        "docId": "sdk/reference/errors"
+        "label": "Type conversion",
+        "href": "/sdk/reference/type-conversion",
+        "docId": "sdk/reference/type-conversion"
+      },
+      {
+        "type": "link",
+        "label": "Testing",
+        "href": "/sdk/reference/testing",
+        "docId": "sdk/reference/testing"
       },
       {
         "type": "link",
         "label": "ORM support",
         "href": "/sdk/reference/orm",
         "docId": "sdk/reference/orm"
-      },
-      {
-        "type": "link",
-        "label": "FAQs",
-        "href": "/sdk/reference/sdk-faqs",
-        "docId": "sdk/reference/sdk-faqs"
       }
     ],
     "smartContracts": [
@@ -570,36 +640,131 @@
       },
       {
         "type": "html",
-        "value": "<h4 class=\"margin-top--md margin-bottom--sm sidepage-heading\">Smart contracts</h4>",
+        "value": "<h4 class=\"margin-top--md margin-bottom--none sidepage-heading\">Smart contracts</h4>",
         "defaultStyle": true
       },
       {
+        "type": "html",
+        "value": "<hr />",
+        "defaultStyle": true,
+        "className": "sidebar-hr"
+      },
+      {
         "type": "link",
-        "label": "Get started",
+        "label": "Overview",
         "href": "/smart-contracts/",
         "docId": "smart-contracts/README"
       },
       {
         "type": "link",
-        "label": "Deployed contracts",
-        "href": "/smart-contracts/contracts",
-        "docId": "smart-contracts/contracts"
+        "label": "Get started",
+        "href": "/smart-contracts/get-started",
+        "docId": "smart-contracts/get-started"
       },
       {
         "type": "link",
-        "label": "Creating tables from contracts",
+        "label": "Contract owned tables",
         "href": "/smart-contracts/creating-tables-from-contracts",
         "docId": "smart-contracts/creating-tables-from-contracts"
       },
       {
-        "type": "link",
-        "label": "Configuring table write access",
-        "href": "/smart-contracts/configuring-table-write-access",
-        "docId": "smart-contracts/configuring-table-write-access"
+        "type": "category",
+        "label": "Configure write access",
+        "items": [
+          {
+            "type": "link",
+            "label": "Controller contract",
+            "href": "/smart-contracts/controller/contract-anatomy",
+            "docId": "smart-contracts/controller/contract-anatomy"
+          },
+          {
+            "type": "link",
+            "label": "Creating controllers",
+            "href": "/smart-contracts/controller/creating-controllers",
+            "docId": "smart-contracts/controller/creating-controllers"
+          },
+          {
+            "type": "link",
+            "label": "Setting controllers",
+            "href": "/smart-contracts/controller/setting-controllers",
+            "docId": "smart-contracts/controller/setting-controllers"
+          }
+        ],
+        "collapsed": true,
+        "collapsible": true,
+        "href": "/smart-contracts/controller/"
+      },
+      {
+        "type": "category",
+        "label": "Example contracts",
+        "items": [
+          {
+            "type": "link",
+            "label": "Allow all controller",
+            "href": "/smart-contracts/examples/allow-all-controller",
+            "docId": "smart-contracts/examples/allow-all-controller"
+          },
+          {
+            "type": "link",
+            "label": "Complex controller",
+            "href": "/smart-contracts/examples/complex-controller",
+            "docId": "smart-contracts/examples/complex-controller"
+          },
+          {
+            "type": "link",
+            "label": "Raw controller",
+            "href": "/smart-contracts/examples/raw-controller",
+            "docId": "smart-contracts/examples/raw-controller"
+          },
+          {
+            "type": "link",
+            "label": "Gated voting",
+            "href": "/smart-contracts/examples/gated-voting",
+            "docId": "smart-contracts/examples/gated-voting"
+          },
+          {
+            "type": "link",
+            "label": "Create from contract",
+            "href": "/smart-contracts/examples/create-from-contract",
+            "docId": "smart-contracts/examples/create-from-contract"
+          },
+          {
+            "type": "link",
+            "label": "ERC721A Queryable",
+            "href": "/smart-contracts/examples/erc721a-queryable",
+            "docId": "smart-contracts/examples/erc721a-queryable"
+          },
+          {
+            "type": "link",
+            "label": "ERC721A enumerable",
+            "href": "/smart-contracts/examples/erc721a-enumerable",
+            "docId": "smart-contracts/examples/erc721a-enumerable"
+          },
+          {
+            "type": "link",
+            "label": "Using SQLHelpers",
+            "href": "/smart-contracts/examples/using-sql-helpers",
+            "docId": "smart-contracts/examples/using-sql-helpers"
+          }
+        ],
+        "collapsed": true,
+        "collapsible": true,
+        "href": "/smart-contracts/examples/"
+      },
+      {
+        "type": "html",
+        "value": "<h6 class=\"margin-top--md margin-bottom--none sidebar-section\">WALKTHROUGHS</h6>",
+        "defaultStyle": true
+      },
+      {
+        "type": "html",
+        "value": "<hr />",
+        "defaultStyle": true,
+        "className": "sidebar-hr"
       },
       {
         "type": "link",
-        "label": "Serving NFT metadata from smart contracts",
+        "label": "Serve NFT metadata",
         "href": "/smart-contracts/serving-nft-metadata",
         "docId": "smart-contracts/serving-nft-metadata"
       },
@@ -608,6 +773,12 @@
         "label": "Create an immutable table",
         "href": "/smart-contracts/immutable-table",
         "docId": "smart-contracts/immutable-table"
+      },
+      {
+        "type": "link",
+        "label": "URI encoding",
+        "href": "/smart-contracts/uri-encoding",
+        "docId": "smart-contracts/uri-encoding"
       },
       {
         "type": "html",
@@ -622,15 +793,21 @@
       },
       {
         "type": "link",
-        "label": "Solidity to SQL Types",
+        "label": "Solidity to SQL types",
         "href": "/smart-contracts/solidity-to-sql-types",
         "docId": "smart-contracts/solidity-to-sql-types"
       },
       {
         "type": "link",
-        "label": "URI encoding",
-        "href": "/smart-contracts/uri-encoding",
-        "docId": "smart-contracts/uri-encoding"
+        "label": "Error handling",
+        "href": "/smart-contracts/error-handling",
+        "docId": "smart-contracts/error-handling"
+      },
+      {
+        "type": "link",
+        "label": "Deployed contracts",
+        "href": "/smart-contracts/deployed-contracts",
+        "docId": "smart-contracts/deployed-contracts"
       },
       {
         "type": "link",
@@ -648,8 +825,14 @@
       },
       {
         "type": "html",
-        "value": "<h4 class=\"margin-top--md margin-bottom--sm sidepage-heading\">CLI</h4>",
+        "value": "<h4 class=\"margin-top--md margin-bottom--none sidepage-heading\">CLI</h4>",
         "defaultStyle": true
+      },
+      {
+        "type": "html",
+        "value": "<hr />",
+        "defaultStyle": true,
+        "className": "sidebar-hr"
       },
       {
         "type": "link",
@@ -679,8 +862,14 @@
       },
       {
         "type": "html",
-        "value": "<h4 class=\"margin-top--md margin-bottom--sm sidepage-heading\">Validator API</h4>",
+        "value": "<h4 class=\"margin-top--md margin-bottom--none sidepage-heading\">Validator API</h4>",
         "defaultStyle": true
+      },
+      {
+        "type": "html",
+        "value": "<hr />",
+        "defaultStyle": true,
+        "className": "sidebar-hr"
       },
       {
         "type": "link",
@@ -710,8 +899,14 @@
       },
       {
         "type": "html",
-        "value": "<h4 class=\"margin-top--md margin-bottom--sm sidepage-heading\">Tutorials</h4>",
+        "value": "<h4 class=\"margin-top--md margin-bottom--none sidepage-heading\">Tutorials</h4>",
         "defaultStyle": true
+      },
+      {
+        "type": "html",
+        "value": "<hr />",
+        "defaultStyle": true,
+        "className": "sidebar-hr"
       },
       {
         "type": "link",
@@ -738,13 +933,13 @@
       },
       {
         "type": "link",
-        "label": "Creating a dynamic NFT with p5.js",
+        "label": "Create a dynamic NFT with p5.js",
         "href": "/tutorials/dynamic-nft-p5js",
         "docId": "tutorials/dynamic-nft-p5js"
       },
       {
         "type": "link",
-        "label": "Building a game on Arbitrum",
+        "label": "Build a game on Arbitrum",
         "href": "/tutorials/building-games-on-arbitrum",
         "docId": "tutorials/building-games-on-arbitrum"
       },
@@ -767,7 +962,7 @@
       },
       {
         "type": "link",
-        "label": "Building a Data DAO",
+        "label": "Build a Data DAO",
         "href": "/tutorials/data-dao-polygon",
         "docId": "tutorials/data-dao-polygon"
       },
@@ -810,8 +1005,14 @@
       },
       {
         "type": "html",
-        "value": "<h4 class=\"margin-top--md margin-bottom--sm sidepage-heading\">Reference</h4>",
+        "value": "<h4 class=\"margin-top--md margin-bottom--none sidepage-heading\">Reference</h4>",
         "defaultStyle": true
+      },
+      {
+        "type": "html",
+        "value": "<hr />",
+        "defaultStyle": true,
+        "className": "sidebar-hr"
       },
       {
         "type": "link",
@@ -829,8 +1030,14 @@
       },
       {
         "type": "html",
-        "value": "<h4 class=\"margin-top--md margin-bottom--sm sidepage-heading\">Reference</h4>",
+        "value": "<h4 class=\"margin-top--md margin-bottom--none sidepage-heading\">Reference</h4>",
         "defaultStyle": true
+      },
+      {
+        "type": "html",
+        "value": "<hr />",
+        "defaultStyle": true,
+        "className": "sidebar-hr"
       },
       {
         "type": "link",
@@ -848,8 +1055,14 @@
       },
       {
         "type": "html",
-        "value": "<h4 class=\"margin-top--md margin-bottom--sm sidepage-heading\">Contribute</h4>",
+        "value": "<h4 class=\"margin-top--md margin-bottom--none sidepage-heading\">Contribute</h4>",
         "defaultStyle": true
+      },
+      {
+        "type": "html",
+        "value": "<hr />",
+        "defaultStyle": true,
+        "className": "sidebar-hr"
       },
       {
         "type": "link",
@@ -956,6 +1169,12 @@
       "description": "The Tableland protocol operates as a data scaling solution using chain-powered database mutations and a parallel adjacent network.",
       "sidebar": "fundamentals"
     },
+    "fundamentals/architecture/query-optimization": {
+      "id": "fundamentals/architecture/query-optimization",
+      "title": "Query optimization & gas",
+      "description": "Gas is paid for any on-chain query, so statement structure has an impact on cost.",
+      "sidebar": "fundamentals"
+    },
     "fundamentals/architecture/table-token": {
       "id": "fundamentals/architecture/table-token",
       "title": "TABLE token & identification",
@@ -1004,12 +1223,6 @@
       "description": "Understand the basics of storing and querying ERC721 metadata in table.",
       "sidebar": "fundamentals"
     },
-    "fundamentals/concepts/use-cases": {
-      "id": "fundamentals/concepts/use-cases",
-      "title": "Use cases",
-      "description": "A series of general use cases to consider.",
-      "sidebar": "fundamentals"
-    },
     "fundamentals/considerations-tradeoffs": {
       "id": "fundamentals/considerations-tradeoffs",
       "title": "Considerations & tradeoffs",
@@ -1022,40 +1235,16 @@
       "description": "Briefly look under the hood at relational databases.",
       "sidebar": "fundamentals"
     },
-    "fundamentals/quickstarts/api-quickstart": {
-      "id": "fundamentals/quickstarts/api-quickstart",
-      "title": "Validator API quickstart",
-      "description": "Learn how to read table data or retrieve relevant validator information.",
-      "sidebar": "fundamentals"
-    },
-    "fundamentals/quickstarts/cli-quickstart": {
-      "id": "fundamentals/quickstarts/cli-quickstart",
-      "title": "Quickstart",
-      "description": "Learn how to create a table, add some sample data, and query the data using the CLI.",
-      "sidebar": "fundamentals"
-    },
-    "fundamentals/quickstarts/README": {
-      "id": "fundamentals/quickstarts/README",
-      "title": "Quickstarts",
-      "description": "Make sure you're ready to start building by properly setting up your development environment.",
-      "sidebar": "fundamentals"
-    },
-    "fundamentals/quickstarts/sdk-quickstart": {
-      "id": "fundamentals/quickstarts/sdk-quickstart",
-      "title": "SDK quickstart",
-      "description": "Learn how to create a table, add some sample data, and query the data using the SDK.",
-      "sidebar": "fundamentals"
-    },
-    "fundamentals/quickstarts/smart-contract-quickstart": {
-      "id": "fundamentals/quickstarts/smart-contract-quickstart",
-      "title": "Smart contract quickstart",
-      "description": "Learn how to create a table and insert add some sample data using the Solidity.",
-      "sidebar": "fundamentals"
-    },
     "fundamentals/README": {
       "id": "fundamentals/README",
       "title": "Introduction",
       "description": "Figure out where to begin with Tableland, whether that's starting to build or figuring out how it all works.",
+      "sidebar": "fundamentals"
+    },
+    "fundamentals/use-cases": {
+      "id": "fundamentals/use-cases",
+      "title": "Use cases",
+      "description": "A series of general use cases to consider.",
       "sidebar": "fundamentals"
     },
     "fundamentals/what-is-tableland": {
@@ -1142,6 +1331,60 @@
       "description": "Check out helpful pointers when dealing with SQL.",
       "sidebar": "playbooks"
     },
+    "quickstarts/api-quickstart": {
+      "id": "quickstarts/api-quickstart",
+      "title": "Validator API quickstart",
+      "description": "Learn how to read table data or retrieve relevant validator information.",
+      "sidebar": "quickstarts"
+    },
+    "quickstarts/cli-quickstart": {
+      "id": "quickstarts/cli-quickstart",
+      "title": "CLI quickstart",
+      "description": "Learn how to create a table, add some sample data, and query the data using the CLI.",
+      "sidebar": "quickstarts"
+    },
+    "quickstarts/hardhat": {
+      "id": "quickstarts/hardhat",
+      "title": "Hardhat",
+      "description": "Use Tableland smart contracts with Hardhat.",
+      "sidebar": "quickstarts"
+    },
+    "quickstarts/local-tableland": {
+      "id": "quickstarts/local-tableland",
+      "title": "Local development & testing",
+      "description": "Build with Local Tableland to quickly iterate with Tableland using a local environment.",
+      "sidebar": "quickstarts"
+    },
+    "quickstarts/reactjs": {
+      "id": "quickstarts/reactjs",
+      "title": "Use Tableland with React",
+      "description": "Quickly set up a React application with Tableland via an account and database connection.",
+      "sidebar": "quickstarts"
+    },
+    "quickstarts/README": {
+      "id": "quickstarts/README",
+      "title": "Overview",
+      "description": "Make sure you're ready to start building by properly setting up your development environment.",
+      "sidebar": "quickstarts"
+    },
+    "quickstarts/sdk-quickstart": {
+      "id": "quickstarts/sdk-quickstart",
+      "title": "SDK quickstart",
+      "description": "Learn how to create a table, add some sample data, and query the data using the SDK.",
+      "sidebar": "quickstarts"
+    },
+    "quickstarts/smart-contract-quickstart": {
+      "id": "quickstarts/smart-contract-quickstart",
+      "title": "Smart contract quickstart",
+      "description": "Learn how to create a table and insert add some sample data using the Solidity.",
+      "sidebar": "quickstarts"
+    },
+    "quickstarts/wagmi": {
+      "id": "quickstarts/wagmi",
+      "title": "Use Tableland with wagmi",
+      "description": "Quickly add and use wagmi with Tableland and React.",
+      "sidebar": "quickstarts"
+    },
     "sdk/core/batching": {
       "id": "sdk/core/batching",
       "title": "Batching statement & operations",
@@ -1178,10 +1421,10 @@
       "description": "Access the Tableland network by first connecting to the base chain.",
       "sidebar": "sdk"
     },
-    "sdk/core/timeouts": {
-      "id": "sdk/core/timeouts",
-      "title": "Aborting statement method calls",
-      "description": "Get up an running with the Tableland SDK.",
+    "sdk/core/timeouts-error-handling": {
+      "id": "sdk/core/timeouts-error-handling",
+      "title": "Error handling",
+      "description": "Review SDK error handling setup and what types of messages will bubble up.",
       "sidebar": "sdk"
     },
     "sdk/core/validator-api": {
@@ -1190,28 +1433,10 @@
       "description": "The Validator API allows for direct access to a Tableland Validator node. This does not involve any on-chain actions and directly connects to a validator node.",
       "sidebar": "sdk"
     },
-    "sdk/frameworks/reactjs": {
-      "id": "sdk/frameworks/reactjs",
-      "title": "Use Tableland with React",
-      "description": "Quickly set up a React application with Tableland via an account and database connection.",
-      "sidebar": "sdk"
-    },
-    "sdk/frameworks/wagmi": {
-      "id": "sdk/frameworks/wagmi",
-      "title": "Use Tableland with wagmi",
-      "description": "Quickly add and use wagmi with Tableland and React.",
-      "sidebar": "sdk"
-    },
     "sdk/README": {
       "id": "sdk/README",
       "title": "Overview",
       "description": "Use the Tableland SDK in your JavaScript / TypeScript projects, with full Cloudflare D1 client compatibility.",
-      "sidebar": "sdk"
-    },
-    "sdk/reference/errors": {
-      "id": "sdk/reference/errors",
-      "title": "Errors",
-      "description": "Review SDK error handling setup and what types of messages will bubble up.",
       "sidebar": "sdk"
     },
     "sdk/reference/orm": {
@@ -1223,19 +1448,42 @@
     "sdk/reference/sdk-faqs": {
       "id": "sdk/reference/sdk-faqs",
       "title": "SDK FAQs",
-      "description": "Review commonly asked questions about the Tableland SDK.",
+      "description": "Review commonly asked questions about the Tableland SDK."
+    },
+    "sdk/reference/testing": {
+      "id": "sdk/reference/testing",
+      "title": "Testing",
+      "description": "Learn how to create test scripts that use Local Tableland under the hood.",
       "sidebar": "sdk"
     },
-    "smart-contracts/configuring-table-write-access": {
-      "id": "smart-contracts/configuring-table-write-access",
-      "title": "Configuring table write access",
+    "sdk/reference/type-conversion": {
+      "id": "sdk/reference/type-conversion",
+      "title": "Type conversion",
+      "description": "Review converting from JavaScript to SQL types.",
+      "sidebar": "sdk"
+    },
+    "smart-contracts/controller/contract-anatomy": {
+      "id": "smart-contracts/controller/contract-anatomy",
+      "title": "Controller contract anatomy",
+      "description": "Dive into into the Tableland controller contract's design.",
+      "sidebar": "smartContracts"
+    },
+    "smart-contracts/controller/creating-controllers": {
+      "id": "smart-contracts/controller/creating-controllers",
+      "title": "Creating controllers",
+      "description": "Understand how to create a controller contract.",
+      "sidebar": "smartContracts"
+    },
+    "smart-contracts/controller/README": {
+      "id": "smart-contracts/controller/README",
+      "title": "Configure table write access",
       "description": "Everything you need to know to control access for programmable tables.",
       "sidebar": "smartContracts"
     },
-    "smart-contracts/contracts": {
-      "id": "smart-contracts/contracts",
-      "title": "Deployed contracts",
-      "description": "A list of deployed Tableland registry contracts for each supported chain.",
+    "smart-contracts/controller/setting-controllers": {
+      "id": "smart-contracts/controller/setting-controllers",
+      "title": "Setting controllers",
+      "description": "Understand how to set or unset a controller contract.",
       "sidebar": "smartContracts"
     },
     "smart-contracts/creating-tables-from-contracts": {
@@ -1244,10 +1492,77 @@
       "description": "Learn how to create tables from and owned by a smart contract.",
       "sidebar": "smartContracts"
     },
-    "smart-contracts/getting-started": {
-      "id": "smart-contracts/getting-started",
-      "title": "Getting started",
-      "description": "Get up an running with smart contracts and Tableland."
+    "smart-contracts/deployed-contracts": {
+      "id": "smart-contracts/deployed-contracts",
+      "title": "Deployed contracts",
+      "description": "A list of deployed Tableland registry contracts for each supported chain.",
+      "sidebar": "smartContracts"
+    },
+    "smart-contracts/error-handling": {
+      "id": "smart-contracts/error-handling",
+      "title": "Error handling",
+      "description": "Look at some error handling strategies when writing on-chain SQL.",
+      "sidebar": "smartContracts"
+    },
+    "smart-contracts/examples/allow-all-controller": {
+      "id": "smart-contracts/examples/allow-all-controller",
+      "title": "Allow all controller",
+      "description": "Provision access so that any account can perform any action on a table.",
+      "sidebar": "smartContracts"
+    },
+    "smart-contracts/examples/complex-controller": {
+      "id": "smart-contracts/examples/complex-controller",
+      "title": "Complex controller",
+      "description": "Create a controller with balance and token ownership checks.",
+      "sidebar": "smartContracts"
+    },
+    "smart-contracts/examples/create-from-contract": {
+      "id": "smart-contracts/examples/create-from-contract",
+      "title": "Create from contract",
+      "description": "Create a table from a contract.",
+      "sidebar": "smartContracts"
+    },
+    "smart-contracts/examples/erc721a-enumerable": {
+      "id": "smart-contracts/examples/erc721a-enumerable",
+      "title": "ERC721A enumerable",
+      "description": "Create an ERC721A enumerable contract.",
+      "sidebar": "smartContracts"
+    },
+    "smart-contracts/examples/erc721a-queryable": {
+      "id": "smart-contracts/examples/erc721a-queryable",
+      "title": "ERC721A Queryable",
+      "description": "Create an ERC721A queryable contract.",
+      "sidebar": "smartContracts"
+    },
+    "smart-contracts/examples/gated-voting": {
+      "id": "smart-contracts/examples/gated-voting",
+      "title": "Gated voting",
+      "description": "Create a contract that gates writes to a voting table based on ERC721 token ownership.",
+      "sidebar": "smartContracts"
+    },
+    "smart-contracts/examples/raw-controller": {
+      "id": "smart-contracts/examples/raw-controller",
+      "title": "Raw controller",
+      "description": "Create an raw Tableland controller.",
+      "sidebar": "smartContracts"
+    },
+    "smart-contracts/examples/README": {
+      "id": "smart-contracts/examples/README",
+      "title": "Example contracts",
+      "description": "Check out any of the starter contracts for Tableland controllers or registry interactions.",
+      "sidebar": "smartContracts"
+    },
+    "smart-contracts/examples/using-sql-helpers": {
+      "id": "smart-contracts/examples/using-sql-helpers",
+      "title": "Using SQLHelpers",
+      "description": "Create an contract that uses SQLHelpers library.",
+      "sidebar": "smartContracts"
+    },
+    "smart-contracts/get-started": {
+      "id": "smart-contracts/get-started",
+      "title": "Get started",
+      "description": "Get up an running with smart contracts and Tableland.",
+      "sidebar": "smartContracts"
     },
     "smart-contracts/immutable-table": {
       "id": "smart-contracts/immutable-table",
@@ -1257,19 +1572,19 @@
     },
     "smart-contracts/README": {
       "id": "smart-contracts/README",
-      "title": "Get started",
+      "title": "Overview",
       "description": "Interact with Tableland using smart contracts.",
       "sidebar": "smartContracts"
     },
     "smart-contracts/serving-nft-metadata": {
       "id": "smart-contracts/serving-nft-metadata",
-      "title": "Serving NFT metadata from smart contracts",
+      "title": "Serve NFT metadata from smart contracts",
       "description": "Learn how to write, format, and deploy SQL in your smart contracts to produce NFT JSON metadata.",
       "sidebar": "smartContracts"
     },
     "smart-contracts/solidity-to-sql-types": {
       "id": "smart-contracts/solidity-to-sql-types",
-      "title": "Solidity to SQL Types",
+      "title": "Solidity to SQL types",
       "description": "Review the best practices for Solidity types and SQL compatibility.",
       "sidebar": "smartContracts"
     },
@@ -1291,38 +1606,27 @@
       "description": "The Tableland SQL language specification offers a unique set of SQL that is a subset of the SQLite language.",
       "sidebar": "sqlSpecification"
     },
-    "specs/validator-api": {
-      "id": "specs/validator-api",
-      "title": "Validator API",
-      "description": "Interact directly with a Tableland validator node."
-    },
-    "tools/local-tableland": {
-      "id": "tools/local-tableland",
-      "title": "Local development & testing",
-      "description": "Build with Local Tableland to quickly iterate with Tableland using a local environment.",
-      "sidebar": "home"
-    },
     "tutorials/building-games-on-arbitrum": {
       "id": "tutorials/building-games-on-arbitrum",
-      "title": "Building a game on Arbitrum",
+      "title": "Build a game on Arbitrum",
       "description": "Deploy a smart contract-based game and interact with it a React app.",
       "sidebar": "tutorials"
     },
     "tutorials/data-dao-polygon": {
       "id": "tutorials/data-dao-polygon",
-      "title": "Building a Data DAO on Polygon",
+      "title": "Build a Data DAO on Polygon",
       "description": "Create a DAO that mints Tableland tables and makes them mutable only through successful DAO votes.",
       "sidebar": "tutorials"
     },
     "tutorials/dynamic-nft-chainlink": {
       "id": "tutorials/dynamic-nft-chainlink",
-      "title": "Dynamic NFT with Chainlink Automation",
+      "title": "Dynamic NFT with Chainlink automation",
       "description": "Leverage Chainlink for automated NFT mutations.",
       "sidebar": "tutorials"
     },
     "tutorials/dynamic-nft-p5js": {
       "id": "tutorials/dynamic-nft-p5js",
-      "title": "Creating a dynamic NFT with p5.js",
+      "title": "Create a dynamic NFT with p5.js",
       "description": "Use p5.js to render data from an NFT that holds global game state in a table.",
       "sidebar": "tutorials"
     },
@@ -1382,7 +1686,7 @@
     "validator/README": {
       "id": "validator/README",
       "title": "Validator node",
-      "description": "Tableland node",
+      "description": "Learn how to run you own Tableland validator node.",
       "sidebar": "validator"
     }
   }

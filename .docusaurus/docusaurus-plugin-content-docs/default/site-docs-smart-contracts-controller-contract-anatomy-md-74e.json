@@ -1,0 +1,31 @@
+{
+  "unversionedId": "smart-contracts/controller/contract-anatomy",
+  "id": "smart-contracts/controller/contract-anatomy",
+  "title": "Controller contract anatomy",
+  "description": "Dive into into the Tableland controller contract's design.",
+  "source": "@site/docs/smart-contracts/controller/contract-anatomy.md",
+  "sourceDirName": "smart-contracts/controller",
+  "slug": "/smart-contracts/controller/contract-anatomy",
+  "permalink": "/smart-contracts/controller/contract-anatomy",
+  "draft": false,
+  "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/smart-contracts/controller/contract-anatomy.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "title": "Controller contract anatomy",
+    "sidebar_label": "Controller contract",
+    "description": "Dive into into the Tableland controller contract's design."
+  },
+  "sidebar": "smartContracts",
+  "previous": {
+    "title": "Configure write access",
+    "permalink": "/smart-contracts/controller/"
+  },
+  "next": {
+    "title": "Creating controllers",
+    "permalink": "/smart-contracts/controller/creating-controllers"
+  }
+}

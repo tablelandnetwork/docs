@@ -23,7 +23,7 @@ import { ChainsList } from '@site/src/components/SupportedChains'
 
 <ChainsList type={'all'} format={'list'} info={'ethersName'} />
 
-In other words, the network name is only specified while instantiating a signer that then connects to the `Database`. It is not something that needs to be passed to the `Database` API.
+In other words, the network name is only specified while instantiating a signer that then connects to the `Database`. It is not something that needs to explicitly be passed to the `Database` API but is inferred from the passed `Signer`.
 
 ## Signing transactions
 

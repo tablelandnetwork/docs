@@ -1,7 +1,7 @@
 {
   "unversionedId": "smart-contracts/configuring-table-write-access",
   "id": "smart-contracts/configuring-table-write-access",
-  "title": "Configuring table write access",
+  "title": "Configure table write access",
   "description": "Everything you need to know to control access for programmable tables.",
   "source": "@site/docs/smart-contracts/configuring-table-write-access.md",
   "sourceDirName": "smart-contracts",
@@ -15,16 +15,17 @@
   "lastUpdatedAt": 1539502055,
   "formattedLastUpdatedAt": "Oct 14, 2018",
   "frontMatter": {
-    "title": "Configuring table write access",
+    "title": "Configure table write access",
+    "sidebar_label": "Configure write access",
     "description": "Everything you need to know to control access for programmable tables."
   },
   "sidebar": "smartContracts",
   "previous": {
-    "title": "Creating tables from contracts",
+    "title": "Contract owned tables",
     "permalink": "/smart-contracts/creating-tables-from-contracts"
   },
   "next": {
-    "title": "Serving NFT metadata from smart contracts",
+    "title": "Serve NFT metadata",
     "permalink": "/smart-contracts/serving-nft-metadata"
   }
 }

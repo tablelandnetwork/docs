@@ -1,0 +1,30 @@
+{
+  "unversionedId": "smart-contracts/examples/complex-controller",
+  "id": "smart-contracts/examples/complex-controller",
+  "title": "Complex controller",
+  "description": "Create a controller with balance and token ownership checks.",
+  "source": "@site/docs/smart-contracts/examples/complex-controller.md",
+  "sourceDirName": "smart-contracts/examples",
+  "slug": "/smart-contracts/examples/complex-controller",
+  "permalink": "/smart-contracts/examples/complex-controller",
+  "draft": false,
+  "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/smart-contracts/examples/complex-controller.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "title": "Complex controller",
+    "description": "Create a controller with balance and token ownership checks."
+  },
+  "sidebar": "smartContracts",
+  "previous": {
+    "title": "Allow all controller",
+    "permalink": "/smart-contracts/examples/allow-all-controller"
+  },
+  "next": {
+    "title": "Raw controller",
+    "permalink": "/smart-contracts/examples/raw-controller"
+  }
+}

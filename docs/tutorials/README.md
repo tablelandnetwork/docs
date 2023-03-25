@@ -22,14 +22,14 @@ Build dynamic NFTs user-driven actions (on-chain) mutating table state.
 Learn how Tableland can power collaborative data and other data-driven use cases.
 
 - [Building a Data DAO](/tutorials/data-dao-polygon): Create a DAO where only successful DAO votes from members will mutate table data.
-- [Key-value store as NFT](/tutorials/data-dao-polygon): Use Tableland as a key-value store while also enabling ownership through an NFT-based database.
+- [Key-value store as NFT](/tutorials/key-value-store-nft): Use Tableland as a key-value store while also enabling ownership through an NFT-based database.
 
 ## Utility
 
 Miscellaneous walkthroughs that showcase Tableland functionality along with various tools or protocols.
 
-- [JSON files to NFT metadata](/tutorials/dynamic-nft-polygon): With a Hardhat project, take local JSON files, read/parse the data into tables, and then mint an NFT where Tableland powers the metadata.
-- [On-chain table reads with Chainlink](/tutorials/dynamic-nft-polygon): Since table state is all off-chain within the Tableland network, you can use oracles like Chainlink to query table data using an API and write that data back on-chain.
+- [On-chain table reads with Chainlink](/tutorials/table-reads-chainlink): Since table state is all off-chain within the Tableland network, you can use oracles like Chainlink to query table data using an API and write that data back on-chain.
+- [JSON files to NFT metadata](/tutorials/json-files-nft-polygon): With a Hardhat project, take local JSON files, read/parse the data into tables, and then mint an NFT where Tableland powers the metadata.
 
 :::tip
 If you haven't already, be sure to check out how to use the SDK, smart contracts, REST API, and CLI—at least the [quickstarts](/fundamentals/quickstarts)!

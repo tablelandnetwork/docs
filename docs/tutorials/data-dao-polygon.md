@@ -1,6 +1,6 @@
 ---
-title: Building a Data DAO on Polygon
-sidebar_label: Building a Data DAO
+title: Build a Data DAO on Polygon
+sidebar_label: Build a Data DAO
 description: Create a DAO that mints Tableland tables and makes them mutable only through successful DAO votes.
 keywords:
   - polygon

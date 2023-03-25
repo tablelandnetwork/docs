@@ -1,0 +1,30 @@
+{
+  "unversionedId": "smart-contracts/examples/gated-voting",
+  "id": "smart-contracts/examples/gated-voting",
+  "title": "Gated voting",
+  "description": "Create a contract that gates writes to a voting table based on ERC721 token ownership.",
+  "source": "@site/docs/smart-contracts/examples/gated-voting.md",
+  "sourceDirName": "smart-contracts/examples",
+  "slug": "/smart-contracts/examples/gated-voting",
+  "permalink": "/smart-contracts/examples/gated-voting",
+  "draft": false,
+  "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/smart-contracts/examples/gated-voting.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "title": "Gated voting",
+    "description": "Create a contract that gates writes to a voting table based on ERC721 token ownership."
+  },
+  "sidebar": "smartContracts",
+  "previous": {
+    "title": "Raw controller",
+    "permalink": "/smart-contracts/examples/raw-controller"
+  },
+  "next": {
+    "title": "Create from contract",
+    "permalink": "/smart-contracts/examples/create-from-contract"
+  }
+}

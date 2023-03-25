@@ -81,6 +81,11 @@
               "sidebar": "fundamentals"
             },
             {
+              "id": "fundamentals/architecture/query-optimization",
+              "path": "/fundamentals/architecture/query-optimization",
+              "sidebar": "fundamentals"
+            },
+            {
               "id": "fundamentals/architecture/table-token",
               "path": "/fundamentals/architecture/table-token",
               "sidebar": "fundamentals"
@@ -121,11 +126,6 @@
               "sidebar": "fundamentals"
             },
             {
-              "id": "fundamentals/concepts/use-cases",
-              "path": "/fundamentals/concepts/use-cases",
-              "sidebar": "fundamentals"
-            },
-            {
               "id": "fundamentals/considerations-tradeoffs",
               "path": "/fundamentals/considerations-tradeoffs",
               "sidebar": "fundamentals"
@@ -136,33 +136,13 @@
               "sidebar": "fundamentals"
             },
             {
-              "id": "fundamentals/quickstarts/api-quickstart",
-              "path": "/fundamentals/quickstarts/api-quickstart",
-              "sidebar": "fundamentals"
-            },
-            {
-              "id": "fundamentals/quickstarts/cli-quickstart",
-              "path": "/fundamentals/quickstarts/cli-quickstart",
-              "sidebar": "fundamentals"
-            },
-            {
-              "id": "fundamentals/quickstarts/README",
-              "path": "/fundamentals/quickstarts/",
-              "sidebar": "fundamentals"
-            },
-            {
-              "id": "fundamentals/quickstarts/sdk-quickstart",
-              "path": "/fundamentals/quickstarts/sdk-quickstart",
-              "sidebar": "fundamentals"
-            },
-            {
-              "id": "fundamentals/quickstarts/smart-contract-quickstart",
-              "path": "/fundamentals/quickstarts/smart-contract-quickstart",
-              "sidebar": "fundamentals"
-            },
-            {
               "id": "fundamentals/README",
               "path": "/fundamentals/",
+              "sidebar": "fundamentals"
+            },
+            {
+              "id": "fundamentals/use-cases",
+              "path": "/fundamentals/use-cases",
               "sidebar": "fundamentals"
             },
             {
@@ -236,6 +216,51 @@
               "sidebar": "playbooks"
             },
             {
+              "id": "quickstarts/api-quickstart",
+              "path": "/quickstarts/api-quickstart",
+              "sidebar": "quickstarts"
+            },
+            {
+              "id": "quickstarts/cli-quickstart",
+              "path": "/quickstarts/cli-quickstart",
+              "sidebar": "quickstarts"
+            },
+            {
+              "id": "quickstarts/hardhat",
+              "path": "/quickstarts/hardhat",
+              "sidebar": "quickstarts"
+            },
+            {
+              "id": "quickstarts/local-tableland",
+              "path": "/quickstarts/local-tableland",
+              "sidebar": "quickstarts"
+            },
+            {
+              "id": "quickstarts/reactjs",
+              "path": "/quickstarts/reactjs",
+              "sidebar": "quickstarts"
+            },
+            {
+              "id": "quickstarts/README",
+              "path": "/quickstarts/",
+              "sidebar": "quickstarts"
+            },
+            {
+              "id": "quickstarts/sdk-quickstart",
+              "path": "/quickstarts/sdk-quickstart",
+              "sidebar": "quickstarts"
+            },
+            {
+              "id": "quickstarts/smart-contract-quickstart",
+              "path": "/quickstarts/smart-contract-quickstart",
+              "sidebar": "quickstarts"
+            },
+            {
+              "id": "quickstarts/wagmi",
+              "path": "/quickstarts/wagmi",
+              "sidebar": "quickstarts"
+            },
+            {
               "id": "sdk/core/batching",
               "path": "/sdk/core/batching",
               "sidebar": "sdk"
@@ -266,8 +291,8 @@
               "sidebar": "sdk"
             },
             {
-              "id": "sdk/core/timeouts",
-              "path": "/sdk/core/timeouts",
+              "id": "sdk/core/timeouts-error-handling",
+              "path": "/sdk/core/timeouts-error-handling",
               "sidebar": "sdk"
             },
             {
@@ -276,23 +301,8 @@
               "sidebar": "sdk"
             },
             {
-              "id": "sdk/frameworks/reactjs",
-              "path": "/sdk/frameworks/reactjs",
-              "sidebar": "sdk"
-            },
-            {
-              "id": "sdk/frameworks/wagmi",
-              "path": "/sdk/frameworks/wagmi",
-              "sidebar": "sdk"
-            },
-            {
               "id": "sdk/README",
               "path": "/sdk/",
-              "sidebar": "sdk"
-            },
-            {
-              "id": "sdk/reference/errors",
-              "path": "/sdk/reference/errors",
               "sidebar": "sdk"
             },
             {
@@ -302,17 +312,36 @@
             },
             {
               "id": "sdk/reference/sdk-faqs",
-              "path": "/sdk/reference/sdk-faqs",
+              "path": "/sdk/reference/sdk-faqs"
+            },
+            {
+              "id": "sdk/reference/testing",
+              "path": "/sdk/reference/testing",
               "sidebar": "sdk"
             },
             {
-              "id": "smart-contracts/configuring-table-write-access",
-              "path": "/smart-contracts/configuring-table-write-access",
+              "id": "sdk/reference/type-conversion",
+              "path": "/sdk/reference/type-conversion",
+              "sidebar": "sdk"
+            },
+            {
+              "id": "smart-contracts/controller/contract-anatomy",
+              "path": "/smart-contracts/controller/contract-anatomy",
               "sidebar": "smartContracts"
             },
             {
-              "id": "smart-contracts/contracts",
-              "path": "/smart-contracts/contracts",
+              "id": "smart-contracts/controller/creating-controllers",
+              "path": "/smart-contracts/controller/creating-controllers",
+              "sidebar": "smartContracts"
+            },
+            {
+              "id": "smart-contracts/controller/README",
+              "path": "/smart-contracts/controller/",
+              "sidebar": "smartContracts"
+            },
+            {
+              "id": "smart-contracts/controller/setting-controllers",
+              "path": "/smart-contracts/controller/setting-controllers",
               "sidebar": "smartContracts"
             },
             {
@@ -321,8 +350,64 @@
               "sidebar": "smartContracts"
             },
             {
-              "id": "smart-contracts/getting-started",
-              "path": "/smart-contracts/getting-started"
+              "id": "smart-contracts/deployed-contracts",
+              "path": "/smart-contracts/deployed-contracts",
+              "sidebar": "smartContracts"
+            },
+            {
+              "id": "smart-contracts/error-handling",
+              "path": "/smart-contracts/error-handling",
+              "sidebar": "smartContracts"
+            },
+            {
+              "id": "smart-contracts/examples/allow-all-controller",
+              "path": "/smart-contracts/examples/allow-all-controller",
+              "sidebar": "smartContracts"
+            },
+            {
+              "id": "smart-contracts/examples/complex-controller",
+              "path": "/smart-contracts/examples/complex-controller",
+              "sidebar": "smartContracts"
+            },
+            {
+              "id": "smart-contracts/examples/create-from-contract",
+              "path": "/smart-contracts/examples/create-from-contract",
+              "sidebar": "smartContracts"
+            },
+            {
+              "id": "smart-contracts/examples/erc721a-enumerable",
+              "path": "/smart-contracts/examples/erc721a-enumerable",
+              "sidebar": "smartContracts"
+            },
+            {
+              "id": "smart-contracts/examples/erc721a-queryable",
+              "path": "/smart-contracts/examples/erc721a-queryable",
+              "sidebar": "smartContracts"
+            },
+            {
+              "id": "smart-contracts/examples/gated-voting",
+              "path": "/smart-contracts/examples/gated-voting",
+              "sidebar": "smartContracts"
+            },
+            {
+              "id": "smart-contracts/examples/raw-controller",
+              "path": "/smart-contracts/examples/raw-controller",
+              "sidebar": "smartContracts"
+            },
+            {
+              "id": "smart-contracts/examples/README",
+              "path": "/smart-contracts/examples/",
+              "sidebar": "smartContracts"
+            },
+            {
+              "id": "smart-contracts/examples/using-sql-helpers",
+              "path": "/smart-contracts/examples/using-sql-helpers",
+              "sidebar": "smartContracts"
+            },
+            {
+              "id": "smart-contracts/get-started",
+              "path": "/smart-contracts/get-started",
+              "sidebar": "smartContracts"
             },
             {
               "id": "smart-contracts/immutable-table",
@@ -358,15 +443,6 @@
               "id": "specs/sql/README",
               "path": "/specs/sql/",
               "sidebar": "sqlSpecification"
-            },
-            {
-              "id": "specs/validator-api",
-              "path": "/specs/validator-api"
-            },
-            {
-              "id": "tools/local-tableland",
-              "path": "/tools/local-tableland",
-              "sidebar": "home"
             },
             {
               "id": "tutorials/building-games-on-arbitrum",
@@ -456,6 +532,12 @@
               "link": {
                 "path": "/playbooks/",
                 "label": "playbooks/README"
+              }
+            },
+            "quickstarts": {
+              "link": {
+                "path": "/quickstarts/",
+                "label": "quickstarts/README"
               }
             },
             "sdk": {

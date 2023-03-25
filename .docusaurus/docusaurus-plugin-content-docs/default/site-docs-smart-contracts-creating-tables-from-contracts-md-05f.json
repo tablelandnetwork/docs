@@ -16,6 +16,7 @@
   "formattedLastUpdatedAt": "Oct 14, 2018",
   "frontMatter": {
     "title": "Creating tables from contracts",
+    "sidebar_label": "Contract owned tables",
     "description": "Learn how to create tables from and owned by a smart contract.",
     "keywords": [
       "create table"
@@ -23,11 +24,11 @@
   },
   "sidebar": "smartContracts",
   "previous": {
-    "title": "Deployed contracts",
-    "permalink": "/smart-contracts/contracts"
+    "title": "Get started",
+    "permalink": "/smart-contracts/get-started"
   },
   "next": {
-    "title": "Configuring table write access",
-    "permalink": "/smart-contracts/configuring-table-write-access"
+    "title": "Configure write access",
+    "permalink": "/smart-contracts/controller/"
   }
 }

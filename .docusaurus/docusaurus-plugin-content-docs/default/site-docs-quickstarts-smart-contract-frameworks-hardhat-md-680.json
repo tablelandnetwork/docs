@@ -1,0 +1,29 @@
+{
+  "unversionedId": "quickstarts/smart-contract-frameworks/hardhat",
+  "id": "quickstarts/smart-contract-frameworks/hardhat",
+  "title": "Hardhat",
+  "description": "Use Tableland smart contracts with Hardhat.",
+  "source": "@site/docs/quickstarts/smart-contract-frameworks/hardhat.md",
+  "sourceDirName": "quickstarts/smart-contract-frameworks",
+  "slug": "/quickstarts/smart-contract-frameworks/hardhat",
+  "permalink": "/quickstarts/smart-contract-frameworks/hardhat",
+  "draft": false,
+  "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/quickstarts/smart-contract-frameworks/hardhat.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "title": "Hardhat",
+    "description": "Use Tableland smart contracts with Hardhat.",
+    "keywords": [
+      "hardhat"
+    ]
+  },
+  "sidebar": "quickStarts",
+  "previous": {
+    "title": "wagmi",
+    "permalink": "/quickstarts/web-frameworks/wagmi"
+  }
+}

@@ -25,8 +25,8 @@
   },
   "sidebar": "fundamentals",
   "previous": {
-    "title": "Local node",
-    "permalink": "/fundamentals/chains/local"
+    "title": "Queries & gas",
+    "permalink": "/fundamentals/architecture/query-optimization"
   },
   "next": {
     "title": "NFT metadata",

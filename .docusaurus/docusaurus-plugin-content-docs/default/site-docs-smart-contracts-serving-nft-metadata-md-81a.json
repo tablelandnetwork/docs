@@ -1,7 +1,7 @@
 {
   "unversionedId": "smart-contracts/serving-nft-metadata",
   "id": "smart-contracts/serving-nft-metadata",
-  "title": "Serving NFT metadata from smart contracts",
+  "title": "Serve NFT metadata from smart contracts",
   "description": "Learn how to write, format, and deploy SQL in your smart contracts to produce NFT JSON metadata.",
   "source": "@site/docs/smart-contracts/serving-nft-metadata.md",
   "sourceDirName": "smart-contracts",
@@ -15,7 +15,8 @@
   "lastUpdatedAt": 1539502055,
   "formattedLastUpdatedAt": "Oct 14, 2018",
   "frontMatter": {
-    "title": "Serving NFT metadata from smart contracts",
+    "title": "Serve NFT metadata from smart contracts",
+    "sidebar_label": "Serve NFT metadata",
     "description": "Learn how to write, format, and deploy SQL in your smart contracts to produce NFT JSON metadata.",
     "keywords": [
       "create table"
@@ -23,8 +24,8 @@
   },
   "sidebar": "smartContracts",
   "previous": {
-    "title": "Configuring table write access",
-    "permalink": "/smart-contracts/configuring-table-write-access"
+    "title": "Using SQLHelpers",
+    "permalink": "/smart-contracts/examples/using-sql-helpers"
   },
   "next": {
     "title": "Create an immutable table",

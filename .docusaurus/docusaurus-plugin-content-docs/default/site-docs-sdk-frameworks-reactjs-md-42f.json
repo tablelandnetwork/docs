@@ -26,8 +26,8 @@
   },
   "sidebar": "sdk",
   "previous": {
-    "title": "Timeouts",
-    "permalink": "/sdk/core/timeouts"
+    "title": "Registry API",
+    "permalink": "/sdk/core/registry-api"
   },
   "next": {
     "title": "wagmi",

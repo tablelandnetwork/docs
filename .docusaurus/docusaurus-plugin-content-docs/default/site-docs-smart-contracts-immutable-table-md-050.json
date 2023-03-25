@@ -24,11 +24,11 @@
   },
   "sidebar": "smartContracts",
   "previous": {
-    "title": "Serving NFT metadata from smart contracts",
+    "title": "Serve NFT metadata",
     "permalink": "/smart-contracts/serving-nft-metadata"
   },
   "next": {
-    "title": "Solidity to SQL Types",
-    "permalink": "/smart-contracts/solidity-to-sql-types"
+    "title": "URI encoding",
+    "permalink": "/smart-contracts/uri-encoding"
   }
 }

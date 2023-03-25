@@ -179,7 +179,7 @@ constructor(address registry) ERC721("Pixel", "ITM") {
 We handled a few steps here.
 
 1. We created global variables in our contract to track the `tableId` and final name. Table names are assigned on create time, so you’ll need to do a bit of string concatenation to get your final name.
-2. We added an `address` input to our `constructor` method. This is the address of the Tableland protocol on our current chain. You can fine those here: [currently supported chains](/smart-contracts/contracts).
+2. We added an `address` input to our `constructor` method. This is the address of the Tableland protocol on our current chain. You can fine those here: [currently supported chains](/smart-contracts/deployed-contracts).
 3. Next, we connected to Tableland using the address provided above.
 4. We called the `createTable` method and gave it a table prefix ("_canvas_") and a schema, just like any CREATE table command in SQL: `id int, external_link text, x int, y int`. Schemas match our SQL spec.
 

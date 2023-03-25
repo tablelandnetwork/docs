@@ -1,7 +1,7 @@
 {
   "unversionedId": "smart-contracts/solidity-to-sql-types",
   "id": "smart-contracts/solidity-to-sql-types",
-  "title": "Solidity to SQL Types",
+  "title": "Solidity to SQL types",
   "description": "Review the best practices for Solidity types and SQL compatibility.",
   "source": "@site/docs/smart-contracts/solidity-to-sql-types.md",
   "sourceDirName": "smart-contracts",
@@ -15,7 +15,7 @@
   "lastUpdatedAt": 1539502055,
   "formattedLastUpdatedAt": "Oct 14, 2018",
   "frontMatter": {
-    "title": "Solidity to SQL Types",
+    "title": "Solidity to SQL types",
     "description": "Review the best practices for Solidity types and SQL compatibility.",
     "keywords": [
       "create table"
@@ -23,11 +23,11 @@
   },
   "sidebar": "smartContracts",
   "previous": {
-    "title": "Create an immutable table",
-    "permalink": "/smart-contracts/immutable-table"
-  },
-  "next": {
     "title": "URI encoding",
     "permalink": "/smart-contracts/uri-encoding"
+  },
+  "next": {
+    "title": "Error handling",
+    "permalink": "/smart-contracts/error-handling"
   }
 }

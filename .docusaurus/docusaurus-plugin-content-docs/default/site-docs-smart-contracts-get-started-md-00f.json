@@ -1,0 +1,33 @@
+{
+  "unversionedId": "smart-contracts/get-started",
+  "id": "smart-contracts/get-started",
+  "title": "Get started",
+  "description": "Get up an running with smart contracts and Tableland.",
+  "source": "@site/docs/smart-contracts/get-started.md",
+  "sourceDirName": "smart-contracts",
+  "slug": "/smart-contracts/get-started",
+  "permalink": "/smart-contracts/get-started",
+  "draft": false,
+  "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/smart-contracts/get-started.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "title": "Get started",
+    "description": "Get up an running with smart contracts and Tableland.",
+    "keywords": [
+      "tableland smart contracts"
+    ]
+  },
+  "sidebar": "smartContracts",
+  "previous": {
+    "title": "Overview",
+    "permalink": "/smart-contracts/"
+  },
+  "next": {
+    "title": "Contract owned tables",
+    "permalink": "/smart-contracts/creating-tables-from-contracts"
+  }
+}

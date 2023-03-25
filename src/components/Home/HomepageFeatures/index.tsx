@@ -135,7 +135,7 @@ const ToolsList: ProductItem[] = [
       <>Develop locally, spinning up a local Hardhat and validator node</>
     ),
 
-    url: "https://github.com/tablelandnetwork/hardhat-tableland",
+    url: "/quickstarts/local-tableland",
   },
   {
     name: "Hardhat plugin",
@@ -144,7 +144,7 @@ const ToolsList: ProductItem[] = [
       <>Use a Tableland Hardhat plugin during contract development</>
     ),
 
-    url: "smart-contracts/getting-started",
+    url: "/quickstarts/hardhat",
   },
   {
     name: "Console",
@@ -195,7 +195,7 @@ const LearnList: ProductItem[] = [
       <>Common ways and starter ideas for when to use the protocol</>
     ),
 
-    url: "fundamentals/about/use-cases",
+    url: "fundamentals/use-cases",
   },
   {
     name: "Tutorials",

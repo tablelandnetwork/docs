@@ -22,10 +22,5 @@
       "faq",
       "faqs"
     ]
-  },
-  "sidebar": "sdk",
-  "previous": {
-    "title": "ORM support",
-    "permalink": "/sdk/reference/orm"
   }
 }

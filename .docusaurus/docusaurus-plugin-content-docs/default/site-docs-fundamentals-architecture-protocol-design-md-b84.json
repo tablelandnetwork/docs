@@ -24,8 +24,8 @@
   },
   "sidebar": "fundamentals",
   "previous": {
-    "title": "REST API",
-    "permalink": "/fundamentals/quickstarts/api-quickstart"
+    "title": "Use cases",
+    "permalink": "/fundamentals/use-cases"
   },
   "next": {
     "title": "Table uniqueness",

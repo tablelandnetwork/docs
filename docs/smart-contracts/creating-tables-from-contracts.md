@@ -1,13 +1,12 @@
 ---
 title: Creating tables from contracts
+sidebar_label: Contract owned tables
 description: Learn how to create tables from and owned by a smart contract.
 keywords:
   - create table
 ---
 
-## Synopsis
-
-Developers can leverage smart contract calls to the `TablelandTables` [registry smart contract](/smart-contracts/contracts) for chain-based table creation. There is one major callout to implement:
+Developers can leverage smart contract calls to the `TablelandTables` [registry smart contract](/smart-contracts/deployed-contracts) for chain-based table creation. There is one major callout to implement:
 
 - The creating contract **must be able to receive** an ERC721 token.
 
@@ -31,7 +30,7 @@ import "@tableland/evm/contracts/utils/TablelandDeployments.sol";
 
 contract BasicCreate is ERC721Holder {
     // Implement logic to create a table using `TablelandDeployments.get().createTable(...)`
-		// Note: `onERC721Received` is implemented by `ERC721Holder`
+    // Note: `onERC721Received` is implemented by `ERC721Holder`
 }
 ```
 
@@ -47,9 +46,9 @@ import "@tableland/evm/contracts/utils/TablelandDeployments.sol";
 contract BasicCreate is IERC721Receiver {
     // Implement logic to create a table using `TablelandDeployments.get().createTable(...)`
 
-		function onERC721Received(address, address, uint256, bytes calldata) external pure returns (bytes4) {
-		    return IERC721Receiver.onERC721Received.selector;
-		}
+    function onERC721Received(address, address, uint256, bytes calldata) external pure returns (bytes4) {
+        return IERC721Receiver.onERC721Received.selector;
+    }
 }
 ```
 
@@ -59,7 +58,7 @@ Let’s walk through an example with `ERC721Holder` since `IERC721Receiver` is r
 
 Put differently, the contract below is a table factory that simply mints tables, but your app will likely have a specific set of tables it needs to use, and that’s it. You might want to replace the `tables` mapping with its components, `tableName` and `tableId`, or something similar.
 
-```tsx
+```solidity
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.12;
 
@@ -68,7 +67,7 @@ import "@openzeppelin/contracts/utils/Strings.sol";
 import "@tableland/evm/contracts/utils/TablelandDeployments.sol";
 
 contract BasicCreate is ERC721Holder {
-		// A mapping that holds `tableName` and its `tableId`
+	// A mapping that holds `tableName` and its `tableId`
     mapping(string => uint256) public tables;
 
     function create(string memory prefix) public payable {

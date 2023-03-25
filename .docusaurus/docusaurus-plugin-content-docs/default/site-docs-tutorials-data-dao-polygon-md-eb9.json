@@ -1,7 +1,7 @@
 {
   "unversionedId": "tutorials/data-dao-polygon",
   "id": "tutorials/data-dao-polygon",
-  "title": "Building a Data DAO on Polygon",
+  "title": "Build a Data DAO on Polygon",
   "description": "Create a DAO that mints Tableland tables and makes them mutable only through successful DAO votes.",
   "source": "@site/docs/tutorials/data-dao-polygon.md",
   "sourceDirName": "tutorials",
@@ -15,8 +15,8 @@
   "lastUpdatedAt": 1539502055,
   "formattedLastUpdatedAt": "Oct 14, 2018",
   "frontMatter": {
-    "title": "Building a Data DAO on Polygon",
-    "sidebar_label": "Building a Data DAO",
+    "title": "Build a Data DAO on Polygon",
+    "sidebar_label": "Build a Data DAO",
     "description": "Create a DAO that mints Tableland tables and makes them mutable only through successful DAO votes.",
     "keywords": [
       "polygon",

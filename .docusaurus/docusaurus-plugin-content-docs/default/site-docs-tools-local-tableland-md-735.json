@@ -22,14 +22,5 @@
       "local tableland",
       "hardhat"
     ]
-  },
-  "sidebar": "home",
-  "previous": {
-    "title": "Overview",
-    "permalink": "/tutorials/"
-  },
-  "next": {
-    "title": "SQL specification",
-    "permalink": "/specs/sql/"
   }
 }

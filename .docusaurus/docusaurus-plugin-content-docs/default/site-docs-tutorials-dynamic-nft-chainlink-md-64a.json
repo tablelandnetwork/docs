@@ -1,7 +1,7 @@
 {
   "unversionedId": "tutorials/dynamic-nft-chainlink",
   "id": "tutorials/dynamic-nft-chainlink",
-  "title": "Dynamic NFT with Chainlink Automation",
+  "title": "Dynamic NFT with Chainlink automation",
   "description": "Leverage Chainlink for automated NFT mutations.",
   "source": "@site/docs/tutorials/dynamic-nft-chainlink.md",
   "sourceDirName": "tutorials",
@@ -15,7 +15,7 @@
   "lastUpdatedAt": 1539502055,
   "formattedLastUpdatedAt": "Oct 14, 2018",
   "frontMatter": {
-    "title": "Dynamic NFT with Chainlink Automation",
+    "title": "Dynamic NFT with Chainlink automation",
     "sidebar_label": "Dynamic NFT with Chainlink",
     "description": "Leverage Chainlink for automated NFT mutations.",
     "keywords": [
@@ -25,11 +25,11 @@
   },
   "sidebar": "tutorials",
   "previous": {
-    "title": "Building a game on Arbitrum",
+    "title": "Build a game on Arbitrum",
     "permalink": "/tutorials/building-games-on-arbitrum"
   },
   "next": {
-    "title": "Building a Data DAO",
+    "title": "Build a Data DAO",
     "permalink": "/tutorials/data-dao-polygon"
   }
 }

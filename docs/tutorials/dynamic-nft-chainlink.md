@@ -1,5 +1,5 @@
 ---
-title: Dynamic NFT with Chainlink Automation
+title: Dynamic NFT with Chainlink automation
 sidebar_label: Dynamic NFT with Chainlink
 description: Leverage Chainlink for automated NFT mutations.
 keywords:

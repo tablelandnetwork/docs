@@ -30,7 +30,7 @@
     "permalink": "/sdk/frameworks/reactjs"
   },
   "next": {
-    "title": "Errors",
-    "permalink": "/sdk/reference/errors"
+    "title": "Type conversion",
+    "permalink": "/sdk/reference/type-conversion"
   }
 }

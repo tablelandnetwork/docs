@@ -1,0 +1,21 @@
+{
+  "unversionedId": "smart-contracts/examples/erc721a-queryable copy 6",
+  "id": "smart-contracts/examples/erc721a-queryable copy 6",
+  "title": "ERC721 URI template",
+  "description": "Create an ERC721 token that sets a URI for the Tableland gateway.",
+  "source": "@site/docs/smart-contracts/examples/erc721a-queryable copy 6.md",
+  "sourceDirName": "smart-contracts/examples",
+  "slug": "/smart-contracts/examples/erc721a-queryable copy 6",
+  "permalink": "/smart-contracts/examples/erc721a-queryable copy 6",
+  "draft": false,
+  "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/smart-contracts/examples/erc721a-queryable copy 6.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "title": "ERC721 URI template",
+    "description": "Create an ERC721 token that sets a URI for the Tableland gateway."
+  }
+}

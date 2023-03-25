@@ -23,11 +23,11 @@
   },
   "sidebar": "smartContracts",
   "previous": {
-    "title": "Solidity to SQL Types",
-    "permalink": "/smart-contracts/solidity-to-sql-types"
+    "title": "Create an immutable table",
+    "permalink": "/smart-contracts/immutable-table"
   },
   "next": {
-    "title": "Using Remix",
-    "permalink": "/smart-contracts/using-remix"
+    "title": "Solidity to SQL types",
+    "permalink": "/smart-contracts/solidity-to-sql-types"
   }
 }

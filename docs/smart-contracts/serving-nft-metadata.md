@@ -1,5 +1,6 @@
 ---
-title: Serving NFT metadata from smart contracts
+title: Serve NFT metadata from smart contracts
+sidebar_label: Serve NFT metadata
 description: Learn how to write, format, and deploy SQL in your smart contracts to produce NFT JSON metadata.
 keywords:
   - create table

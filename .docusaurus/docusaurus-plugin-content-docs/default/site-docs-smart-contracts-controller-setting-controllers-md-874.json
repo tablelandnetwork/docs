@@ -1,0 +1,30 @@
+{
+  "unversionedId": "smart-contracts/controller/setting-controllers",
+  "id": "smart-contracts/controller/setting-controllers",
+  "title": "Setting controllers",
+  "description": "Understand how to set or unset a controller contract.",
+  "source": "@site/docs/smart-contracts/controller/setting-controllers.md",
+  "sourceDirName": "smart-contracts/controller",
+  "slug": "/smart-contracts/controller/setting-controllers",
+  "permalink": "/smart-contracts/controller/setting-controllers",
+  "draft": false,
+  "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/smart-contracts/controller/setting-controllers.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "title": "Setting controllers",
+    "description": "Understand how to set or unset a controller contract."
+  },
+  "sidebar": "smartContracts",
+  "previous": {
+    "title": "Creating controllers",
+    "permalink": "/smart-contracts/controller/creating-controllers"
+  },
+  "next": {
+    "title": "Example contracts",
+    "permalink": "/smart-contracts/examples/"
+  }
+}

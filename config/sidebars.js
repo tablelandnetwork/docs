@@ -9,6 +9,7 @@
  - Playbooks (/docs/playbooks)
 
  Develop:
+ - Quickstarts (/quickstarts)
  - SDK (/docs/sdk)
  - Smart contracts (/docs/smart-contracts)
  - Validator API (/docs/validator-api)
@@ -39,6 +40,24 @@
 
 /* FUNDAMENTALS */
 
+// Introduction
+const introduction = [
+  {
+    type: "category",
+    label: "Introduction",
+    link: {
+      type: "doc",
+      id: "fundamentals/README",
+    },
+    items: [
+      "fundamentals/what-is-tableland",
+      "fundamentals/considerations-tradeoffs",
+      "fundamentals/databases",
+    ],
+  },
+  "fundamentals/use-cases",
+];
+
 // Architecture
 const architecture = [
   ...section("Architecture"),
@@ -61,14 +80,11 @@ const architecture = [
       "fundamentals/chains/local",
     ],
   },
+  "fundamentals/architecture/query-optimization",
 ];
 
 // Concepts
-const concepts = [
-  ...section("Concepts"),
-  "fundamentals/concepts/use-cases",
-  "fundamentals/concepts/nft-metadata",
-];
+const concepts = [...section("Concepts"), "fundamentals/concepts/nft-metadata"];
 
 // About
 const about = [
@@ -83,33 +99,7 @@ const about = [
 // Fundamentals wrapper, with some intro content
 const fundamentals = [
   ...sidepageHeader("Fundamentals"),
-  {
-    type: "category",
-    label: "Introduction",
-    link: {
-      type: "doc",
-      id: "fundamentals/README",
-    },
-    items: [
-      "fundamentals/what-is-tableland",
-      "fundamentals/considerations-tradeoffs",
-      "fundamentals/databases",
-    ],
-  },
-  {
-    type: "category",
-    label: "Quickstarts",
-    link: {
-      type: "doc",
-      id: "fundamentals/quickstarts/README",
-    },
-    items: [
-      "fundamentals/quickstarts/sdk-quickstart",
-      "fundamentals/quickstarts/smart-contract-quickstart",
-      "fundamentals/quickstarts/cli-quickstart",
-      "fundamentals/quickstarts/api-quickstart",
-    ],
-  },
+  introduction,
   architecture,
   concepts,
   about,
@@ -140,40 +130,86 @@ const playbooks = [...sidepageHeader("Playbooks"), "playbooks/README", sql];
 
 /* DEVELOP */
 
+const quickstarts = [
+  ...sidepageHeader("Quickstarts"),
+  "quickstarts/README",
+  ...section("Core"),
+  "quickstarts/sdk-quickstart",
+  "quickstarts/smart-contract-quickstart",
+  "quickstarts/cli-quickstart",
+  "quickstarts/api-quickstart",
+  "quickstarts/local-tableland",
+  ...section("Web app frameworks"),
+  "quickstarts/reactjs",
+  "quickstarts/wagmi",
+  ...section("Contract frameworks"),
+  "quickstarts/hardhat",
+];
+
 // SDK
 const sdk = [
   ...sidepageHeader("SDK"),
   "sdk/README",
-  ...section("Core"),
   "sdk/core/README",
   "sdk/core/signers",
   "sdk/core/prepared-statements",
   "sdk/core/query-statement-methods",
   "sdk/core/batching",
+  "sdk/core/timeouts-error-handling",
   "sdk/core/validator-api",
   "sdk/core/registry-api",
-  "sdk/core/timeouts",
-  ...section("Frameworks"),
-  "sdk/frameworks/reactjs",
-  "sdk/frameworks/wagmi",
   ...section("Reference"),
-  "sdk/reference/errors",
+  "sdk/reference/type-conversion",
+  "sdk/reference/testing",
   "sdk/reference/orm",
-  "sdk/reference/sdk-faqs",
+  // "sdk/reference/sdk-faqs",
 ];
 
 // Smart contracts
 const smartContracts = [
   ...sidepageHeader("Smart contracts"),
   "smart-contracts/README",
-  "smart-contracts/contracts",
+  "smart-contracts/get-started",
   "smart-contracts/creating-tables-from-contracts",
-  "smart-contracts/configuring-table-write-access",
+  {
+    type: "category",
+    label: "Configure write access",
+    link: {
+      type: "doc",
+      id: "smart-contracts/controller/README",
+    },
+    items: [
+      "smart-contracts/controller/contract-anatomy",
+      "smart-contracts/controller/creating-controllers",
+      "smart-contracts/controller/setting-controllers",
+    ],
+  },
+  {
+    type: "category",
+    label: "Example contracts",
+    link: {
+      type: "doc",
+      id: "smart-contracts/examples/README",
+    },
+    items: [
+      "smart-contracts/examples/allow-all-controller",
+      "smart-contracts/examples/complex-controller",
+      "smart-contracts/examples/raw-controller",
+      "smart-contracts/examples/gated-voting",
+      "smart-contracts/examples/create-from-contract",
+      "smart-contracts/examples/erc721a-queryable",
+      "smart-contracts/examples/erc721a-enumerable",
+      "smart-contracts/examples/using-sql-helpers",
+    ],
+  },
+  ...section("Walkthroughs"),
   "smart-contracts/serving-nft-metadata",
   "smart-contracts/immutable-table",
+  "smart-contracts/uri-encoding",
   ...section("Reference"),
   "smart-contracts/solidity-to-sql-types",
-  "smart-contracts/uri-encoding",
+  "smart-contracts/error-handling",
+  "smart-contracts/deployed-contracts",
   "smart-contracts/using-remix",
 ];
 
@@ -247,6 +283,12 @@ const sidebars = {
     ...section("Develop", "landing"),
     {
       type: "doc",
+      id: "quickstarts/README",
+      label: "Quickstarts",
+      className: "sidebar-landing",
+    },
+    {
+      type: "doc",
       id: "sdk/README",
       label: "SDK",
       className: "sidebar-landing",
@@ -278,16 +320,10 @@ const sidebars = {
     ...section("Infra & protocol", "landing"),
     {
       type: "doc",
-      id: "tools/local-tableland",
-      label: "Local Tableland",
+      id: "validator/README",
+      label: "Validator node",
       className: "sidebar-landing",
     },
-    // {
-    //   type: "doc",
-    //   id: "validator/README",
-    //   label: "Validator node",
-    //   className: "sidebar-landing",
-    // },
     {
       type: "doc",
       id: "specs/sql/README",
@@ -299,12 +335,13 @@ const sidebars = {
   fundamentals: fundamentals,
   playbooks: playbooks,
   // Develop
+  quickstarts: quickstarts,
   sdk: sdk,
   smartContracts: smartContracts,
   cli: cli,
   validatorApi: validatorApi,
   tutorials: tutorials,
-  // Protocol
+  // Infra & protocol
   validator: validator,
   sqlSpecification: sqlSpecification,
   // Miscellaneous
@@ -355,9 +392,10 @@ function sidepageHeader(text) {
     },
     {
       type: "html",
-      value: `<h4 class="margin-top--md margin-bottom--sm sidepage-heading">${text}</h4>`,
+      value: `<h4 class="margin-top--md margin-bottom--none sidepage-heading">${text}</h4>`,
       defaultStyle: true,
     },
+    hr(),
   ];
 }
 

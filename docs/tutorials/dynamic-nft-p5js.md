@@ -1,5 +1,5 @@
 ---
-title: Creating a dynamic NFT with p5.js
+title: Create a dynamic NFT with p5.js
 description: Use p5.js to render data from an NFT that holds global game state in a table.
 keywords:
   - tutorial

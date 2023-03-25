@@ -1,0 +1,30 @@
+{
+  "unversionedId": "sdk/reference/testing",
+  "id": "sdk/reference/testing",
+  "title": "Testing",
+  "description": "Learn how to create test scripts that use Local Tableland under the hood.",
+  "source": "@site/docs/sdk/reference/testing.md",
+  "sourceDirName": "sdk/reference",
+  "slug": "/sdk/reference/testing",
+  "permalink": "/sdk/reference/testing",
+  "draft": false,
+  "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/sdk/reference/testing.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "title": "Testing",
+    "description": "Learn how to create test scripts that use Local Tableland under the hood."
+  },
+  "sidebar": "sdk",
+  "previous": {
+    "title": "Type conversion",
+    "permalink": "/sdk/reference/type-conversion"
+  },
+  "next": {
+    "title": "ORM support",
+    "permalink": "/sdk/reference/orm"
+  }
+}

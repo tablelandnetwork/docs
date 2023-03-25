@@ -24,8 +24,8 @@
   },
   "sidebar": "fundamentals",
   "previous": {
-    "title": "Use cases",
-    "permalink": "/fundamentals/concepts/use-cases"
+    "title": "Queries & gas",
+    "permalink": "/fundamentals/architecture/query-optimization"
   },
   "next": {
     "title": "General FAQs",

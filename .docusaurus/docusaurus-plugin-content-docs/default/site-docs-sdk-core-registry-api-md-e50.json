@@ -24,7 +24,7 @@
     "permalink": "/sdk/core/validator-api"
   },
   "next": {
-    "title": "Timeouts",
-    "permalink": "/sdk/core/timeouts"
+    "title": "Type conversion",
+    "permalink": "/sdk/reference/type-conversion"
   }
 }

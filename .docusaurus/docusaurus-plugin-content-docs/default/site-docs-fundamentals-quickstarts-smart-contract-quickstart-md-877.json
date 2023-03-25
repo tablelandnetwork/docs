@@ -19,7 +19,7 @@
     "sidebar_label": "Smart contracts",
     "description": "Learn how to create a table and insert add some sample data using the Solidity."
   },
-  "sidebar": "fundamentals",
+  "sidebar": "quickStarts",
   "previous": {
     "title": "SDK",
     "permalink": "/fundamentals/quickstarts/sdk-quickstart"
