@@ -55,8 +55,18 @@ const introduction = [
       "fundamentals/databases",
     ],
   },
-  "fundamentals/use-cases",
 ];
+
+// Use cases
+const useCases = {
+  type: "category",
+  label: "Use cases",
+  link: {
+    type: "doc",
+    id: "fundamentals/use-cases/README",
+  },
+  items: [],
+};
 
 // Architecture
 const architecture = [
@@ -100,6 +110,7 @@ const about = [
 const fundamentals = [
   ...sidepageHeader("Fundamentals"),
   introduction,
+  useCases,
   architecture,
   concepts,
   about,

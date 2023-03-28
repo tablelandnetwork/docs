@@ -63,11 +63,46 @@ _tableId = TablelandDeployments.get().createTable(
 );
 ```
 
+### Contract table ownership
+
+For the contract to _own_ the table (instead of some [EOA](/fundamentals/about/glossary#eoa)), an additional import is needed so that the contract can own an ERC721 token. If you were to, instead, mint to `msg.sender` as in the example above, the contract wouldn't have the default permissions to also write to the table; contract ownership helps solve this issue.
+
+Thus, instead of minting to an EOA address (i.e., a wallet), you can actually have the contract own the table. One way to do this is by importing and inheriting from `ERC721Holder`, and once you do so, you can then use `address(this)` within something like the `createTable()` method, which will send the [ERC721 TABLE](https://opensea.io/collection/tableland-tables) to the contract itself. Alternatively, implement [`onERC721Received`](https://github.com/binodnp/openzeppelin-solidity/blob/master/docs/ERC721Holder.md#onerc721received) on your own.
+
+```solidity
+// Existing imports
+// highlight-start
+// Needed if the contract must own the table
+import "@openzeppelin/contracts/token/ERC721/utils/ERC721Holder.sol";
+// highlight-end
+
+// highlight-next-line
+contract Contract is ERC721Holder {
+  // Existing code
+}
+```
+
+Then, you can use `address(this0)` in your function.
+
+```solidity
+_tableId = TablelandDeployments.get().createTable(
+  // highlight-next-line
+  address(this),
+  SQLHelpers.toCreateFromSchema(
+    "id integer primary key," // Notice the trailing comma
+    "val text", // Separate lines for readability—but it's a single string
+    _TABLE_PREFIX
+  )
+);
+```
+
+Alternatively, developers can choose to set up and [configure their own controller contract](/smart-contracts/controller). In the current setup, the `msg.sender` will never be able to make table mutations as it always must come from the owner, which is `address(this)`. A controller allows this to be flexible and, for example, allow both the contract's owner and the contract itself to have "allow all" admin permissions.
+
 ## Write table data
 
 You can insert, update, or delete data using `TablelandDeployments.get().runSQL()`. This method takes the following:
 
-- `caller`: The `address` of who (EOA or smart contract) is calling the registry contract.
+- `caller`: The `address` of what is calling the registry contract.
 - `tableId`: Unique `uint256` ID of the Tableland table.
 - `statement`: A `string` for the SQL `INSERT` statement.
 
@@ -99,7 +134,7 @@ function insert() public payable {
   *  );
   */
   TablelandDeployments.get().runSQL(
-    msg.sender,
+    address(this),
     _tableId,
     SQLHelpers.toInsert(
       _TABLE_PREFIX,
@@ -146,7 +181,7 @@ function update(uint256 myId, string memory myVal) public payable {
    *  UPDATE {prefix}_{chainId}_{tableId} SET val=<myVal> WHERE id=<id>
    */
   TablelandDeployments.get().runSQL(
-    msg.sender,
+    address(this),
     _tableId,
     SQLHelpers.toUpdate(
       _TABLE_PREFIX,
@@ -181,7 +216,7 @@ function delete(uint256 myId) public payable {
    *  DELETE FROM {prefix}_{chainId}_{tableId} WHERE id=<id>
    */
   TablelandDeployments.get().runSQL(
-    msg.sender,
+    address(this),
     _tableId,
     SQLHelpers.toDelete(
       _TABLE_PREFIX,

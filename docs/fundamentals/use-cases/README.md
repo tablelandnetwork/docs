@@ -42,3 +42,10 @@ As a best practice, developers should educate their users on what they’re usin
 - **High frequency, sub-second writes**—such as a high frequency trading bot.
 - **Storing _every_ user interaction in an application**—it probably doesn’t make sense for this data to live in an web3 table, such as keystrokes or clicks. The write frequency would result in high costs.
 - **Extremely large datasets or files**—these should be avoided and are better handled by file storage, using solutions like IPFS, Filecoin, or similar. But, _pointers to these locations_ and related metadata are a great use case for Tableland tables, actually.
+
+## Get connected
+
+If you're building out a use case and looking to connect with the Tableland team, there are a couple of ways we can help:
+
+- Set up a [discovery call](https://calendly.com/marlatextile/30min) with the Tableland partnerships team.
+- [Join our Discord](https://discord.com/invite/dc8EBEhGbg) and use the `#contact-team` channel to start a conversation.

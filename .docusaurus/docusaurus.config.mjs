@@ -177,6 +177,11 @@ export default {
           "items": [
             {
               "type": "docSidebar",
+              "sidebarId": "quickstarts",
+              "label": "Quickstarts"
+            },
+            {
+              "type": "docSidebar",
               "sidebarId": "sdk",
               "label": "SDK"
             },

@@ -9,7 +9,7 @@ keywords:
 Today, the primary standard for Non-Fungible Tokens (NFTs) is [Ethereum's ERC-721 Non-Fungible Token Standard](https://eips.ethereum.org/EIPS/eip-721) as well as the [Ethereum ERC-1155 Multi Token Standard](https://eips.ethereum.org/EIPS/eip-1155). Platforms such as OpenSea have adopted these NFT standards, along with [modifications of their own](https://docs.opensea.io/docs/metadata-standards), to support a wide range of NFT projects.
 
 :::tip
-To learn how to actually store and query NFT metadata in tables, check out the [crafting NFT metadata playbook](/playbooks/sql/nft-metadata).
+To learn how to actually store and query NFT metadata in tables, check out the [crafting NFT metadata playbook](/playbooks/walkthroughs/nft-metadata).
 :::
 
 ## Highly structured data

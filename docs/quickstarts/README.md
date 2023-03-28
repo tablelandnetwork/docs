@@ -11,6 +11,7 @@ There are two things every developer will need if they are trying to use Tablela
 
 - **Wallet**: You'll need to set up an account, such as [MetaMask](https://metamask.io/) for browser wallet-based connections. You'll use your EVM account to create and write to tables across any of the networks Tableland is live on.
 - **Funds**: If you want to create or write to a table, it requires an on-chain transaction—you need to own currency in the native chain's denomination if you want to make database state changes.
+- **Fundamentals**: Developers should be aware of [fundamental network concepts](/fundamentals/architecture/protocol-design) like table naming convention, limits, and supported chains.
 
 :::tip
 If you're developing on a testnet, you should get testnet currency, and the way to do this depends on the chain you're using. Check out the [chain selection documentation](/fundamentals/chains/#choosing-a-chain) for how to use testnet faucets and get fake currency.

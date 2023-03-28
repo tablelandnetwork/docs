@@ -82,6 +82,39 @@ function create() public payable {
 }
 ```
 
+Note that the table here is created and owned by `msg.sender`, so only this account will be able to write mutating SQL statements, by default. The contract will be unable to send SQL statements without additional configuration.
+
+## 3. Add contract table ownership
+
+To make calls SQL from the contract, the easiest approach is to have the contract own the table itself. OpenZeppelin has an `ERC721Holder` contract that enables this functionality, allowing you to use `address(this)` within the Tableland table creates and writes.
+
+```solidity
+// Existing imports
+// highlight-start
+// Needed if the contract must own the table
+import "@openzeppelin/contracts/token/ERC721/utils/ERC721Holder.sol";
+// highlight-end
+
+// highlight-next-line
+contract Starter is ERC721Holder {
+  // Existing code here
+
+  function create() public payable {
+    _tableId = TablelandDeployments.get().createTable(
+      // highlight-next-line
+      address(this),
+      SQLHelpers.toCreateFromSchema(
+        "id integer primary key," // Notice the trailing comma
+        "val text",
+        _TABLE_PREFIX
+      )
+    );
+  }
+}
+```
+
+Failure to do so will not only prevent the contract from owning the table but also block `runSQL` calls since the contract would not have admin write permissions. Using a [controller contract](/smart-contracts/controller) can make this much more flexible with multi-account and other permission checks.
+
 ## 4. Write to a table
 
 You can insert, update, or delete data using `TablelandDeployments.get().runSQL()`. The `SQLHelpers` `toInsert()` method helps format the `runSQL`'s input properly.
@@ -150,46 +183,6 @@ function update(uint256 myId, string memory myVal) public payable {
       filters
     )
   );
-}
-```
-
-## 5. Add contract table ownership
-
-For the contract to _own_ the table (instead of some Externally Owned Account—"EOA"), an additional import is needed so that the contract can own an ERC721 token. If you haven't already, install OpenZeppelin as a dependency.
-
-```bash npm2yarn
-npm install --save @openzeppelin/contracts
-```
-
-Then, instead of minting to an EOA address (i.e., a wallet), you can actually have the contract own the table. One way to do this is by importing and inheriting from `ERC721Holder`, and once you do so, you can then use `address(this)` within something like the `createTable()` method, which will send the [ERC721 TABLE](https://opensea.io/collection/tableland-tables) to the contract itself. Alternatively, implement [`onERC721Received`](https://github.com/binodnp/openzeppelin-solidity/blob/master/docs/ERC721Holder.md#onerc721received) on your own.
-
-```solidity
-// SPDX-License-Identifier: MIT
-pragma solidity ^0.8.12;
-
-import "@tableland/evm/contracts/utils/TablelandDeployments.sol";
-import "@tableland/evm/contracts/utils/SQLHelpers.sol";
-import "@openzeppelin/contracts/utils/Strings.sol";
-// highlight-start
-// Needed if the contract must own the table
-import "@openzeppelin/contracts/token/ERC721/utils/ERC721Holder.sol";
-// highlight-end
-
-// highlight-next-line
-contract Starter is ERC721Holder {
-  // Existing code here
-
-  function create() public payable {
-    _tableId = TablelandDeployments.get().createTable(
-      // highlight-next-line
-      address(this),
-      SQLHelpers.toCreateFromSchema(
-        "id integer primary key," // Notice the trailing comma
-        "val text",
-        _TABLE_PREFIX
-      )
-    );
-  }
 }
 ```
 

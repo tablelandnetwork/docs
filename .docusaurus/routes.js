@@ -109,7 +109,7 @@ export default [
   },
   {
     path: '/',
-    component: ComponentCreator('/', '4b9'),
+    component: ComponentCreator('/', 'a86'),
     routes: [
       {
         path: '/',
@@ -274,8 +274,8 @@ export default [
         sidebar: "fundamentals"
       },
       {
-        path: '/fundamentals/use-cases',
-        component: ComponentCreator('/fundamentals/use-cases', '781'),
+        path: '/fundamentals/use-cases/',
+        component: ComponentCreator('/fundamentals/use-cases/', '93c'),
         exact: true,
         sidebar: "fundamentals"
       },

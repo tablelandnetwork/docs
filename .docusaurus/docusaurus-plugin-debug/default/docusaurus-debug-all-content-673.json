@@ -500,7 +500,7 @@
               "sidebar": "fundamentals",
               "previous": {
                 "title": "Use cases",
-                "permalink": "/fundamentals/use-cases"
+                "permalink": "/fundamentals/use-cases/"
               },
               "next": {
                 "title": "Table uniqueness",
@@ -874,7 +874,7 @@
               },
               "next": {
                 "title": "Use cases",
-                "permalink": "/fundamentals/use-cases"
+                "permalink": "/fundamentals/use-cases/"
               }
             },
             {
@@ -904,16 +904,16 @@
               }
             },
             {
-              "unversionedId": "fundamentals/use-cases",
-              "id": "fundamentals/use-cases",
+              "unversionedId": "fundamentals/use-cases/README",
+              "id": "fundamentals/use-cases/README",
               "title": "Use cases",
               "description": "A series of general use cases to consider.",
-              "source": "@site/docs/fundamentals/use-cases.md",
-              "sourceDirName": "fundamentals",
-              "slug": "/fundamentals/use-cases",
-              "permalink": "/fundamentals/use-cases",
+              "source": "@site/docs/fundamentals/use-cases/README.md",
+              "sourceDirName": "fundamentals/use-cases",
+              "slug": "/fundamentals/use-cases/",
+              "permalink": "/fundamentals/use-cases/",
               "draft": false,
-              "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/fundamentals/use-cases.md",
+              "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/fundamentals/use-cases/README.md",
               "tags": [],
               "version": "current",
               "lastUpdatedBy": "Author",
@@ -3462,7 +3462,8 @@
               },
               {
                 "type": "doc",
-                "id": "fundamentals/use-cases"
+                "label": "Use cases",
+                "id": "fundamentals/use-cases/README"
               },
               {
                 "type": "html",

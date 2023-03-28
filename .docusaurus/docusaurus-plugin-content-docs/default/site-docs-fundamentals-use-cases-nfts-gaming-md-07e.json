@@ -1,0 +1,24 @@
+{
+  "unversionedId": "fundamentals/use-cases/nfts-gaming",
+  "id": "fundamentals/use-cases/nfts-gaming",
+  "title": "NFTs & gaming",
+  "description": "A series of general use cases to consider.",
+  "source": "@site/docs/fundamentals/use-cases/nfts-gaming.md",
+  "sourceDirName": "fundamentals/use-cases",
+  "slug": "/fundamentals/use-cases/nfts-gaming",
+  "permalink": "/fundamentals/use-cases/nfts-gaming",
+  "draft": false,
+  "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/fundamentals/use-cases/nfts-gaming.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "title": "NFTs & gaming",
+    "description": "A series of general use cases to consider.",
+    "keywords": [
+      "use cases"
+    ]
+  }
+}

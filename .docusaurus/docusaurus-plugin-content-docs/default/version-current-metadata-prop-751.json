@@ -168,8 +168,8 @@
       {
         "type": "link",
         "label": "Use cases",
-        "href": "/fundamentals/use-cases",
-        "docId": "fundamentals/use-cases"
+        "href": "/fundamentals/use-cases/",
+        "docId": "fundamentals/use-cases/README"
       },
       {
         "type": "html",
@@ -1241,8 +1241,8 @@
       "description": "Figure out where to begin with Tableland, whether that's starting to build or figuring out how it all works.",
       "sidebar": "fundamentals"
     },
-    "fundamentals/use-cases": {
-      "id": "fundamentals/use-cases",
+    "fundamentals/use-cases/README": {
+      "id": "fundamentals/use-cases/README",
       "title": "Use cases",
       "description": "A series of general use cases to consider.",
       "sidebar": "fundamentals"
