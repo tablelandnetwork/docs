@@ -109,7 +109,7 @@ export default [
   },
   {
     path: '/',
-    component: ComponentCreator('/', 'a86'),
+    component: ComponentCreator('/', '848'),
     routes: [
       {
         path: '/',
@@ -234,6 +234,12 @@ export default [
       {
         path: '/fundamentals/chains/ethereum',
         component: ComponentCreator('/fundamentals/chains/ethereum', '945'),
+        exact: true,
+        sidebar: "fundamentals"
+      },
+      {
+        path: '/fundamentals/chains/filecoin',
+        component: ComponentCreator('/fundamentals/chains/filecoin', 'b4d'),
         exact: true,
         sidebar: "fundamentals"
       },

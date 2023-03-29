@@ -1,0 +1,33 @@
+{
+  "unversionedId": "fundamentals/chains/filecoin",
+  "id": "fundamentals/chains/filecoin",
+  "title": "Filecoin",
+  "description": "An overview of using Filecoin with Tableland.",
+  "source": "@site/docs/fundamentals/chains/filecoin.md",
+  "sourceDirName": "fundamentals/chains",
+  "slug": "/fundamentals/chains/filecoin",
+  "permalink": "/fundamentals/chains/filecoin",
+  "draft": false,
+  "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/fundamentals/chains/filecoin.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "title": "Filecoin",
+    "description": "An overview of using Filecoin with Tableland.",
+    "keywords": [
+      "filecoin"
+    ]
+  },
+  "sidebar": "fundamentals",
+  "previous": {
+    "title": "Ethereum",
+    "permalink": "/fundamentals/chains/ethereum"
+  },
+  "next": {
+    "title": "Arbitrum",
+    "permalink": "/fundamentals/chains/arbitrum"
+  }
+}

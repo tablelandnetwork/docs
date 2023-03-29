@@ -101,6 +101,11 @@
               "sidebar": "fundamentals"
             },
             {
+              "id": "fundamentals/chains/filecoin",
+              "path": "/fundamentals/chains/filecoin",
+              "sidebar": "fundamentals"
+            },
+            {
               "id": "fundamentals/chains/local",
               "path": "/fundamentals/chains/local",
               "sidebar": "fundamentals"
