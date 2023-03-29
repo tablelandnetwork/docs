@@ -84,7 +84,6 @@ const architecture = [
     },
     items: [
       "fundamentals/chains/ethereum",
-      "fundamentals/chains/filecoin",
       "fundamentals/chains/arbitrum",
       "fundamentals/chains/optimism",
       "fundamentals/chains/polygon",
