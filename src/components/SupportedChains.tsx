@@ -61,13 +61,31 @@ export const supportedChains = (): FormattedChains[] => {
       blockExplorer: "",
       baseUrl: c.baseUrl,
     };
-    if (format.chainName === "local-tableland") format.location = "local";
-    if (format.chainName === "mainnet") format.chainNameFormatted = "ethereum";
-    if (format.chainName === "goerli")
-      format.chainNameFormatted = "ethereum goerli";
-    if (format.chainName === "matic") format.chainNameFormatted = "polygon";
-    if (format.chainName === "maticmum")
-      format.chainNameFormatted = "polygon mumbai";
+    switch (format.chainName) {
+      case "local-tableland":
+        format.location = "local";
+        break;
+      case "mainnet":
+        format.chainNameFormatted = "ethereum";
+        break;
+      case "arbitrum":
+        format.chainNameFormatted = "arbitrum one";
+        break;
+      case "goerli":
+        format.chainNameFormatted = "ethereum goerli";
+        break;
+      case "matic":
+        format.chainNameFormatted = "polygon";
+        break;
+      case "maticmum":
+        format.chainNameFormatted = "polygon mumbai";
+        break;
+      case "local-tableland":
+        format.location = "local";
+        break;
+      default:
+        break;
+    }
     format.blockExplorer = getChainExplorer(
       format.chainNameFormatted.split(" ")[0],
       format.location,

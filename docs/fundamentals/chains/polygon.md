@@ -15,7 +15,26 @@ Polygon is one of the EVM-compatible Layer 2 solutions that Tableland currently 
 
 For comparison, Polygon supports 7k tx/s compared to Ethereum’s 15 tx/s and ~10000x lower costs per transaction than Ethereum. It’s important to note that sidechains do use _different_ security assumptions than the L1; it’s what allows Polygon to architect its network in a way that enables all of these benefits for developers. Nevertheless, it’s a great scaling solution.
 
-### Mumbai testnet
+### Polygon (mainnet)
+
+- Average block time: ≤ 2 seconds
+- Chain ID: <ChainInfo chain='matic' info='chainId' />
+- Symbol: MATIC
+- Status Dashboard:
+  - [https://polygon.io/system](https://polygon.io/system)
+- Block Explorer:
+  - [https://polygonscan.com/](https://polygonscan.com/)
+- Gas Station:
+  - [https://polygonscan.com/gastracker](https://polygonscan.com/gastracker)
+  - [https://gasstation-mainnet.matic.network/v2](https://gasstation-mainnet.matic.network/v2)
+- RPC URL:
+  - [https://polygon-rpc.com](https://polygon-rpc.com/)
+  - See [https://chainlist.org/chain/137](https://chainlist.org/chain/137)
+- Tableland contract address: <ChainInfo chain='maticmum' info='contractAddress' />
+- SDK network name: <ChainInfo chain='maticmum' info='chainName' />
+- Tableland gateway: <ChainInfo chain='maticmum' info='baseUrl' />
+
+### Polygon Mumbai (testnet)
 
 - Average block time: ≤ 2 seconds
 - Chain ID: <ChainInfo chain='maticmum' info='chainId' />
@@ -36,21 +55,6 @@ For comparison, Polygon supports 7k tx/s compared to Ethereum’s 15 tx/s and ~1
 - SDK network name: <ChainInfo chain='matic' info='chainName' />
 - Tableland gateway: <ChainInfo chain='matic' info='baseUrl' />
 
-### Mainnet
+#### Getting testnet funds
 
-- Average block time: ≤ 2 seconds
-- Chain ID: <ChainInfo chain='matic' info='chainId' />
-- Symbol: MATIC
-- Status Dashboard:
-  - [https://polygon.io/system](https://polygon.io/system)
-- Block Explorer:
-  - [https://polygonscan.com/](https://polygonscan.com/)
-- Gas Station:
-  - [https://polygonscan.com/gastracker](https://polygonscan.com/gastracker)
-  - [https://gasstation-mainnet.matic.network/v2](https://gasstation-mainnet.matic.network/v2)
-- RPC URL:
-  - [https://polygon-rpc.com](https://polygon-rpc.com/)
-  - See [https://chainlist.org/chain/137](https://chainlist.org/chain/137)
-- Tableland contract address: <ChainInfo chain='maticmum' info='contractAddress' />
-- SDK network name: <ChainInfo chain='maticmum' info='chainName' />
-- Tableland gateway: <ChainInfo chain='maticmum' info='baseUrl' />
+Request testnet Ether from a faucet noted above. Note that bridging is not required since MATIC is the native token, not ETH.
