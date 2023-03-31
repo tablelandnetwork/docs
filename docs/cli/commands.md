@@ -521,20 +521,6 @@ tableland list
 ]
 ```
 
-The unwrap flag will return a single row. Make sure to add `limit 1;` to your query to avoid errors. 
-
-```bash
-tableland read "select * from healthbot_31337_1 limit 1;" --unwrap --chain "local-tableland"
-// Result: {"counter":1}
-```
-
-The extract command will give you the results of a single column. Make sure your query is only generating a single column in it's response.
-
-```bash 
-tableland read "select counter from healthbot 31337_1;" --extract --chain "local-tableland"
-// Result: [1]
-```
-
 
 ## transfer
 
@@ -661,6 +647,21 @@ Lastly, if you want the data to be returned as objects, use the `objects` flag:
   results: [ { id: 1, name: 'Bobby Tables' } ]
 }
 ```
+
+The unwrap flag will return a single row. Make sure to add `limit 1;` to your query to avoid errors. 
+
+```bash
+tableland read "select * from healthbot_31337_1 limit 1;" --unwrap --chain "local-tableland"
+// Result: {"counter":1}
+```
+
+The extract command will give you the results of a single column. Make sure your query is only generating a single column in it's response.
+
+```bash 
+tableland read "select counter from healthbot 31337_1;" --extract --chain "local-tableland"
+// Result: [1]
+```
+
 
 ## receipt
 
