@@ -521,6 +521,7 @@ tableland list
 ]
 ```
 
+
 ## transfer
 
 Transfer a table to another address
@@ -595,6 +596,12 @@ Options:
   -c, --chain       The EVM chain to target [string] [default: "polygon-mumbai"]
       --format      Output format. One of 'pretty', 'table', or 'objects'.
                                                      [string] [default: "table"]
+      --extract              Returns only the set of values of a single column.
+                             Read statement must be require only a single column
+                             .                        [boolean] [default: false]
+      --unwrap               Returns the results of a single row instead of arra
+                             y of results. Read statement must result in a singl
+                             e row response.          [boolean] [default: false]
 ```
 
 It is also easy to use vanilla SQL `SELECT` statements to query the whole table! See the [JavaScript SDK](https://www.notion.so/JavaScript-SDK-Legacy-9acf7b81bec5444aa4f9230445972658) docs for further details. As with the `write` command, you must specify the table name returned from the `create` command.
@@ -640,6 +647,21 @@ Lastly, if you want the data to be returned as objects, use the `objects` flag:
   results: [ { id: 1, name: 'Bobby Tables' } ]
 }
 ```
+
+The unwrap flag will return a single row. Make sure to add `limit 1;` to your query to avoid errors. 
+
+```bash
+tableland read "select * from healthbot_31337_1 limit 1;" --unwrap --chain "local-tableland"
+// Result: {"counter":1}
+```
+
+The extract command will give you the results of a single column. Make sure your query is only generating a single column in it's response.
+
+```bash 
+tableland read "select counter from healthbot 31337_1;" --extract --chain "local-tableland"
+// Result: [1]
+```
+
 
 ## receipt
 
