@@ -17,35 +17,38 @@ export default function Home(): JSX.Element {
             <p className="hero__subtitle">{siteConfig.tagline}</p>{" "}
             {/* See `docusaurus.config.js` and `tagline` */}
           </div>
-          <div className="row row-landing margin-top--lg">
+          <div className="row row-landing margin-top--sm">
             <div className="col col--6 padding-left--none padding-right--none">
               <h2>Program your web3 data</h2>
               <p>
-                Build permissionless & dynamic applications on your blockchain
-                of choice by adding Tableland to your stack, allowing developers
-                to:
+                Tableland is a decentralized database built on the SQLite
+                engine, providing developers with a web3-native, relational
+                database that easily integrates into their stack. With
+                Tableland, you can:
               </p>
               <ul>
                 <li>
-                  Use a decentralized relational database with SQL queries and
-                  mutability, powered by chain-driven data and web3 identity.
+                  Utilize SQL to interact with web3 data, making the development
+                  process simpler and more efficient.
                 </li>
                 <li>
-                  Configure custom rules to control who or what can change
-                  certain data, such as gating with account addresses, token
-                  ownership, balances, or whatever on-chain logic you'd like.
+                  Configure row-level access rules driven by wallet addresses,
+                  token ownership, account balances, and any logic you choose.
                 </li>
                 <li>
-                  Reduce smart contract storage, simplify complex distributed
-                  file system workflows—both of which lack robust database
-                  features—and stop relying on centralized service providers.
+                  Build robust data pipelines that process and distribute large
+                  amounts of data for DeFi, DeSci, games, and more, all
+                  decentralized and autonomous, leveraging Tableland's
+                  infrastructure.
                 </li>
               </ul>{" "}
               <p></p>
               <p>
-                Scale data storage on Ethereum + EVM chains by creating,
-                writing, and reading data using SQL. <b> Mutable</b> data with{" "}
-                <b>immutable</b> rules.
+                Deploy across{" "}
+                <Link to="/fundamentals/chains">multiple blockchains</Link>,
+                including Ethereum, Polygon, Arbitrum, and Optimism, and be a
+                part of the growing number of projects using Tableland for
+                data-driven applications.
               </p>
               <Link
                 className={clsx("button button--primary", styles.getStartedBtn)}

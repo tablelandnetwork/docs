@@ -38,42 +38,44 @@ type ProductItem = {
 
 const FeatureList: FeatureItem[] = [
   {
-    title: "Hybrid state & queries",
+    title: "Easy integration",
     icon: <MdQueryStats size={30} />,
     description: (
       <>
-        Dynamically change table data using on-chain actions—the host chain
-        provides data availability for mutating SQL statements—while table state
-        is accessed with read queries made directly to Tableland (a network of
-        nodes running SQLite).
+        Choose from a variety of options including the JavaScript/TypeScript
+        SDK, smart contracts, CLI tool, or REST API. By using these tools,
+        developers can easily create tables, insert data, and query the database
+        without worrying about the underlying infrastructure.
       </>
     ),
   },
   {
-    title: "Access control & ownership",
+    title: "Flexible data management",
     icon: <FaFileContract size={30} />,
     description: (
       <>
-        All tables are minted as{" "}
-        <Link to="https://opensea.io/collection/tableland-tables">
-          ERC721 tokens{" "}
-        </Link>
-        by a Tableland registry smart contract on each chain, so identity,
-        ownership, and contract-defined mutability controllers (
-        <Link to="https://en.wikipedia.org/wiki/Access-control_list">ACLs</Link>
-        ) enable adaptable on-chain workflows for collaborative data.
+        Dynamically update your data using on-chain actions, with read queries
+        made directly to Tableland. Easily manage both on-chain and off-chain
+        data, providing greater flexibility and ease of use. Plus, with a
+        network of nodes running SQLite, you can trust that your data is always
+        available and up-to-date.
       </>
     ),
   },
   {
-    title: "Flexible clients",
+    title: "Granular access control",
     icon: <FaConnectdevelop size={30} />,
     description: (
       <>
-        Develop using the JavaScript / TypeScript SDK, smart contracts, CLI
-        tool, or REST API—and even choose to run your own Tableland validator
-        node (for local, testnet, or mainnet chains) with relatively light
-        hardware and setup requirements.
+        Configure row-level access rules driven by wallet addresses, token
+        ownership, account balances, & any logic you choose. All tables are
+        minted as{" "}
+        <Link to="https://opensea.io/collection/tableland-tables">
+          ERC721 tokens
+        </Link>{" "}
+        by a Tableland registry smart contract on each chain, allowing for easy
+        integration with smart contracts & enabling you to create adaptable
+        on-chain workflows for collaborative data.
       </>
     ),
   },
