@@ -446,6 +446,12 @@ input {
   font-size: var(--ifm-h5-font-size);
 }
 
+/* Fix last navbar item having zero right padding */
+.navbar__items--right > :last-child {
+  padding: var(--ifm-navbar-item-padding-vertical)
+    var(--ifm-navbar-item-padding-horizontal);
+}
+
 /* Make navbar dropdown links "active" when a child in the dropdown is active */
 .dropdown:has(.dropdown__menu > li > .dropdown__link--active) .navbar__link {
   color: var(--ifm-color-primary) !important;
