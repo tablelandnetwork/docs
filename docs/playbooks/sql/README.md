@@ -19,7 +19,7 @@ Tableland currently supports the following SQL clauses:
 - [`DELETE`](/playbooks/sql/write#deleting-data): Delete a value from a table where some condition is met.
 - [`SELECT`](/playbooks/sql/read): Select a set of data from a table(s), along with conditions.
 
-To access the database, Tableland clients like the [SDK](/sdk), [smart contracts](/smart-contracts), and [CLI](/cli) can be used to create and mutate table data. These also use the [Validator REST API](/validator-api) to actually read data directly from the Tableland network by directly writing `SELECT` statement against it.
+To access the database, Tableland clients like the [SDK](/sdk), [smart contracts](/smart-contracts), and [CLI](/cli) can be used to create and mutate table data. These also use the [Gateway REST API](/validator-api) to actually read data directly from the Tableland network by directly writing `SELECT` statement against it.
 
 ## Data types
 

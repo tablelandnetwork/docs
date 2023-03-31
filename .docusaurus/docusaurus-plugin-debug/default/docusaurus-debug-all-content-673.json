@@ -991,6 +991,125 @@
               }
             },
             {
+              "unversionedId": "gateway-api/endpoints",
+              "id": "gateway-api/endpoints",
+              "title": "Endpoints",
+              "description": "Make API calls to get table and validator information.",
+              "source": "@site/docs/gateway-api/endpoints.md",
+              "sourceDirName": "gateway-api",
+              "slug": "/gateway-api/endpoints",
+              "permalink": "/gateway-api/endpoints",
+              "draft": false,
+              "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/gateway-api/endpoints.md",
+              "tags": [],
+              "version": "current",
+              "lastUpdatedBy": "Author",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "Oct 14, 2018",
+              "frontMatter": {
+                "title": "Endpoints",
+                "description": "Make API calls to get table and validator information.",
+                "keywords": [
+                  "gateway api",
+                  "rest api"
+                ]
+              },
+              "sidebar": "validatorApi",
+              "previous": {
+                "title": "Get started",
+                "permalink": "/gateway-api/"
+              },
+              "next": {
+                "title": "Query formatting",
+                "permalink": "/gateway-api/query-formatting"
+              }
+            },
+            {
+              "unversionedId": "gateway-api/errors",
+              "id": "gateway-api/errors",
+              "title": "Errors",
+              "description": "Openly readable tables by your applications.",
+              "source": "@site/docs/gateway-api/errors.md",
+              "sourceDirName": "gateway-api",
+              "slug": "/gateway-api/errors",
+              "permalink": "/gateway-api/errors",
+              "draft": false,
+              "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/gateway-api/errors.md",
+              "tags": [],
+              "version": "current",
+              "lastUpdatedBy": "Author",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "Oct 14, 2018",
+              "frontMatter": {
+                "title": "Errors",
+                "description": "Openly readable tables by your applications.",
+                "keywords": [
+                  "write to table",
+                  "mutate table"
+                ]
+              }
+            },
+            {
+              "unversionedId": "gateway-api/query-formatting",
+              "id": "gateway-api/query-formatting",
+              "title": "Query formatting",
+              "description": "Transform the output of a read query into your desired format.",
+              "source": "@site/docs/gateway-api/query-formatting.md",
+              "sourceDirName": "gateway-api",
+              "slug": "/gateway-api/query-formatting",
+              "permalink": "/gateway-api/query-formatting",
+              "draft": false,
+              "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/gateway-api/query-formatting.md",
+              "tags": [],
+              "version": "current",
+              "lastUpdatedBy": "Author",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "Oct 14, 2018",
+              "frontMatter": {
+                "title": "Query formatting",
+                "description": "Transform the output of a read query into your desired format.",
+                "keywords": [
+                  "gateway api",
+                  "query formatting"
+                ]
+              },
+              "sidebar": "validatorApi",
+              "previous": {
+                "title": "Endpoints",
+                "permalink": "/gateway-api/endpoints"
+              }
+            },
+            {
+              "unversionedId": "gateway-api/README",
+              "id": "gateway-api/README",
+              "title": "Get started",
+              "description": "Leverage REST APIs to interact directly with Tableland validator nodes at a gateway.",
+              "source": "@site/docs/gateway-api/README.md",
+              "sourceDirName": "gateway-api",
+              "slug": "/gateway-api/",
+              "permalink": "/gateway-api/",
+              "draft": false,
+              "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/gateway-api/README.md",
+              "tags": [],
+              "version": "current",
+              "lastUpdatedBy": "Author",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "Oct 14, 2018",
+              "frontMatter": {
+                "title": "Get started",
+                "description": "Leverage REST APIs to interact directly with Tableland validator nodes at a gateway.",
+                "keywords": [
+                  "rest api",
+                  "gateway api"
+                ]
+              },
+              "sidebar": "validatorApi",
+              "next": {
+                "title": "Endpoints",
+                "permalink": "/gateway-api/endpoints"
+              }
+            },
+            {
               "unversionedId": "landing",
               "id": "landing",
               "title": "Home",
@@ -1432,7 +1551,7 @@
             {
               "unversionedId": "quickstarts/api-quickstart",
               "id": "quickstarts/api-quickstart",
-              "title": "Validator API quickstart",
+              "title": "Gateway API quickstart",
               "description": "Learn how to read table data or retrieve relevant validator information.",
               "source": "@site/docs/quickstarts/api-quickstart.md",
               "sourceDirName": "quickstarts",
@@ -1446,8 +1565,8 @@
               "lastUpdatedAt": 1539502055,
               "formattedLastUpdatedAt": "Oct 14, 2018",
               "frontMatter": {
-                "title": "Validator API quickstart",
-                "sidebar_label": "REST API",
+                "title": "Gateway API quickstart",
+                "sidebar_label": "Gateway API",
                 "description": "Learn how to read table data or retrieve relevant validator information."
               },
               "sidebar": "quickstarts",
@@ -1487,7 +1606,7 @@
                 "permalink": "/quickstarts/smart-contract-quickstart"
               },
               "next": {
-                "title": "REST API",
+                "title": "Gateway API",
                 "permalink": "/quickstarts/api-quickstart"
               }
             },
@@ -1547,7 +1666,7 @@
               },
               "sidebar": "quickstarts",
               "previous": {
-                "title": "REST API",
+                "title": "Gateway API",
                 "permalink": "/quickstarts/api-quickstart"
               },
               "next": {
@@ -2132,6 +2251,39 @@
               }
             },
             {
+              "unversionedId": "smart-contracts/contract-owned-tables",
+              "id": "smart-contracts/contract-owned-tables",
+              "title": "Contract owned tables",
+              "description": "Learn how to create tables from and owned by a smart contract.",
+              "source": "@site/docs/smart-contracts/contract-owned-tables.md",
+              "sourceDirName": "smart-contracts",
+              "slug": "/smart-contracts/contract-owned-tables",
+              "permalink": "/smart-contracts/contract-owned-tables",
+              "draft": false,
+              "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/smart-contracts/contract-owned-tables.md",
+              "tags": [],
+              "version": "current",
+              "lastUpdatedBy": "Author",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "Oct 14, 2018",
+              "frontMatter": {
+                "title": "Contract owned tables",
+                "description": "Learn how to create tables from and owned by a smart contract.",
+                "keywords": [
+                  "create table"
+                ]
+              },
+              "sidebar": "smartContracts",
+              "previous": {
+                "title": "Get started",
+                "permalink": "/smart-contracts/get-started"
+              },
+              "next": {
+                "title": "Configure write access",
+                "permalink": "/smart-contracts/controller/"
+              }
+            },
+            {
               "unversionedId": "smart-contracts/controller/contract-anatomy",
               "id": "smart-contracts/controller/contract-anatomy",
               "title": "Controller contract anatomy",
@@ -2216,7 +2368,7 @@
               "sidebar": "smartContracts",
               "previous": {
                 "title": "Contract owned tables",
-                "permalink": "/smart-contracts/creating-tables-from-contracts"
+                "permalink": "/smart-contracts/contract-owned-tables"
               },
               "next": {
                 "title": "Controller contract",
@@ -2249,42 +2401,8 @@
                 "permalink": "/smart-contracts/controller/creating-controllers"
               },
               "next": {
-                "title": "Example contracts",
-                "permalink": "/smart-contracts/examples/"
-              }
-            },
-            {
-              "unversionedId": "smart-contracts/creating-tables-from-contracts",
-              "id": "smart-contracts/creating-tables-from-contracts",
-              "title": "Creating tables from contracts",
-              "description": "Learn how to create tables from and owned by a smart contract.",
-              "source": "@site/docs/smart-contracts/creating-tables-from-contracts.md",
-              "sourceDirName": "smart-contracts",
-              "slug": "/smart-contracts/creating-tables-from-contracts",
-              "permalink": "/smart-contracts/creating-tables-from-contracts",
-              "draft": false,
-              "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/smart-contracts/creating-tables-from-contracts.md",
-              "tags": [],
-              "version": "current",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
-              "formattedLastUpdatedAt": "Oct 14, 2018",
-              "frontMatter": {
-                "title": "Creating tables from contracts",
-                "sidebar_label": "Contract owned tables",
-                "description": "Learn how to create tables from and owned by a smart contract.",
-                "keywords": [
-                  "create table"
-                ]
-              },
-              "sidebar": "smartContracts",
-              "previous": {
-                "title": "Get started",
-                "permalink": "/smart-contracts/get-started"
-              },
-              "next": {
-                "title": "Configure write access",
-                "permalink": "/smart-contracts/controller/"
+                "title": "Using SQLHelpers",
+                "permalink": "/smart-contracts/using-sql-helpers"
               }
             },
             {
@@ -2440,68 +2558,8 @@
                 "permalink": "/smart-contracts/examples/gated-voting"
               },
               "next": {
-                "title": "ERC721A Queryable",
-                "permalink": "/smart-contracts/examples/erc721a-queryable"
-              }
-            },
-            {
-              "unversionedId": "smart-contracts/examples/erc721a-enumerable",
-              "id": "smart-contracts/examples/erc721a-enumerable",
-              "title": "ERC721A enumerable",
-              "description": "Create an ERC721A enumerable contract.",
-              "source": "@site/docs/smart-contracts/examples/erc721a-enumerable.md",
-              "sourceDirName": "smart-contracts/examples",
-              "slug": "/smart-contracts/examples/erc721a-enumerable",
-              "permalink": "/smart-contracts/examples/erc721a-enumerable",
-              "draft": false,
-              "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/smart-contracts/examples/erc721a-enumerable.md",
-              "tags": [],
-              "version": "current",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
-              "formattedLastUpdatedAt": "Oct 14, 2018",
-              "frontMatter": {
-                "title": "ERC721A enumerable",
-                "description": "Create an ERC721A enumerable contract."
-              },
-              "sidebar": "smartContracts",
-              "previous": {
-                "title": "ERC721A Queryable",
-                "permalink": "/smart-contracts/examples/erc721a-queryable"
-              },
-              "next": {
-                "title": "Using SQLHelpers",
-                "permalink": "/smart-contracts/examples/using-sql-helpers"
-              }
-            },
-            {
-              "unversionedId": "smart-contracts/examples/erc721a-queryable",
-              "id": "smart-contracts/examples/erc721a-queryable",
-              "title": "ERC721A Queryable",
-              "description": "Create an ERC721A queryable contract.",
-              "source": "@site/docs/smart-contracts/examples/erc721a-queryable.md",
-              "sourceDirName": "smart-contracts/examples",
-              "slug": "/smart-contracts/examples/erc721a-queryable",
-              "permalink": "/smart-contracts/examples/erc721a-queryable",
-              "draft": false,
-              "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/smart-contracts/examples/erc721a-queryable.md",
-              "tags": [],
-              "version": "current",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
-              "formattedLastUpdatedAt": "Oct 14, 2018",
-              "frontMatter": {
-                "title": "ERC721A Queryable",
-                "description": "Create an ERC721A queryable contract."
-              },
-              "sidebar": "smartContracts",
-              "previous": {
-                "title": "Create from contract",
-                "permalink": "/smart-contracts/examples/create-from-contract"
-              },
-              "next": {
-                "title": "ERC721A enumerable",
-                "permalink": "/smart-contracts/examples/erc721a-enumerable"
+                "title": "Serve NFT metadata",
+                "permalink": "/smart-contracts/serving-nft-metadata"
               }
             },
             {
@@ -2590,42 +2648,12 @@
               },
               "sidebar": "smartContracts",
               "previous": {
-                "title": "Setting controllers",
-                "permalink": "/smart-contracts/controller/setting-controllers"
+                "title": "Using SQLHelpers",
+                "permalink": "/smart-contracts/using-sql-helpers"
               },
               "next": {
                 "title": "Allow all controller",
                 "permalink": "/smart-contracts/examples/allow-all-controller"
-              }
-            },
-            {
-              "unversionedId": "smart-contracts/examples/using-sql-helpers",
-              "id": "smart-contracts/examples/using-sql-helpers",
-              "title": "Using SQLHelpers",
-              "description": "Create an contract that uses SQLHelpers library.",
-              "source": "@site/docs/smart-contracts/examples/using-sql-helpers.md",
-              "sourceDirName": "smart-contracts/examples",
-              "slug": "/smart-contracts/examples/using-sql-helpers",
-              "permalink": "/smart-contracts/examples/using-sql-helpers",
-              "draft": false,
-              "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/smart-contracts/examples/using-sql-helpers.md",
-              "tags": [],
-              "version": "current",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
-              "formattedLastUpdatedAt": "Oct 14, 2018",
-              "frontMatter": {
-                "title": "Using SQLHelpers",
-                "description": "Create an contract that uses SQLHelpers library."
-              },
-              "sidebar": "smartContracts",
-              "previous": {
-                "title": "ERC721A enumerable",
-                "permalink": "/smart-contracts/examples/erc721a-enumerable"
-              },
-              "next": {
-                "title": "Serve NFT metadata",
-                "permalink": "/smart-contracts/serving-nft-metadata"
               }
             },
             {
@@ -2658,14 +2686,14 @@
               },
               "next": {
                 "title": "Contract owned tables",
-                "permalink": "/smart-contracts/creating-tables-from-contracts"
+                "permalink": "/smart-contracts/contract-owned-tables"
               }
             },
             {
               "unversionedId": "smart-contracts/immutable-table",
               "id": "smart-contracts/immutable-table",
               "title": "Create an immutable table",
-              "description": "Permanently freeze a table's data by sending it to the zero address.",
+              "description": "Permanently freeze a table's data by sending it to the dead address.",
               "source": "@site/docs/smart-contracts/immutable-table.md",
               "sourceDirName": "smart-contracts",
               "slug": "/smart-contracts/immutable-table",
@@ -2679,7 +2707,7 @@
               "formattedLastUpdatedAt": "Oct 14, 2018",
               "frontMatter": {
                 "title": "Create an immutable table",
-                "description": "Permanently freeze a table's data by sending it to the zero address.",
+                "description": "Permanently freeze a table's data by sending it to the dead address.",
                 "keywords": [
                   "read table",
                   "SQL query"
@@ -2747,8 +2775,8 @@
               },
               "sidebar": "smartContracts",
               "previous": {
-                "title": "Using SQLHelpers",
-                "permalink": "/smart-contracts/examples/using-sql-helpers"
+                "title": "Create from contract",
+                "permalink": "/smart-contracts/examples/create-from-contract"
               },
               "next": {
                 "title": "Create an immutable table",
@@ -2848,6 +2876,36 @@
               "previous": {
                 "title": "Deployed contracts",
                 "permalink": "/smart-contracts/deployed-contracts"
+              }
+            },
+            {
+              "unversionedId": "smart-contracts/using-sql-helpers",
+              "id": "smart-contracts/using-sql-helpers",
+              "title": "Using SQLHelpers",
+              "description": "Use the SQL helpers library to make it easier write SQL in Solidity.",
+              "source": "@site/docs/smart-contracts/using-sql-helpers.md",
+              "sourceDirName": "smart-contracts",
+              "slug": "/smart-contracts/using-sql-helpers",
+              "permalink": "/smart-contracts/using-sql-helpers",
+              "draft": false,
+              "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/smart-contracts/using-sql-helpers.md",
+              "tags": [],
+              "version": "current",
+              "lastUpdatedBy": "Author",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "Oct 14, 2018",
+              "frontMatter": {
+                "title": "Using SQLHelpers",
+                "description": "Use the SQL helpers library to make it easier write SQL in Solidity."
+              },
+              "sidebar": "smartContracts",
+              "previous": {
+                "title": "Setting controllers",
+                "permalink": "/smart-contracts/controller/setting-controllers"
+              },
+              "next": {
+                "title": "Example contracts",
+                "permalink": "/smart-contracts/examples/"
               }
             },
             {
@@ -3186,125 +3244,6 @@
               }
             },
             {
-              "unversionedId": "validator-api/endpoints",
-              "id": "validator-api/endpoints",
-              "title": "Endpoints",
-              "description": "Make API calls to get table and validator information.",
-              "source": "@site/docs/validator-api/endpoints.md",
-              "sourceDirName": "validator-api",
-              "slug": "/validator-api/endpoints",
-              "permalink": "/validator-api/endpoints",
-              "draft": false,
-              "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/validator-api/endpoints.md",
-              "tags": [],
-              "version": "current",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
-              "formattedLastUpdatedAt": "Oct 14, 2018",
-              "frontMatter": {
-                "title": "Endpoints",
-                "description": "Make API calls to get table and validator information.",
-                "keywords": [
-                  "validator api",
-                  "rest api"
-                ]
-              },
-              "sidebar": "validatorApi",
-              "previous": {
-                "title": "Get started",
-                "permalink": "/validator-api/"
-              },
-              "next": {
-                "title": "Query formatting",
-                "permalink": "/validator-api/query-formatting"
-              }
-            },
-            {
-              "unversionedId": "validator-api/errors",
-              "id": "validator-api/errors",
-              "title": "Errors",
-              "description": "Openly readable tables by your applications.",
-              "source": "@site/docs/validator-api/errors.md",
-              "sourceDirName": "validator-api",
-              "slug": "/validator-api/errors",
-              "permalink": "/validator-api/errors",
-              "draft": false,
-              "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/validator-api/errors.md",
-              "tags": [],
-              "version": "current",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
-              "formattedLastUpdatedAt": "Oct 14, 2018",
-              "frontMatter": {
-                "title": "Errors",
-                "description": "Openly readable tables by your applications.",
-                "keywords": [
-                  "write to table",
-                  "mutate table"
-                ]
-              }
-            },
-            {
-              "unversionedId": "validator-api/query-formatting",
-              "id": "validator-api/query-formatting",
-              "title": "Query formatting",
-              "description": "Transform the output of a read query into your desired format.",
-              "source": "@site/docs/validator-api/query-formatting.md",
-              "sourceDirName": "validator-api",
-              "slug": "/validator-api/query-formatting",
-              "permalink": "/validator-api/query-formatting",
-              "draft": false,
-              "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/validator-api/query-formatting.md",
-              "tags": [],
-              "version": "current",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
-              "formattedLastUpdatedAt": "Oct 14, 2018",
-              "frontMatter": {
-                "title": "Query formatting",
-                "description": "Transform the output of a read query into your desired format.",
-                "keywords": [
-                  "validator api",
-                  "query formatting"
-                ]
-              },
-              "sidebar": "validatorApi",
-              "previous": {
-                "title": "Endpoints",
-                "permalink": "/validator-api/endpoints"
-              }
-            },
-            {
-              "unversionedId": "validator-api/README",
-              "id": "validator-api/README",
-              "title": "Get started",
-              "description": "Leverage REST APIs to interact directly with Tableland validator nodes at a gateway.",
-              "source": "@site/docs/validator-api/README.md",
-              "sourceDirName": "validator-api",
-              "slug": "/validator-api/",
-              "permalink": "/validator-api/",
-              "draft": false,
-              "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/validator-api/README.md",
-              "tags": [],
-              "version": "current",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
-              "formattedLastUpdatedAt": "Oct 14, 2018",
-              "frontMatter": {
-                "title": "Get started",
-                "description": "Leverage REST APIs to interact directly with Tableland validator nodes at a gateway.",
-                "keywords": [
-                  "rest api",
-                  "validator api"
-                ]
-              },
-              "sidebar": "validatorApi",
-              "next": {
-                "title": "Endpoints",
-                "permalink": "/validator-api/endpoints"
-              }
-            },
-            {
               "unversionedId": "validator/README",
               "id": "validator/README",
               "title": "Validator node",
@@ -3397,8 +3336,8 @@
               },
               {
                 "type": "doc",
-                "id": "validator-api/README",
-                "label": "Validator API",
+                "id": "gateway-api/README",
+                "label": "Gateway API",
                 "className": "sidebar-landing",
                 "translatable": true
               },
@@ -3882,7 +3821,7 @@
               },
               {
                 "type": "doc",
-                "id": "smart-contracts/creating-tables-from-contracts"
+                "id": "smart-contracts/contract-owned-tables"
               },
               {
                 "type": "category",
@@ -3907,6 +3846,10 @@
                 ],
                 "collapsed": true,
                 "collapsible": true
+              },
+              {
+                "type": "doc",
+                "id": "smart-contracts/using-sql-helpers"
               },
               {
                 "type": "category",
@@ -3935,18 +3878,6 @@
                   {
                     "type": "doc",
                     "id": "smart-contracts/examples/create-from-contract"
-                  },
-                  {
-                    "type": "doc",
-                    "id": "smart-contracts/examples/erc721a-queryable"
-                  },
-                  {
-                    "type": "doc",
-                    "id": "smart-contracts/examples/erc721a-enumerable"
-                  },
-                  {
-                    "type": "doc",
-                    "id": "smart-contracts/examples/using-sql-helpers"
                   }
                 ],
                 "collapsed": true,
@@ -4043,7 +3974,7 @@
               },
               {
                 "type": "html",
-                "value": "<h4 class=\"margin-top--md margin-bottom--none sidepage-heading\">Validator API</h4>",
+                "value": "<h4 class=\"margin-top--md margin-bottom--none sidepage-heading\">Gateway API</h4>",
                 "defaultStyle": true
               },
               {
@@ -4054,15 +3985,15 @@
               },
               {
                 "type": "doc",
-                "id": "validator-api/README"
+                "id": "gateway-api/README"
               },
               {
                 "type": "doc",
-                "id": "validator-api/endpoints"
+                "id": "gateway-api/endpoints"
               },
               {
                 "type": "doc",
-                "id": "validator-api/query-formatting"
+                "id": "gateway-api/query-formatting"
               }
             ],
             "tutorials": [

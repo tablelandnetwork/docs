@@ -2,11 +2,11 @@
 title: Query formatting
 description: Transform the output of a read query into your desired format.
 keywords:
-  - validator api
+  - gateway api
   - query formatting
 ---
 
-The Validator API `/query` endpoint response can be manipulated into a specific format. This allows developers to take the data from a `SELECT` statement and either extract, unwrap, or further format the data. It can be especially useful when trying to "pull" values out of an array or similar from within a response.
+The Gateway API `/query` endpoint response can be manipulated into a specific format. This allows developers to take the data from a `SELECT` statement and either extract, unwrap, or further format the data. It can be especially useful when trying to "pull" values out of an array or similar from within a response.
 
 ## Adding path parameters
 
@@ -17,7 +17,7 @@ To leverage the query response formatting, add the options specified below as a 
 For example, a query used composing ERC721 compliant metadata (e.g., leveraging usage of `json_object`) should include `unwrap=true&extract=true` somewhere in the query string, either at the beginning or the end:
 
 - `/query?unwrap=true&extract=true&s={readStatement}`
-- `/query?s={readStatement}&unwrap=true&extract=true`
+- `/query?statement={readStatement}&unwrap=true&extract=true`
 
 ## Parameters
 
@@ -48,12 +48,6 @@ _Only applies to `output=objects`._
 Whether or not to extract single column result values and use those as the results in the response. Defaults to `false`.
 
 _Only applies to `output=objects`._
-
----
-
-### `json_strings`
-
-Whether or not to leave JSON strings as strings in query results or transform them to actual JSON data. Defaults to `false`.
 
 ---
 

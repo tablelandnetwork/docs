@@ -40,7 +40,8 @@ To view the TABLE token itself, check out the deployed contracts on various bloc
 | --------------- | ----------- | ------------------------------------------------------------------ |
 | Ethereum        | Mainnet     | https://opensea.io/collection/tableland-tables                     |
 | Optimism        | Mainnet     | https://opensea.io/collection/tableland-tables-v2                  |
-| Arbitrum        | Mainnet     | https://opensea.io/collection/tableland-tables-v3                  |
+| Arbitrum One    | Mainnet     | https://opensea.io/collection/tableland-tables-v3                  |
+| Arbitrum Nova   | Mainnet     | https://opensea.io/collection/tableland-tables-1                   |
 | Polygon         | Mainnet     | https://opensea.io/collection/tableland-tables-polygon             |
 | Ethereum Goerli | Testnet     | https://testnets.opensea.io/collection/tableland-tables-juywt5ywdt |
 | Optimism Goerli | Testnet     | https://testnets.opensea.io/collection/tableland-tables-botmoq7j2q |

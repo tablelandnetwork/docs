@@ -1,6 +1,5 @@
 ---
-title: Creating tables from contracts
-sidebar_label: Contract owned tables
+title: Contract owned tables
 description: Learn how to create tables from and owned by a smart contract.
 keywords:
   - create table

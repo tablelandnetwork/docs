@@ -25,7 +25,7 @@
     "permalink": "/quickstarts/smart-contract-quickstart"
   },
   "next": {
-    "title": "REST API",
+    "title": "Gateway API",
     "permalink": "/quickstarts/api-quickstart"
   }
 }

@@ -2,13 +2,13 @@
 title: Endpoints
 description: Make API calls to get table and validator information.
 keywords:
-  - validator api
+  - gateway api
   - rest api
 ---
 
 ## Synopsis
 
-This general API specification is used to automatically generate clients and backend services; it should be used as the primary source of truth for Validator APIs. This specification is a living document, and as such, may be updated over time. Proposals for the addition of API features and fixes may be submitted by the Tableland community over time. These proposals will be evaluated for technical feasibility, utility to the community, and longer-term sustainability.
+This general API specification is used to automatically generate clients and backend services; it should be used as the primary source of truth for Gateway APIs. This specification is a living document, and as such, may be updated over time. Proposals for the addition of API features and fixes may be submitted by the Tableland community over time. These proposals will be evaluated for technical feasibility, utility to the community, and longer-term sustainability.
 
 In Tableland, Validators are the execution unit/actors of the protocol. They have the following responsibilities:
 
@@ -426,4 +426,4 @@ This operation does not require authentication
 
 ## Interactive demo
 
-Test out the Validator API yourself: [here](https://codesandbox.io/embed/red-surf-6bnbmm?fontsize=14&hidenavigation=1&theme=dark&view=preview)
+Test out the Gateway API yourself: [here](https://codesandbox.io/embed/red-surf-6bnbmm?fontsize=14&hidenavigation=1&theme=dark&view=preview)

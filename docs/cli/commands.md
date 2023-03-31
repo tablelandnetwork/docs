@@ -103,21 +103,26 @@ _Note: most commands, aside from read queries, will need to flag a `--privateKey
 `-c, --chain <chain_name>` _(string)_
 The EVM chain to target (default: `maticmum`).
 
-- Show all `chain_name` values
-  Testnets
-  - `goerli` (Ethereum Goerli)
-  - `maticmum` (Polygon Mumbai)
-  - `optimism-goerli`
-  - `arbitrum-goerli`
-    Mainnets
-  - `mainnet` (Ethereum)
-  - `homestead` (Ethereum)
-  - `matic` (Polygon)
-  - `optimism`
-  - `arbitrum`
-    Local
-  - `localhost`
-  - `local-tableland`
+Testnets
+
+- `goerli` (Ethereum Goerli)
+- `maticmum` (Polygon Mumbai)
+- `optimism-goerli` (Optimism Goerli)
+- `arbitrum-goerli` (Arbitrum Goerli)
+
+Mainnets
+
+- `mainnet` (Ethereum)
+- `homestead` (Ethereum)
+- `matic` (Polygon)
+- `optimism` (Optimism)
+- `arbitrum` (Arbitrum One)
+- `arbitrum-nova` (Arbitrum Nova)
+
+Local
+
+- `localhost`
+- `local-tableland` (Local Tableland)
 
 ---
 
@@ -246,6 +251,12 @@ tableland chains
     "chainName": "arbitrum",
     "chainId": 42161,
     "contractAddress": "0x9aBd75E8640871A5a20d3B4eE6330a04c962aFfd",
+    "baseUrl": "https://tableland.network/api/v1"
+  },
+  "arbitrum-nova": {
+    "chainName": "arbitrum-nova",
+    "chainId": 42170,
+    "contractAddress": "0x1A22854c5b1642760a827f20137a67930AE108d2",
     "baseUrl": "https://tableland.network/api/v1"
   },
   "matic": {
@@ -521,30 +532,31 @@ tableland list
 ]
 ```
 
-
 ## transfer
 
 Transfer a table to another address
+
 ```markdown
 Positionals:
-  name      The target table name                            [string] [required]
-  receiver  The address to transfer the table to             [string] [required]
+name The target table name [string] [required]
+receiver The address to transfer the table to [string] [required]
 
 Options:
 
-  -k, --privateKey           Private key string                         [string]
-  -c, --chain                The EVM chain to target                    [string]
+-k, --privateKey Private key string [string]
+-c, --chain The EVM chain to target [string]
 ```
 
-### Example 
+### Example
 
 Transfer a table from current wallet to another address
 
-```bash 
+```bash
 tableland transfer example_table_313337_1 0x0000000000000000000000
 ```
 
 Response:
+
 ```JSON
 {
   "type": 2,
@@ -579,8 +591,6 @@ Response:
 }
 
 ```
-
-
 
 ## read
 
@@ -648,7 +658,7 @@ Lastly, if you want the data to be returned as objects, use the `objects` flag:
 }
 ```
 
-The unwrap flag will return a single row. Make sure to add `limit 1;` to your query to avoid errors. 
+The unwrap flag will return a single row. Make sure to add `limit 1;` to your query to avoid errors.
 
 ```bash
 tableland read "select * from healthbot_31337_1 limit 1;" --unwrap --chain "local-tableland"
@@ -657,11 +667,10 @@ tableland read "select * from healthbot_31337_1 limit 1;" --unwrap --chain "loca
 
 The extract command will give you the results of a single column. Make sure your query is only generating a single column in it's response.
 
-```bash 
+```bash
 tableland read "select counter from healthbot 31337_1;" --extract --chain "local-tableland"
 // Result: [1]
 ```
-
 
 ## receipt
 

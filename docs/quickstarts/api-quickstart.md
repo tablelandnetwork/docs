@@ -1,22 +1,22 @@
 ---
-title: Validator API quickstart
-sidebar_label: REST API
+title: Gateway API quickstart
+sidebar_label: Gateway API
 description: Learn how to read table data or retrieve relevant validator information.
 ---
 
-The validator API can be used to retrieve data stored in tables. Only reads are supported at the gateway, not creates nor writes. If you've followed one of the other quickstarts, you may have already created a table. Otherwise, you can use any created table on the network, such as the `healthbot` table that exists on each chain.
+The Gateway API can be used to retrieve data stored in tables. Only reads are supported at the gateway, not creates nor writes. If you've followed one of the other quickstarts, you may have already created a table. Otherwise, you can use any created table on the network, such as the `healthbot` table that exists on each chain.
 
 Be sure to use `https://tableland.network` on mainnets, `https://testnets.tableland.network` on testnets, and `http://localhost:8080` for local development (using Local Tableland).
 
 ## 1. Make a read query
 
-All requests should be `GET` requests. Simply append a read query to the `/query` endpoint with a parameter of `statement` (or `s`). For example, take `https://testnets.tableland.network/api/v1/query?statement=` plus a read query of `SELECT * FROM healthbot_{chainId}_1` (where `{chainId}` is the chain's ID).
+All requests should be `GET` requests. Simply append a read query to the `/query` endpoint with a parameter of `statement`. For example, take `https://testnets.tableland.network/api/v1/query?statement=` plus a read query of `SELECT * FROM healthbot_{chainId}_1` (where `{chainId}` is the chain's ID).
 
-You can use something like `curl` or `wget` to query table data or even copy/paste the [URL below in your browser](https://testnets.tableland.network/api/v1/query?s=select%20%2A%20from%20healthbot_80001_1).
+You can use something like `curl` or `wget` to query table data or even copy/paste the [URL below in your browser](https://testnets.tableland.network/api/v1/query?statement=select%20%2A%20from%20healthbot_80001_1).
 
 ```bash
 # Here, were making a query on healthbot_80001_1.
-curl -X GET https://testnets.tableland.network/api/v1/query?s=select%20%2A%20from%20healthbot_80001_1 \
+curl -X GET https://testnets.tableland.network/api/v1/query?statement=select%20%2A%20from%20healthbot_80001_1 \
   -H 'Accept: application/json'
 ```
 
@@ -36,11 +36,11 @@ You can further transform this using additional query parameters like `format` (
 
 ```bash
 # Add some additional query params
-curl -X GET https://testnets.tableland.network/api/v1/query?s=select%20%2A%20from%20healthbot_80001_1&format=objects&unwrap=true&extract=true \
+curl -X GET https://testnets.tableland.network/api/v1/query?statement=select%20%2A%20from%20healthbot_80001_1&format=objects&unwrap=true&extract=true \
   -H 'Accept: application/json'
 ```
 
-Since a _single_ value was originally returned, this allows the extract + unwrap to be used and get the `counter`'s value.
+Since a _single_ value was originally returned, this allows the extract + unwrap to be used and get the `counter`'s value. For more information, you should check out the [query formatting](/validator-api/query-formatting) documentation, which walks through this in much greater detail—there are many other ways to alter the response!
 
 ```json
 84742

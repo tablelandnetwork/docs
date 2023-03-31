@@ -155,6 +155,25 @@
               "sidebar": "fundamentals"
             },
             {
+              "id": "gateway-api/endpoints",
+              "path": "/gateway-api/endpoints",
+              "sidebar": "validatorApi"
+            },
+            {
+              "id": "gateway-api/errors",
+              "path": "/gateway-api/errors"
+            },
+            {
+              "id": "gateway-api/query-formatting",
+              "path": "/gateway-api/query-formatting",
+              "sidebar": "validatorApi"
+            },
+            {
+              "id": "gateway-api/README",
+              "path": "/gateway-api/",
+              "sidebar": "validatorApi"
+            },
+            {
               "id": "landing",
               "path": "/",
               "sidebar": "home"
@@ -329,6 +348,11 @@
               "sidebar": "sdk"
             },
             {
+              "id": "smart-contracts/contract-owned-tables",
+              "path": "/smart-contracts/contract-owned-tables",
+              "sidebar": "smartContracts"
+            },
+            {
               "id": "smart-contracts/controller/contract-anatomy",
               "path": "/smart-contracts/controller/contract-anatomy",
               "sidebar": "smartContracts"
@@ -346,11 +370,6 @@
             {
               "id": "smart-contracts/controller/setting-controllers",
               "path": "/smart-contracts/controller/setting-controllers",
-              "sidebar": "smartContracts"
-            },
-            {
-              "id": "smart-contracts/creating-tables-from-contracts",
-              "path": "/smart-contracts/creating-tables-from-contracts",
               "sidebar": "smartContracts"
             },
             {
@@ -379,16 +398,6 @@
               "sidebar": "smartContracts"
             },
             {
-              "id": "smart-contracts/examples/erc721a-enumerable",
-              "path": "/smart-contracts/examples/erc721a-enumerable",
-              "sidebar": "smartContracts"
-            },
-            {
-              "id": "smart-contracts/examples/erc721a-queryable",
-              "path": "/smart-contracts/examples/erc721a-queryable",
-              "sidebar": "smartContracts"
-            },
-            {
               "id": "smart-contracts/examples/gated-voting",
               "path": "/smart-contracts/examples/gated-voting",
               "sidebar": "smartContracts"
@@ -401,11 +410,6 @@
             {
               "id": "smart-contracts/examples/README",
               "path": "/smart-contracts/examples/",
-              "sidebar": "smartContracts"
-            },
-            {
-              "id": "smart-contracts/examples/using-sql-helpers",
-              "path": "/smart-contracts/examples/using-sql-helpers",
               "sidebar": "smartContracts"
             },
             {
@@ -441,6 +445,11 @@
             {
               "id": "smart-contracts/using-remix",
               "path": "/smart-contracts/using-remix",
+              "sidebar": "smartContracts"
+            },
+            {
+              "id": "smart-contracts/using-sql-helpers",
+              "path": "/smart-contracts/using-sql-helpers",
               "sidebar": "smartContracts"
             },
             {
@@ -494,25 +503,6 @@
               "sidebar": "tutorials"
             },
             {
-              "id": "validator-api/endpoints",
-              "path": "/validator-api/endpoints",
-              "sidebar": "validatorApi"
-            },
-            {
-              "id": "validator-api/errors",
-              "path": "/validator-api/errors"
-            },
-            {
-              "id": "validator-api/query-formatting",
-              "path": "/validator-api/query-formatting",
-              "sidebar": "validatorApi"
-            },
-            {
-              "id": "validator-api/README",
-              "path": "/validator-api/",
-              "sidebar": "validatorApi"
-            },
-            {
               "id": "validator/README",
               "path": "/validator/",
               "sidebar": "validator"
@@ -564,8 +554,8 @@
             },
             "validatorApi": {
               "link": {
-                "path": "/validator-api/",
-                "label": "validator-api/README"
+                "path": "/gateway-api/",
+                "label": "gateway-api/README"
               }
             },
             "tutorials": {

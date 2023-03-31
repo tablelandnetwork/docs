@@ -10,22 +10,25 @@ function getChainExplorer(
   contract: string
 ): string {
   switch (chain) {
-    case "ethereum":
-      return location === "testnet"
-        ? `https://goerli.etherscan.io/address/${contract}`
-        : `https://etherscan.io/address/${contract}`;
+    case "mainnet":
+    case "homestead":
+      return `https://etherscan.io/address/${contract}`;
+    case "goerli":
+      return `https://goerli.etherscan.io/address/${contract}`;
     case "arbitrum":
-      return location === "testnet"
-        ? `https://goerli.arbiscan.io/address/${contract}`
-        : `https://arbiscan.io/address/${contract}`;
+      return `https://arbiscan.io/address/${contract}`;
+    case "arbitrum-nova":
+      return `https://nova.arbiscan.io/address/${contract}`;
+    case "arbitrum-goerli":
+      return `https://goerli.arbiscan.io/address/${contract}`;
     case "optimism":
-      return location === "testnet"
-        ? `https://blockscout.com/optimism/goerli/address/${contract}`
-        : `https://optimistic.etherscan.io/address/${contract}`;
-    case "polygon":
-      return location === "testnet"
-        ? `https://mumbai.polygonscan.com/address/${contract}`
-        : `https://polygonscan.com/address/${contract}`;
+      return `https://optimistic.etherscan.io/address/${contract}`;
+    case "optimism-goerli":
+      return `https://goerli-optimism.etherscan.io/address/${contract}`;
+    case "matic":
+      return `https://polygonscan.com/address/${contract}`;
+    case "maticmum":
+      return `https://mumbai.polygonscan.com/address/${contract}`;
     default:
       return "";
   }
@@ -87,7 +90,7 @@ export const supportedChains = (): FormattedChains[] => {
         break;
     }
     format.blockExplorer = getChainExplorer(
-      format.chainNameFormatted.split(" ")[0],
+      format.chainName,
       format.location,
       format.contractAddress
     );

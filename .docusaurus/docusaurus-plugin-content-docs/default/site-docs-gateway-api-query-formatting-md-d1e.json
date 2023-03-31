@@ -1,14 +1,14 @@
 {
-  "unversionedId": "validator-api/query-formatting",
-  "id": "validator-api/query-formatting",
+  "unversionedId": "gateway-api/query-formatting",
+  "id": "gateway-api/query-formatting",
   "title": "Query formatting",
   "description": "Transform the output of a read query into your desired format.",
-  "source": "@site/docs/validator-api/query-formatting.md",
-  "sourceDirName": "validator-api",
-  "slug": "/validator-api/query-formatting",
-  "permalink": "/validator-api/query-formatting",
+  "source": "@site/docs/gateway-api/query-formatting.md",
+  "sourceDirName": "gateway-api",
+  "slug": "/gateway-api/query-formatting",
+  "permalink": "/gateway-api/query-formatting",
   "draft": false,
-  "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/validator-api/query-formatting.md",
+  "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/gateway-api/query-formatting.md",
   "tags": [],
   "version": "current",
   "lastUpdatedBy": "Author",
@@ -25,6 +25,6 @@
   "sidebar": "validatorApi",
   "previous": {
     "title": "Endpoints",
-    "permalink": "/validator-api/endpoints"
+    "permalink": "/gateway-api/endpoints"
   }
 }

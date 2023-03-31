@@ -75,10 +75,10 @@
       },
       {
         "type": "link",
-        "label": "Validator API",
-        "href": "/validator-api/",
+        "label": "Gateway API",
+        "href": "/gateway-api/",
         "className": "sidebar-landing",
-        "docId": "validator-api/README"
+        "docId": "gateway-api/README"
       },
       {
         "type": "link",
@@ -478,7 +478,7 @@
       },
       {
         "type": "link",
-        "label": "REST API",
+        "label": "Gateway API",
         "href": "/quickstarts/api-quickstart",
         "docId": "quickstarts/api-quickstart"
       },
@@ -664,8 +664,8 @@
       {
         "type": "link",
         "label": "Contract owned tables",
-        "href": "/smart-contracts/creating-tables-from-contracts",
-        "docId": "smart-contracts/creating-tables-from-contracts"
+        "href": "/smart-contracts/contract-owned-tables",
+        "docId": "smart-contracts/contract-owned-tables"
       },
       {
         "type": "category",
@@ -693,6 +693,12 @@
         "collapsed": true,
         "collapsible": true,
         "href": "/smart-contracts/controller/"
+      },
+      {
+        "type": "link",
+        "label": "Using SQLHelpers",
+        "href": "/smart-contracts/using-sql-helpers",
+        "docId": "smart-contracts/using-sql-helpers"
       },
       {
         "type": "category",
@@ -727,24 +733,6 @@
             "label": "Create from contract",
             "href": "/smart-contracts/examples/create-from-contract",
             "docId": "smart-contracts/examples/create-from-contract"
-          },
-          {
-            "type": "link",
-            "label": "ERC721A Queryable",
-            "href": "/smart-contracts/examples/erc721a-queryable",
-            "docId": "smart-contracts/examples/erc721a-queryable"
-          },
-          {
-            "type": "link",
-            "label": "ERC721A enumerable",
-            "href": "/smart-contracts/examples/erc721a-enumerable",
-            "docId": "smart-contracts/examples/erc721a-enumerable"
-          },
-          {
-            "type": "link",
-            "label": "Using SQLHelpers",
-            "href": "/smart-contracts/examples/using-sql-helpers",
-            "docId": "smart-contracts/examples/using-sql-helpers"
           }
         ],
         "collapsed": true,
@@ -862,7 +850,7 @@
       },
       {
         "type": "html",
-        "value": "<h4 class=\"margin-top--md margin-bottom--none sidepage-heading\">Validator API</h4>",
+        "value": "<h4 class=\"margin-top--md margin-bottom--none sidepage-heading\">Gateway API</h4>",
         "defaultStyle": true
       },
       {
@@ -874,20 +862,20 @@
       {
         "type": "link",
         "label": "Get started",
-        "href": "/validator-api/",
-        "docId": "validator-api/README"
+        "href": "/gateway-api/",
+        "docId": "gateway-api/README"
       },
       {
         "type": "link",
         "label": "Endpoints",
-        "href": "/validator-api/endpoints",
-        "docId": "validator-api/endpoints"
+        "href": "/gateway-api/endpoints",
+        "docId": "gateway-api/endpoints"
       },
       {
         "type": "link",
         "label": "Query formatting",
-        "href": "/validator-api/query-formatting",
-        "docId": "validator-api/query-formatting"
+        "href": "/gateway-api/query-formatting",
+        "docId": "gateway-api/query-formatting"
       }
     ],
     "tutorials": [
@@ -1258,6 +1246,29 @@
       "description": "A brief overview of what the Tableland network is and how it works.",
       "sidebar": "fundamentals"
     },
+    "gateway-api/endpoints": {
+      "id": "gateway-api/endpoints",
+      "title": "Endpoints",
+      "description": "Make API calls to get table and validator information.",
+      "sidebar": "validatorApi"
+    },
+    "gateway-api/errors": {
+      "id": "gateway-api/errors",
+      "title": "Errors",
+      "description": "Openly readable tables by your applications."
+    },
+    "gateway-api/query-formatting": {
+      "id": "gateway-api/query-formatting",
+      "title": "Query formatting",
+      "description": "Transform the output of a read query into your desired format.",
+      "sidebar": "validatorApi"
+    },
+    "gateway-api/README": {
+      "id": "gateway-api/README",
+      "title": "Get started",
+      "description": "Leverage REST APIs to interact directly with Tableland validator nodes at a gateway.",
+      "sidebar": "validatorApi"
+    },
     "landing": {
       "id": "landing",
       "title": "Home",
@@ -1338,7 +1349,7 @@
     },
     "quickstarts/api-quickstart": {
       "id": "quickstarts/api-quickstart",
-      "title": "Validator API quickstart",
+      "title": "Gateway API quickstart",
       "description": "Learn how to read table data or retrieve relevant validator information.",
       "sidebar": "quickstarts"
     },
@@ -1467,6 +1478,12 @@
       "description": "Review converting from JavaScript to SQL types.",
       "sidebar": "sdk"
     },
+    "smart-contracts/contract-owned-tables": {
+      "id": "smart-contracts/contract-owned-tables",
+      "title": "Contract owned tables",
+      "description": "Learn how to create tables from and owned by a smart contract.",
+      "sidebar": "smartContracts"
+    },
     "smart-contracts/controller/contract-anatomy": {
       "id": "smart-contracts/controller/contract-anatomy",
       "title": "Controller contract anatomy",
@@ -1489,12 +1506,6 @@
       "id": "smart-contracts/controller/setting-controllers",
       "title": "Setting controllers",
       "description": "Understand how to set or unset a controller contract.",
-      "sidebar": "smartContracts"
-    },
-    "smart-contracts/creating-tables-from-contracts": {
-      "id": "smart-contracts/creating-tables-from-contracts",
-      "title": "Creating tables from contracts",
-      "description": "Learn how to create tables from and owned by a smart contract.",
       "sidebar": "smartContracts"
     },
     "smart-contracts/deployed-contracts": {
@@ -1527,18 +1538,6 @@
       "description": "Create a table from a contract.",
       "sidebar": "smartContracts"
     },
-    "smart-contracts/examples/erc721a-enumerable": {
-      "id": "smart-contracts/examples/erc721a-enumerable",
-      "title": "ERC721A enumerable",
-      "description": "Create an ERC721A enumerable contract.",
-      "sidebar": "smartContracts"
-    },
-    "smart-contracts/examples/erc721a-queryable": {
-      "id": "smart-contracts/examples/erc721a-queryable",
-      "title": "ERC721A Queryable",
-      "description": "Create an ERC721A queryable contract.",
-      "sidebar": "smartContracts"
-    },
     "smart-contracts/examples/gated-voting": {
       "id": "smart-contracts/examples/gated-voting",
       "title": "Gated voting",
@@ -1557,12 +1556,6 @@
       "description": "Check out any of the starter contracts for Tableland controllers or registry interactions.",
       "sidebar": "smartContracts"
     },
-    "smart-contracts/examples/using-sql-helpers": {
-      "id": "smart-contracts/examples/using-sql-helpers",
-      "title": "Using SQLHelpers",
-      "description": "Create an contract that uses SQLHelpers library.",
-      "sidebar": "smartContracts"
-    },
     "smart-contracts/get-started": {
       "id": "smart-contracts/get-started",
       "title": "Get started",
@@ -1572,7 +1565,7 @@
     "smart-contracts/immutable-table": {
       "id": "smart-contracts/immutable-table",
       "title": "Create an immutable table",
-      "description": "Permanently freeze a table's data by sending it to the zero address.",
+      "description": "Permanently freeze a table's data by sending it to the dead address.",
       "sidebar": "smartContracts"
     },
     "smart-contracts/README": {
@@ -1603,6 +1596,12 @@
       "id": "smart-contracts/using-remix",
       "title": "Using Remix",
       "description": "An online IDE that makes it easy to tinker with and deploy smart contracts.",
+      "sidebar": "smartContracts"
+    },
+    "smart-contracts/using-sql-helpers": {
+      "id": "smart-contracts/using-sql-helpers",
+      "title": "Using SQLHelpers",
+      "description": "Use the SQL helpers library to make it easier write SQL in Solidity.",
       "sidebar": "smartContracts"
     },
     "specs/sql/README": {
@@ -1664,29 +1663,6 @@
       "title": "On-Chain reads with Chainlink + Arbitrum",
       "description": "Use Chainlink’s node operator network to get table state back on-chain to the Arbitrum network.",
       "sidebar": "tutorials"
-    },
-    "validator-api/endpoints": {
-      "id": "validator-api/endpoints",
-      "title": "Endpoints",
-      "description": "Make API calls to get table and validator information.",
-      "sidebar": "validatorApi"
-    },
-    "validator-api/errors": {
-      "id": "validator-api/errors",
-      "title": "Errors",
-      "description": "Openly readable tables by your applications."
-    },
-    "validator-api/query-formatting": {
-      "id": "validator-api/query-formatting",
-      "title": "Query formatting",
-      "description": "Transform the output of a read query into your desired format.",
-      "sidebar": "validatorApi"
-    },
-    "validator-api/README": {
-      "id": "validator-api/README",
-      "title": "Get started",
-      "description": "Leverage REST APIs to interact directly with Tableland validator nodes at a gateway.",
-      "sidebar": "validatorApi"
     },
     "validator/README": {
       "id": "validator/README",

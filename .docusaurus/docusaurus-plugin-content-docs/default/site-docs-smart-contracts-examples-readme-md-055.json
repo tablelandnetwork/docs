@@ -24,8 +24,8 @@
   },
   "sidebar": "smartContracts",
   "previous": {
-    "title": "Setting controllers",
-    "permalink": "/smart-contracts/controller/setting-controllers"
+    "title": "Using SQLHelpers",
+    "permalink": "/smart-contracts/using-sql-helpers"
   },
   "next": {
     "title": "Allow all controller",

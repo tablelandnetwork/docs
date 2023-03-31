@@ -24,8 +24,8 @@
   },
   "sidebar": "smartContracts",
   "previous": {
-    "title": "Using SQLHelpers",
-    "permalink": "/smart-contracts/examples/using-sql-helpers"
+    "title": "Create from contract",
+    "permalink": "/smart-contracts/examples/create-from-contract"
   },
   "next": {
     "title": "Create an immutable table",

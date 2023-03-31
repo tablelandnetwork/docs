@@ -109,7 +109,7 @@ export default [
   },
   {
     path: '/',
-    component: ComponentCreator('/', 'ac1'),
+    component: ComponentCreator('/', 'd70'),
     routes: [
       {
         path: '/',
@@ -289,6 +289,29 @@ export default [
         component: ComponentCreator('/fundamentals/what-is-tableland', 'ced'),
         exact: true,
         sidebar: "fundamentals"
+      },
+      {
+        path: '/gateway-api/',
+        component: ComponentCreator('/gateway-api/', '8e4'),
+        exact: true,
+        sidebar: "validatorApi"
+      },
+      {
+        path: '/gateway-api/endpoints',
+        component: ComponentCreator('/gateway-api/endpoints', '07a'),
+        exact: true,
+        sidebar: "validatorApi"
+      },
+      {
+        path: '/gateway-api/errors',
+        component: ComponentCreator('/gateway-api/errors', 'a66'),
+        exact: true
+      },
+      {
+        path: '/gateway-api/query-formatting',
+        component: ComponentCreator('/gateway-api/query-formatting', 'e7e'),
+        exact: true,
+        sidebar: "validatorApi"
       },
       {
         path: '/playbooks/',
@@ -500,6 +523,12 @@ export default [
         sidebar: "smartContracts"
       },
       {
+        path: '/smart-contracts/contract-owned-tables',
+        component: ComponentCreator('/smart-contracts/contract-owned-tables', '1c8'),
+        exact: true,
+        sidebar: "smartContracts"
+      },
+      {
         path: '/smart-contracts/controller/',
         component: ComponentCreator('/smart-contracts/controller/', '45f'),
         exact: true,
@@ -520,12 +549,6 @@ export default [
       {
         path: '/smart-contracts/controller/setting-controllers',
         component: ComponentCreator('/smart-contracts/controller/setting-controllers', '650'),
-        exact: true,
-        sidebar: "smartContracts"
-      },
-      {
-        path: '/smart-contracts/creating-tables-from-contracts',
-        component: ComponentCreator('/smart-contracts/creating-tables-from-contracts', '4c7'),
         exact: true,
         sidebar: "smartContracts"
       },
@@ -566,18 +589,6 @@ export default [
         sidebar: "smartContracts"
       },
       {
-        path: '/smart-contracts/examples/erc721a-enumerable',
-        component: ComponentCreator('/smart-contracts/examples/erc721a-enumerable', 'aaa'),
-        exact: true,
-        sidebar: "smartContracts"
-      },
-      {
-        path: '/smart-contracts/examples/erc721a-queryable',
-        component: ComponentCreator('/smart-contracts/examples/erc721a-queryable', 'f74'),
-        exact: true,
-        sidebar: "smartContracts"
-      },
-      {
         path: '/smart-contracts/examples/gated-voting',
         component: ComponentCreator('/smart-contracts/examples/gated-voting', 'e16'),
         exact: true,
@@ -586,12 +597,6 @@ export default [
       {
         path: '/smart-contracts/examples/raw-controller',
         component: ComponentCreator('/smart-contracts/examples/raw-controller', '49c'),
-        exact: true,
-        sidebar: "smartContracts"
-      },
-      {
-        path: '/smart-contracts/examples/using-sql-helpers',
-        component: ComponentCreator('/smart-contracts/examples/using-sql-helpers', 'cd1'),
         exact: true,
         sidebar: "smartContracts"
       },
@@ -628,6 +633,12 @@ export default [
       {
         path: '/smart-contracts/using-remix',
         component: ComponentCreator('/smart-contracts/using-remix', 'c97'),
+        exact: true,
+        sidebar: "smartContracts"
+      },
+      {
+        path: '/smart-contracts/using-sql-helpers',
+        component: ComponentCreator('/smart-contracts/using-sql-helpers', '3ce'),
         exact: true,
         sidebar: "smartContracts"
       },
@@ -690,29 +701,6 @@ export default [
         component: ComponentCreator('/tutorials/table-reads-chainlink', 'a4f'),
         exact: true,
         sidebar: "tutorials"
-      },
-      {
-        path: '/validator-api/',
-        component: ComponentCreator('/validator-api/', '9df'),
-        exact: true,
-        sidebar: "validatorApi"
-      },
-      {
-        path: '/validator-api/endpoints',
-        component: ComponentCreator('/validator-api/endpoints', '371'),
-        exact: true,
-        sidebar: "validatorApi"
-      },
-      {
-        path: '/validator-api/errors',
-        component: ComponentCreator('/validator-api/errors', '076'),
-        exact: true
-      },
-      {
-        path: '/validator-api/query-formatting',
-        component: ComponentCreator('/validator-api/query-formatting', 'd39'),
-        exact: true,
-        sidebar: "validatorApi"
       },
       {
         path: '/validator/',

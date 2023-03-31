@@ -70,7 +70,7 @@ contract CanvasGame is ERC721URIStorage, Ownable {
 
     // Our will be pulled from the network
     string private _baseURIString =
-        "https://testnets.tableland.network/query?s=";
+        "https://testnets.tableland.network/query?statement=";
 
     // Called only when the smart contract is created
     constructor() ERC721("Pixel", "ITM") {
@@ -347,10 +347,10 @@ Now that you own a token, you will be able to move it on the canvas. Note that w
 You can find your current pixel location by querying the Tableland gateway. The URL would be as follows,
 
 ```markdown
-https://testnets.tableland.network/query?s=SELECT%20%27id%27,id,%27external_link%27,external_link,%27x%27,x,%27y%27,y%20FROM%20canvas_5_4%20WHERE%20id%3D{YOUR ID HERE}
+https://testnets.tableland.network/query?statement=SELECT%20%27id%27,id,%27external_link%27,external_link,%27x%27,x,%27y%27,y%20FROM%20canvas_5_4%20WHERE%20id%3D{YOUR ID HERE}
 ```
 
-So, for my token **5**, my URL will be [https://testnets.tableland.network/query?s=SELECT 'id',id,'external_link',external_link,'x',x,'y',y FROM canvas_5_4 WHERE id%3D5](https://testnets.tableland.network/query?s=SELECT%20%27id%27,id,%27external_link%27,external_link,%27x%27,x,%27y%27,y%20FROM%20canvas_5_4%20WHERE%20id%3D5).
+So, for my token **5**, my URL will be [https://testnets.tableland.network/query?statement=SELECT 'id',id,'external_link',external_link,'x',x,'y',y FROM canvas_5_4 WHERE id%3D5](https://testnets.tableland.network/query?statement=SELECT%20%27id%27,id,%27external_link%27,external_link,%27x%27,x,%27y%27,y%20FROM%20canvas_5_4%20WHERE%20id%3D5).
 
 #### Default position
 

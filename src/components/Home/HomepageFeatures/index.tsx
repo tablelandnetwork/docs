@@ -104,7 +104,7 @@ const BuildList: ProductItem[] = [
     url: "smart-contracts",
   },
   {
-    name: "Validator API",
+    name: "Gateway API",
     icon: <AiFillApi size={30} />,
     description: (
       <>

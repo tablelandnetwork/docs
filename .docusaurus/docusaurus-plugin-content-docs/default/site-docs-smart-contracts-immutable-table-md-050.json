@@ -2,7 +2,7 @@
   "unversionedId": "smart-contracts/immutable-table",
   "id": "smart-contracts/immutable-table",
   "title": "Create an immutable table",
-  "description": "Permanently freeze a table's data by sending it to the zero address.",
+  "description": "Permanently freeze a table's data by sending it to the dead address.",
   "source": "@site/docs/smart-contracts/immutable-table.md",
   "sourceDirName": "smart-contracts",
   "slug": "/smart-contracts/immutable-table",
@@ -16,7 +16,7 @@
   "formattedLastUpdatedAt": "Oct 14, 2018",
   "frontMatter": {
     "title": "Create an immutable table",
-    "description": "Permanently freeze a table's data by sending it to the zero address.",
+    "description": "Permanently freeze a table's data by sending it to the dead address.",
     "keywords": [
       "read table",
       "SQL query"

@@ -181,7 +181,7 @@ const smartContracts = [
   ...sidepageHeader("Smart contracts"),
   "smart-contracts/README",
   "smart-contracts/get-started",
-  "smart-contracts/creating-tables-from-contracts",
+  "smart-contracts/contract-owned-tables",
   {
     type: "category",
     label: "Configure write access",
@@ -195,6 +195,7 @@ const smartContracts = [
       "smart-contracts/controller/setting-controllers",
     ],
   },
+  "smart-contracts/using-sql-helpers",
   {
     type: "category",
     label: "Example contracts",
@@ -208,9 +209,6 @@ const smartContracts = [
       "smart-contracts/examples/raw-controller",
       "smart-contracts/examples/gated-voting",
       "smart-contracts/examples/create-from-contract",
-      "smart-contracts/examples/erc721a-queryable",
-      "smart-contracts/examples/erc721a-enumerable",
-      "smart-contracts/examples/using-sql-helpers",
     ],
   },
   ...section("Walkthroughs"),
@@ -224,12 +222,12 @@ const smartContracts = [
   "smart-contracts/using-remix",
 ];
 
-// Validator REST API
+// Gateway REST API
 const validatorApi = [
-  ...sidepageHeader("Validator API"),
-  "validator-api/README",
-  "validator-api/endpoints",
-  "validator-api/query-formatting",
+  ...sidepageHeader("Gateway API"),
+  "gateway-api/README",
+  "gateway-api/endpoints",
+  "gateway-api/query-formatting",
 ];
 
 // CLI
@@ -312,8 +310,8 @@ const sidebars = {
     },
     {
       type: "doc",
-      id: "validator-api/README",
-      label: "Validator API",
+      id: "gateway-api/README",
+      label: "Gateway API",
       className: "sidebar-landing",
     },
     {

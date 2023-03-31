@@ -3,6 +3,10 @@ title: Create from contract
 description: Create a table from a contract.
 ---
 
+Smart contracts can create tables on behalf of some caller, which then mints a table to the `msg.sender`. This is a factory pattern where the contract is tracking ownership with a `mapping(string => uint256)` of table names to table IDs.
+
+Note that in order for _the contract_ to own a table (i.e., minting to `address(this)` over `msg.sender`), you would have to implement ERC721 contract ownership through an interface or some inheritance pattern. You can learn how to do this in [this walkthrough](/smart-contracts/contract-owned-tables).
+
 ```solidity
 // SPDX-License-Identifier: MIT
 pragma solidity >=0.8.10 <0.9.0;
@@ -11,7 +15,7 @@ import {ERC721} from "@openzeppelin/contracts/token/ERC721/ERC721.sol";
 import {Ownable} from "@openzeppelin/contracts/access/Ownable.sol";
 import {ITablelandTables} from "@tableland/evm/contracts/interfaces/ITablelandTables.sol";
 
-contract TestCreateFromContract is ERC721, Ownable {
+contract CreateFromContract is ERC721, Ownable {
     mapping(string => uint256) public tables;
 
     ITablelandTables private _tableland;

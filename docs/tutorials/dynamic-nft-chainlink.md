@@ -375,7 +375,7 @@ async function main() {
     network.name === "localhost"
       ? tablelandHost.localhost // `http://localhost:8080/query?extract=true&unwrap=true&s=`
       : tablelandHost.testnet; // `https://testnets.tableland.network/query?extract=true&unwrap=true&s=`
-  // Note the base URI has `extract=true`, `unwrap=true`, and `s` (for the SQL)
+  // Note the base URI has `extract=true`, `unwrap=true`, and `statement` (for the SQL)
   // These are needed for creating ERC-721 compliant metadata
 
   // Deploy the NFT with the base URI defined

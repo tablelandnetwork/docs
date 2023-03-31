@@ -145,7 +145,7 @@ You can then use tools like Etherscan to manually call the smart contract’s [`
 
 Here, we set the controller to `0x966b2E6615962cdeeD891323e66504B6C3214cB1` (transaction hash [here](https://mumbai.polygonscan.com/tx/0x802d7ded8537fc92b683357b932d17090cac7dc3ebda3df720c40b7590130a22), for reference) for the table `tbl_calls_80001_1887` (i.e., _tableId_ is `1887`), owned by the address `0x9bA89c8aD3856C0137E268bD76ed12d14696E140`.
 
-You can test it out yourself—try and successfully insert some row into `tbl_calls_80001_1887` but updates or deletes will fail! You could try the following by replacing `<your_address>` with your address or some message string, and then view the results [via a read query](https://testnets.tableland.network/api/v1/query?s=select%20*%20from%20tbl_calls_80001_1887).
+You can test it out yourself—try and successfully insert some row into `tbl_calls_80001_1887` but updates or deletes will fail! You could try the following by replacing `<your_address>` with your address or some message string, and then view the results [via a read query](https://testnets.tableland.network/api/v1/query?statement=select%20*%20from%20tbl_calls_80001_1887).
 
 ```sql
 INSERT INTO

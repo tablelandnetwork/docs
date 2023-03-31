@@ -24,7 +24,7 @@
     "permalink": "/smart-contracts/controller/creating-controllers"
   },
   "next": {
-    "title": "Example contracts",
-    "permalink": "/smart-contracts/examples/"
+    "title": "Using SQLHelpers",
+    "permalink": "/smart-contracts/using-sql-helpers"
   }
 }

@@ -20,8 +20,8 @@
   },
   "sidebar": "smartContracts",
   "previous": {
-    "title": "ERC721A enumerable",
-    "permalink": "/smart-contracts/examples/erc721a-enumerable"
+    "title": "Create from contract",
+    "permalink": "/smart-contracts/examples/create-from-contract"
   },
   "next": {
     "title": "Serve NFT metadata",

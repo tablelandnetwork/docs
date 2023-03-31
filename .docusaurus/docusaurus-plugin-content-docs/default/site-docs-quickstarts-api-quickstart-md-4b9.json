@@ -1,7 +1,7 @@
 {
   "unversionedId": "quickstarts/api-quickstart",
   "id": "quickstarts/api-quickstart",
-  "title": "Validator API quickstart",
+  "title": "Gateway API quickstart",
   "description": "Learn how to read table data or retrieve relevant validator information.",
   "source": "@site/docs/quickstarts/api-quickstart.md",
   "sourceDirName": "quickstarts",
@@ -15,8 +15,8 @@
   "lastUpdatedAt": 1539502055,
   "formattedLastUpdatedAt": "Oct 14, 2018",
   "frontMatter": {
-    "title": "Validator API quickstart",
-    "sidebar_label": "REST API",
+    "title": "Gateway API quickstart",
+    "sidebar_label": "Gateway API",
     "description": "Learn how to read table data or retrieve relevant validator information."
   },
   "sidebar": "quickstarts",

@@ -199,7 +199,7 @@
     },
     "tag": "tag---tags-contributing-9-d-7-88b"
   },
-  "/-ac1": {
+  "/-d70": {
     "__comp": "__comp---theme-doc-page-1-be-9be",
     "__context": {
       "plugin": "plugin---tags-54-b-0a7"
@@ -325,6 +325,22 @@
   "/fundamentals/what-is-tableland-ced": {
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---fundamentals-what-is-tableland-37-d-804"
+  },
+  "/gateway-api/-8e4": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---gateway-api-6-fe-352"
+  },
+  "/gateway-api/endpoints-07a": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---gateway-api-endpointsdad-38b"
+  },
+  "/gateway-api/errors-a66": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---gateway-api-errors-16-d-0f4"
+  },
+  "/gateway-api/query-formatting-e7e": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---gateway-api-query-formattingd-1-e-df4"
   },
   "/playbooks/-96b": {
     "__comp": "__comp---theme-doc-item-178-a40",
@@ -466,6 +482,10 @@
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---smart-contracts-605-49d"
   },
+  "/smart-contracts/contract-owned-tables-1c8": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---smart-contracts-contract-owned-tables-347-82e"
+  },
   "/smart-contracts/controller/-45f": {
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---smart-contracts-controller-c-53-920"
@@ -481,10 +501,6 @@
   "/smart-contracts/controller/setting-controllers-650": {
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---smart-contracts-controller-setting-controllers-874-cc0"
-  },
-  "/smart-contracts/creating-tables-from-contracts-4c7": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---smart-contracts-creating-tables-from-contracts-05-f-b15"
   },
   "/smart-contracts/deployed-contracts-3dc": {
     "__comp": "__comp---theme-doc-item-178-a40",
@@ -510,14 +526,6 @@
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---smart-contracts-examples-create-from-contract-866-a59"
   },
-  "/smart-contracts/examples/erc721a-enumerable-aaa": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---smart-contracts-examples-erc-721-a-enumerable-62-b-613"
-  },
-  "/smart-contracts/examples/erc721a-queryable-f74": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---smart-contracts-examples-erc-721-a-queryable-22-e-455"
-  },
   "/smart-contracts/examples/gated-voting-e16": {
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---smart-contracts-examples-gated-voting-6-b-8-887"
@@ -525,10 +533,6 @@
   "/smart-contracts/examples/raw-controller-49c": {
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---smart-contracts-examples-raw-controllerc-60-a12"
-  },
-  "/smart-contracts/examples/using-sql-helpers-cd1": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---smart-contracts-examples-using-sql-helpers-26-d-fdc"
   },
   "/smart-contracts/get-started-7ce": {
     "__comp": "__comp---theme-doc-item-178-a40",
@@ -553,6 +557,10 @@
   "/smart-contracts/using-remix-c97": {
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---smart-contracts-using-remixbbe-455"
+  },
+  "/smart-contracts/using-sql-helpers-3ce": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---smart-contracts-using-sql-helpers-275-a47"
   },
   "/specs/sql/-f07": {
     "__comp": "__comp---theme-doc-item-178-a40",
@@ -593,22 +601,6 @@
   "/tutorials/table-reads-chainlink-a4f": {
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---tutorials-table-reads-chainlinkd-1-d-1d1"
-  },
-  "/validator-api/-9df": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---validator-api-f-09-837"
-  },
-  "/validator-api/endpoints-371": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---validator-api-endpointsbc-6-b15"
-  },
-  "/validator-api/errors-076": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---validator-api-errorsa-73-6cd"
-  },
-  "/validator-api/query-formatting-d39": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---validator-api-query-formatting-162-416"
   },
   "/validator/-8e2": {
     "__comp": "__comp---theme-doc-item-178-a40",

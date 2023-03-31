@@ -24,7 +24,7 @@
     "permalink": "/smart-contracts/examples/gated-voting"
   },
   "next": {
-    "title": "ERC721A Queryable",
-    "permalink": "/smart-contracts/examples/erc721a-queryable"
+    "title": "Serve NFT metadata",
+    "permalink": "/smart-contracts/serving-nft-metadata"
   }
 }

@@ -3,7 +3,12 @@ title: Gated voting
 description: Create a contract that gates writes to a voting table based on ERC721 token ownership.
 ---
 
-The voter contract holds questions and answer tables in which permissioned users can write to. As an example, the associated NFT contract that is gating the writes is also provided.
+Collaborative data often needs some way to permissionlessly ensure only the correct users can change table data. For example, a DAO could have some knowledge base or protocol decision that anyone with DAO token ownership can cast a vote. This setup established both a questions and an answers table:
+
+- The sender must be a holder of token to answer for related questions—i.e., the `answer` method gates table writes by NFT ownership.
+- For adding a question, this is fully open to _anyone_ and isn't gated by ownership, but it only allows updates and never deletes nor updates.
+
+The voter contract holds questions and answer tables in which permissioned users can write to. The associated NFT contract that is gating the writes is also provided as a very basic implementation.
 
 ## Voter contract
 

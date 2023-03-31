@@ -535,7 +535,7 @@ A custom `BrowserWindow` component can be imported such that you can render a br
 import BrowserWindow from "@site/src/components/BrowserWindow";
 
 ````md
-<BrowserWindow url="http://localhost:8080/query?s=select%20*%20from%20healthbot_31337_1">
+<BrowserWindow url="http://localhost:8080/query?statement=select%20*%20from%20healthbot_31337_1">
 
 ```json
 [
@@ -551,7 +551,7 @@ import BrowserWindow from "@site/src/components/BrowserWindow";
 
 This will render the following:
 
-<BrowserWindow url="http://localhost:8080/query?s=select%20*%20from%20healthbot_31337_1">
+<BrowserWindow url="http://localhost:8080/query?statement=select%20*%20from%20healthbot_31337_1">
 
 ```json
 [

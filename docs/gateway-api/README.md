@@ -3,10 +3,10 @@ title: Get started
 description: Leverage REST APIs to interact directly with Tableland validator nodes at a gateway.
 keywords:
   - rest api
-  - validator api
+  - gateway api
 ---
 
-The Tableland Validator API is organized around [REST](http://en.wikipedia.org/wiki/Representational_State_Transfer). You can leverage these APIs to read directly from tables and compose data across them, and make calls to learn information about the node itself. Keep in mind that a node listens to mainnet chains and testnet chains _separately_ such that there are separate Base URLs for each respective environment.
+The Tableland Gateway API is organized around [REST](http://en.wikipedia.org/wiki/Representational_State_Transfer). You can leverage these APIs to read directly from tables and compose data across them, and make calls to learn information about the node itself. Keep in mind that a node listens to mainnet chains and testnet chains _separately_ such that there are separate Base URLs for each respective environment.
 
 ## Setup
 

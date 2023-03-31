@@ -25,7 +25,7 @@
   },
   "sidebar": "quickstarts",
   "previous": {
-    "title": "REST API",
+    "title": "Gateway API",
     "permalink": "/quickstarts/api-quickstart"
   },
   "next": {

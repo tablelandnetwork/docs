@@ -68,7 +68,7 @@ Once the local node is running, tables can be accessed just as they are with the
 You can use the `query` endpoint to retrieve some data (not the chain ID is `31337`):
 
 ```bash
-curl http://localhost:8080/api/v1/query?s=select%20counter%20from%20healthbot_31337_1
+curl http://localhost:8080/api/v1/query?statement=select%20counter%20from%20healthbot_31337_1
 ```
 
 Which should return:

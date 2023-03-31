@@ -3,6 +3,14 @@ title: Complex controller
 description: Create a controller with balance and token ownership checks.
 ---
 
+A more complex controller can provision write access in, really, any way you'd like! This example contract does a few things:
+
+- Checks the sender has sent some required value in order to execute the query (e.g., pay 1 ETH to mutate data).
+- Checks ownership of some token at `_foos` and `_bars`, each which have a token ID in a table such that your `WHERE` clause will include a `foo_id` and `bar_id` column, respectively.
+- If these checks pass, only allow an update and restrict it to a specific column like `baz`, but only if the supplied value is passes a check of being `> 0`.
+
+If you can program the rules in a smart contract, you can program how data is mutated.
+
 ```solidity
 // SPDX-License-Identifier: MIT
 pragma solidity >=0.8.10 <0.9.0;
@@ -14,7 +22,7 @@ import {Policies} from "@tableland/evm/contracts/policies/Policies.sol";
 import {ERC721EnumerablePolicies} from "@tableland/evm/contracts/policies/ERC721EnumerablePolicies.sol";
 import {ERC721AQueryablePolicies} from "@tableland/evm/contracts/policies/ERC721AQueryablePolicies.sol";
 
-contract TestTablelandController is TablelandController, Ownable {
+contract ComplexController is TablelandController, Ownable {
     error InsufficientValue(uint256 receivedValue, uint256 requiredValue);
 
     uint256 public constant REQUIRED_VALUE = 1 ether;

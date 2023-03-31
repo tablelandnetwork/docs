@@ -1,0 +1,25 @@
+{
+  "unversionedId": "gateway-api/errors",
+  "id": "gateway-api/errors",
+  "title": "Errors",
+  "description": "Openly readable tables by your applications.",
+  "source": "@site/docs/gateway-api/errors.md",
+  "sourceDirName": "gateway-api",
+  "slug": "/gateway-api/errors",
+  "permalink": "/gateway-api/errors",
+  "draft": false,
+  "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/gateway-api/errors.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "title": "Errors",
+    "description": "Openly readable tables by your applications.",
+    "keywords": [
+      "write to table",
+      "mutate table"
+    ]
+  }
+}

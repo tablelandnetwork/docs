@@ -504,7 +504,7 @@ import "@openzeppelin/contracts/utils/Strings.sol";
 contract TwoTablesNFT is ERC721 {
   /// A URI used to reference off-chain metadata.
   // This will use the Tableland gateway: https://testnets.tableland.network/query?unwrap=true&extract=true&s=
-  // See the `query?unwrap=true&extract=true&s=` appended -- a SQL query `s` and mode to format to ERC721 standard
+  // See the `query?unwrap=true&extract=true&s=` appended -- a SQL query `statement` and mode to format to ERC721 standard
   string public baseURIString;
   /// The name of the main metadata table in Tableland
   // Schema: id int primary key, name text, description text, image text

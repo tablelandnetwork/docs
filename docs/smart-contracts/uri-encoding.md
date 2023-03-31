@@ -5,7 +5,7 @@ keywords:
   - uri encoding
 ---
 
-Developers can write SQL read statement using the Validator REST API where the response object can have fully custom keys that are hydrated with query values. It is useful, especially, for NFT metadata where SQL read query is written at the Tableland gateway URL. This URL must be URI encoded within the smart contract itself.
+Developers can write SQL read statement using the Gateway REST API where the response object can have fully custom keys that are hydrated with query values. It is useful, especially, for NFT metadata where SQL read query is written at the Tableland gateway URL. This URL must be URI encoded within the smart contract itself.
 
 ## Overview
 
@@ -63,7 +63,7 @@ For context, the table below defines each of these reserved characters and their
 | ]         | %5D      | Right bracket                                        |
 | \|        | %7C      | Pipe                                                 |
 
-For a full list of encoded characters, see the list [here](https://www.w3schools.com/tags/ref_urlencode.ASP), and note that up until `%7F`, both UTF-8 and Windows encoding have full parity. The table above is also deployed as a Tableland table [here](https://testnet.tableland.network/query?s=select%20*%20from%20uri_encoding_80001_2734).
+For a full list of encoded characters, see the list [here](https://www.w3schools.com/tags/ref_urlencode.ASP), and note that up until `%7F`, both UTF-8 and Windows encoding have full parity. The table above is also deployed as a Tableland table [here](https://testnet.tableland.network/query?statement=select%20*%20from%20uri_encoding_80001_2734).
 
 ## Encoding with JavaScript
 

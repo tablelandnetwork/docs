@@ -1,14 +1,14 @@
 {
-  "unversionedId": "validator-api/endpoints",
-  "id": "validator-api/endpoints",
+  "unversionedId": "gateway-api/endpoints",
+  "id": "gateway-api/endpoints",
   "title": "Endpoints",
   "description": "Make API calls to get table and validator information.",
-  "source": "@site/docs/validator-api/endpoints.md",
-  "sourceDirName": "validator-api",
-  "slug": "/validator-api/endpoints",
-  "permalink": "/validator-api/endpoints",
+  "source": "@site/docs/gateway-api/endpoints.md",
+  "sourceDirName": "gateway-api",
+  "slug": "/gateway-api/endpoints",
+  "permalink": "/gateway-api/endpoints",
   "draft": false,
-  "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/validator-api/endpoints.md",
+  "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/gateway-api/endpoints.md",
   "tags": [],
   "version": "current",
   "lastUpdatedBy": "Author",
@@ -25,10 +25,10 @@
   "sidebar": "validatorApi",
   "previous": {
     "title": "Get started",
-    "permalink": "/validator-api/"
+    "permalink": "/gateway-api/"
   },
   "next": {
     "title": "Query formatting",
-    "permalink": "/validator-api/query-formatting"
+    "permalink": "/gateway-api/query-formatting"
   }
 }

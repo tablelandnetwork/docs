@@ -1,14 +1,14 @@
 {
-  "unversionedId": "validator-api/README",
-  "id": "validator-api/README",
+  "unversionedId": "gateway-api/README",
+  "id": "gateway-api/README",
   "title": "Get started",
   "description": "Leverage REST APIs to interact directly with Tableland validator nodes at a gateway.",
-  "source": "@site/docs/validator-api/README.md",
-  "sourceDirName": "validator-api",
-  "slug": "/validator-api/",
-  "permalink": "/validator-api/",
+  "source": "@site/docs/gateway-api/README.md",
+  "sourceDirName": "gateway-api",
+  "slug": "/gateway-api/",
+  "permalink": "/gateway-api/",
   "draft": false,
-  "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/validator-api/README.md",
+  "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/gateway-api/README.md",
   "tags": [],
   "version": "current",
   "lastUpdatedBy": "Author",
@@ -25,6 +25,6 @@
   "sidebar": "validatorApi",
   "next": {
     "title": "Endpoints",
-    "permalink": "/validator-api/endpoints"
+    "permalink": "/gateway-api/endpoints"
   }
 }
