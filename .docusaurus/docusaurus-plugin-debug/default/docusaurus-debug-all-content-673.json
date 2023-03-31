@@ -601,8 +601,8 @@
               },
               "sidebar": "fundamentals",
               "previous": {
-                "title": "Filecoin",
-                "permalink": "/fundamentals/chains/filecoin"
+                "title": "Ethereum",
+                "permalink": "/fundamentals/chains/ethereum"
               },
               "next": {
                 "title": "Optimism",
@@ -638,8 +638,8 @@
                 "permalink": "/fundamentals/chains/"
               },
               "next": {
-                "title": "Filecoin",
-                "permalink": "/fundamentals/chains/filecoin"
+                "title": "Arbitrum",
+                "permalink": "/fundamentals/chains/arbitrum"
               }
             },
             {
@@ -664,15 +664,6 @@
                 "keywords": [
                   "filecoin"
                 ]
-              },
-              "sidebar": "fundamentals",
-              "previous": {
-                "title": "Ethereum",
-                "permalink": "/fundamentals/chains/ethereum"
-              },
-              "next": {
-                "title": "Arbitrum",
-                "permalink": "/fundamentals/chains/arbitrum"
               }
             },
             {
@@ -3536,10 +3527,6 @@
                   {
                     "type": "doc",
                     "id": "fundamentals/chains/ethereum"
-                  },
-                  {
-                    "type": "doc",
-                    "id": "fundamentals/chains/filecoin"
                   },
                   {
                     "type": "doc",

@@ -20,14 +20,5 @@
     "keywords": [
       "filecoin"
     ]
-  },
-  "sidebar": "fundamentals",
-  "previous": {
-    "title": "Ethereum",
-    "permalink": "/fundamentals/chains/ethereum"
-  },
-  "next": {
-    "title": "Arbitrum",
-    "permalink": "/fundamentals/chains/arbitrum"
   }
 }

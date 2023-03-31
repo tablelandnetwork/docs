@@ -10,13 +10,11 @@
 /* Override the default Infima variables here. */
 :root {
   /* Colors (light mode colors are the default) */
-  --ifm-color-primary: #9563a7;
-  --ifm-color-primary-dark: #704b7e;
-  --ifm-color-primary-darker: #4d3357;
-  --ifm-color-primary-darkest: #251929;
-  --ifm-color-primary-light: #a782b5;
-  --ifm-color-primary-lighter: #b99bc4;
-  --ifm-color-primary-lightest: #dccde1;
+  --color-orange: #ff6567;
+  --color-green: #0be291;
+  --ifm-color-primary: var(--color-orange);
+  --ifm-color-secondary: var(--color-green);
+  --ifm-color-black: #1a1a1a;
   /* Change the Tab component to be less vertically padded */
   --ifm-tabs-padding-vertical: 0.3rem;
   --ifm-global-radius: 0.1rem;
@@ -44,15 +42,10 @@
   --ifm-h6-font-size: var(--h6-font-size);
   /* Default secondary colors, listed since some are used throughout */
   --ifm-color-secondary-dark: rgb(212, 213, 216);
-  --ifm-color-secondary-darker: rgb(200, 201, 204);
-  --ifm-color-secondary-darkest: rgb(164, 166, 168);
-  --ifm-color-secondary-light: rgb(238, 240, 242);
-  --ifm-color-secondary-lighter: rgb(241, 242, 245);
-  --ifm-color-secondary-lightest: rgb(245, 246, 248);
-  --ifm-color-content-secondary: #525860;
   --ifm-color-gray-300: #dadde1;
   --ifm-color-gray-300-rgb: 218, 221, 225;
   --ifm-color-emphasis-300: var(--ifm-color-gray-300);
+  --ifm-heading-color: var(--ifm-color-black);
   /* Decrease sidebar width and padding; change color to match table of contents */
   --ifm-menu-link-padding-vertical: 0.3rem;
   --ifm-toc-border-color: var(--ifm-color-emphasis-300);
@@ -66,40 +59,27 @@
   --ifm-button-border-radius: 0.4rem;
   /* These are used as the dark mode colors; putting here so they can be
   accessed in light mode, if needed */
-  --ifm-color-dark-primary: #75b6b5;
-  --ifm-color-dark-primary-dark: #3b706f;
-  --ifm-color-dark-primary-darker: #2c5453;
-  --ifm-color-dark-primary-darkest: #1e3837;
-  --ifm-color-dark-primary-light: #4a8c8b;
-  --ifm-color-dark-primary-lighter: #59a7a6;
-  --ifm-color-dark-primary-lightest: #77dddc;
-  --ifm-color-gray-800: #444950;
   --ifm-color-gray-800-rgb: 68, 73, 80;
 }
 
 /* Change the font color of the content to a dark grey but keep headings black*/
 [data-theme="light"] {
-  --ifm-color-content-rgb: var(--ifm-color-gray-800-rgb);
-  --ifm-color-content: rgb(var(--ifm-color-content-rgb)) !important;
+  --ifm-color-content: var(--ifm-color-black) !important;
   --ifm-menu-color: var(--ifm-color-gray-800);
-  --ifm-heading-color: var(--ifm-color-gray-1000);
 }
 
 /* Dark mode */
 [data-theme="dark"] {
   /* Colors */
-  /* --ifm-background-color: !important; */
+  --ifm-background-color: var(--ifm-color-black) !important;
   --ifm-color-content-rgb: 237, 237, 237;
   --ifm-color-content: rgb(var(--ifm-color-content-rgb)) !important;
-  --color-primary-rgb: 117, 182, 181;
-  --ifm-color-primary: var(--ifm-color-dark-primary);
-  --ifm-color-primary-dark: var(--ifm-color-dark-primary-dark);
-  --ifm-color-primary-darker: var(--ifm-color-dark-primary-darker);
-  --ifm-color-primary-darkest: var(--ifm-color-dark-primary-darkest);
-  --ifm-color-primary-light: var(--ifm-color-dark-primary-light);
-  --ifm-color-primary-lighter: var(--ifm-color-dark-primary-lighter);
-  --ifm-color-primary-lightest: var(--ifm-color-dark-primary-lightest);
+  --ifm-color-primary: var(--color-green);
+  --ifm-color-secondary: var(--color-orange);
+  --ifm-background-surface-color: #3a3a3a !important;
+  --ifm-hover-overlay: var(--ifm-background-surface-color) !important;
   --ifm-heading-color: #e3e3e3;
+  --ifm-toc-border-color: #303030 !important;
   --ifm-menu-color: var(--ifm-color-gray-500);
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
   /* Make the navbar the same color as the background; include bottom box */
@@ -109,6 +89,7 @@
   --ifm-sidebar-background-color: var(--ifm-background-color);
   --ifm-navbar-background-color: var(--ifm-background-color);
   --ifm-footer-background-color: var(--ifm-background-surface-color);
+  --ifm-navbar-search-input-background-color: var(--ifm-hover-overlay);
 }
 
 /* A few general CSS resets */
@@ -305,18 +286,15 @@ html[data-theme="dark"] .header-github-link:before {
 /* Custom style for buttons */
 .button {
   font-weight: var(--ifm-font-weight-bold);
-  border-color: var(--ifm-color-secondary);
+  font-size: var(--h4-font-size);
+  padding: 10px 30px;
   border: none;
   outline: none;
 }
 
 /* Force no darken on hover */
 .button--primary {
-  background-color: var(--ifm-color-primary);
-}
-
-html[data-theme="dark"] .button--primary {
-  background-color: var(--ifm-color-primary-dark);
+  background-color: var(--ifm-color-secondary);
 }
 
 .button--secondary:hover {
@@ -430,6 +408,10 @@ spacing. */
   transform: translate(-0.2rem);
 }
 
+[data-theme="dark"] .pagination-nav__link {
+  border-color: transparent;
+}
+
 /* Decrease the width of the search bar */
 .navbar__search-input {
   width: 20rem;
@@ -442,15 +424,14 @@ input {
   background-color: var(--ifm-navbar-search-input-background-color);
 }
 
-[data-theme="dark"] .navbar__search-input,
-input {
-  --ifm-navbar-search-input-background-color: var(--ifm-hover-overlay);
-}
-
 /* Change the search box outline color on focus */
 .navbar__search-input:focus-visible {
   outline: none;
   border-color: var(--ifm-toc-border-color);
+}
+
+[data-theme="dark"] .navbar__search-input:focus-visible {
+  border-color: transparent;
 }
 
 /* Adjust based on navbar links on responsive decrease width */
@@ -473,6 +454,12 @@ input {
 .navbar__brand {
   font-size: 1.1rem;
   color: var(--ifm-color-primary);
+}
+
+@media (min-width: 997px) {
+  .navbar__brand {
+    margin-right: 65px;
+  }
 }
 
 .navbar__title {

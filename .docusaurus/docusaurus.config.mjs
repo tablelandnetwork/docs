@@ -136,7 +136,7 @@ export default {
     },
     "navbar": {
       "hideOnScroll": false,
-      "title": "DOCS",
+      "title": "",
       "logo": {
         "alt": "Tableland logo",
         "src": "/img/tableland/logo-black.svg",
@@ -222,10 +222,6 @@ export default {
               "label": "SQL specification"
             }
           ]
-        },
-        {
-          "type": "custom-ConnectWallet",
-          "position": "right"
         }
       ]
     },
@@ -338,17 +334,27 @@ export default {
       },
       "darkTheme": {
         "plain": {
-          "color": "#82aaff",
-          "backgroundColor": "#2D1339"
+          "color": "#F8F8F2",
+          "backgroundColor": "#484848"
         },
         "styles": [
           {
             "types": [
-              "changed"
+              "prolog",
+              "constant",
+              "builtin"
             ],
             "style": {
-              "color": "rgb(162, 191, 252)",
-              "fontStyle": "italic"
+              "color": "rgb(189, 147, 249)"
+            }
+          },
+          {
+            "types": [
+              "inserted",
+              "function"
+            ],
+            "style": {
+              "color": "#0be291"
             }
           },
           {
@@ -356,17 +362,44 @@ export default {
               "deleted"
             ],
             "style": {
-              "color": "rgba(239, 83, 80, 0.56)",
-              "fontStyle": "italic"
+              "color": "rgb(255, 85, 85)"
             }
           },
           {
             "types": [
-              "inserted",
-              "attr-name"
+              "changed"
             ],
             "style": {
-              "color": "#beffad",
+              "color": "rgb(255, 184, 108)"
+            }
+          },
+          {
+            "types": [
+              "punctuation",
+              "symbol"
+            ],
+            "style": {
+              "color": "rgb(248, 248, 242)"
+            }
+          },
+          {
+            "types": [
+              "string",
+              "char",
+              "tag",
+              "selector"
+            ],
+            "style": {
+              "color": "rgb(255, 121, 198)"
+            }
+          },
+          {
+            "types": [
+              "keyword",
+              "variable"
+            ],
+            "style": {
+              "color": "rgb(189, 147, 249)",
               "fontStyle": "italic"
             }
           },
@@ -375,104 +408,15 @@ export default {
               "comment"
             ],
             "style": {
-              "color": "rgba(255, 255, 255, 0.5)"
+              "color": "#b5b5b5"
             }
           },
           {
             "types": [
-              "string",
-              "url"
+              "attr-name"
             ],
             "style": {
-              "color": "#beffad"
-            }
-          },
-          {
-            "types": [
-              "variable"
-            ],
-            "style": {
-              "color": "rgb(214, 222, 235)"
-            }
-          },
-          {
-            "types": [
-              "number"
-            ],
-            "style": {
-              "color": "rgb(247, 140, 108)"
-            }
-          },
-          {
-            "types": [
-              "builtin",
-              "char",
-              "constant",
-              "function"
-            ],
-            "style": {
-              "color": "#ff5e5e"
-            }
-          },
-          {
-            "types": [
-              "punctuation"
-            ],
-            "style": {
-              "color": "#fff"
-            }
-          },
-          {
-            "types": [
-              "selector",
-              "doctype"
-            ],
-            "style": {
-              "color": "rgb(199, 146, 234)",
-              "fontStyle": "italic"
-            }
-          },
-          {
-            "types": [
-              "class-name",
-              "delimiter"
-            ],
-            "style": {
-              "color": "#ffcb6b"
-            }
-          },
-          {
-            "types": [
-              "tag",
-              "operator",
-              "keyword"
-            ],
-            "style": {
-              "color": "#ca79ee"
-            }
-          },
-          {
-            "types": [
-              "boolean"
-            ],
-            "style": {
-              "color": "rgb(255, 88, 116)"
-            }
-          },
-          {
-            "types": [
-              "property"
-            ],
-            "style": {
-              "color": "rgb(128, 203, 196)"
-            }
-          },
-          {
-            "types": [
-              "namespace"
-            ],
-            "style": {
-              "color": "rgb(178, 204, 214)"
+              "color": "rgb(241, 250, 140)"
             }
           }
         ]

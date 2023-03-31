@@ -109,7 +109,7 @@ export default [
   },
   {
     path: '/',
-    component: ComponentCreator('/', '848'),
+    component: ComponentCreator('/', 'ac1'),
     routes: [
       {
         path: '/',
@@ -239,9 +239,8 @@ export default [
       },
       {
         path: '/fundamentals/chains/filecoin',
-        component: ComponentCreator('/fundamentals/chains/filecoin', 'b4d'),
-        exact: true,
-        sidebar: "fundamentals"
+        component: ComponentCreator('/fundamentals/chains/filecoin', '07a'),
+        exact: true
       },
       {
         path: '/fundamentals/chains/local',

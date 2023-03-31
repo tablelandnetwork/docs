@@ -7,7 +7,7 @@ keywords:
 
 import { ChainInfo } from '@site/src/components/SupportedChains';
 
-Filecoin is a EVM-compatible Layer 1 chain  that Tableland currently supports. Check out the overview of what this network is and relevant information when using it.
+Filecoin is a EVM-compatible Layer 1 chain that Tableland currently supports. Check out the overview of what this network is and relevant information when using it.
 
 ## Overview
 
@@ -18,11 +18,11 @@ The Filecoin EVM runtime (FEVM) is a fully compatible Ethereum Virtual Machine (
 ### Filecoin (mainnet)
 
 - Average block time: 30s
-- Chain ID:  314
+- Chain ID: 314
 - Symbol: FIL
-- Status Dashboard: 
+- Status Dashboard:
   - [https://status.filecoin.io/](https://status.filecoin.io/)
-- Block Explorer: 
+- Block Explorer:
   - [https://filfox.info](https://filfox.info)
 - RPC URL: [https://rpc.ankr.com/filecoin](https://rpc.ankr.com/filecoin)
 - Tableland contract address: <ChainInfo chain='filecoin' info='contractAddress' />
@@ -34,11 +34,11 @@ The Filecoin EVM runtime (FEVM) is a fully compatible Ethereum Virtual Machine (
 - Average block time: 30s
 - Chain ID: 3141
 - Symbol: xFIL
-- Status Dashboard: 
+- Status Dashboard:
   - [https://status.filecoin.io/uptime/5dj924lq96rz](https://status.filecoin.io/uptime/5dj924lq96rz)
-- Block Explorer: 
+- Block Explorer:
   - [https://hyperspace.filfox.info/](https://hyperspace.filfox.info/)
-- Faucet: 
+- Faucet:
   - [https://hyperspace.yoga/](https://hyperspace.yoga/)
 - RPC URL: [https://rpc.ankr.com/filecoin_testnet](https://rpc.ankr.com/filecoin_testnet)
 - Tableland contract address: <ChainInfo chain='filecoin-hyperspace' info='contractAddress' />
@@ -47,4 +47,4 @@ The Filecoin EVM runtime (FEVM) is a fully compatible Ethereum Virtual Machine (
 
 #### Getting testnet funds
 
-1. Request testnet FIL from a faucet noted above
+Request testnet FIL from the faucet noted above—this should send funds directly to the identified wallet.

@@ -218,12 +218,6 @@
           },
           {
             "type": "link",
-            "label": "Filecoin",
-            "href": "/fundamentals/chains/filecoin",
-            "docId": "fundamentals/chains/filecoin"
-          },
-          {
-            "type": "link",
             "label": "Arbitrum",
             "href": "/fundamentals/chains/arbitrum",
             "docId": "fundamentals/chains/arbitrum"
@@ -1202,8 +1196,7 @@
     "fundamentals/chains/filecoin": {
       "id": "fundamentals/chains/filecoin",
       "title": "Filecoin",
-      "description": "An overview of using Filecoin with Tableland.",
-      "sidebar": "fundamentals"
+      "description": "An overview of using Filecoin with Tableland."
     },
     "fundamentals/chains/local": {
       "id": "fundamentals/chains/local",

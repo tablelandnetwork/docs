@@ -48,10 +48,7 @@ export default function Home(): JSX.Element {
                 <b>immutable</b> rules.
               </p>
               <Link
-                className={clsx(
-                  "button button--primary padding-left--sm padding-right--sm",
-                  styles.getStartedBtn
-                )}
+                className={clsx("button button--primary", styles.getStartedBtn)}
                 to="fundamentals"
               >
                 Get started
