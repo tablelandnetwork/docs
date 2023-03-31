@@ -457,6 +457,10 @@ input {
   color: var(--ifm-color-primary) !important;
 }
 
+.dropdown__menu {
+  background-color: var(--ifm-background-color);
+}
+
 .navbar__brand {
   font-size: 1.1rem;
   color: var(--ifm-color-primary);
