@@ -696,7 +696,7 @@
       },
       {
         "type": "link",
-        "label": "Using SQLHelpers",
+        "label": "Using SQL helpers",
         "href": "/smart-contracts/using-sql-helpers",
         "docId": "smart-contracts/using-sql-helpers"
       },
@@ -1600,7 +1600,7 @@
     },
     "smart-contracts/using-sql-helpers": {
       "id": "smart-contracts/using-sql-helpers",
-      "title": "Using SQLHelpers",
+      "title": "Using SQL helpers",
       "description": "Use the SQL helpers library to make it easier write SQL in Solidity.",
       "sidebar": "smartContracts"
     },

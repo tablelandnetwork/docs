@@ -1,7 +1,7 @@
 {
   "unversionedId": "smart-contracts/using-sql-helpers",
   "id": "smart-contracts/using-sql-helpers",
-  "title": "Using SQLHelpers",
+  "title": "Using SQL helpers",
   "description": "Use the SQL helpers library to make it easier write SQL in Solidity.",
   "source": "@site/docs/smart-contracts/using-sql-helpers.md",
   "sourceDirName": "smart-contracts",
@@ -15,7 +15,7 @@
   "lastUpdatedAt": 1539502055,
   "formattedLastUpdatedAt": "Oct 14, 2018",
   "frontMatter": {
-    "title": "Using SQLHelpers",
+    "title": "Using SQL helpers",
     "description": "Use the SQL helpers library to make it easier write SQL in Solidity."
   },
   "sidebar": "smartContracts",

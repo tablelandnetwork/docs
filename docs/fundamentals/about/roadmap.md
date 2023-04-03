@@ -28,6 +28,22 @@ We’re here to build a new web. Together.
 
 ### 2023
 
+#### Q2
+
+- Tableland protocol yellow paper.
+- Studio web application MVP.
+- Arbitrum Nova support.
+- Filecoin (FVM) support.
+- Improved on-chain access control.
+- Decentralized validator metrics.
+- ENS table namespaces.
+- Zero downtime deployments.
+- Inclusion proof PoC.
+- Table configurations feature.
+- Local-first wasm based SQLite support.
+- Author a token reputation EIP.
+- Docs site content refresh & deployment.
+
 #### Q1
 
 - Release new validator code with mainnet and testnet separation.
@@ -86,12 +102,18 @@ We’re here to build a new web. Together.
 
 ### 2023
 
+#### Q2
+
+- Metadata updates extension ([EIP-4906](https://eips.ethereum.org/EIPS/eip-4906)) to trigger marketplaces to fetch dynamic changes.
+- Filecoin backed assets / metadata.
+- Tableland-based voting in the Garage.
+- Support for earning Flight Time (FT) from off-chain actions.
+- Show FT for Rigs holders as Discord badges.
+
 #### Q1
 
 - First Flight Time Rewards (FTRs) for holders.
-- Unlock first dynamic badges on Rigs.
 - Enhance [Garage web app](https://garage.tableland.xyz/) with badges and additional functionality.
-- Publish output of validator staking research.
 
 ### 2022
 
