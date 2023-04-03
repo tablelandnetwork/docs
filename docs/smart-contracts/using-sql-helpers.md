@@ -1,5 +1,5 @@
 ---
-title: Using SQLHelpers
+title: Using SQL helpers
 description: Use the SQL helpers library to make it easier write SQL in Solidity.
 ---
 
@@ -37,7 +37,7 @@ function toInsert(
     uint256 tableId,
     string memory columns,
     string memory values
-) public view returns (string memory)
+) public view returns (string memory);
 ```
 
 ## [`toBatchInsert`](https://github.com/tablelandnetwork/evm-tableland/blob/b350a363ea3d10bbeb3d3a088e9c27c77c6cae30/contracts/utils/SQLHelpers.sol#L109)
