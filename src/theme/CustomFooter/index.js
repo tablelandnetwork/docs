@@ -90,9 +90,7 @@ export default function CustomFooter() {
                 <div className="col padding-left--none">
                   <div className="footer__title"></div>
                   <ul className="footer__items clean-list">
-                    <li className="footer__item">
-                      <NewsletterForm />
-                    </li>
+                    <li className="footer__item">{/* <NewsletterForm /> */}</li>
                   </ul>
                 </div>
                 <div className="col col--2 padding-left--none">
