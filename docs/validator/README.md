@@ -9,6 +9,6 @@ Tableland is a permissionless network where anyone can run and operate their own
 
 :::caution
 
-This page is a work in progress, but you can run your own Tableland node using the [`go-tableland`](https://github.com/tablelandnetwork/go-tableland) code. Deeper documentation is coming soon, and if you're interested in discussing more about running Tableland nodes, reach out on [Discord and `#contact-team`](https://discord.com/invite/dc8EBEhGbg).
+The current page is a work in progress, but you can run your own Tableland node using the [`go-tableland`](https://github.com/tablelandnetwork/go-tableland) code. Deeper documentation is coming soon, and if you're interested in discussing more about running Tableland nodes, [reach out on Discord](https://discord.com/invite/dc8EBEhGbg) and `#contact-team`.
 
 :::
