@@ -91,6 +91,7 @@ const architecture = [
     ],
   },
   "fundamentals/architecture/query-optimization",
+  "fundamentals/architecture/cost-estimator",
 ];
 
 // Concepts

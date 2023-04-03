@@ -577,3 +577,7 @@ npm run swizzle @docusaurus/theme-classic NotFound -- --eject
 ```
 
 Ejecting a theme component is the process of creating a copy of the original theme component, which you can fully customize and override. It will copy the component into `src/theme` to then allow you to further customize it. Wrapping a theme is the process of creating a wrapper around the original theme component; you can further enhance "around" the component but not directly edit it.
+
+## Debugging
+
+One helpful was to debug the docs site itself is by navigating to the `/__docusaurus/debug` URI, which shows information about the config, metadata, registry, routes, content, and global site data.

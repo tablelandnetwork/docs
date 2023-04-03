@@ -15,6 +15,11 @@ import { ChainsList } from '@site/src/components/SupportedChains'
 
 <ChainsList type={'mainnets'} format={'list'} />
 
+:::tip
+
+Review the [cost estimation](/fundamentals/architecture/cost-estimator) table that compares the costs of creates and writes across each chain.
+:::
+
 ## Layer 1 vs. Layer 2
 
 Ethereum (Layer 1, "L1") can be expensive. Tableland extends a base chain’s functionality so that writing data to the blockchain is cheap (stored in event logs) while the Tableland network makes this data functional. But, Ethereum will _always be_ more expensive as well as _slower_ when compared to its scaling solutions (Layer 2, "L2") — these technologies exist for a reason! There is [a ton of information on why L2s are needed](https://ethereum.org/en/layer-2/) to the point where these solutions are part of [Ethereum’s future roadmap](https://vitalik.ca/general/2021/12/06/endgame.html). Thus, choosing the right ETH L2 variant is important since Tableland is _an extension of_ the base chain and depends on the base chain’s execution, consensus, and security, which determine the speed of creating or writing to tables.
@@ -76,7 +81,7 @@ Check out the following resources for each of these providers, and note that the
 - Status: [https://etherscan.freshstatus.io/](https://etherscan.freshstatus.io/)
 - Docs: [https://docs.etherscan.io/](https://docs.etherscan.io/)
 
-## Choosing a chain
+## Chain information
 
 Dive into chain-specific overviews, with decision considerations and general chain information (chain ID, contracts, faucets, etc.).
 

@@ -109,7 +109,7 @@ export default [
   },
   {
     path: '/',
-    component: ComponentCreator('/', 'd70'),
+    component: ComponentCreator('/', 'e78'),
     routes: [
       {
         path: '/',
@@ -186,6 +186,12 @@ export default [
       {
         path: '/fundamentals/about/roadmap',
         component: ComponentCreator('/fundamentals/about/roadmap', '5d4'),
+        exact: true,
+        sidebar: "fundamentals"
+      },
+      {
+        path: '/fundamentals/architecture/cost-estimator',
+        component: ComponentCreator('/fundamentals/architecture/cost-estimator', '8e3'),
         exact: true,
         sidebar: "fundamentals"
       },

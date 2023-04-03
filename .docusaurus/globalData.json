@@ -66,6 +66,11 @@
               "sidebar": "fundamentals"
             },
             {
+              "id": "fundamentals/architecture/cost-estimator",
+              "path": "/fundamentals/architecture/cost-estimator",
+              "sidebar": "fundamentals"
+            },
+            {
               "id": "fundamentals/architecture/gateway",
               "path": "/fundamentals/architecture/gateway",
               "sidebar": "fundamentals"

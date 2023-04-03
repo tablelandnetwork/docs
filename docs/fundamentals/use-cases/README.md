@@ -9,11 +9,17 @@ This page identifies some potential use cases. It is non-exhaustive but provides
 
 ## Hybrid data model
 
+Ultimately, Tableland aims to provide a web3-native database that is competitive to that of traditional web2 database solutions. The chain in which you deploy to dictates [how expensive](/fundamentals/architecture/cost-estimator) it is to write data, so this should be a major consideration in what type of data you're storing.
+
 The TL;DR is that Tableland can be used as a data storage option with on-chain data availability and off-chain data accessibility within the decentralized SQL database network. This opens the doors for endless possibilities that provide a dual pronged approach toward web3 data: on-chain actions trigger off-chain mutations that can easily be read at the application layer. It's sort of a lively cache for smart contract state / on-chain data.
 
-:::tip
-Be sure to check out the various [considerations & tradeoffs](/fundamentals/considerations-tradeoffs) before diving in.
-:::
+### Application data
+
+- For _high velocity_ table writes, choose a chain like [Arbitrum Nova](/fundamentals/chains/arbtirum#arbitrum-nova) that can handle the volume and is [cheap to use](/fundamentals/architecture/cost-estimator).
+- This could include ideas such as the following, and note that data is publicly readable unless you implement some form of encryption before writing the data:
+  - User settings.
+  - Comments / posts.
+  - Session data.
 
 ### NFTs & gaming
 
@@ -27,21 +33,16 @@ Be sure to check out the various [considerations & tradeoffs](/fundamentals/cons
 - Access controls are baked into the protocol to allow for token ownership or on-chain checks to dictate table mutations (e.g., mutate a row only if provisioned by the dataset's controller).
 - Storing publicly shared data, like a CMS or knowledge base, related to DAO operations.
 
-### Application data
-
-- Lower frequency application data that doesn’t result in a _high velocity_ of table writes is ideal.
-- This could include data like user settings, comments / posts, or certain session data—assuming the data can be publicly readable.
-
 :::note
 As a best practice, developers should educate their users on what they’re using and how Tableland table data is publicly available (i.e., encryption is not a native feature).
 :::
 
 ## What to avoid
 
-- **Personally identifiable data**—Tableland is an _open network_ such that _anyone_ can read from any table. Thus, personal data shouldn’t be stored in Tableland (unless encrypted).
-- **High frequency, sub-second writes**—such as a high frequency trading bot.
-- **Storing _every_ user interaction in an application**—it probably doesn’t make sense for this data to live in an web3 table, such as keystrokes or clicks. The write frequency would result in high costs.
-- **Extremely large datasets or files**—these should be avoided and are better handled by file storage, using solutions like IPFS, Filecoin, or similar. But, _pointers to these locations_ and related metadata are a great use case for Tableland tables, actually.
+- **Personally identifiable data**: Tableland is an _open network_ such that _anyone_ can read from any table. Thus, personal data shouldn’t be stored in Tableland unless encrypted.
+- **High frequency, sub-second writes**: Most chains that cannot handle this volume / speed—such as a high frequency trading bot.
+- **Storing _every_ user interaction in an application**: It probably doesn’t make sense for this data to live in an web3 table, such as keystrokes or clicks. The write frequency would result in high costs unless some sort of batching mechanism is used (e.g., aggregate user data over some time period and only update this data at a more cost effective frequency)
+- **Extremely large datasets or files**: These should be avoided and are better handled by file storage, using solutions like IPFS, Filecoin, or similar. But, _pointers to these locations_ (like CIDs) and related metadata are a great use case for Tableland tables, actually.
 
 ## Get connected
 

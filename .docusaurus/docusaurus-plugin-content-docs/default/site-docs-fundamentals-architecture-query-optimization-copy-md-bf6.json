@@ -1,0 +1,25 @@
+{
+  "unversionedId": "fundamentals/architecture/query-optimization copy",
+  "id": "fundamentals/architecture/query-optimization copy",
+  "title": "Query optimization & gas",
+  "description": "Gas is paid for any on-chain query, so statement structure has an impact on cost.",
+  "source": "@site/docs/fundamentals/architecture/query-optimization copy.md",
+  "sourceDirName": "fundamentals/architecture",
+  "slug": "/fundamentals/architecture/query-optimization copy",
+  "permalink": "/fundamentals/architecture/query-optimization copy",
+  "draft": false,
+  "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/fundamentals/architecture/query-optimization copy.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "title": "Query optimization & gas",
+    "sidebar_label": "Queries & gas",
+    "description": "Gas is paid for any on-chain query, so statement structure has an impact on cost.",
+    "keywords": [
+      "query optimization"
+    ]
+  }
+}

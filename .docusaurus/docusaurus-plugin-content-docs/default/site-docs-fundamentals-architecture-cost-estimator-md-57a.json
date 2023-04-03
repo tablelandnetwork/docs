@@ -1,0 +1,34 @@
+{
+  "unversionedId": "fundamentals/architecture/cost-estimator",
+  "id": "fundamentals/architecture/cost-estimator",
+  "title": "Cost estimator",
+  "description": "Understand cost approximations for table creates and writes based on statement size.",
+  "source": "@site/docs/fundamentals/architecture/cost-estimator.md",
+  "sourceDirName": "fundamentals/architecture",
+  "slug": "/fundamentals/architecture/cost-estimator",
+  "permalink": "/fundamentals/architecture/cost-estimator",
+  "draft": false,
+  "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/fundamentals/architecture/cost-estimator.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {
+    "title": "Cost estimator",
+    "description": "Understand cost approximations for table creates and writes based on statement size.",
+    "keywords": [
+      "query costs",
+      "cost"
+    ]
+  },
+  "sidebar": "fundamentals",
+  "previous": {
+    "title": "Queries & gas",
+    "permalink": "/fundamentals/architecture/query-optimization"
+  },
+  "next": {
+    "title": "NFT metadata",
+    "permalink": "/fundamentals/concepts/nft-metadata"
+  }
+}

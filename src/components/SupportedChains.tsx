@@ -34,7 +34,7 @@ function getChainExplorer(
   }
 }
 
-interface FormattedChains {
+export interface ChainFormatted {
   location: string;
   chainNameFormatted: string;
   chainName: string;
@@ -45,7 +45,7 @@ interface FormattedChains {
 
 // Create an object of Tableland supported chains, along with some extra data
 // for the "pretty" name and block explorer link.
-export const supportedChains = (): FormattedChains[] => {
+export const supportedChains = (): ChainFormatted[] => {
   const chains: any = helpers.supportedChains;
   // Remove chain names for `local-host`, `homestead`, `optimism-goerli-staging`
   const remove = [`localhost`, `homestead`, `optimism-goerli-staging`];
@@ -64,6 +64,8 @@ export const supportedChains = (): FormattedChains[] => {
       blockExplorer: "",
       baseUrl: c.baseUrl,
     };
+    // Fixes for where a chain's ethers name (delimited by `-`) does not align
+    // to how it should be "pretty" displayed (e.g., `matic` should be `Polygon`)
     switch (format.chainName) {
       case "local-tableland":
         format.location = "local";
@@ -73,6 +75,9 @@ export const supportedChains = (): FormattedChains[] => {
         break;
       case "arbitrum":
         format.chainNameFormatted = "arbitrum one";
+        break;
+      case "arbitrum-nova":
+        format.chainNameFormatted = "arbitrum nova";
         break;
       case "goerli":
         format.chainNameFormatted = "ethereum goerli";
@@ -99,7 +104,7 @@ export const supportedChains = (): FormattedChains[] => {
   return formatChains;
 };
 
-// Get info about a specific chain, passing the `FormattedChains` key.
+// Get info about a specific chain, passing the `ChainFormatted` key.
 export function getChainInfo(chain: string, info: any): any {
   const chains = supportedChains();
   const c: any = chains.find((x) => x.chainName === chain);
@@ -135,7 +140,7 @@ export function ChainsList({
   format: string;
   info: string;
 }): JSX.Element {
-  let chains: FormattedChains[];
+  let chains: ChainFormatted[];
   // Return either testnet only, mainnet only, or both mainnet & testnet chains.
   if (type === "testnets") {
     chains = supportedChains().filter((chain) => chain.location === "testnet");

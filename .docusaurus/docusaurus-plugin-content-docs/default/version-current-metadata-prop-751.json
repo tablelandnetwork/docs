@@ -252,6 +252,12 @@
         "docId": "fundamentals/architecture/query-optimization"
       },
       {
+        "type": "link",
+        "label": "Cost estimator",
+        "href": "/fundamentals/architecture/cost-estimator",
+        "docId": "fundamentals/architecture/cost-estimator"
+      },
+      {
         "type": "html",
         "value": "<h6 class=\"margin-top--md margin-bottom--none sidebar-section\">CONCEPTS</h6>",
         "defaultStyle": true
@@ -1137,6 +1143,12 @@
       "id": "fundamentals/about/roadmap",
       "title": "Vision & roadmap",
       "description": "The protocol is still being developed and progressively decentralized.",
+      "sidebar": "fundamentals"
+    },
+    "fundamentals/architecture/cost-estimator": {
+      "id": "fundamentals/architecture/cost-estimator",
+      "title": "Cost estimator",
+      "description": "Understand cost approximations for table creates and writes based on statement size.",
       "sidebar": "fundamentals"
     },
     "fundamentals/architecture/gateway": {
