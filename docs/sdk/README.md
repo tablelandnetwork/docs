@@ -31,7 +31,7 @@ The default behavior for database connections prompt a wallet to connect via the
 
 Third party libraries, like `ethersjs` and `wagmi`, are useful to create a signer and restrict which chains the app is using. These libraries may also be useful if passing an account private key stored locally in a `.env` file from a Node app.
 
-See the [Signers](database/signers) page for more details.
+See the [Signers](/sdk/core/signers) page for more details.
 
 ## Using TypeScript
 
@@ -40,7 +40,3 @@ The Tableland SDK supports both JavaScript and TypeScript. If you're using TypeS
 Types can be provided on the `Database` constructor, on the `Statement` constructor (`prepare`), or callers can override them on any of the query/execution APIs directly (i.e., `run`, `all`, `first`, or `raw`).
 
 For example, start by defining the type associated with the table’s schema and use this type in the database constructor.
-
-:::caution
-If you’re upgrading from the legacy (v3) SDK to the latest (v4), please review the instructions on how to [upgrade from v3 to v4](upgrading=from-v3-to-v4). The SDK docs only focus on the most recent version.
-:::

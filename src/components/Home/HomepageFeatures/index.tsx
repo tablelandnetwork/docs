@@ -112,7 +112,7 @@ const BuildList: ProductItem[] = [
       </>
     ),
 
-    url: "validator-api",
+    url: "gateway-api",
   },
   {
     name: "CLI",

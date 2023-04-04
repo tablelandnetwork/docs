@@ -1,570 +1,613 @@
 {
-  "/blog-f23": {
-    "__comp": "a6aa9e1f",
+  "/__docusaurus/debug-411": {
+    "__comp": "__comp---theme-debug-config-23-a-2ff",
     "__context": {
-      "plugin": "868462df"
+      "plugin": "plugin---docusaurus-debugcf-1-1a0"
+    }
+  },
+  "/__docusaurus/debug/config-77c": {
+    "__comp": "__comp---theme-debug-config-23-a-2ff",
+    "__context": {
+      "plugin": "plugin---docusaurus-debugcf-1-1a0"
+    }
+  },
+  "/__docusaurus/debug/content-e47": {
+    "__comp": "__comp---theme-debug-contentba-8-ce7",
+    "__context": {
+      "plugin": "plugin---docusaurus-debugcf-1-1a0"
     },
-    "sidebar": "814f3328",
+    "allContent": "allContent---docusaurus-debug-content-246-9aa"
+  },
+  "/__docusaurus/debug/globalData-71d": {
+    "__comp": "__comp---theme-debug-global-dataede-0fa",
+    "__context": {
+      "plugin": "plugin---docusaurus-debugcf-1-1a0"
+    }
+  },
+  "/__docusaurus/debug/metadata-246": {
+    "__comp": "__comp---theme-debug-site-metadata-68-e-3d4",
+    "__context": {
+      "plugin": "plugin---docusaurus-debugcf-1-1a0"
+    }
+  },
+  "/__docusaurus/debug/registry-56d": {
+    "__comp": "__comp---theme-debug-registry-679-501",
+    "__context": {
+      "plugin": "plugin---docusaurus-debugcf-1-1a0"
+    }
+  },
+  "/__docusaurus/debug/routes-619": {
+    "__comp": "__comp---theme-debug-routes-946-699",
+    "__context": {
+      "plugin": "plugin---docusaurus-debugcf-1-1a0"
+    }
+  },
+  "/blog-f23": {
+    "__comp": "__comp---theme-blog-list-pagea-6-a-7ba",
+    "__context": {
+      "plugin": "plugin---blog-868-f85"
+    },
+    "sidebar": "sidebar---blog-814-8ac",
     "items": [
       {
-        "content": "7661071f"
+        "content": "content---blog-766-e3c"
       },
       {
-        "content": "f4f34a3a"
+        "content": "content---blogf-4-f-cd7"
       },
       {
-        "content": "8717b14a"
+        "content": "content---blog-871-381"
       },
       {
-        "content": "925b3f96"
+        "content": "content---blog-925-e00"
       }
     ],
-    "metadata": "b2b675dd"
+    "metadata": "metadata---blogb-2-b-df1"
   },
   "/blog/archive-3e0": {
-    "__comp": "9e4087bc",
+    "__comp": "__comp---theme-blog-archive-page-9-e-4-1d8",
     "__context": {
-      "plugin": "868462df"
+      "plugin": "plugin---blog-868-f85"
     },
-    "archive": "b2f554cd"
+    "archive": "archive---blog-archiveb-2-f-393"
   },
   "/blog/first-blog-post-8ca": {
-    "__comp": "ccc49370",
+    "__comp": "__comp---theme-blog-post-pageccc-cab",
     "__context": {
-      "plugin": "868462df"
+      "plugin": "plugin---blog-868-f85"
     },
-    "sidebar": "814f3328",
-    "content": "e273c56f"
+    "sidebar": "sidebar---blog-814-8ac",
+    "content": "content---blog-first-blog-poste-27-4a1"
   },
   "/blog/long-blog-post-e9c": {
-    "__comp": "ccc49370",
+    "__comp": "__comp---theme-blog-post-pageccc-cab",
     "__context": {
-      "plugin": "868462df"
+      "plugin": "plugin---blog-868-f85"
     },
-    "sidebar": "814f3328",
-    "content": "73664a40"
+    "sidebar": "sidebar---blog-814-8ac",
+    "content": "content---blog-long-blog-post-736-bc7"
   },
   "/blog/mdx-blog-post-710": {
-    "__comp": "ccc49370",
+    "__comp": "__comp---theme-blog-post-pageccc-cab",
     "__context": {
-      "plugin": "868462df"
+      "plugin": "plugin---blog-868-f85"
     },
-    "sidebar": "814f3328",
-    "content": "59362658"
+    "sidebar": "sidebar---blog-814-8ac",
+    "content": "content---blog-mdx-blog-post-593-37b"
   },
   "/blog/tags-cbd": {
-    "__comp": "01a85c17",
+    "__comp": "__comp---theme-blog-tags-list-page-01-a-d0b",
     "__context": {
-      "plugin": "868462df"
+      "plugin": "plugin---blog-868-f85"
     },
-    "sidebar": "814f3328",
-    "tags": "a7023ddc"
+    "sidebar": "sidebar---blog-814-8ac",
+    "tags": "tags---blog-tagsa-70-da2"
   },
   "/blog/tags/docusaurus-e21": {
-    "__comp": "6875c492",
+    "__comp": "__comp---theme-blog-tags-posts-page-687-b6c",
     "__context": {
-      "plugin": "868462df"
+      "plugin": "plugin---blog-868-f85"
     },
-    "sidebar": "814f3328",
+    "sidebar": "sidebar---blog-814-8ac",
     "items": [
       {
-        "content": "7661071f"
+        "content": "content---blog-766-e3c"
       },
       {
-        "content": "f4f34a3a"
+        "content": "content---blogf-4-f-cd7"
       },
       {
-        "content": "8717b14a"
+        "content": "content---blog-871-381"
       },
       {
-        "content": "925b3f96"
+        "content": "content---blog-925-e00"
       }
     ],
-    "tag": "a80da1cf",
-    "listMetadata": "608ae6a4"
+    "tag": "tag---blog-tags-docusaurusa-80-728",
+    "listMetadata": "listMetadata---blog-tags-docusaurus-608-c09"
   },
   "/blog/tags/facebook-aaa": {
-    "__comp": "6875c492",
+    "__comp": "__comp---theme-blog-tags-posts-page-687-b6c",
     "__context": {
-      "plugin": "868462df"
+      "plugin": "plugin---blog-868-f85"
     },
-    "sidebar": "814f3328",
+    "sidebar": "sidebar---blog-814-8ac",
     "items": [
       {
-        "content": "7661071f"
+        "content": "content---blog-766-e3c"
       }
     ],
-    "tag": "031793e1",
-    "listMetadata": "096bfee4"
+    "tag": "tag---blog-tags-facebook-031-c52",
+    "listMetadata": "listMetadata---blog-tags-facebook-096-d31"
   },
   "/blog/tags/hello-68f": {
-    "__comp": "6875c492",
+    "__comp": "__comp---theme-blog-tags-posts-page-687-b6c",
     "__context": {
-      "plugin": "868462df"
+      "plugin": "plugin---blog-868-f85"
     },
-    "sidebar": "814f3328",
+    "sidebar": "sidebar---blog-814-8ac",
     "items": [
       {
-        "content": "7661071f"
+        "content": "content---blog-766-e3c"
       },
       {
-        "content": "8717b14a"
+        "content": "content---blog-871-381"
       }
     ],
-    "tag": "30a24c52",
-    "listMetadata": "66406991"
+    "tag": "tag---blog-tags-hello-30-a-bed",
+    "listMetadata": "listMetadata---blog-tags-hello-664-70a"
   },
   "/blog/tags/hola-4ba": {
-    "__comp": "6875c492",
+    "__comp": "__comp---theme-blog-tags-posts-page-687-b6c",
     "__context": {
-      "plugin": "868462df"
+      "plugin": "plugin---blog-868-f85"
     },
-    "sidebar": "814f3328",
+    "sidebar": "sidebar---blog-814-8ac",
     "items": [
       {
-        "content": "925b3f96"
+        "content": "content---blog-925-e00"
       }
     ],
-    "tag": "e16015ca",
-    "listMetadata": "4c9e35b1"
+    "tag": "tag---blog-tags-holae-16-18a",
+    "listMetadata": "listMetadata---blog-tags-hola-4-c-9-a24"
   },
   "/blog/welcome-cc8": {
-    "__comp": "ccc49370",
+    "__comp": "__comp---theme-blog-post-pageccc-cab",
     "__context": {
-      "plugin": "868462df"
+      "plugin": "plugin---blog-868-f85"
     },
-    "sidebar": "814f3328",
-    "content": "d9f32620"
+    "sidebar": "sidebar---blog-814-8ac",
+    "content": "content---blog-welcomed-9-f-ffb"
   },
   "/search-f5a": {
-    "__comp": "1a4e3797",
+    "__comp": "__comp---theme-search-page-1-a-4-d6f",
     "__context": {
-      "plugin": "700c545b"
+      "plugin": "plugin---search-700-07c"
     }
   },
   "/tags-5f1": {
-    "__comp": "3720c009",
+    "__comp": "__comp---theme-doc-tags-list-page-372-89e",
     "__context": {
-      "plugin": "54b3092c"
+      "plugin": "plugin---tags-54-b-0a7"
     },
-    "tags": "55960ee5"
+    "tags": "tags---tags-559-690"
   },
   "/tags/contributing-298": {
-    "__comp": "df203c0f",
+    "__comp": "__comp---theme-doc-tag-doc-list-pagedf-2-9f0",
     "__context": {
-      "plugin": "54b3092c"
+      "plugin": "plugin---tags-54-b-0a7"
     },
-    "tag": "9d754648"
+    "tag": "tag---tags-contributing-9-d-7-88b"
   },
   "/-e78": {
-    "__comp": "1be78505",
+    "__comp": "__comp---theme-doc-page-1-be-9be",
     "__context": {
-      "plugin": "54b3092c"
+      "plugin": "plugin---tags-54-b-0a7"
     },
-    "versionMetadata": "935f2afb"
+    "versionMetadata": "versionMetadata---935-fcf"
   },
   "/-18e": {
-    "__comp": "17896441",
-    "content": "23374ca6"
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---233-28b"
   },
   "/cli/-973": {
-    "__comp": "17896441",
-    "content": "86b8ce54"
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---cli-86-b-5e6"
   },
   "/cli/commands-879": {
-    "__comp": "17896441",
-    "content": "aef2f35b"
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---cli-commandsaef-209"
   },
   "/cli/errors-67a": {
-    "__comp": "17896441",
-    "content": "75a862b8"
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---cli-errors-75-a-225"
   },
   "/contribute/-126": {
-    "__comp": "17896441",
-    "content": "b7664370"
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---contribute-b-76-d2a"
   },
   "/contribute/maintainers-b9e": {
-    "__comp": "17896441",
-    "content": "4f9f2e10"
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---contribute-maintainers-4-f-9-3b0"
   },
   "/contribute/style-guide-2fc": {
-    "__comp": "17896441",
-    "content": "d015beca"
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---contribute-style-guided-01-728"
   },
   "/fundamentals/-4df": {
-    "__comp": "17896441",
-    "content": "c81f4a78"
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---fundamentals-c-81-378"
   },
   "/fundamentals/about/general-faqs-718": {
-    "__comp": "17896441",
-    "content": "87121e3a"
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---fundamentals-about-general-faqs-871-390"
   },
   "/fundamentals/about/glossary-a6b": {
-    "__comp": "17896441",
-    "content": "21b35f46"
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---fundamentals-about-glossary-21-b-7c3"
   },
   "/fundamentals/about/open-beta-2b2": {
-    "__comp": "17896441",
-    "content": "77183501"
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---fundamentals-about-open-beta-771-780"
   },
   "/fundamentals/about/repos-e74": {
-    "__comp": "17896441",
-    "content": "ccc35202"
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---fundamentals-about-reposccc-8bf"
   },
   "/fundamentals/about/roadmap-5d4": {
-    "__comp": "17896441",
-    "content": "63433667"
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---fundamentals-about-roadmap-634-04c"
   },
   "/fundamentals/architecture/cost-estimator-8e3": {
-    "__comp": "17896441",
-    "content": "57a2e058"
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---fundamentals-architecture-cost-estimator-57-a-986"
   },
   "/fundamentals/architecture/gateway-5db": {
-    "__comp": "17896441",
-    "content": "b6d46b44"
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---fundamentals-architecture-gatewayb-6-d-757"
   },
   "/fundamentals/architecture/limits-5bc": {
-    "__comp": "17896441",
-    "content": "f30ccce9"
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---fundamentals-architecture-limitsf-30-1ad"
   },
   "/fundamentals/architecture/protocol-design-8ef": {
-    "__comp": "17896441",
-    "content": "b849206f"
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---fundamentals-architecture-protocol-designb-84-552"
   },
   "/fundamentals/architecture/query-optimization-8a2": {
-    "__comp": "17896441",
-    "content": "a8b4d296"
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---fundamentals-architecture-query-optimizationa-8-b-061"
   },
   "/fundamentals/architecture/table-token-4c3": {
-    "__comp": "17896441",
-    "content": "60706b0c"
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---fundamentals-architecture-table-token-607-526"
   },
   "/fundamentals/chains/-8a1": {
-    "__comp": "17896441",
-    "content": "b2231f78"
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---fundamentals-chains-b-22-621"
   },
   "/fundamentals/chains/arbitrum-a8e": {
-    "__comp": "17896441",
-    "content": "e23af714"
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---fundamentals-chains-arbitrume-23-650"
   },
   "/fundamentals/chains/ethereum-945": {
-    "__comp": "17896441",
-    "content": "6b83ecb5"
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---fundamentals-chains-ethereum-6-b-8-76d"
   },
   "/fundamentals/chains/filecoin-07a": {
-    "__comp": "17896441",
-    "content": "cfeac875"
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---fundamentals-chains-filecoincfe-a37"
   },
   "/fundamentals/chains/local-73d": {
-    "__comp": "17896441",
-    "content": "2813d6d7"
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---fundamentals-chains-local-281-97f"
   },
   "/fundamentals/chains/optimism-cf6": {
-    "__comp": "17896441",
-    "content": "30c61050"
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---fundamentals-chains-optimism-30-c-54a"
   },
   "/fundamentals/chains/polygon-8d6": {
-    "__comp": "17896441",
-    "content": "5007e6b9"
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---fundamentals-chains-polygon-500-c53"
   },
   "/fundamentals/concepts/nft-metadata-ab3": {
-    "__comp": "17896441",
-    "content": "c4cee7a0"
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---fundamentals-concepts-nft-metadatac-4-c-694"
   },
   "/fundamentals/considerations-tradeoffs-bb2": {
-    "__comp": "17896441",
-    "content": "078cea13"
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---fundamentals-considerations-tradeoffs-078-4b3"
   },
   "/fundamentals/databases-690": {
-    "__comp": "17896441",
-    "content": "5f75ad60"
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---fundamentals-databases-5-f-7-f3e"
   },
   "/fundamentals/use-cases/-93c": {
-    "__comp": "17896441",
-    "content": "9b44ba84"
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---fundamentals-use-cases-9-b-4-8fa"
   },
   "/fundamentals/what-is-tableland-ced": {
-    "__comp": "17896441",
-    "content": "37d47053"
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---fundamentals-what-is-tableland-37-d-804"
   },
   "/gateway-api/-8e4": {
-    "__comp": "17896441",
-    "content": "6fe1ec5a"
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---gateway-api-6-fe-352"
   },
   "/gateway-api/endpoints-07a": {
-    "__comp": "17896441",
-    "content": "dad9be14"
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---gateway-api-endpointsdad-38b"
   },
   "/gateway-api/errors-a66": {
-    "__comp": "17896441",
-    "content": "16dfd79c"
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---gateway-api-errors-16-d-0f4"
   },
   "/gateway-api/query-formatting-e7e": {
-    "__comp": "17896441",
-    "content": "d1e84aab"
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---gateway-api-query-formattingd-1-e-df4"
   },
   "/playbooks/-96b": {
-    "__comp": "17896441",
-    "content": "c91b32e5"
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---playbooks-c-91-3f3"
   },
   "/playbooks/sql/-4ae": {
-    "__comp": "17896441",
-    "content": "6ae15568"
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---playbooks-sql-6-ae-158"
   },
   "/playbooks/sql/access-control-2a7": {
-    "__comp": "17896441",
-    "content": "f9b4d604"
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---playbooks-sql-access-controlf-9-b-d1d"
   },
   "/playbooks/sql/composing-data-d93": {
-    "__comp": "17896441",
-    "content": "2d880e3c"
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---playbooks-sql-composing-data-2-d-8-5ba"
   },
   "/playbooks/sql/create-cb4": {
-    "__comp": "17896441",
-    "content": "219fc4d5"
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---playbooks-sql-create-219-100"
   },
   "/playbooks/sql/functions-924": {
-    "__comp": "17896441",
-    "content": "7d243378"
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---playbooks-sql-functions-7-d-2-5a5"
   },
   "/playbooks/sql/incrementing-values-954": {
-    "__comp": "17896441",
-    "content": "d7af6dc1"
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---playbooks-sql-incrementing-valuesd-7-a-a01"
   },
   "/playbooks/sql/read-942": {
-    "__comp": "17896441",
-    "content": "39389f40"
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---playbooks-sql-read-393-c9f"
   },
   "/playbooks/sql/write-0aa": {
-    "__comp": "17896441",
-    "content": "bce04178"
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---playbooks-sql-writebce-189"
   },
   "/playbooks/walkthroughs/key-value-c8f": {
-    "__comp": "17896441",
-    "content": "234f51ff"
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---playbooks-walkthroughs-key-value-234-69f"
   },
   "/playbooks/walkthroughs/nft-metadata-960": {
-    "__comp": "17896441",
-    "content": "801a323d"
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---playbooks-walkthroughs-nft-metadata-801-bb8"
   },
   "/playbooks/walkthroughs/sql-faqs-ad2": {
-    "__comp": "17896441",
-    "content": "8eb19fc1"
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---playbooks-walkthroughs-sql-faqs-8-eb-b06"
   },
   "/quickstarts/-357": {
-    "__comp": "17896441",
-    "content": "ce9ea94e"
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---quickstarts-ce-9-990"
   },
   "/quickstarts/api-quickstart-907": {
-    "__comp": "17896441",
-    "content": "4b9d7775"
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---quickstarts-api-quickstart-4-b-9-775"
   },
   "/quickstarts/cli-quickstart-14a": {
-    "__comp": "17896441",
-    "content": "a0d56cee"
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---quickstarts-cli-quickstarta-0-d-1bf"
   },
   "/quickstarts/hardhat-90a": {
-    "__comp": "17896441",
-    "content": "7550674c"
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---quickstarts-hardhat-755-52d"
   },
   "/quickstarts/local-tableland-9e2": {
-    "__comp": "17896441",
-    "content": "2a3310d2"
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---quickstarts-local-tableland-2-a-3-5fa"
   },
   "/quickstarts/reactjs-cca": {
-    "__comp": "17896441",
-    "content": "efc9888f"
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---quickstarts-reactjsefc-1d7"
   },
   "/quickstarts/sdk-quickstart-790": {
-    "__comp": "17896441",
-    "content": "a705d6c1"
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---quickstarts-sdk-quickstarta-70-b47"
   },
   "/quickstarts/smart-contract-quickstart-965": {
-    "__comp": "17896441",
-    "content": "d39250ba"
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---quickstarts-smart-contract-quickstartd-39-e72"
   },
   "/quickstarts/wagmi-1fc": {
-    "__comp": "17896441",
-    "content": "6b6ac6d8"
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---quickstarts-wagmi-6-b-6-617"
   },
   "/sdk/-155": {
-    "__comp": "17896441",
-    "content": "5389b6b3"
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---sdk-538-e94"
   },
   "/sdk/core/-e23": {
-    "__comp": "17896441",
-    "content": "0d5423bb"
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---sdk-core-0-d-5-1ef"
   },
   "/sdk/core/batching-a8a": {
-    "__comp": "17896441",
-    "content": "91be1129"
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---sdk-core-batching-91-b-91d"
   },
   "/sdk/core/prepared-statements-f95": {
-    "__comp": "17896441",
-    "content": "4364586b"
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---sdk-core-prepared-statements-436-a7d"
   },
   "/sdk/core/query-statement-methods-d35": {
-    "__comp": "17896441",
-    "content": "aabebbbf"
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---sdk-core-query-statement-methodsaab-b47"
   },
   "/sdk/core/registry-api-e80": {
-    "__comp": "17896441",
-    "content": "e50fcb0b"
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---sdk-core-registry-apie-50-364"
   },
   "/sdk/core/signers-4b6": {
-    "__comp": "17896441",
-    "content": "f4894934"
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---sdk-core-signersf-48-3d9"
   },
   "/sdk/core/timeouts-error-handling-1a9": {
-    "__comp": "17896441",
-    "content": "dfc4a26d"
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---sdk-core-timeouts-error-handlingdfc-656"
   },
   "/sdk/core/validator-api-2bf": {
-    "__comp": "17896441",
-    "content": "2014c5ac"
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---sdk-core-validator-api-201-658"
   },
   "/sdk/reference/orm-92d": {
-    "__comp": "17896441",
-    "content": "1a617fb6"
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---sdk-reference-orm-1-a-6-da3"
   },
   "/sdk/reference/sdk-faqs-eeb": {
-    "__comp": "17896441",
-    "content": "958801d2"
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---sdk-reference-sdk-faqs-958-a4b"
   },
   "/sdk/reference/testing-b89": {
-    "__comp": "17896441",
-    "content": "25fa4fd9"
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---sdk-reference-testing-25-f-2cb"
   },
   "/sdk/reference/type-conversion-d81": {
-    "__comp": "17896441",
-    "content": "536d5fd1"
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---sdk-reference-type-conversion-536-a24"
   },
   "/smart-contracts/-269": {
-    "__comp": "17896441",
-    "content": "60526638"
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---smart-contracts-605-49d"
   },
   "/smart-contracts/contract-owned-tables-1c8": {
-    "__comp": "17896441",
-    "content": "347c9c5e"
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---smart-contracts-contract-owned-tables-347-82e"
   },
   "/smart-contracts/controller/-45f": {
-    "__comp": "17896441",
-    "content": "c5317379"
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---smart-contracts-controller-c-53-920"
   },
   "/smart-contracts/controller/contract-anatomy-704": {
-    "__comp": "17896441",
-    "content": "74e3b1dd"
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---smart-contracts-controller-contract-anatomy-74-e-404"
   },
   "/smart-contracts/controller/creating-controllers-4d7": {
-    "__comp": "17896441",
-    "content": "09f13512"
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---smart-contracts-controller-creating-controllers-09-f-fee"
   },
   "/smart-contracts/controller/setting-controllers-650": {
-    "__comp": "17896441",
-    "content": "8747c05a"
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---smart-contracts-controller-setting-controllers-874-cc0"
   },
   "/smart-contracts/deployed-contracts-3dc": {
-    "__comp": "17896441",
-    "content": "b0552960"
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---smart-contracts-deployed-contractsb-05-0b9"
   },
   "/smart-contracts/error-handling-19a": {
-    "__comp": "17896441",
-    "content": "eab96010"
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---smart-contracts-error-handlingeab-0fe"
   },
   "/smart-contracts/examples/-232": {
-    "__comp": "17896441",
-    "content": "05581d68"
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---smart-contracts-examples-055-7ce"
   },
   "/smart-contracts/examples/allow-all-controller-9fe": {
-    "__comp": "17896441",
-    "content": "0f488fb5"
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---smart-contracts-examples-allow-all-controller-0-f-4-65e"
   },
   "/smart-contracts/examples/complex-controller-b26": {
-    "__comp": "17896441",
-    "content": "61bcca26"
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---smart-contracts-examples-complex-controller-61-b-869"
   },
   "/smart-contracts/examples/create-from-contract-609": {
-    "__comp": "17896441",
-    "content": "866ee375"
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---smart-contracts-examples-create-from-contract-866-a59"
   },
   "/smart-contracts/examples/gated-voting-e16": {
-    "__comp": "17896441",
-    "content": "6b89937f"
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---smart-contracts-examples-gated-voting-6-b-8-887"
   },
   "/smart-contracts/examples/raw-controller-49c": {
-    "__comp": "17896441",
-    "content": "c60fe4fd"
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---smart-contracts-examples-raw-controllerc-60-a12"
   },
   "/smart-contracts/get-started-7ce": {
-    "__comp": "17896441",
-    "content": "00fb0677"
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---smart-contracts-get-started-00-f-610"
   },
   "/smart-contracts/immutable-table-0be": {
-    "__comp": "17896441",
-    "content": "050beb03"
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---smart-contracts-immutable-table-050-76a"
   },
   "/smart-contracts/serving-nft-metadata-31e": {
-    "__comp": "17896441",
-    "content": "81a0fad7"
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---smart-contracts-serving-nft-metadata-81-a-baa"
   },
   "/smart-contracts/solidity-to-sql-types-4ab": {
-    "__comp": "17896441",
-    "content": "1c57136e"
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---smart-contracts-solidity-to-sql-types-1-c-5-42d"
   },
   "/smart-contracts/uri-encoding-eee": {
-    "__comp": "17896441",
-    "content": "9de2d97c"
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---smart-contracts-uri-encoding-9-de-491"
   },
   "/smart-contracts/using-remix-c97": {
-    "__comp": "17896441",
-    "content": "bbe9041d"
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---smart-contracts-using-remixbbe-455"
   },
   "/smart-contracts/using-sql-helpers-3ce": {
-    "__comp": "17896441",
-    "content": "275158dd"
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---smart-contracts-using-sql-helpers-275-a47"
   },
   "/specs/sql/-f07": {
-    "__comp": "17896441",
-    "content": "373d85c2"
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---specs-sql-373-cc9"
   },
   "/tutorials/-7a8": {
-    "__comp": "17896441",
-    "content": "87f4e41f"
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---tutorials-87-f-157"
   },
   "/tutorials/building-games-on-arbitrum-695": {
-    "__comp": "17896441",
-    "content": "4d2a2f08"
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---tutorials-building-games-on-arbitrum-4-d-2-5c0"
   },
   "/tutorials/data-dao-polygon-e8e": {
-    "__comp": "17896441",
-    "content": "eb9e5c7b"
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---tutorials-data-dao-polygoneb-9-938"
   },
   "/tutorials/dynamic-nft-chainlink-93d": {
-    "__comp": "17896441",
-    "content": "64a0c5dd"
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---tutorials-dynamic-nft-chainlink-64-a-42d"
   },
   "/tutorials/dynamic-nft-p5js-054": {
-    "__comp": "17896441",
-    "content": "4161d9ff"
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---tutorials-dynamic-nft-p-5-js-416-3a6"
   },
   "/tutorials/dynamic-nft-solidity-466": {
-    "__comp": "17896441",
-    "content": "3eec509c"
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---tutorials-dynamic-nft-solidity-3-ee-f08"
   },
   "/tutorials/json-files-nft-polygon-e80": {
-    "__comp": "17896441",
-    "content": "cca98b34"
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---tutorials-json-files-nft-polygoncca-8d7"
   },
   "/tutorials/key-value-store-nft-2ac": {
-    "__comp": "17896441",
-    "content": "d30631c5"
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---tutorials-key-value-store-nftd-30-78b"
   },
   "/tutorials/table-reads-chainlink-a4f": {
-    "__comp": "17896441",
-    "content": "d1d86c42"
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---tutorials-table-reads-chainlinkd-1-d-1d1"
   },
   "/validator/-8e2": {
-    "__comp": "17896441",
-    "content": "e7bfe382"
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---validator-e-7-b-b2a"
   }
 }

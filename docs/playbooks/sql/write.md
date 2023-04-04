@@ -104,7 +104,7 @@ WHERE
   id = 1;
 ```
 
-You'll notice a `WHERE` clause was attached to the query to help identify which row to update. See the [read query](/playbooks/read) documentation for more details on clauses.
+You'll notice a `WHERE` clause was attached to the query to help identify which row to update. See the [read query](/playbooks/sql/read) documentation for more details on clauses.
 
 ## Upserts
 

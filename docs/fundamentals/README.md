@@ -16,7 +16,7 @@ If you're eager to get building and use the Tableland protocol, you can dive rig
 - **CLI**: leverage the command line to create, write, and read from the Tableland network.
 - **REST API**: communicate with Tableland nodes for reading table data and retrieving node information.
 
-Keep in mind that table creates and writes require you to interact with a blockchain, so you'll need a wallet and funds to use the clients noted above. Also, Tableland offers SQLite language compatibility but with some limitations, so be sure to check out the [SQL specification](/reference/sql-specification) for details.
+Keep in mind that table creates and writes require you to interact with a blockchain, so you'll need a wallet and funds to use the clients noted above. Also, Tableland offers SQLite language compatibility but with some limitations, so be sure to check out the [SQL specification](/specs/sql) for details.
 
 If you'd like to help expand and decentralize the network itself, you can also choose to run your own [Tableland validator node](https://github.com/tablelandnetwork/go-tableland) with relatively low hardware and cost requirements.
 
@@ -35,4 +35,4 @@ import DocCardList from '@theme/DocCardList';
 
 <DocCardList />
 
-Be sure to also review the [playbooks section about Tableland SQL](../playbooks), which describes how to use SQL and details some web3 constraints that are important to understand when writing queries. If you're new to Tableland, there are a lot terms used throughout the protocol and documentation. The [glossary](/fundamentals/about/glossary) provides a description of various terms, and the [general FAQs](/fundamentals/about/gneral-faqs) are high-level common questions & answers. Note that more specific FAQs are scattered about the docs that are located within a specific topic's documentation.
+Be sure to also review the [playbooks section about Tableland SQL](../playbooks), which describes how to use SQL and details some web3 constraints that are important to understand when writing queries. If you're new to Tableland, there are a lot terms used throughout the protocol and documentation. The [glossary](/fundamentals/about/glossary) provides a description of various terms, and the [general FAQs](/fundamentals/about/general-faqs) are high-level common questions & answers. Note that more specific FAQs are scattered about the docs that are located within a specific topic's documentation.

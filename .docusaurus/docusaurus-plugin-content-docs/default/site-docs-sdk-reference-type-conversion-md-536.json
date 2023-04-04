@@ -11,9 +11,9 @@
   "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/sdk/reference/type-conversion.md",
   "tags": [],
   "version": "current",
-  "lastUpdatedBy": "Dan Buchholz",
-  "lastUpdatedAt": 1680589829,
-  "formattedLastUpdatedAt": "Apr 4, 2023",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
   "frontMatter": {
     "title": "Type conversion",
     "description": "Review converting from JavaScript to SQL types.",

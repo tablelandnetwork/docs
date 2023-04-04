@@ -296,7 +296,7 @@ join <flowers_table> on <tokens_table>.stage_id = <flowers_table>.id
 where <tokens_table>.id = <tokenId>
 ```
 
-URI encoding is required to make this accessible by marketplaces. We’ve performed the encoding (see the [URI encoding docs](/concepts/related/uri-encoding)) and added it to the contract as the `query` variable:
+URI encoding is required to make this accessible by marketplaces. We’ve performed the encoding (see the [URI encoding docs](/smart-contracts/uri-encoding)) and added it to the contract as the `query` variable:
 
 ```solidity
 function tokenURI(uint256 tokenId)
@@ -405,7 +405,7 @@ main()
   });
 ```
 
-Run the hardhat deploy script, and **_save the contract address_** (in `hardhat.config.js` under `config.contractAddress`) for verification and Chainlink purposes! Here, we’re deploying to Polygon, but you can also choose to use `local-tableland` by running `npx local-tableland` and setting the network to `localhost`. For setup information, see the [Local Tableland documentation](/develop/tools/local-tableland).
+Run the hardhat deploy script, and **_save the contract address_** (in `hardhat.config.js` under `config.contractAddress`) for verification and Chainlink purposes! Here, we’re deploying to Polygon, but you can also choose to use `local-tableland` by running `npx local-tableland` and setting the network to `localhost`. For setup information, see the [Local Tableland documentation](/quickstarts/local-tableland).
 
 ```bash
 npx hardhat run scripts/deploy.js --network polygon-mumbai

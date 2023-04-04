@@ -11,9 +11,9 @@
   "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/smart-contracts/controller/creating-controllers.md",
   "tags": [],
   "version": "current",
-  "lastUpdatedBy": "Dan Buchholz",
-  "lastUpdatedAt": 1679782103,
-  "formattedLastUpdatedAt": "Mar 25, 2023",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
   "frontMatter": {
     "title": "Creating controllers",
     "description": "Understand how to create a controller contract."

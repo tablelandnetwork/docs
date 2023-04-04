@@ -11,9 +11,9 @@
   "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/sdk/README.md",
   "tags": [],
   "version": "current",
-  "lastUpdatedBy": "Dan Buchholz",
-  "lastUpdatedAt": 1679782103,
-  "formattedLastUpdatedAt": "Mar 25, 2023",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
   "frontMatter": {
     "title": "Overview",
     "description": "Use the Tableland SDK in your JavaScript / TypeScript projects, with full Cloudflare D1 client compatibility.",

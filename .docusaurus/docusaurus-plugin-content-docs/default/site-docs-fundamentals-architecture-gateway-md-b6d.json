@@ -11,9 +11,9 @@
   "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/fundamentals/architecture/gateway.md",
   "tags": [],
   "version": "current",
-  "lastUpdatedBy": "Dan Buchholz",
-  "lastUpdatedAt": 1680573127,
-  "formattedLastUpdatedAt": "Apr 4, 2023",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
   "frontMatter": {
     "title": "Gateway & response times",
     "sidebar_label": "Gateway",

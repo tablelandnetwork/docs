@@ -14,7 +14,7 @@ Whether or not you're new to SQL, you should still review some of the introducto
 The intent of the [Core SQL](sql) section is to provide a general overview of how to do something with SQL. It is not a comprehensive as the specification itself provides the most up-to-date and detailed information. From there, additional docs outline how to use SQL from a design perspective (structuring tables and query formation).
 
 :::tip
-Be sure to review the [SQL specification](/reference/sql-specification) once you understand the basics.
+Be sure to review the [SQL specification](/specs/sql) once you understand the basics.
 :::
 
 ## Related concepts

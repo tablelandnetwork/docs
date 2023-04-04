@@ -14,7 +14,7 @@ Build dynamic NFTs user-driven actions (on-chain) mutating table state.
 
 - [Build a dynamic NFT in Solidity](/tutorials/dynamic-nft-solidity): Get started with the basics of a Solidity-based NFT game that uses SQL queries to create and populate a table of game state.
 - [Creating a dynamic NFT with p5.js](/tutorials/dynamic-nft-p5js): Add visual components to the intro tutorial about that walks through building a dynamic NFT in Solidity.
-- [Building a game on Arbitrum](<(/tutorials/building-games-on-arbitrum)>): Learn how to build a game of hangman with smart contracts, React, and IPFS.
+- [Building a game on Arbitrum](/tutorials/building-games-on-arbitrum): Learn how to build a game of hangman with smart contracts, React, and IPFS.
 - [Dynamic NFT with Chainlink](/tutorials/dynamic-nft-chainlink): Use Chainlink oracles to change the visual state of an NFT based on off-chain actions.
 
 ## Data & storage
@@ -32,5 +32,5 @@ Miscellaneous walkthroughs that showcase Tableland functionality along with vari
 - [JSON files to NFT metadata](/tutorials/json-files-nft-polygon): With a Hardhat project, take local JSON files, read/parse the data into tables, and then mint an NFT where Tableland powers the metadata.
 
 :::tip
-If you haven't already, be sure to check out how to use the SDK, smart contracts, REST API, and CLI—at least the [quickstarts](/fundamentals/quickstarts)!
+If you haven't already, be sure to check out how to use the SDK, smart contracts, REST API, and CLI—at least the [quickstarts](/quickstarts)!
 :::

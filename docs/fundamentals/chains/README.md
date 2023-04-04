@@ -58,7 +58,7 @@ Solutions that Tableland supports are all "EVM compatible." These are layers inc
 
 In general, all chains have both a mainnet and testnet. Developers should first use a testnet to validate everything is working as expected, and once ready, move everything to production on mainnet. Testnet chains use testnet currency with no inherent value such that developers can request testnet currency for _free_ from _faucets_. Mainnets require _real_ currency to help provide the proper incentivization mechanisms and payment to nodes for computation and state management.
 
-Be sure to use `https://tableland.network` on mainnets, and `https://testnets.tableland.network` on testnets. Learn more about why in the [gateway](gateway) docs.
+Be sure to use `https://tableland.network` on mainnets, and `https://testnets.tableland.network` on testnets. Learn more about why in the [gateway](/fundamentals/architecture/gateway) docs.
 
 ## Providers
 

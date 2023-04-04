@@ -16,7 +16,7 @@ Developing locally should happen as a step prior to deploying to any testnet and
 Local development helps streamline the engineering process through quick iteration and testing. A local node, such as one provided by [Hardhat](https://hardhat.org/), can be used with any of the Tableland clients (SDK, CLI, REST API, smart contracts).
 
 :::tip
-Check out the page about [Local Tableland](/develop/tools/local-tableland) to understand how to set up a local-only environment with both a local Hardhat and Tableland node.
+Check out the page about [Local Tableland](/quickstarts/local-tableland) to understand how to set up a local-only environment with both a local Hardhat and Tableland node.
 :::
 
 ### Local node

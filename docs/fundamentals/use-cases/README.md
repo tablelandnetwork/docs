@@ -15,7 +15,7 @@ The TL;DR is that Tableland can be used as a data storage option with on-chain d
 
 ### Application data
 
-- For _high velocity_ table writes, choose a chain like [Arbitrum Nova](/fundamentals/chains/arbtirum#arbitrum-nova) that can handle the volume and is [cheap to use](/fundamentals/architecture/cost-estimator).
+- For _high velocity_ table writes, choose a chain like [Arbitrum Nova](/fundamentals/chains/arbitrum#arbitrum-nova) that can handle the volume and is [cheap to use](/fundamentals/architecture/cost-estimator).
 - This could include ideas such as the following, and note that data is publicly readable unless you implement some form of encryption before writing the data:
   - User settings.
   - Comments / posts.

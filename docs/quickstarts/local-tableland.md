@@ -81,7 +81,7 @@ Which should return:
 ]
 ```
 
-All of the Tableland APIs are available at this URL, so anything that you’d like to develop and test out locally is available on testnet / mainnet chains (and vice versa). Check out the [REST API](/valiadtor-api) docs for more details! And if you’re unfamiliar with the encoding used, see the docs on [URI Encoding](/smart-contracts/uri-encoding).
+All of the Tableland APIs are available at this URL, so anything that you’d like to develop and test out locally is available on testnet / mainnet chains (and vice versa). Check out the [REST API](/gateway-api) docs for more details! And if you’re unfamiliar with the encoding used, see the docs on [URI Encoding](/smart-contracts/uri-encoding).
 
 ## CLI
 
