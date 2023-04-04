@@ -11,9 +11,9 @@
   "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/specs/sql/README.md",
   "tags": [],
   "version": "current",
-  "lastUpdatedBy": "Author",
-  "lastUpdatedAt": 1539502055,
-  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "lastUpdatedBy": "Dan Buchholz",
+  "lastUpdatedAt": 1679782103,
+  "formattedLastUpdatedAt": "Mar 25, 2023",
   "frontMatter": {
     "title": "SQL specification",
     "description": "The Tableland SQL language specification offers a unique set of SQL that is a subset of the SQLite language.",

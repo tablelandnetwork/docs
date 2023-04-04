@@ -11,9 +11,9 @@
   "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/sdk/reference/testing.md",
   "tags": [],
   "version": "current",
-  "lastUpdatedBy": "Author",
-  "lastUpdatedAt": 1539502055,
-  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "lastUpdatedBy": "Dan Buchholz",
+  "lastUpdatedAt": 1679782103,
+  "formattedLastUpdatedAt": "Mar 25, 2023",
   "frontMatter": {
     "title": "Testing",
     "description": "Learn how to create test scripts that use Local Tableland under the hood."

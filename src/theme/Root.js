@@ -1,4 +1,7 @@
 import React from "react";
+// TMP: disable wagmi due to build error:
+// `ReferenceError: window is not defined`
+/*
 import { WagmiConfig, createClient, configureChains, mainnet } from "wagmi";
 
 import { alchemyProvider } from "wagmi/providers/alchemy";
@@ -9,7 +12,7 @@ import { InjectedConnector } from "wagmi/connectors/injected";
 import { MetaMaskConnector } from "wagmi/connectors/metaMask";
 import { WalletConnectConnector } from "wagmi/connectors/walletConnect";
 
-window.Buffer = window.Buffer || require("buffer").Buffer;
+// window.Buffer = window.Buffer || require("buffer").Buffer;
 
 // Configure chains & providers with the Alchemy provider.
 // Two popular providers are Alchemy (alchemy.com) and Infura (infura.io)
@@ -49,7 +52,10 @@ const client = createClient({
   provider,
   webSocketProvider,
 });
+*/
 
 export default function Root({ children }) {
-  return <WagmiConfig client={client}>{children}</WagmiConfig>;
+  // TMP: disable wagmi due to build error
+  // return <WagmiConfig client={client}>{children}</WagmiConfig>;
+  return <>{children}</>;
 }

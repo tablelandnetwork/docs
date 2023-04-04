@@ -11,9 +11,9 @@
   "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/tutorials/dynamic-nft-p5js.md",
   "tags": [],
   "version": "current",
-  "lastUpdatedBy": "Author",
-  "lastUpdatedAt": 1539502055,
-  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "lastUpdatedBy": "Dan Buchholz",
+  "lastUpdatedAt": 1679782103,
+  "formattedLastUpdatedAt": "Mar 25, 2023",
   "frontMatter": {
     "title": "Create a dynamic NFT with p5.js",
     "description": "Use p5.js to render data from an NFT that holds global game state in a table.",

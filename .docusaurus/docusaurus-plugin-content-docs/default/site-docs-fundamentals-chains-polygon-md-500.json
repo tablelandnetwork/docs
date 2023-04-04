@@ -11,9 +11,9 @@
   "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/fundamentals/chains/polygon.md",
   "tags": [],
   "version": "current",
-  "lastUpdatedBy": "Author",
-  "lastUpdatedAt": 1539502055,
-  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "lastUpdatedBy": "Dan Buchholz",
+  "lastUpdatedAt": 1680109163,
+  "formattedLastUpdatedAt": "Mar 29, 2023",
   "frontMatter": {
     "title": "Polygon",
     "description": "An overview of using Polygon with Tableland.",

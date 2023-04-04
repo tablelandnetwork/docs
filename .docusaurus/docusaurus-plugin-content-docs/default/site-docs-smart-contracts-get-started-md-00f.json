@@ -11,9 +11,9 @@
   "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/smart-contracts/get-started.md",
   "tags": [],
   "version": "current",
-  "lastUpdatedBy": "Author",
-  "lastUpdatedAt": 1539502055,
-  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "lastUpdatedBy": "Dan Buchholz",
+  "lastUpdatedAt": 1679977946,
+  "formattedLastUpdatedAt": "Mar 28, 2023",
   "frontMatter": {
     "title": "Get started",
     "description": "Get up an running with smart contracts and Tableland.",

@@ -11,9 +11,9 @@
   "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/smart-contracts/using-sql-helpers.md",
   "tags": [],
   "version": "current",
-  "lastUpdatedBy": "Author",
-  "lastUpdatedAt": 1539502055,
-  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "lastUpdatedBy": "Dan Buchholz",
+  "lastUpdatedAt": 1680537874,
+  "formattedLastUpdatedAt": "Apr 3, 2023",
   "frontMatter": {
     "title": "Using SQL helpers",
     "description": "Use the SQL helpers library to make it easier write SQL in Solidity."

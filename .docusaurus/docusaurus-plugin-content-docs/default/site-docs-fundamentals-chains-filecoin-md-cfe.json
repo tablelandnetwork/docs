@@ -11,9 +11,9 @@
   "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/fundamentals/chains/filecoin.md",
   "tags": [],
   "version": "current",
-  "lastUpdatedBy": "Author",
-  "lastUpdatedAt": 1539502055,
-  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "lastUpdatedBy": "Dan Buchholz",
+  "lastUpdatedAt": 1680295684,
+  "formattedLastUpdatedAt": "Mar 31, 2023",
   "frontMatter": {
     "title": "Filecoin",
     "description": "An overview of using Filecoin with Tableland.",

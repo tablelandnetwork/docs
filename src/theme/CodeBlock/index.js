@@ -11,7 +11,9 @@ import React, { isValidElement } from "react";
 import useIsBrowser from "@docusaurus/useIsBrowser";
 import ElementContent from "@theme/CodeBlock/Content/Element";
 import StringContent from "@theme/CodeBlock/Content/String";
-import { useAccount } from "wagmi";
+// TMP: disable wagmi due to build error:
+// `ReferenceError: window is not defined`
+// import { useAccount } from "wagmi";
 /**
  * Best attempt to make the children a plain string so it is copyable. If there
  * are react elements, we will not be able to copy the content, and it will
@@ -34,7 +36,8 @@ export default function CodeBlock({ children: rawChildren, ...props }) {
   const children = maybeStringifyChildren(rawChildren);
   const CodeBlockComp =
     typeof children === "string" ? StringContent : ElementContent;
-  const { address, isConnected } = useAccount();
+  // const { address, isConnected } = useAccount();
+  const { address, isConnected } = { undefined, undefined };
   // If the user is connected, use their address in code snippets.
   const user = isConnected && address ? address : "0xINSERT_ADDRESS";
   props.address = user;

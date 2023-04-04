@@ -11,9 +11,9 @@
   "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/validator/README.md",
   "tags": [],
   "version": "current",
-  "lastUpdatedBy": "Author",
-  "lastUpdatedAt": 1539502055,
-  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "lastUpdatedBy": "Dan Buchholz",
+  "lastUpdatedAt": 1680555439,
+  "formattedLastUpdatedAt": "Apr 3, 2023",
   "frontMatter": {
     "title": "Validator node",
     "description": "Learn how to run you own Tableland validator node.",

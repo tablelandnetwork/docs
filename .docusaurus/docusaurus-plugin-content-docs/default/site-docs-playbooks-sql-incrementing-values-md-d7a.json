@@ -11,9 +11,9 @@
   "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/playbooks/sql/incrementing-values.md",
   "tags": [],
   "version": "current",
-  "lastUpdatedBy": "Author",
-  "lastUpdatedAt": 1539502055,
-  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "lastUpdatedBy": "Dan Buchholz",
+  "lastUpdatedAt": 1679681722,
+  "formattedLastUpdatedAt": "Mar 24, 2023",
   "frontMatter": {
     "title": "Incrementing values automatically",
     "sidebar_label": "Auto-incrementing",

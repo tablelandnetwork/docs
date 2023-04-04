@@ -11,9 +11,9 @@
   "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/smart-contracts/immutable-table.md",
   "tags": [],
   "version": "current",
-  "lastUpdatedBy": "Author",
-  "lastUpdatedAt": 1539502055,
-  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "lastUpdatedBy": "Dan Buchholz",
+  "lastUpdatedAt": 1680304941,
+  "formattedLastUpdatedAt": "Mar 31, 2023",
   "frontMatter": {
     "title": "Create an immutable table",
     "description": "Permanently freeze a table's data by sending it to the dead address.",

@@ -11,9 +11,9 @@
   "editUrl": "https://github.com/tablelandnetwork/docs/tree/main/docs/fundamentals/architecture/table-token.md",
   "tags": [],
   "version": "current",
-  "lastUpdatedBy": "Author",
-  "lastUpdatedAt": 1539502055,
-  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "lastUpdatedBy": "Dan Buchholz",
+  "lastUpdatedAt": 1680304941,
+  "formattedLastUpdatedAt": "Mar 31, 2023",
   "frontMatter": {
     "title": "TABLE token & identification",
     "sidebar_label": "Table uniqueness",
