@@ -510,6 +510,10 @@ input {
   color: var(--ifm-color-primary);
 }
 
+.sidebar-footer a svg {
+  width: 11px !important;
+}
+
 .sidebar-hr {
   margin-top: 0 !important;
 }

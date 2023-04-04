@@ -345,19 +345,19 @@ const sidebars = {
       type: "link",
       label: "Main site",
       href: "https://tableland.xyz",
-      className: "sidebar-landing",
+      className: "sidebar-landing sidebar-footer",
     },
     {
       type: "link",
       label: "Tech blog",
       href: "https://dev.tableland.xyz",
-      className: "sidebar-landing",
+      className: "sidebar-landing sidebar-footer",
     },
     {
       type: "link",
       label: "Showcase",
       href: "https://dev.tableland.xyz/showcase",
-      className: "sidebar-landing",
+      className: "sidebar-landing sidebar-footer",
     },
   ],
   // Learn
