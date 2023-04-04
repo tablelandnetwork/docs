@@ -14,11 +14,11 @@ There are no required prerequisites, but it may be helpful to become familiar wi
 
 ### Base URLs
 
-Be sure to use the correct gateway for the corresonding network environment:
+Be sure to use the correct gateway for the corresponding network environment:
 
-- Mainnets: [https://tableland.network/api/v1](https://tableland.network/api/v1)
-- Testnets: [https://testnets.tableland.network/api/v1](https://testnets.tableland.network/api/v1)
-- Local: [http://localhost:8080/api/v1](http://localhost:8080/api/v1)
+- Mainnets: `https://tableland.network/api/v1`
+- Testnets: `https://testnets.tableland.network/api/v1`
+- Local: `http://localhost:8080/api/v1`
 
 At the protocol level, the Tableland network is separated such that nodes process and respond to SQL queries relative to each environment. If you were to use the `testnets` gateway on a mainnet chain / contract, this would lead to issues. The `testnets` gateway only queries tables that exist on testnet chains, whereas the `tableland.network` gateway only queries tables that exist on mainnet chains.
 

@@ -39,7 +39,7 @@ For context, the table below defines each of these reserved characters and their
 
 | Character | Encoding | Description                                          |
 | --------- | -------- | ---------------------------------------------------- |
-|           | %20      | A space (i.e., like this space)                      |
+| &nbsp;    | %20      | A space (i.e., like this space: <code>&nbsp;</code>) |
 | !         | %21      | Exclamation point / bang symbol                      |
 | "         | %22      | Double quote                                         |
 | #         | %23      | Hash / number sign                                   |

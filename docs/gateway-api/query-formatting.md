@@ -10,74 +10,119 @@ The Gateway API `/query` endpoint response can be manipulated into a specific fo
 
 ## Adding path parameters
 
-To leverage the query response formatting, add the options specified below as a query parameter. Namely, after using `/query?`, specify a parameter and its value using the syntax `{parameter}={value}` and append or prepend an ampersand `&`.
+To customize the query response, add the options specified below as a query path parameters. Namely, after using `/query?`, specify a parameter and its value using the syntax `{parameter}={value}` and append or prepend an ampersand `&`, depending on its position.
 
-## ERC721 compliance
+All of these assume a `statement` is used since this is required to fetch table data. As an example, you might have a `SELECT *` statement that is [URI encoded](/fundamentals/about/glossary#uri-encoding):
 
-For example, a query used composing ERC721 compliant metadata (e.g., leveraging usage of `json_object`) should include `unwrap=true&extract=true` somewhere in the query string, either at the beginning or the end:
+```bash
+/query?statement=SELECT%20*%20FROM%20my_table
+```
 
-- `/query?unwrap=true&extract=true&s={readStatement}`
-- `/query?statement={readStatement}&unwrap=true&extract=true`
+Without specifying any additional parameters, all of the default `format`, `extract`, and `unwrap` values will be used. Let's simplify that `SELECT` statement and define it as `{readStatement}` for demonstration purposes. If you would like to specify these, place a parameter and its value somewhere in the query string, either at the beginning or the end—each of these are equivalent:
+
+```bash
+/query?format=objects&unwrap=true&extract=true&statement={readStatement}
+/query?statement={readStatement}&format=objects&unwrap=true&extract=true
+```
+
+### ERC721 compliance
+
+A query used to compose [ERC721](/fundamentals/about/glossary#erc721) compliant metadata should use `unwrap=true` and `extract=true` along with `format=objects`. Often, these types of queries make use of SQL functions like `json_object` to [compose the metadata](/playbooks/walkthroughs/nft-metadata) according to the standard through a query that only returns a single object.
 
 ## Parameters
 
-### `output`
+### `format`
 
-Specify the JSON response’s shape and style.
+Specify the output format (i.e., JSON response’s shape and style). Defaults to `objects`.
 
-`objects` (default)
-A top-level array that contains objects, where each object is a key-value pair of column name to row value. Note the word is plural, not singular.
+`objects` (default) <br />
+A top-level array that contains objects, where each object is a key-value pair of column name to row value. Note the `objects` word is plural, not singular.
 
----
+`table` <br />
+A top-level object that contains the keys `columns` and `rows`:
 
-`table`
-A top-level object that contains the keys _columns_ and _rows_. The _columns_ is an array of column objects, and the _rows_ field is an array of row arrays.
+- `columns`: An array of column objects with a single `name` key and the column name.
+- `rows`: An array of individual row arrays where each row has comma-separated values corresponding to the order of the columns.
 
 ---
 
 ### `unwrap`
 
-Instead of putting `objects` in a JSON array, unwrap them and use new line delimited [JSON Lines](https://jsonlines.org/). Defaults to `false`
+Specifies whether or not to unwrap the returned JSON objects from their surrounding array. Defaults to `false`.
 
-_Only applies to `output=objects`._
+For example, instead of retrieving `objects` within a JSON array, you can unwrap them as new line delimited [JSON Lines (JSONL)](https://jsonlines.org/examples/#easy-nested-data), thus, removing them from the array entirely.
+
+This _only_ applies to `format=objects`.
 
 ---
 
 ### `extract`
 
-Whether or not to extract single column result values and use those as the results in the response. Defaults to `false`.
+Specifies whether or not to extract the JSON object from the single property of the surrounding JSON object. Defaults to `false`.
 
-_Only applies to `output=objects`._
+This _only_ applies to `format=objects`.
 
 ---
 
-## Basic examples
+## Default usage
 
-The following examples leverage the table `rest_api_80001_2580`. Each example, unless otherwise specified, is using the default values noted above.
+Unless otherwise specified, assume each example in this section is using the default parameter values noted above, and the shown parameter usage is, of course, to be appended to the `/query?` base endpoint at a base URL.
 
-### `output`
+For these examples, let's assume we own `my_table` with a schema of `id int, val text`.
 
-`objects`
+| id  | val          |
+| --- | ------------ |
+| 1   | Bobby Tables |
+| 2   | Molly Tables |
+
+Generally, the example query used is the following select statement as the value for the `statement` parameter.
+
+```sql
+SELECT * FROM my_table
+```
+
+Thus, the full URI might resemble the following—just note that `my_table` would have to exist an be in the correct table name format `{prefix}_{chainId}_{tableId}` instead of only the `prefix` portion:
 
 ```bash
-output=objects
+/query?statement=SELECT%20*%20FROM%20my_table&format=objects&unwrap=false&extract=false
 ```
+
+### `format`
+
+The default formatting is as `objects` with key-value pairs of columns-rows.
+
+#### `objects`
+
+```bash
+format=objects
+```
+
+Which would output:
 
 ```json
 [
   {
-    "id": 0,
-    "name": "Bobby Tables"
+    "id": 1,
+    "val": "Bobby Tables"
+  },
+  {
+    "id": 2,
+    "val": "Molly Tables"
   }
 ]
 ```
 
-`table`
+#### `table`
+
+With `table`, the format changes to a table-like structure.
 
 ```bash
-output=table
+format=table
 ```
 
+Resulting in the following:
+
+<!--prettier-ignore-->
 ```json
 {
   "columns": [
@@ -85,95 +130,122 @@ output=table
       "name": "id"
     },
     {
-      "name": "name"
+      "name": "val"
     }
   ],
-  "rows": [[0, "Bobby Tables"]]
+  "rows": [
+    [
+      1,
+      "Bobby Tables"
+    ],
+    [
+      2,
+      "Molly Tables"
+    ]
+  ]
 }
 ```
 
 ### `unwrap`
 
-_Only works with `output=objects`._
+You can assume `format=objects` and `extract=false` since these are the default values, and `unwrap` _will not_ work with `format=table`.
 
-`false`
+#### `false`
+
+Here, the default `unwrap` value will behave the same as the first `format` example.
 
 ```bash
-output=objects&unwrap=false
+unwrap=false
 ```
+
+The response is an object that wraps the response in an array.
 
 ```json
 [
   {
-    "id": 0,
-    "name": "Bobby Tables"
+    "id": 1,
+    "val": "Bobby Tables"
+  },
+  {
+    "id": 2,
+    "val": "Molly Tables"
   }
 ]
 ```
 
-`true`
+#### `true`
+
+Unwrapping these objects will return each entry as an individual line (i.e., without an enclosing array).
 
 ```bash
-output=objects&unwrap=false
+unwrap=true
 ```
 
+Which returns:
+
 ```json
-{
-  "id": 0,
-  "name": "Bobby Tables"
-}
+{"id":1,"val":"Bobby Tables"}
+{"id":2,"val":"Molly Tables"}
 ```
 
 ### `extract`
 
-_Assuming the default,_ `unwrap=false`.
+The next set of examples implicitly assume `format=objects` and `unwrap=false`, and recall that `extract` also _will not_ work with `format=table`. Using `extract=true` is _only_ valid for **a single column** in the response and will return an error if you try and select more than one column.
 
-`false`
+#### `false`
 
-_Only works with `output=objects`, and it’s only valid for a single column response (i.e., `SELECT` a single column). Below, we’re only selecting the `id` column from our table._
+Below, we’re _only_ selecting the `id` column from our table as part of the query itself (e.g., `SELECT id from my_table`).
 
 ```bash
-output=objects&extract=false
+extract=false
 ```
+
+Note how this example response is, essentially, the same as `format=objects` and `unwrap=false` due to the default `extract` value but is different due to the `id` being selected instead of `*`.
 
 ```json
 [
   {
-    "id": 0
+    "id": 1
+  },
+  {
+    "id": 2
   }
 ]
 ```
 
-`true`
+Technically, with `extract=false`, it's totally acceptable to provide _more than one_ column since that rule only applies to `extract=true`.
+
+#### `true`
+
+To extract values, only a single column can be selected and will pull each value out and enclose them in an array.
 
 ```bash
-output=objects&extract=true
+extract=true
 ```
 
+Now, only the values themselves are extracted, dropping the object and its key.
+
+<!--prettier-ignore-->
 ```json
-[0]
+[
+  1,
+  2
+]
 ```
 
-_When using `unwrap=true`._
+## Fully unwrap & extract
 
-`false`
+When using `unwrap=true` coupled with `extract=true`, the response changes such that the values are fully removed from the enclosing JSON array.
 
 ```bash
-output=objects&unwrap=true&extract=false
+format=objects&unwrap=true&extract=true
 ```
+
+The values themselves are returned as [JSONL](https://jsonlines.org/).
 
 ```json
-{
-  "id": 0
-}
+1
+2
 ```
 
-`true`
-
-```bash
-output=objects&unwrap=true&extract=true
-```
-
-```json
-0
-```
+This is quite powerful, especially, when coupled with various JSON SQL functions and string concatenation because you can generate a very customized API response.

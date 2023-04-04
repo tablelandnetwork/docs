@@ -65,6 +65,14 @@ Every table is created and unique to the host chain. If you specify the _wrong_ 
 chain id mismatch: received 5, expected 1
 ```
 
+## Cannot determine chain ID
+
+If you cannot connect to a chain, you might run into an issue where the provider and chain ID cannot be determined. For example, if you're trying to use Local Tableland but never actually started the node, the provider chain ID cannot be determined since nothing exists.
+
+```bash
+cannot determine provider chain ID
+```
+
 ## Provider / chain mismatch
 
 Similarly, you cannot use a provider URL that points to a different network than the chain you've specified.

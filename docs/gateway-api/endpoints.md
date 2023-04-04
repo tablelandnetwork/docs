@@ -257,7 +257,7 @@ Example responses
 
 This operation does not require authentication
 
-## Schemas
+## Response schemas
 
 ### Table
 
@@ -285,7 +285,7 @@ This operation does not require authentication
 }
 ```
 
-### Properties
+#### Properties
 
 | Name           | Type     | Required | Restrictions | Description                       |
 | -------------- | -------- | -------- | ------------ | --------------------------------- |
@@ -347,7 +347,7 @@ This operation does not require authentication
 }
 ```
 
-### Properties
+#### Properties
 
 | Name             | Type           | Required | Restrictions | Description |
 | ---------------- | -------------- | -------- | ------------ | ----------- |
@@ -373,7 +373,7 @@ This operation does not require authentication
 }
 ```
 
-### Properties
+#### Properties
 
 | Name              | Type     | Required | Restrictions | Description |
 | ----------------- | -------- | -------- | ------------ | ----------- |
@@ -390,7 +390,7 @@ This operation does not require authentication
 }
 ```
 
-### Properties
+#### Properties
 
 | Name        | Type     | Required | Restrictions | Description |
 | ----------- | -------- | -------- | ------------ | ----------- |
@@ -412,7 +412,7 @@ This operation does not require authentication
 }
 ```
 
-### Properties
+#### Properties
 
 | Name           | Type           | Required | Restrictions | Description |
 | -------------- | -------------- | -------- | ------------ | ----------- |
