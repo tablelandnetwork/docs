@@ -213,13 +213,12 @@ td > code {
 
 /* Announcement bar overrides */
 div[class^="announcementBar"] {
-  background-color: var(--ifm-color-primary-light);
-  color: var(--ifm-color-secondary-lightest);
+  background-color: var(--ifm-color-secondary);
+  color: var(--ifm-color-black);
 }
 
 div[class^="announcementBar"] a {
-  color: var(--ifm-color-primary-darker);
-  text-decoration: inherit;
+  text-decoration: underline;
 }
 
 [data-theme="dark"] div[class^="announcementBar"] {
