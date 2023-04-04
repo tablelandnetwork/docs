@@ -81,7 +81,7 @@ Generally, the example query used is the following select statement as the value
 SELECT * FROM my_table
 ```
 
-Thus, the full URI might resemble the following—just note that `my_table` would have to exist an be in the correct table name format `{prefix}_{chainId}_{tableId}` instead of only the `prefix` portion:
+Thus, the full URI might resemble the following—just note that `my_table` would have to exist and be in the correct table name format `{prefix}_{chainId}_{tableId}` instead of only the `prefix` portion:
 
 ```bash
 /query?statement=SELECT%20*%20FROM%20my_table&format=objects&unwrap=false&extract=false
@@ -158,7 +158,7 @@ Here, the default `unwrap` value will behave the same as the first `format` exam
 unwrap=false
 ```
 
-The response is an object that wraps the response in an array.
+The response is objects wrapped in an array.
 
 ```json
 [
@@ -200,7 +200,7 @@ Below, we’re _only_ selecting the `id` column from our table as part of the qu
 extract=false
 ```
 
-Note how this example response is, essentially, the same as `format=objects` and `unwrap=false` due to the default `extract` value but is different due to the `id` being selected instead of `*`.
+Note how this example response is, essentially, the same as `format=objects` and `unwrap=false` and is only different due to the `id` being selected instead of all columns.
 
 ```json
 [
@@ -213,17 +213,17 @@ Note how this example response is, essentially, the same as `format=objects` and
 ]
 ```
 
-Technically, with `extract=false`, it's totally acceptable to provide _more than one_ column since that rule only applies to `extract=true`.
+Technically, with `extract=false`, it's totally acceptable to provide _more than one_ column since this rule only applies to `extract=true`.
 
 #### `true`
 
-To extract values, only a single column can be selected and will pull each value out and enclose them in an array.
+To extract values, only a single column may be selected, which will pull each value out and enclose them in an array independently.
 
 ```bash
 extract=true
 ```
 
-Now, only the values themselves are extracted, dropping the object and its key.
+Namely, only the values themselves are extracted, dropping the surrounding object and its key.
 
 <!--prettier-ignore-->
 ```json
@@ -248,4 +248,4 @@ The values themselves are returned as [JSONL](https://jsonlines.org/).
 2
 ```
 
-This is quite powerful, especially, when coupled with various JSON SQL functions and string concatenation because you can generate a very customized API response.
+This is quite powerful, especially, when coupled with various SQL JSON functions and string concatenation because you can generate a very customized API response.
