@@ -118,6 +118,35 @@
         "href": "/specs/sql/",
         "className": "sidebar-landing",
         "docId": "specs/sql/README"
+      },
+      {
+        "type": "html",
+        "value": "<h6 class=\"margin-top--md margin-bottom--none landing-section\">COMMUNITY</h6>",
+        "defaultStyle": true
+      },
+      {
+        "type": "html",
+        "value": "<hr />",
+        "defaultStyle": true,
+        "className": "sidebar-hr"
+      },
+      {
+        "type": "link",
+        "label": "Main site",
+        "href": "https://tableland.xyz",
+        "className": "sidebar-landing"
+      },
+      {
+        "type": "link",
+        "label": "Tech blog",
+        "href": "https://dev.tableland.xyz",
+        "className": "sidebar-landing"
+      },
+      {
+        "type": "link",
+        "label": "Showcase",
+        "href": "https://dev.tableland.xyz/showcase",
+        "className": "sidebar-landing"
       }
     ],
     "fundamentals": [

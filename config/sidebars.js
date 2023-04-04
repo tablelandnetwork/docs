@@ -340,6 +340,25 @@ const sidebars = {
       label: "SQL specification",
       className: "sidebar-landing",
     },
+    ...section("Community", "landing"),
+    {
+      type: "link",
+      label: "Main site",
+      href: "https://tableland.xyz",
+      className: "sidebar-landing",
+    },
+    {
+      type: "link",
+      label: "Tech blog",
+      href: "https://dev.tableland.xyz",
+      className: "sidebar-landing",
+    },
+    {
+      type: "link",
+      label: "Showcase",
+      href: "https://dev.tableland.xyz/showcase",
+      className: "sidebar-landing",
+    },
   ],
   // Learn
   fundamentals: fundamentals,

@@ -94,6 +94,16 @@ const navbar = {
         },
       ],
     },
+    // If versioned docs are created, show the version dropdown
+    // {
+    //   type: "docsVersionDropdown",
+    //   position: "right",
+    // },
+    // If language / internationalization is enabled, show the language
+    // {
+    //   type: "localeDropdown",
+    //   position: "right",
+    // },
     // This is a custom workaround detailed at:
     // https://github.com/facebook/docusaurus/issues/7227
     // It is a SIWE connect button.
