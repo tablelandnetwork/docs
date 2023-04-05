@@ -170,10 +170,12 @@ const sdk = [
   "sdk/core/timeouts-error-handling",
   "sdk/core/validator-api",
   "sdk/core/registry-api",
+  ...section("Walkthroughs"),
+  "sdk/walkthroughs/testing",
+  "sdk/walkthroughs/orm",
   ...section("Reference"),
   "sdk/reference/type-conversion",
-  "sdk/reference/testing",
-  "sdk/reference/orm",
+  "sdk/reference/node-polyfills",
   // "sdk/reference/sdk-faqs",
 ];
 
@@ -217,9 +219,9 @@ const smartContracts = [
   "smart-contracts/immutable-table",
   "smart-contracts/uri-encoding",
   ...section("Reference"),
-  "smart-contracts/solidity-to-sql-types",
-  "smart-contracts/error-handling",
   "smart-contracts/deployed-contracts",
+  "smart-contracts/error-handling",
+  "smart-contracts/solidity-to-sql-types",
   "smart-contracts/using-remix",
 ];
 
