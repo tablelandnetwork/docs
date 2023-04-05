@@ -412,12 +412,12 @@ Positionals:
   prefix      The table prefix                                [string] [optional]
 
 Options:
-      --help        Show help                                          [boolean]
+      --help        Show help                                          [boolean]`
       --schema      SQL table schema.                                   [string]
       --prefix      Table name prefix.                                  [string]
   -k, --privateKey  Private key string                                  [string]
       --chain       The EVM compatible chain to target
-                                           [string] [default: "polygon-mumbai"]
+                                           [string] [default: "maticmum"]
       --alchemy     Alchemy provider API key                            [string]
       --infura      Infura provider API key                             [string]
       --etherscan   Etherscan provider API key                          [string]
@@ -467,7 +467,7 @@ Positionals:
 Options:
       --help        Show help                                          [boolean]
       --chain       The EVM compatible chain to target
-                                           [string] [default: "polygon-mumbai"]
+                                           [string] [default: "maticmum"]
 ```
 
 ### Example
@@ -509,7 +509,7 @@ Options:
 --help Show help [boolean]
 -k, --privateKey Private key string [string] [required]
 --chain The EVM compatible chain to target
-[string] [default: "polygon-mumbai"]
+[string] [default: "maticmum"]
 ```
 
 Using `list` command provides and easy way to understand which tables are owned by a certain address.
@@ -519,7 +519,7 @@ Using `list` command provides and easy way to understand which tables are owned 
 The retrieved information about those tables includes the table’s name, structure (describing the schema), and created time:
 
 ```bash
-# Be sure to either use the default `polygon-mumbai` or set the `--chain`
+# Be sure to either use the default `maticmum` or set the `--chain`
 tableland list
 ```
 
@@ -603,7 +603,7 @@ Positionals:
 
 Options:
       --help        Show help                                          [boolean]
-  -c, --chain       The EVM chain to target [string] [default: "polygon-mumbai"]
+  -c, --chain       The EVM chain to target [string] [default: "maticmum"]
       --format      Output format. One of 'pretty', 'table', or 'objects'.
                                                      [string] [default: "table"]
       --extract              Returns only the set of values of a single column.
@@ -687,7 +687,7 @@ Options:
       --help        Show help                                          [boolean]
   -k, --privateKey  Private key string                       [string] [required]
       --chain       The EVM compatible chain to target
-                                           [string] [default: "polygon-mumbai"]
+                                           [string] [default: "maticmum"]
 ```
 
 ### Example
@@ -749,9 +749,8 @@ Positionals:
 Options:
       --help        Show help                                          [boolean]
   -k, --privateKey  Private key string                                  [string]
-  -r, --rpcRelay    Whether writes should be relayed via a validator   [boolean]
       --chain       The EVM compatible chain to target
-                                           [string] [default: "polygon-mumbai"]
+                                           [string] [default: "maticmum"]
 ```
 
 The `write` command allows for vanilla SQL `INSERT`, `UPDATE`, and `DELETE` statements. One key aspect to keep in mind when working with tables is that you must specify the table `name` that you get back from the `create` command.

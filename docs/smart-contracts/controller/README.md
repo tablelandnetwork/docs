@@ -18,7 +18,9 @@ A `TablelandController` compliant contract is one that implements `ITablelandCon
 
 ### How it works
 
-The default controller is the `0x0` address. Optionally, a table owner can register the `TablelandController`'s address via the `TablelandTables` contract’s `setController` method. Once registered, Tableland will check any `INSERT`, `UPDATE`, or `DELETE` statement against the `getPolicy` response to ensure it is a valid modification.
+The default controller is the `0x0` address.
+
+Optionally, a table owner can register the `TablelandController`'s address via the registry contract’s `setController` method. Once registered, Tableland will check any `INSERT`, `UPDATE`, or `DELETE` statement against the `getPolicy` response to ensure it is a valid modification. Additionally, the `getController` method makes it easy to check who is a table's controller, and `lockController` _permanently_ sets the controller for a table.
 
 ### Default options
 

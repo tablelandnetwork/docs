@@ -7,9 +7,7 @@ keywords:
   - blockchains
 ---
 
-Chain selection makes a significant impact on a table’s usability. Choose a chain that’s too slow or expensive, and it won’t be feasible for table writes to occur frequently. Deploy a cross-chain data model for value layering purposes, and certain on-chain access control features are lost.
-
-Recall the following chains are currently supported and described in more detail in the subsequent pages:
+Chain selection makes a significant impact on the database's usability. Choose a chain that’s too slow or expensive, and it won’t be feasible for table writes to occur frequently. Deploy a cross-chain data model for value layering purposes, and certain on-chain access control features are lost. This page explains general chain related concepts; the following chains are supported and described in more detail in the subsequent pages:
 
 import { ChainsList } from '@site/src/components/SupportedChains'
 
@@ -19,6 +17,14 @@ import { ChainsList } from '@site/src/components/SupportedChains'
 
 Review the [cost estimation](/fundamentals/architecture/cost-estimator) table that compares the costs of creates and writes across each chain.
 :::
+
+## Chain information
+
+If would like to dive straight into chain-specific overviews, with decision considerations and other chain information (chain ID, contracts, block explorers, faucets, etc.), head to one of the pages below.
+
+import DocCardList from '@theme/DocCardList';
+
+<DocCardList />
 
 ## Layer 1 vs. Layer 2
 
@@ -80,11 +86,3 @@ Check out the following resources for each of these providers, and note that the
 
 - Status: [https://etherscan.freshstatus.io/](https://etherscan.freshstatus.io/)
 - Docs: [https://docs.etherscan.io/](https://docs.etherscan.io/)
-
-## Chain information
-
-Dive into chain-specific overviews, with decision considerations and general chain information (chain ID, contracts, faucets, etc.).
-
-import DocCardList from '@theme/DocCardList';
-
-<DocCardList />

@@ -30,7 +30,7 @@ We’re here to build a new web. Together.
 
 #### Q2
 
-- Tableland protocol yellow paper.
+- Tableland protocol litepaper.
 - Studio web application MVP.
 - Arbitrum Nova support.
 - Filecoin (FVM) support.
