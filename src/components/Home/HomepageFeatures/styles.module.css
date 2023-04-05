@@ -29,6 +29,11 @@
     0 7px 14px 0 rgba(50, 50, 93, 0.1), 0 3px 6px 0 rgba(0, 0, 0, 0.02);
 }
 
+.product svg,
+.product:hover svg {
+  color: var(--ifm-color-primary) !important;
+}
+
 [data-theme="dark"] .product {
   border: transparent;
 }
