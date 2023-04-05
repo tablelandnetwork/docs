@@ -349,8 +349,8 @@ const sidebars = {
     },
     {
       type: "link",
-      label: "Tech blog",
-      href: "https://dev.tableland.xyz",
+      label: "Blog",
+      href: "https://mirror.xyz/tableland.eth",
       className: "sidebar-landing sidebar-footer",
     },
     {
