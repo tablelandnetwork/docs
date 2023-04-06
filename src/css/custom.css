@@ -89,7 +89,6 @@
   --ifm-sidebar-background-color: var(--ifm-background-color);
   --ifm-navbar-background-color: var(--ifm-background-color);
   --ifm-footer-background-color: var(--ifm-background-surface-color);
-  --ifm-navbar-search-input-background-color: var(--ifm-hover-overlay);
 }
 
 /* A few general CSS resets */
@@ -329,18 +328,6 @@ html[data-theme="dark"] .button {
   font-size: var(--h3-font-size);
 }
 
-/* Hack a way to make the search bar's icons (⌘ K) vertically centered */
-kbd {
-  box-shadow: none !important;
-  width: 1.4rem;
-  text-align: center;
-}
-
-kbd::before {
-  content: "";
-  vertical-align: middle;
-}
-
 /* Reduce font size in sidebar, bold the active sidebar page, and don't change active link color on hover */
 .menu {
   padding-top: var(--ifm-pre-padding) !important;
@@ -414,35 +401,6 @@ spacing. */
 
 [data-theme="dark"] .pagination-nav__link {
   border-color: transparent;
-}
-
-/* Decrease the width of the search bar */
-.navbar__search-input {
-  width: 20rem;
-}
-
-.navbar__search-input,
-input {
-  border: 1px solid transparent;
-  border-radius: 5px !important;
-  background-color: var(--ifm-navbar-search-input-background-color);
-}
-
-/* Change the search box outline color on focus */
-.navbar__search-input:focus-visible {
-  outline: none;
-  border-color: var(--ifm-toc-border-color);
-}
-
-[data-theme="dark"] .navbar__search-input:focus-visible {
-  border-color: transparent;
-}
-
-/* Adjust based on navbar links on responsive decrease width */
-@media (max-width: 1130px) {
-  .navbar__search-input {
-    width: 10rem;
-  }
 }
 
 /* Make navbar text smaller */

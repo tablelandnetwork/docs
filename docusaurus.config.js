@@ -33,12 +33,6 @@ const config = {
     mermaid: true,
   },
   themes: [
-    [
-      "@easyops-cn/docusaurus-search-local", // Used for site search
-      {
-        hashed: true,
-      },
-    ],
     "@docusaurus/theme-mermaid", // Used for diagrams
   ],
   stylesheets: [
@@ -117,6 +111,11 @@ const config = {
       tableOfContents: {
         minHeadingLevel: 2,
         maxHeadingLevel: 4,
+      },
+      algolia: {
+        appId: "4PTCXCA47T",
+        apiKey: "2d64bc5dfdbbd5ea15352c3155b64bdc",
+        indexName: "tableland",
       },
       // Prism styling for code snippets
       prism: {
