@@ -292,6 +292,10 @@ html[data-theme="dark"] .header-github-link:before {
   color: var(--ifm-button-color) !important;
 }
 
+html[data-theme="dark"] .button {
+  color: var(--ifm-color-content) !important;
+}
+
 /* Force no darken on hover */
 .button--primary {
   background-color: var(--ifm-color-secondary);
