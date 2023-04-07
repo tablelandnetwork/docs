@@ -24,13 +24,13 @@
   --ifm-color-primary: var(--color-neonblue);
   --ifm-color-secondary: var(--color-neonblue);
   --ifm-color-black: var(--color-black);
+  /* Make links colored */
+  --ifm-link-color: var(--color-neonblue);
   /* Change the Tab component to be less vertically padded */
   --ifm-tabs-padding-vertical: 0.3rem;
   --ifm-global-radius: 0.1rem;
   /* Faster transition speed on hovers etc */
   --ifm-transition-fast: 0.15s;
-  /* Don't underline links on hover */
-  --ifm-link-hover-decoration: none;
   /* Font edits, including font size variables, used down below with `md` files, too */
   --ifm-code-font-size: 102%;
   --ifm-font-family-base: "Poppins", sans-serif;
@@ -109,6 +109,12 @@
   padding: 0;
   border: 0;
   font-size: 100%;
+}
+
+/* Seemed like "jumping" was happening on link hovers; force all to auto */
+a,
+a:hover {
+  cursor: auto !important;
 }
 
 @-ms-viewport {
@@ -247,7 +253,8 @@ div[class^="announcementBar"] .close {
 }
 
 [data-theme="dark"] div[class^="announcementBar"] {
-  background-color: var(--ifm-color-primary);
+  background-color: var(--color-verylightgreen);
+  color: var(--ifm-color-content);
 }
 
 /* Custom error css, set in the magic comments in docusaurus config */
