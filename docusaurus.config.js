@@ -13,7 +13,7 @@ const config = {
   title: "Tableland Docs",
   tagline:
     "Explore how to store & query data on Tableland—the serverless database for web3 apps.",
-  url: "http://localhost:3000", // https://docs.tableland.xyz
+  url: "https://docs.tableland.xyz",
   baseUrl: "/",
   onBrokenLinks: "log", // Or, could `throw`
   onBrokenMarkdownLinks: "warn",
@@ -95,9 +95,9 @@ const config = {
         disableSwitch: false,
         respectPrefersColorScheme: true,
       },
-      // fathomAnalytics: {
-      //   siteId: "QLCGWETC",
-      // },
+      fathomAnalytics: {
+        siteId: "QLCGWETC",
+      },
       image: "img/tableland/site-banner.png", // Default image used in metadata, e.g., links shared on socials
       metadata, // Custom site metadata (imported via separate file)
       docs: {
