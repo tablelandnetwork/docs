@@ -83,13 +83,13 @@
   --ifm-background-color: var(--color-darkgreen) !important;
   --ifm-color-content-rgb: 237, 237, 237;
   --ifm-color-content: rgb(var(--ifm-color-content-rgb)) !important;
-  --ifm-color-primary: var(--color-neonblue);
+  --ifm-color-primary: var(--color-neongblue);
   --ifm-color-secondary: var(--color-neonblue);
   --ifm-background-surface-color: var(--color-green) !important;
   --ifm-hover-overlay: var(--ifm-background-surface-color) !important;
   --ifm-heading-color: white;
   --ifm-toc-border-color: var(--color-green) !important;
-  --ifm-menu-color: var(--color-neongreen);
+  --ifm-menu-color: var(--color-neonblue);
   --ifm-card-background-color: var(--color-green) !important;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
   /* Make the navbar the same color as the background; include bottom box */
