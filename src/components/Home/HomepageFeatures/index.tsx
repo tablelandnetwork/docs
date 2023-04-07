@@ -39,7 +39,7 @@ type ProductItem = {
 const FeatureList: FeatureItem[] = [
   {
     title: "Easy integration",
-    icon: <MdQueryStats size={30} />,
+    icon: <MdQueryStats size={20} />,
     description: (
       <>
         Choose from a variety of options including the JavaScript/TypeScript
@@ -51,7 +51,7 @@ const FeatureList: FeatureItem[] = [
   },
   {
     title: "Flexible data management",
-    icon: <FaFileContract size={30} />,
+    icon: <FaFileContract size={20} />,
     description: (
       <>
         Dynamically update your data using on-chain actions, with read queries
@@ -64,7 +64,7 @@ const FeatureList: FeatureItem[] = [
   },
   {
     title: "Granular access control",
-    icon: <FaConnectdevelop size={30} />,
+    icon: <FaConnectdevelop size={20} />,
     description: (
       <>
         Configure row-level access rules driven by wallet addresses, token
@@ -84,7 +84,7 @@ const FeatureList: FeatureItem[] = [
 const BuildList: ProductItem[] = [
   {
     name: "SDK",
-    icon: <DiJsBadge size={30} />,
+    icon: <DiJsBadge size={20} />,
     description: (
       <>
         JavaScript / TypeScript SDK with Cloudflare D1 compatibility & web3
@@ -96,7 +96,7 @@ const BuildList: ProductItem[] = [
   },
   {
     name: "Smart contracts",
-    icon: <SiSolidity size={30} />,
+    icon: <SiSolidity size={20} />,
     description: (
       <>Develop and interact with the registry using smart contracts</>
     ),
@@ -105,7 +105,7 @@ const BuildList: ProductItem[] = [
   },
   {
     name: "Gateway API",
-    icon: <AiFillApi size={30} />,
+    icon: <AiFillApi size={20} />,
     description: (
       <>
         Directly query a Tableland validator for network state & other node data
@@ -116,14 +116,14 @@ const BuildList: ProductItem[] = [
   },
   {
     name: "CLI",
-    icon: <FaTerminal size={30} />,
+    icon: <FaTerminal size={20} />,
     description: <>CLI & shell to use Tableland from the command line</>,
 
     url: "cli",
   },
   {
     name: "Validator node",
-    icon: <GoDatabase size={30} />,
+    icon: <GoDatabase size={20} />,
     description: <>Run your own Tableland node (written in Go) using Docker</>,
     url: "validator",
   },
@@ -132,7 +132,7 @@ const BuildList: ProductItem[] = [
 const ToolsList: ProductItem[] = [
   {
     name: "Local Tableland",
-    icon: <ImTable size={30} />,
+    icon: <ImTable size={20} />,
     description: (
       <>Develop locally, spinning up a local Hardhat and validator node</>
     ),
@@ -141,7 +141,7 @@ const ToolsList: ProductItem[] = [
   },
   {
     name: "Hardhat plugin",
-    icon: <FaHardHat size={30} />,
+    icon: <FaHardHat size={20} />,
     description: (
       <>Use a Tableland Hardhat plugin during contract development</>
     ),
@@ -150,7 +150,7 @@ const ToolsList: ProductItem[] = [
   },
   {
     name: "Console",
-    icon: <AiOutlineConsoleSql size={30} />,
+    icon: <AiOutlineConsoleSql size={20} />,
     description: (
       <>
         Tableland network explorer—create, write, and read tables via a web app
@@ -161,14 +161,14 @@ const ToolsList: ProductItem[] = [
   },
   {
     name: "Wasm parser",
-    icon: <VscListTree size={30} />,
+    icon: <VscListTree size={20} />,
     description: <>Parse & normalize Tableland-compliant SQL, client-side</>,
 
     url: "https://github.com/tablelandnetwork/wasm-sqlparser",
   },
   {
     name: "Starter kit",
-    icon: <HiOutlineArrowPath size={30} />,
+    icon: <HiOutlineArrowPath size={20} />,
     description: <>Use a template for building TypeScript applications</>,
 
     url: "https://github.com/tablelandnetwork/js-template",
@@ -178,13 +178,13 @@ const ToolsList: ProductItem[] = [
 const LearnList: ProductItem[] = [
   {
     name: "Tableland protocol",
-    icon: <GiWavyChains size={30} />,
+    icon: <GiWavyChains size={20} />,
     description: <>Understand what Tableland is and how it works</>,
     url: "fundamentals/what-is-tableland",
   },
   {
     name: "SQL",
-    icon: <SiSqlite size={30} />,
+    icon: <SiSqlite size={20} />,
     description: (
       <>Get to know SQLite—the query language that drives the protocol</>
     ),
@@ -192,7 +192,7 @@ const LearnList: ProductItem[] = [
   },
   {
     name: "Use cases",
-    icon: <HiOutlineLightBulb size={30} />,
+    icon: <HiOutlineLightBulb size={20} />,
     description: (
       <>Common ways and starter ideas for when to use the protocol</>
     ),
@@ -201,14 +201,14 @@ const LearnList: ProductItem[] = [
   },
   {
     name: "Tutorials",
-    icon: <AiOutlineBuild size={30} />,
+    icon: <AiOutlineBuild size={20} />,
     description: <>Guides that showcase how to build with Tableland</>,
 
     url: "tutorials",
   },
   {
     name: "Example apps",
-    icon: <AiOutlineAppstoreAdd size={30} />,
+    icon: <AiOutlineAppstoreAdd size={20} />,
     description: (
       <>A series of example applications that demonstrate what to build</>
     ),
@@ -234,7 +234,7 @@ function Product({ name, url, icon, description }: ProductItem) {
     <Link to={url}>
       <div className={clsx("card ") + styles.product}>
         <div className={clsx("row ")}>
-          <div className={clsx("col col--2")}>{icon}</div>
+          <div className={clsx("col col--1")}>{icon}</div>
           <div className={clsx("col ")}>
             <h4>{name}</h4>
             <span>{description}</span>{" "}

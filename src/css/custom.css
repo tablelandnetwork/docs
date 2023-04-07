@@ -10,11 +10,20 @@
 /* Override the default Infima variables here. */
 :root {
   /* Colors (light mode colors are the default) */
-  --color-orange: #ff6567;
-  --color-green: #0be291;
-  --ifm-color-primary: var(--color-orange);
-  --ifm-color-secondary: var(--color-green);
-  --ifm-color-black: #1a1a1a;
+  --color-black: #1a1a1a;
+  --color-neonblue: #75b6b5;
+  --color-grey: #5d657f;
+  --color-orange: #f4706b;
+  --color-purple: #815691;
+  --color-green: #162929;
+  --color-darkgreen: #101e1e;
+  --color-lightgreen: #3b4949;
+  --color-verylightgreen: #718b8b;
+  --color-neongreen: #0be291;
+
+  --ifm-color-primary: var(--color-neonblue);
+  --ifm-color-secondary: var(--color-neonblue);
+  --ifm-color-black: var(--color-black);
   /* Change the Tab component to be less vertically padded */
   --ifm-tabs-padding-vertical: 0.3rem;
   --ifm-global-radius: 0.1rem;
@@ -24,7 +33,7 @@
   --ifm-link-hover-decoration: none;
   /* Font edits, including font size variables, used down below with `md` files, too */
   --ifm-code-font-size: 102%;
-  --ifm-font-family-base: "Inter", sans-serif;
+  --ifm-font-family-base: "Poppins", sans-serif;
   --ifm-font-family-monospace: "Inconsolata", monospace;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
   /* Change the heading font sizes */
@@ -71,16 +80,17 @@
 /* Dark mode */
 [data-theme="dark"] {
   /* Colors */
-  --ifm-background-color: var(--ifm-color-black) !important;
+  --ifm-background-color: var(--color-darkgreen) !important;
   --ifm-color-content-rgb: 237, 237, 237;
   --ifm-color-content: rgb(var(--ifm-color-content-rgb)) !important;
-  --ifm-color-primary: var(--color-green);
-  --ifm-color-secondary: var(--color-orange);
-  --ifm-background-surface-color: #3a3a3a !important;
+  --ifm-color-primary: var(--color-neonblue);
+  --ifm-color-secondary: var(--color-neonblue);
+  --ifm-background-surface-color: var(--color-green) !important;
   --ifm-hover-overlay: var(--ifm-background-surface-color) !important;
-  --ifm-heading-color: #e3e3e3;
-  --ifm-toc-border-color: #303030 !important;
-  --ifm-menu-color: var(--ifm-color-gray-500);
+  --ifm-heading-color: white;
+  --ifm-toc-border-color: var(--color-green) !important;
+  --ifm-menu-color: var(--color-neongreen);
+  --ifm-card-background-color: var(--color-green) !important;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
   /* Make the navbar the same color as the background; include bottom box */
   --ifm-color-content-secondary: rgba(255, 255, 255, 1);
@@ -141,6 +151,18 @@ main > .container h6 {
   --ifm-h4-font-size: var(--h4-font-size);
   --ifm-h5-font-size: var(--h5-font-size);
   --ifm-h6-font-size: var(--h6-font-size);
+}
+
+.sidebar-collapse {
+  fill: var(--color-black);
+}
+
+html[data-theme="dark"] .sidebar-collapse {
+  fill: white;
+}
+
+html[data-theme="dark"] .theme-back-to-top-button {
+  background-color: var(--color-green) !important;
 }
 
 /* Correct h1 defaulting to 3rem and decrease bottom spacing */
@@ -220,6 +242,10 @@ div[class^="announcementBar"] a {
   text-decoration: underline;
 }
 
+div[class^="announcementBar"] .close {
+  opacity: 1;
+}
+
 [data-theme="dark"] div[class^="announcementBar"] {
   background-color: var(--ifm-color-primary);
 }
@@ -241,7 +267,7 @@ a {
 
 /* Darken color on link hover; lighten on dark mode */
 a:hover {
-  color: rgba(var(--ifm-link-color), 0);
+  text-decoration: underline;
 }
 
 /* In tooltips, highlight anchors are embedded links and change opacity on hover */
@@ -285,14 +311,19 @@ html[data-theme="dark"] .header-github-link:before {
 .button {
   font-weight: var(--ifm-font-weight-bold);
   font-size: var(--h4-font-size);
+  text-transform: uppercase;
   padding: 10px 30px;
   border: none;
   outline: none;
-  color: var(--ifm-button-color) !important;
+}
+
+.button:hover,
+html[data-theme="dark"] .button:hover {
+  background-color: var(--color-neonblue);
 }
 
 html[data-theme="dark"] .button {
-  color: var(--ifm-color-content) !important;
+  background-color: var(--color-verylightgreen);
 }
 
 /* Force no darken on hover */
@@ -455,7 +486,7 @@ spacing. */
 }
 
 .sidebar-landing .menu__link {
-  font-size: var(--ifm-h4-font-size);
+  font-size: var(--ifm-h5-font-size);
   /* background-color: transparent; */
   color: var(--ifm-heading-color);
   margin-top: 7px;
@@ -561,6 +592,8 @@ table {
 }
 
 /* Custom fonts for the site */
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@600;900&family=Poppins:wght@300;400;500;600&display=swap");
+
 @font-face {
   font-family: "Inter";
   font-weight: 100;
