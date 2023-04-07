@@ -21,11 +21,11 @@
   --color-verylightgreen: #718b8b;
   --color-neongreen: #0be291;
 
-  --ifm-color-primary: var(--color-neonblue);
-  --ifm-color-secondary: var(--color-neonblue);
+  --ifm-color-primary: var(--color-neongreen);
+  --ifm-color-secondary: var(--color-neongreen);
   --ifm-color-black: var(--color-black);
   /* Make links colored */
-  --ifm-link-color: var(--color-neonblue);
+  --ifm-link-color: var(--color-neongreen);
   /* Change the Tab component to be less vertically padded */
   --ifm-tabs-padding-vertical: 0.3rem;
   --ifm-global-radius: 0.1rem;
@@ -80,6 +80,9 @@
 /* Dark mode */
 [data-theme="dark"] {
   /* Colors */
+  --ifm-color-primary: var(--color-neonblue);
+  --ifm-color-secondary: var(--color-neonblue);
+  --ifm-link-color: var(--color-neonblue);
   --ifm-background-color: var(--color-darkgreen) !important;
   --ifm-color-content-rgb: 237, 237, 237;
   --ifm-color-content: rgb(var(--ifm-color-content-rgb)) !important;
@@ -109,12 +112,6 @@
   padding: 0;
   border: 0;
   font-size: 100%;
-}
-
-/* Seemed like "jumping" was happening on link hovers; force all to auto */
-a,
-a:hover {
-  cursor: auto !important;
 }
 
 @-ms-viewport {
@@ -453,8 +450,14 @@ spacing. */
 }
 
 /* Make navbar dropdown links "active" when a child in the dropdown is active */
+.navbar__link--active,
 .dropdown:has(.dropdown__menu > li > .dropdown__link--active) .navbar__link {
   color: var(--ifm-color-primary) !important;
+}
+
+html[data-theme="dark"] .navbar__link--active,
+.dropdown:has(.dropdown__menu > li > .dropdown__link--active) .navbar__link {
+  color: var(--ifm-link-color) !important;
 }
 
 .dropdown__menu {
