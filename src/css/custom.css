@@ -25,7 +25,7 @@
   --ifm-color-secondary: var(--color-orange);
   --ifm-color-black: var(--color-black);
   /* Make links colored */
-  --ifm-link-color: var(--color-neongreen);
+  --ifm-link-color: var(--color-orange);
   /* Change the Tab component to be less vertically padded */
   --ifm-tabs-padding-vertical: 0.3rem;
   --ifm-global-radius: 0.1rem;
