@@ -20,6 +20,10 @@
   padding: 0;
 }
 
+html[data-theme="dark"] .codeBlock {
+  --ifm-pre-background: var(--color-green);
+}
+
 .codeBlockTitle + .codeBlockContent .codeBlock {
   border-top-left-radius: 0;
   border-top-right-radius: 0;

@@ -11,7 +11,7 @@
 @media (min-width: 997px) {
   .collapseSidebarButton {
     display: block !important;
-    background-color: var(--docusaurus-collapse-button-bg);
+    background-color: var(--docusaurus-collapse-button-bg) !important;
     height: 40px;
     position: sticky;
     bottom: 0;
@@ -29,7 +29,7 @@
 
   .collapseSidebarButton:hover,
   .collapseSidebarButton:focus {
-    background-color: var(--docusaurus-collapse-button-bg-hover);
+    background-color: var(--docusaurus-collapse-button-bg-hover) !important;
   }
 }
 

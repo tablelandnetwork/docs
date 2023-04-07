@@ -1,6 +1,6 @@
 .exploreSubtitle {
   color: var(--ifm-hero-text-color);
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
 
 .product {
@@ -19,7 +19,7 @@
 }
 
 .product span {
-  font-size: var(--ifm-h4-font-size);
+  font-size: var(--ifm-h5-font-size);
   color: var(--ifm-color-content);
   font-weight: var(--ifm-font-weight-normal);
 }
