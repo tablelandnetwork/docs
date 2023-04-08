@@ -3,11 +3,10 @@
   --docsearch-text-color: var(--ifm-font-color-base) !important;
   --docsearch-logo-color: var(--ifm-color-primary) !important;
   --docsearch-modal-background: var(--ifm-background-surface-color) !important;
+  --docsearch-modal-shadow: none !important;
   --docsearch-key-gradient: none !important;
   --docsearch-key-shadow: none !important;
   --docsearch-footer-background: var(--ifm-background-color) !important;
-  --docsearch-modal-shadow: inset 1px 1px 0 0 var(--ifm-background-color),
-    0 3px 8px 0 var(--ifm-background-color) !important;
   --docsearch-searchbox-focus-background: var(--ifm-hover-overlay) !important;
 }
 

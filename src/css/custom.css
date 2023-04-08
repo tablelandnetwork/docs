@@ -21,11 +21,11 @@
   --color-verylightgreen: #718b8b;
   --color-neongreen: #0be291;
 
-  --ifm-color-primary: var(--color-neongreen);
-  --ifm-color-secondary: var(--color-neongreen);
+  --ifm-color-primary: var(--color-orange);
+  --ifm-color-secondary: var(--color-orange);
   --ifm-color-black: var(--color-black);
   /* Make links colored */
-  --ifm-link-color: var(--color-neongreen);
+  --ifm-link-color: var(--color-orange);
   /* Change the Tab component to be less vertically padded */
   --ifm-tabs-padding-vertical: 0.3rem;
   --ifm-global-radius: 0.1rem;
@@ -53,16 +53,16 @@
   --ifm-color-secondary-dark: rgb(212, 213, 216);
   --ifm-color-gray-300: #dadde1;
   --ifm-color-gray-300-rgb: 218, 221, 225;
-  --ifm-color-emphasis-300: var(--ifm-color-gray-300);
+  --ifm-color-emphasis-300: var(--ifm-color-gray-200);
   --ifm-heading-color: var(--ifm-color-black);
   /* Decrease sidebar width and padding; change color to match table of contents */
   --ifm-menu-link-padding-vertical: 0.3rem;
   --ifm-toc-border-color: var(--ifm-color-emphasis-300);
-  --ifm-menu-color: var(--ifm-color-content-secondary);
+  --ifm-menu-color: var(--color-orange) !important;
   --ifm-navbar-shadow: 0 1px 2px 0 rgba(var(--ifm-color-gray-300-rgb), 1);
   /* Custom navbar and footer color */
   --ifm-footer-background-color: var(--ifm-color-secondary-lighter);
-  /* --ifm-hover-overlay: var(--ifm-color-secondary-lightest); */
+  --ifm-hover-overlay: var(--ifm-color-secondary-lightest);
   /* Change `hr` section divider to be the same color as sidebar & TOC dividers */
   --ifm-hr-background-color: var(--ifm-toc-border-color);
   --ifm-button-border-radius: 0.4rem;
@@ -86,13 +86,13 @@
   --ifm-background-color: var(--color-darkgreen) !important;
   --ifm-color-content-rgb: 237, 237, 237;
   --ifm-color-content: rgb(var(--ifm-color-content-rgb)) !important;
-  --ifm-color-primary: var(--color-neongblue);
+  --ifm-color-primary: var(--color-neonblue);
   --ifm-color-secondary: var(--color-neonblue);
   --ifm-background-surface-color: var(--color-green) !important;
   --ifm-hover-overlay: var(--ifm-background-surface-color) !important;
   --ifm-heading-color: white;
   --ifm-toc-border-color: var(--color-green) !important;
-  --ifm-menu-color: var(--color-neonblue);
+  --ifm-menu-color: var(--color-neonblue) !important;
   --ifm-card-background-color: var(--color-green) !important;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
   /* Make the navbar the same color as the background; include bottom box */
@@ -166,6 +166,25 @@ html[data-theme="dark"] .sidebar-collapse {
 
 html[data-theme="dark"] .theme-back-to-top-button {
   background-color: var(--color-green) !important;
+}
+
+.theme-edit-this-page {
+  font-size: var(--h5-font-size);
+}
+
+.theme-edit-this-page svg {
+  width: 14px;
+  height: 14px;
+  vertical-align: -1px;
+  display: inline-block;
+}
+
+.theme-last-updated {
+  color: var(--color-verylightgreen);
+}
+
+html[data-theme="dark"] .theme-last-updated {
+  color: var(--color-lightgreen);
 }
 
 /* Correct h1 defaulting to 3rem and decrease bottom spacing */
@@ -286,6 +305,15 @@ a:hover {
   transition: opacity var(--ifm-transition-fast);
 }
 
+html[data-theme="dark"] .alert--secondary {
+ background-color: var(--color-black);
+}
+
+html[data-theme="dark"] .alert--success {
+  background-color: var(--color-lightgreen);
+  border-left-color: var(--color-neongreen); 
+}
+
 /* Don't darken the heading's `#` anchor tag on hover */
 .hash-link:hover {
   color: var(--ifm-link-color);
@@ -298,6 +326,11 @@ a:hover {
 html[data-theme="dark"] .header-github-link:before {
   background: url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='white' d='M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12'/%3E%3C/svg%3E")
     no-repeat;
+}
+
+.navbar {
+  box-shadow: none;
+  border-bottom: 1px solid var(--ifm-toc-border-color);
 }
 
 /* Make navbar dropdown links match better with those of the sidebar's */
@@ -319,22 +352,22 @@ html[data-theme="dark"] .header-github-link:before {
   padding: 10px 30px;
   border: none;
   outline: none;
+  background-color: var(--color-black);
 }
 
-.button:hover,
+.button:hover {
+  background-color: var(--color-neongreen);
+}
+
 html[data-theme="dark"] .button:hover {
   background-color: var(--color-neonblue);
 }
 
 html[data-theme="dark"] .button {
-  background-color: var(--color-verylightgreen);
+  background-color: var(--color-green);
 }
 
 /* Force no darken on hover */
-.button--primary {
-  background-color: var(--ifm-color-secondary);
-}
-
 .button--secondary:hover {
   background-color: var(--ifm-color-secondary);
 }
@@ -408,8 +441,15 @@ spacing. */
 }
 
 .pagination-nav__link:hover {
-  color: var(--ifm-link-color);
-  border-color: var(--ifm-color-emphasis-300);
+  border-color: var(--ifm-color-emphasis-400);
+}
+
+[data-theme="dark"] .pagination-nav__link:hover {
+  border-color: var(--color-neonblue);
+}
+
+.pagination-nav__label {
+  font-size: var(--h5-font-size);
 }
 
 .pagination-nav__link--next .pagination-nav__label::after {
@@ -435,7 +475,7 @@ spacing. */
 }
 
 [data-theme="dark"] .pagination-nav__link {
-  border-color: transparent;
+  border-color: var(--color-green);
 }
 
 /* Make navbar text smaller */
