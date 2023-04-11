@@ -1,4 +1,4 @@
-# Encoding
+## Encoding
 
 As mentioned in the section on [Statement Types](#statement-types), the core Tableland SQL parser accepts a semicolon-separated list of statements, which are then parsed and evaluated according to this Tableland SQL Specification. Internally, the statements are represented using an [abstract syntax tree](https://en.wikipedia.org/wiki/Abstract_syntax_tree) (AST). The internal representation of the nodes of this AST is outside the bounds of the Tableland SQL Specification, however, further details can be found in the [Go Tableland SQL Parser](https://github.com/tablelandnetwork/go-sqlparser) reference implementation.
 

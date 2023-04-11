@@ -1,2 +1,8 @@
 .DS_Store
 .vscode/
+node_modules
+build
+.env
+
+# Generated files
+.docusaurus

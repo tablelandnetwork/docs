@@ -1,11 +1,11 @@
-# Statement Types
+## Statement Types
 
 The core Tableland SQL parser accepts an SQL statement list which is a semicolon-separated list of statements. Each SQL statement in the statement list is an instance of one of the following specific statement types. All other standard SQL statement types are unavailable (at the moment). Each statement type is associated with a well-known SQL command (see following sections). In general, the entire Tableland SQL API can be summarized in seven command/statement types: `CREATE TABLE`, `INSERT`, `UPDATE`, `DELETE`, `SELECT`, `GRANT`, `REVOKE`.
 
 > ⚠️
 > The statement and data types provided here are part of the official _minimal_ Tableland SQL specification. Additional functionality may be available in practice. However, it is not recommended that developers rely on SQL features outside of this minimal specification in the long-term.
 
-## CREATE TABLE
+### CREATE TABLE
 
 The `CREATE TABLE` command is used to create a new table on Tableland. A `CREATE TABLE` command specifies the following attributes of the new table:
 
@@ -17,7 +17,7 @@ The `CREATE TABLE` command is used to create a new table on Tableland. A `CREATE
 - A set of SQL [constraints for the table](#column-definitions-and-constraints). Tableland supports `UNIQUE`, `NOT NULL`, `CHECK` and `PRIMARY KEY` constraints (see previous bullet).
 - Optionally, a [generated column constraint](#generated-columns).
 
-### Structure
+#### Structure
 
 ```sql
 CREATE TABLE *table_name* ( [
@@ -48,7 +48,7 @@ and `table_constraint` has structure
   PRIMARY KEY ( column_name [, ... ] )
 ```
 
-### Details
+#### Details
 
 #### Table Identifiers/Names
 
@@ -197,25 +197,25 @@ Rows with automatically selected `ROWID`s are guaranteed to have `ROWID`s that h
 
 Note that "monotonically increasing" does not imply that the `ROWID` always increases by exactly one. One is the usual increment. However, if an insert fails due to (for example) a uniqueness constraint, the `ROWID` of the failed insertion attempt might not be reused on subsequent inserts, resulting in gaps in the `ROWID` sequence. Tableland guarantees that automatically chosen `ROWID`s will be increasing but not that they will be sequential.
 
-## DELETE
+### DELETE
 
 The `DELETE` command removes records from the table identified by the table id.
 
-### Structure
+#### Structure
 
 ```sql
 DELETE FROM table_name [ WHERE condition ]
 ```
 
-### Details
+#### Details
 
 If the [`WHERE` clause](#where-clause) is not present, all records in the table are deleted. If a `WHERE` clause is supplied, then only those rows for which the `WHERE` clause boolean expression is true are deleted. Rows for which the expression is false or `NULL` are retained.
 
-## INSERT
+### INSERT
 
 The `INSERT` command creates new rows in a table identified by the table name.
 
-### Structure
+#### Structure
 
 ```sql
 INSERT INTO table_name [ ( *column_name* [, ...] ) ] VALUES (
@@ -237,7 +237,7 @@ INSERT INTO table_name [ ( *column_name* [, ...] ) ] SELECT [ * | expression [, 
     [ WHERE where_clause ];
 ```
 
-### Details
+#### Details
 
 An `INSERT` statement creates one or more new rows in an existing table. If the `column_name` list after `table_name` is omitted then the number of values inserted into each row must be the same as the number of columns in the table. In this case the result of evaluating the left-most expression from each term of the `VALUES` list is inserted into the left-most column of each new row, and so forth for each subsequent expression. If a `column_name` list is specified, then the number of values in each term of the `VALUE` list must match the number of specified columns. Each of the named columns of the new row is populated with the results of evaluating the corresponding `VALUES` expression. Table columns that do not appear in the column list are populated with the default column value (specified as part of the `CREATE TABLE` statement), or with `NULL` if no default value is specified.
 
@@ -247,11 +247,11 @@ The last form of the `INSERT` statement contains a `SELECT` statement instead of
 
 > ⚠️ Currently, `HAVING` and `GROUP BY` clauses are not allowed in any `SELECT` statements within an `INSERT`. Additionally, under the hood, the Tableland Specification forces an implicit `ORDER BY rowid` clause on the `SELECT` statement.
 
-## UPSERT
+### UPSERT
 
 `UPSERT` is a special syntax addition to `INSERT` that causes the `INSERT` to behave as an `UPDATE` or a no-op if the `INSERT` would violate a uniqueness constraint. `UPSERT` is not standard SQL. `UPSERT` in Tableland follows the [syntax used in SQLite](https://www.sqlite.org/lang_UPSERT.html).
 
-### Structure
+#### Structure
 
 ```sql
 INSERT INTO table_name [ ( *column_name* [, ...] ) ] VALUES (
@@ -284,7 +284,7 @@ DO UPDATE SET { column_name = { expression | DEFAULT } } [, ...]
     [ WHERE condition ];
 ```
 
-### Details
+#### Details
 
 An `UPSERT` is an ordinary `INSERT` statement that is followed by the special `ON CONFLICT` clause shown above.
 
@@ -298,11 +298,11 @@ Column names in the expressions of a `DO UPDATE` refer to the original unchanged
 
 Note that the `DO UPDATE` clause acts only on the single row that experienced the constraint error during `INSERT`. It is not necessary to include a `WHERE` clause that restricts the action to that one row. The only use for the `WHERE` clause at the end of the `DO UPDATE` is to optionally change the `DO UPDATE` into a no-op depending on the original and/or new values.
 
-## UPDATE
+### UPDATE
 
 An `UPDATE` statement is used to modify a subset of the values stored in zero or more rows of the database table identified by the table name.
 
-### Structure
+#### Structure
 
 ```sql
 UPDATE table_name
@@ -310,7 +310,7 @@ UPDATE table_name
     [ WHERE condition ];
 ```
 
-### Details
+#### Details
 
 If the `UPDATE` statement does not have a [`WHERE` clause](#where-clause), all rows in the table are modified by the `UPDATE`. Otherwise, the `UPDATE` affects only those rows for which the `WHERE` clause boolean expression is true. It is not an error if the `WHERE` clause does not evaluate to true for any row in the table; this just means that the `UPDATE` statement affects zero rows.
 
@@ -318,11 +318,11 @@ The modifications made to each row affected by an `UPDATE` statement are determi
 
 > ℹ️ An assignment in the `SET` clause can be a parenthesized list of column names on the left and a `ROW` value of the same size on the right. For example, consider the following two “styles” of `UPDATE` statements: `UPDATE table_id SET (a,b)=(b,a);` or `UPDATE table_id SET a=b, b=a;`.
 
-## GRANT/REVOKE
+### GRANT/REVOKE
 
 The `GRANT` and `REVOKE` commands are used to define low-level access privileges for a table identified by table name and id.
 
-### Structure
+#### Structure
 
 ```sql
 GRANT { INSERT | UPDATE | DELETE } [, ...]
@@ -334,7 +334,7 @@ REVOKE { INSERT | UPDATE | DELETE } [, ...]
     FROM role [, ...]
 ```
 
-### Details
+#### Details
 
 The `GRANT` command gives specific privileges on a table to one or more `role`. These privileges are added to those already granted, if any. By default, the creator of a table (as specified by a public ETH address) has all (valid) privileges on creation. The owner could, however, choose to revoke some of their own privileges for safety reasons.
 
@@ -348,11 +348,11 @@ Roles (`role`) in Tableland are defined by an Ethereum public-key based address.
 
 Conversely to the `GRANT` command, the `REVOKE` command removes specific, previously granted access privileges on a table from one or more roles. All role definitions and allowable privileges associated with granting privileges also apply to revoking them.
 
-## SELECT
+### SELECT
 
 The `SELECT` statement is used to query the database. The result of a `SELECT` is zero or more rows of data where each row has a fixed number of columns. A `SELECT` statement does not make any changes to the database.
 
-### Structure
+#### Structure
 
 The `SELECT` statement is the work-house of the SQL query model, and as such, the available syntax is extremely complex. In practice, most `SELECT` statements are simple `SELECT` statements of the form:
 
@@ -369,7 +369,7 @@ SELECT [ ALL | DISTINCT ]
 
 See the standalone sections on [`WHERE`](#where-clause), [`FROM`](#from-clause), and [`JOIN`](#join-clause) clauses for further details on query structure.
 
-### Details
+#### Details
 
 Generating the results of a simple `SELECT` statement is presented as a four step process in the description below:
 
@@ -384,15 +384,15 @@ Once the input data from the `FROM` clause has been filtered by the `WHERE` clau
 
 One of the `ALL` or `DISTINCT` keywords may follow the `SELECT` keyword in a simple `SELECT` statement. If the simple `SELECT` is a `SELECT ALL`, then the entire set of result rows are returned by the `SELECT`. If neither `ALL` or `DISTINCT` are present, then the behavior is as if `ALL` were specified. If the simple `SELECT` is a `SELECT DISTINCT`, then duplicate rows are removed from the set of result rows before it is returned. For the purposes of detecting duplicate rows, two `NULL` values are considered to be equal.
 
-## `WHERE` clause
+### `WHERE` clause
 
-### Structure
+#### Structure
 
 ```sql
 WHERE condition
 ```
 
-### Details
+#### Details
 
 The SQL `WHERE` clause is an optional clause of the `SELECT`, `DELETE`, and/or `UPDATE` statements. It appears after the primary clauses of the corresponding statement. For example in a `SELECT` statement, the `WHERE` clause can be added _after_ the `FROM` clause to filter rows returned by the query. Only rows for which the `WHERE` clause expression evaluates to true are included from the dataset before continuing. Rows are excluded from the result if the `WHERE` clause evaluates to either false or `NULL`.
 
@@ -404,15 +404,15 @@ When evaluating a `SELECT` statement with a `WHERE` clause, Tableland uses the f
 
 > ℹ️ The search condition in the `WHERE` clause is made up of any number of comparisons (=, <, >, LIKE, IN, etc), combined using a range of logical operators (e.g., OR, AND, ALL, ANY, etc).
 
-## `FROM` clause
+### `FROM` clause
 
-### Structure
+#### Structure
 
 ```sql
 FROM { table_name [ * ] [ [ AS ] alias ] | ( sub_select ) [ AS ] alias }
 ```
 
-### Details
+#### Details
 
 The input data used by a simple `SELECT` query is a set of *N* rows each *M* columns wide. If the `FROM` clause is omitted from a simple `SELECT` statement, then the input data is implicitly a single row zero columns wide (i.e. *N*=1 and *M*=0).
 
@@ -420,9 +420,9 @@ If a `FROM` clause is specified, the data on which a simple `SELECT` query opera
 
 If there is only a single table or sub-query in the `FROM` clause (a common case), then the input data used by the `SELECT` statement is the contents of the named table. If there is more than one table or sub-query in `FROM` clause, then the contents of all tables and/or sub-queries are joined into a single dataset for the simple `SELECT` statement to operate on. Exactly how the data is combined depends on the specific [`JOIN` clause](#join-clause) (i.e., the combination of join operator and join constraint) used to connect the tables or sub-queries together.
 
-## `JOIN` clause
+### `JOIN` clause
 
-### Structure
+#### Structure
 
 ```sql
 [ NATURAL ] join_type table_or_subquery [ ON on_expression | USING ( column_name [, ...] ) ]
@@ -451,7 +451,7 @@ The `table_or_subquery` is a table or sub-query of the form:
 { table_name [ [ AS ] alias ] | ( sub_select ) [ AS ] alias }
 ```
 
-### Details
+#### Details
 
 All joins in Tableland are based on the cartesian product of the left- and right-want databsets. The columns of the cartesian product dataset are, in order, all the columns of the left-hand dataset followed by all the columns of the right-hand dataset. This is a row in the cartesian product dataset formed by combining each unique combination of a raw from the left-hand and right-hand datasets. In other words, if the left-hand dataset consists of $N_{l}$ rows and $M_{l}$ columns, and the right-hand dataset of $N_{r}$ rows of $M_{r}$ columns, then the cartesian product is a dataset of $N_{l} \times N_{r}$ rows, each containing $N_{l} + N_{r}$ columns.
 
@@ -469,7 +469,7 @@ When more than two tables are joined together as part of a `FROM` clause, the jo
 
 > ⚠️ The "`CROSS JOIN`" join operator produces the same result as the "`INNER JOIN"`, "`JOIN`" and "`,`" operators, but is handled differently by the query optimizer in that it prevents the query optimizer from reordering the tables in the join. An application programmer can use the `CROSS JOIN` operator to directly influence the algorithm that is chosen to implement the `SELECT` statement. Avoid using `CROSS JOIN` except in specific situations where manual control of the query optimizer is desired. Avoid using `CROSS JOIN` early in the development of an application as doing so is a [premature optimization](http://wiki.c2.com/?PrematureOptimization). The special handling of `CROSS JOIN` is an implementation detail. It is not a part of standard SQL, and should not be relied upon.
 
-## Compound Select Statements
+### Compound Select Statements
 
 Two or more simple `SELECT` statements may be connected together to form a compound `SELECT` using the `UNION`, `UNION ALL`, `INTERSECT` or `EXCEPT` operator.
 
@@ -481,11 +481,11 @@ For the purposes of determining duplicate rows for the results of compound `SELE
 
 When three or more simple `SELECT`s are connected into a compound `SELECT`, they group from left to right. In other words, if $A$, $B$ and $C$ are all simple `SELECT` statements, $(A ⋆ B ⋆ C)$ is processed as $((A ⋆ B) ⋆ C)$.
 
-## Custom functions
+### Custom functions
 
 The Tableland SQL Specification includes several web3 native functions that simplify working with blockchain transactions. The list of custom functions may grow over time.
 
-### `TXN_HASH()`
+#### `TXN_HASH()`
 
 The Validator will replace this text with the hash of the transaction that delivered the SQL event (only available in write queries).
 
@@ -493,7 +493,7 @@ The Validator will replace this text with the hash of the transaction that deliv
 INSERT INTO {table_name} VALUES (TXN_HASH());
 ```
 
-### `BLOCK_NUM()`
+#### `BLOCK_NUM()`
 
 The Validator will replace this text with the number of the block that delivered the SQL event (only available in write queries).
 
