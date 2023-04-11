@@ -7,6 +7,7 @@ const katex = require("rehype-katex");
 // Imports for configuring the site metadata and navbar
 const metadata = require("./config/metadata");
 const navbar = require("./config/navbar");
+require("dotenv").config();
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
@@ -114,8 +115,9 @@ const config = {
       },
       algolia: {
         appId: "4PTCXCA47T",
-        apiKey: "2d64bc5dfdbbd5ea15352c3155b64bdc",
+        apiKey: process.env.ALGOLIA_API_KEY,
         indexName: "tableland",
+        contextualSearch: false,
       },
       // Prism styling for code snippets
       prism: {
