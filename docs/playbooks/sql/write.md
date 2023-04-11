@@ -20,15 +20,15 @@ For these examples, let's assume we own a `my_table` with a schema of `id int, v
 
 ## Inserting data
 
-When you write data, it **can only correspond to a single table** in a single transaction. For example, the following query would fail since it touches two different tables (if submitted in one transaction):
+When you write data, it can touch one or more tables in a single transaction. For example, the following query is totally valid and will insert values into two different tables—assuming there aren't issues like invalid syntax that causes the inserts to fail:
 
 ```sql
 INSERT INTO my_table(id) VALUES(1); INSERT INTO other_table(id) VALUES(2);
 ```
 
-Also, **subqueries have very limited support** (only possible in `INSERT`s but with limits). Both of these features are common in "traditional" relational databases but are excluded from Tableland's SQL due to determinism issues.
+Also, **subqueries have very limited support** and are only possible in `INSERT`s but with limitations due to determinism considerations.
 
-You can insert data by defining the columns and data values for those columns. If _all_ of the columns are being inserted into, then there's no need for you to explicitly specify the columns; the list order will insert into the columns (from lowest to highest index...visually, in order from left to right). If, however, there is mismatch between the columns and values defined, you will run into issues.
+Generally, you can insert data by defining the columns and data values for those columns. If _all_ of the columns are being inserted into, then there's no need for you to explicitly specify the columns; the list order will insert into the columns (from lowest to highest index...visually, in order from left to right). If, however, there is mismatch between the columns and values defined, you will run into issues.
 
 <Tabs>
 <TabItem value='include' label="Include columns" default>
