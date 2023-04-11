@@ -117,6 +117,7 @@ const config = {
         appId: "4PTCXCA47T",
         apiKey: process.env.ALGOLIA_API_KEY,
         indexName: "tableland",
+        contextualSearch: false,
       },
       // Prism styling for code snippets
       prism: {
