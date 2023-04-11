@@ -11,6 +11,8 @@
 :root {
   /* Colors (light mode colors are the default) */
   --color-black: #1a1a1a;
+  --color-blue: #6067eb;
+  --color-darkblue: #141034;
   --color-neonblue: #75b6b5;
   --color-grey: #5d657f;
   --color-orange: #f4706b;
@@ -306,12 +308,12 @@ a:hover {
 }
 
 html[data-theme="dark"] .alert--secondary {
- background-color: var(--color-black);
+  background-color: var(--color-black);
 }
 
 html[data-theme="dark"] .alert--success {
   background-color: var(--color-lightgreen);
-  border-left-color: var(--color-neongreen); 
+  border-left-color: var(--color-neongreen);
 }
 
 /* Don't darken the heading's `#` anchor tag on hover */
@@ -406,7 +408,7 @@ html[data-theme="dark"] .button {
 }
 
 .menu__link--active {
-  font-weight: var(--ifm-font-weight-semibold);
+  font-weight: var(--ifm-font-weight-bold);
 }
 
 .menu__link:not(.menu__link--active) {
@@ -433,6 +435,12 @@ spacing. */
   .menu__list-item:nth-child(3) {
   padding-top: 0;
   margin-top: 0;
+}
+
+/* Make table of contents active link/section a different color in dark mode */
+html[data-theme="dark"]
+  .table-of-contents__link:not(.table-of-contents__link--active) {
+  color: var(--color-verylightgreen);
 }
 
 /* Pagination fixes background color, do not change font color on hover, and change icons */
