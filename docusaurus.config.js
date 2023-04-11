@@ -114,7 +114,7 @@ const config = {
       },
       algolia: {
         appId: "4PTCXCA47T",
-        apiKey: "2d64bc5dfdbbd5ea15352c3155b64bdc",
+        apiKey: "8e840fe975e1fd03866be16ec0d061a5",
         indexName: "tableland",
       },
       // Prism styling for code snippets
