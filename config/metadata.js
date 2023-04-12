@@ -7,7 +7,7 @@ const metadata = [
   {
     name: "og:title",
     content:
-      "Tableland Docs: API reference, quickstart guides, and protocol integrations",
+      "Tableland Docs: Store & query data using the serverless database for web3 apps.",
   },
   {
     name: "twitter:title",
@@ -25,7 +25,7 @@ const metadata = [
   {
     name: "keywords",
     content:
-      "tableland, docs, documentation, web3, crypto, blockchain, SQL, SQLite, relational, database",
+      "tableland, docs, documentation, web3, crypto, blockchain, SQL, SQLite, relational, database, serverless, permissionless, evm, decentralized",
   },
 ];
 
