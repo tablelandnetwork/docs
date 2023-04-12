@@ -20,6 +20,7 @@
   --color-green: #162929;
   --color-darkgreen: #101e1e;
   --color-lightgreen: #3b4949;
+  --color-verylightgreen-rgb: 113, 139, 139;
   --color-verylightgreen: #718b8b;
   --color-neongreen: #0be291;
 
@@ -96,7 +97,10 @@
   --ifm-toc-border-color: var(--color-green) !important;
   --ifm-menu-color: var(--color-neonblue) !important;
   --ifm-card-background-color: var(--color-green) !important;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.4);
+  --docusaurus-highlighted-code-line-bg: rgba(
+    var(--color-verylightgreen-rgb),
+    0.2
+  );
   /* Make the navbar the same color as the background; include bottom box */
   --ifm-color-content-secondary: rgba(255, 255, 255, 1);
   --ifm-toc-link-color: var(--ifm-menu-color);
