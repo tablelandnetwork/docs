@@ -96,7 +96,7 @@
   --ifm-toc-border-color: var(--color-green) !important;
   --ifm-menu-color: var(--color-neonblue) !important;
   --ifm-card-background-color: var(--color-green) !important;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.4);
   /* Make the navbar the same color as the background; include bottom box */
   --ifm-color-content-secondary: rgba(255, 255, 255, 1);
   --ifm-toc-link-color: var(--ifm-menu-color);

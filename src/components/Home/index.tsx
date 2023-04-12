@@ -10,7 +10,7 @@ export default function Home(): JSX.Element {
   const { siteConfig } = useDocusaurusContext();
   return (
     <>
-      <header className="landing-page margin-top--lg">
+      <header className="landing-page margin-top--md">
         <div className="container">
           <div className="row">
             <h1 className="hero__title">Documentation</h1>
