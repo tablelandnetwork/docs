@@ -26,7 +26,7 @@ No, because these lead to non-deterministic behavior. But, you are free to store
 
 ## Can I update _more than one_ table in a single transaction?
 
-Yes, mutating queries (inserts, updates, deletes) can only touch _one or more tables at a time_. Keep in mind that if one of the statements fail, they all fail.
+Yes, mutating queries (inserts, updates, deletes) can touch _one or more tables at a time_. Keep in mind that if one of the statements fail, they all fail.
 
 ## Are all SQLite functions supported?
 
