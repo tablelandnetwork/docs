@@ -2,21 +2,21 @@ const metadata = [
   {
     name: "description",
     content:
-      "The official documentation for the Tableland Network. Build web3 with SQL using smart contracts, SDKs, and APIs, and learn all about the protocol.",
+      "The official documentation for Tableland. Read & write tamperproof data from apps, data pipelines, or EVM smart contracts.",
   },
   {
     name: "og:title",
     content:
-      "Tableland Docs: Store & query data using the serverless database for web3 apps.",
+      "Tableland Docs: Read & write tamperproof data using the decentralized cloud database for web3 apps.",
   },
   {
     name: "twitter:title",
-    content: "Tableland Docs",
+    content: "Tableland: Permissionless cloud database", // Need to fit within Twitter card title char limit
   },
   {
     name: "twitter:description",
     content:
-      "The official documentation for the Tableland Network. Build web3 with SQL.",
+      "Read & write tamperproof data from apps, data pipelines, or EVM smart contracts.",
   },
   {
     name: "og:site_name",
@@ -25,7 +25,7 @@ const metadata = [
   {
     name: "keywords",
     content:
-      "tableland, docs, documentation, web3, crypto, blockchain, SQL, SQLite, relational, database, serverless, permissionless, evm, decentralized",
+      "tableland, table land, docs, documentation, web3, crypto, blockchain, SQL, SQLite, relational, database, serverless, permissionless, evm, decentralized, data pipeline, open source",
   },
 ];
 
