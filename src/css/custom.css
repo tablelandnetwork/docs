@@ -294,11 +294,6 @@ a {
   transition: color var(--ifm-transition-fast);
 }
 
-/* Darken color on link hover; lighten on dark mode */
-a:hover {
-  text-decoration: underline;
-}
-
 /* In tooltips, highlight anchors are embedded links and change opacity on hover */
 .alert a {
   text-decoration: underline;
@@ -306,7 +301,7 @@ a:hover {
 }
 
 .alert a:hover {
-  text-decoration: underline;
+  text-decoration-thickness: inherit;
   opacity: 0.7;
   transition: opacity var(--ifm-transition-fast);
 }
