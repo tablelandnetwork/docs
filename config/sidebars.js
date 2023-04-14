@@ -238,7 +238,9 @@ const cli = [
   ...sidepageHeader("CLI"),
   ,
   "cli/README",
+  ...section("Commands"),
   "cli/commands",
+  ...section("Errors"),
   "cli/errors",
 ];
 
@@ -320,7 +322,7 @@ const sidebars = {
     {
       type: "doc",
       id: "cli/README",
-      label: "CLI",
+      label: "Command Line",
       className: "sidebar-landing",
     },
     {

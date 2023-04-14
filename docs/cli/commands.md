@@ -822,3 +822,44 @@ Which will print:
   }
 }
 ```
+
+You can use a multi-line query. The shell will check for a semi-colon to know when you're done.
+
+```bash
+tableland>select 
+tableland>    id, name
+tableland->   FROM
+tableland>    cli_demo_table_31337_2;
+{
+  meta: { duration: 18.574082374572754 },
+  success: true,
+  results: [ { id: 1, name: 'Bobby Tables' } ]
+}
+{
+  response: {
+    meta: { duration: 18.574082374572754 },
+    success: true,
+    results: [ { id: 1, name: 'Bobby Tables' } ]
+  }
+}
+```
+
+With write statements, (`create`, `update`, and `delete` statements) you'll need to confirm the write.
+Your flow would look like this: 
+
+```bash
+tableland shell
+tableland>insert into cli_demo_table_31337_2;
+You are sending a transaction to the network, using gas. Are you sure? (y/n) y
+[]
+{"updatedTable":"cli_demo_table_31337_2"}
+```
+
+There are also a couple of functions in the shell you can call. 
+
+Namely, `.help` and `.exit`.
+
+`.help` me give you help on how to use the command.
+
+`.exit` will close the shell.
+
