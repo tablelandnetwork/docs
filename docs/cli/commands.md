@@ -828,7 +828,7 @@ You can use a multi-line query. The shell will check for a semi-colon to know wh
 ```bash
 tableland>select 
 tableland>    id, name
-tableland->   FROM
+tableland>   FROM
 tableland>    cli_demo_table_31337_2;
 {
   meta: { duration: 18.574082374572754 },
