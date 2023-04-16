@@ -322,7 +322,7 @@ const sidebars = {
     {
       type: "doc",
       id: "cli/README",
-      label: "Command Line",
+      label: "CLI",
       className: "sidebar-landing",
     },
     {
