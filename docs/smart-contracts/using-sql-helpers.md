@@ -5,7 +5,7 @@ description: Use the SQL helpers library to make it easier write SQL in Solidity
 
 When creating and writing to tables, Solidity can be a bit challenging to work with when it comes to forming SQL statements. The `SQLHelpers` library provides a series of helper methods to ease writing create table statements, insert, updates, and deletes, and it also has a couple of common helpers. This page describes these methods, their function signatures, and links to the actual implementation.
 
-## [`toNameFromSchema`](https://github.com/tablelandnetwork/evm-tableland/blob/b350a363ea3d10bbeb3d3a088e9c27c77c6cae30/contracts/utils/SQLHelpers.sol#L20)
+## [`toNameFromId`](https://github.com/tablelandnetwork/evm-tableland/blob/b350a363ea3d10bbeb3d3a088e9c27c77c6cae30/contracts/utils/SQLHelpers.sol#L20)
 
 Pass a table `prefix` and `tableId`, which returns the formatted table name as `{prefix}_{chainId}_{tableId}` (e.g., `healthbot_1_1`).
 

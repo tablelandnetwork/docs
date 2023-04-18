@@ -55,12 +55,13 @@ You can create tables and write data to it within the same on-chain transaction,
 
 When a table is created or written to, there will be a "lag" between calling the smart contract and the time at which the event’s SQL instructions are materialized in Tableland. This "lag" is documented below as **a chain-driven limitation** due to block times.
 
-| Chain    | Average block finalization time |
-| -------- | ------------------------------- |
-| Ethereum | 13.5 seconds                    |
-| Optimism | 2 seconds                       |
-| Arbitrum | <0.5 seconds                    |
-| Polygon  | 2 seconds                       |
+| Chain         | Average block finalization time |
+| ------------- | ------------------------------- |
+| Ethereum      | 13.5 seconds                    |
+| Optimism      | 2 seconds                       |
+| Arbitrum One  | <0.5 seconds                    |
+| Arbitrum Nova | 2-3 seconds                     |
+| Polygon       | 2 seconds                       |
 
 ### Table reads
 

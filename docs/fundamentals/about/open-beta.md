@@ -44,7 +44,7 @@ During the open beta phase (between now and the production release), projects de
   - We will make our best effort to auto-redirect queries to the right chain, but just to be certain, please make sure `baseURI` is updatable.
   - In particular, NFT smart contracts should be able to update their `baseURI`, `tokenURI`, or any other method that references the the `testnets` gateway on a mainnet contract.
 - Another option is to future-proof your smart contracts to make sure [upgradeability patterns](https://docs.openzeppelin.com/upgrades-plugins/1.x/writing-upgradeable) are possible. This is not required but a potentially useful pattern to implement.
-- Note—Since this is a future endeavor, documentation on how to make these changes in your project does not exist yet but will be shared closer to the migration date. In the meantime, check out OpenZeppelin’s `[Ownable](https://docs.openzeppelin.com/contracts/2.x/api/ownership#Ownable)` (e.g., an `onlyOwner` modifier for altering a `baseURI`) and [upgradable contracts](https://github.com/OpenZeppelin/openzeppelin-contracts-upgradeable).
+- Note—since this is a future endeavor, documentation on how to make these changes in your project does not exist yet but will be shared closer to the migration date. In the meantime, check out OpenZeppelin’s [`Ownable`](https://docs.openzeppelin.com/contracts/2.x/api/ownership#Ownable) (e.g., an `onlyOwner` modifier for altering a `baseURI`) and [upgradable contracts](https://github.com/OpenZeppelin/openzeppelin-contracts-upgradeable).
 
 ### Are there costs involved?
 

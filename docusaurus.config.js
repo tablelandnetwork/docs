@@ -145,7 +145,7 @@ const config = {
           dark: "dark",
         },
         options: {
-          fontFamily: "Inter",
+          fontFamily: "Poppins",
         },
       },
       // Announcement bar is upon visiting the site and removed if the user closes it out (tracked in local storage)
