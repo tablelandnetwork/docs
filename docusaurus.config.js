@@ -41,7 +41,7 @@ const config = {
     {
       src: "https://cdn.usefathom.com/script.js",
       defer: true,
-      "data-site": "ZLIAETIW",
+      "data-site": process.env.FATHOM_SITE_ID,
     },
   ],
   stylesheets: [
