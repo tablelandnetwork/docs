@@ -47,8 +47,13 @@ export interface ChainFormatted {
 // for the "pretty" name and block explorer link.
 export const supportedChains = (): ChainFormatted[] => {
   const chains: any = helpers.supportedChains;
-  // Remove chain names for `local-host`, `homestead`, `optimism-goerli-staging`
-  const remove = [`localhost`, `homestead`, `optimism-goerli-staging`];
+  // Remove chain names for `localhost`, `homestead`, `optimism-goerli-staging`
+  const remove = [
+    `localhost`,
+    `homestead`,
+    `goerli`,
+    `optimism-goerli-staging`,
+  ];
   const filteredChains = Object.fromEntries(
     Object.entries(chains).filter(([chain]) => !remove.includes(chain))
   );
