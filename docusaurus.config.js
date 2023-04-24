@@ -36,6 +36,14 @@ const config = {
   themes: [
     "@docusaurus/theme-mermaid", // Used for diagrams
   ],
+  scripts: [
+    // Fathom analytics
+    {
+      src: "https://cdn.usefathom.com/script.js",
+      defer: true,
+      "data-site": process.env.FATHOM_SITE_ID,
+    },
+  ],
   stylesheets: [
     // Used for math / KaTeX formulas
     {
@@ -53,7 +61,6 @@ const config = {
         path: "./.env", // Path to your environment variables in `.env` file
       },
     ],
-    // "docusaurus-plugin-fathom", // Fathom site analytics tracking
     // If any redirects are needed, configure with `@docusaurus/plugin-client-redirects`
     // See docs here: https://docusaurus.io/docs/api/plugins/@docusaurus/plugin-client-redirects
   ],
@@ -95,9 +102,6 @@ const config = {
         defaultMode: "dark",
         disableSwitch: false,
         respectPrefersColorScheme: true,
-      },
-      fathomAnalytics: {
-        siteId: "QLCGWETC",
       },
       image: "img/tableland/site-banner.png", // Default image used in metadata, e.g., links shared on socials
       metadata, // Custom site metadata (imported via separate file)
