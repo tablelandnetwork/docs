@@ -13,8 +13,8 @@ function getChainExplorer(
     case "mainnet":
     case "homestead":
       return `https://etherscan.io/address/${contract}`;
-    case "goerli":
-      return `https://goerli.etherscan.io/address/${contract}`;
+    case "sepolia":
+      return `https://sepolia.etherscan.io/address/${contract}`;
     case "arbitrum":
       return `https://arbiscan.io/address/${contract}`;
     case "arbitrum-nova":
@@ -79,8 +79,8 @@ export const supportedChains = (): ChainFormatted[] => {
       case "arbitrum-nova":
         format.chainNameFormatted = "arbitrum nova";
         break;
-      case "goerli":
-        format.chainNameFormatted = "ethereum goerli";
+      case "sepolia":
+        format.chainNameFormatted = "ethereum sepolia";
         break;
       case "matic":
         format.chainNameFormatted = "polygon";

@@ -34,25 +34,25 @@ Because of its security, data can be viewed as more valuable on this chain. A hi
 - SDK network name: <ChainInfo chain='mainnet' info='chainName' /> or <ChainInfo chain='homestead' info='chainName' />
 - Tableland gateway: <ChainInfo chain='mainnet' info='baseUrl' />
 
-### Goerli (testnet)
+### Sepolia (testnet)
 
 - Average block time: 13.5 seconds
-- Chain ID: <ChainInfo chain='goerli' info='chainId' />
+- Chain ID: <ChainInfo chain='sepolia' info='chainId' />
 - Symbol: ETH
 - Status Dashboard:
-  - [https://stats.goerli.net/](https://stats.goerli.net/)
+  - [TODO](TODO)
 - Block Explorer:
-  - [https://goerli.etherscan.io/](https://goerli.etherscan.io/)
+  - [https://sepolia.etherscan.io/](https://sepolia.etherscan.io/)
 - Faucet:
-  - [https://goerlifaucet.com/](https://goerlifaucet.com/)
+  - [https://sepoliafaucet.com/](https://sepoliafaucet.com/)
   - [https://faucet.paradigm.xyz/](https://faucet.paradigm.xyz/)
 - RPC URL:
-  - See [https://chainlist.org/chain/5](https://chainlist.org/chain/5)
-- Tableland contract address: <ChainInfo chain='goerli' info='contractAddress' />
-- SDK network name: <ChainInfo chain='goerli' info='chainName' />
-- Tableland gateway: <ChainInfo chain='goerli' info='baseUrl' />
+  - See [https://chainlist.org/chain/11155111](https://chainlist.org/chain/11155111)
+- Tableland contract address: <ChainInfo chain='sepolia' info='contractAddress' />
+- SDK network name: <ChainInfo chain='sepolia' info='chainName' />
+- Tableland gateway: <ChainInfo chain='sepolia' info='baseUrl' />
 
 #### Getting testnet funds
 
-1. Request testnet Ether from a faucet noted above (e.g., [here](https://goerlifaucet.com/) or [here](https://faucet.paradigm.xyz/)).
+1. Request testnet Ether from a faucet noted above (e.g., [here](https://sepoliafaucet.com/) or [here](https://faucet.paradigm.xyz/)).
 2. Move the ETH from Ethereum to Optimism at [https://app.optimism.io/bridge](https://app.optimism.io/bridge)—i.e., select "ETH" or any other ERC20 tokens that exist on Ethereum Goerli that can be bridged.

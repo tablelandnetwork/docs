@@ -659,7 +659,7 @@ const dotenv = require("dotenv");
 dotenv.config();
 
 /**
- * Config sets the gateways to the proper node provider on Goerli & Polygon Mumbai testnets & loads the private key from `.env`
+ * Config sets the gateways to the proper node provider on Polygon Mumbai testnets & loads the private key from `.env`
  */
 module.exports = {
   solidity: "0.8.4",

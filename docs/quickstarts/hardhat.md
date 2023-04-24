@@ -204,21 +204,21 @@ npx hardhat run scripts/deploy.js --network local-tableland
 
 ## 5. Deploy to live networks
 
-If you want to deploy to a testnet or mainnet chain, you'll need to adjust the `--network` flag, which pulls information from the `hardhat.config.js` file. For example, you could add Ethereum `goerli` as a network. To do this, you'll have to use a provider like [Alchemy](https://www.alchemy.com/) with some account variables.
+If you want to deploy to a testnet or mainnet chain, you'll need to adjust the `--network` flag, which pulls information from the `hardhat.config.js` file. For example, you could add Ethereum `sepolia` as a network. To do this, you'll have to use a provider like [Alchemy](https://www.alchemy.com/) with some account variables.
 
 ```js title="hardhat.config.js"
 // highlight-start
 const ALCHEMY_API_KEY = "API_KEY";
-const GOERLI_PRIVATE_KEY = "GOERLI_PRIVATE_KEY";
+const SEPOLIA_PRIVATE_KEY = "SEPOLIA_PRIVATE_KEY";
 // highlight-end
 
 module.exports = {
   // ...
   // highlight-start
   networks: {
-    goerli: {
-      url: `https://eth-goerli.g.alchemy.com/v2/${ALCHEMY_API_KEY}`,
-      accounts: [GOERLI_PRIVATE_KEY],
+    sepolia: {
+      url: `https://eth-sepolia.g.alchemy.com/v2/${ALCHEMY_API_KEY}`,
+      accounts: [SEPOLIA_PRIVATE_KEY],
     },
   },
   // highlight-end
@@ -228,5 +228,5 @@ module.exports = {
 This will allow you to deploy to a live network:
 
 ```bash
-npx hardhat run scripts/deploy.js --network goerli
+npx hardhat run scripts/deploy.js --network sepolia
 ```
