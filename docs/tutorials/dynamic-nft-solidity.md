@@ -309,8 +309,8 @@ import EtherscanConnect from "@site/static/assets/tutorials/dynamic-nft-solidity
 
 <img src={EtherscanConnect} />
 
-1. You’ll need a wallet connected to Goerli.
-2. You’ll need some Goerli tokens from one of the available faucets.
+1. You’ll need a wallet connected to Sepolia.
+2. You’ll need some Sepolia tokens from one of the available faucets.
 3. You’ll need to click the `Connect to Web3` button in Etherscan shown above.
 
 ### Run safeMint()
@@ -330,7 +330,7 @@ import WalletTx from "@site/static/assets/tutorials/dynamic-nft-solidity/wallet-
 
 <img src={WalletTx} />
 
-Click the **Transaction hash** or similar in your wallet to see the transaction on Etherscan. The transaction will likely be pending for about a minute (maybe longer depending on Goerli usage).
+Click the **Transaction hash** or similar in your wallet to see the transaction on Etherscan. The transaction will likely be pending for about a minute (maybe longer depending on Sepolia usage).
 
 #### Locate Token ID in completed transaction
 
