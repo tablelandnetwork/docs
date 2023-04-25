@@ -40,7 +40,7 @@ Because of its security, data can be viewed as more valuable on this chain. A hi
 - Chain ID: <ChainInfo chain='sepolia' info='chainId' />
 - Symbol: ETH
 - Status Dashboard:
-  - [TODO](TODO)
+  - N/A
 - Block Explorer:
   - [https://sepolia.etherscan.io/](https://sepolia.etherscan.io/)
 - Faucet:
