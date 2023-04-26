@@ -55,12 +55,7 @@ const config = {
     },
   ],
   plugins: [
-    [
-      "docusaurus-plugin-dotenv",
-      {
-        path: "./.env", // Path to your environment variables in `.env` file
-      },
-    ],
+    // "docusaurus-plugin-fathom", // Fathom site analytics tracking
     // If any redirects are needed, configure with `@docusaurus/plugin-client-redirects`
     // See docs here: https://docusaurus.io/docs/api/plugins/@docusaurus/plugin-client-redirects
   ],
