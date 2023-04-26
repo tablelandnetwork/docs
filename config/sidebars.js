@@ -238,7 +238,9 @@ const cli = [
   ...sidepageHeader("CLI"),
   ,
   "cli/README",
+  ...section("Commands"),
   "cli/commands",
+  ...section("Errors"),
   "cli/errors",
 ];
 
