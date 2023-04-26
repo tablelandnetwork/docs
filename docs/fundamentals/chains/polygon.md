@@ -30,9 +30,9 @@ For comparison, Polygon supports 7k tx/s compared to Ethereum’s 15 tx/s and ~1
 - RPC URL:
   - [https://polygon-rpc.com](https://polygon-rpc.com/)
   - See [https://chainlist.org/chain/137](https://chainlist.org/chain/137)
-- Tableland contract address: <ChainInfo chain='maticmum' info='contractAddress' />
-- SDK network name: <ChainInfo chain='maticmum' info='chainName' />
-- Tableland gateway: <ChainInfo chain='maticmum' info='baseUrl' />
+- Tableland contract address: <ChainInfo chain='matic' info='contractAddress' />
+- SDK network name: <ChainInfo chain='matic' info='chainName' />
+- Tableland gateway: <ChainInfo chain='matic' info='baseUrl' />
 
 ### Polygon Mumbai (testnet)
 
@@ -51,9 +51,9 @@ For comparison, Polygon supports 7k tx/s compared to Ethereum’s 15 tx/s and ~1
   - [https://gasstation-mumbai.matic.today/v2](https://gasstation-mumbai.matic.today/v2)
 - RPC URL:
   - See [https://chainlist.org/chain/80001](https://chainlist.org/chain/80001)
-- Tableland contract address: <ChainInfo chain='matic' info='contractAddress' />
-- SDK network name: <ChainInfo chain='matic' info='chainName' />
-- Tableland gateway: <ChainInfo chain='matic' info='baseUrl' />
+- Tableland contract address: <ChainInfo chain='maticmum' info='contractAddress' />
+- SDK network name: <ChainInfo chain='maticmum' info='chainName' />
+- Tableland gateway: <ChainInfo chain='maticmum' info='baseUrl' />
 
 #### Getting testnet funds
 
