@@ -1,39 +1,68 @@
-# Tableland Specifications
+# Tableland Docs
 
-![image](https://user-images.githubusercontent.com/6136245/153219831-53b05f19-1ac2-4523-b564-0686e2078d4d.png)
+[![License](https://img.shields.io/github/license/tablelandnetwork/docs.svg)](./LICENSE)
+[![standard-readme compliant](https://img.shields.io/badge/standard--readme-OK-green.svg)](https://github.com/RichardLitt/standard-readme)
+[![](https://img.shields.io/badge/made%20by-Textile%20-blue.svg?style=flat-square)](http://textile.io)
 
-![stable](https://img.shields.io/badge/status-stable-brightgreen.svg?style=flat-square)
-<a href="http://textile.io"><img src="https://img.shields.io/badge/made%20by-Textile%20-blue.svg?style=flat-square" /></a>
-
-Tableland is a permissionless, serverless relational database protocol. It is a multi-chain deployable, cross-chain compatible network of validator nodes that sits besides blockchains and acts as an extension thereof. Nodes materialize event-based smart contract SQL instructions in local instances of SQLite (with some constraints) and share state accordingly. A decentralized approach toward enabling mutable, queryable, and composable data via SQL.
-
-The network is currently in open beta and can currently be used on multiple testnet and mainnet chains.
+> The official documentation for the Tableland protocol.
 
 ## Table of Contents
 
 - [Background](#background)
-- [Index](#index)
-- [Documentation & Support](#documentation--support)
+- [Usage](#usage)
+- [Development](#development)
+  - [Build](#build)
+  - [Specifications](#specifications)
+  - [Caching](#caching)
 - [Contributing](#contributing)
 - [License](#license)
 
-# Background
+## Background
 
-This repository hosts the [Tableland](https://tableland.xyz/) protocol specifications. The following label system is used to help identify the current state of each spec:
+This repository hosts the official [Tableland](https://tableland.xyz/) documentation and protocol specifications. Tableland is a decentralized database built on the SQLite engine, providing developers with a web3-native, relational database that easily integrates into their stack. The Tableland docs describe fundamental network concepts, how to use the protocol across various clients (SDK, CLI, APIs), operating your validator node, tutorials, and much more.
+
+The docs site is built with [Docusaurus 2](https://docusaurus.io/)—a React static site generator—and uses Markdown files in the `docs` directory. Protocol specs for SQL and the validator Gateway API are located in the `specs` directory:
+
+- [SQL](specs/sql/): These specs define the SQL language compliant with the Tableland protocol. It is a subset of the [SQLite SQL language specification](https://www.sqlite.org/lang.html), with additional constraints specific to Tableland operations. It does omit many features while at the same time adds a few features of its own.
+- [Gateway API](specs/validator/): These specs define the Tableland validator node's REST API for the Tableland protocol. It allows for various table queries and validator-related information to be retrieved using an HTTPS Gateway.
+
+The following label system is used to help identify the current state of each spec:
 
 - ![wip](https://img.shields.io/badge/status-wip-orange.svg?style=flat-square) → A work-in-progress. It may be used to describe an idea before actually committing to a full draft of the spec.
 - ![draft](https://img.shields.io/badge/status-draft-yellow.svg?style=flat-square) → A draft that is ready to review and implementable.
 - ![stable](https://img.shields.io/badge/status-stable-brightgreen.svg?style=flat-square) → A spec that has been adopted (implemented). It might be improved but should not change fundamentally.
 
-# Index
+## Usage
 
-## [SQL specification](specs/sql/)
+The Tableland docs site is deployed and hosted with Vercel, and it's available at [https://docs.tableland.xyz/](https://docs.tableland.xyz/), which also includes the generated specs as site content.
 
-These specs define the SQL language compliant with the Tableland protocol. It is a subset of the [SQLite SQL language specification](https://www.sqlite.org/lang.html), with additional constraints specific to Tableland operations. It does omit many features while at the same time adds a few features of its own.
+## Development
 
-### Building
+To develop locally, first do the following:
 
-The SQL specification document can be generated from its parts via:
+1. Use `npm` to install dependencies: `npm install`
+2. (Optional) If you are a core contributor and have access to the official Algolia and Fathom variables defined in the `.env` file, update them. But, local-only development should not need them to be configured as these are needed for production only.
+
+Then, start the site for local development, which should open up on `http://localhost:3000` and update upon component or `docs` directory changes:
+
+```bash
+npm run start
+```
+
+### Build
+
+It's important to also build and serve the site locally as this may uncover static site compatability issues that should, instead, be handled by a [custom plugin](https://docusaurus.io/docs/advanced/plugins). Perform this with the following commands as a final step during development:
+
+```bash
+npm run build
+npm run serve
+```
+
+A production build uses these commands as well.
+
+### Specifications
+
+The SQL specification is split into a few separate files. A single README document can be generated from its parts by doing the following:
 
 ```shell
 cd specs/sql
@@ -47,11 +76,7 @@ pandoc -s --toc \
     -o README.md
 ```
 
-## [Validator API specification](specs/validator/)
-
-### Building
-
-The OpenAPI specification document is used to generate clients and services that drive the Tabeland Validator. It can also be used to generate Markdown documentation via:
+The Gateway API is defined by an OpenAPI specification document, which is also used to generate clients and services that drive the Tableland validator. The OpenAPI spec can be used to generate Markdown documentation by running the following, which first generates a `Specification.md` file and then combines it to produce a single README:
 
 ```shell
 npm i -g widdershins
@@ -67,14 +92,20 @@ pandoc -s --toc --toc-dept 2 -t gfm \
     -o README.md
 ```
 
-# Documentation & Support
+### Caching
 
-For user support, please see the official [Documentation](https://docs.tableland.xyz/) and/or join the [Tableland Discord](https://t.co/m1ItWcJTLG).
+Deployments leverage caching to improve build times—the following will be generated locally but are ignored via the `.gitignore` file:
 
-# Contributing
+`.docusaurus`: caches the site structure upon each `build` process completion.
+`build`: caches static site assets.
+`node_modules`: caches `node_modules` and updates upon changes to package dependencies.
 
-PRs accepted.
+## Contributing
 
-# License
+PRs accepted. Please review additional details explained in the [contributing](https://docs.tableland.xyz/contribute) section of the docs site.
+
+Small note: If editing the README, please conform to the [standard-readme](https://github.com/RichardLitt/standard-readme) specification.
+
+## License
 
 MIT AND Apache-2.0, © 2021-2022 Tableland Network Contributors

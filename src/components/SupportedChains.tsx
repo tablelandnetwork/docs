@@ -21,6 +21,10 @@ function getChainExplorer(
       return `https://nova.arbiscan.io/address/${contract}`;
     case "arbitrum-goerli":
       return `https://goerli.arbiscan.io/address/${contract}`;
+    case "filecoin":
+      return `https://filfox.info/address/${contract}`;
+    case "filecoin-hyperspace":
+      return `https://hyperspace.filfox.info/address/${contract}`;
     case "optimism":
       return `https://optimistic.etherscan.io/address/${contract}`;
     case "optimism-goerli":
@@ -86,6 +90,8 @@ export const supportedChains = (): ChainFormatted[] => {
         break;
       case "sepolia":
         format.chainNameFormatted = "ethereum sepolia";
+      case "filecoin-hyperspace":
+        format.location = "testnet";
         break;
       case "matic":
         format.chainNameFormatted = "polygon";
