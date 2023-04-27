@@ -107,9 +107,6 @@ const config = {
         disableSwitch: false,
         respectPrefersColorScheme: true,
       },
-      fathomAnalytics: {
-        siteId: "QLCGWETC",
-      },
       // Default image used in metadata, e.g., links shared on socials
       image: "img/tableland/site-banner.png",
       metadata, // Custom site metadata (imported via separate file)
