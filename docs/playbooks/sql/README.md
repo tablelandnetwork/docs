@@ -49,7 +49,7 @@ Tableland doesn't have full SQLite parity. Let's review a TL;DR of what to look 
 - Foreign keys constraints are not supported.
 - Some common SQL languages have type support for numbers with decimals (floats / reals), dates / times, and booleans, but Tableland **does not support any of these** (see the [data type docs](/playbooks/sql#data-types)).
 - Subqueries ("nesting" `SELECT` statements within a query) are fully supported in read queries but limited to flattened subqueries for inserts and cannot be used in updates nor deletes.
-- Mutating queries (inserts, updates, deletes) can touch one or more tables at a time (i.e., write to two different tables in the same transaction).
+- Mutating queries (inserts, updates, deletes) can touch one or more tables in a single _transaction_, but they cannot touch multiple tables in a single _string of statements_.
 - Be sure to wrap any `TEXT` in a single quotes (`'`), including hexadecimals numbers (like account addresses).
 - Custom SQL functions (`TXN_HASH()` and `BLOCK_NUM()`) for accessing blockchain-related transaction hash and block numbers associated with a SQL query.
 - Not _all_ of the SQLite [functions](https://www.sqlite.org/lang_corefunc.html) are supported, and be aware that unsupported types impact their usage as well.

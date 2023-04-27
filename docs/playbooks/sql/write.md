@@ -162,24 +162,33 @@ Note that if you want to "delete" a single value in a row but not the whole row 
 
 ## Multiple tables & atomicity
 
-It's important to understand how transaction atomicity works in the context of both the Tableland database and base blockchain. The examples above all demonstrate how to mutate a single table, but what happens if you want to alter multiple tables at a time?
+It's important to understand how transactions work in the context of both the Tableland database and base blockchain. The examples above all demonstrate how to mutate a single table, but what happens if you want to alter multiple tables?
 
-When you write data, it can touch one or more tables in a single blockchain transaction _if and only if_ they are in separate statement strings. You cannot make a single SQL query that mutates different tables. For example, the following query is **invalid** and would fail since it touches two different tables in a single statement string:
+When you write data, a mutation request is passed as a single string that includes one or more statements, separated by a semicolon (`;`). This string _cannot_ touch multiple tables but only a single one. For example, the following query is **invalid** and would fail since multiple statements reference different tables (`my_table`, `other_table`) in a single string:
 
 ```sql
-/* A single query string */
+/* A single string, different tables */
 INSERT INTO my_table(id) VALUES(1); INSERT INTO other_table(id) VALUES(2);
 ```
 
-However, the following set of queries are totally **valid** if included in single blockchain transaction and will insert values into two different tables (assuming there aren't issues like invalid syntax or permissions):
+If, instead, it was the same table in each statement in the string, it would be valid:
 
 ```sql
-/* First query string */
-INSERT INTO my_table(id) VALUES(1);
-/* Second query string */
+/* A single string, same table */
+INSERT INTO my_table(id) VALUES(1); INSERT INTO my_table(id) VALUES(2);
+```
+
+The following set of queries are also **valid** if included in a single transaction and will insert values into two different tables (assuming there aren't issues like invalid syntax or permissions):
+
+```sql
+/* First string */
+INSERT INTO my_table(id) VALUES(1); INSERT INTO my_table(id) VALUES(2);
+/* Second, separate string */
 INSERT INTO other_table(id) VALUES(2);
 ```
 
-There is a bit of nuance here due to the duplicative "transaction" language across databases and blockchains. A single _database_ transaction (i.e., the first example) is a single statement string which cannot touch multiple but only a single table. A single _blockchain_ transaction (i.e., the second example) can include multiple _database transactions_ that touch more than one table, but each individual statement string can only touch a single table.
+There is a bit of nuance here. A single _string of statements_ contains contiguous statements such that each must touch the same table. A single _transaction_ can include one or more submitted _strings of statements_ such that each string can touch a different table.
 
-Note that the blockchain transactions can be viewed as [atomic](/fundamentals/architecture/protocol-design#atomicity) such that the first query is executed prior to the second one, and if one of these queries fails, they both fail.
+In other words, you can only touch multiple tables in a single transaction if queries are submitted in a way that keeps the strings separate from each other. How these are submitted / committed is abstracted at the client level, such as with the Tableland SDK or registry smart contract call, to help make this distinction a bit more clear.
+
+Note that transactions can be viewed as [atomic](/fundamentals/architecture/protocol-design#atomicity) such that if one of the queries in a single transaction fails, they all fail.
