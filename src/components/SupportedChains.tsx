@@ -13,8 +13,8 @@ function getChainExplorer(
     case "mainnet":
     case "homestead":
       return `https://etherscan.io/address/${contract}`;
-    case "goerli":
-      return `https://goerli.etherscan.io/address/${contract}`;
+    case "sepolia":
+      return `https://sepolia.etherscan.io/address/${contract}`;
     case "arbitrum":
       return `https://arbiscan.io/address/${contract}`;
     case "arbitrum-nova":
@@ -47,8 +47,13 @@ export interface ChainFormatted {
 // for the "pretty" name and block explorer link.
 export const supportedChains = (): ChainFormatted[] => {
   const chains: any = helpers.supportedChains;
-  // Remove chain names for `local-host`, `homestead`, `optimism-goerli-staging`
-  const remove = [`localhost`, `homestead`, `optimism-goerli-staging`];
+  // Remove chain names for `localhost`, `homestead`, `optimism-goerli-staging`
+  const remove = [
+    `localhost`,
+    `homestead`,
+    `goerli`,
+    `optimism-goerli-staging`,
+  ];
   const filteredChains = Object.fromEntries(
     Object.entries(chains).filter(([chain]) => !remove.includes(chain))
   );
@@ -79,8 +84,8 @@ export const supportedChains = (): ChainFormatted[] => {
       case "arbitrum-nova":
         format.chainNameFormatted = "arbitrum nova";
         break;
-      case "goerli":
-        format.chainNameFormatted = "ethereum goerli";
+      case "sepolia":
+        format.chainNameFormatted = "ethereum sepolia";
         break;
       case "matic":
         format.chainNameFormatted = "polygon";

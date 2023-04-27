@@ -59,10 +59,10 @@ invalid private key (argument="privateKey", value="[[ REDACTED ]]", code=INVALID
 
 ## Chain ID mismatch
 
-Every table is created and unique to the host chain. If you specify the _wrong_ `chain`, you're effectively trying to interact with something that doesn't exist. For example, trying to write to a table named `healthbot_1_1` (a mainnet Ethereum table—on chain ID `1`) while the `chain` specified is Ethereum's testnet (`goerli`, which is a chain ID of `5`) would raise an error.
+Every table is created and unique to the host chain. If you specify the _wrong_ `chain`, you're effectively trying to interact with something that doesn't exist. For example, trying to write to a table named `healthbot_1_1` (a mainnet Ethereum table—on chain ID `1`) while the `chain` specified is Ethereum's testnet (`sepolia`, which is a chain ID of `11155111`) would raise an error.
 
 ```bash
-chain id mismatch: received 5, expected 1
+chain id mismatch: received 11155111, expected 1
 ```
 
 ## Cannot determine chain ID

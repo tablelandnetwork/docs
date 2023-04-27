@@ -105,7 +105,7 @@ The EVM chain to target (default: `maticmum`).
 
 Testnets
 
-- `goerli` (Ethereum Goerli)
+- `sepolia` (Ethereum Sepolia)
 - `maticmum` (Polygon Mumbai)
 - `optimism-goerli` (Optimism Goerli)
 - `arbitrum-goerli` (Arbitrum Goerli)
@@ -166,7 +166,7 @@ homestead
 optimism
 arbitrum
 matic
-goerli
+sepolia
 optimism-goerli
 arbitrum-goerli
 maticmum
@@ -265,10 +265,10 @@ tableland chains
     "contractAddress": "0x5c4e6A9e5C1e1BF445A062006faF19EA6c49aFeA",
     "baseUrl": "https://tableland.network/api/v1"
   },
-  "goerli": {
-    "chainName": "goerli",
-    "chainId": 5,
-    "contractAddress": "0xDA8EA22d092307874f30A1F277D1388dca0BA97a",
+  "sepolia": {
+    "chainName": "sepolia",
+    "chainId": 11155111,
+    "contractAddress": "0xc50C62498448ACc8dBdE43DA77f8D5D2E2c7597D",
     "baseUrl": "https://testnets.tableland.network/api/v1"
   },
   "optimism-goerli": {

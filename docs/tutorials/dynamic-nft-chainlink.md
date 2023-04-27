@@ -373,8 +373,8 @@ async function main() {
   // Tableland gateway -- we'll only need `localhost` or `testnet` gateways, but a `mainnet` option is in the config
   let baseURIString =
     network.name === "localhost"
-      ? tablelandHost.localhost // `http://localhost:8080/query?extract=true&unwrap=true&s=`
-      : tablelandHost.testnet; // `https://testnets.tableland.network/query?extract=true&unwrap=true&s=`
+      ? tablelandHost.localhost // `http://localhost:8080/query?extract=true&unwrap=true&statement=`
+      : tablelandHost.testnet; // `https://testnets.tableland.network/query?extract=true&unwrap=true&statement=`
   // Note the base URI has `extract=true`, `unwrap=true`, and `statement` (for the SQL)
   // These are needed for creating ERC-721 compliant metadata
 
@@ -436,7 +436,7 @@ By depositing LINK, the Keeper network will be incentivized to make smart contra
 
 ## Dynamic NFT updates
 
-Now that Chainlink Automation is set up, the Keeper network will `performUpkeep` every 30 seconds, which is the values configured in our original contract. When the NFT is intially minted, it will have metadata for the "seed" — [here’s an example](https://testnets.tableland.network/query?extract=true&unwrap=true&s=select%20json_object%28%27name%27%2C%27Friendship%20Seed%20%23%27%7C%7Ctokens_80001_4153%2Eid%2C%27image%27%2C%27ipfs%3A%2F%2F%27%7C%7Ccid%7C%7C%27%2F%27%7C%7Cstage%7C%7C%27.jpg%27%2C%27attributes%27%2Cjson_array%28json_object%28%27display_type%27%2C%27string%27%2C%27trait_type%27%2C%27Flower%20Stage%27%2C%27value%27%2Cstage%29%2Cjson_object%28%27display_type%27%2C%27string%27%2C%27trait_type%27%2C%27Flower%20Color%27%2C%27value%27%2Ccolor%29%29%29%20from%20tokens_80001_4153%20join%20flowers_80001_4152%20on%20tokens_80001_4153%2Estage_id%20%3D%20flowers_80001_4152%2Eid%20where%20tokens_80001_4153%2Eid%3D1%20group%20by%20tokens_80001_4153%2Eid):
+Now that Chainlink Automation is set up, the Keeper network will `performUpkeep` every 30 seconds, which is the values configured in our original contract. When the NFT is intially minted, it will have metadata for the "seed" — [here’s an example](https://testnets.tableland.network/query?extract=true&unwrap=true&statement=select%20json_object%28%27name%27%2C%27Friendship%20Seed%20%23%27%7C%7Ctokens_80001_4153%2Eid%2C%27image%27%2C%27ipfs%3A%2F%2F%27%7C%7Ccid%7C%7C%27%2F%27%7C%7Cstage%7C%7C%27.jpg%27%2C%27attributes%27%2Cjson_array%28json_object%28%27display_type%27%2C%27string%27%2C%27trait_type%27%2C%27Flower%20Stage%27%2C%27value%27%2Cstage%29%2Cjson_object%28%27display_type%27%2C%27string%27%2C%27trait_type%27%2C%27Flower%20Color%27%2C%27value%27%2Ccolor%29%29%29%20from%20tokens_80001_4153%20join%20flowers_80001_4152%20on%20tokens_80001_4153%2Estage_id%20%3D%20flowers_80001_4152%2Eid%20where%20tokens_80001_4153%2Eid%3D1%20group%20by%20tokens_80001_4153%2Eid):
 
 ```json
 {
@@ -457,7 +457,7 @@ Now that Chainlink Automation is set up, the Keeper network will `performUpkeep`
 }
 ```
 
-Once the NFT updates, the metadata values will change — upon hitting the final stage, this will [resemble the following](https://testnets.tableland.network/query?extract=true&unwrap=true&s=select%20json_object%28%27name%27%2C%27Friendship%20Seed%20%23%27%7C%7Ctokens_80001_4153%2Eid%2C%27image%27%2C%27ipfs%3A%2F%2F%27%7C%7Ccid%7C%7C%27%2F%27%7C%7Cstage%7C%7C%27.jpg%27%2C%27attributes%27%2Cjson_array%28json_object%28%27display_type%27%2C%27string%27%2C%27trait_type%27%2C%27Flower%20Stage%27%2C%27value%27%2Cstage%29%2Cjson_object%28%27display_type%27%2C%27string%27%2C%27trait_type%27%2C%27Flower%20Color%27%2C%27value%27%2Ccolor%29%29%29%20from%20tokens_80001_4153%20join%20flowers_80001_4152%20on%20tokens_80001_4153%2Estage_id%20%3D%20flowers_80001_4152%2Eid%20where%20tokens_80001_4153%2Eid%3D0%20group%20by%20tokens_80001_4153%2Eid):
+Once the NFT updates, the metadata values will change — upon hitting the final stage, this will [resemble the following](https://testnets.tableland.network/query?extract=true&unwrap=true&statement=select%20json_object%28%27name%27%2C%27Friendship%20Seed%20%23%27%7C%7Ctokens_80001_4153%2Eid%2C%27image%27%2C%27ipfs%3A%2F%2F%27%7C%7Ccid%7C%7C%27%2F%27%7C%7Cstage%7C%7C%27.jpg%27%2C%27attributes%27%2Cjson_array%28json_object%28%27display_type%27%2C%27string%27%2C%27trait_type%27%2C%27Flower%20Stage%27%2C%27value%27%2Cstage%29%2Cjson_object%28%27display_type%27%2C%27string%27%2C%27trait_type%27%2C%27Flower%20Color%27%2C%27value%27%2Ccolor%29%29%29%20from%20tokens_80001_4153%20join%20flowers_80001_4152%20on%20tokens_80001_4153%2Estage_id%20%3D%20flowers_80001_4152%2Eid%20where%20tokens_80001_4153%2Eid%3D0%20group%20by%20tokens_80001_4153%2Eid):
 
 ```json
 {
