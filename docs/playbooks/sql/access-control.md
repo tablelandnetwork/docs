@@ -15,7 +15,7 @@ Tableland allows for _some_ SQL-based access control, along with smart contracts
 
 ## Usage
 
-To grant permissions for all table mutation abilities, you can make a write query that follows the general format below. Namely, you set the rules for `INSERT`, `UPDATE`, or `DELETE` permissions on a specific table to a specific on-chain address. Keep in mind the `0x` address should be treated as a `TEXT` value and **wrapped in single quotes**.
+To grant permissions for all table mutation abilities, you can make a write query that follows the general format below. Namely, you set the rules for `INSERT`, `UPDATE`, or `DELETE` permissions on a specific table to a specific on-chain address. Keep in mind the `0x` address should be treated as a `TEXT` value and **wrapped in single quotes**, and the examples below show `0xYOUR_EVM_ADDRESS` but be sure to update this accordingly with the correct EVM address.
 
 <Tabs>
 <TabItem value='grant' label="GRANT" default>
@@ -26,7 +26,7 @@ GRANT
   UPDATE,
   DELETE
 ON my_table
-TO 'DOCS_ADDR'
+TO '0xYOUR_EVM_ADDRESS'
 ```
 
 </TabItem>
@@ -38,7 +38,7 @@ REVOKE
   UPDATE,
   DELETE
 ON my_table
-TO 'DOCS_ADDR'
+TO '0xYOUR_EVM_ADDRESS'
 ```
 
 </TabItem>
@@ -65,7 +65,7 @@ GRANT
 ON
   my_table
 TO
-  'DOCS_ADDR';
+  '0xYOUR_EVM_ADDRESS';
 ```
 
 Perhaps at a point in the future, you decide to `REVOKE` the permission to `DELETE` rows via another access control write query:
@@ -76,7 +76,7 @@ REVOKE
 ON
   my_table
 FROM
-  'DOCS_ADDR';
+  '0xYOUR_EVM_ADDRESS';
 ```
 
 :::tip

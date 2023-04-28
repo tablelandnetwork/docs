@@ -28,7 +28,7 @@ Choose to define an optional prefix, such as `quickstart`. If you didn’t run t
 
 ```bash
 # Create a table & save its returned `name` locally
-tableland create "id int primary key, val text" --prefix "quickstart" --chain "DOCS_CHAIN_NAME" --privateKey "your_private_key"
+tableland create "id int primary key, val text" --prefix "quickstart" --chain "80001" --privateKey "your_private_key"
 ```
 
 ## 4. Write and read data
@@ -37,11 +37,11 @@ Insert (`write`) a value, and `read` from the newly updated table.
 
 ```bash
 # Write to the table by INSERTing a value
-# Note: every table `val` is unique, so replace this with your table
-tableland write "INSERT INTO quickstart_DOCS_CHAIN_ID_2 VALUES (0, 'Bobby Tables')" --chain "DOCS_CHAIN_NAME" --privateKey "your_private_key"
+# Note: every table is unique, so replace this with your table and correct `--chain`
+tableland write "INSERT INTO quickstart_80001_2 VALUES (0, 'Bobby Tables')" --chain "80001" --privateKey "your_private_key"
 
 # Read from the table
 # Note: replace the table name with yours
 # Although, anyone can *read* from *any* table, so this statement is valid for anyone
-tableland read "SELECT * FROM quickstart_DOCS_CHAIN_ID_2;" --chain "DOCS_CHAIN_NAME"
+tableland read "SELECT * FROM quickstart_80001_2;" --chain "80001"
 ```

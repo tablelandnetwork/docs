@@ -151,7 +151,7 @@ You can test it out yourself—try and successfully insert some row into `tbl_ca
 INSERT INTO
     tbl_calls_80001_1887 (message)
 VALUES
-    ('DOCS_ADDR');
+    ('0xYOUR_EVM_ADDRESS');
 ```
 
 ## Verifying Remix contracts
