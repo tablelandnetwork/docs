@@ -210,10 +210,10 @@ components:
           example: https://testnets.tableland.network/api/v1/tables/healthbot_5_1
         animation_url:
           type: string
-          example: https://render.tableland.xyz/anim/?chain=1&id=1
+          example: https://tables.tableland.xyz/1/1.html
         image:
           type: string
-          example: https://render.tableland.xyz/healthbot_5_1
+          example: https://tables.tableland.xyz/healthbot_5_1
         attributes:
           type: array
           items:
@@ -248,6 +248,12 @@ components:
         table_id:
           type: string
           example: "1"
+          deprecated: true 
+        table_ids:
+          type: array
+          items:
+            type: string
+          example: ["1", "2"]
         transaction_hash:
           type: string
           example: "0x02f319429b8a7be1cbb492f0bfbf740d2472232a2edadde7df7c16c0b61aa78b"
