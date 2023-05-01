@@ -1,9 +1,3 @@
-
-
-
-
-
-
 ## shell
 
 Interact with tableland via an interactive shell environment.
@@ -43,3 +37,25 @@ Which will print:
   }
 }
 ```
+
+## Using with ENS
+
+:::warning
+ENS support is very experimental. Long term support is not gaurunteed.
+:::warning
+
+## Using ENS
+
+:::warning
+ENS support is very experimental. Long term support is not gaurunteed.
+:::warning
+
+You must specify the `enableEnsExperiment` flag, either in your `.tablelandrc` file or your flags. You must also specify an `ensProviderUrl`, which should use a provider for an ENS compatible testnet or mainnet.
+
+If an ENS text record has a record corresponding to a table, you can fetch it like so.
+
+```bash
+select * from [example.foo.bar.eth];
+```
+
+See `namespace` command for more details on how to add tables to ENS.
