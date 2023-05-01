@@ -1,4 +1,3 @@
-
 ## write
 
 `tableland write <statement>` _(string)_
@@ -46,3 +45,19 @@ tableland write "INSERT INTO cli_demo_table_31337_2 VALUES (1, 'Bobby Tables');"
   link: ''
 }
 ```
+
+## Using ENS
+
+:::warning
+ENS support is very experimental. Long term support is not gaurunteed.
+:::warning
+
+You must specify the `enableEnsExperiment` flag, either in your `.tablelandrc` file or your flags. You must also specify an `ensProviderUrl`, which should use a provider for an ENS compatible testnet or mainnet.
+
+If an ENS text record has a record corresponding to a table, you can fetch it like so.
+
+```
+tableland write "insert into [example.foo.bar.eth] (id, message) values (1, 'Some message');"
+```
+
+See `namespace` command for more details on how to add tables to ENS.
