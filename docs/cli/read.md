@@ -77,3 +77,19 @@ The extract command will give you the results of a single column. Make sure your
 tableland read "select counter from healthbot 31337_1;" --extract --chain "local-tableland"
 // Result: [1]
 ```
+
+## Using ENS
+
+:::warning
+ENS support is very experimental. Long term support is not gaurunteed.
+:::warning
+
+You must specify the `enableEnsExperiment` flag, either in your `.tablelandrc` file or your flags. You must also specify an `ensProviderUrl`, which should use a provider for an ENS compatible testnet or mainnet.
+
+If an ENS text record has a record corresponding to a table, you can fetch it like so.
+
+```
+tableland read "select * from [example.foo.bar.eth];"
+```
+
+See `namespace` command for more details on how to add tables to ENS.
