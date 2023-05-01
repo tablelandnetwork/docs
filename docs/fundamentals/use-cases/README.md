@@ -27,6 +27,10 @@ The TL;DR is that Tableland can be used as a data storage option with on-chain d
 - Cross-chain table storage for multichain NFTs where metadata is composed at the NFT smart contract.
 - Global leaderboards, game state, user settings, character inventory, or anything that needs a way to store game data in a permissionless database.
 
+:::tip
+Looking for more? Check out the page on [how to build an NFT](/how-to-build-an-nft), including additional resources for defining an [optimal SQL table structure](/playbooks/walkthroughs/nft-metadata) or [building a dynamic NFT in Solidity](/tutorials/dynamic-nft-solidity).
+:::
+
 ### Data DAOs & token gating
 
 - Storing large media on file storage networks (IPFS, Filecoin, etc.) where pointers and metadata exist in tables.

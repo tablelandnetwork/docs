@@ -1,6 +1,10 @@
 ---
 title: Gated voting
 description: Create a contract that gates writes to a voting table based on ERC721 token ownership.
+keywords:
+  - token gating
+  - nft gating
+  - dao voting
 ---
 
 Collaborative data often needs some way to permissionlessly ensure only the correct users can change table data. For example, a DAO could have some knowledge base or protocol decision that anyone with DAO token ownership can cast a vote. This setup established both a questions and an answers table:
@@ -125,6 +129,8 @@ contract TablelandVoter is ITablelandController {
 ```
 
 ## NFT contract
+
+Below is a basic NFT contract, but if you're trying to create your own NFT using Tableland, check out the page on [how to build an NFT](/how-to-build-an-nft). It outlines additional resources like defining an [optimal SQL table structure](/playbooks/walkthroughs/nft-metadata) or [building a dynamic NFT in Solidity](/tutorials/dynamic-nft-solidity).
 
 ```solidity
 // SPDX-License-Identifier: MIT

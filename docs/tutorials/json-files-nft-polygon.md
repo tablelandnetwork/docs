@@ -4,8 +4,8 @@ sidebar_label: JSON files to tables & NFTs
 description: Take local JSON files, parse them into tables, and deploy the data as an NFT collection on Polygon.
 keywords:
   - polygon
-  - json
-  - dynamic nft
+  - json metadata
+  - nft metadata
 ---
 
 Tableland is a web3-native database that can be used to store data in relational tables. One of the most exciting use cases is using Tableland for _[NFT metadata](https://docs.opensea.io/docs/metadata-standards)_—which is a challenging problem in web3, especially for novel _dynamic NFT_ use cases. Developers must make tradeoffs between:
@@ -13,6 +13,10 @@ Tableland is a web3-native database that can be used to store data in relational
 - Expensive on-chain storage with very limited query-ability
 - Centralized storage, which doesn’t _enable_ web3 paradigms
 - Decentralized storage (e.g., IPFS), which is _great_ for file/image storage, but immutable files (CIDs) pose a challenge for novel NFT metadata use cases
+
+:::tip
+New to NFTs? Check out the page on [how to build an NFT](/how-to-build-an-nft), including additional resources for defining an [optimal SQL table structure](/playbooks/walkthroughs/nft-metadata) or [building a dynamic NFT in Solidity](/tutorials/dynamic-nft-solidity).
+:::
 
 ## Overview
 

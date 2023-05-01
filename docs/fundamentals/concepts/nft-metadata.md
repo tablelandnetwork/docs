@@ -2,6 +2,7 @@
 title: NFT metadata
 description: Understand the basics of storing and querying ERC721 metadata in table.
 keywords:
+  - nfts
   - nft metadata
   - erc721 metadata
 ---
@@ -121,3 +122,7 @@ Thus, when an NFT is rendered somewhere, the associated `value` would also chang
   "value": "red" // Previously, was `blue`
 }
 ```
+
+## Next steps
+
+Looking for more? Check out the page on [how to build an NFT](/how-to-build-an-nft), including additional resources for defining an [optimal SQL table structure](/playbooks/walkthroughs/nft-metadata) or [building a dynamic NFT in Solidity](/tutorials/dynamic-nft-solidity).

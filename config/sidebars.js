@@ -156,6 +156,8 @@ const quickstarts = [
   "quickstarts/wagmi",
   ...section("Contract frameworks"),
   "quickstarts/hardhat",
+  ...section("Guides"),
+  "quickstarts/how-to-build-an-nft",
 ];
 
 // SDK
