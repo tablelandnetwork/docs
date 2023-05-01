@@ -189,6 +189,16 @@ INSERT INTO other_table(id) VALUES(2);
 
 There is a bit of nuance here. A single _string of statements_ contains contiguous statements such that each must touch the same table. A single _transaction_ can include one or more submitted _strings of statements_ such that each string can touch a different table.
 
-In other words, you can only touch multiple tables in a single transaction if queries are submitted in a way that keeps the strings separate from each other. How these are submitted / committed is abstracted at the client level, such as with the Tableland SDK or registry smart contract call, to help make this distinction a bit more clear.
+In other words, you can only touch multiple tables in a single transaction if queries are submitted in a way that keeps the strings separate from each other. How these are submitted / committed is abstracted at the client level, such as with the Tableland SDK or registry smart contract call, to help make this distinction a bit more clear. For example, these clients provide a `mutate` method where you can pass individual strings of statements:
+
+<!-- prettier-ignore -->
+```js
+mutate(
+  [
+    "INSERT INTO my_table(id) VALUES(1); INSERT INTO my_table(id) VALUES(2);",
+    "INSERT INTO other_table(id) VALUES(2);",
+  ]
+);
+```
 
 Note that transactions can be viewed as [atomic](/fundamentals/architecture/protocol-design#atomicity) such that if one of the queries in a single transaction fails, they all fail.
