@@ -1,5 +1,3 @@
-//
-
 ## create
 
 `tableland create <schema> --prefix [prefix]` _(string; string)_
