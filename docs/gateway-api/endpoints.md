@@ -110,6 +110,10 @@ Example responses
 ```json
 {
   "table_id": "1",
+  "table_ids": [
+    "1",
+    "2"
+  ],
   "transaction_hash": "0x02f319429b8a7be1cbb492f0bfbf740d2472232a2edadde7df7c16c0b61aa78b",
   "block_number": 27055540,
   "chain_id": 80001,
@@ -339,6 +343,10 @@ This operation does not require authentication
 ```json
 {
   "table_id": "1",
+  "table_ids": [
+    "1",
+    "2"
+  ],
   "transaction_hash": "0x02f319429b8a7be1cbb492f0bfbf740d2472232a2edadde7df7c16c0b61aa78b",
   "block_number": 27055540,
   "chain_id": 80001,
@@ -349,14 +357,15 @@ This operation does not require authentication
 
 #### Properties
 
-| Name             | Type           | Required | Restrictions | Description |
-| ---------------- | -------------- | -------- | ------------ | ----------- |
-| table_id         | string         | false    | none         | none        |
-| transaction_hash | string         | false    | none         | none        |
-| block_number     | integer(int64) | false    | none         | none        |
-| chain_id         | integer(int32) | false    | none         | none        |
-| error            | string         | false    | none         | none        |
-| error_event_idx  | integer(int32) | false    | none         | none        |
+| Name             | Type           | Required | Restrictions | Description              |
+|------------------|----------------|----------|--------------|--------------------------|
+| table_id         | string         | false    | none         | This field is deprecated |
+| table_ids        | \[string\]     | false    | none         | none                     |
+| transaction_hash | string         | false    | none         | none                     |
+| block_number     | integer(int64) | false    | none         | none                     |
+| chain_id         | integer(int32) | false    | none         | none                     |
+| error            | string         | false    | none         | none                     |
+| error_event_idx  | integer(int32) | false    | none         | none                     |
 
 ### Schema
 
