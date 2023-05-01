@@ -38,12 +38,6 @@ Which will print:
 }
 ```
 
-## Using with ENS
-
-:::warning
-ENS support is very experimental. Long term support is not gaurunteed.
-:::warning
-
 ## Using ENS
 
 :::warning
