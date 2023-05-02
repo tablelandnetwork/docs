@@ -62,6 +62,7 @@ When a table is created or written to, there will be a "lag" between calling the
 | Arbitrum One  | <0.5 seconds                    |
 | Arbitrum Nova | 2-3 seconds                     |
 | Polygon       | 2 seconds                       |
+| Filecoin      | 30 seconds                      |
 
 ### Table reads
 
