@@ -1,40 +1,48 @@
-## info
+---
+title: Info
+description: Get info about a given table by name.
+keywords:
+  - CLI
+  - command line
+  - tableland info
+---
 
-`tableland info <name>` _(string)_
-Get info about a given table by name.
+## `tableland info <name>`
 
-```bash
-Positionals:
-  name  The target table name                                 [string] [required]
+Pass the table's `name` to then retrieve table information in the standard [ERC721 metadata](https://eips.ethereum.org/EIPS/eip-721) format, including the table’s name, creation data, external URL, and attributes.
 
-Options:
-      --help        Show help                                          [boolean]
-      --chain       The EVM compatible chain to target
-                                           [string] [default: "maticmum"]
-```
+| Argument | Type     | Description       |
+| -------- | -------- | ----------------- |
+| `<name>` | `string` | The table's name. |
 
 ### Example
 
-The response includes table information in a standard [ERC721 metadata](https://eips.ethereum.org/EIPS/eip-721) format, including the table’s name, creation data, external URL (which points to the Tableland gateway), and attributes:
-
 ```bash
-tableland info cli_demo_table_31337_2
+tableland info healthbot_1_1
 ```
+
+Output:
 
 ```json
 {
-  "name": "cli_demo_table_31337_2",
-  "externalUrl": "http://localhost:8080/chain/31337/tables/2",
-  "animationUrl": "https://render.tableland.xyz/?chain=31337&id=2",
-  "image": "https://bafkreifhuhrjhzbj4onqgbrmhpysk2mop2jimvdvfut6taiyzt2yqzt43a.ipfs.dweb.link",
+  "name": "healthbot_1_1",
+  "externalUrl": "https://tableland.network/api/v1/tables/1/1",
+  "animationUrl": "https://tables.tableland.xyz/1/1.html",
+  "image": "https://tables.tableland.xyz/1/1.svg",
   "schema": {
     "columns": [
-      { "name": "id", "type": "int", "constraints": ["primary key"] },
-      { "name": "name", "type": "text" }
+      {
+        "name": "counter",
+        "type": "integer"
+      }
     ]
   },
   "attributes": [
-    { "displayType": "date", "traitType": "created", "value": 1677184456 }
+    {
+      "displayType": "date",
+      "traitType": "created",
+      "value": 1674047325
+    }
   ]
 }
 ```

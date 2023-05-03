@@ -1,60 +1,61 @@
+---
+title: Transfer
+description: Transfer a table to another address.
+keywords:
+  - CLI
+  - command line
+  - tableland transfer
+---
 
-## transfer
+## `tableland transfer <name> <receiver>`
 
-Transfer a table to another address
+You can transfer table ownership from one address to another; the command must originate from the owner of the table. The global flags for `--privateKey`, `--chain`, and `--providerUrl` should also be included unless a config file has been created.
 
-```markdown
-Positionals:
-name The target table name [string] [required]
-receiver The address to transfer the table to [string] [required]
+| Argument     | Type     | Description                                       |
+| ------------ | -------- | ------------------------------------------------- |
+| `<name>`     | `string` | The table's name.                                 |
+| `<receiver>` | `string` | The hexadecimal address to transfer the table to. |
 
-Options:
+## Example
 
--k, --privateKey Private key string [string]
--c, --chain The EVM chain to target [string]
-```
-
-### Example
-
-Transfer a table from current wallet to another address
+Transfer a table from current wallet (set up during CLI configuration) to another address.
 
 ```bash
-tableland transfer example_table_313337_1 0x0000000000000000000000
+tableland transfer example_table_31337_2 0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC
 ```
 
-Response:
+Output:
 
-```JSON
+```json
 {
   "type": 2,
   "chainId": 31337,
-  "nonce": 1,
+  "nonce": 14,
   "maxPriorityFeePerGas": {
     "type": "BigNumber",
     "hex": "0x59682f00"
   },
   "maxFeePerGas": {
     "type": "BigNumber",
-    "hex": "0x7661cc5a"
+    "hex": "0x59682f0e"
   },
   "gasPrice": null,
   "gasLimit": {
     "type": "BigNumber",
-    "hex": "0x0115da"
+    "hex": "0xd2f7"
   },
   "to": "0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512",
   "value": {
     "type": "BigNumber",
     "hex": "0x00"
   },
-  "data": "0x42842e0e00000000000000000000000070997970c51812dc3a010c7d01b50e0d17dc79c80000000000000000000000003c44cdddb6a900fa2b585dd299e03d12fa4293bc0000000000000000000000000000000000000000000000000000000000000002",
+  "data": "0x42842e0e00000000000000000000000070997970c51812dc3a010c7d01b50e0d17dc79c80000000000000000000000003c44cdddb6a900fa2b585dd299e03d12fa4293bc000000000000000000000000000000000000000000000000000000000000000b",
   "accessList": [],
-  "hash": "0x300816cf3b569f446240966e48588c55f735db91beb86e601fec09c1cce52caa",
-  "v": 0,
-  "r": "0xe2e861751e1fde983daca55659856c90894c3275fa6505bb393af6a40186c8cb",
-  "s": "0x66553031615ac79e05cf46c826f130c5e122b04edcd441cc7acfa661ee7fb4c1",
+  "hash": "0x95d264cbc172ea2ef697ee1b74031b4c4753502547afbe656f429d8a9931342d",
+  "v": 1,
+  "r": "0xb7ca19b0d9908e357057b667bdfb2b2e8441b9795c5d6fa54615118c5ab73476",
+  "s": "0x26720dd46896ae6e18b9eb6dabddb4c4ae958435c36b89ecc3c86917665b7e99",
   "from": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
   "confirmations": 0
 }
-
 ```

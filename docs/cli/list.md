@@ -1,30 +1,46 @@
+---
+title: List
+description: List all tables owned by an address.
+keywords:
+  - CLI
+  - command line
+  - tableland list
+---
 
-## list
+## `tableland list [address]`
 
-`tableland list [address]` _(string)_
-List tables by address.
+You can query for a list of all tables owned by a particular address on a specific chain.
 
-```markdown
-Positionals:
-address The target address [string]
+| Argument    | Type     | Default                                 | Description                     |
+| ----------- | -------- | --------------------------------------- | ------------------------------- |
+| `[address]` | `string` | Address specified with the private key. | The target hexadecimal address. |
 
-Options:
---help Show help [boolean]
--k, --privateKey Private key string [string] [required]
---chain The EVM compatible chain to target
-[string] [default: "maticmum"]
-```
+## Example
 
-Using `list` command provides and easy way to understand which tables are owned by a certain address.
-
-### Example
-
-The retrieved information about those tables includes the table’s name, structure (describing the schema), and created time:
+List all of the tables owned by the address set up during configuration.
 
 ```bash
-# Be sure to either use the default `maticmum` or set the `--chain`
 tableland list
 ```
+
+Output:
+
+```json
+[
+  {
+    "tableId": "2",
+    "chainId": 31337
+  }
+]
+```
+
+Or, if you'd like query for a specific address, it may resemble the following:
+
+```bash
+tableland list 0x70997970C51812dc3A010C7d01b50e0d17dc79C8
+```
+
+Output:
 
 ```json
 [

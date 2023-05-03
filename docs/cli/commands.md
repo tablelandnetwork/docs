@@ -9,76 +9,72 @@ keywords:
 
 There are a number of commands available for interacting with Tableland. Each one has a specific set of required and optional arguments, plus various flags. Be sure to specify a `providerUrl` and `privateKey` for most commands, along with the desired host `chain`.
 
+The general command format is as follows:
+
 ```bash
 tableland <command> <arguments> [flags]
 ```
 
 ## Synopsis
 
-`tableland chains`
-List information about supported chains.
+`tableland chains`: List information about supported chains.
 
 ---
 
-`tableland controller <subcommand>` (string)
-Get, set, and lock the controller contract for a given table.
+`tableland controller <subcommand>`: Get, set, and lock the controller contract for a given table.
 
-- Show all controller `subcommand` values
-  `get <name>` _(string)_
-  Get the current controller address for a table.
-  ***
-  `set <controller> <name>` _(string; string)_
-  Set the controller address for a table.
-  ***
-  `lock <name>` _(string)_
-  Lock the controller address for a table.
+- `get <name>` : Get the current controller address for a table.
+- `set <controller> <name>`: Set the controller address for a table.
+- `lock <name>`: Lock the controller address for a table.
 
 ---
 
-`tableland create <schema> [prefix]` _(string; string)_
-Create a new table (prefix is optional).
+`tableland create <schema> [prefix]`: Create a new table (prefix is optional).
 
 ---
 
-`tableland info <name>` _(string)_
-Get info about a given table by name.
+`tableland info <name>`: Get info about a given table by name.
 
 ---
 
-`tableland init`
-\*\*Create a config file.
+`tableland init`: Create a config file.
 
 ---
 
-`tableland list <address>` _(string)_
-List tables by address.
+`tableland list <address>`: List tables owned by an address.
 
 ---
 
-`tableland read <statement>` _(string)_
-Run a read-only query against a remote table.
+`tableland namespace <subdomain> <name>`: Use ENS to namespace tables.
+
+- `set <subdomain> <name>`: Set the namespace with a subdomain mapped to a table.
+- `get <namespace>` : Get the table mapped to a namespace.
 
 ---
 
-`tableland receipt <hash>` _(string)_
-Get the receipt of a chain transaction to know if it was executed, and the execution details.
+`tableland read <statement>`: Run a read-only query against a remote table.
 
 ---
 
-`tableland schema <name>` _(string)_
-Get info about a given table schema.
+`tableland receipt <hash>`: Get the receipt of a chain transaction to know if it was executed, and the execution details.
 
 ---
 
-`tableland write <statement>` _(string)_
-Run a mutating SQL statement against a remote table.
+`tableland schema <name>`: Get info about a given table schema.
 
 ---
 
-`tableland shell [statement]` _(string)_
-Interact with tableland via an interactive shell environment.
+`tableland shell [statement]`: Interact with tableland via an interactive shell environment.
 
-## Global Flags
+---
+
+`tableland transfer <name> <receiver>`: Transfer a table to another address.
+
+---
+
+`tableland write <statement>`: Run a mutating SQL statement against a remote table.
+
+## Global flags
 
 The Tableland CLI includes a number of global flags.
 
@@ -94,13 +90,13 @@ Show version number.
 
 ---
 
-`-k, --privateKey <private_key>` _(string)_
+`-k, --privateKey <private_key>`
 Private key string.
 _Note: most commands, aside from read queries, will need to flag a `--privateKey` (or set the configuration variables with the `init` command)._
 
 ---
 
-`-c, --chain <chain_name>` _(string)_
+`-c, --chain <chain_name>`
 The EVM chain to target (default: `maticmum`).
 
 Testnets
@@ -126,13 +122,11 @@ Local
 
 ---
 
-`--baseUrl <url>` _(string)_
-The URL of a Tableland validator.
+`--baseUrl <url>`: The URL of a Tableland validator.
 
 ---
 
-`--providerUrl <url>` _(string)_
-JSON RPC API provider URL (e.g., `https://eth-rinkeby.alchemyapi.io/v2/123abc123a...`).
+`--providerUrl <url>`: JSON RPC API provider URL (e.g., `https://eth-mainnet.alchemyapi.io/v2/123abc123a...`).
 
 ---
 
@@ -142,9 +136,3 @@ The following are the default options:
 
 - `--chain` ⇒ `maticmum`
   Polygon Mumbai has been set as the default chain; any other chain names from the `tableland chains` command can be used.
-
-
-
-
-
-

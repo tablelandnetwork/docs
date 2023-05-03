@@ -1,17 +1,23 @@
+---
+title: Chains
+description: List information about supported chains.
+keywords:
+  - CLI
+  - command line
+  - tableland chains
+---
 
-## chains
+## `tableland chains`
 
-`tableland chains`
+The `chains` command retrieves which chains Tableland is deployed on by returning information about the deployment itself, including the chain name, id, and contract address.
 
-List information about supported chains.
-
-In particular, use the `chains` command to retrieve which chains Tableland is deployed on, which returns information about the deployment itself, including the chain name, id, and contract address:
-
-### Example
+## Example
 
 ```bash
 tableland chains
 ```
+
+Output:
 
 ```json
 {
