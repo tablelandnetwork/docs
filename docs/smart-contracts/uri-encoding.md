@@ -105,3 +105,7 @@ function tokenURI(string memory _tableName) public view returns (string memory) 
 ```
 
 The main callout—this `tokenURI` method produced the percent encoded URI (`"SELECT%20%2A%20FROM%20"`) outside of Solidity.
+
+## Next steps
+
+Looking for more? Check out the page on [how to build an NFT](/how-to-build-an-nft), including additional resources for defining an [optimal SQL table structure](/playbooks/walkthroughs/nft-metadata) or [building a dynamic NFT in Solidity](/tutorials/dynamic-nft-solidity).

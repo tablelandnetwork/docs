@@ -56,16 +56,16 @@ Note the address `0xabcdef0123456789abcdef0123456789abcd1234` should be updated 
 import writeAsProxy from "@site/static/assets/smart-contracts/immutable-table/write-as-proxy.png";
 import connectToWeb3 from "@site/static/assets/smart-contracts/immutable-table/connect_to_web3.png";
 import connectImg from "@site/static/assets/smart-contracts/immutable-table/connect.png";
-import goerliWarning from "@site/static/assets/smart-contracts/immutable-table/goerli_warning.png";
+import sepoliaWarning from "@site/static/assets/smart-contracts/immutable-table/sepolia_warning.png";
 import connectedImg from "@site/static/assets/smart-contracts/immutable-table/connected.png";
 import confirmTx from "@site/static/assets/smart-contracts/immutable-table/confirm_tx.png";
 import viewTx from "@site/static/assets/smart-contracts/immutable-table/view_the_tx.png";
 
 ## Using Etherscan
 
-Let’s assume you’ve created a table on Ethereum Goerli. You can use [Etherscan](https://goerli.etherscan.io/) to interact with the Tableland registry contract and burn your table by transferring it.
+Let’s assume you’ve created a table on Ethereum Sepolia. You can use [Etherscan](https://sepolia.etherscan.io/) to interact with the Tableland registry contract and burn your table by transferring it.
 
-1. Navigate to the registry contract on [Etherscan Goerli](https://goerli.etherscan.io/address/0xda8ea22d092307874f30a1f277d1388dca0ba97a#writeProxyContract) and click the _Write as Proxy_ tab.
+1. Navigate to the registry contract on [Etherscan Sepolia](https://sepolia.etherscan.io/address/0xc50C62498448ACc8dBdE43DA77f8D5D2E2c7597D#writeProxyContract) and click the _Write as Proxy_ tab.
 
   <img src={writeAsProxy} width='60%'/>
 
@@ -80,15 +80,15 @@ Let’s assume you’ve created a table on Ethereum Goerli. You can use [Ethersc
 
 5. Refresh the page, click _Connect_ again, select MetaMask, and then proceed after seeing the following message.
 
-    <img src={goerliWarning} width='60%'/>
+    <img src={sepoliaWarning} width='60%'/>
 
    - Note: Etherscan doesn’t have the _best_ user experience when it comes to the connection workflow, which is why you may have to refresh after connecting.
 
-6. Verify you’re connected to the Goerli network.
+6. Verify you’re connected to the Sepolia network.
 
    <img src={connectedImg} width='60%'/>
 
-7. Each of the accordions are methods of the Tableland registry smart contract. Scroll down to either [`safeTransferFrom`](https://goerli.etherscan.io/address/0xda8ea22d092307874f30a1f277d1388dca0ba97a#writeProxyContract#F8) or [`transferFrom`](https://goerli.etherscan.io/address/0xda8ea22d092307874f30a1f277d1388dca0ba97a#writeProxyContract#F13).
+7. Each of the accordions are methods of the Tableland registry smart contract. Scroll down to either [`safeTransferFrom`](https://sepolia.etherscan.io/address/0xc50C62498448ACc8dBdE43DA77f8D5D2E2c7597D#writeProxyContract#F8) or [`transferFrom`](https://sepolia.etherscan.io/address/0xc50C62498448ACc8dBdE43DA77f8D5D2E2c7597D#writeProxyContract#F13).
    1. The `tokenId` of a table that you want to make immutable.
    2. Your address (the table's owner) in `from`
    3. The address it should be sent `to`, which is [`0x000000000000000000000000000000000000dEaD`](https://etherscan.io/address/0x000000000000000000000000000000000000dEaD)).

@@ -23,12 +23,17 @@ function getChainCosts(token: string): number {
   // Hardcoded crypto prices
   const ethPrice = 1600;
   const maticPrice = 1.1;
+  // TODO: Update with static Filecoin price.
+  // const filPrice = 3.0;
 
   switch (token) {
     case "ETH":
       return ethPrice;
     case "MATIC":
       return maticPrice;
+    // TODO: Update with static Filecoin price.
+    // case "FIL":
+    //   return filPrice;
     default:
       return 0;
   }
@@ -36,11 +41,17 @@ function getChainCosts(token: string): number {
 
 // Retrieve chain cost approximations
 function chainCostInfo(): ChainCost[] {
-  const chains = supportedChains().filter(
+  let chains = supportedChains().filter(
     (chain) => chain.location === "mainnet"
   ) as ChainCost[];
+  // TODO: Calculate costs for Filecoin.
+  // TNP: Remove for now since costs are unknown.
+  chains = chains.filter((chain) => {
+    return chain.chainName !== "filecoin";
+  });
   const ethPrice = getChainCosts("ETH");
   const maticPrice = getChainCosts("MATIC");
+  // const filPrice = getChainCosts("FIL");
 
   chains.forEach((chain) => {
     switch (chain.chainName) {
@@ -119,6 +130,9 @@ function chainCostInfo(): ChainCost[] {
         chain.writeCostUsd = chain.writeCostCrypto * maticPrice;
         chain.writeCostUsdPerMb = chain.writeCostCryptoPerMb * maticPrice;
         break;
+      // TODO: Update with Filecoin information.
+      // case "filecoin":
+      //   chain.cryptoToken = "FIL";
       default:
         break;
     }
