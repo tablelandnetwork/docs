@@ -7,17 +7,13 @@ keywords:
   - tableland init
 ---
 
-## `tableland init`
+## init
 
-Before using the CLI, it’s best to set up a config file. This will create a JSON or YAML file that stores a `privateKey`, `chain`, and `providerUrl`. Once these are set, commands will leverage these values by default.
+`tableland init`
 
-| Option    | Type      | Default             | Description                                            |
-| --------- | --------- | ------------------- | ------------------------------------------------------ |
-| -y, --yes | `boolean` | `false`             | Skip the interactive prompts and use default values.   |
-| --path    | `string`  | Path to user's home | The path at which to create the config file.           |
-| --format  | `string`  | `yaml`              | The output config file format—either `json` or `yaml`. |
+Create a config file.
 
-## Example
+Before starting with the CLI, it’s best to create a config file. This will create a JSON or YAML file that stores a `privateKey`, `chain`, and `providerUrl`. Once these are set, commands will leverage these values.
 
 Run the command, and then follow the prompts:
 
@@ -34,7 +30,7 @@ homestead
 optimism
 arbitrum
 matic
-goerli
+sepolia
 optimism-goerli
 arbitrum-goerli
 maticmum

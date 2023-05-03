@@ -7,17 +7,19 @@ keywords:
   - tableland chains
 ---
 
-## `tableland chains`
+## chains
 
-The `chains` command retrieves which chains Tableland is deployed on by returning information about the deployment itself, including the chain name, id, and contract address.
+`tableland chains`
 
-## Example
+List information about supported chains.
+
+In particular, use the `chains` command to retrieve which chains Tableland is deployed on, which returns information about the deployment itself, including the chain name, id, and contract address:
+
+### Example
 
 ```bash
 tableland chains
 ```
-
-Output:
 
 ```json
 {
@@ -57,10 +59,10 @@ Output:
     "contractAddress": "0x5c4e6A9e5C1e1BF445A062006faF19EA6c49aFeA",
     "baseUrl": "https://tableland.network/api/v1"
   },
-  "goerli": {
-    "chainName": "goerli",
-    "chainId": 5,
-    "contractAddress": "0xDA8EA22d092307874f30A1F277D1388dca0BA97a",
+  "sepolia": {
+    "chainName": "sepolia",
+    "chainId": 11155111,
+    "contractAddress": "0xc50C62498448ACc8dBdE43DA77f8D5D2E2c7597D",
     "baseUrl": "https://testnets.tableland.network/api/v1"
   },
   "optimism-goerli": {
