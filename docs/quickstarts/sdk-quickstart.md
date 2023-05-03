@@ -29,7 +29,7 @@ Table _reads_ do not require an on-chain connection. You can import the `Databas
 ```js
 import { Database } from "@tableland/sdk";
 
-const tableName = "healthbot_DOCS_CHAIN_ID_1"; // Our pre-defined health check table
+const tableName = "healthbot_80001_1"; // Our pre-defined health check table
 
 const db = new Database();
 
@@ -44,7 +44,7 @@ console.log(results);
 import { Database } from "@tableland/sdk";
 
 // This table has schema: `counter INTEGER PRIMARY KEY`
-const tableName: string = "healthbot_DOCS_CHAIN_ID_1"; // Our pre-defined health check table
+const tableName: string = "healthbot_80001_1"; // Our pre-defined health check table
 
 interface HealthBot {
   counter: number;
@@ -108,7 +108,7 @@ const { meta: create } = await db
   .run();
 
 // The table's `name` is in the format `{prefix}_{chainId}_{tableId}`
-const { name } = create.txn!; // e.g., my_sdk_table_DOCS_CHAIN_ID_311
+const { name } = create.txn!; // e.g., my_sdk_table_80001_311
 ```
 
 </TabItem>
