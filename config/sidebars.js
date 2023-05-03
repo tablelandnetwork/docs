@@ -179,6 +179,8 @@ const sdk = [
   "sdk/reference/type-conversion",
   "sdk/reference/node-polyfills",
   // "sdk/reference/sdk-faqs",
+  ...section("Plugins"),
+  "sdk/plugins/JETI",
 ];
 
 // Smart contracts
