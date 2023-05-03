@@ -263,7 +263,7 @@ const cli = [
       "cli/write",
     ],
   },
-  ...section("Errors"),
+  ...section("Reference"),
   "cli/errors",
 ];
 
