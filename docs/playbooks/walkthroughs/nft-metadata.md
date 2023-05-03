@@ -232,3 +232,7 @@ WHERE id = <id> GROUP BY <id>;
 ```
 
 The JSON response is the same as before but much more future-proof and ready for dynamism. You could also choose to add other columns, such as an `animation_base_url` or similar.
+
+## Next steps
+
+Looking for more? Check out the page on [how to build an NFT](/how-to-build-an-nft), including additional resources for defining an [optimal SQL table structure](/playbooks/walkthroughs/nft-metadata) or [building a dynamic NFT in Solidity](/tutorials/dynamic-nft-solidity).

@@ -2,13 +2,12 @@
 title: Build a dynamic NFT in Solidity
 description: Create an on-chain game that uses SQL queries to create and populate a table of game state.
 keywords:
-  - tutorial
-  - solidity
-  - dynamic NFT
-  - p5.js
+  - dynamic nft
+  - nft metadata
+  - nft solidity
 ---
 
-Tableland enables ownership & on-chain rules to dictate table state mutation. For every mutation, the data is accessible with off-chain queries that can be displayed in an interface, such as an NFT-based game board. This tutorial walks through the basics of Solidity ERC721s and an app with shared state.
+Tableland enables ownership & on-chain rules to dictate table state mutation. For every mutation, the data is accessible with off-chain queries that can be displayed in an interface, such as an NFT-based game board. This tutorial walks through the basics of Solidity ERC721s and an app with shared state. Note that in the [second part of this tutorial](/tutorials/dynamic-nft-p5js.md), you'll use `p5.js` to add a visualization component to the app!
 
 ## Overview
 
@@ -23,6 +22,10 @@ import GameBoard from "@site/static/assets/tutorials/dynamic-nft-solidity/game-b
 When you build the game, you want users to own their pixels as an NFT. So, we can think of the game's architecture in two parts. The first part is an ERC-721 smart contract where users can mint pixels and then update the coordinates of pixels they own. The second part is a web app that displays the live locations of all the minted pixels and provides an interface for each owner to move their pixel. Today, we'll cover just the first part.
 
 The data's simplicity would make it great fun to build fully on-chain, but we'll use it to illustrate the basics of creating a smart contract that owns and populates relational data tables. Let's go!
+
+:::tip
+Looking for more? Check out the page on [how to build an NFT](/how-to-build-an-nft) to view additional resources for developing on Tableland, such as ERC721 compliant metadata standards.
+:::
 
 ### The NFT design
 

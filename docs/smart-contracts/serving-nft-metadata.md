@@ -3,7 +3,9 @@ title: Serve NFT metadata from smart contracts
 sidebar_label: Serve NFT metadata
 description: Learn how to write, format, and deploy SQL in your smart contracts to produce NFT JSON metadata.
 keywords:
-  - create table
+  - nft metadata
+  - erc721 metadata
+  - solidity nft
 ---
 
 Now that you have data stored as tables, you’ll need to serve it as metadata JSON so that marketplaces, wallets, and platforms can all pick it up for display. In short, you want to take a URL like this one:
@@ -25,6 +27,10 @@ https://testnets.tableland.network/query?unwrap=true&extract=true&s=SELECT json_
 ```
 
 ...and serve it from your smart contract so that apps trying to display your token can read each NFT metadata response one at a time. To do this, you’ll need to leverage the `tokenURI` or `uri` endpoints in your smart contracts.
+
+:::tip
+Looking for more? Check out the page on [how to build an NFT](/how-to-build-an-nft), including additional resources for defining an [optimal SQL table structure](/playbooks/walkthroughs/nft-metadata) or [building a dynamic NFT in Solidity](/tutorials/dynamic-nft-solidity).
+:::
 
 ## ERC721 tokenURIs
 
