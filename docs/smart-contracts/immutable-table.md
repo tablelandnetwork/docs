@@ -48,8 +48,10 @@ import "@tableland/evm/contracts/utils/TablelandDeployments.sol";
 Once that's ready, all you have to do is call one of the methods and transfer the table. We'll use `safeTransferFrom(address from, address to, uint256 tokenId)` with an example `tokenId` of `1`.
 
 ```solidity
-TablelandDeployments.get().safeTransferFrom(DOCS_ADDR, 0x000000000000000000000000000000000000dEaD, 1);
+TablelandDeployments.get().safeTransferFrom(0xabcdef0123456789abcdef0123456789abcd1234, 0x000000000000000000000000000000000000dEaD, 1);
 ```
+
+Note the address `0xabcdef0123456789abcdef0123456789abcd1234` should be updated to your address
 
 import writeAsProxy from "@site/static/assets/smart-contracts/immutable-table/write-as-proxy.png";
 import connectToWeb3 from "@site/static/assets/smart-contracts/immutable-table/connect_to_web3.png";
