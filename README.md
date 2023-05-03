@@ -96,9 +96,9 @@ pandoc -s --toc --toc-dept 2 -t gfm \
 
 Deployments leverage caching to improve build times—the following will be generated locally but are ignored via the `.gitignore` file:
 
-`.docusaurus`: caches the site structure upon each `build` process completion.
-`build`: caches static site assets.
-`node_modules`: caches `node_modules` and updates upon changes to package dependencies.
+- `.docusaurus`: caches the site structure upon each `build` process completion.
+- `build`: caches static site assets.
+- `node_modules`: caches `node_modules` and updates upon changes to package dependencies.
 
 ## Contributing
 
