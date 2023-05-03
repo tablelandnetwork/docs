@@ -1,45 +1,66 @@
-## controller
-
-`tableland controller <subcommand>`
-Get, set, and lock the controller contract for a given table.
-
-Use these commands as a helper to retrieve the controller of a table (`get`) or to set _or permanently_ lock the controller of a table (`set` or `lock`). Recall the `name` is in the format `{prefix}_{chainId}_{tableId}`.
-
-### Subcommands
-
-`get <name>` _(string)_
-
-Get the current controller address for a table.
-
+---
+title: Controller
+description: Get, set, and lock the controller contract for a given table.
+keywords:
+  - CLI
+  - command line
+  - tableland controller
 ---
 
-`set <controller> <name>` _(string [string])_
-Set the controller address for a table.
+## `tableland controller <subcommand>`
 
----
+Use these commands as a helper to retrieve the controller of a table (`get`) or to set _or permanently_ lock the controller of a table (`set` or `lock`). Recall the `name` is in the format `{prefix}_{chainId}_{tableId}`. The global flags for `--privateKey`, `--chain`, and `--providerUrl` should also be included unless a config file has been created.
 
-`lock <name>` _(string)_
+### `get <name>`
+
+Get the current controller address for a given table `name`.
+
+| Argument | Type     | Description       |
+| -------- | -------- | ----------------- |
+| `<name>` | `string` | The table's name. |
+
+### `set <controller> <name>`
+
+Set the `controller` address for a given table `name`.
+
+| Argument       | Type     | Description                                       |
+| -------------- | -------- | ------------------------------------------------- |
+| `<controller>` | `string` | The hexadecimal address to set the controller to. |
+| `<name>`       | `string` | The table's name.                                 |
+
+### `lock <name>`
+
 Lock the controller address for a table.
 
-### Example
+| Argument | Type     | Description       |
+| -------- | -------- | ----------------- |
+| `<name>` | `string` | The table's name. |
 
-`get`
+## Examples
+
+### `get`
 
 ```bash
 tableland controller get cli_demo_table_31337_2
 ```
 
+Output:
+
 ```json
 "0x0000000000000000000000000000000000000000"
 ```
 
-_Note: this example table originally had its controller set as `0x0`, which is the default value._
+:::note
+Notice how this example table originally has its controller set to `0x0`, which is the default value.
+:::
 
-`set`
+### `set`
 
 ```bash
 tableland controller set 0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC cli_demo_table_31337_2
 ```
+
+Output:
 
 ```json
 {
@@ -65,11 +86,13 @@ tableland controller set 0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC cli_demo_tab
 }
 ```
 
-`lock`
+### `lock`
 
 ```bash
 tableland controller lock cli_demo_table_31337_2
 ```
+
+Output:
 
 ```json
 {

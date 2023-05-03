@@ -1,63 +1,64 @@
-## write
+---
+title: Write
+description: Run a mutating SQL statement against a remote table.
+keywords:
+  - CLI
+  - command line
+  - tableland write
+---
 
-`tableland write <statement>` _(string)_
-Run a mutating SQL statement against a remote table.
+## `tableland write <statement>`
 
-```bash
-tableland write <statement>
+The `write` command allows for vanilla SQL `INSERT`, `UPDATE`, and `DELETE` statements.
 
-Positionals:
-  statement  SQL write statement                             [string] [required]
+| Argument      | Type     | Description             |
+| ------------- | -------- | ----------------------- |
+| `<statement>` | `string` | The mutating SQL query. |
 
-Options:
-      --help        Show help                                          [boolean]
-  -k, --privateKey  Private key string                                  [string]
-      --chain       The EVM compatible chain to target
-                                           [string] [default: "maticmum"]
-```
+One key aspect to keep in mind when working with tables is that you must specify the table `name` that you get back from the [`create`](/cli/create) command. The global flags for `--privateKey`, `--chain`, and `--providerUrl` should also be included unless a config file has been created.
 
-The `write` command allows for vanilla SQL `INSERT`, `UPDATE`, and `DELETE` statements. One key aspect to keep in mind when working with tables is that you must specify the table `name` that you get back from the `create` command.
+## Example
 
-### Example
-
-Using the `write` command will return a value of the blockchain’s _transaction hash:_
+Insert some values into a table, which will return other meaningful information like the block and transaction hash.
 
 ```bash
 tableland write "INSERT INTO cli_demo_table_31337_2 VALUES (1, 'Bobby Tables');"
 ```
 
+Output:
+
 ```json
 {
-  meta: {
-    duration: 118.1787919998169,
-    txn: {
-      tableId: '2',
-      transactionHash: '0x2406508ff28f673e9a080b6295af4cfd0de75a199f2a9044a1cad580cd0aae0a',
-      blockNumber: 135,
-      chainId: 31337,
-      wait: [AsyncFunction: wait],
-      name: 'cli_demo_table_31337_2',
-      prefix: 'cli_demo_table'
+  "meta": {
+    "duration": 95.6428337097168,
+    "txn": {
+      "tableIds": ["2"],
+      "transactionHash": "0x8e8b3150fcf3e18bca92d0db79d2a9eed49a7cbebbb2a938aecb1c2f90c275e3",
+      "blockNumber": 7362,
+      "chainId": 31337,
+      "tableId": "2",
+      "name": "_31337_2",
+      "prefix": ""
     }
   },
-  success: true,
-  results: [],
-  link: ''
+  "success": true,
+  "results": [],
+  "link": ""
 }
 ```
 
 ## Using ENS
 
 :::warning
-ENS support is very experimental. Long term support is not gaurunteed.
+ENS support is very experimental; long term support is not guaranteed!
 :::warning
 
 You must specify the `enableEnsExperiment` flag, either in your `.tablelandrc` file or your flags. You must also specify an `ensProviderUrl`, which should use a provider for an ENS compatible testnet or mainnet.
 
-If an ENS text record has a record corresponding to a table, you can fetch it like so.
+If an ENS text record has a record corresponding to a table, you can insert into it by wrapping the namespace in brackets and treating it as the table's name.
 
 ```
 tableland write "insert into [example.foo.bar.eth] (id, message) values (1, 'Some message');"
 ```
 
-See `namespace` command for more details on how to add tables to ENS.
+See the [`namespace`](/cli/namespace) command for more details on how to add tables to ENS.

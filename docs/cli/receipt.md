@@ -1,36 +1,52 @@
+---
+title: Receipt
+description: Get the receipt from a table's transaction.
+keywords:
+  - CLI
+  - command line
+  - tableland receipt
+---
 
+## `tableland receipt <txn_hash>`
 
-## receipt
+You can use `receipt` to get a mutating query's transaction information, including if it was executed and the execution details. This is especially useful for errors that occur when a transaction is successful, but the SQL execution was not (syntax error, insufficient permissions, etc.). The global flag for `--chain` should also be included unless a config file has been created.
 
-`tableland receipt <txn_hash>` _(string)_
-Get the receipt of a chain transaction to know if it was executed, and the execution details. This is useful for errors that occur when a transaction is successful but the SQL execution was not.
+| Argument | Type     | Description                                              |
+| -------- | -------- | -------------------------------------------------------- |
+| `<hash>` | `string` | The transaction hash from a table create or write query. |
 
-```bash
-tableland receipt <hash>
+## Example
 
-Positionals:
-  hash  Transaction hash                                     [string] [required]
-
-Options:
-      --help        Show help                                          [boolean]
-  -k, --privateKey  Private key string                       [string] [required]
-      --chain       The EVM compatible chain to target
-                                           [string] [default: "maticmum"]
-```
-
-### Example
-
-This allows you to retrieve data like the chain id, block number, and table ID—and note that the transaction hash itself is returned when running the `create` and `write` commands:
+Retrieve data associated with a transaction, including the block number, table ID, and chain ID.
 
 ```bash
-tableland receipt 0x2406508ff28f673e9a080b6295af4cfd0de75a199f2a9044a1cad580cd0aae0a --chain <chanName> --private-key <privateKey>
+tableland receipt 0xe62a3d3c5955e63b69daced639570e6e59559750d19a8e21bc91251a1876cce3 --chain maticmum
 ```
+
+Output:
 
 ```json
 {
-  "tableId": "2",
-  "transactionHash": "0x2406508ff28f673e9a080b6295af4cfd0de75a199f2a9044a1cad580cd0aae0a",
-  "blockNumber": 135,
-  "chainId": 31337
+  "tableId": "5942",
+  "transactionHash": "0xe62a3d3c5955e63b69daced639570e6e59559750d19a8e21bc91251a1876cce3",
+  "blockNumber": 35114209,
+  "chainId": 80001
+}
+```
+
+If some transaction has a problem and didn't mutate the database, this information will also be described in the `error` field:
+
+```bash
+tableland receipt 0xf186073a8b1e3eba78e76a91517bc0daf425bb0d3f10379a26f2b386bc28c2ea --chain maticmum
+```
+
+Output:
+
+```json
+{
+  "transactionHash": "0xf186073a8b1e3eba78e76a91517bc0daf425bb0d3f10379a26f2b386bc28c2ea",
+  "blockNumber": 35114382,
+  "chainId": 80001,
+  "error": "db query execution failed (code: SQLITE_cannot store TEXT value in INT column t_80001_5942.id, msg: cannot store TEXT value in INT column t_80001_5942.id)"
 }
 ```
