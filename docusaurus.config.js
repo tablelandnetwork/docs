@@ -36,6 +36,14 @@ const config = {
   themes: [
     "@docusaurus/theme-mermaid", // Used for diagrams
   ],
+  scripts: [
+    // Fathom analytics
+    {
+      src: "https://cdn.usefathom.com/script.js",
+      defer: true,
+      "data-site": process.env.FATHOM_SITE_ID,
+    },
+  ],
   stylesheets: [
     // Used for math / KaTeX formulas
     {
@@ -47,12 +55,6 @@ const config = {
     },
   ],
   plugins: [
-    [
-      "docusaurus-plugin-dotenv",
-      {
-        path: "./.env", // Path to your environment variables in `.env` file
-      },
-    ],
     // "docusaurus-plugin-fathom", // Fathom site analytics tracking
     // If any redirects are needed, configure with `@docusaurus/plugin-client-redirects`
     // See docs here: https://docusaurus.io/docs/api/plugins/@docusaurus/plugin-client-redirects
@@ -91,15 +93,22 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
+      algolia: {
+        appId: "4PTCXCA47T",
+        // TMP: If building locally, allow an empty Algolia API key so that
+        // anyone can contribute to docs without running into a build error.
+        // TODO: Add local development vs. deployment workflow.
+        apiKey: process.env.ALGOLIA_API_KEY || "_",
+        indexName: "tableland",
+        contextualSearch: false,
+      },
       colorMode: {
         defaultMode: "dark",
         disableSwitch: false,
         respectPrefersColorScheme: true,
       },
-      fathomAnalytics: {
-        siteId: "QLCGWETC",
-      },
-      image: "img/tableland/site-banner.png", // Default image used in metadata, e.g., links shared on socials
+      // Default image used in metadata, e.g., links shared on socials
+      image: "img/tableland/site-banner.png",
       metadata, // Custom site metadata (imported via separate file)
       docs: {
         sidebar: {
@@ -112,12 +121,6 @@ const config = {
       tableOfContents: {
         minHeadingLevel: 2,
         maxHeadingLevel: 4,
-      },
-      algolia: {
-        appId: "4PTCXCA47T",
-        apiKey: process.env.ALGOLIA_API_KEY,
-        indexName: "tableland",
-        contextualSearch: false,
       },
       // Prism styling for code snippets
       prism: {

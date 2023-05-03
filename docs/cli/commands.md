@@ -101,7 +101,7 @@ The EVM chain to target (default: `maticmum`).
 
 Testnets
 
-- `goerli` (Ethereum Goerli)
+- `sepolia` (Ethereum Sepolia)
 - `maticmum` (Polygon Mumbai)
 - `optimism-goerli` (Optimism Goerli)
 - `arbitrum-goerli` (Arbitrum Goerli)

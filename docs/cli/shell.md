@@ -1,10 +1,11 @@
 ---
-title: Shell
-description: Interact with tableland via an interactive shell environment.
+title: CLI Shell command
+sidebar_label: Commands
+description: The Tableland CLI comes with purpose built commands, which slightly differs from the convention in other clients.
 keywords:
-  - CLI
+  - cli
   - command line
-  - tableland shell
+  - shell
 ---
 
 ## `tableland shell`

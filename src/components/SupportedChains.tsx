@@ -13,14 +13,18 @@ function getChainExplorer(
     case "mainnet":
     case "homestead":
       return `https://etherscan.io/address/${contract}`;
-    case "goerli":
-      return `https://goerli.etherscan.io/address/${contract}`;
+    case "sepolia":
+      return `https://sepolia.etherscan.io/address/${contract}`;
     case "arbitrum":
       return `https://arbiscan.io/address/${contract}`;
     case "arbitrum-nova":
       return `https://nova.arbiscan.io/address/${contract}`;
     case "arbitrum-goerli":
       return `https://goerli.arbiscan.io/address/${contract}`;
+    case "filecoin":
+      return `https://filfox.info/address/${contract}`;
+    case "filecoin-hyperspace":
+      return `https://hyperspace.filfox.info/address/${contract}`;
     case "optimism":
       return `https://optimistic.etherscan.io/address/${contract}`;
     case "optimism-goerli":
@@ -47,8 +51,13 @@ export interface ChainFormatted {
 // for the "pretty" name and block explorer link.
 export const supportedChains = (): ChainFormatted[] => {
   const chains: any = helpers.supportedChains;
-  // Remove chain names for `local-host`, `homestead`, `optimism-goerli-staging`
-  const remove = [`localhost`, `homestead`, `optimism-goerli-staging`];
+  // Remove chain names for `localhost`, `homestead`, `optimism-goerli-staging`
+  const remove = [
+    `localhost`,
+    `homestead`,
+    `goerli`,
+    `optimism-goerli-staging`,
+  ];
   const filteredChains = Object.fromEntries(
     Object.entries(chains).filter(([chain]) => !remove.includes(chain))
   );
@@ -79,8 +88,10 @@ export const supportedChains = (): ChainFormatted[] => {
       case "arbitrum-nova":
         format.chainNameFormatted = "arbitrum nova";
         break;
-      case "goerli":
-        format.chainNameFormatted = "ethereum goerli";
+      case "sepolia":
+        format.chainNameFormatted = "ethereum sepolia";
+      case "filecoin-hyperspace":
+        format.location = "testnet";
         break;
       case "matic":
         format.chainNameFormatted = "polygon";

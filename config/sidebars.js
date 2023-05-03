@@ -156,6 +156,8 @@ const quickstarts = [
   "quickstarts/wagmi",
   ...section("Contract frameworks"),
   "quickstarts/hardhat",
+  ...section("Guides"),
+  "quickstarts/how-to-build-an-nft",
 ];
 
 // SDK
@@ -238,7 +240,6 @@ const cli = [
   ...sidepageHeader("CLI"),
   ,
   "cli/README",
-
   {
     type: "category",
     label: "Commands",
@@ -262,6 +263,7 @@ const cli = [
       "cli/write",
     ],
   },
+  ...section("Errors"),
   "cli/errors",
 ];
 

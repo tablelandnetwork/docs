@@ -210,7 +210,7 @@ import { ChainsList, ChainInfo, getChainInfo, SupportedChains } from '@site/src/
 
 <ChainsList type={'mainnets'} format={'list'} />
 
-<ChainInfo chain='goerli' info='chainId' />
+<ChainInfo chain='sepolia' info='chainId' />
 
 <SupportedChains />
 ```
@@ -219,7 +219,7 @@ The `<ChainsList />` will render a string (aka it renders: <ChainsList type={'te
 
 <ChainsList type={'mainnets'} format={'list'} />
 
-And `<ChainInfo />` can render something like Ethereum Goerli's chain ID: <ChainInfo chain='goerli' info='chainId' />. If you want to access the raw data, you can use the exported `getChainInfo()` method, which `<ChainsList />` uses under the hood to render a `<span>` containing the data. And `<SupportedChains />` renders a table of chain values:
+And `<ChainInfo />` can render something like Ethereum Sepolia's chain ID: <ChainInfo chain='sepolia' info='chainId' />. If you want to access the raw data, you can use the exported `getChainInfo()` method, which `<ChainsList />` uses under the hood to render a `<span>` containing the data. And `<SupportedChains />` renders a table of chain values:
 
 <SupportedChains />
 
