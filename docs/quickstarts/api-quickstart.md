@@ -64,7 +64,9 @@ It [returns on-chain transaction information](https://testnets.tableland.network
 
 ```json
 {
-  "table_id": "1",
+  "table_ids": [
+    "1"
+  ],
   "transaction_hash": "0x02f319429b8a7be1cbb492f0bfbf740d2472232a2edadde7df7c16c0b61aa78b",
   "block_number": 27055540,
   "chain_id": 80001
