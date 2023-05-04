@@ -81,14 +81,14 @@ curl -X GET https://testnets.tableland.network/api/v1/tables/80001/1 \
   -H 'Accept: application/json'
 ```
 
-The response includes information like the table's schema, the table's data shown in the [Console](https://console.tableland.xyz/) (at the [`animation_url`](https://testnets.render.tableland.xyz/anim/?chain=80001&id=1)), date created, etc.
+The response includes information like the table's schema, the table's data shown in the [Console](https://console.tableland.xyz/) (at the [`animation_url`](https://tables.testnets.tableland.xyz/80001/1.html)), date created, etc.
 
 ```json
 {
   "name": "healthbot_80001_1",
-  "external_url": "https://testnets.tableland.network/chain/80001/tables/1",
-  "animation_url": "https://testnets.render.tableland.xyz/anim/?chain=80001&id=1",
-  "image": "https://testnets.render.tableland.xyz/80001/1",
+  "external_url": "https://testnets.tableland.network/api/v1/tables/80001/1",
+  "animation_url": "https://tables.testnets.tableland.xyz/80001/1.html",
+  "image": "https://tables.testnets.tableland.xyz/80001/1.svg",
   "attributes": [
     {
       "display_type": "date",

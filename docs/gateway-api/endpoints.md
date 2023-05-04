@@ -164,10 +164,10 @@ Example responses
 
 ```json
 {
-  "name": "healthbot_5_1",
-  "external_url": "https://testnets.tableland.network/api/v1/tables/healthbot_5_1",
-  "animation_url": "https://render.tableland.xyz/anim/?chain=1&id=1",
-  "image": "https://render.tableland.xyz/healthbot_5_1",
+  "name": "healthbot_80001_1",
+  "external_url": "https://testnets.tableland.network/api/v1/tables/80001/1",
+  "animation_url": "https://tables.testnets.tableland.xyz/80001/1.html",
+  "image": "https://tables.testnets.tableland.xyz/80001/1.svg",
   "attributes": {
     "display_type": "date",
     "trait_type": "created",
@@ -267,10 +267,10 @@ This operation does not require authentication
 
 ```json
 {
-  "name": "healthbot_5_1",
-  "external_url": "https://testnets.tableland.network/api/v1/tables/healthbot_5_1",
-  "animation_url": "https://render.tableland.xyz/anim/?chain=1&id=1",
-  "image": "https://render.tableland.xyz/healthbot_5_1",
+  "name": "healthbot_80001_1",
+  "external_url": "https://testnets.tableland.network/api/v1/tables/80001/1",
+  "animation_url": "https://tables.testnets.tableland.xyz/80001/1.html",
+  "image": "https://tables.testnets.tableland.xyz/80001/1.svg",
   "attributes": {
     "display_type": "date",
     "trait_type": "created",

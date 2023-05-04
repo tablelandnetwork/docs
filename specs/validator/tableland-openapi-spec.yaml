@@ -204,16 +204,16 @@ components:
       properties:
         name:
           type: string
-          example: healthbot_5_1
+          example: healthbot_80001_1
         external_url:
           type: string
-          example: https://testnets.tableland.network/api/v1/tables/healthbot_5_1
+          example: https://testnets.tableland.network/api/v1/tables/80001/1
         animation_url:
           type: string
-          example: https://tables.tableland.xyz/1/1.html
+          example: https://tables.testnets.tableland.xyz/80001/1.html
         image:
           type: string
-          example: https://tables.tableland.xyz/healthbot_5_1
+          example: https://tables.testnets.tableland.xyz/healthbot_80001_1
         attributes:
           type: array
           items:
