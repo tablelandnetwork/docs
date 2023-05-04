@@ -14,14 +14,14 @@ JETI (JavaScript Extension for Tableland and IPFS) allows you to easily add data
 First, install the JETI package using npm or yarn:
 
 ```
-npm i @tableland/jeti 2. Import Required Modules
+npm i @tableland/jeti @tableland/sdk
 ```
 
 ### 2. Import the necessary modules from @tableland/sdk and @tableland/jeti:
 
 ```javascript
-const { Database } = require("@tableland/sdk");
-const { prepare, resolve } = require("@tableland/jeti");
+import { Database } from "@tableland/sdk";
+import { prepare, resolve } from "@tableland/jeti";
 ```
 
 ### 3. Initialize the Database and table
