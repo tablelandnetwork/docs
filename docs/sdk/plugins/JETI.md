@@ -29,13 +29,13 @@ import { prepare, resolve } from "@tableland/jeti";
 Create a new instance of the Database class and create a table. Create a new table using the prepare and run methods. Specify a prefix for your table directly in the CREATE TABLE statement:
 
 ```javascript
-const db = new Database(); 4. Create a Table
+const db = new Database();
 
 const { meta: create } = await db
-.prepare(
-`CREATE TABLE my_sdk_table (id integer primary key, name text, avatar_cid text);`
-)
-.run();
+  .prepare(
+    `CREATE TABLE my_sdk_table (id integer primary key, name text, avatar_cid text);`
+  )
+  .run();
 
 // The table's `name` is in the format `{prefix}_{chainId}_{tableId}`
 console.log(create.txn?.name); // e.g., my_sdk_table_80001_311
