@@ -78,3 +78,29 @@ CREATE TABLE my_table(
 :::note
 If you use the `INTEGER` type along with `PRIMARY KEY`, you unlock a special feature for auto-incrementing a row's data automatically. Check out the docs on [auto-incrementing values](/playbooks/sql/incrementing-values) for more specifics.
 :::
+
+## Altering an existing table
+
+You can alter the structure of a table with an `ALTER TABLE` statement. There are 3 kinds of operations supported:
+
+- Renaming an existing column
+
+```sql
+ALTER TABLE my_table RENAME COLUMN val to value;
+```
+
+- Adding a new column
+
+```sql
+ALTER TABLE my_table ADD COLUMN int_val INTEGER;
+```
+
+- Dropping a column
+
+```sql
+ALTER TABLE my_table DROP COLUMN val;
+```
+
+Up to now, only the table owner can execute `ALTER TABLE` statements. If you want your table to have an immutable structure, you'd have to transfer it to a burner address.
+
+For more details, check the `ALTER TABLE` [specification](/specs/sql/#alter-table).
