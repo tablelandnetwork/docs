@@ -69,3 +69,12 @@ console.log({ rows, columns });
 ```
 
 By following these steps, you can integrate JETI into your Tableland-based application using JavaScript, allowing for seamless IPFS data handling.
+
+---
+
+Fun fact: If you're using JETI in the browser with your local IPFS node, you'll need to change your HTTPHeaders Access control policy, like so:
+
+```
+ipfs config --json API.HTTPHeaders.Access-Control-Allow-Methods '["PUT", "POST", "GET"]'
+ipfs config --json API.HTTPHeaders.Access-Control-Allow-Origin  '["*"]'
+```
