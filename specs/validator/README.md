@@ -230,7 +230,7 @@ Parameters
   "name": "healthbot_80001_1",
   "external_url": "https://testnets.tableland.network/api/v1/tables/80001/1",
   "animation_url": "https://tables.testnets.tableland.xyz/80001/1.html",
-  "image": "https://tables.testnets.tableland.xyz/healthbot_80001_1",
+  "image": "https://tables.testnets.tableland.xyz/80001/1.svg",
   "attributes": {
     "display_type": "date",
     "trait_type": "created",
@@ -363,7 +363,7 @@ Table
   "name": "healthbot_80001_1",
   "external_url": "https://testnets.tableland.network/api/v1/tables/80001/1",
   "animation_url": "https://tables.testnets.tableland.xyz/80001/1.html",
-  "image": "https://tables.testnets.tableland.xyz/healthbot_80001_1",
+  "image": "https://tables.testnets.tableland.xyz/80001/1.svg",
   "attributes": {
     "display_type": "date",
     "trait_type": "created",

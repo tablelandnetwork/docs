@@ -213,7 +213,7 @@ components:
           example: https://tables.testnets.tableland.xyz/80001/1.html
         image:
           type: string
-          example: https://tables.testnets.tableland.xyz/healthbot_80001_1
+          example: https://tables.testnets.tableland.xyz/80001/1.svg
         attributes:
           type: array
           items:
