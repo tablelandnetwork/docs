@@ -99,3 +99,7 @@ In the web3-specific database space, there are a few protocols developers are us
 - [Polybase](https://polybase.xyz/docs/introduction): Not intended for smart contract devs, _somewhat_ decoupled from the host chain (it's a zk-rollup). You lose ability to create on-chain data & rules to drive table changes, so it complicates application development since you can't, for example, have a smart contract write to the database.
 - [Space and Time](https://www.spaceandtime.io/): Primarily focused on being a general web3 data warehouse with on- and off-chain data flowing into its indexing layer.
 - [The Graph](https://thegraph.com/docs/en/): Data indexing solution, not _really_ a competitor. Think of The Graph as a way to query EVM data (i.e., historical event store), whereas Tableland is intended for chain-driven data liveliness—a cache-like _store only latest state_ approach. (Although, you _could_ build an index with tables!)
+
+## Resources
+
+Check out our curated list of [Awesome Decentralized Database](https://github.com/tablelandnetwork/awesome-decentralized-database) information about various solutions and general learning resources.

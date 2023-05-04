@@ -7,7 +7,7 @@
 
 const navbar = {
   hideOnScroll: false,
-  title: "DOCS",
+  title: "", // Only use if you want a word next to the logo, like "DOCS"
   logo: {
     alt: "Tableland logo",
     src: "/img/tableland/logo-black.svg",
@@ -94,53 +94,23 @@ const navbar = {
         },
       ],
     },
+    // If versioned docs are created, show the version dropdown
+    // {
+    //   type: "docsVersionDropdown",
+    //   position: "right",
+    // },
+    // If language / internationalization is enabled, show the language
+    // {
+    //   type: "localeDropdown",
+    //   position: "right",
+    // },
     // This is a custom workaround detailed at:
     // https://github.com/facebook/docusaurus/issues/7227
     // It is a SIWE connect button.
-    {
-      type: "custom-ConnectWallet",
-      position: "right",
-    },
-    //   {
-    //     label: "Community",
-    //     position: "right",
-    //     items: [
-    //       {
-    //         type: "docSidebar",
-    //         sidebarId: "contribute",
-    //         label: "Contribute",
-    //       },
-    //       {
-    //         type: "docSidebar",
-    //         sidebarId: "rigs",
-    //         label: "Rigs NFT",
-    //       },
-    //       {
-    //         href: "https://dev.tableland.xyz",
-    //         label: "Tech blog",
-    //         target: "_blank",
-    //         rel: null,
-    //       },
-    //       {
-    //         href: "https://discord.com/invite/dc8EBEhGbg",
-    //         label: "Discord",
-    //         target: "_blank",
-    //         rel: null,
-    //       },
-    //       {
-    //         href: "https://twitter.com/tableland__",
-    //         label: "Twitter",
-    //         target: "_blank",
-    //         rel: null,
-    //       },
-    //       {
-    //         href: "https://tableland.xyz/pilot-program/",
-    //         label: "Pilot Program",
-    //         target: "_blank",
-    //         rel: null,
-    //       },
-    //     ],
-    //   },
+    // {
+    //   type: "custom-ConnectWallet",
+    //   position: "right",
+    // },
   ],
 };
 

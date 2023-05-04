@@ -11,7 +11,7 @@ Tableland is always dependent on the base chain for the speed at which transacti
 
 ## Basics
 
-A gateway is a way to interface with a node within the decentralized Tableland network. This allows standard applications to access data stored in Tableland within common developer patterns, such as writing read queries via a [REST API](/fundamentals/quickstarts/api-quickstart).
+A gateway is a way to interface with a node within the decentralized Tableland network. This allows standard applications to access data stored in Tableland within common developer patterns, such as writing read queries via a [REST API](/quickstarts/api-quickstart).
 
 The core team that's behind the Tableland protocol currently runs and offers open access to the following gateways:
 

@@ -11,7 +11,7 @@ The following walks through how to query off-chain table state and write it back
 
 ## Synopsis
 
-We’ll be using the Chainlink [Any API](https://docs.chain.link/getting-started/advanced-tutorial/) to read data from the Tableland network and write it back on-chain. It will use the "single word response" [GET method](https://docs.chain.link/any-api/get-request/examples/single-word-response/) to retrieve a single unsigned integer value from Tableland ([here](https://testnets.tableland.network/query?unwrap=true&s=select%20%2A%20from%20healthbot_5_1)) and write it back on-chain.
+We’ll be using the Chainlink [Any API](https://docs.chain.link/getting-started/advanced-tutorial/) to read data from the Tableland network and write it back on-chain. It will use the "single word response" [GET method](https://docs.chain.link/any-api/get-request/examples/single-word-response/) to retrieve a single unsigned integer value from Tableland ([here](https://testnets.tableland.network/query?unwrap=true&s=select%20%2A%20from%20healthbot_11155111_1)) and write it back on-chain.
 
 Recall that writing data to Tableland happens with on-chain actions, whereas reading \***\*from\*\*** the Tableland network occurs via an off-chain gateway query. If a developer wants to query for data and make some on-chain action based on the result, they’ll need to use an oracle to retrieve the data.
 

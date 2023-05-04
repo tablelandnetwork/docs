@@ -31,11 +31,11 @@ Only the table owner can set the controller of a table to an address, such as an
 
 Lock the controller address for a table.
 
-A table can have its controller **_permanently locked_**. This can be useful as a final ACL "lock" to ensure the table owner can no longer make any ACL changes (e.g., after some steady state in a production setting). Only the table owner can call this method.
+A table can have its controller **permanently locked**. This can be useful as a final ACL "lock" to ensure the table owner can no longer make any ACL changes (e.g., after some steady state in a production setting). Only the table owner can call this method.
 
 ---
 
-## Setting the policy
+## Setting the controller
 
 The owner of a contract needs to call the Tableland registry’s `setController` method to register a _deployed_ policy on-chain.
 
@@ -47,24 +47,55 @@ function setController(
 )
 ```
 
-In cases where a table is _owned_ by a smart contract, you can also call the `setController` method from the smart contract. Here, adding a policy update method that can be called after deploy (where the `onlyOwner` modifier is from a useful `Ownable` [OpenZeppelin contract](https://docs.openzeppelin.com/contracts/2.x/access-control)):
+In cases where a table is _owned_ by a smart contract, you can also call the `setController` method from the smart contract. Here, adding a policy update method that can be called after deploy (where the `onlyOwner` modifier is from a useful [`Ownable` OpenZeppelin contract](https://docs.openzeppelin.com/contracts/2.x/access-control#ownership-and-ownable)):
 
 ```solidity
-function updateController() onlyOwner {
-   _tableland.setController(
+function updateController(uint256 tableId) public onlyOwner {
+   TablelandDeployments.get().setController(
       address(this),
-      _tableId,
+      tableId,
       address(this)
     );
 }
 ```
 
-And recall that if you want to undo this, you can set it to zero address.
+If you want to ever check the controller, you could use the `getController` to, for example, check the current controller and only set a new one if it is different than expected.
 
-### Hardhat
+```solidity
+function updateController(uint256 tableId) public onlyOwner {
+  // highlight-next-line
+  address currentController = TablelandDeployments.get().getController(tableId);
+  if (currentController != address(this)) {
+    TablelandDeployments.get().setController(
+      address(this),
+      tableId,
+      address(this)
+    );
+  }
+}
+```
+
+And recall that if you want to undo this, you can set it to zero address (`0x0...0`).
+
+## Locking the controller
+
+In order to **permanently** set a controller, the `lockController` method will make it so that a controller can never be updated. This is an irreversible operation to help trustlessly guarantee a table's mutability rules.
+
+```solidity
+function lockController(uint256 tableId) public onlyOwner {
+  TablelandDeployments.get().lockController(
+    address(this),
+    tableId
+  );
+}
+```
+
+## Using JavaScript
 
 If you are using a development framework, like [`hardhat`](https://hardhat.org/), or simply using a library like [`ethers`](https://docs.ethers.io/v5/), you can make smart contact calls directly to the Tableland registry smart contract to set the controller. This can occur in some script that connects to the one of the [deployed registry contracts](/smart-contracts/deployed-contracts) and calls one of the controller methods.
 
-### User interface
+The Tableland SDK also offers a [`Registry` API](/sdk/core/registry-api) to handle registry smart contract calls, too.
+
+## Using a block explorer
 
 If you are just playing around, you can also call the `setController` method on something like Etherscan by going to the Tableland registry contract directly (you’ll need to call the method from the address of the table owner).

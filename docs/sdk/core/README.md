@@ -22,7 +22,7 @@ npm install --save @tableland/sdk
 <br />
 
 :::note
-The Tableland SDK uses the modern `fetch` API. When working in Node, it is necessary to use a version of Node (v18+) that supports `fetch`, or provide global access to `node-fetch` to use the SDK. Review [these docs for an example](https://github.com/node-fetch/node-fetch#providing-global-access).
+The Tableland SDK uses the modern `fetch` API, which is only available starting with Node 18. If you're using an earlier version (Node 16 or before), you must [provide global access](https://github.com/node-fetch/node-fetch#providing-global-access) to `fetch` as well as `Headers` to use the SDK. [Check out this walkthrough](/sdk/reference/node-polyfills) for how to do this.
 :::
 
 ## Usage

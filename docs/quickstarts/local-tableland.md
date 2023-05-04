@@ -68,7 +68,7 @@ Once the local node is running, tables can be accessed just as they are with the
 You can use the `query` endpoint to retrieve some data (not the chain ID is `31337`):
 
 ```bash
-curl http://localhost:8080/api/v1/query?s=select%20counter%20from%20healthbot_31337_1
+curl http://localhost:8080/api/v1/query?statement=select%20counter%20from%20healthbot_31337_1
 ```
 
 Which should return:
@@ -81,7 +81,7 @@ Which should return:
 ]
 ```
 
-All of the Tableland APIs are available at this URL, so anything that you’d like to develop and test out locally is available on testnet / mainnet chains (and vice versa). Check out the [REST API](/valiadtor-api) docs for more details! And if you’re unfamiliar with the encoding used, see the docs on [URI Encoding](/smart-contracts/uri-encoding).
+All of the Tableland APIs are available at this URL, so anything that you’d like to develop and test out locally is available on testnet / mainnet chains (and vice versa). Check out the [REST API](/gateway-api) docs for more details! And if you’re unfamiliar with the encoding used, see the docs on [URI Encoding](/smart-contracts/uri-encoding).
 
 ## CLI
 

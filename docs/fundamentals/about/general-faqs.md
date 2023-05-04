@@ -26,7 +26,7 @@ At the protocol level, the Tableland network is separated such that nodes proces
 
 ## Is the Tableland network in open beta or full production mode?
 
-The Tableland network is currently in _open beta_ and will move into production in 2024—see more information on what this entails and the migration plan [here](/fundemetnals/about/open-beta). Between now and then, we’ll provide the proper migration resources after we properly prepare for the launch (e.g., tokenomics, adding to the protocol, further decentralizing the network, etc.).
+The Tableland network is currently in _open beta_ and will move into production in 2024—see more information on what this entails and the migration plan [here](/fundamentals/about/open-beta). Between now and then, we’ll provide the proper migration resources after we properly prepare for the launch (e.g., tokenomics, adding to the protocol, further decentralizing the network, etc.).
 
 ## As a developer, how do I get testnet currency to use Tableland?
 
@@ -70,7 +70,7 @@ Both! With tableland's access control model, you get _mutable_ data (if you want
 
 ## What are some of the primary use cases for Tableland?
 
-For a detailed list of possible use cases, feel free to check out our [use cases](/fundamentals/about/use-cases) page. Tableland enables an endless number of possibilities, but some key areas of exploration include data attribution, Data DAOs, NFT projects / metadata, gaming, and anything else that needs a web3-native database.
+For a detailed list of possible use cases, feel free to check out our [use cases](/fundamentals/use-cases) page. Tableland enables an endless number of possibilities, but some key areas of exploration include data attribution, Data DAOs, NFT projects / metadata, gaming, and anything else that needs a web3-native database.
 
 ## Where are tables hosted?
 
@@ -78,7 +78,7 @@ Currently, all tables are stored on a single node behind the Tableland gateway, 
 
 ## How do I connect to Tableland?
 
-Tableland has built a plug-and-play clients—SDK, smart contracts, REST API, and CLI—to interface with the Tableland network. You can dive into things with the [quickstarts guides](/fundamentals/quickstarts).
+Tableland has built a plug-and-play clients—SDK, smart contracts, REST API, and CLI—to interface with the Tableland network. You can dive into things with the [quickstarts guides](/quickstarts).
 
 ## How do I create tables in Tableland?
 
@@ -86,7 +86,7 @@ As with standard SQL, you pass a `CREATE TABLE` statement after establishing a d
 
 ## Is there a SQL specification that should be used when writing these queries?
 
-Yes — Tableland understands a subset of SQL based on the [SQLite SQL language specification](https://www.sqlite.org/lang.html). Check out the full Tableland [SQL Specification](/specs/sql-specification) for more details.
+Yes — Tableland understands a subset of SQL based on the [SQLite SQL language specification](https://www.sqlite.org/lang.html). Check out the full Tableland [SQL Specification](/specs/sql) for more details.
 
 ## Can I call your smart contracts directly?
 

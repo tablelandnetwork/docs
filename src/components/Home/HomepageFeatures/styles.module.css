@@ -1,13 +1,13 @@
 .exploreSubtitle {
   color: var(--ifm-hero-text-color);
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
 
 .product {
   min-height: 130px;
   background-color: var(--ifm-card-background-color);
   border-radius: var(--ifm-card-border-radius);
-  box-shadow: var(--ifm-global-shadow-lw);
+  box-shadow: none;
   display: flex;
   flex-direction: column;
   overflow: hidden;
@@ -19,14 +19,22 @@
 }
 
 .product span {
-  font-size: var(--ifm-h4-font-size);
+  font-size: var(--ifm-h5-font-size);
   color: var(--ifm-color-content);
   font-weight: var(--ifm-font-weight-normal);
 }
 
-.product:hover {
-  box-shadow: 0 0 0 1px var(--ifm-color-emphasis-200),
-    0 7px 14px 0 rgba(50, 50, 93, 0.1), 0 3px 6px 0 rgba(0, 0, 0, 0.02);
+.product svg,
+.product:hover svg {
+  color: var(--ifm-color-primary) !important;
+}
+
+[data-theme="dark"] .product {
+  border: transparent;
+}
+
+[data-theme="dark"] .product:hover {
+  box-shadow: none;
 }
 
 .product h4 {

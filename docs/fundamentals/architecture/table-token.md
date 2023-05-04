@@ -17,7 +17,7 @@ Tables are ERC721 TABLE tokens minted at a Tableland registry contract deployed 
 - `chainId` ⇒ Identifier assigned to the table under the hood, based on the chain the table was created on.
 - `tableId` ⇒ Unique identifier for a table, assigned by the Tableland "registry" contract upon table creation (a table is minted as an ERC721 token).
 
-For example, a table name might look like `healthbot_5_1`—this means the table has a prefix "healthbot" and was minted on Ethereum Goerli (chain ID of `5`) as the first table on that chain (token ID of `1`).
+For example, a table name might look like `healthbot_11155111_1`—this means the table has a prefix "healthbot" and was minted on Ethereum Sepolia (chain ID of `11155111`) as the first table on that chain (token ID of `1`).
 
 ## The TABLE Token
 
@@ -36,13 +36,15 @@ import tableNFT from "@site/static/assets/table-nft.png";
 
 To view the TABLE token itself, check out the deployed contracts on various block explorers or see the following NFT marketplaces. Feel free to view click into an NFT to view and query table data directly within the marketplace!
 
-| Chain           | Environment | Collection link                                                    |
-| --------------- | ----------- | ------------------------------------------------------------------ |
-| Ethereum        | Mainnet     | https://opensea.io/collection/tableland-tables                     |
-| Optimism        | Mainnet     | https://opensea.io/collection/tableland-tables-v2                  |
-| Arbitrum        | Mainnet     | https://opensea.io/collection/tableland-tables-v3                  |
-| Polygon         | Mainnet     | https://opensea.io/collection/tableland-tables-polygon             |
-| Ethereum Goerli | Testnet     | https://testnets.opensea.io/collection/tableland-tables-juywt5ywdt |
-| Optimism Goerli | Testnet     | https://testnets.opensea.io/collection/tableland-tables-botmoq7j2q |
-| Arbitrum Goerli | Testnet     | https://testnets.opensea.io/collection/tableland-tables-qegwmf9nfj |
-| Polygon Mumbai  | Testnet     | https://testnets.opensea.io/collection/tableland-tables-mumbai     |
+| Chain            | Environment | Collection link                                                         |
+| ---------------- | ----------- | ----------------------------------------------------------------------- |
+| Ethereum         | Mainnet     | https://opensea.io/collection/tableland-tables-homestead                |
+| Optimism         | Mainnet     | https://opensea.io/collection/tableland-tables-optimism                 |
+| Arbitrum One     | Mainnet     | https://opensea.io/collection/tableland-tables-arbitrum                 |
+| Arbitrum Nova    | Mainnet     | https://opensea.io/collection/tableland-tables-arbitrum-nova            |
+| Polygon          | Mainnet     | https://opensea.io/collection/tableland-tables-polygon                  |
+| Ethereum Goerli  | Testnet     | https://testnets.opensea.io/collection/tableland-tables-goerli          |
+| Ethereum Sepolia | Testnet     | No marketplace support                                                  |
+| Optimism Goerli  | Testnet     | https://testnets.opensea.io/collection/tableland-tables-optimism-goerli |
+| Arbitrum Goerli  | Testnet     | https://testnets.opensea.io/collection/tableland-tables-arbitrum-goerli |
+| Polygon Mumbai   | Testnet     | https://testnets.opensea.io/collection/tableland-tables-mumbai          |

@@ -8,7 +8,7 @@ keywords:
 import Tabs from "@theme/Tabs";
 import TabItem from "@theme/TabItem";
 
-Setting up a validator node connection starts by importing a `Validator`. The methods defined in the [Validator REST API](/validator-api/endpoints) are exposed in the SDK, such as checking the `health` of a node.
+Setting up a validator node connection starts by importing a `Validator`. The methods defined in the [Gateway REST API](/gateway-api/endpoints) are exposed in the SDK, such as checking the `health` of a node.
 
 ```js
 import { Validator } from "@tableland/sdk";

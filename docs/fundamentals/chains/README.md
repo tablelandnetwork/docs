@@ -7,13 +7,24 @@ keywords:
   - blockchains
 ---
 
-Chain selection makes a significant impact on a table’s usability. Choose a chain that’s too slow or expensive, and it won’t be feasible for table writes to occur frequently. Deploy a cross-chain data model for value layering purposes, and certain on-chain access control features are lost.
-
-Recall the following chains are currently supported and described in more detail in the subsequent pages:
+Chain selection makes a significant impact on the database's usability. Choose a chain that’s too slow or expensive, and it won’t be feasible for table writes to occur frequently. Deploy a cross-chain data model for value layering purposes, and certain on-chain access control features are lost. This page explains general chain related concepts; the following chains are supported and described in more detail in the subsequent pages:
 
 import { ChainsList } from '@site/src/components/SupportedChains'
 
 <ChainsList type={'mainnets'} format={'list'} />
+
+:::tip
+
+Review the [cost estimation](/fundamentals/architecture/cost-estimator) table that compares the costs of creates and writes across each chain.
+:::
+
+## Chain information
+
+If would like to dive straight into chain-specific overviews, with decision considerations and other chain information (chain ID, contracts, block explorers, faucets, etc.), head to one of the pages below.
+
+import DocCardList from '@theme/DocCardList';
+
+<DocCardList />
 
 ## Layer 1 vs. Layer 2
 
@@ -53,7 +64,7 @@ Solutions that Tableland supports are all "EVM compatible." These are layers inc
 
 In general, all chains have both a mainnet and testnet. Developers should first use a testnet to validate everything is working as expected, and once ready, move everything to production on mainnet. Testnet chains use testnet currency with no inherent value such that developers can request testnet currency for _free_ from _faucets_. Mainnets require _real_ currency to help provide the proper incentivization mechanisms and payment to nodes for computation and state management.
 
-Be sure to use `https://tableland.network` on mainnets, and `https://testnets.tableland.network` on testnets. Learn more about why in the [gateway](gateway) docs.
+Be sure to use `https://tableland.network` on mainnets, and `https://testnets.tableland.network` on testnets. Learn more about why in the [gateway](/fundamentals/architecture/gateway) docs.
 
 ## Providers
 
@@ -75,11 +86,3 @@ Check out the following resources for each of these providers, and note that the
 
 - Status: [https://etherscan.freshstatus.io/](https://etherscan.freshstatus.io/)
 - Docs: [https://docs.etherscan.io/](https://docs.etherscan.io/)
-
-## Choosing a chain
-
-Dive into chain-specific overviews, with decision considerations and general chain information (chain ID, contracts, faucets, etc.).
-
-import DocCardList from '@theme/DocCardList';
-
-<DocCardList />

@@ -10,28 +10,35 @@ function getChainExplorer(
   contract: string
 ): string {
   switch (chain) {
-    case "ethereum":
-      return location === "testnet"
-        ? `https://goerli.etherscan.io/address/${contract}`
-        : `https://etherscan.io/address/${contract}`;
+    case "mainnet":
+    case "homestead":
+      return `https://etherscan.io/address/${contract}`;
+    case "sepolia":
+      return `https://sepolia.etherscan.io/address/${contract}`;
     case "arbitrum":
-      return location === "testnet"
-        ? `https://goerli.arbiscan.io/address/${contract}`
-        : `https://arbiscan.io/address/${contract}`;
+      return `https://arbiscan.io/address/${contract}`;
+    case "arbitrum-nova":
+      return `https://nova.arbiscan.io/address/${contract}`;
+    case "arbitrum-goerli":
+      return `https://goerli.arbiscan.io/address/${contract}`;
+    case "filecoin":
+      return `https://filfox.info/address/${contract}`;
+    case "filecoin-hyperspace":
+      return `https://hyperspace.filfox.info/address/${contract}`;
     case "optimism":
-      return location === "testnet"
-        ? `https://blockscout.com/optimism/goerli/address/${contract}`
-        : `https://optimistic.etherscan.io/address/${contract}`;
-    case "polygon":
-      return location === "testnet"
-        ? `https://mumbai.polygonscan.com/address/${contract}`
-        : `https://polygonscan.com/address/${contract}`;
+      return `https://optimistic.etherscan.io/address/${contract}`;
+    case "optimism-goerli":
+      return `https://goerli-optimism.etherscan.io/address/${contract}`;
+    case "matic":
+      return `https://polygonscan.com/address/${contract}`;
+    case "maticmum":
+      return `https://mumbai.polygonscan.com/address/${contract}`;
     default:
       return "";
   }
 }
 
-interface FormattedChains {
+export interface ChainFormatted {
   location: string;
   chainNameFormatted: string;
   chainName: string;
@@ -42,10 +49,15 @@ interface FormattedChains {
 
 // Create an object of Tableland supported chains, along with some extra data
 // for the "pretty" name and block explorer link.
-export const supportedChains = (): FormattedChains[] => {
+export const supportedChains = (): ChainFormatted[] => {
   const chains: any = helpers.supportedChains;
-  // Remove chain names for `local-host`, `homestead`, `optimism-goerli-staging`
-  const remove = [`localhost`, `homestead`, `optimism-goerli-staging`];
+  // Remove chain names for `localhost`, `homestead`, `optimism-goerli-staging`
+  const remove = [
+    `localhost`,
+    `homestead`,
+    `goerli`,
+    `optimism-goerli-staging`,
+  ];
   const filteredChains = Object.fromEntries(
     Object.entries(chains).filter(([chain]) => !remove.includes(chain))
   );
@@ -61,6 +73,8 @@ export const supportedChains = (): FormattedChains[] => {
       blockExplorer: "",
       baseUrl: c.baseUrl,
     };
+    // Fixes for where a chain's ethers name (delimited by `-`) does not align
+    // to how it should be "pretty" displayed (e.g., `matic` should be `Polygon`)
     switch (format.chainName) {
       case "local-tableland":
         format.location = "local";
@@ -71,8 +85,13 @@ export const supportedChains = (): FormattedChains[] => {
       case "arbitrum":
         format.chainNameFormatted = "arbitrum one";
         break;
-      case "goerli":
-        format.chainNameFormatted = "ethereum goerli";
+      case "arbitrum-nova":
+        format.chainNameFormatted = "arbitrum nova";
+        break;
+      case "sepolia":
+        format.chainNameFormatted = "ethereum sepolia";
+      case "filecoin-hyperspace":
+        format.location = "testnet";
         break;
       case "matic":
         format.chainNameFormatted = "polygon";
@@ -87,7 +106,7 @@ export const supportedChains = (): FormattedChains[] => {
         break;
     }
     format.blockExplorer = getChainExplorer(
-      format.chainNameFormatted.split(" ")[0],
+      format.chainName,
       format.location,
       format.contractAddress
     );
@@ -96,7 +115,7 @@ export const supportedChains = (): FormattedChains[] => {
   return formatChains;
 };
 
-// Get info about a specific chain, passing the `FormattedChains` key.
+// Get info about a specific chain, passing the `ChainFormatted` key.
 export function getChainInfo(chain: string, info: any): any {
   const chains = supportedChains();
   const c: any = chains.find((x) => x.chainName === chain);
@@ -132,7 +151,7 @@ export function ChainsList({
   format: string;
   info: string;
 }): JSX.Element {
-  let chains: FormattedChains[];
+  let chains: ChainFormatted[];
   // Return either testnet only, mainnet only, or both mainnet & testnet chains.
   if (type === "testnets") {
     chains = supportedChains().filter((chain) => chain.location === "testnet");

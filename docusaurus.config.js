@@ -4,16 +4,17 @@
 const { lightCodeTheme, darkCodeTheme } = require("./src/theme/codeTheme");
 const math = require("remark-math");
 const katex = require("rehype-katex");
-// Imports for configuring the footer, site metadata, and navbar
+// Imports for configuring the site metadata and navbar
 const metadata = require("./config/metadata");
 const navbar = require("./config/navbar");
+require("dotenv").config();
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: "Tableland Docs",
   tagline:
     "Explore how to store & query data on Tableland—the serverless database for web3 apps.",
-  url: "http://localhost:3000", // https://docs.tableland.xyz
+  url: "https://docs.tableland.xyz",
   baseUrl: "/",
   onBrokenLinks: "log", // Or, could `throw`
   onBrokenMarkdownLinks: "warn",
@@ -33,14 +34,15 @@ const config = {
     mermaid: true,
   },
   themes: [
-    [
-      "@easyops-cn/docusaurus-search-local", // Used for site search
-      {
-        hashed: true,
-      },
-    ],
     "@docusaurus/theme-mermaid", // Used for diagrams
-    "@docusaurus/theme-live-codeblock", // Used for live / editable code
+  ],
+  scripts: [
+    // Fathom analytics
+    {
+      src: "https://cdn.usefathom.com/script.js",
+      defer: true,
+      "data-site": process.env.FATHOM_SITE_ID,
+    },
   ],
   stylesheets: [
     // Used for math / KaTeX formulas
@@ -53,44 +55,9 @@ const config = {
     },
   ],
   plugins: [
-    [
-      "docusaurus-plugin-dotenv",
-      {
-        path: "./.env", // Path to your environment variables in `.env` file
-      },
-    ],
-    // "docusaurus-plugin-fathom",
-    /* TODO -- need to add redirects from old site pages to new site pages
-    [
-      "@docusaurus/plugin-client-redirects",
-      {
-        redirects: [
-          // /docs/oldDoc -> /docs/newDoc
-          {
-            to: "/docs/newDoc",
-            from: "/docs/oldDoc",
-          },
-          // Redirect from multiple old paths to the new path
-          {
-            to: "/docs/newDoc2",
-            from: ["/docs/oldDocFrom2019", "/docs/legacyDocFrom2016"],
-          },
-        ],
-        // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-        // @ts-ignore
-        createRedirects(existingPath) {
-          if (existingPath.includes("/community")) {
-            // Redirect from /docs/team/X to /community/X and /docs/support/X to /community/X
-            return [
-              existingPath.replace("/community", "/docs/team"),
-              existingPath.replace("/community", "/docs/support"),
-            ];
-          }
-          return undefined; // Return a falsy value: no redirect created
-        },
-      },
-    ],
-    */
+    // "docusaurus-plugin-fathom", // Fathom site analytics tracking
+    // If any redirects are needed, configure with `@docusaurus/plugin-client-redirects`
+    // See docs here: https://docusaurus.io/docs/api/plugins/@docusaurus/plugin-client-redirects
   ],
   presets: [
     [
@@ -98,29 +65,21 @@ const config = {
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
-          sidebarPath: "./config/sidebars.js",
-          // docLayoutComponent: "@theme/DocPage",
+          sidebarPath: "./config/sidebars.js", // Configuration for the sidebar
           routeBasePath: "/", // Use `/` instead of `/docs` for doc pages' base URL
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
           editUrl: "https://github.com/tablelandnetwork/docs/tree/main/",
           showLastUpdateTime: true,
           breadcrumbs: true,
           remarkPlugins: [
             math,
             require("@docusaurus/remark-plugin-npm2yarn"),
-            { sync: true },
+            { converters: ["pnpm"], sync: true },
           ],
           rehypePlugins: [katex],
           showLastUpdateAuthor: true,
         },
-        blog: {
-          showReadingTime: true,
-          // Remove this to remove the "edit this page" links.
-          editUrl: "https://github.com/tablelandnetwork/docs/tree/main",
-        },
         theme: {
-          customCss: "./src/css/custom.css",
+          customCss: "./src/css/custom.css", // All custom CSS overrides
         },
         sitemap: {
           changefreq: "weekly",
@@ -134,33 +93,36 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
-      // fathomAnalytics: {
-      //   siteId: "",
-      //   customDomain: "", // Use a custom domain, see https://usefathom.com/support/custom-domains
-      // },
-      image: "img/tableland/site-banner.png", // Default image used in metadata, e.g., links shared on socials
-      metadata,
-      mermaid: {
-        theme: {
-          light: "neutral",
-          dark: "dark",
-        },
-        options: {
-          fontFamily: "Inter",
-        },
+      algolia: {
+        appId: "4PTCXCA47T",
+        // TMP: If building locally, allow an empty Algolia API key so that
+        // anyone can contribute to docs without running into a build error.
+        // TODO: Add local development vs. deployment workflow.
+        apiKey: process.env.ALGOLIA_API_KEY || "_",
+        indexName: "tableland",
+        contextualSearch: false,
       },
+      colorMode: {
+        defaultMode: "dark",
+        disableSwitch: false,
+        respectPrefersColorScheme: true,
+      },
+      // Default image used in metadata, e.g., links shared on socials
+      image: "img/tableland/site-banner.png",
+      metadata, // Custom site metadata (imported via separate file)
       docs: {
         sidebar: {
           autoCollapseCategories: true, // Collapse sidebar categories when opening a new one
           hideable: true, // Allow the sidebar to be hidden with a toggle
         },
       },
-      navbar,
+      navbar, // Navbar config (imported via separate file)
       // Allow markdown to use `h2` to `h4` so that up to 3 headings are shown in the table of contents
       tableOfContents: {
         minHeadingLevel: 2,
         maxHeadingLevel: 4,
       },
+      // Prism styling for code snippets
       prism: {
         theme: lightCodeTheme,
         darkTheme: darkCodeTheme,
@@ -180,10 +142,14 @@ const config = {
           },
         ],
       },
-      colorMode: {
-        defaultMode: "light",
-        disableSwitch: false,
-        respectPrefersColorScheme: true,
+      mermaid: {
+        theme: {
+          light: "neutral",
+          dark: "dark",
+        },
+        options: {
+          fontFamily: "Poppins",
+        },
       },
       // Announcement bar is upon visiting the site and removed if the user closes it out (tracked in local storage)
       announcementBar: {

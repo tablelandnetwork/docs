@@ -194,28 +194,12 @@ console.log(name.toUpperCase());
 // Uncaught TypeError: Cannot read properties of null (reading 'toUpperCase')
 ```
 
-### Global variables
-
-Custom variables are replaced in code blocks. These are simply strings that are prefixed with `DOCS_` and fully capitalized:
-
-- `DOCS_ADDR`: replaces the string in a code block with the connected wallet's address; if no wallet is connected, it uses a default string of `0xINSERT_ADDRESS`.
-- `DOCS_CHAIN_NAME`: replaces the string in a code block with the specified chain's name, which defaults to `maticmum`.
-- `DOCS_CHAIN_ID`: replaces the string in a code block with the specified chain's ID, which defaults to `maticmum`'s `80001`.
-
-Under the hood, there is a simple regex replace method that takes the `DOCS_` strings and replaces them with an account's address or the specified chain. It is only available in code _blocks_ but not inline strings nor standard page content. For example, the following snippet sets a `const address = "DOCS_ADDR"`. As you can see, the inline code throughout this subsection maintains the `DOCS_ADDR` string itself, but within the code block, it is replaced by one of the values noted above.
-
-```js
-const address = "DOCS_ADDR";
-const chain = "DOCS_CHAIN_NAME";
-const chainId = "DOCS_CHAIN_ID";
-```
-
 import { Address } from '@site/src/components/Wallet'
 import { SupportedChains, ChainsList, ChainInfo } from '@site/src/components/SupportedChains'
 
 ## Components
 
-There do exist some custom components that can be imported and used in markdown. For example, although you can't use `DOCS_ADDR` in inline text, you _can_ use `<Address />` to render the connected wallet or some default value—for example, the following uses `<Address />` (try connecting & disconnecting your wallet): <Address />. The `Wallet` component holds this logic, so you'll have to import it from `@site/src/components/Wallet`.
+There does exist some custom components that can be imported and used in markdown. For example, you can use `<Address />` to render the connected wallet or some default value—for example, the following uses `<Address />` (try connecting & disconnecting your wallet): <Address />. The `Wallet` component holds this logic, so you'll have to import it from `@site/src/components/Wallet`.
 
 Some other utilities exist in the `SupportedChains` component, such as importing `<ChainsList />`, `<ChainInfo />`, or `<SupportedChains />`. With `<ChainsList />`, you can pass optional strings of either `testnets` or `mainnets` for `type`, which will only include testnet or mainnet chains; similarly, the `format` prop can use either `list` or `string`. With `<ChainInfo />`, you pass a `name` prop for the chain's name (matching `ethersjs`) along with the info desired (`name`, `chainId`, etc.). The `getChainInfo()` method is used under the hood and takes the same parameters.
 
@@ -226,7 +210,7 @@ import { ChainsList, ChainInfo, getChainInfo, SupportedChains } from '@site/src/
 
 <ChainsList type={'mainnets'} format={'list'} />
 
-<ChainInfo chain='goerli' info='chainId' />
+<ChainInfo chain='sepolia' info='chainId' />
 
 <SupportedChains />
 ```
@@ -235,7 +219,7 @@ The `<ChainsList />` will render a string (aka it renders: <ChainsList type={'te
 
 <ChainsList type={'mainnets'} format={'list'} />
 
-And `<ChainInfo />` can render something like Ethereum Goerli's chain ID: <ChainInfo chain='goerli' info='chainId' />. If you want to access the raw data, you can use the exported `getChainInfo()` method, which `<ChainsList />` uses under the hood to render a `<span>` containing the data. And `<SupportedChains />` renders a table of chain values:
+And `<ChainInfo />` can render something like Ethereum Sepolia's chain ID: <ChainInfo chain='sepolia' info='chainId' />. If you want to access the raw data, you can use the exported `getChainInfo()` method, which `<ChainsList />` uses under the hood to render a `<span>` containing the data. And `<SupportedChains />` renders a table of chain values:
 
 <SupportedChains />
 
@@ -535,7 +519,7 @@ A custom `BrowserWindow` component can be imported such that you can render a br
 import BrowserWindow from "@site/src/components/BrowserWindow";
 
 ````md
-<BrowserWindow url="http://localhost:8080/query?s=select%20*%20from%20healthbot_31337_1">
+<BrowserWindow url="http://localhost:8080/query?statement=select%20*%20from%20healthbot_31337_1">
 
 ```json
 [
@@ -551,7 +535,7 @@ import BrowserWindow from "@site/src/components/BrowserWindow";
 
 This will render the following:
 
-<BrowserWindow url="http://localhost:8080/query?s=select%20*%20from%20healthbot_31337_1">
+<BrowserWindow url="http://localhost:8080/query?statement=select%20*%20from%20healthbot_31337_1">
 
 ```json
 [
@@ -577,3 +561,7 @@ npm run swizzle @docusaurus/theme-classic NotFound -- --eject
 ```
 
 Ejecting a theme component is the process of creating a copy of the original theme component, which you can fully customize and override. It will copy the component into `src/theme` to then allow you to further customize it. Wrapping a theme is the process of creating a wrapper around the original theme component; you can further enhance "around" the component but not directly edit it.
+
+## Debugging
+
+One helpful was to debug the docs site itself is by navigating to the `/__docusaurus/debug` URI, which shows information about the config, metadata, registry, routes, content, and global site data.

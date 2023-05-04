@@ -2,9 +2,9 @@
 title: Create a dynamic NFT with p5.js
 description: Use p5.js to render data from an NFT that holds global game state in a table.
 keywords:
-  - tutorial
-  - solidity
-  - dynamic NFT
+  - nft metadata
+  - dynamic nft
+  - p5js
 ---
 
 We want to now write a simple web app that will be used to dynamically render a single NFT in our collection. When the NFT renders, the web app should check the requested token, grab the latest data from Tableland, and render some dynamic content.
@@ -20,13 +20,16 @@ If you aren’t familiar with [p5.js](https://p5js.org/), it’s an awesome litt
 - Completed the steps & tutorial to [build a dynamic NFT in Solidity](/tutorials/dynamic-nft-solidity).
 - (Optional) for pushing to production, sign up for an [NFT.Storage](https://nft.storage/) account
 
-## Setting up Your p5.js App
+## Setting up your p5.js app
 
 To start this tutorial, we’re going to lean on some great starter content written by others. Follow the instructions in [How to use p5.js with Typescript and webpack](https://dev.to/tendonnman/how-to-use-p5js-with-typescript-and-webpack-57ae).
 
-[How to use p5.js with TypeScript and webpack](https://dev.to/tendonnman/how-to-use-p5js-with-typescript-and-webpack-57ae)
-
 When you are finished with the tutorial, you should be able to run `npm run start` and see the simple data viz in your browser.
+
+:::tip
+
+Looking for more? Check out the page on [how to build an NFT](/how-to-build-an-nft), including additional resources like defining an [optimal SQL table structure](/playbooks/walkthroughs/nft-metadata).
+:::
 
 ## Customizing p5.js for an NFT
 
@@ -60,7 +63,7 @@ Let’s just get this ready for a full-bleed token. We’ll add a black backgrou
 </style>
 ```
 
-### A Basic p5js NFT Canvas
+### A basic p5js NFT canvas
 
 Your `index.ts` file should currently look like the following:
 
@@ -147,7 +150,7 @@ p.setup = () => {
 
 Awesome. We’re ready to start drawing!
 
-### Getting Table Data
+### Getting table data
 
 First, it’s time to install `@tableland/sdk` in your project.
 
@@ -181,7 +184,7 @@ p.setup = () => {
 
 That’s it, you’ll have have Tableland data in your app. It’s time to draw it.
 
-### Rendering Table Data
+### Rendering table data
 
 To render the data, we’ll rewrite the `p.draw()` function to loop over the points and render them on our canvas.
 
@@ -213,15 +216,15 @@ import GameScreen from "@site/static/assets/tutorials/dynamic-nft-p5js/game-scre
 
 You may not have the aqua point highlighted. To see the token view for any single token, you need to change your url to `[https://localhost/#{id}](https://localhost/#{id})`. So to see tokenId=1 as shown above, you’d go to `[http://localhost/#1](http://localhost/#1)`.
 
-## Package for Production
+## Package for production
 
 The tutorial above left your project with a couple more config steps to get ready for production.
 
-### Change webpack to Production
+### Change webpack to production
 
 In `webpack.config.js` change `mode: "development",` to `mode: "production",`.
 
-### Add a Build Script
+### Add a build script
 
 in `package.json` add a new method to your scripts, _`"build"_: "webpack build"`. So, your full script options looks like:
 
@@ -233,7 +236,7 @@ in `package.json` add a new method to your scripts, _`"build"_: "webpack build"`
 },
 ```
 
-### Run the Build
+### Run the build
 
 `npm run build`
 

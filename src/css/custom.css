@@ -10,23 +10,33 @@
 /* Override the default Infima variables here. */
 :root {
   /* Colors (light mode colors are the default) */
-  --ifm-color-primary: #9563a7;
-  --ifm-color-primary-dark: #704b7e;
-  --ifm-color-primary-darker: #4d3357;
-  --ifm-color-primary-darkest: #251929;
-  --ifm-color-primary-light: #a782b5;
-  --ifm-color-primary-lighter: #b99bc4;
-  --ifm-color-primary-lightest: #dccde1;
+  --color-black: #1a1a1a;
+  --color-blue: #6067eb;
+  --color-darkblue: #141034;
+  --color-neonblue: #75b6b5;
+  --color-grey: #5d657f;
+  --color-orange: #f4706b;
+  --color-purple: #815691;
+  --color-green: #162929;
+  --color-darkgreen: #101e1e;
+  --color-lightgreen: #3b4949;
+  --color-verylightgreen-rgb: 113, 139, 139;
+  --color-verylightgreen: #718b8b;
+  --color-neongreen: #0be291;
+
+  --ifm-color-primary: var(--color-orange);
+  --ifm-color-secondary: var(--color-orange);
+  --ifm-color-black: var(--color-black);
+  /* Make links colored */
+  --ifm-link-color: var(--color-orange);
   /* Change the Tab component to be less vertically padded */
   --ifm-tabs-padding-vertical: 0.3rem;
   --ifm-global-radius: 0.1rem;
   /* Faster transition speed on hovers etc */
   --ifm-transition-fast: 0.15s;
-  /* Don't underline links on hover */
-  --ifm-link-hover-decoration: none;
   /* Font edits, including font size variables, used down below with `md` files, too */
   --ifm-code-font-size: 102%;
-  --ifm-font-family-base: "Inter", sans-serif;
+  --ifm-font-family-base: "Poppins", sans-serif;
   --ifm-font-family-monospace: "Inconsolata", monospace;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
   /* Change the heading font sizes */
@@ -44,64 +54,53 @@
   --ifm-h6-font-size: var(--h6-font-size);
   /* Default secondary colors, listed since some are used throughout */
   --ifm-color-secondary-dark: rgb(212, 213, 216);
-  --ifm-color-secondary-darker: rgb(200, 201, 204);
-  --ifm-color-secondary-darkest: rgb(164, 166, 168);
-  --ifm-color-secondary-light: rgb(238, 240, 242);
-  --ifm-color-secondary-lighter: rgb(241, 242, 245);
-  --ifm-color-secondary-lightest: rgb(245, 246, 248);
-  --ifm-color-content-secondary: #525860;
   --ifm-color-gray-300: #dadde1;
   --ifm-color-gray-300-rgb: 218, 221, 225;
-  --ifm-color-emphasis-300: var(--ifm-color-gray-300);
+  --ifm-color-emphasis-300: var(--ifm-color-gray-200);
+  --ifm-heading-color: var(--ifm-color-black);
   /* Decrease sidebar width and padding; change color to match table of contents */
   --ifm-menu-link-padding-vertical: 0.3rem;
   --ifm-toc-border-color: var(--ifm-color-emphasis-300);
-  --ifm-menu-color: var(--ifm-color-content-secondary);
+  --ifm-menu-color: var(--color-orange) !important;
   --ifm-navbar-shadow: 0 1px 2px 0 rgba(var(--ifm-color-gray-300-rgb), 1);
   /* Custom navbar and footer color */
   --ifm-footer-background-color: var(--ifm-color-secondary-lighter);
-  /* --ifm-hover-overlay: var(--ifm-color-secondary-lightest); */
+  --ifm-hover-overlay: var(--ifm-color-secondary-lightest);
   /* Change `hr` section divider to be the same color as sidebar & TOC dividers */
   --ifm-hr-background-color: var(--ifm-toc-border-color);
   --ifm-button-border-radius: 0.4rem;
   /* These are used as the dark mode colors; putting here so they can be
   accessed in light mode, if needed */
-  --ifm-color-dark-primary: #75b6b5;
-  --ifm-color-dark-primary-dark: #3b706f;
-  --ifm-color-dark-primary-darker: #2c5453;
-  --ifm-color-dark-primary-darkest: #1e3837;
-  --ifm-color-dark-primary-light: #4a8c8b;
-  --ifm-color-dark-primary-lighter: #59a7a6;
-  --ifm-color-dark-primary-lightest: #77dddc;
-  --ifm-color-gray-800: #444950;
   --ifm-color-gray-800-rgb: 68, 73, 80;
 }
 
 /* Change the font color of the content to a dark grey but keep headings black*/
 [data-theme="light"] {
-  --ifm-color-content-rgb: var(--ifm-color-gray-800-rgb);
-  --ifm-color-content: rgb(var(--ifm-color-content-rgb)) !important;
+  --ifm-color-content: var(--ifm-color-black) !important;
   --ifm-menu-color: var(--ifm-color-gray-800);
-  --ifm-heading-color: var(--ifm-color-gray-1000);
 }
 
 /* Dark mode */
 [data-theme="dark"] {
   /* Colors */
-  /* --ifm-background-color: !important; */
+  --ifm-color-primary: var(--color-neonblue);
+  --ifm-color-secondary: var(--color-neonblue);
+  --ifm-link-color: var(--color-neonblue);
+  --ifm-background-color: var(--color-darkgreen) !important;
   --ifm-color-content-rgb: 237, 237, 237;
   --ifm-color-content: rgb(var(--ifm-color-content-rgb)) !important;
-  --color-primary-rgb: 117, 182, 181;
-  --ifm-color-primary: var(--ifm-color-dark-primary);
-  --ifm-color-primary-dark: var(--ifm-color-dark-primary-dark);
-  --ifm-color-primary-darker: var(--ifm-color-dark-primary-darker);
-  --ifm-color-primary-darkest: var(--ifm-color-dark-primary-darkest);
-  --ifm-color-primary-light: var(--ifm-color-dark-primary-light);
-  --ifm-color-primary-lighter: var(--ifm-color-dark-primary-lighter);
-  --ifm-color-primary-lightest: var(--ifm-color-dark-primary-lightest);
-  --ifm-heading-color: #e3e3e3;
-  --ifm-menu-color: var(--ifm-color-gray-500);
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+  --ifm-color-primary: var(--color-neonblue);
+  --ifm-color-secondary: var(--color-neonblue);
+  --ifm-background-surface-color: var(--color-green) !important;
+  --ifm-hover-overlay: var(--ifm-background-surface-color) !important;
+  --ifm-heading-color: white;
+  --ifm-toc-border-color: var(--color-green) !important;
+  --ifm-menu-color: var(--color-neonblue) !important;
+  --ifm-card-background-color: var(--color-green) !important;
+  --docusaurus-highlighted-code-line-bg: rgba(
+    var(--color-verylightgreen-rgb),
+    0.2
+  );
   /* Make the navbar the same color as the background; include bottom box */
   --ifm-color-content-secondary: rgba(255, 255, 255, 1);
   --ifm-toc-link-color: var(--ifm-menu-color);
@@ -161,6 +160,37 @@ main > .container h6 {
   --ifm-h4-font-size: var(--h4-font-size);
   --ifm-h5-font-size: var(--h5-font-size);
   --ifm-h6-font-size: var(--h6-font-size);
+}
+
+.sidebar-collapse {
+  fill: var(--color-black);
+}
+
+html[data-theme="dark"] .sidebar-collapse {
+  fill: white;
+}
+
+html[data-theme="dark"] .theme-back-to-top-button {
+  background-color: var(--color-green) !important;
+}
+
+.theme-edit-this-page {
+  font-size: var(--h5-font-size);
+}
+
+.theme-edit-this-page svg {
+  width: 14px;
+  height: 14px;
+  vertical-align: -1px;
+  display: inline-block;
+}
+
+.theme-last-updated {
+  color: var(--color-verylightgreen);
+}
+
+html[data-theme="dark"] .theme-last-updated {
+  color: var(--color-lightgreen);
 }
 
 /* Correct h1 defaulting to 3rem and decrease bottom spacing */
@@ -232,17 +262,21 @@ td > code {
 
 /* Announcement bar overrides */
 div[class^="announcementBar"] {
-  background-color: var(--ifm-color-primary-light);
-  color: var(--ifm-color-secondary-lightest);
+  background-color: var(--ifm-color-secondary);
+  color: var(--ifm-color-black);
 }
 
 div[class^="announcementBar"] a {
-  color: var(--ifm-color-primary-darker);
-  text-decoration: inherit;
+  text-decoration: underline;
+}
+
+div[class^="announcementBar"] .close {
+  opacity: 1;
 }
 
 [data-theme="dark"] div[class^="announcementBar"] {
-  background-color: var(--ifm-color-primary);
+  background-color: var(--color-verylightgreen);
+  color: var(--ifm-color-content);
 }
 
 /* Custom error css, set in the magic comments in docusaurus config */
@@ -260,11 +294,6 @@ a {
   transition: color var(--ifm-transition-fast);
 }
 
-/* Darken color on link hover; lighten on dark mode */
-a:hover {
-  color: rgba(var(--ifm-link-color), 0);
-}
-
 /* In tooltips, highlight anchors are embedded links and change opacity on hover */
 .alert a {
   text-decoration: underline;
@@ -272,9 +301,18 @@ a:hover {
 }
 
 .alert a:hover {
-  text-decoration: underline;
+  text-decoration-thickness: inherit;
   opacity: 0.7;
   transition: opacity var(--ifm-transition-fast);
+}
+
+html[data-theme="dark"] .alert--secondary {
+  background-color: var(--color-black);
+}
+
+html[data-theme="dark"] .alert--success {
+  background-color: var(--color-lightgreen);
+  border-left-color: var(--color-neongreen);
 }
 
 /* Don't darken the heading's `#` anchor tag on hover */
@@ -291,6 +329,11 @@ html[data-theme="dark"] .header-github-link:before {
     no-repeat;
 }
 
+.navbar {
+  box-shadow: none;
+  border-bottom: 1px solid var(--ifm-toc-border-color);
+}
+
 /* Make navbar dropdown links match better with those of the sidebar's */
 .dropdown > .navbar__link::after {
   border: solid !important;
@@ -305,20 +348,27 @@ html[data-theme="dark"] .header-github-link:before {
 /* Custom style for buttons */
 .button {
   font-weight: var(--ifm-font-weight-bold);
-  border-color: var(--ifm-color-secondary);
+  font-size: var(--h4-font-size);
+  text-transform: uppercase;
+  padding: 10px 30px;
   border: none;
   outline: none;
+  background-color: var(--color-black);
+}
+
+.button:hover {
+  background-color: var(--color-neongreen);
+}
+
+html[data-theme="dark"] .button:hover {
+  background-color: var(--color-neonblue);
+}
+
+html[data-theme="dark"] .button {
+  background-color: var(--color-green);
 }
 
 /* Force no darken on hover */
-.button--primary {
-  background-color: var(--ifm-color-primary);
-}
-
-html[data-theme="dark"] .button--primary {
-  background-color: var(--ifm-color-primary-dark);
-}
-
 .button--secondary:hover {
   background-color: var(--ifm-color-secondary);
 }
@@ -347,18 +397,6 @@ html[data-theme="dark"] .button--primary {
   font-size: var(--h3-font-size);
 }
 
-/* Hack a way to make the search bar's icons (⌘ K) vertically centered */
-kbd {
-  box-shadow: none !important;
-  width: 1.4rem;
-  text-align: center;
-}
-
-kbd::before {
-  content: "";
-  vertical-align: middle;
-}
-
 /* Reduce font size in sidebar, bold the active sidebar page, and don't change active link color on hover */
 .menu {
   padding-top: var(--ifm-pre-padding) !important;
@@ -369,7 +407,7 @@ kbd::before {
 }
 
 .menu__link--active {
-  font-weight: var(--ifm-font-weight-semibold);
+  font-weight: var(--ifm-font-weight-bold);
 }
 
 .menu__link:not(.menu__link--active) {
@@ -398,14 +436,27 @@ spacing. */
   margin-top: 0;
 }
 
+/* Make table of contents active link/section a different color in dark mode */
+html[data-theme="dark"]
+  .table-of-contents__link:not(.table-of-contents__link--active) {
+  color: var(--color-verylightgreen);
+}
+
 /* Pagination fixes background color, do not change font color on hover, and change icons */
 .pagination-nav__link {
   background-color: var(--ifm-hover-overlay);
 }
 
 .pagination-nav__link:hover {
-  color: var(--ifm-link-color);
-  border-color: var(--ifm-color-emphasis-300);
+  border-color: var(--ifm-color-emphasis-400);
+}
+
+[data-theme="dark"] .pagination-nav__link:hover {
+  border-color: var(--color-neonblue);
+}
+
+.pagination-nav__label {
+  font-size: var(--h5-font-size);
 }
 
 .pagination-nav__link--next .pagination-nav__label::after {
@@ -430,34 +481,8 @@ spacing. */
   transform: translate(-0.2rem);
 }
 
-/* Decrease the width of the search bar */
-.navbar__search-input {
-  width: 20rem;
-}
-
-.navbar__search-input,
-input {
-  border: 1px solid transparent;
-  border-radius: 5px !important;
-  background-color: var(--ifm-navbar-search-input-background-color);
-}
-
-[data-theme="dark"] .navbar__search-input,
-input {
-  --ifm-navbar-search-input-background-color: var(--ifm-hover-overlay);
-}
-
-/* Change the search box outline color on focus */
-.navbar__search-input:focus-visible {
-  outline: none;
-  border-color: var(--ifm-toc-border-color);
-}
-
-/* Adjust based on navbar links on responsive decrease width */
-@media (max-width: 1130px) {
-  .navbar__search-input {
-    width: 10rem;
-  }
+[data-theme="dark"] .pagination-nav__link {
+  border-color: var(--color-green);
 }
 
 /* Make navbar text smaller */
@@ -465,14 +490,36 @@ input {
   font-size: var(--ifm-h5-font-size);
 }
 
+/* Fix last navbar item having zero right padding */
+.navbar__items--right > :last-child {
+  padding: var(--ifm-navbar-item-padding-vertical)
+    var(--ifm-navbar-item-padding-horizontal);
+}
+
 /* Make navbar dropdown links "active" when a child in the dropdown is active */
+.navbar__link--active,
 .dropdown:has(.dropdown__menu > li > .dropdown__link--active) .navbar__link {
   color: var(--ifm-color-primary) !important;
+}
+
+html[data-theme="dark"] .navbar__link--active,
+.dropdown:has(.dropdown__menu > li > .dropdown__link--active) .navbar__link {
+  color: var(--ifm-link-color) !important;
+}
+
+.dropdown__menu {
+  background-color: var(--ifm-background-color);
 }
 
 .navbar__brand {
   font-size: 1.1rem;
   color: var(--ifm-color-primary);
+}
+
+@media (min-width: 997px) {
+  .navbar__brand {
+    margin-right: 65px;
+  }
 }
 
 .navbar__title {
@@ -496,7 +543,7 @@ input {
 }
 
 .sidebar-landing .menu__link {
-  font-size: var(--ifm-h4-font-size);
+  font-size: var(--ifm-h5-font-size);
   /* background-color: transparent; */
   color: var(--ifm-heading-color);
   margin-top: 7px;
@@ -511,6 +558,10 @@ input {
 .sidebar-landing .menu__link:hover {
   background-color: transparent;
   color: var(--ifm-color-primary);
+}
+
+.sidebar-footer a svg {
+  width: 11px !important;
 }
 
 .sidebar-hr {
@@ -598,59 +649,7 @@ table {
 }
 
 /* Custom fonts for the site */
-@font-face {
-  font-family: "Inter";
-  font-weight: 100;
-  src: url("/fonts/Inter/Inter-Thin.ttf") format("truetype");
-}
-
-@font-face {
-  font-family: "Inter";
-  font-weight: 200;
-  src: url("/fonts/Inter/Inter-ExtraLight.ttf") format("truetype");
-}
-
-@font-face {
-  font-family: "Inter";
-  font-weight: 300;
-  src: url("/fonts/Inter/Inter-Light.ttf") format("truetype");
-}
-
-@font-face {
-  font-family: "Inter";
-  font-weight: 400;
-  src: url("/fonts/Inter/Inter-Regular.ttf") format("truetype");
-}
-
-@font-face {
-  font-family: "Inter";
-  font-weight: 500;
-  src: url("/fonts/Inter/Inter-Medium.ttf") format("truetype");
-}
-
-@font-face {
-  font-family: "Inter";
-  font-weight: 600;
-  src: url("/fonts/Inter/Inter-Semibold.ttf") format("truetype");
-}
-
-@font-face {
-  font-family: "Inter";
-  font-weight: 700;
-  src: url("/fonts/Inter/Inter-Bold.ttf") format("truetype");
-}
-
-@font-face {
-  font-family: "Inter";
-  font-weight: 800;
-  src: url("/fonts/Inter/Inter-ExtraBold.ttf") format("truetype");
-}
-
-@font-face {
-  font-family: "Inter";
-  font-weight: 900;
-  src: url("/fonts/Inter/Inter-Black.ttf") format("truetype");
-}
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@600;900&family=Poppins:wght@300;400;500;600&display=swap");
 
 @font-face {
   font-family: "Inconsolata";

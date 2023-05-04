@@ -1,11 +1,17 @@
 .cardContainer {
-  --ifm-link-color: var(--ifm-color-emphasis-800);
-  --ifm-link-hover-color: var(--ifm-color-emphasis-700);
   --ifm-link-hover-decoration: none;
-
+  color: var(--ifm-color-content);
   border: 1px solid var(--ifm-color-emphasis-200);
   transition: all var(--ifm-transition-fast) ease;
   transition-property: box-shadow;
+}
+
+[data-theme="dark"] .cardContainer {
+  border: transparent;
+}
+
+.cardContainer {
+  box-shadow: none !important;
 }
 
 .cardContainer:hover {

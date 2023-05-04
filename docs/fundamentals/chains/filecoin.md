@@ -18,7 +18,7 @@ The Filecoin EVM runtime (FEVM) is a fully compatible Ethereum Virtual Machine (
 <!-- ### Filecoin (mainnet)
 
 - Average block time: 30s
-- Chain ID:  314
+- Chain ID: 314
 - Symbol: FIL
 - Status Dashboard:
   - [https://status.filecoin.io/](https://status.filecoin.io/)
@@ -47,4 +47,4 @@ The Filecoin EVM runtime (FEVM) is a fully compatible Ethereum Virtual Machine (
 
 #### Getting testnet funds
 
-1. Request testnet FIL from a faucet noted above
+Request testnet FIL from the faucet noted above—this should send funds directly to the identified wallet.

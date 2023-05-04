@@ -21,13 +21,14 @@ const staticStmt = db.prepare(
 
 Tableland follows the [SQLite convention](https://www.sqlite.org/lang_expr.html#varparam) for prepared statement parameter binding. This includes _Ordered_ (?NNNN) and _Anonymous_ (?) parameters, as well as all three forms of _Named_ parameters. To bind a parameter, simply use the method `stmt.bind()`. This **\*\***\***\*\***only works for parameters**\*\***\***\*\***; a table’s name **cannot** be passed and bound as a parameter (e.g., `SELECT * FROM ? ...`).
 
-| Syntax | Type      | Description                                                                                                                                                                                                                                                                                                                                                                                                                                      |
-| ------ | --------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| ?NNN   | Ordered   | A question mark followed by a number NNN holds a spot for the NNN-th parameter.                                                                                                                                                                                                                                                                                                                                                                  |
+<!-- prettier-ignore -->
+| Syntax | Type | Description |
+| ------ | --------- | ----------- |
+| ?NNN   | Ordered   | A question mark followed by a number NNN holds a spot for the NNN-th parameter.  |
 | ?      | Anonymous | A question mark that is not followed by a number creates a parameter with a number one greater than the largest parameter number already assigned. This parameter format is provided for compatibility with other database engines. But because it is easy to miscount the question marks, the use of this parameter format is discouraged. Programmers are encouraged to use one of the symbolic formats below or the ?NNN format above instead |
-| :AAAA  | Named     | A colon followed by an identifier name holds a spot for a named parameter with the name :AAAA. To avoid confusion, it is best to avoid mixing named and numbered parameters.                                                                                                                                                                                                                                                                     |
-| @AAAA  | Named     | An "at" sign works exactly like a colon, except that the name of the parameter created is @AAAA.                                                                                                                                                                                                                                                                                                                                                 |
-| $AAAA  | Named     | A dollar-sign followed by an identifier name also holds a spot for a named parameter with the name $AAAA.                                                                                                                                                                                                                                                                                                                                        |
+| :AAAA  | Named     | A colon followed by an identifier name holds a spot for a named parameter with the name :AAAA. To avoid confusion, it is best to avoid mixing named and numbered parameters.  |
+| @AAAA  | Named     | An "at" sign works exactly like a colon, except that the name of the parameter created is @AAAA.   |
+| $AAAA  | Named     | A dollar-sign followed by an identifier name also holds a spot for a named parameter with the name $AAAA. |
 
 With anonymous binding, the order in which values are passed is the order assigned within the query. The ordered style allows you to specify a number that corresponds to position of the parameter within the statement, starting at `1`.
 
@@ -41,7 +42,7 @@ const stmt = db
   .bind(41, "John Doe");
 ```
 
-More complex binding is possible using named parameters and complex datatypes, which are converted to basic types on the fly. Named parameters are prefixed with `@`, `:`, or `$`, and it is best to not mix named and numbered parameters, as it can get a bit confusing.
+More complex binding is possible using named parameters and complex data types, which are converted to basic types on the fly. Named parameters are prefixed with `@`, `:`, or `$`, and it is best to not mix named and numbered parameters, as it can get a bit confusing.
 
 ```tsx
 const stmt = db

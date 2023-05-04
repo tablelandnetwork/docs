@@ -28,6 +28,22 @@ We’re here to build a new web. Together.
 
 ### 2023
 
+#### Q2
+
+- Tableland protocol litepaper.
+- Studio web application MVP.
+- Arbitrum Nova support.
+- Filecoin (FVM) support.
+- Improved on-chain access control.
+- Decentralized validator metrics.
+- ENS table namespaces.
+- Zero downtime deployments.
+- Inclusion proof PoC.
+- Table configurations feature.
+- Local-first wasm based SQLite support.
+- Author a token reputation EIP.
+- Docs site content refresh & deployment.
+
 #### Q1
 
 - Release new validator code with mainnet and testnet separation.
@@ -55,8 +71,8 @@ We’re here to build a new web. Together.
 - [Tableland Rigs](https://tableland.xyz/rigs/) mint in July.
 - The first external validators are onboarded to the network ([interest sign-up](https://hhueol4i6vp.typeform.com/to/gkcyeA22)).
 - Release SQLite backed validator.
-- Release custom SQL parser for Tableland’s [SQL Specification](../sql/sql-spec).
-- Release [multi-transaction support](./tableland-state)
+- Release custom SQL parser for Tableland’s [SQL Specification](/specs/sql/).
+- Release smulti-transaction support.
 - The Tableland testnet protocol launches on Ethereum, Polygon, and Optimism mainnets.
 - Release TABLE NFT with dynamic rendering.
 - Release a [technical engineering blog](https://dev.tableland.xyz/).
@@ -86,12 +102,18 @@ We’re here to build a new web. Together.
 
 ### 2023
 
+#### Q2
+
+- Metadata updates extension ([EIP-4906](https://eips.ethereum.org/EIPS/eip-4906)) to trigger marketplaces to fetch dynamic changes.
+- Filecoin backed assets / metadata.
+- Tableland-based voting in the Garage.
+- Support for earning Flight Time (FT) from off-chain actions.
+- Show FT for Rigs holders as Discord badges.
+
 #### Q1
 
 - First Flight Time Rewards (FTRs) for holders.
-- Unlock first dynamic badges on Rigs.
 - Enhance [Garage web app](https://garage.tableland.xyz/) with badges and additional functionality.
-- Publish output of validator staking research.
 
 ### 2022
 

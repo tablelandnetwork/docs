@@ -16,7 +16,7 @@ npm install --save @tableland/sdk
 ```
 
 :::note
-The Tableland SDK uses the modern `fetch` API. When working in Node, it is necessary to use a version of Node (v18+) that supports `fetch`, or provide global access to `node-fetch` to use the SDK (e.g., for Node v16 or earlier). Review [these docs for an example](https://github.com/node-fetch/node-fetch#providing-global-access).
+The Tableland SDK uses the modern `fetch` API, which is only available starting with Node 18. If you're using an earlier version (Node 16 or before), you must [provide global access](https://github.com/node-fetch/node-fetch#providing-global-access) to `fetch` as well as `Headers` to use the SDK. [Check out this walkthrough](/sdk/reference/node-polyfills) for how to do this.
 :::
 
 ## 2. Read from a table
@@ -29,7 +29,7 @@ Table _reads_ do not require an on-chain connection. You can import the `Databas
 ```js
 import { Database } from "@tableland/sdk";
 
-const tableName = "healthbot_DOCS_CHAIN_ID_1"; // Our pre-defined health check table
+const tableName = "healthbot_80001_1"; // Our pre-defined health check table
 
 const db = new Database();
 
@@ -44,7 +44,7 @@ console.log(results);
 import { Database } from "@tableland/sdk";
 
 // This table has schema: `counter INTEGER PRIMARY KEY`
-const tableName: string = "healthbot_DOCS_CHAIN_ID_1"; // Our pre-defined health check table
+const tableName: string = "healthbot_80001_1"; // Our pre-defined health check table
 
 interface HealthBot {
   counter: number;
@@ -108,7 +108,7 @@ const { meta: create } = await db
   .run();
 
 // The table's `name` is in the format `{prefix}_{chainId}_{tableId}`
-const { name } = create.txn!; // e.g., my_sdk_table_DOCS_CHAIN_ID_311
+const { name } = create.txn!; // e.g., my_sdk_table_80001_311
 ```
 
 </TabItem>
