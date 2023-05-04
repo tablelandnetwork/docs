@@ -36,14 +36,15 @@ import tableNFT from "@site/static/assets/table-nft.png";
 
 To view the TABLE token itself, check out the deployed contracts on various block explorers or see the following NFT marketplaces. Feel free to view click into an NFT to view and query table data directly within the marketplace!
 
-| Chain           | Environment | Collection link                                                    |
-| --------------- | ----------- | ------------------------------------------------------------------ |
-| Ethereum        | Mainnet     | https://opensea.io/collection/tableland-tables                     |
-| Optimism        | Mainnet     | https://opensea.io/collection/tableland-tables-v2                  |
-| Arbitrum One    | Mainnet     | https://opensea.io/collection/tableland-tables-v3                  |
-| Arbitrum Nova   | Mainnet     | https://opensea.io/collection/tableland-tables-1                   |
-| Polygon         | Mainnet     | https://opensea.io/collection/tableland-tables-polygon             |
-| Ethereum Sepolia | Testnet     | ? |
-| Optimism Goerli | Testnet     | https://testnets.opensea.io/collection/tableland-tables-botmoq7j2q |
-| Arbitrum Goerli | Testnet     | https://testnets.opensea.io/collection/tableland-tables-qegwmf9nfj |
-| Polygon Mumbai  | Testnet     | https://testnets.opensea.io/collection/tableland-tables-mumbai     |
+| Chain            | Environment | Collection link                                                         |
+| ---------------- | ----------- | ----------------------------------------------------------------------- |
+| Ethereum         | Mainnet     | https://opensea.io/collection/tableland-tables-homestead                |
+| Optimism         | Mainnet     | https://opensea.io/collection/tableland-tables-optimism                 |
+| Arbitrum One     | Mainnet     | https://opensea.io/collection/tableland-tables-arbitrum                 |
+| Arbitrum Nova    | Mainnet     | https://opensea.io/collection/tableland-tables-arbitrum-nova            |
+| Polygon          | Mainnet     | https://opensea.io/collection/tableland-tables-polygon                  |
+| Ethereum Goerli  | Testnet     | https://testnets.opensea.io/collection/tableland-tables-goerli          |
+| Ethereum Sepolia | Testnet     | No marketplace support                                                  |
+| Optimism Goerli  | Testnet     | https://testnets.opensea.io/collection/tableland-tables-optimism-goerli |
+| Arbitrum Goerli  | Testnet     | https://testnets.opensea.io/collection/tableland-tables-arbitrum-goerli |
+| Polygon Mumbai   | Testnet     | https://testnets.opensea.io/collection/tableland-tables-mumbai          |
