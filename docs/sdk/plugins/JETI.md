@@ -6,8 +6,18 @@ description: Use IPFS for Tableland data
 
 ## JavaScript Extension for Tableland and IPFS
 
+:::caution
+JETI is for users with experience using IPFS pinning services
+:::
+
 Using JETI with Tableland
 JETI (JavaScript Extension for Tableland and IPFS) allows you to easily add data to IPFS and read it in your applications while interacting with the Tableland network. The following guide will walk you through the process of integrating JETI into your project using JavaScript.
+
+:::note
+JETI requires you to have an IPFS node running locally on port 5001, and to have a remote pinning service configured. This is because the point of JETI is to pin your IPFS files when they go to Tableland.
+
+More on remote pinning services can be found [here](https://docs.ipfs.tech/how-to/work-with-pinning-services/#use-an-existing-pinning-service).
+:::note
 
 ### 1. Installation
 
@@ -46,9 +56,11 @@ console.log(create.txn?.name); // e.g., my_sdk_table_80001_311
 Get the data you want to add to IPFS as a Blob object, and use the `prepare` template function to insert it into a query:
 
 ```javascript
-const avatar = new Blob([
-  /* avatar img file contents here */
-]);
+// This turns text into a UINT8Array, which is the format a file must be in
+// to be uploaded to IPFS using JETI.
+const avatar = new TextEncoder().encode(
+  "This is an important file I want on IPFS. Maybe an SVG avatar"
+);
 
 const preparedQuery =
   await prepare`INSERT INTO ${create.txn?.name} (name, avatar_cid) VALUES ('Murray', ${avatar});`;
