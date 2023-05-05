@@ -1,6 +1,6 @@
 <!-- Generator: Widdershins v4.0.1 -->
 
-<h1 id="tableland-validator-openapi-3-0">Tableland Validator - OpenAPI 3.0 v1.0.0</h1>
+<h1 id="tableland-validator-openapi-3-0">Tableland Validator - OpenAPI 3.0 v1.0.1</h1>
 
 > Scroll down for code samples, example requests and responses. Select a language for code samples from the tabs above or the mobile navigation menu.
 
@@ -129,6 +129,10 @@ Returns the status of a given transaction receipt by hash
 ```json
 {
   "table_id": "1",
+  "table_ids": [
+    "1",
+    "2"
+  ],
   "transaction_hash": "0x02f319429b8a7be1cbb492f0bfbf740d2472232a2edadde7df7c16c0b61aa78b",
   "block_number": 27055540,
   "chain_id": 80001,
@@ -186,10 +190,10 @@ Returns information about a single table, including schema information
 
 ```json
 {
-  "name": "healthbot_5_1",
-  "external_url": "https://testnet.tableland.network/tables/healthbot_5_1",
-  "animation_url": "https://render.tableland.xyz/anim/?chain=1&id=1",
-  "image": "https://render.tableland.xyz/healthbot_5_1",
+  "name": "healthbot_80001_1",
+  "external_url": "https://testnets.tableland.network/api/v1/tables/80001/1",
+  "animation_url": "https://tables.testnets.tableland.xyz/80001/1.html",
+  "image": "https://tables.testnets.tableland.xyz/80001/1.svg",
   "attributes": {
     "display_type": "date",
     "trait_type": "created",
@@ -312,10 +316,10 @@ This operation does not require authentication
 
 ```json
 {
-  "name": "healthbot_5_1",
-  "external_url": "https://testnet.tableland.network/tables/healthbot_5_1",
-  "animation_url": "https://render.tableland.xyz/anim/?chain=1&id=1",
-  "image": "https://render.tableland.xyz/healthbot_5_1",
+  "name": "healthbot_80001_1",
+  "external_url": "https://testnets.tableland.network/api/v1/tables/80001/1",
+  "animation_url": "https://tables.testnets.tableland.xyz/80001/1.html",
+  "image": "https://tables.testnets.tableland.xyz/80001/1.svg",
   "attributes": {
     "display_type": "date",
     "trait_type": "created",
@@ -400,6 +404,10 @@ continued
 ```json
 {
   "table_id": "1",
+  "table_ids": [
+    "1",
+    "2"
+  ],
   "transaction_hash": "0x02f319429b8a7be1cbb492f0bfbf740d2472232a2edadde7df7c16c0b61aa78b",
   "block_number": 27055540,
   "chain_id": 80001,
@@ -413,7 +421,8 @@ continued
 
 |Name|Type|Required|Restrictions|Description|
 |---|---|---|---|---|
-|table_id|string|false|none|none|
+|table_id|string|false|none|This field is deprecated|
+|table_ids|[string]|false|none|none|
 |transaction_hash|string|false|none|none|
 |block_number|integer(int64)|false|none|none|
 |chain_id|integer(int32)|false|none|none|
