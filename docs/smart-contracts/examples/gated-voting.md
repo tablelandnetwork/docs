@@ -48,7 +48,7 @@ contract TablelandVoter is ITablelandController {
 
     constructor() {
         // Create questions table.
-        _questionsTableId = TablelandDeployments.get().createTable(
+        _questionsTableId = TablelandDeployments.get().create(
             address(this),
             SQLHelpers.toCreateFromSchema(QUESTIONS_SCHEMA, QUESTIONS_PREFIX)
         );
@@ -61,7 +61,7 @@ contract TablelandVoter is ITablelandController {
         );
 
         // Create answers table.
-        _answersTableId = TablelandDeployments.get().createTable(
+        _answersTableId = TablelandDeployments.get().create(
             address(this),
             SQLHelpers.toCreateFromSchema(ANSWERS_SCHEMA, ANSWERS_PREFIX)
         );
@@ -81,7 +81,7 @@ contract TablelandVoter is ITablelandController {
         );
 
         // Insert answer.
-        TablelandDeployments.get().runSQL(
+        TablelandDeployments.get().mutate(
             address(this),
             _answersTableId,
             SQLHelpers.toInsert(

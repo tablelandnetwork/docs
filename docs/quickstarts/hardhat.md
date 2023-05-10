@@ -62,7 +62,7 @@ contract Lock is ERC721Holder {
 
   // Add a constructor that creates and inserts data
   constructor() {
-    tableId = TablelandDeployments.get().createTable(
+    tableId = TablelandDeployments.get().create(
     address(this),
     SQLHelpers.toCreateFromSchema(
       "id integer primary key," // Notice the trailing comma
@@ -70,7 +70,7 @@ contract Lock is ERC721Holder {
       _TABLE_PREFIX
     ));
 
-    TablelandDeployments.get().runSQL(
+    TablelandDeployments.get().mutate(
       address(this),
       tableId,
       SQLHelpers.toInsert(

@@ -28,7 +28,7 @@ import "@openzeppelin/contracts/token/ERC721/utils/ERC721Holder.sol";
 import "@tableland/evm/contracts/utils/TablelandDeployments.sol";
 
 contract BasicCreate is ERC721Holder {
-    // Implement logic to create a table using `TablelandDeployments.get().createTable(...)`
+    // Implement logic to create a table using `TablelandDeployments.get().create(...)`
     // Note: `onERC721Received` is implemented by `ERC721Holder`
 }
 ```
@@ -43,7 +43,7 @@ import "@openzeppelin/contracts/token/ERC721/IERC721Receiver.sol";
 import "@tableland/evm/contracts/utils/TablelandDeployments.sol";
 
 contract BasicCreate is IERC721Receiver {
-    // Implement logic to create a table using `TablelandDeployments.get().createTable(...)`
+    // Implement logic to create a table using `TablelandDeployments.get().create(...)`
 
     function onERC721Received(address, address, uint256, bytes calldata) external pure returns (bytes4) {
         return IERC721Receiver.onERC721Received.selector;
@@ -70,7 +70,7 @@ contract BasicCreate is ERC721Holder {
     mapping(string => uint256) public tables;
 
     function create(string memory prefix) public payable {
-        uint256 tableId = TablelandDeployments.get().createTable(
+        uint256 tableId = TablelandDeployments.get().create(
             address(this),
             /*
             *  CREATE TABLE {prefix}_{chainId} (
@@ -100,6 +100,6 @@ contract BasicCreate is ERC721Holder {
 }
 ```
 
-The contract can now call the Tableland registry and mint tables. Note the usage of `address(this)`. The `TablelandTables` contract has a `createTable` function that takes an address called `owner` as the first parameter. It simply mints a TABLE ERC721 token to this owner — which is the contract since `address(this)` was passed.
+The contract can now call the Tableland registry and mint tables. Note the usage of `address(this)`. The `TablelandTables` contract has a `create` function that takes an address called `owner` as the first parameter. It simply mints a TABLE ERC721 token to this owner — which is the contract since `address(this)` was passed.
 
 It’s possible that a developer will choose to pass the address of some function caller’s address, like `msg.sender`, instead of having the contract itself be the owner via `address(this)`. Here, it would eliminate the need for inheriting `ERC721Holder` or `IERC721Receiver` since the contract would, thus, be acting as a passthrough to the Tableland registry contract and never actually receives an ERC721 token. It’d be minted right to `msg.sender`.

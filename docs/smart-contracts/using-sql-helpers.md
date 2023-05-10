@@ -18,7 +18,7 @@ function toNameFromId(
 
 ## [`toCreateFromSchema`](https://github.com/tablelandnetwork/evm-tableland/blob/b350a363ea3d10bbeb3d3a088e9c27c77c6cae30/contracts/utils/SQLHelpers.sol#L46)
 
-Form a `CREATE TABLE` statement by supplying the table `schema` and custom `prefix`, which then must be passed to the registry contract's `createTable` method.
+Form a `CREATE TABLE` statement by supplying the table `schema` and custom `prefix`, which then must be passed to the registry contract's `create` method.
 
 ```solidity
 function toCreateFromSchema(
@@ -29,7 +29,7 @@ function toCreateFromSchema(
 
 ## [`toInsert`](https://github.com/tablelandnetwork/evm-tableland/blob/b350a363ea3d10bbeb3d3a088e9c27c77c6cae30/contracts/utils/SQLHelpers.sol#L76)
 
-Generate an `INSERT` statement with the specified columns and values for a specific table, which then can be passed to the registry's `runSQL` method to mutate the table itself.
+Generate an `INSERT` statement with the specified columns and values for a specific table, which then can be passed to the registry's `mutate` method to mutate the table itself.
 
 ```solidity
 function toInsert(
@@ -55,7 +55,7 @@ function toBatchInsert(
 
 ## [`toUpdate`](https://github.com/tablelandnetwork/evm-tableland/blob/b350a363ea3d10bbeb3d3a088e9c27c77c6cae30/contracts/utils/SQLHelpers.sol#L141)
 
-Form an `UPDATE` statement where the `setters` establishes what values to `SET` existing data to, and `filers` allows for additional checks to add to the update. This response can then be passed to the `runSQL` method.
+Form an `UPDATE` statement where the `setters` establishes what values to `SET` existing data to, and `filers` allows for additional checks to add to the update. This response can then be passed to the `mutate` method.
 
 ```solidity
 function toUpdate(
@@ -68,7 +68,7 @@ function toUpdate(
 
 ## [`toDelete`](https://github.com/tablelandnetwork/evm-tableland/blob/b350a363ea3d10bbeb3d3a088e9c27c77c6cae30/contracts/utils/SQLHelpers.sol#L167)
 
-Define what and how table data should be deleted with `filters` applied to the `DELETE FROM` statement—the returned string should then be passed to `runSQL` for execution.
+Define what and how table data should be deleted with `filters` applied to the `DELETE FROM` statement—the returned string should then be passed to `mutate` for execution.
 
 ```solidity
 function toDelete(

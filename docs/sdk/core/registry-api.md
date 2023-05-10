@@ -13,7 +13,7 @@ const { getContractReceipt } = helpers;
 // Pull info from an existing Database instance
 const reg = await new Registry(db.config); // Must have a signer
 
-const tx = await reg.createTable({
+const tx = await reg.create({
   chainId: 31337,
   statement: "create table test_ownership_31337 (id int, name text)",
 });
