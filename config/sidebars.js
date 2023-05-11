@@ -53,6 +53,7 @@ const introduction = [
       "fundamentals/what-is-tableland",
       "fundamentals/considerations-tradeoffs",
       "fundamentals/databases",
+      "fundamentals/why-sqlite",
     ],
   },
 ];
