@@ -53,6 +53,22 @@ JETI requires you to have an IPFS node running locally on port 5001, and to have
 More on remote pinning services can be found [here](https://docs.ipfs.tech/how-to/work-with-pinning-services/#use-an-existing-pinning-service).
 :::note
 
+```JavaScript
+import { pinToLocal, skip } from '@tableland/jeti';
+
+const contentToPin = "Content To Pin";
+
+const sql = pinToLocal`insert into ${skip(tableName)} (message) values ('${contentToPin}');`;
+
+// Later
+
+const results = await db.prepare(`select * from ${tableName}`, [message]).all();
+
+const resultsWithCIDsResolved = await ipfs.resolve(results);
+
+
+```
+
 ### Symetrically Encrypt
 
 **_Please note: be careful with encryption. This encryption function is simple and purely symetric. Probably not suitable for most use cases._**
