@@ -104,7 +104,7 @@ The flowers table has a schema of
 ```solidity
 function initTables() public onlyOwner {
     // Create a "flowers" table to track a predefined set of NFT traits, which will be composed based on VRF-mutated `stage`
-    _flowersTableId = TablelandDeployments.get().createTable(
+    _flowersTableId = TablelandDeployments.get().create(
         address(this),
         SQLHelpers.toCreateFromSchema(
             "id int primary key," // An ID for the trait row
@@ -120,7 +120,7 @@ function initTables() public onlyOwner {
     values[1] = "1,'purple_seedling','purple','QmRkq5EeKE5wKAuZNjaDFxtqpLQP3cFJVVWNu3sqy452uA'";
     values[2] = "2,'purple_blooms','purple','QmRkq5EeKE5wKAuZNjaDFxtqpLQP3cFJVVWNu3sqy452uA'";
     // Insert these values into the flowers table
-    TablelandDeployments.get().runSQL(
+    TablelandDeployments.get().mutate(
         address(this),
         _flowersTableId,
         SQLHelpers.toBatchInsert(
@@ -132,7 +132,7 @@ function initTables() public onlyOwner {
         )
     );
     // Create a "tokens" table to track the NFT token ID and its corresponding flower stage ID
-    _tokensTableId = TablelandDeployments.get().createTable(
+    _tokensTableId = TablelandDeployments.get().create(
         address(this),
         SQLHelpers.toCreateFromSchema(
             "id int primary key," // Track the NFT token ID
@@ -201,7 +201,7 @@ function mint(address to) external {
     _safeMint(to, tokenId);
     // Insert the metadata into the "tokens" Tableland table with a default "seed" value
     // The seed is in the "flowers" table with a stage ID of `0` -- insert the token ID and this stage ID
-    TablelandDeployments.get().runSQL(
+    TablelandDeployments.get().mutate(
         address(this),
         _tokensTableId,
         SQLHelpers.toInsert(
@@ -235,7 +235,7 @@ function growFlower(uint256 _tokenId) public {
     // Update the stage within the `stage` mapping
     stage[_tokenId] = newVal;
     // Update the stage within the Tableland "tokens" table, where the `stage_id` will change the `tokenURI` metadata response
-    TablelandDeployments.get().runSQL(
+    TablelandDeployments.get().mutate(
         address(this),
         _tokensTableId,
         SQLHelpers.toUpdate(

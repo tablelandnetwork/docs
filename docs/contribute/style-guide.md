@@ -112,7 +112,7 @@ import DataTypes from '/specs/sql/DataTypes.md'
 <DataTypes />
 ```
 
-Docusaurus also offers a set of components that can be imported into markdown, such as [`Tabs`](#tabs). Note that Docusaurus parses both `.md` and `.mdx` files using MDX, but some of the syntaxes are treated slightly differently by third-party tools. Thus, an `.md` file can leverage `.mdx` functionality but beware that third-party tools may not do the same—a best practice is to use `.mdx` where JSX is used. See [here](https://docusaurus.io/docs/markdown-features/react) for more details.
+Docusaurus also offers a set of components that can be imported into markdown, such as `Tabs`. Note that Docusaurus parses both `.md` and `.mdx` files using MDX, but some of the syntaxes are treated slightly differently by third-party tools. Thus, an `.md` file can leverage `.mdx` functionality but beware that third-party tools may not do the same—a best practice is to use `.mdx` where JSX is used. See [here](https://docusaurus.io/docs/markdown-features/react) for more details.
 
 ## Code blocks
 

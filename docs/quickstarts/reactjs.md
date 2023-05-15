@@ -279,7 +279,7 @@ export default App;
 </TabItem>
 </Tabs>
 
-The example here establishes a connection but doesn't do anything else—you could imagine methods like `createTable` and `writeData` that take a `signer`, create a database connection, and do some fine tuned operations.
+The example here establishes a connection but doesn't do anything else—you could imagine methods that handle table creations and writing data which could take a `signer`, create a database connection, and do some fine tuned operations.
 
 Also, you _could_ track a database singleton using the `useState` hook, similar to how the `signer` is demonstrated.
 
