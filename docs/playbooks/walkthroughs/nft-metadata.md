@@ -235,4 +235,4 @@ The JSON response is the same as before but much more future-proof and ready for
 
 ## Next steps
 
-Looking for more? Check out the page on [how to build an NFT](/how-to-build-an-nft), including additional resources for defining an [optimal SQL table structure](/playbooks/walkthroughs/nft-metadata) or [building a dynamic NFT in Solidity](/tutorials/dynamic-nft-solidity).
+Looking for more? Check out the page on [how to build an NFT](/how-to-build-an-nft), including additional resources including [building a dynamic NFT in Solidity](/tutorials/dynamic-nft-solidity).

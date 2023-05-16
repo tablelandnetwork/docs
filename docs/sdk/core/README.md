@@ -27,13 +27,37 @@ The Tableland SDK uses the modern `fetch` API, which is only available starting 
 
 ## Usage
 
-All table creates, writes, and reads fall under a single method: [`prepare`](prepared-statements).
+All table creates, writes, and reads fall under a single method: [`prepare`](/sdk/core/prepared-statements).
 
 Start by creating an instance of a `Database` and then pass SQL, such as `CREATE TABLE`, `INSERT INTO`, `UPDATE`, `DELETE`, and `SELECT` statements. Let’s start with a simple table read query. Every chain comes with a "healthbot" table that can be queried, which has a single `counter` column with integer value. For example, on Polygon Mumbai, this table is `healthbot_80001_1`.
 
+### Network configuration
+
+When connecting to a `Database`, the default will connect to Polygon Mumbai and use a browser connection (e.g., MetaMask prompt), but setting up the network configuration using a `Signer` defines the desired chain connection. You'll need a to use a provider to connect the `Signer` using a private key; the provider will point to the desired chain for the database's connection.
+
+For example, you could choose to override the default browser-based connection and pass a private key to instantiate a signer, then, connecting it to the `Database`. But, if you'd like to use the default browser connection, simply instantiating with `new Database()` will prompt the browser wallet.
+
+```js
+import { Database } from "@tableland/sdk";
+import { Wallet, getDefaultProvider } from "ethers";
+
+const privateKey = "your_private_key";
+const wallet = new Wallet(privateKey);
+// To avoid connecting to the browser wallet (locally, port 8545).
+// For example: "https://polygon-mumbai.g.alchemy.com/v2/YOUR_ALCHEMY_KEY"
+const provider = getDefaultProvider("http://127.0.0.1:8545");
+const signer = wallet.connect(provider);
+// Connect to the database
+const db = new Database({ signer });
+```
+
+:::tip
+For more information, check out the [`Signers`](/sdk/core/signers) page.
+:::
+
 ### Reads
 
-Start by importing the `Database` and establishing a read-only connection. This allows developers to bypass any wallet connection since table reads are not an on-chain operation. You’ll notice the `all` method (and `run` in the example below) is chained to the statement—more details are provided in the [query statement methods](query-statement-methods) section.
+Start by importing the `Database` and establishing a read-only connection. This allows developers to bypass any wallet connection since table reads are not an on-chain operation. You’ll notice the `all` method (and `run` in the example below) is chained to the statement—more details are provided in the [query statement methods](/sdk/core/query-statement-methods) section.
 
 <Tabs groupId="sdk">
   <TabItem value="js" label="JavaScript" default>
@@ -73,7 +97,7 @@ Start by importing the `Database` and establishing a read-only connection. This 
 
 Once you are ready to create a table, you can follow rather standard SQL convention. You’ll first import the `Database` class, create a new instance, and then pass a `CREATE TABLE` statement to `prepare`. For readability purposes, a `prefix` variable is created and passed using string templating within the `prepare` method.
 
-When connecting to the `Database`, the default will connect to Polygon Mumbai and use a browser connection (e.g., MetaMask prompt). For context, the [`run`](query-statement-methods#run) method returns metrics about the query, such as transaction information.
+For context, the [`run`](/sdk/core/query-statement-methods#run) method returns metrics about the query, such as transaction information.
 
 <Tabs groupId="sdk">
   <TabItem value="js" label="JavaScript" default>
@@ -134,7 +158,7 @@ In general, double quotes around any table name in a statement is valid SQL.
 
 ### Writes
 
-The SDK allows for _[parameter binding](prepared-statements#parameter-binding)_ to help simplify writing queries (includes both mutating and read queries). The `?` is an _anonymous_ parameter, which replaces the values in the statement with those in `bind`. Let’s extend the example for creating a table.
+The SDK allows for _[parameter binding](/sdk/core/prepared-statements#parameter-binding)_ to help simplify writing queries (includes both mutating and read queries). The `?` is an _anonymous_ parameter, which replaces the values in the statement with those in `bind`. Let’s extend the example for creating a table.
 
 <Tabs groupId="sdk">
   <TabItem value="js" label="JavaScript" default>

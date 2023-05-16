@@ -19,7 +19,7 @@ info:
   license:
     name: Apache 2.0
     url: http://www.apache.org/licenses/LICENSE-2.0.html
-  version: 1.0.0
+  version: 1.0.1
 externalDocs:
   description: Tableland docs
   url: http://docs.tableland.xyz
@@ -204,16 +204,16 @@ components:
       properties:
         name:
           type: string
-          example: healthbot_5_1
+          example: healthbot_80001_1
         external_url:
           type: string
-          example: https://testnets.tableland.network/api/v1/tables/healthbot_5_1
+          example: https://testnets.tableland.network/api/v1/tables/80001/1
         animation_url:
           type: string
-          example: https://render.tableland.xyz/anim/?chain=1&id=1
+          example: https://tables.testnets.tableland.xyz/80001/1.html
         image:
           type: string
-          example: https://render.tableland.xyz/healthbot_5_1
+          example: https://tables.testnets.tableland.xyz/80001/1.svg
         attributes:
           type: array
           items:
@@ -248,6 +248,13 @@ components:
         table_id:
           type: string
           example: "1"
+          deprecated: true 
+          description: "This field is deprecated"
+        table_ids:
+          type: array
+          items:
+            type: string
+          example: ["1", "2"]
         transaction_hash:
           type: string
           example: "0x02f319429b8a7be1cbb492f0bfbf740d2472232a2edadde7df7c16c0b61aa78b"

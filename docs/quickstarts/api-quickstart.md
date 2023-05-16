@@ -64,7 +64,9 @@ It [returns on-chain transaction information](https://testnets.tableland.network
 
 ```json
 {
-  "table_id": "1",
+  "table_ids": [
+    "1"
+  ],
   "transaction_hash": "0x02f319429b8a7be1cbb492f0bfbf740d2472232a2edadde7df7c16c0b61aa78b",
   "block_number": 27055540,
   "chain_id": 80001
@@ -79,14 +81,14 @@ curl -X GET https://testnets.tableland.network/api/v1/tables/80001/1 \
   -H 'Accept: application/json'
 ```
 
-The response includes information like the table's schema, the table's data shown in the [Console](https://console.tableland.xyz/) (at the [`animation_url`](https://testnets.render.tableland.xyz/anim/?chain=80001&id=1)), date created, etc.
+The response includes information like the table's schema, the table's data shown in the [Console](https://console.tableland.xyz/) (at the [`animation_url`](https://tables.testnets.tableland.xyz/80001/1.html)), date created, etc.
 
 ```json
 {
   "name": "healthbot_80001_1",
-  "external_url": "https://testnets.tableland.network/chain/80001/tables/1",
-  "animation_url": "https://testnets.render.tableland.xyz/anim/?chain=80001&id=1",
-  "image": "https://testnets.render.tableland.xyz/80001/1",
+  "external_url": "https://testnets.tableland.network/api/v1/tables/80001/1",
+  "animation_url": "https://tables.testnets.tableland.xyz/80001/1.html",
+  "image": "https://tables.testnets.tableland.xyz/80001/1.svg",
   "attributes": [
     {
       "display_type": "date",

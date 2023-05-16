@@ -60,7 +60,7 @@ contract Starter {
 
 ## 3. Create a table
 
-Call `TablelandDeployments.get().createTable()` and pass parameters for the address that should receive the table as well as the `CREATE TABLE` statement that defines the table schema and prefix. The `SQLHelper`'s `toCreateFromSchema()` method makes this a little easier to do.
+Call `TablelandDeployments.get().create()` and pass parameters for the address that should receive the table as well as the `CREATE TABLE` statement that defines the table schema and prefix. The `SQLHelper`'s `toCreateFromSchema()` method makes this a little easier to do.
 
 ```solidity
 function create() public payable {
@@ -71,7 +71,7 @@ function create() public payable {
   *    val text
   *  );
   */
-  _tableId = TablelandDeployments.get().createTable(
+  _tableId = TablelandDeployments.get().create(
     msg.sender,
     SQLHelpers.toCreateFromSchema(
       "id integer primary key," // Notice the trailing comma
@@ -100,7 +100,7 @@ contract Starter is ERC721Holder {
   // Existing code here
 
   function create() public payable {
-    _tableId = TablelandDeployments.get().createTable(
+    _tableId = TablelandDeployments.get().create(
       // highlight-next-line
       address(this),
       SQLHelpers.toCreateFromSchema(
@@ -113,11 +113,11 @@ contract Starter is ERC721Holder {
 }
 ```
 
-Failure to do so will not only prevent the contract from owning the table but also block `runSQL` calls since the contract would not have admin write permissions. Using a [controller contract](/smart-contracts/controller) can make this much more flexible with multi-account and other permission checks.
+Failure to do so will not only prevent the contract from owning the table but also block `mutate` calls since the contract would not have admin write permissions. Using a [controller contract](/smart-contracts/controller) can make this much more flexible with multi-account and other permission checks.
 
 ## 4. Write to a table
 
-You can insert, update, or delete data using `TablelandDeployments.get().runSQL()`. The `SQLHelpers` `toInsert()` method helps format the `runSQL`'s input properly.
+You can insert, update, or delete data using `TablelandDeployments.get().mutate()`. The `SQLHelpers` `toInsert()` method helps format the `mutate`'s input properly.
 
 ```solidity
 // Insert data into a table
@@ -129,7 +129,7 @@ function insert() public payable {
   *    'msg.sender'
   *  );
   */
-  TablelandDeployments.get().runSQL(
+  TablelandDeployments.get().mutate(
     address(this),
     _tableId,
     SQLHelpers.toInsert(
@@ -154,7 +154,7 @@ Be sure to always wrap strings (i.e., if a table's column has a `text` type) in 
 
 :::
 
-If you want to update table values, it technically goes through the same `runSQL` method in the `TablelandTables` registry smart contract, but a different `SQLHelpers` method is used (`toUpdate()`).
+If you want to update table values, it technically goes through the same `mutate` method in the `TablelandTables` registry smart contract, but a different `SQLHelpers` method is used (`toUpdate()`).
 
 ```solidity
 // Update data in the table
@@ -173,7 +173,7 @@ function update(uint256 myId, string memory myVal) public payable {
    *
    *  UPDATE {prefix}_{chainId}_{tableId} SET val=<myVal> WHERE id=<id>
    */
-  TablelandDeployments.get().runSQL(
+  TablelandDeployments.get().mutate(
     address(this),
     _tableId,
     SQLHelpers.toUpdate(

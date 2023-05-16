@@ -140,7 +140,7 @@ function insertAddress(
 	address tableland
 ) public {
 	string memory addr = Strings.toHexString(_addr);
-	tableland.runSQL(
+	tableland.mutate(
 		_addr,
 		tableId,
 		// INSERT INTO {tableName} VALUES ('{addr}');

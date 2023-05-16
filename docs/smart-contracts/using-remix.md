@@ -73,11 +73,11 @@ import "@tableland/evm/contracts/utils/TablelandDeployments.sol";
 contract CallingTablelandTables is ERC721Holder {
 
     function create() public payable {
-        TablelandDeployments.get().createTable(/* do create logic */);
+        TablelandDeployments.get().create(/* do create logic */);
     }
 
     function writeToTable() public payable {
-        TablelandDeployments.get().runSQL(/* do write logic */);
+        TablelandDeployments.get().mutate(/* do write logic */);
     }
 }
 ```
