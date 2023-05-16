@@ -67,7 +67,7 @@ Let’s just get this ready for a full-bleed token. We’ll add a black backgrou
 
 Your `index.ts` file should currently look like the following:
 
-```tsx
+```js
 import * as p5 from "p5";
 
 export const sketch = (p: p5) => {
@@ -86,7 +86,7 @@ export const myp5 = new p5(sketch, document.body);
 
 Let’s first replace the `p.setup` step with a new setup and another `windowResized` method.
 
-```tsx
+```js
 import * as p5 from 'p5';
 
 export const sketch = (p: p5) => {
@@ -109,11 +109,11 @@ Great, now our canvas size is a bit more dynamic.
 
 Next, let’s prepare some global variables in the header. The purpose of each is recorded in the inline comments.
 
-```tsx
+```js
 import * as p5 from "p5";
 
 // The points from tableland we'll need to render
-let points: Array<{ x: number; y: number; id: Number }> = [];
+let points: Array<{ x: number, y: number, id: Number }> = [];
 // The current token id. pulled from http://url/#{id}
 let tokenId = +window.location.hash.substr(1).replace("/", "");
 // Some anchors in the canvas to help offset and scale the points
@@ -135,9 +135,9 @@ export const sketch = (p: p5) => {
 };
 ```
 
-We’ll want to update our **setup** and **windowResize** methods to recalculate those anchors.
+We’ll want to update our `setup` and `windowResize` methods to recalculate those anchors.
 
-```tsx
+```js
 p.windowResized = () => {
   updateAnchors(window.innerWidth, window.innerHeight);
   p.resizeCanvas(window.innerWidth, window.innerHeight);
@@ -160,25 +160,27 @@ npm install @tableland/sdk
 
 Now, import it in `index.ts` your imports will now look like:
 
-```tsx
+```js
 import * as p5 from "p5";
-import { connect } from "@tableland/sdk";
+import { Database } from "@tableland/sdk";
 ```
 
-Finally, it’s time to update your `p.setup()` function to pull data from Tableland whenever the canvas loads.
+Finally, it’s time to update your `p.setup()` function to pull data from Tableland whenever the canvas loads. Note the table `canvas_80001_6076` was used in the previous tutorial; this should be updated to your own owned canvas table value.
 
-```tsx
+```js
 p.setup = () => {
   updateAnchors(window.innerWidth, window.innerHeight);
   p.createCanvas(window.innerWidth, window.innerHeight);
 
-  // Connect to the Tableland network
-  const connection = connect({ network: "testnet" });
+  // Connect to the Tableland network with a read-only connection
+  const db = new Database();
   // Run a SQL select on our project table
-  connection.read("select * from canvas_5_4").then((data) => {
-    // Format and store our data in the points[] array
-    points = data.rows.map((d, id) => ({ x: d[2], y: d[3], id }));
-  });
+  db.prepare("SELECT * FROM canvas_80001_6076")
+    .all()
+    .then((data) => {
+      // Format and store our data in the points[] array
+      points = data.results.map((d, id) => ({ x: d.x, y: d.y, id }));
+    });
 };
 ```
 
@@ -188,7 +190,7 @@ That’s it, you’ll have have Tableland data in your app. It’s time to draw 
 
 To render the data, we’ll rewrite the `p.draw()` function to loop over the points and render them on our canvas.
 
-```tsx
+```js
 p.draw = () => {
   // black background
   p.background(0);
@@ -228,7 +230,7 @@ In `webpack.config.js` change `mode: "development",` to `mode: "production",`.
 
 in `package.json` add a new method to your scripts, _`"build"_: "webpack build"`. So, your full script options looks like:
 
-```tsx
+```js
 "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack serve --open",
@@ -240,11 +242,7 @@ in `package.json` add a new method to your scripts, _`"build"_: "webpack build"`
 
 `npm run build`
 
-The full project should now be build in the `dist` folder. The last step is to upload that to [https://nft.storage/](https://nft.storage/) and get your IPFS CID back. Here’s the one we built:
-
-```md
-[https://ipfs.io/ipfs/QmNxcr2SdojzFSmhVJVi3WopndS192z5CjE5nbfuT8n2e2/#1](https://ipfs.io/ipfs/QmNxcr2SdojzFSmhVJVi3WopndS192z5CjE5nbfuT8n2e2/#1)
-```
+The full project should now be build in the `dist` folder. The last step is to upload that to [https://nft.storage/](https://nft.storage/) and get your IPFS CID back.
 
 ## Next steps
 

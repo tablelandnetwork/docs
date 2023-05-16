@@ -7,6 +7,8 @@ description: Learn how to create a table, add some sample data, and query the da
 import Tabs from "@theme/Tabs";
 import TabItem from "@theme/TabItem";
 
+`Database` connections can either be either read-only or mutating and use a providers & signers to dictate chain connections. If you are simply reading from a database, you can use the `Database` object without a `Signer` since reads can occur across any chain. However, if you want to create a table or write to it, you must use a `Signer` to specify and connect to the chain. For more information, check out the [`Signers`](/sdk/core/signers) page.
+
 ## 1. Installation
 
 From the command line, `cd` to the project’s directory and install the SDK.
@@ -64,7 +66,7 @@ The healthbot table exists on each network in which Tableland is deployed on wit
 
 ## 3. Create a table
 
-Instead of _only_ reading data, you can create your own table and also write to it. Do this by connecting to an instance of the `Database` object, and use the same `prepare` method while passing a `CREATE TABLE {prefix} ...` statement. You can then `run` this statement to execute it.
+Instead of _only_ reading data, you can create your own table and also write to it; this will need a `Signer` (a `Database` instantiation will default to a browser wallets). Do this by connecting to an instance of the `Database` object, and use the same `prepare` method while passing a `CREATE TABLE {prefix} ...` statement. You can then `run` this statement to execute it.
 
 <Tabs groupId="sdk">
 <TabItem value="js" label="JavaScript" default>

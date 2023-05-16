@@ -27,8 +27,8 @@ contract CreateFromContract is ERC721, Ownable {
     function create(string memory name) public payable {
         require(tables[name] == 0, "name already exists");
 
-        // Make sure we can get table_id back from calling createTable
-        uint256 tableId = _tableland.createTable(
+        // Make sure we can get table_id back from calling `create`
+        uint256 tableId = _tableland.create(
             msg.sender,
             string(
                 abi.encodePacked(

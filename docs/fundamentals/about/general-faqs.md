@@ -90,7 +90,7 @@ Yes — Tableland understands a subset of SQL based on the [SQLite SQL language 
 
 ## Can I call your smart contracts directly?
 
-Of course—they’re deployed on open & decentralized blockchains ;). A common pattern is to create your own smart contract that implements a custom `Policy` defined in the `ITablelandController`. When calling the `runSQL` method in Tableland’s deployed `TablelandTables` smart contract, it checks this custom `Policy` for an address and uses this to determine if the address has the proper privileges to perform the SQL statement passed to `runSQL`.
+Of course—they’re deployed on open & decentralized blockchains ;). A common pattern is to create your own smart contract that implements a custom `Policy` defined in the `ITablelandController`. When calling the `mutate` method in Tableland’s deployed `TablelandTables` smart contract, it checks this custom `Policy` for an address and uses this to determine if the address has the proper privileges to perform the SQL statement passed to `mutate`.
 
 ## Do you have app / smart contract logic authentication?
 

@@ -53,6 +53,7 @@ const introduction = [
       "fundamentals/what-is-tableland",
       "fundamentals/considerations-tradeoffs",
       "fundamentals/databases",
+      "fundamentals/why-sqlite",
     ],
   },
 ];
@@ -264,7 +265,7 @@ const cli = [
       "cli/write",
     ],
   },
-  ...section("Errors"),
+  ...section("Reference"),
   "cli/errors",
 ];
 

@@ -26,11 +26,11 @@ At the protocol level, the Tableland network is separated such that nodes proces
 
 The following endpoints are available at the Base URL gateways above:
 
-- [`/query`](endpoints#query) ⇒ Write a SQL read query and get table data.
-- [`/receipt/{chainId}/{transactionHash}`](endpoints#receipt) ⇒ Retrieve on-chain transaction information regarding a table create or write query.
-- [`/tables/{chainId}/{tableId`}](endpoints#tables) ⇒ Get table metadata and information.
-- [`/health`](endpoints#health) ⇒ Check if the validator is up and running.
-- [`/version`](endpoints#version) ⇒ Check version information about the validator daemon.
+- [`/query`](/gateway-api/endpoints#query) ⇒ Write a SQL read query and get table data.
+- [`/receipt/{chainId}/{transactionHash}`](/gateway-api/endpoints#receipt) ⇒ Retrieve on-chain transaction information regarding a table create or write query.
+- [`/tables/{chainId}/{tableId}`}](/gateway-api/endpoints#tables) ⇒ Get table metadata and information.
+- [`/health`](/gateway-api/endpoints#health) ⇒ Check if the validator is up and running.
+- [`/version`](/gateway-api/endpoints#version) ⇒ Check version information about the validator daemon.
 
 ## Definitions
 

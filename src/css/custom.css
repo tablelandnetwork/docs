@@ -23,7 +23,6 @@
   --color-verylightgreen-rgb: 113, 139, 139;
   --color-verylightgreen: #718b8b;
   --color-neongreen: #0be291;
-
   --ifm-color-primary: var(--color-orange);
   --ifm-color-secondary: var(--color-orange);
   --ifm-color-black: var(--color-black);
@@ -160,6 +159,10 @@ main > .container h6 {
   --ifm-h4-font-size: var(--h4-font-size);
   --ifm-h5-font-size: var(--h5-font-size);
   --ifm-h6-font-size: var(--h6-font-size);
+}
+
+.markdown li > p {
+  margin-bottom: 0.25rem;
 }
 
 .sidebar-collapse {
