@@ -47,12 +47,10 @@ Other best practices have also been defined below:
 | string        | text     |
 | address       | text     |
 | bytes         | blob     |
-| bool          | text     |
-| ~~bool~~ int8 | integer  |
+| bool          | integer  |
 
 :::tip
-Tableland doesn’t support boolean values, so instead of using a Solidity `bool`, consider using a `uint8` to represent a true/false as `1` or `0`, which is then stored in Tableland as an `integer`.
-
+Tableland doesn’t support boolean values, but `TRUE`/`FALSE` keywords are supported since they're aliased to a `1` or `0`. Thus, a Solidity `bool` should be defined as an `integer` in Tableland such that there is no need to wrap the Solidity SQL statement's `TRUE`/`FALSE` in single quotes (e.g., `INSERT INTO ... VALUES (TRUE, FALSE);`).
 :::
 
 ## Strings & casting
@@ -81,7 +79,7 @@ It's possible to cast any _unsigned_ integer to a `uint256` using `uint256(<numb
 
 For math reasons, there exists a [`SafeCast`](https://docs.openzeppelin.com/contracts/3.x/api/utils#SafeCast) library as well, which handles a full suite of number conversion possibilities. There are safety considerations to take into account since Solidity does not revert on overflows, so it’s always recommended to proceed with caution and ensure the proper testing has been performed in casting scenarios. Below is an example of how to use `SafeCast` to convert a signed integer `int8` to an unsigned `uint256`, thus, enabling `int8` to be used by the `Strings` library. Note that it still cannot convert a negative number into a positive one without some additional logic:
 
-```tsx
+```solidity
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.4;
 

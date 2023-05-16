@@ -1,6 +1,6 @@
 ---
 title: Composing data across tables
-sidebar_label: Composing data
+sidebar_label: Compound select statements
 description: Extract data across multiple tables by joining them together.
 keywords:
   - reads
