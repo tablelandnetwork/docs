@@ -53,6 +53,7 @@ const introduction = [
       "fundamentals/what-is-tableland",
       "fundamentals/considerations-tradeoffs",
       "fundamentals/databases",
+      "fundamentals/why-sqlite",
     ],
   },
 ];
@@ -84,6 +85,7 @@ const architecture = [
     },
     items: [
       "fundamentals/chains/ethereum",
+      "fundamentals/chains/filecoin",
       "fundamentals/chains/arbitrum",
       "fundamentals/chains/optimism",
       "fundamentals/chains/polygon",
@@ -265,7 +267,7 @@ const cli = [
       "cli/write",
     ],
   },
-  ...section("Errors"),
+  ...section("Reference"),
   "cli/errors",
 ];
 

@@ -38,7 +38,7 @@ string private constant _TABLE_PREFIX = "my_quickstart_table";
 
 ## Create a table
 
-Creating a table (calling `createTable()` on the [registry](https://github.com/tablelandnetwork/evm-tableland/blob/main/contracts/TablelandTables.sol)) requires the following parameters:
+Creating a table (calling `create()` on the [registry](https://github.com/tablelandnetwork/evm-tableland/blob/main/contracts/TablelandTables.sol)) requires the following parameters:
 
 - `owner`: The `address` that should own the table (i.e., ERC721 TABLE token is minted here).
 - `statement`: A `string` that defines a `CREATE TABLE` statement.
@@ -53,7 +53,7 @@ Note that in the `statement`, the chain ID is expected as part of the definition
 With [`TablelandDeployments`](https://github.com/tablelandnetwork/evm-tableland/blob/main/contracts/utils/TablelandDeployments.sol), it makes it easy to set up an interface with the correct `TablelandTables` contract with the `get()` method.
 
 ```solidity
-_tableId = TablelandDeployments.get().createTable(
+_tableId = TablelandDeployments.get().create(
   msg.sender,
   SQLHelpers.toCreateFromSchema(
     "id integer primary key," // Notice the trailing comma
@@ -67,7 +67,7 @@ _tableId = TablelandDeployments.get().createTable(
 
 For the contract to _own_ the table (instead of some [EOA](/fundamentals/about/glossary#eoa)), an additional import is needed so that the contract can own an ERC721 token. If you were to, instead, mint to `msg.sender` as in the example above, the contract wouldn't have the default permissions to also write to the table; contract ownership helps solve this issue.
 
-Thus, instead of minting to an EOA address (i.e., a wallet), you can actually have the contract own the table. One way to do this is by importing and inheriting from `ERC721Holder`, and once you do so, you can then use `address(this)` within something like the `createTable()` method, which will send the [ERC721 TABLE](https://opensea.io/collection/tableland-tables) to the contract itself. Alternatively, implement [`onERC721Received`](https://github.com/binodnp/openzeppelin-solidity/blob/master/docs/ERC721Holder.md#onerc721received) on your own.
+Thus, instead of minting to an EOA address (i.e., a wallet), you can actually have the contract own the table. One way to do this is by importing and inheriting from `ERC721Holder`, and once you do so, you can then use `address(this)` within something like the `create()` method, which will send the [ERC721 TABLE](https://opensea.io/collection/tableland-tables) to the contract itself. Alternatively, implement [`onERC721Received`](https://github.com/binodnp/openzeppelin-solidity/blob/master/docs/ERC721Holder.md#onerc721received) on your own.
 
 ```solidity
 // Existing imports
@@ -85,7 +85,7 @@ contract Contract is ERC721Holder {
 Then, you can use `address(this0)` in your function.
 
 ```solidity
-_tableId = TablelandDeployments.get().createTable(
+_tableId = TablelandDeployments.get().create(
   // highlight-next-line
   address(this),
   SQLHelpers.toCreateFromSchema(
@@ -100,7 +100,7 @@ Alternatively, developers can choose to set up and [configure their own controll
 
 ## Write table data
 
-You can insert, update, or delete data using `TablelandDeployments.get().runSQL()`. This method takes the following:
+You can insert, update, or delete data using `TablelandDeployments.get().mutate()`. This method takes the following:
 
 - `caller`: The `address` of what is calling the registry contract.
 - `tableId`: Unique `uint256` ID of the Tableland table.
@@ -114,7 +114,7 @@ Be sure to always wrap strings (i.e., if a table's column has a `text` type) in 
 
 ### Insert values
 
-The `SQLHelpers` contract has various method to help format the `runSQL`'s input properly. For example, `toInsert()` expects the following:
+The `SQLHelpers` contract has various method to help format the `mutate`'s input properly. For example, `toInsert()` expects the following:
 
 - `prefix`: A `string` that's the table's custom prefix.
 - `tableId`: Unique `uint256` ID of the Tableland table.
@@ -133,7 +133,7 @@ function insert() public payable {
   *    'msg.sender'
   *  );
   */
-  TablelandDeployments.get().runSQL(
+  TablelandDeployments.get().mutate(
     address(this),
     _tableId,
     SQLHelpers.toInsert(
@@ -154,7 +154,7 @@ For strings, the `Strings.toHexString()` method converts a hexadecimal value (e.
 
 ### Update values
 
-If you want to update table values, it technically goes through the same `runSQL` method in the `TablelandTables` registry smart contract, but a different `SQLHelpers` method is used—`toUpdate()`—which takes:
+If you want to update table values, it technically goes through the same `mutate` method in the `TablelandTables` registry smart contract, but a different `SQLHelpers` method is used—`toUpdate()`—which takes:
 
 - `prefix`: A `string` that's the table's custom prefix.
 - `tableId`: Unique `uint256` ID of the Tableland table.
@@ -180,7 +180,7 @@ function update(uint256 myId, string memory myVal) public payable {
    *
    *  UPDATE {prefix}_{chainId}_{tableId} SET val=<myVal> WHERE id=<id>
    */
-  TablelandDeployments.get().runSQL(
+  TablelandDeployments.get().mutate(
     address(this),
     _tableId,
     SQLHelpers.toUpdate(
@@ -195,7 +195,7 @@ function update(uint256 myId, string memory myVal) public payable {
 
 ### Delete data
 
-Lastly, you can delete table data with the same `runSQL` method but a different one from `SQLHelpers`. Use `toDelete()` to perform this action, which takes:
+Lastly, you can delete table data with the same `mutate` method but a different one from `SQLHelpers`. Use `toDelete()` to perform this action, which takes:
 
 - `prefix`: A `string` that's the table's custom prefix.
 - `tableId`: Unique `uint256` ID of the Tableland table.
@@ -215,7 +215,7 @@ function delete(uint256 myId) public payable {
    *
    *  DELETE FROM {prefix}_{chainId}_{tableId} WHERE id=<id>
    */
-  TablelandDeployments.get().runSQL(
+  TablelandDeployments.get().mutate(
     address(this),
     _tableId,
     SQLHelpers.toDelete(

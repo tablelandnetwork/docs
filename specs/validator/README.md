@@ -10,16 +10,16 @@ This general API specification is used to automatically generate clients and bac
 
 ### Table of Contents
 
--   [Query the network](#query-the-network)
--   [Get transaction status](#get-transaction-status)
--   [Get table information](#get-table-information)
--   [Get health status](#get-health-status)
--   [Get version information](#get-version-information)
--   [Schemas](#schemas)
+- [Query the network](#query-the-network)
+- [Get transaction status](#get-transaction-status)
+- [Get table information](#get-table-information)
+- [Get health status](#get-health-status)
+- [Get version information](#get-version-information)
+- [Schemas](#schemas)
 
 <!-- Generator: Widdershins v4.0.1 -->
 <h1 id="tableland-validator-openapi-3-0">
-Tableland Validator - OpenAPI 3.0 v1.0.0
+Tableland Validator - OpenAPI 3.0 v1.0.1
 </h1>
 
 > Scroll down for code samples, example requests and responses. Select a
@@ -30,7 +30,7 @@ In Tableland, Validators are the execution unit/actors of the protocol.
 They have the following responsibilities: - Listen to on-chain events to
 materialize Tableland-compliant SQL queries in a database engine
 (currently, SQLite by default). - Serve read-queries (e.g: SELECT \*
-FROM foo\_69\_1) to the external world. - Serve state queries (e.g. list
+FROM foo_69_1) to the external world. - Serve state queries (e.g. list
 tables, get receipts, etc) to the external world.
 
 In the 1.0.0 release of the Tableland Validator API, we’ve switched to a
@@ -41,9 +41,9 @@ features in OAS3.
 
 Base URLs:
 
--   <a href="https://testnets.tableland.network/api/v1">https://testnets.tableland.network/api/v1</a>
+- <a href="https://testnets.tableland.network/api/v1">https://testnets.tableland.network/api/v1</a>
 
--   <a href="http://localhost:8080/api/v1">http://localhost:8080/api/v1</a>
+- <a href="http://localhost:8080/api/v1">http://localhost:8080/api/v1</a>
 
 <a href="http://docs.tableland.xyz">Terms of service</a> Email:
 <a href="mailto:carson@textile.io">core devs</a> License:
@@ -162,6 +162,10 @@ Parameters
 ``` json
 {
   "table_id": "1",
+  "table_ids": [
+    "1",
+    "2"
+  ],
   "transaction_hash": "0x02f319429b8a7be1cbb492f0bfbf740d2472232a2edadde7df7c16c0b61aa78b",
   "block_number": 27055540,
   "chain_id": 80001,
@@ -223,10 +227,10 @@ Parameters
 
 ``` json
 {
-  "name": "healthbot_5_1",
-  "external_url": "https://testnet.tableland.network/tables/healthbot_5_1",
-  "animation_url": "https://render.tableland.xyz/anim/?chain=1&id=1",
-  "image": "https://render.tableland.xyz/healthbot_5_1",
+  "name": "healthbot_80001_1",
+  "external_url": "https://testnets.tableland.network/api/v1/tables/80001/1",
+  "animation_url": "https://tables.testnets.tableland.xyz/80001/1.html",
+  "image": "https://tables.testnets.tableland.xyz/80001/1.svg",
   "attributes": {
     "display_type": "date",
     "trait_type": "created",
@@ -356,10 +360,10 @@ Table
 
 ``` json
 {
-  "name": "healthbot_5_1",
-  "external_url": "https://testnet.tableland.network/tables/healthbot_5_1",
-  "animation_url": "https://render.tableland.xyz/anim/?chain=1&id=1",
-  "image": "https://render.tableland.xyz/healthbot_5_1",
+  "name": "healthbot_80001_1",
+  "external_url": "https://testnets.tableland.network/api/v1/tables/80001/1",
+  "animation_url": "https://tables.testnets.tableland.xyz/80001/1.html",
+  "image": "https://tables.testnets.tableland.xyz/80001/1.svg",
   "attributes": {
     "display_type": "date",
     "trait_type": "created",
@@ -386,16 +390,16 @@ Table
 
 ### Properties
 
-| Name            | Type       | Required | Restrictions | Description                       |
-|-----------------|------------|----------|--------------|-----------------------------------|
-| name            | string     | false    | none         | none                              |
-| external\_url   | string     | false    | none         | none                              |
-| animation\_url  | string     | false    | none         | none                              |
-| image           | string     | false    | none         | none                              |
-| attributes      | \[object\] | false    | none         | none                              |
-| » display\_type | string     | false    | none         | The display type for marketplaces |
-| » trait\_type   | string     | false    | none         | The trait type for marketplaces   |
-| » value         | object     | false    | none         | The value of the property         |
+| Name           | Type       | Required | Restrictions | Description                       |
+|----------------|------------|----------|--------------|-----------------------------------|
+| name           | string     | false    | none         | none                              |
+| external_url   | string     | false    | none         | none                              |
+| animation_url  | string     | false    | none         | none                              |
+| image          | string     | false    | none         | none                              |
+| attributes     | \[object\] | false    | none         | none                              |
+| » display_type | string     | false    | none         | The display type for marketplaces |
+| » trait_type   | string     | false    | none         | The trait type for marketplaces   |
+| » value        | object     | false    | none         | The value of the property         |
 
 oneOf
 
@@ -445,6 +449,10 @@ TransactionReceipt
 ``` json
 {
   "table_id": "1",
+  "table_ids": [
+    "1",
+    "2"
+  ],
   "transaction_hash": "0x02f319429b8a7be1cbb492f0bfbf740d2472232a2edadde7df7c16c0b61aa78b",
   "block_number": 27055540,
   "chain_id": 80001,
@@ -455,14 +463,15 @@ TransactionReceipt
 
 ### Properties
 
-| Name              | Type           | Required | Restrictions | Description |
-|-------------------|----------------|----------|--------------|-------------|
-| table\_id         | string         | false    | none         | none        |
-| transaction\_hash | string         | false    | none         | none        |
-| block\_number     | integer(int64) | false    | none         | none        |
-| chain\_id         | integer(int32) | false    | none         | none        |
-| error             | string         | false    | none         | none        |
-| error\_event\_idx | integer(int32) | false    | none         | none        |
+| Name             | Type           | Required | Restrictions | Description              |
+|------------------|----------------|----------|--------------|--------------------------|
+| table_id         | string         | false    | none         | This field is deprecated |
+| table_ids        | \[string\]     | false    | none         | none                     |
+| transaction_hash | string         | false    | none         | none                     |
+| block_number     | integer(int64) | false    | none         | none                     |
+| chain_id         | integer(int32) | false    | none         | none                     |
+| error            | string         | false    | none         | none                     |
+| error_event_idx  | integer(int32) | false    | none         | none                     |
 
 <h2 id="tocS_Schema">
 Schema
@@ -493,10 +502,10 @@ Schema
 
 ### Properties
 
-| Name               | Type                        | Required | Restrictions | Description |
-|--------------------|-----------------------------|----------|--------------|-------------|
-| columns            | \[[Column](#schemacolumn)\] | false    | none         | none        |
-| table\_constraints | \[string\]                  | false    | none         | none        |
+| Name              | Type                        | Required | Restrictions | Description |
+|-------------------|-----------------------------|----------|--------------|-------------|
+| columns           | \[[Column](#schemacolumn)\] | false    | none         | none        |
+| table_constraints | \[string\]                  | false    | none         | none        |
 
 <h2 id="tocS_Column">
 Column
@@ -548,12 +557,12 @@ VersionInfo
 
 ### Properties
 
-| Name            | Type           | Required | Restrictions | Description |
-|-----------------|----------------|----------|--------------|-------------|
-| version         | integer(int32) | false    | none         | none        |
-| git\_commit     | string         | false    | none         | none        |
-| git\_branch     | string         | false    | none         | none        |
-| git\_state      | string         | false    | none         | none        |
-| git\_summary    | string         | false    | none         | none        |
-| build\_date     | string         | false    | none         | none        |
-| binary\_version | string         | false    | none         | none        |
+| Name           | Type           | Required | Restrictions | Description |
+|----------------|----------------|----------|--------------|-------------|
+| version        | integer(int32) | false    | none         | none        |
+| git_commit     | string         | false    | none         | none        |
+| git_branch     | string         | false    | none         | none        |
+| git_state      | string         | false    | none         | none        |
+| git_summary    | string         | false    | none         | none        |
+| build_date     | string         | false    | none         | none        |
+| binary_version | string         | false    | none         | none        |

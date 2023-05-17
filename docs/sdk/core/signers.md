@@ -1,5 +1,6 @@
 ---
 title: Signers
+sidebar_label: Network configuration
 description: Access the Tableland network by first connecting to the base chain.
 keywords:
   - read table
@@ -41,7 +42,7 @@ const privateKey = process.env.PRIVATE_KEY;
 
 const wallet = new Wallet(privateKey);
 // To avoid connecting to the browser wallet (locally, port 8545),
-// replace the URL with Alchemy, Infura, or Etherscan provider
+// replace the URL with a provider like Alchemy, Infura, Etherscan, etc.
 const provider = getDefaultProvider("http://127.0.0.1:8545"); // For example: "https://polygon-mumbai.g.alchemy.com/v2/${process.env.YOUR_ALCHEMY_KEY}"
 const signer = wallet.connect(provider);
 // Connect to the database
