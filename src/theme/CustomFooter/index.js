@@ -47,7 +47,7 @@ const links = [
   {
     html: (
       <>
-        Follow us on <Link to="https://twitter.com/tableland__"> Twitter.</Link>
+        Follow us on <Link to="https://twitter.com/tableland"> Twitter.</Link>
       </>
     ),
     icon: <FaTwitter size={18} />,

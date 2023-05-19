@@ -98,7 +98,7 @@ We currently support address-level access control (EOAs or smart contracts). Con
 
 ## What is Tableland Rigs NFT?
 
-Rigs are an NFT that demonstrates what and how to build on Tableland. It showcases the latest and greatest about the Tableland tech, and it gives owners a unique experience in the community ([The Garage](https://garage.tableland.xyz/), Flight Time, voting on the [Pilot Program](https://tableland.xyz/pilot-program/), etc.). Be sure to [check out our website](https://tableland.xyz/rigs/) and [follow us on Twitter](https://twitter.com/tableland__) for the latest updates!
+Rigs are an NFT that demonstrates what and how to build on Tableland. It showcases the latest and greatest about the Tableland tech, and it gives owners a unique experience in the community ([The Garage](https://garage.tableland.xyz/), Flight Time, voting on the [Pilot Program](https://tableland.xyz/pilot-program/), etc.). Be sure to [check out our website](https://tableland.xyz/rigs/) and [follow us on Twitter](https://twitter.com/tableland) for the latest updates!
 
 ## Why should I connect my wallet to this docs site?
 
