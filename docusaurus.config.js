@@ -100,7 +100,7 @@ async function createConfig() {
           // TODO: Add local development vs. deployment workflow.
           apiKey: process.env.ALGOLIA_API_KEY || "_",
           indexName: "tableland",
-          contextualSearch: false,
+          contextualSearch: true,
         },
         colorMode: {
           defaultMode: "dark",
