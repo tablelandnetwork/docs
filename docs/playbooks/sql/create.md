@@ -86,7 +86,7 @@ You can alter the structure of a table with an `ALTER TABLE` statement. There ar
 - Renaming an existing column
 
 ```sql
-ALTER TABLE my_table RENAME COLUMN val to value;
+ALTER TABLE my_table RENAME COLUMN val to v;
 ```
 
 - Adding a new column
