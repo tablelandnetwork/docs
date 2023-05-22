@@ -7,6 +7,7 @@ keywords:
 ---
 
 import { ChainsList } from '@site/src/components/SupportedChains'
+import ThemedImage from "@theme/ThemedImage";
 
 ## Background
 
@@ -21,39 +22,16 @@ Tableland has _registry_ contracts deployed on each chain (currently live on <Ch
 - **On-chain**: Table creates and writes pass through the registry smart contract on each base chain (statements are written to event logs). This includes the SQL statement itself plus custom access controls defined in smart contracts such that _data is available_ on-chain.
 - **Off-chain**: Statements for table creates and writes are materialized by Tableland validator nodes—these nodes simply watch the registry and mutate a local SQLite database with the database instructions. Here, the _data is accessible_ using SQL read queries at an HTTPS gateway.
 
-```mermaid
-flowchart TB
+import hybridStateLight from "@site/static/assets/hybrid-state-light-mode.png";
+import hybridStateDark from "@site/static/assets/hybrid-state-dark-mode.png";
 
-subgraph chain[On-chain]
-direction LR
-  A((EOA)) -- Create or write --> B(Tableland\n registry\n)
-  A -- Calls --> C(Contract)
-  C --> B
-end
-
-subgraph offchain[Off-chain]
-direction BT
-  subgraph tbl[Tableland]
-  direction LR
-    subgraph node[Validator node]
-    direction LR
-      D{{Event}} --Process--> E[(SQLite)]
-    end
-    F[/Gateway/]
-  end
-
-  direction RL
-  subgraph dapp[dapp]
-    H((User)) --> G(Frontend)
-    G-."Read data\n (SQL)".->F --> node
-    F-."Return data\n (JSON)".->G
-    end
-end
-
-chain--"Emit event\n (SQL)" -->offchain
-
-style offchain margin-bottom:10px;
-```
+<ThemedImage
+alt="Hybrid state"
+sources={{
+    light: hybridStateLight,
+    dark: hybridStateDark,
+  }}
+/>
 
 In other words, you can recreate a table's state by replaying all of the events at a chain's registry contract; this is how unstoppable networks are built on top of each other. As long as the host chain survives, the table's state can deterministically be collated. Keep in mind that table data is **not** accessible from _within_ smart contract calls—you can't query a table from a contract without using some off-chain [oracle](https://ethereum.org/en/developers/docs/oracles/)-like setup. Much like how smart contracts can't read transaction data, they also cannot read table data since [data is available](https://www.alchemy.com/overviews/data-availability-layer) in event logs. Thus, data accessibility is only possible using read queries directly to any Tableland node.
 
@@ -84,31 +62,16 @@ Take a series of EVM accounts where one creates a table and others try to mutate
 
 Perhaps, `0x1234` would like to provision access so that `0x5678` can also mutate table data. When `0x5678` writes SQL to the registry contract, the data is subsequently materialized by a Tableland validator (success). However, when `0x90ab` attempts the same, the data **is not** mutated since this account did not have the proper permissions (fail). This is a fully permissionless setup since any EVM account can _attempt_ to alter a table, but only the provisioned accounts will be successful through trustless, on-chain logic.
 
-```mermaid
-flowchart LR
-subgraph Z["On-chain"]
-direction LR
-  A((0x1234)) -- \nCREATE TABLE --> B(Tableland\nregistry)
-  A((0x1234)) -- \nGRANT 0x5678 --> B
-  C((0x5678)) -- INSERT INTO --> B
-  D((0x90ab)) -- INSERT INTO --> B
-end
+import accessControlLight from "@site/static/assets/access-control-light-mode.png";
+import accessControlDark from "@site/static/assets/access-control-dark-mode.png";
 
-subgraph Y["\nTableland node"]
-direction LR
-  B -- \nCheck permissions --> B
-  B --Feed of SQL\ninstructions\n& rules--> E{Valid SQL &\npermissions?}
-  E --"\nYes\n(Update database)"--> F[(SQLite)]
-  E --"\nNo\n(Do nothing)" --> G(((End)))
-end
-
-X((App)) -- "\nRead table\n(SELECT * FROM)" --> F
-F --Return data--> X
-
-style A fill:#009400,text-align:left,color:#ffffff
-style C fill:#009400,color:#ffffff
-style D fill:#e13238,color:#ffffff
-```
+<ThemedImage
+alt="Access control"
+sources={{
+    light: accessControlLight,
+    dark: accessControlDark,
+  }}
+/>
 
 ### Atomicity
 
@@ -134,7 +97,16 @@ If an application—or _anyone_—wants to retrieve data, they simply query the 
 
 Tableland's core protocol is designed to extend and enhance EVM chain storage. When you store data in smart contracts, it's expensive and also challenging to query. When you store data in event logs, it's a flat representation of that data. Logs are just a stream of on-chain events associated with their transaction, and in Tableland's case, this stream is a set of SQL instructions.
 
-<img src={require("@site/static/assets/data-dimensions.png").default} width="70%"/>
+import dimensionalityLight from "@site/static/assets/dimensionality-light-mode.png";
+import dimensionalityDark from "@site/static/assets/dimensionality-dark-mode.png";
+
+<ThemedImage
+alt="Data dimensionality"
+sources={{
+    light: dimensionalityLight,
+    dark: dimensionalityDark,
+  }}
+/>
 
 If you were to "leave" the data in event logs, you'd still run into issues when it comes to retrieving and making use of it. There is no statefulness to the table's data since its part of an append-only log, so there's not a whole lot of functionality without additional infrastructure. To efficiently operate on event-driven data that exists in logs, you still need some purpose-built layer, which is why indexing tools like Etherscan (centralized) and The Graph (decentralized) exist.
 

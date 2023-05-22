@@ -3,6 +3,8 @@ title: What is Tableland?
 description: A brief overview of what the Tableland network is and how it works.
 ---
 
+import ThemedImage from "@theme/ThemedImage";
+
 ## Problem
 
 Web3-native apps are forced to make a choice when storing application data: fit everything into the web3 mould, or use a partial web2 approach. Fitting everything into a web3-native stack often equates to costly or complex designs to store all data on-chain or use decentralized file storage as a pseudo-database. With a partial approach, apps are deployed on web3 (using smart contract backends, frontends deployed on IPFS, etc.), but traditional, centralized web2 databases (AWS, Google Cloud, etc.) are still being used for a subset of **structured data**.
@@ -23,9 +25,17 @@ In tandem with other distributed work infrastructure, web3 now has a home for st
 
 One key callout is that Tableland is always tied to the host chain since table creates and mutations must pass through the host. Not all decentralized infrastructure behaves this way, as some networks may primarily act as a standalone protocol and do not have the required on-chain anchoring like Tableland does.
 
-import web3Stack from "@site/static/assets/web3-stack.png";
+import web3StackLight from "@site/static/assets/web3-stack-light-mode.png";
+import web3StackDark from "@site/static/assets/web3-stack-dark-mode.png";
 
-<img src={web3Stack} width='80%'/>
+<ThemedImage
+alt="Web3 stack"
+sources={{
+    light: web3StackLight,
+    dark: web3StackDark,
+  }}
+width='60%'
+/>
 
 Really, any type of structured data can be stored in Tableland.
 
@@ -33,7 +43,16 @@ Really, any type of structured data can be stored in Tableland.
 - Data DAOs can upload large datasets to persisted file storage but store its metadata in Tableland tables—and enable shared access for collaborating (with on-chain accounts / rules).
 - Gaming-related data like scoreboards and leaderboards make it easy for chain-driven data to be immediately queried at the application layer, off-chain.
 
-![Abstracted Tableland](@site/static/assets/abstracted-tableland-img.png)
+import abstractedTablelandLight from "@site/static/assets/abstracted-tableland-light-mode.png";
+import abstractedTablelandDark from "@site/static/assets/abstracted-tableland-dark-mode.png";
+
+<ThemedImage
+alt="Abstracted Tableland"
+sources={{
+    light: abstractedTablelandLight,
+    dark: abstractedTablelandDark,
+  }}
+/>
 
 This underpinning infrastructure makes the developer’s journey significantly easier and opens the door to an endless data scaling layer for web3 applications.
 
@@ -48,9 +67,16 @@ Each table in Tableland is initially minted as an [ERC721](https://docs.openzepp
 
 For example, at the contract level, you might have some web3 app that mints ERC721 tokens. The contract simply points to the Tableland network (like using the [`baseURI`](https://docs.openzeppelin.com/contracts/2.x/api/token/erc721#ERC721Metadata-baseURI--) + [`tokenURI`](https://docs.openzeppelin.com/contracts/2.x/api/token/erc721#ERC721Metadata-tokenURI-uint256-)), just as many existing ERC721 tokens use IPFS gateways or centralized servers. The key difference is that the underpinning infrastructure behind the gateway is a fully decentralized database network that offers the best of both worlds.
 
-import genericTableland from "@site/static/assets/tbl-generic-diagram.png";
+import genericTablelandLight from "@site/static/assets/generic-workflow-light-mode.png";
+import genericTablelandDark from "@site/static/assets/generic-workflow-dark-mode.png";
 
-<img src={genericTableland} width='80%'/>
+<ThemedImage
+alt="Generic Tableland workflow"
+sources={{
+    light: genericTablelandLight,
+    dark: genericTablelandDark,
+  }}
+/>
 
 ### Access control
 
@@ -60,9 +86,16 @@ Now, in order to use Tableland, a table must first be created (i.e., minted on-c
 
 Consider the following diagram, which generalizes a new user’s interactions with a table that’s already been deployed to Tableland by some dapp:
 
-import networkOverview from "@site/static/assets/network-overview.png";
+import networkOverviewLight from "@site/static/assets/network-overview-light-mode.png";
+import networkOverviewDark from "@site/static/assets/network-overview-dark-mode.png";
 
-<img src={networkOverview} width='80%'/>
+<ThemedImage
+alt="Network overview"
+sources={{
+    light: networkOverviewLight,
+    dark: networkOverviewDark,
+  }}
+/>
 
 Here’s the overall flow of information:
 
