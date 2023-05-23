@@ -101,6 +101,14 @@ async function createConfig() {
           apiKey: process.env.ALGOLIA_API_KEY || "_",
           indexName: "tableland",
           contextualSearch: true,
+          custom_settings: {
+            attributesForFaceting: [
+              "language",
+              "version",
+              "type",
+              "docusaurus_tag",
+            ],
+          },
         },
         colorMode: {
           defaultMode: "dark",
