@@ -1052,8 +1052,8 @@ any values when comparing rows as part of a compound `SELECT`.
 
 When three or more simple `SELECT`s are connected into a compound
 `SELECT`, they group from left to right. In other words, if $A$, $B$ and
-$C$ are all simple `SELECT` statements, $(A ⋆ B ⋆ C)$ is processed as
-$((A ⋆ B) ⋆ C)$.
+$C$ are all simple `SELECT` statements, $(A * B * C)$ is processed as
+$((A * B) * C)$.
 
 ### Custom functions
 
