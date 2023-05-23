@@ -283,7 +283,10 @@ The alternative `INSERT ... DEFAULT VALUES` statement inserts a single new row i
 
 The last form of the `INSERT` statement contains a `SELECT` statement instead of a `VALUES` clause. A new entry is inserted into the table for each row of data returned by executing the `SELECT` statement. If a column name list is specified, the number of columns in the result of the `SELECT` must be the same as the number of items in the column name list. Otherwise, if no column name list is specified, the number of columns in the result of the `SELECT` must be the same as the number of columns in the table. Only simple (flattened) `SELECT` statement may be used in an `INSERT` statement of this form. This means the SELECT statements cannot include UNIONs, JOINs, or further sub-queries. Additionally, only direct references to tables on the same chain are supported.
 
-> ⚠️ Currently, `HAVING` and `GROUP BY` clauses are not allowed in any `SELECT` statements within an `INSERT`. Additionally, under the hood, the Tableland Specification forces an implicit `ORDER BY rowid` clause on the `SELECT` statement.
+> ⚠️ Although the `GROUP BY` clause is supported, `HAVING` is not allowed in any
+> `SELECT` statements within an `INSERT`. Additionally, under the hood,
+> the Tableland Specification forces an implicit `ORDER BY rowid` clause
+> on the `SELECT` statement.
 
 ### UPSERT
 
@@ -517,7 +520,7 @@ A compound `SELECT` created using `UNION ALL` operator returns all the rows from
 
 For the purposes of determining duplicate rows for the results of compound `SELECT` operators, `NULL` values are considered equal to other `NULL` values and distinct from all non-`NULL` values. The collation sequence used to compare two text values is determined as if the columns of the left and right-hand `SELECT` statements were the left and right-hand operands of the equals (`=`) operator, except that greater precedence is not assigned to a collation sequence specified with the postfix `COLLATE` operator. No affinity transformations are applied to any values when comparing rows as part of a compound `SELECT`.
 
-When three or more simple `SELECT`s are connected into a compound `SELECT`, they group from left to right. In other words, if $A$, $B$ and $C$ are all simple `SELECT` statements, $(A ⋆ B ⋆ C)$ is processed as $((A ⋆ B) ⋆ C)$.
+When three or more simple `SELECT`s are connected into a compound `SELECT`, they group from left to right. In other words, if $A$, $B$ and $C$ are all simple `SELECT` statements, $(A * B * C)$ is processed as $((A * B) * C)$.
 
 ### Custom functions
 

@@ -1,10 +1,5 @@
 .landingImage {
-  filter: drop-shadow(8px 8px 9px rgba(0, 0, 0, 0.3));
   width: 60vw;
-}
-
-[data-theme="dark"] .landingImage {
-  filter: none;
 }
 
 .containerMain {
@@ -20,16 +15,18 @@
 
 @media (max-width: 996px) {
   .landingImage {
-    margin-top: 60px;
-    margin-bottom: 0;
+    margin-top: 60px !important;
+
+    margin-bottom: 0 !important;
   }
   .containerMain {
-    margin-top: 0;
+    margin-top: 0 !important;
+    padding-top: 0 !important;
   }
 }
 
 @media (max-width: 640px) {
   .landingImage {
-    width: 80vw;
+    width: 80vw !important;
   }
 }

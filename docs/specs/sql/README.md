@@ -49,7 +49,7 @@ be summarized in eight command/statement types: `CREATE TABLE`, `ALTER TABLE`,
 `INSERT`, `UPDATE`, `DELETE`, `SELECT`, `GRANT`, `REVOKE`.
 
 > ⚠️ The statement and data types provided here are part of the official
-> *minimal* Tableland SQL specification. Additional functionality may be
+> _minimal_ Tableland SQL specification. Additional functionality may be
 > available in practice. However, it is not recommended that developers
 > rely on SQL features outside of this minimal specification in the
 > long-term.
@@ -76,7 +76,7 @@ table:
 
 #### Structure
 
-``` sql
+```sql
 CREATE TABLE *table_name* ( [
   { *column_name* *data_type* [ *column_constraint* [,  ... ] ]
   | table_constraint }
@@ -86,7 +86,7 @@ CREATE TABLE *table_name* ( [
 
 where `column_constraint` has structure
 
-``` sql
+```sql
 [ CONSTRAINT constraint_name ]
 { NOT NULL |
   CHECK ( expression ) |
@@ -98,7 +98,7 @@ where `column_constraint` has structure
 
 and `table_constraint` has structure
 
-``` sql
+```sql
 [ CONSTRAINT constraint_name ]
 { CHECK ( expression ) |
   UNIQUE ( column_name [, ... ] ) |
@@ -109,8 +109,8 @@ and `table_constraint` has structure
 
 #### Table Identifiers/Names
 
-Every `CREATE TABLE` statement must specify a *fully-qualified table
-name* (name) as the name of the new table. The fully-qualified table
+Every `CREATE TABLE` statement must specify a _fully-qualified table
+name_ (name) as the name of the new table. The fully-qualified table
 name has the following structure:
 
 $$
@@ -122,13 +122,13 @@ start with a letter and be followed by any combination of (zero or more)
 letters, numbers, and/or underscores. A prefix string may be up to 32
 bytes in length. In practice, long names with spaces must be slug-ified
 with underscores. For example, `"my amazing table"` would become
-`"my_amazing_table"`. The last two components of the table name, *must
-be* the chain id and the table id, which are numeric values separated by
+`"my_amazing_table"`. The last two components of the table name, _must
+be_ the chain id and the table id, which are numeric values separated by
 an underscore. For example, a valid table name without a prefix looks
-like `_42_0` (or `42_1`), whereas a valid table name *with* a prefix
+like `_42_0` (or `42_1`), whereas a valid table name _with_ a prefix
 might look like `dogs_42_0`.
 
-> ⚠️ It is *not* up to the caller to determine what table id to use in a
+> ⚠️ It is _not_ up to the caller to determine what table id to use in a
 > `CREATE TABLE` statement. The table id is a monotonically-increasing
 > numeric value which is provided by the smart contract that is
 > processing the create statements. See the On-Chain API Specification
@@ -185,7 +185,7 @@ not considered a keyword to the SQL parser in Tableland:
 > Tableland in the reference parser implementation. [See
 > Implementation](https://github.com/tablelandnetwork/sqlparser/blob/main/lexer.go)
 
-> ⚠️ Table *names* that begin with `sqlite`, `system` or `registry` are
+> ⚠️ Table _names_ that begin with `sqlite`, `system` or `registry` are
 > also reserved for internal use. It is an error to attempt to create a
 > table with a name that starts with these reserved names.
 
@@ -253,7 +253,7 @@ in the new row are determined by their default values, as follows:
 A column that includes a `GENERATED ALWAYS AS` clause is a generated
 column:
 
-``` sql
+```sql
 CREATE TABLE table_id (
     ...,
     column_name data_type { GENERATED ALWAYS } AS (*expression*) { STORED | VIRTUAL }
@@ -309,7 +309,7 @@ use more CPU cycles when being read.
 
 #### Primary Key
 
-Each table in Tableland may have *at most one* `PRIMARY KEY`. If the
+Each table in Tableland may have _at most one_ `PRIMARY KEY`. If the
 keywords `PRIMARY KEY` are added to a column definition, then the
 primary key for the table consists of that single column. Or, if a
 `PRIMARY KEY` clause is specified as a separate table constraint, then
@@ -338,7 +338,7 @@ All rows within Tableland tables have a 64-bit signed integer key that
 uniquely identifies the row within its table. This integer is usually
 called the `ROWID`. The `ROWID` value can be accessed using one of the
 special case-independent names `"rowid"`, `"oid"`, or `"_rowid_"` in
-place of a column name. As such, these values are *not allowed* as
+place of a column name. As such, these values are _not allowed_ as
 identifiers for columns in a `CREATE TABLE` statement.
 
 The data for Tableland tables are stored in sorted order, by `ROWID`.
@@ -385,7 +385,7 @@ transformation rules are enforced by the Tableland Parser to maintain
 the correct `ROWID` alias behavior:
 
 | Statement                                       | Transformation                                                 |
-|-------------------------------------------------|----------------------------------------------------------------|
+| ----------------------------------------------- | -------------------------------------------------------------- |
 | `CREATE TABLE (a INTEGER PRIMARY KEY);`         | Inject `AUTOINCREMENT`                                         |
 | `CREATE TABLE (a INTEGER PRIMARY KEY DESC);`    | Unchanged and not an alias                                     |
 | `CREATE TABLE (a INTEGER, PRIMARY KEY(x ASC);`  | Transformed to first row version with injected `AUTOINCREMENT` |
@@ -395,9 +395,9 @@ These transformations to the more "canonical" direct constraint on the
 primary key are required to enforce the implied `AUTOINCREMENT` behavior
 on the special integer primary keys.
 
-Rowid values *may not* be modified using an `UPDATE` statement by
+Rowid values _may not_ be modified using an `UPDATE` statement by
 attempting to assign to one of the built-in aliases (`"rowid"`, `"oid"`
-or `"_rowid_"`). However, it *is* possible to `UPDATE` an integer
+or `"_rowid_"`). However, it _is_ possible to `UPDATE` an integer
 primary key value (which is an alias to `ROWID`) by specifying a value
 directly. Similarly, an `INSERT` statement may be used to directly
 provide a value to use as the `ROWID` for any row inserted. For example,
@@ -408,7 +408,7 @@ value directly:
 - `UPDATE a SET a = 10 WHERE b = 'Hello';`
 
 > ⚠️ If an `UPDATE` or `INSERT` sets a given `ROWID` to the largest
-> possible value, then new `INSERT`s are *not allowed* and any attempt
+> possible value, then new `INSERT`s are _not allowed_ and any attempt
 > to insert a new row will fail with an error. As such, use caution when
 > directly assigning values to a `ROWID` alias in the form of an integer
 > primary key.
@@ -438,7 +438,7 @@ The `ROWID` chosen for the new row is at least one larger than the
 largest `ROWID` that has ever before existed in that same table. If the
 table has never before contained any data, then a `ROWID` of 1 is used.
 If the largest possible `ROWID` has previously been inserted, then new
-`INSERT`s are *not allowed* and any attempt to insert a new row will
+`INSERT`s are _not allowed_ and any attempt to insert a new row will
 fail with an error. Only `ROWID` values from previous transactions that
 were committed are considered. `ROWID` values that were rolled back are
 ignored and can be reused.
@@ -464,13 +464,13 @@ column.
 
 #### Structure
 
-``` sql
+```sql
 ALTER TABLE table_name *action*
 ```
 
 where action is one of:
 
-``` sql
+```sql
 -- For renaming a column
 RENAME [ COLUMN ] *column_name* TO *new_column_name*
 
@@ -478,7 +478,7 @@ RENAME [ COLUMN ] *column_name* TO *new_column_name*
 ADD [ COLUMN ] *column_name* *data_type* [ *column_constraint* [,  ... ] ]
 
 -- For dropping a dolumn
-DROP [ COLUMN ] *column_name* 
+DROP [ COLUMN ] *column_name*
 ```
 
 #### Details
@@ -516,7 +516,7 @@ the table id.
 
 #### Structure
 
-``` sql
+```sql
 DELETE FROM table_name [ WHERE condition ]
 ```
 
@@ -534,7 +534,7 @@ name.
 
 #### Structure
 
-``` sql
+```sql
 INSERT INTO table_name [ ( *column_name* [, ...] ) ] VALUES (
   { expression } [, ...]
 );
@@ -542,13 +542,13 @@ INSERT INTO table_name [ ( *column_name* [, ...] ) ] VALUES (
 
 or
 
-``` sql
+```sql
 INSERT INTO table_name DEFAULT VALUES;
 ```
 
 or, the following limited sub-query syntax
 
-``` sql
+```sql
 INSERT INTO table_name [ ( *column_name* [, ...] ) ] SELECT [ * | expression [, ...] ]
     [ FROM from_clause [, ...] ]
     [ WHERE where_clause ];
@@ -590,10 +590,10 @@ statements cannot include UNIONs, JOINs, or further sub-queries.
 Additionally, only direct references to tables on the same chain are
 supported.
 
-> ⚠️ Currently, `HAVING` and `GROUP BY` clauses are not allowed in any
-> `SELECT` statements within an `INSERT`. Additionally, under the hood,
-> the Tableland Specification forces an implicit `ORDER BY rowid` clause
-> on the `SELECT` statement.
+> ⚠️ Although the `GROUP BY` clause is supported, `HAVING` is not
+> allowed in any `SELECT` statements within an `INSERT`. Additionally,
+> under the hood, the Tableland Specification forces an implicit
+> `ORDER BY rowid` clause on the `SELECT` statement.
 
 ### UPSERT
 
@@ -605,7 +605,7 @@ SQLite](https://www.sqlite.org/lang_UPSERT.html).
 
 #### Structure
 
-``` sql
+```sql
 INSERT INTO table_name [ ( *column_name* [, ...] ) ] VALUES (
   { expression } [, ...]
 ) [upsert_clause];
@@ -613,25 +613,25 @@ INSERT INTO table_name [ ( *column_name* [, ...] ) ] VALUES (
 
 where `upsert_clause` has structure
 
-``` sql
+```sql
 ON CONFLICT [ conflict_target ] conflict_action
 ```
 
 where `conflict_target` has structure
 
-``` sql
+```sql
 [ ( *column_name* [, ...] ) ]  [ WHERE condition ]
 ```
 
 and `conflict_action` can be one of
 
-``` sql
+```sql
 DO NOTHING
 ```
 
 or
 
-``` sql
+```sql
 DO UPDATE SET { column_name = { expression | DEFAULT } } [, ...]
     [ WHERE condition ];
 ```
@@ -678,7 +678,7 @@ zero or more rows of the database table identified by the table name.
 
 #### Structure
 
-``` sql
+```sql
 UPDATE table_name
     SET { column_name = { expression | DEFAULT } } [, ...]
     [ WHERE condition ];
@@ -718,7 +718,7 @@ privileges for a table identified by table name and id.
 
 #### Structure
 
-``` sql
+```sql
 GRANT { INSERT | UPDATE | DELETE } [, ...]
     ON { [ TABLE ] table_name [, ...] }
     TO role [, ...]
@@ -741,7 +741,7 @@ specified, or if an address with sufficient privileges updates a table’s
 access control rules to use a controller contract, then all
 command-based access control rules are ignored in favor of the
 controller contract access control. In other words, if a controller
-contract is set, `GRANT`/`REVOKE` is *disabled.* See On-Chain API
+contract is set, `GRANT`/`REVOKE` is _disabled._ See On-Chain API
 Specification for further details on specifying and controlling access
 via a controller smart contract.
 
@@ -777,7 +777,7 @@ The `SELECT` statement is the work-house of the SQL query model, and as
 such, the available syntax is extremely complex. In practice, most
 `SELECT` statements are simple `SELECT` statements of the form:
 
-``` sql
+```sql
 SELECT [ ALL | DISTINCT ]
     [ * | expression [, ...] ]
     [ FROM from_clause [, ...] ]
@@ -813,8 +813,8 @@ four step process in the description below:
 
 There are two types of simple `SELECT` statement — aggregate and
 non-aggregate queries. A simple `SELECT` statement is an aggregate query
-if it contains either a `GROUP BY` clause or one or more *aggregate
-functions* in the result set. Otherwise, if a simple `SELECT` contains
+if it contains either a `GROUP BY` clause or one or more _aggregate
+functions_ in the result set. Otherwise, if a simple `SELECT` contains
 no aggregate functions or a `GROUP BY` clause, it is a non-aggregate
 query.
 
@@ -838,7 +838,7 @@ duplicate rows, two `NULL` values are considered to be equal.
 
 #### Structure
 
-``` sql
+```sql
 WHERE condition
 ```
 
@@ -847,7 +847,7 @@ WHERE condition
 The SQL `WHERE` clause is an optional clause of the `SELECT`, `DELETE`,
 and/or `UPDATE` statements. It appears after the primary clauses of the
 corresponding statement. For example in a `SELECT` statement, the
-`WHERE` clause can be added *after* the `FROM` clause to filter rows
+`WHERE` clause can be added _after_ the `FROM` clause to filter rows
 returned by the query. Only rows for which the `WHERE` clause expression
 evaluates to true are included from the dataset before continuing. Rows
 are excluded from the result if the `WHERE` clause evaluates to either
@@ -870,7 +870,7 @@ uses the following steps:
 
 #### Structure
 
-``` sql
+```sql
 FROM { table_name [ * ] [ [ AS ] alias ] | ( sub_select ) [ AS ] alias }
 ```
 
@@ -903,7 +903,7 @@ together.
 
 #### Structure
 
-``` sql
+```sql
 [ NATURAL ] join_type table_or_subquery [ ON on_expression | USING ( column_name [, ...] ) ]
 ```
 
@@ -920,7 +920,7 @@ where `join_type` is one of
 
 or,
 
-``` sql
+```sql
 CROSS JOIN table_or_subquery [ ON on_expression | USING ( column_name [, ...] ) ]
 ```
 
@@ -929,7 +929,7 @@ optional join constraint as in above.
 
 The `table_or_subquery` is a table or sub-query of the form:
 
-``` sql
+```sql
 { table_name [ [ AS ] alias ] | ( sub_select ) [ AS ] alias }
 ```
 
@@ -1052,8 +1052,8 @@ any values when comparing rows as part of a compound `SELECT`.
 
 When three or more simple `SELECT`s are connected into a compound
 `SELECT`, they group from left to right. In other words, if $A$, $B$ and
-$C$ are all simple `SELECT` statements, $(A ⋆ B ⋆ C)$ is processed as
-$((A ⋆ B) ⋆ C)$.
+$C$ are all simple `SELECT` statements, $(A * B * C)$ is processed as
+$((A * B) * C)$.
 
 ### Custom functions
 
@@ -1066,7 +1066,7 @@ functions may grow over time.
 The Validator will replace this text with the hash of the transaction
 that delivered the SQL event (only available in write queries).
 
-``` sql
+```sql
 INSERT INTO {table_name} VALUES (TXN_HASH());
 ```
 
@@ -1075,13 +1075,13 @@ INSERT INTO {table_name} VALUES (TXN_HASH());
 The Validator will replace this text with the number of the block that
 delivered the SQL event (only available in write queries).
 
-``` sql
+```sql
 INSERT INTO {table_name} VALUES (BLOCK_NUM());
 ```
 
 If `BLOCK_NUM` is called with an integer argument (i.e.,
 `BLOCK_NUM(<chain_id>)`), the Validator will replace this text with the
-number of the *last seen* block for the given chain (only available to
+number of the _last seen_ block for the given chain (only available to
 read queries).
 
 ## Data Types
@@ -1091,7 +1091,7 @@ tables. The currently supported types are listed below and can be used
 to represent most, if not all, common SQL types:
 
 | Type      | Description                                                                                            |
-|-----------|--------------------------------------------------------------------------------------------------------|
+| --------- | ------------------------------------------------------------------------------------------------------ |
 | `INT`     | Signed integer values, stored in 0, 1, 2, 3, 4, 6, or 8 bytes depending on the magnitude of the value. |
 | `INTEGER` | Same as `INT`, except it may also be used to represent an auto-incrementing `PRIMARY KEY` field.       |
 | `TEXT`    | Text string, stored using the database encoding (UTF-8).                                               |
@@ -1099,7 +1099,7 @@ to represent most, if not all, common SQL types:
 
 ### Details
 
-When creating tables, every column definition *must specify a data type*
+When creating tables, every column definition _must specify a data type_
 for that column, and the data type must be one of the above types. No
 other data type names are allowed, though new types might be added in
 future versions of the Tableland SQL specification.
@@ -1151,9 +1151,9 @@ with floating-point numbers, or learn more about why [floating-point
 math is
 hard](https://docs.oracle.com/cd/E19957-01/806-3568/ncg_goldberg.html).
 
-⚠️ In addition to *not* supporting floating point values (`REAL`) as a
+⚠️ In addition to _not_ supporting floating point values (`REAL`) as a
 storage data type in create statements, the Tableland specification also
-does not allow `REAL` value *literals* in read or write queries.
+does not allow `REAL` value _literals_ in read or write queries.
 
 #### Boolean
 
@@ -1202,8 +1202,8 @@ engine.
 
 To prevent overflows while working with Solidity numbers, it is
 recommended to use a `text` type in certain scenarios. Anything larger
-than a `uint64` / `int32` *could* lead to an overflow in the Tableland
-database. Note that in many use cases, it is *unlikely* overflows will
+than a `uint64` / `int32` _could_ lead to an overflow in the Tableland
+database. Note that in many use cases, it is _unlikely_ overflows will
 happen due to the extremely large size of these numbers.
 
 Alternatively, consider casting the overflow-able numbers to or simply
@@ -1212,7 +1212,7 @@ the following tables for how each Solidity number should be defined in
 Tableland schemas:
 
 | Solidity Type | SQL Type |
-|---------------|----------|
+| ------------- | -------- |
 | uint256       | text     |
 | uint128       | text     |
 | uint64        | text     |
@@ -1229,16 +1229,15 @@ Tableland schemas:
 Other best practices have also been defined below:
 
 | Solidity Type | SQL Type |
-|---------------|----------|
+| ------------- | -------- |
 | string        | text     |
 | address       | text     |
 | bytes         | blob     |
-| bool          | text     |
-| ~~bool~~ int8 | integer  |
+| bool          | integer  |
 
-> ⚠️ Tableland doesn’t support boolean values, so instead of using a
-> Solidity `bool`, consider using a `uint8` to represent a true/false as
-> `1` or `0`, which is then stored in Tableland as an `INTEGER`.
+> ⚠️ Tableland doesn’t support boolean values, but TRUE/FALSE keywords
+> are supported since they're aliased to a `1` or `0`. Thus, a Solidity
+> `bool` should be defined as an `integer` in Tableland.
 
 ## Encoding
 
@@ -1275,7 +1274,7 @@ encoded such that,
 - All SQL language components are specified using lower case ASCII
   characters,
 - The execution of the (set of) statement(s) after encoding is
-  *equivalent* to the original set of statements, and
+  _equivalent_ to the original set of statements, and
 - The encoding of a (set of) statements(s) is as close as possible to
   the original (set of) statement(s).
 

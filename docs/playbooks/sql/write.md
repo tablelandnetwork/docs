@@ -72,9 +72,9 @@ VALUES
 
 ### Subqueries
 
-**Subqueries have very limited support** and are only possible in `INSERT`s but with limitations due to determinism considerations.
+**Subqueries have limited support** and are only possible in `INSERT`s but with limitations due to determinism considerations.
 
-You can only write flattened subqueries in insert statements; thus, you _cannot_ use `HAVING`, `GROUP BY`, `UNION`, `JOIN`, or further subqueries. But, since you're only _operating_ on a single table, it is totally fine to query data from a different different table within the sub-select statement. Also, there is an an implicit `ORDER BY rowid` clause forced on the [`SELECT` statement](/playbooks/sql/read).
+Generally, flattened subqueries are fully supported in insert statements; [compound select statements](/playbooks/sql/composing-data) are **not supported** for inserts. In other words, you _can_ make sub-selects with a flat `SELECT` statement or one with `GROUP BY` and `HAVING` clauses; however, you _cannot_ use `UNION`, `JOIN`, or further subqueries. Also, there is an an implicit `ORDER BY rowid` clause forced on the [`SELECT` statement](/playbooks/sql/read).
 
 A valid example of a flattened query is the following—let's assume the schema and types are the same for each table to help simplify things:
 
@@ -85,7 +85,17 @@ FROM
   other_table;
 ```
 
-This query takes the values returned from the `other_table` and inserts them into `my_table`.
+This query takes the values returned from the `other_table` and inserts them into `my_table`. An example with `GROUP BY` and `HAVING`:
+
+```sql
+INSERT INTO my_table (val)
+SELECT val
+FROM
+  other_table
+GROUP BY
+  id
+HAVING id > 1;
+```
 
 ## Updating data
 
