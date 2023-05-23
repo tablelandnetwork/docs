@@ -197,6 +197,44 @@ Rows with automatically selected `ROWID`s are guaranteed to have `ROWID`s that h
 
 Note that "monotonically increasing" does not imply that the `ROWID` always increases by exactly one. One is the usual increment. However, if an insert fails due to (for example) a uniqueness constraint, the `ROWID` of the failed insertion attempt might not be reused on subsequent inserts, resulting in gaps in the `ROWID` sequence. Tableland guarantees that automatically chosen `ROWID`s will be increasing but not that they will be sequential.
 
+### ALTER TABLE
+
+The `ALTER TABLE` command allows the following alterations of an existing table: renaming a column, adding a column, and dropping a column.
+
+#### Structure
+
+```sql
+ALTER TABLE table_name *action*
+```
+
+where action is one of:
+
+```sql
+-- For renaming a column
+RENAME [ COLUMN ] *column_name* TO *new_column_name*
+
+-- For adding a column
+ADD [ COLUMN ] *column_name* *data_type* [ *column_constraint* [,  ... ] ]
+
+-- For dropping a dolumn
+DROP [ COLUMN ] *column_name* 
+```
+
+#### Details
+
+The `ADD COLUMN` syntax is used to add a new column to an existing table. The new column is always appended to the end of the list of existing columns. The new column may take any of the forms permissible in a [`CREATE TABLE`](#create-table) statement, with the following restrictions:
+
+- The column may not have a PRIMARY KEY or UNIQUE constraint.
+- If a NOT NULL constraint is specified, then the column must have a default value other than NULL.
+- The column may not be GENERATED ALWAYS ... STORED, though VIRTUAL columns are allowed.
+
+The `DROP COLUMN` syntax is used to remove an existing column from a table. The `DROP COLUMN` command removes the named column from the table, and rewrites its content to purge the data associated with that column. The `DROP COLUMN` command only works if the column is not referenced by any other parts of the schema and is not a `PRIMARY KEY` and does not have a `UNIQUE` constraint. Possible reasons why the `DROP COLUMN` command can fail include:
+
+- The column is a `PRIMARY KEY` or part of one.
+- The column has a `UNIQUE` constraint.
+- The column is named in a table or column `CHECK` constraint not associated with the column being dropped.
+- The column is used in the expression of a generated column.
+
 ### DELETE
 
 The `DELETE` command removes records from the table identified by the table id.
