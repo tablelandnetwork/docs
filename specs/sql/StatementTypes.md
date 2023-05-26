@@ -197,6 +197,44 @@ Rows with automatically selected `ROWID`s are guaranteed to have `ROWID`s that h
 
 Note that "monotonically increasing" does not imply that the `ROWID` always increases by exactly one. One is the usual increment. However, if an insert fails due to (for example) a uniqueness constraint, the `ROWID` of the failed insertion attempt might not be reused on subsequent inserts, resulting in gaps in the `ROWID` sequence. Tableland guarantees that automatically chosen `ROWID`s will be increasing but not that they will be sequential.
 
+### ALTER TABLE
+
+The `ALTER TABLE` command allows the following alterations of an existing table: renaming a column, adding a column, and dropping a column.
+
+#### Structure
+
+```sql
+ALTER TABLE table_name *action*
+```
+
+where action is one of:
+
+```sql
+-- For renaming a column
+RENAME [ COLUMN ] *column_name* TO *new_column_name*
+
+-- For adding a column
+ADD [ COLUMN ] *column_name* *data_type* [ *column_constraint* [,  ... ] ]
+
+-- For dropping a dolumn
+DROP [ COLUMN ] *column_name* 
+```
+
+#### Details
+
+The `ADD COLUMN` syntax is used to add a new column to an existing table. The new column is always appended to the end of the list of existing columns. The new column may take any of the forms permissible in a [`CREATE TABLE`](#create-table) statement, with the following restrictions:
+
+- The column may not have a PRIMARY KEY or UNIQUE constraint.
+- If a NOT NULL constraint is specified, then the column must have a default value other than NULL.
+- The column may not be GENERATED ALWAYS ... STORED, though VIRTUAL columns are allowed.
+
+The `DROP COLUMN` syntax is used to remove an existing column from a table. The `DROP COLUMN` command removes the named column from the table, and rewrites its content to purge the data associated with that column. The `DROP COLUMN` command only works if the column is not referenced by any other parts of the schema and is not a `PRIMARY KEY` and does not have a `UNIQUE` constraint. Possible reasons why the `DROP COLUMN` command can fail include:
+
+- The column is a `PRIMARY KEY` or part of one.
+- The column has a `UNIQUE` constraint.
+- The column is named in a table or column `CHECK` constraint not associated with the column being dropped.
+- The column is used in the expression of a generated column.
+
 ### DELETE
 
 The `DELETE` command removes records from the table identified by the table id.
@@ -245,7 +283,10 @@ The alternative `INSERT ... DEFAULT VALUES` statement inserts a single new row i
 
 The last form of the `INSERT` statement contains a `SELECT` statement instead of a `VALUES` clause. A new entry is inserted into the table for each row of data returned by executing the `SELECT` statement. If a column name list is specified, the number of columns in the result of the `SELECT` must be the same as the number of items in the column name list. Otherwise, if no column name list is specified, the number of columns in the result of the `SELECT` must be the same as the number of columns in the table. Only simple (flattened) `SELECT` statement may be used in an `INSERT` statement of this form. This means the SELECT statements cannot include UNIONs, JOINs, or further sub-queries. Additionally, only direct references to tables on the same chain are supported.
 
-> ⚠️ Currently, `HAVING` and `GROUP BY` clauses are not allowed in any `SELECT` statements within an `INSERT`. Additionally, under the hood, the Tableland Specification forces an implicit `ORDER BY rowid` clause on the `SELECT` statement.
+> ⚠️ Although the `GROUP BY` clause is supported, `HAVING` is not allowed in any
+> `SELECT` statements within an `INSERT`. Additionally, under the hood,
+> the Tableland Specification forces an implicit `ORDER BY rowid` clause
+> on the `SELECT` statement.
 
 ### UPSERT
 
@@ -479,7 +520,7 @@ A compound `SELECT` created using `UNION ALL` operator returns all the rows from
 
 For the purposes of determining duplicate rows for the results of compound `SELECT` operators, `NULL` values are considered equal to other `NULL` values and distinct from all non-`NULL` values. The collation sequence used to compare two text values is determined as if the columns of the left and right-hand `SELECT` statements were the left and right-hand operands of the equals (`=`) operator, except that greater precedence is not assigned to a collation sequence specified with the postfix `COLLATE` operator. No affinity transformations are applied to any values when comparing rows as part of a compound `SELECT`.
 
-When three or more simple `SELECT`s are connected into a compound `SELECT`, they group from left to right. In other words, if $A$, $B$ and $C$ are all simple `SELECT` statements, $(A ⋆ B ⋆ C)$ is processed as $((A ⋆ B) ⋆ C)$.
+When three or more simple `SELECT`s are connected into a compound `SELECT`, they group from left to right. In other words, if $A$, $B$ and $C$ are all simple `SELECT` statements, $(A * B * C)$ is processed as $((A * B) * C)$.
 
 ### Custom functions
 

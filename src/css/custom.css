@@ -582,8 +582,8 @@ html[data-theme="dark"] .navbar__link--active,
 
 /* Horizontally center all images by default */
 img {
-  display: block;
-  margin: 0 auto 20px auto;
+  display: block !important;
+  margin: 0 auto 20px auto !important;
 }
 
 img:has(~ figcaption) {

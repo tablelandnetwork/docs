@@ -3,6 +3,7 @@ import clsx from "clsx";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import HomepageFeatures from "./HomepageFeatures";
 import Link from "@docusaurus/Link";
+import ThemedImage from "@theme/ThemedImage";
 import useBaseUrl from "@docusaurus/useBaseUrl";
 import styles from "./index.module.css";
 
@@ -65,11 +66,16 @@ export default function Home(): JSX.Element {
                 alignSelf: "center",
               }}
             >
-              <img
+              <ThemedImage
                 alt="Tableland code snippet"
                 className={clsx(styles.landingImage)}
-                src={useBaseUrl("/img/landing/landing-image.png")}
-              ></img>
+                sources={{
+                  light: useBaseUrl(
+                    "/img/landing/landing-image-light-mode.png"
+                  ),
+                  dark: useBaseUrl("/img/landing/landing-image-dark-mode.png"),
+                }}
+              />
             </div>
           </div>
         </div>

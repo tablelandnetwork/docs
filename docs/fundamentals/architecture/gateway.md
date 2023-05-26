@@ -36,7 +36,17 @@ Tableland tables are created or written to in three primary steps:
 2. Upon transaction confirmation, an event with SQL instructions is emitted.
 3. Upon the event emittance, a Tableland network node listens to, processes, and then materializes the SQL instructions (validate syntax, access controls, etc.).
 
-![Tableland contract flow](@site/static/assets/tableland-contract-flow.png)
+import ThemedImage from "@theme/ThemedImage";
+import contractFlowLight from "@site/static/assets/contract-flow-light-mode.png";
+import contractFlowDark from "@site/static/assets/contract-flow-dark-mode.png";
+
+<ThemedImage
+alt="Network overview"
+sources={{
+    light: contractFlowLight,
+    dark: contractFlowDark,
+  }}
+/>
 
 Since the first step is a direct contract interaction, this means that a transaction must be created _and_ included in a finalized block before Tableland can process the SQL instructions accordingly. Tableland leverages the base chain’s consensus and execution and is, thus, dependent on how quickly the base chain’s speed and throughput.
 

@@ -23,14 +23,82 @@ For example, a table name might look like `healthbot_11155111_1`—this means th
 
 For each of the contracts deployed above, a globally unique TABLE ERC721 token will be minted. Anyone can create _and own_ a table. On-chain access controls can be established to make the table itself collaborative in nature, such as a shared ownership model where certain permissioned users can insert or update rows in the table itself.
 
-At a minimum, a TABLE owner has permissions to do whatever they want with the table, such as inserting new rows, updating / deleting existing ones, or setting a table _controller_ that manages table the access controls. For example, take a table minted on Ethereum:
+At a minimum, a TABLE owner has permissions to do whatever they want with the table, such as inserting new rows, updating / deleting existing ones, or setting a table _controller_ that manages table the access controls. For example, take a table minted on Ethereum that [tracks user session data](https://tableland.network/api/v1/tables/1/7). The table metadata has a number of characteristics, including the table's name, description, schema, image, animation URL, and created time.
 
-import tableNFT from "@site/static/assets/table-nft.png";
+```json
+{
+  "name": "pilot_sessions_1_7",
+  "external_url": "https://tableland.network/api/v1/tables/1/7",
+  "animation_url": "https://tables.tableland.xyz/1/7.html",
+  "image": "https://tables.tableland.xyz/1/7.svg",
+  "attributes": [
+    {
+      "display_type": "date",
+      "trait_type": "created",
+      "value": 1674047326
+    }
+  ],
+  "schema": {
+    "columns": [
+      {
+        "name": "id",
+        "type": "integer",
+        "constraints": ["primary key autoincrement"]
+      },
+      {
+        "name": "rig_id",
+        "type": "integer",
+        "constraints": ["not null"]
+      },
+      {
+        "name": "owner",
+        "type": "text",
+        "constraints": ["not null"]
+      },
+      {
+        "name": "pilot_contract",
+        "type": "text"
+      },
+      {
+        "name": "pilot_id",
+        "type": "integer"
+      },
+      {
+        "name": "start_time",
+        "type": "integer",
+        "constraints": ["not null"]
+      },
+      {
+        "name": "end_time",
+        "type": "integer"
+      }
+    ]
+  }
+}
+```
+
+All of this information is also rendered in an SVG representation as well as a Tableland Console panel that allows you to query the data at the animation URL.
+
+import tableNFT from "@site/static/assets/table-nft-external-url.png";
+import tableConsole from "@site/static/assets/table-nft-console.png";
+
+<div className="row margin-bottom--lg">
+<div className="col">
 
 <figure>
   <img src={tableNFT} width='70%' alt='Table NFT'/>
-  <figcaption>The TABLE ERC721 token anatomy.</figcaption>
+  <figcaption>The TABLE ERC721 token image.</figcaption>
 </figure>
+</div>
+
+<div className="col">
+
+<figure>
+  <img src={tableConsole}  alt='Table NFT'/>
+  <figcaption>The TABLE ERC721 Console.</figcaption>
+</figure>
+</div>
+</div>
 
 ## Collection links
 
