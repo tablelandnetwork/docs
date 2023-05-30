@@ -24,6 +24,10 @@ The FVM generates receipts in the tipset _following_ a transaction's submission 
 
 From the time an on-chain SQL transaction is submitted until it is materialized in the Tableland database network, it can take up to **~4 minutes**.
 
+:::caution
+Currently, Filecoin Calibration node providers *do not* store an archive of chain history past the most recent 2000 blocks. This _should not_ have an impact on development if you’re using the primary Tableland node, barring some unforeseen & unlikely downtime of ~17 hours. If you’re a node operator of the Tableland protocol, this _does_ have an impact but will (hopefully) be resolved soon.
+:::
+
 ## Setup & resources
 
 <!-- ### Filecoin (mainnet)
@@ -41,22 +45,22 @@ From the time an on-chain SQL transaction is submitted until it is materialized 
 - SDK network name: <ChainInfo chain='filecoin' info='chainName' />
 - Tableland gateway: <ChainInfo chain='filecoin' info='baseUrl' /> -->
 
-### Filecoin Hyperspace (testnet)
+### Filecoin Calibration (testnet)
 
 - Average block time: 30s
 - Average SQL materialization time: 4 minutes
-- Chain ID: 3141
+- Chain ID: 314159
 - Symbol: TFIL
 - Status Dashboard:
-  - [https://status.filecoin.io/uptime/5dj924lq96rz](https://status.filecoin.io/uptime/5dj924lq96rz)
+  - [https://stats.calibration.fildev.network/](https://stats.calibration.fildev.network/)
 - Block Explorer:
-  - [https://hyperspace.filfox.info/](https://hyperspace.filfox.info/)
+  - [https://calibration.filfox.info/en](https://calibration.filfox.info/en)
 - Faucet:
-  - [https://hyperspace.yoga/](https://hyperspace.yoga/)
-- RPC URL: [https://rpc.ankr.com/filecoin_testnet](https://rpc.ankr.com/filecoin_testnet)
-- Tableland contract address: <ChainInfo chain='filecoin-hyperspace' info='contractAddress' />
-- SDK network name: <ChainInfo chain='filecoin-hyperspace' info='chainName' />
-- Tableland gateway: <ChainInfo chain='filecoin-hyperspace' info='baseUrl' />
+  - [https://faucet.calibration.fildev.network/](https://faucet.calibration.fildev.network/)
+- RPC URL: [https://api.calibration.node.glif.io/rpc/v1](https://api.calibration.node.glif.io/rpc/v1)
+- Tableland contract address: <ChainInfo chain='filecoin-calibration' info='contractAddress' />
+- SDK network name: <ChainInfo chain='filecoin-calibration' info='chainName' />
+- Tableland gateway: <ChainInfo chain='filecoin-calibration' info='baseUrl' />
 
 #### Getting testnet funds
 
