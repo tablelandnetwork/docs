@@ -15,6 +15,10 @@ The Tableland SDK provides a minimal client that implements the Cloudflare D1 D
 
 The `@tableland/sdk` comes with a few APIs: "primary" [Cloudflare D1 client compatible](https://developers.cloudflare.com/d1/platform/client-api/) API for [`Database`](/sdk/core) connections, and two additional "secondary" APIs ([`Validator`](/sdk/core/validator-api) and [`Registry`](/sdk/core/registry-api)) that are unique to Tableland operations. Generally, users will leverage the primary database API for typical SQL operations, and the secondary APIs are useful when needing to interact directly with a Tableland Validator node or directly calling Tableland’s smart contracts (on-chain access control, direct contract calls, etc.).
 
+:::tip
+If you're looking for the SDK API reference, you can check it out [here](/api/sdk/modules).
+:::
+
 ## Chain configuration
 
 Note the chain naming convention used by the `Database` connection matches that of [`ethersjs`](https://github.com/ethers-io/ethers.js/). To dictate which chain your app should connect to, you can leverage a [`Signer`](https://docs.ethers.org/v5/api/signer/) where the signer will provide information corresponding to a particular chain. This includes any of the following chains, which have their `ethers`-defined name shown as well:

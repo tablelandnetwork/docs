@@ -63,8 +63,8 @@ const navbar = {
         },
         {
           type: "docSidebar",
-          sidebarId: "validatorApi",
-          label: "Validator API",
+          sidebarId: "gatewayApi",
+          label: "Gateway API",
         },
         {
           type: "docSidebar",
@@ -91,6 +91,17 @@ const navbar = {
           type: "docSidebar",
           sidebarId: "sqlSpecification",
           label: "SQL specification",
+        },
+      ],
+    },
+    {
+      label: "API",
+      position: "right",
+      items: [
+        {
+          type: "docSidebar",
+          sidebarId: "apiSdk",
+          label: "SDK",
         },
       ],
     },
