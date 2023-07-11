@@ -118,7 +118,7 @@ Polls for the status of a given transaction receipt by hash until
 
 #### Defined in
 
-@tableland/sdk/src/validator/index.ts:121
+@tableland/sdk/src/validator/index.ts:127
 
 ___
 
@@ -151,7 +151,7 @@ Returns the results of a SQL read query against the Tabeland network
 
 #### Defined in
 
-@tableland/sdk/src/validator/index.ts:91
+@tableland/sdk/src/validator/index.ts:97
 
 ▸ **queryByStatement**<`T`\>(`params`, `opts?`): `Promise`<[`TableFormat`](../interfaces/TableFormat.md)<`T`\>\>
 
@@ -174,7 +174,7 @@ Returns the results of a SQL read query against the Tabeland network
 
 #### Defined in
 
-@tableland/sdk/src/validator/index.ts:95
+@tableland/sdk/src/validator/index.ts:101
 
 ___
 
@@ -203,7 +203,7 @@ Returns the status of a given transaction receipt by hash
 
 #### Defined in
 
-@tableland/sdk/src/validator/index.ts:110
+@tableland/sdk/src/validator/index.ts:116
 
 ___
 

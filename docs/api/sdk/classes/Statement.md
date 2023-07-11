@@ -45,7 +45,7 @@ any runtime errors occur.
 
 #### Defined in
 
-@tableland/sdk/src/statement.ts:51
+@tableland/sdk/src/statement.ts:52
 
 ## Properties
 
@@ -55,7 +55,7 @@ any runtime errors occur.
 
 #### Defined in
 
-@tableland/sdk/src/statement.ts:47
+@tableland/sdk/src/statement.ts:48
 
 ___
 
@@ -65,7 +65,7 @@ ___
 
 #### Defined in
 
-@tableland/sdk/src/statement.ts:49
+@tableland/sdk/src/statement.ts:50
 
 ___
 
@@ -75,7 +75,7 @@ ___
 
 #### Defined in
 
-@tableland/sdk/src/statement.ts:48
+@tableland/sdk/src/statement.ts:49
 
 ## Methods
 
@@ -89,7 +89,27 @@ ___
 
 #### Defined in
 
-@tableland/sdk/src/statement.ts:101
+@tableland/sdk/src/statement.ts:102
+
+___
+
+### #waitExec
+
+▸ `Private` **#waitExec**(`params`): `Promise`<[`WaitableTransactionReceipt`](../modules.md#waitabletransactionreceipt)\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `params` | `ExtractedStatement` |
+
+#### Returns
+
+`Promise`<[`WaitableTransactionReceipt`](../modules.md#waitabletransactionreceipt)\>
+
+#### Defined in
+
+@tableland/sdk/src/statement.ts:113
 
 ___
 
@@ -111,7 +131,7 @@ Executes a query and returns all rows and metadata.
 | Name | Type | Description |
 | :------ | :------ | :------ |
 | `colName?` | `undefined` | If provided, filter results to the provided column. |
-| `opts?` | [`Signal`](../interfaces/helpers.Signal.md) | Additional options to control execution. |
+| `opts?` | [`SignalAndInterval`](../namespaces/helpers.md#signalandinterval) | Additional options to control execution. |
 
 #### Returns
 
@@ -119,7 +139,7 @@ Executes a query and returns all rows and metadata.
 
 #### Defined in
 
-@tableland/sdk/src/statement.ts:118
+@tableland/sdk/src/statement.ts:125
 
 ▸ **all**<`T`, `K`\>(`colName`, `opts?`): `Promise`<[`Result`](../interfaces/Result.md)<`T`[`K`]\>\>
 
@@ -135,7 +155,7 @@ Executes a query and returns all rows and metadata.
 | Name | Type |
 | :------ | :------ |
 | `colName` | `K` |
-| `opts?` | [`Signal`](../interfaces/helpers.Signal.md) |
+| `opts?` | [`SignalAndInterval`](../namespaces/helpers.md#signalandinterval) |
 
 #### Returns
 
@@ -143,7 +163,7 @@ Executes a query and returns all rows and metadata.
 
 #### Defined in
 
-@tableland/sdk/src/statement.ts:122
+@tableland/sdk/src/statement.ts:129
 
 ___
 
@@ -175,7 +195,7 @@ A new bound Statement.
 
 #### Defined in
 
-@tableland/sdk/src/statement.ts:72
+@tableland/sdk/src/statement.ts:73
 
 ___
 
@@ -201,7 +221,7 @@ rows, then first() will return null.
 
 #### Defined in
 
-@tableland/sdk/src/statement.ts:172
+@tableland/sdk/src/statement.ts:177
 
 ▸ **first**<`T`, `K`\>(`colName`, `opts?`): `Promise`<`T`\>
 
@@ -217,7 +237,7 @@ rows, then first() will return null.
 | Name | Type |
 | :------ | :------ |
 | `colName` | `undefined` |
-| `opts?` | [`Signal`](../interfaces/helpers.Signal.md) |
+| `opts?` | [`SignalAndInterval`](../namespaces/helpers.md#signalandinterval) |
 
 #### Returns
 
@@ -225,7 +245,7 @@ rows, then first() will return null.
 
 #### Defined in
 
-@tableland/sdk/src/statement.ts:174
+@tableland/sdk/src/statement.ts:179
 
 ▸ **first**<`T`, `K`\>(`colName`, `opts?`): `Promise`<``null`` \| `T`[`K`]\>
 
@@ -241,7 +261,7 @@ rows, then first() will return null.
 | Name | Type |
 | :------ | :------ |
 | `colName` | `K` |
-| `opts?` | [`Signal`](../interfaces/helpers.Signal.md) |
+| `opts?` | [`SignalAndInterval`](../namespaces/helpers.md#signalandinterval) |
 
 #### Returns
 
@@ -249,7 +269,7 @@ rows, then first() will return null.
 
 #### Defined in
 
-@tableland/sdk/src/statement.ts:178
+@tableland/sdk/src/statement.ts:183
 
 ___
 
@@ -269,7 +289,7 @@ Same as stmt.all(), but returns an array of rows instead of objects.
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `opts` | [`Signal`](../interfaces/helpers.Signal.md) | Additional options to control execution. |
+| `opts` | [`SignalAndInterval`](../namespaces/helpers.md#signalandinterval) | Additional options to control execution. |
 
 #### Returns
 
@@ -279,7 +299,7 @@ An array of raw query results.
 
 #### Defined in
 
-@tableland/sdk/src/statement.ts:252
+@tableland/sdk/src/statement.ts:259
 
 ___
 
@@ -295,7 +315,7 @@ UPDATE, DELETE or INSERT.
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `opts` | [`Signal`](../interfaces/helpers.Signal.md) | Additional options to control execution. |
+| `opts` | [`SignalAndInterval`](../namespaces/helpers.md#signalandinterval) | Additional options to control execution. |
 
 #### Returns
 
@@ -305,7 +325,7 @@ A results object with metadata only (results are null or an empty array).
 
 #### Defined in
 
-@tableland/sdk/src/statement.ts:220
+@tableland/sdk/src/statement.ts:228
 
 ___
 
@@ -326,7 +346,7 @@ Export a Statement's sql string and parameters.
 
 #### Defined in
 
-@tableland/sdk/src/statement.ts:94
+@tableland/sdk/src/statement.ts:95
 
 ___
 
@@ -344,4 +364,4 @@ A valid SQL string.
 
 #### Defined in
 
-@tableland/sdk/src/statement.ts:81
+@tableland/sdk/src/statement.ts:82

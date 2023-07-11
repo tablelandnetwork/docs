@@ -14,7 +14,7 @@ Named represents a named table with a prefix.
 
 • **name**: `string`
 
-Full table name.
+@custom:deprecated First table's full name.
 
 #### Defined in
 
@@ -22,12 +22,36 @@ Full table name.
 
 ___
 
+### names
+
+• **names**: `string`[]
+
+The full table names
+
+#### Defined in
+
+@tableland/sdk/src/registry/utils.ts:53
+
+___
+
 ### prefix
 
 • **prefix**: `string`
 
-Table name prefix.
+@custom:deprecated First table name prefix.
 
 #### Defined in
 
 @tableland/sdk/src/registry/utils.ts:49
+
+___
+
+### prefixes
+
+• **prefixes**: `string`[]
+
+The table prefixes
+
+#### Defined in
+
+@tableland/sdk/src/registry/utils.ts:57
