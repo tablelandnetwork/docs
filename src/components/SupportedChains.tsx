@@ -90,6 +90,9 @@ export const supportedChains = (): ChainFormatted[] => {
         break;
       case "sepolia":
         format.chainNameFormatted = "ethereum sepolia";
+      case "filecoin":
+        format.chainNameFormatted = "filecoin";
+        break;
       case "filecoin-calibration":
         format.location = "testnet";
         break;
