@@ -193,6 +193,7 @@ const sdk = [
   "sdk/core/prepared-statements",
   "sdk/core/query-statement-methods",
   "sdk/core/batching",
+  "sdk/core/aliases",
   "sdk/core/timeouts-error-handling",
   "sdk/core/validator-api",
   "sdk/core/registry-api",
