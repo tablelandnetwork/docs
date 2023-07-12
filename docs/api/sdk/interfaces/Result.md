@@ -24,7 +24,7 @@ If there was an error, this will contain the error string.
 
 #### Defined in
 
-@tableland/sdk/src/registry/utils.ts:130
+@tableland/sdk/src/registry/utils.ts:138
 
 ___
 
@@ -36,7 +36,7 @@ Additional meta information.
 
 #### Defined in
 
-@tableland/sdk/src/registry/utils.ts:134
+@tableland/sdk/src/registry/utils.ts:142
 
 ___
 
@@ -48,7 +48,7 @@ Possibly empty list of query results.
 
 #### Defined in
 
-@tableland/sdk/src/registry/utils.ts:122
+@tableland/sdk/src/registry/utils.ts:130
 
 ___
 
@@ -60,4 +60,4 @@ Whether the query or transaction was successful.
 
 #### Defined in
 
-@tableland/sdk/src/registry/utils.ts:126
+@tableland/sdk/src/registry/utils.ts:134

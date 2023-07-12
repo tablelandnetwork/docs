@@ -65,7 +65,7 @@ export default function NotFound() {
               marginTop: "2rem",
             }}
           >
-            <Link className="button button--secondary button--lg" to="/">
+            <Link className="button button--primary button--lg" to="/">
               ← <Translate>Back to home</Translate>
             </Link>
           </div>

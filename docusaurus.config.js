@@ -64,8 +64,60 @@ async function createConfig() {
           out: "api/sdk",
         },
       ],
-      // If any redirects are needed, configure with `@docusaurus/plugin-client-redirects`
-      // See docs here: https://docusaurus.io/docs/api/plugins/@docusaurus/plugin-client-redirects
+      [
+        // Note: (only) during local dev, you may run into an infinite loop issue that
+        // occurs when certain files get modified
+        // See here for more info: https://github.com/rdilweb/docusaurus-plugin-remote-content/issues/45
+        "docusaurus-plugin-remote-content",
+        {
+          // Fetch the `go-tableland` repo's README and place it in the
+          // `docs/validator` directory, altering content prior to rendering
+          name: "validator-readme",
+          sourceBaseUrl:
+            "https://raw.githubusercontent.com/tablelandnetwork/go-tableland/main/", // The base url for the markdown (gets prepended to all of the documents when fetching)
+          outDir: "docs/validator", // The base directory to output to
+          documents: ["README.md"], // The file names to download
+          modifyContent(filename, content) {
+            if (filename.includes("README")) {
+              // Remove all content above `## Background`, which includes the
+              // title and badges. Also, adjust callouts with `>` to use
+              // admonition tips wrapped with `:::tip {content} :::` as well as
+              // include some frontmatter / initial content for the page
+              const parts = content.split("## Background");
+              if (parts.length > 1) {
+                let transformedContent =
+                  "## Background" + parts.slice(1).join("## Background");
+                let lines = transformedContent.split("\n");
+                for (let i = 0; i < lines.length; i++) {
+                  if (lines[i].startsWith(">")) {
+                    lines[i] = `:::tip\n${lines[i].slice(1).trim()}\n:::`;
+                  }
+                }
+                content = lines.join("\n");
+              }
+
+              return {
+                content: `---
+title: Validator node
+description: Learn how to run you own Tableland validator node.
+keywords:
+  - validator
+---
+
+Tableland is a permissionless network where anyone can run and operate their own node. This page walks through how to run your own node, including hardware requirements, installation steps, and common questions.
+
+<!-- Imported from https://github.com/tablelandnetwork/go-tableland/blob/main/README.md -->
+
+${content}`,
+              };
+            }
+
+            // Don't modify unless name contains "README" (not used here but
+            // could be useful in other scenarios)
+            return undefined;
+          },
+        },
+      ],
     ],
     presets: [
       [

@@ -27,7 +27,7 @@ The Tableland SDK uses the modern `fetch` API, which is only available starting 
 
 ## Usage
 
-All table creates, writes, and reads fall under a single method: [`prepare`](/sdk/core/prepared-statements).
+All table creates, writes, and reads fall under a single method: [`prepare`](/sdk/database/prepared-statements).
 
 Start by creating an instance of a `Database` and then pass SQL, such as `CREATE TABLE`, `INSERT INTO`, `UPDATE`, `DELETE`, and `SELECT` statements. Let’s start with a simple table read query. Every chain comes with a "healthbot" table that can be queried, which has a single `counter` column with integer value. For example, on Polygon Mumbai, this table is `healthbot_80001_1`.
 
@@ -52,12 +52,12 @@ const db = new Database({ signer });
 ```
 
 :::tip
-For more information, check out the [`Signers`](/sdk/core/signers) page.
+For more information, check out the [`Signers`](/sdk/database/signers) page.
 :::
 
 ### Reads
 
-Start by importing the `Database` and establishing a read-only connection. This allows developers to bypass any wallet connection since table reads are not an on-chain operation. You’ll notice the `all` method (and `run` in the example below) is chained to the statement—more details are provided in the [query statement methods](/sdk/core/query-statement-methods) section.
+Start by importing the `Database` and establishing a read-only connection. This allows developers to bypass any wallet connection since table reads are not an on-chain operation. You’ll notice the `all` method (and `run` in the example below) is chained to the statement—more details are provided in the [query statement methods](/sdk/database/query-statement-methods) section.
 
 <Tabs groupId="sdk">
   <TabItem value="js" label="JavaScript" default>
@@ -97,7 +97,7 @@ Start by importing the `Database` and establishing a read-only connection. This 
 
 Once you are ready to create a table, you can follow rather standard SQL convention. You’ll first import the `Database` class, create a new instance, and then pass a `CREATE TABLE` statement to `prepare`. For readability purposes, a `prefix` variable is created and passed using string templating within the `prepare` method.
 
-For context, the [`run`](/sdk/core/query-statement-methods#run) method returns metrics about the query, such as transaction information.
+For context, the [`run`](/sdk/database/query-statement-methods#run) method returns metrics about the query, such as transaction information.
 
 <Tabs groupId="sdk">
   <TabItem value="js" label="JavaScript" default>
@@ -158,7 +158,7 @@ In general, double quotes around any table name in a statement is valid SQL.
 
 ### Writes
 
-The SDK allows for _[parameter binding](/sdk/core/prepared-statements#parameter-binding)_ to help simplify writing queries (includes both mutating and read queries). The `?` is an _anonymous_ parameter, which replaces the values in the statement with those in `bind`. Let’s extend the example for creating a table.
+The SDK allows for _[parameter binding](/sdk/database/prepared-statements#parameter-binding)_ to help simplify writing queries (includes both mutating and read queries). The `?` is an _anonymous_ parameter, which replaces the values in the statement with those in `bind`. Let’s extend the example for creating a table.
 
 <Tabs groupId="sdk">
   <TabItem value="js" label="JavaScript" default>

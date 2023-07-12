@@ -56,7 +56,7 @@ Create a Database instance with the specified connection configuration.
 
 ### batch
 
-▸ **batch**<`T`\>(`statements`, `opts?`): `Promise`<`any`\>
+▸ **batch**<`T`\>(`statements`, `opts?`): `Promise`<[`Result`](../interfaces/Result.md)<`T`\>[]\>
 
 Execute a set of Statements in batch mode.
 Batching sends multiple SQL statements inside a single call to the
@@ -82,7 +82,7 @@ statement, and it aborts or rolls back the entire sequence.
 
 #### Returns
 
-`Promise`<`any`\>
+`Promise`<[`Result`](../interfaces/Result.md)<`T`\>[]\>
 
 An array of run results.
 
@@ -111,7 +111,7 @@ Not implemented yet!
 
 #### Defined in
 
-@tableland/sdk/src/database.ts:216
+@tableland/sdk/src/database.ts:211
 
 ___
 
@@ -152,7 +152,7 @@ A single run result.
 
 #### Defined in
 
-@tableland/sdk/src/database.ts:190
+@tableland/sdk/src/database.ts:185
 
 ___
 
