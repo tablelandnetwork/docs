@@ -94,7 +94,7 @@ function lockController(uint256 tableId) public onlyOwner {
 
 If you are using a development framework, like [`hardhat`](https://hardhat.org/), or simply using a library like [`ethers`](https://docs.ethers.io/v5/), you can make smart contact calls directly to the Tableland registry smart contract to set the controller. This can occur in some script that connects to the one of the [deployed registry contracts](/smart-contracts/deployed-contracts) and calls one of the controller methods.
 
-The Tableland SDK also offers a [`Registry` API](/sdk/core/registry-api) to handle registry smart contract calls, too.
+The Tableland SDK also offers a [`Registry` API](/sdk/registry) to handle registry smart contract calls, too.
 
 ## Using a block explorer
 

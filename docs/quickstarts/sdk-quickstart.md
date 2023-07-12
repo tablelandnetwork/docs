@@ -7,7 +7,7 @@ description: Learn how to create a table, add some sample data, and query the da
 import Tabs from "@theme/Tabs";
 import TabItem from "@theme/TabItem";
 
-`Database` connections can either be either read-only or mutating and use a providers & signers to dictate chain connections. If you are simply reading from a database, you can use the `Database` object without a `Signer` since reads can occur across any chain. However, if you want to create a table or write to it, you must use a `Signer` to specify and connect to the chain. For more information, check out the [`Signers`](/sdk/core/signers) page.
+`Database` connections can either be either read-only or mutating and use a providers & signers to dictate chain connections. If you are simply reading from a database, you can use the `Database` object without a `Signer` since reads can occur across any chain. However, if you want to create a table or write to it, you must use a `Signer` to specify and connect to the chain. For more information, check out the [`Signers`](/sdk/database/signers) page.
 
 ## 1. Installation
 
