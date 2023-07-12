@@ -11,7 +11,7 @@ When instantiating a `Database`, the `aliases` parameter can be used to configur
 
 An alias is, in a sense, the same as a table prefix but with local uniqueness restrictions and only scoped to your project alone (i.e., has no relationship to the broader Tableland network).
 
-Under the hood, `aliases` contains an object with `read` and `write` functions. The `read` function must return a mapping of the project-scoped table alias to the universally unique Tableland table nam—for example, `{ "users": "users_31337_2" }`. The `write` function will be called any time a `Database` instance is used to create a table and modifies the JSON file, writing the mapping to it.
+Under the hood, `aliases` contains an object with `read` and `write` functions. The `read` function must return a mapping of the project-scoped table alias to the universally unique Tableland table name—for example, `{ "users": "users_31337_2" }`. The `write` function will be called any time a `Database` instance is used to create a table and modifies the JSON file, writing the mapping to it.
 
 :::note
 All project aliases must be unique. If you try to create a table with a preexisting alias saved in your config file, you'll run into an error: `table name already exists in aliases`.
@@ -19,10 +19,10 @@ All project aliases must be unique. If you try to create a table with a preexist
 
 ## Configuration file
 
-As a best practice, the alias config file should exist in your project's directory to ensure the mappings from table aliases to the generated names are persisted and do not get lost. First, create a JSON file with an empty object (`{}`) in the root of your project (or a subdirectory). It will ultimately contain all of your table aliases. Let's name the file `tableland.config.json`, but it can be any file name you'd like.
+As a best practice, the alias config file should exist in your project's directory to ensure the mappings from table aliases to the generated names are persisted and do not get lost. First, create a JSON file with an empty object (`{}`) in the root of your project (or a subdirectory). It will ultimately contain all of your table aliases. Let's name the file `tableland.aliases.json`, but it can be any file name you'd like.
 
 ```sh
-echo '{}' > tableland.config.json
+echo '{}' > tableland.aliases.json
 ```
 
 Then, import `jsonFileAliases` from the SDK's `helpers` into your source code; this is a utility function that allows you to simply provide the path to your aliases file.
@@ -35,7 +35,7 @@ const db = new Database({
   signer,
   // highlight-start
   // Specify the path to your aliases config file
-  aliases: jsonFileAliases("./tableland.config.json"),
+  aliases: jsonFileAliases("./tableland.aliases.json"),
   // highlight-end
 });
 ```
@@ -59,7 +59,7 @@ await write.txn?.wait();
 const { results } = await db.prepare(`SELECT * FROM main`).all();
 ```
 
-Creating a table will automatically write the mapping to the `tableland.config.json` file. The config file will look something like the following (e.g., if you create a `main` prefixed table using Local Tableland):
+Creating a table will automatically write the mapping to the `tableland.aliases.json` file. The config file will look something like the following (e.g., if you create a `main` prefixed table using Local Tableland):
 
 ```json
 {
