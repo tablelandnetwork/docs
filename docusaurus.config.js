@@ -65,6 +65,9 @@ async function createConfig() {
         },
       ],
       [
+        // Note: (only) during local dev, you may run into an infinite loop issue that
+        // occurs when certain files get modified
+        // See here for more info: https://github.com/rdilweb/docusaurus-plugin-remote-content/issues/45
         "docusaurus-plugin-remote-content",
         {
           // Fetch the `go-tableland` repo's README and place it in the
