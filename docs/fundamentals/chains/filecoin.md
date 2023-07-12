@@ -30,7 +30,7 @@ Currently, Filecoin Calibration node providers *do not* store an archive of chai
 
 ## Setup & resources
 
-<!-- ### Filecoin (mainnet)
+### Filecoin (mainnet)
 
 - Average block time: 30s
 - Average SQL materialization time: 4 minutes
@@ -40,10 +40,10 @@ Currently, Filecoin Calibration node providers *do not* store an archive of chai
   - [https://status.filecoin.io/](https://status.filecoin.io/)
 - Block Explorer:
   - [https://filfox.info](https://filfox.info)
-- RPC URL: [https://rpc.ankr.com/filecoin](https://rpc.ankr.com/filecoin)
+- RPC URL: [https://api.node.glif.io/](https://api.node.glif.io/)
 - Tableland contract address: <ChainInfo chain='filecoin' info='contractAddress' />
 - SDK network name: <ChainInfo chain='filecoin' info='chainName' />
-- Tableland gateway: <ChainInfo chain='filecoin' info='baseUrl' /> -->
+- Tableland gateway: <ChainInfo chain='filecoin' info='baseUrl' />
 
 ### Filecoin Calibration (testnet)
 
