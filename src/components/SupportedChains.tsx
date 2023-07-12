@@ -90,6 +90,7 @@ export const supportedChains = (): ChainFormatted[] => {
         break;
       case "sepolia":
         format.chainNameFormatted = "ethereum sepolia";
+        break;
       case "filecoin":
         format.chainNameFormatted = "filecoin";
         break;
@@ -101,9 +102,6 @@ export const supportedChains = (): ChainFormatted[] => {
         break;
       case "maticmum":
         format.chainNameFormatted = "polygon mumbai";
-        break;
-      case "local-tableland":
-        format.location = "local";
         break;
       default:
         break;
