@@ -93,14 +93,14 @@ If you opt to create the URI and write it with Solidity, one helpful library for
 function tokenURI(string memory _tableName) public view returns (string memory) {
 	string memory base = _baseURI();
 	// Here, the baseURI is:
-	// https://testnets.tableland.network/api/v1/query?unwrap=true&extract=true&s=
+	// https://testnets.tableland.network/api/v1/query?unwrap=true&extract=true&statement=
   return string.concat(
     base,
     "SELECT%20%2A%20FROM%20",
     _tableName
   );
 	// Thus, the full string is:
-	// https://testnets.tableland.network/api/v1/query?unwrap=true&extract=true&s=SELECT%20%2A%20FROM%20<table_name_param>
+	// https://testnets.tableland.network/api/v1/query?unwrap=true&extract=true&statement=SELECT%20%2A%20FROM%20<table_name_param>
 }
 ```
 

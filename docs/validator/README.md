@@ -1,6 +1,6 @@
 ---
 title: Validator node
-description: Learn how to run you own Tableland validator node.
+description: Learn how to run your own Tableland validator node.
 keywords:
   - validator
 ---
