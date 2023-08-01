@@ -77,6 +77,7 @@ async function createConfig() {
             "https://raw.githubusercontent.com/tablelandnetwork/go-tableland/main/", // The base url for the markdown (gets prepended to all of the documents when fetching)
           outDir: "docs/validator", // The base directory to output to
           documents: ["README.md"], // The file names to download
+          performCleanup: false, // Make sure generated file is not deleted on subsequent builds
           modifyContent(filename, content) {
             if (filename.includes("README")) {
               // Remove all content above `## Background`, which includes the
@@ -99,7 +100,7 @@ async function createConfig() {
               return {
                 content: `---
 title: Validator node
-description: Learn how to run you own Tableland validator node.
+description: Learn how to run your own Tableland validator node.
 keywords:
   - validator
 ---
