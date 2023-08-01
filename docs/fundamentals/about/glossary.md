@@ -125,7 +125,7 @@ Reading data is to observe and extrapolate learnings from it without altering it
 
 ### Registry
 
-Tableland is one part on-chain, another part off-chain. The on-chain component is a "registry" smart contract that accepts SQL statements, thus, minting tables and providing data availability of SQL. Without the registry, you wouldn't be able to create nor mutate tables. The Off-chain part is the Tableland network of validators that materialized the data.
+Tableland is one part on-chain, another part off-chain. The on-chain component is a "registry" smart contract that accepts SQL statements, thus, minting tables and providing data availability of SQL. Without the registry, you wouldn't be able to create nor mutate tables. The off-chain part is the Tableland network of validators that materialized the data.
 
 ## S
 
