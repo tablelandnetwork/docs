@@ -298,6 +298,14 @@ const cli = [
   "cli/errors",
 ];
 
+// Local Tableland
+const localTableland = [
+  ...sidepageHeader("Local Tableland"),
+  "local-tableland/README",
+  "local-tableland/cli",
+  "local-tableland/testing",
+];
+
 // Tutorials
 const tutorials = [
   ...sidepageHeader("Tutorials"),
@@ -381,6 +389,12 @@ const sidebars = {
     },
     {
       type: "doc",
+      id: "local-tableland/README",
+      label: "Local Tableland",
+      className: "sidebar-landing",
+    },
+    {
+      type: "doc",
       id: "tutorials/README",
       label: "Tutorials",
       className: "sidebar-landing",
@@ -419,19 +433,20 @@ const sidebars = {
     },
   ],
   // Learn
-  fundamentals: fundamentals,
-  playbooks: playbooks,
+  fundamentals,
+  playbooks,
   // Develop
-  quickstarts: quickstarts,
-  sdk: sdk,
-  smartContracts: smartContracts,
-  cli: cli,
-  gatewayApi: gatewayApi,
-  tutorials: tutorials,
-  apiSdk: apiSdk,
+  quickstarts,
+  sdk,
+  smartContracts,
+  cli,
+  gatewayApi,
+  localTableland,
+  tutorials,
+  apiSdk,
   // Infra & protocol
-  validator: validator,
-  sqlSpecification: sqlSpecification,
+  validator,
+  sqlSpecification,
   // Miscellaneous
   contribute: [
     ...sidepageHeader("Contribute"),

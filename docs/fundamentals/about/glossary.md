@@ -3,7 +3,7 @@ title: Glossary
 description: Get familiar with common words and phrases in web3, databases, and Tableland.
 ---
 
-Tableland sits in a unique place in that it is web3-native but also brings traditional databases concepts. If you're new to either of those realms, there are certain terms that may be unfamiliar, and if not, it's still probably helpful to review this taxonomy. It highlights and describes nomenclature used throughout the protocol itself.
+Tableland sits in a unique place in that it is web3-native but also brings traditional databases concepts. If you're new to either of those realms, there are certain terms that may be unfamiliar, and if not, it's still probably helpful to review this taxonomy. It highlights and describes the nomenclature used throughout the protocol itself.
 
 ## A
 
@@ -13,7 +13,7 @@ An Access Control List ([ACL](https://en.wikipedia.org/wiki/Access-control_list)
 
 ### Account
 
-An [account](https://ethereum.org/en/developers/docs/accounts/) is representation of a web3 identity. It can be either a smart contract or an actual user and is the means to interact with a blockchain. Namely, to send a transaction, it must be sent from some account that holds a balance.
+An [account](https://ethereum.org/en/developers/docs/accounts/) is a representation of a web3 identity. It can be either a smart contract or an actual user and is the means to interact with a blockchain. Namely, to send a transaction, it must be sent from some account that holds a balance.
 
 ### Address
 
@@ -33,13 +33,13 @@ A blockchain (sometimes called "chain," for short) is a global state machine wit
 
 ### CID
 
-Although not part of the Tableland protocol itself, IPFS is often used in tandem with Tableland. When files are stored on the IPFS network, they are represented with an immutable and unique [Content Identifier (CID)](https://docs.ipfs.tech/concepts/content-addressing/); it a hash (string of characters) is generated and might look something like `bafybeigdyrzt5sfp7udm7hu76uh7y26nf3efuylqabf3oclgtqy55fbzdi`.
+Although not part of the Tableland protocol itself, IPFS is often used in tandem with Tableland. When files are stored on the IPFS network, they are represented with an immutable and unique [Content Identifier (CID)](https://docs.ipfs.tech/concepts/content-addressing/); it is a hash (string of characters) is generated and might look something like `bafybeigdyrzt5sfp7udm7hu76uh7y26nf3efuylqabf3oclgtqy55fbzdi`.
 
 ## D
 
 ### Database
 
-A database is a performant way to store and query data. There are many types of databases, but in Tableland, the only on that matter is a "relational" database, which stores information in structured tables and is interfaced with SQL.
+A database is a performant way to store and query data. There are many types of databases, but in Tableland, the only one that matters is a "relational" database, which stores information in structured tables and is interfaced with SQL.
 
 ## E
 
@@ -49,7 +49,7 @@ A non-smart contract account is called an Externally Owned Account ([EOA](https:
 
 ### ERC20
 
-An [ERC20](https://eips.ethereum.org/EIPS/eip-20) token is the technical name for a fungible token, which includes any cryptocurrency that runs on an EVM chain. For reference, EIPs (Ethereum Improvement Proposals) are an open source process where someone submits a proposal, and if accepted, it is adopted by the Ethereum protocol into an [ERC](https://eips.ethereum.org/erc) (Ethereum Request for Comment) standard.
+An [ERC20](https://eips.ethereum.org/EIPS/eip-20) token is the technical name for a fungible token, which includes any cryptocurrency that runs on an EVM chain. For reference, EIPs (Ethereum Improvement Proposals) are an open-source process where someone submits a proposal, and if accepted, it is adopted by the Ethereum protocol into an [ERC](https://eips.ethereum.org/erc) (Ethereum Request for Comment) standard.
 
 ### ERC721
 
@@ -61,41 +61,41 @@ An [ERC1155](https://eips.ethereum.org/EIPS/eip-1155) token is the technical nam
 
 ### EVM
 
-A component of Ethereum is its _[Ethereum Virtual Machine](https://ethereum.org/en/developers/docs/evm/)_. It is the most widely adopted virtual machine in web3 and has become the defacto requirement for other chains to adopt. If you're using an EVM chain, that means it shares the same rules for computing a new valid state from block to block; a wallet / account on one chain can be used on another. Although the state is different, the way you interact with the chain is (at a high level) the same.
+A component of Ethereum is its _[Ethereum Virtual Machine](https://ethereum.org/en/developers/docs/evm/)_. It is the most widely adopted virtual machine in web3 and has become the de facto requirement for other chains to adopt. If you're using an EVM chain, that means it shares the same rules for computing a new valid state from block to block; a wallet / account on one chain can be used on another. Although the state is different, the way you interact with the chain is (at a high level) the same.
 
 ## F
 
 ### Filecoin
 
-[Filecoin](https://filecoin.io/) is a decentralized storage network that uses the [IPFS](#ipfs) protocol but adds incentives to guarantee persistance. In other words, IPFS is a p2p protocol that allows peers to transfer files between each other, and Filecoin extends this with its own token and protocol design to ensure the data will be there upon request.
+[Filecoin](https://filecoin.io/) is a decentralized storage network that uses the [IPFS](#ipfs) protocol but adds incentives to guarantee persistence. In other words, IPFS is a p2p protocol that allows peers to transfer files between each other, and Filecoin extends this with its own token and protocol design to ensure the data will be there upon request.
 
 ## G
 
 ### Gas
 
-Sending a transaction is not free; you have to pay [gas](https://ethereum.org/en/developers/docs/gas/) for the network to execute it. Namely, every time you want to change the blockchain's state, there is a computational gas fee that pays for blockchain nodes to perform the action. Incentives drive network coordination and are essential to decentralized systems. Note that it's possible for a transaction to be sent but never finalized (i.e., it fails) while gas is still paid for. This is because it still cost nodes computational effort to execute the transaction, up until the point of failure.
+Sending a transaction is not free; you have to pay [gas](https://ethereum.org/en/developers/docs/gas/) for the network to execute it. Namely, every time you want to change the blockchain's state, there is a computational gas fee that pays for blockchain nodes to perform the action. Incentives drive network coordination and are essential to decentralized systems. Note that it's possible for a transaction to be sent but never finalized (i.e., it fails) while gas is still paid for. This is because it still costs nodes computational effort to execute the transaction, up until the point of failure.
 
 ## I
 
 ### IPFS
 
-[IPFS](https://ipfs.tech/) stands for Interplanetary File System. It is a p2p protocol and used as common way to store files but in a distributed manner, which enables content addressing by way of [CIDs](#cid). IPFS has less of a "guaranteed" persistance mechanism but does offer a feature for "[pinning](https://docs.ipfs.tech/how-to/pin-files/)" files to help tell the network to keep the file around (but it's not incentive driven like its related protocol [Filecoin](#filecion)).
+[IPFS](https://ipfs.tech/) stands for Interplanetary File System. It is a p2p protocol and is used as a common way to store files but in a distributed manner, which enables content addressing by way of [CIDs](#cid). IPFS has less of a "guaranteed" persistence mechanism but does offer a feature for "[pinning](https://docs.ipfs.tech/how-to/pin-files/)" files to help tell the network to keep the file around (but it's not incentive driven like its related protocol [Filecoin](#filecion)).
 
 ## L
 
 ### Layer 2
 
-Layer 2 (L2) solutions are built on top of another chain to help [scale its performance](https://ethereum.org/en/developers/docs/scaling/). Generally, they refer to a network that is built on top of Ethereum and implement EVM compatability, allowing for easy porting from one chain to another. L2s make blockchains scalable by increasing throughput and lowering costs, opening the door for a broader range of applications to be built.
+Layer 2 (L2) solutions are built on top of another chain to help [scale its performance](https://ethereum.org/en/developers/docs/scaling/). Generally, they refer to a network that is built on top of Ethereum and implement EVM compatibility, allowing for easy porting from one chain to another. L2s make blockchains scalable by increasing throughput and lowering costs, opening the door for a broader range of applications to be built.
 
 ## M
 
 ### Materialize
 
-Data that is stored in the Tableland global database first is written on-chain (to event logs) and then is processed by database validator nodes. The act of processing and altering existing database state is to _materialize_ the data.
+Data that is stored in the Tableland global database first is written on-chain (to event logs) and then is processed by database validator nodes. The act of processing and altering the existing database state is to _materialize_ the data.
 
 ### Mutate
 
-To mutate is to change. Data mutations relative to tables mean to write data to that table, whether its adding new data or changing existing data.
+To mutate is to change. Data mutations relative to tables mean to write data to that table, whether it is adding new data or changing existing data.
 
 ## N
 
@@ -105,7 +105,7 @@ A node (also called a "client") is one of many in a distributed network of compu
 
 ### NFT
 
-An Non-Fungible Token (NFT), also referred to as an ERC721 (or ERC1155) token, is an interface for representing data that is distinct and cannot be broken into smaller pieces. It is a widely adopted standard and paves the way for interoperable data objects to exist on-chain. One unique component of NFTs is that they allow for an off-chain pointer to exist, which is what all common marketplaces read from (e.g., JPEGs). However, this off-chain reference can really be anything that adheres to the correct ERC721 schema, and Tableland offers a gateway that can be used as this pointer reference.
+A Non-Fungible Token (NFT), also referred to as an ERC721 (or ERC1155) token, is an interface for representing data that is distinct and cannot be broken into smaller pieces. It is a widely adopted standard and paves the way for interoperable data objects to exist on-chain. One unique component of NFTs is that they allow for an off-chain pointer to exist, which is what all common marketplaces read from (e.g., JPEGs). However, this off-chain reference can really be anything that adheres to the correct ERC721 schema, and Tableland offers a gateway that can be used as this pointer reference.
 
 ## O
 
@@ -125,13 +125,13 @@ Reading data is to observe and extrapolate learnings from it without altering it
 
 ### Registry
 
-Tableland is one part on-chain, another part off-chain. The on-chain component is a "registry" smart contract that accepts SQL statements, thus, minting tables and providing data availability of SQL. Without the registry, you wouldn't be able to create nor mutate tables. Off-chain, is the Tableland network of validators that materialized the data.
+Tableland is one part on-chain, another part off-chain. The on-chain component is a "registry" smart contract that accepts SQL statements, thus, minting tables and providing data availability of SQL. Without the registry, you wouldn't be able to create nor mutate tables. The off-chain part is the Tableland network of validators that materialized the data.
 
 ## S
 
 ### Smart contract
 
-A program that get executed on a blockchain, often written in [Solidity](https://ethereum.org/en/glossary/#solidity) but later compiled into [bytecode](https://ethereum.org/en/glossary/#bytecode). Also simply called a "contract," these also have unique addresses associated with them. They differ from EOA in that the account _can_ have code associated with it, but they cannot _originate_ the sending of a transaction.
+A program that gets executed on a blockchain, often written in [Solidity](https://ethereum.org/en/glossary/#solidity) but later compiled into [bytecode](https://ethereum.org/en/glossary/#bytecode). Also simply called a "contract," these also have unique addresses associated with them. They differ from EOA in that the account _can_ have code associated with it, but they cannot _originate_ the sending of a transaction.
 
 ### SQL
 
@@ -141,7 +141,7 @@ Structured Query Language (SQL) is a way to interface with database nodes to cre
 
 ### Table
 
-A table is database object that acts as a container for data. It organizes it into highly structured rows and columns and allows for relationship mapping between related tables to occur. In Tableland, a table is represented on-chain as an ERC721 token that provides table ownership to an account.
+A table is a database object that acts as a container for data. It organizes it into highly structured rows and columns and allows for relationship mapping between related tables to occur. In Tableland, a table is represented on-chain as an ERC721 token that provides table ownership to an account.
 
 ### Transaction
 
@@ -167,11 +167,11 @@ One type of node is a validator. Validators are part of a concept called "[proo
 
 ### Web2
 
-The "old" / existing internet that is not only built on infrastructure primarily managed by a few large players but also owned by them (like AWS and Google). The data stored here is not truly interoperable, and there is a wealth of data owned by these service providers but not the user / creator of that data. Take, for instance, monetization through cookies and ads that happens using your data but without you knowing. Thus, data is illiquid in both the generalized movement and monetization thereof as it is gated by those who didn't create it.
+The "old" / existing internet is not only built on infrastructure primarily managed by a few large players but also owned by them (like AWS and Google). The data stored here is not truly interoperable, and there is a wealth of data owned by these service providers but not the user / creator of that data. Take, for instance, monetization through cookies and ads that happens using your data but without you knowing. Thus, data is illiquid in both the generalized movement and monetization thereof as it is gated by those who didn't create it.
 
 ### Web3
 
-The "new" internet that redesigns things from the ground up, with ownership and payment built into the network as a way to incentivize non-malicious network actions. It differs from "web2," which is the traditional internet that is built on centrally owned and managed applications. (There's a lot more to unpack here, though!)
+The "new" internet redesigns things from the ground up, with ownership and payment built into the network as a way to incentivize non-malicious network actions. It differs from "web2," which is the traditional internet that is built on centrally owned and managed applications. (There's a lot more to unpack here, though!)
 
 :::tip
 If there are any words you think are missing or would like to change the description, feel free to [contribute](/contribute)!

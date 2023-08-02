@@ -6,7 +6,7 @@ keywords:
   - command line
 ---
 
-The `@tableland/cli` is a developer tool to help you connect, create, write, and read from The comfort of your command line. It’s simple, easy to use, and integrates nicely with tools like [jq](https://stedolan.github.io/jq/). When interacting with the Tableland CLI, you can also specify your own [provider endpoints](https://www.alchemy.com/blog/what-is-a-node-provider) for added control. Using the CLI, you can:
+The `@tableland/cli` package is a developer tool to help you connect, create, write, and read from The comfort of your command line. It’s simple, easy to use, and integrates nicely with tools like [jq](https://stedolan.github.io/jq/). When interacting with the Tableland CLI, you can also specify your own [provider endpoints](https://www.alchemy.com/blog/what-is-a-node-provider) for added control. Using the CLI, you can:
 
 - Connect to any of the chains that Tableland supports.
 - Create, write to, and read from tables.

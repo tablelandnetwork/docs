@@ -31,6 +31,13 @@ Choose to define an optional prefix, such as `quickstart`. If you didn’t run t
 tableland create "id int primary key, val text" --prefix "quickstart" --chain "80001" --privateKey "your_private_key"
 ```
 
+Or, you can choose to pass a full CREATE TABLE statement without the prefix flag:
+
+```bash
+# Create a table & save its returned `name` locally
+tableland create "CREATE TABLE (id int primary key, val text)" --chain "80001" --privateKey "your_private_key"
+```
+
 ## 4. Write and read data
 
 Insert (`write`) a value, and `read` from the newly updated table.
