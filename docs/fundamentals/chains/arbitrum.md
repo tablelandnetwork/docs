@@ -37,6 +37,7 @@ Thus, you can imagine how high volume applications can take advantage of both th
 - Faucet (use the Ethereum Goerli faucet and then bridge ETH to Arbitrum):
 - [https://goerlifaucet.com/](https://goerlifaucet.com/)
 - [https://faucet.paradigm.xyz/](https://faucet.paradigm.xyz/)
+- [https://faucet.chainstack.com/goerli-faucet](https://faucet.chainstack.com/goerli-faucet)
 - Bridge:
   - [https://bridge.arbitrum.io/](https://bridge.arbitrum.io/)
 - RPC URL:
