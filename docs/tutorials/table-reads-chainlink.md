@@ -11,7 +11,7 @@ The following walks through how to query off-chain table state and write it back
 
 ## Synopsis
 
-We’ll be using the Chainlink [Any API](https://docs.chain.link/getting-started/advanced-tutorial/) to read data from the Tableland network and write it back on-chain. It will use the "single word response" [GET method](https://docs.chain.link/any-api/get-request/examples/single-word-response/) to retrieve a single unsigned integer value from Tableland ([here](https://testnets.tableland.network/query?unwrap=true&s=select%20%2A%20from%20healthbot_11155111_1)) and write it back on-chain.
+We’ll be using the Chainlink [Any API](https://docs.chain.link/getting-started/advanced-tutorial/) to read data from the Tableland network and write it back on-chain. It will use the "single word response" [GET method](https://docs.chain.link/any-api/get-request/examples/single-word-response/) to retrieve a single unsigned integer value from Tableland ([here](https://testnets.tableland.network/query?unwrap=true&statement=select%20%2A%20from%20healthbot_11155111_1)) and write it back on-chain.
 
 Recall that writing data to Tableland happens with on-chain actions, whereas reading \***\*from\*\*** the Tableland network occurs via an off-chain gateway query. If a developer wants to query for data and make some on-chain action based on the result, they’ll need to use an oracle to retrieve the data.
 
@@ -96,7 +96,7 @@ constructor() ConfirmedOwner(msg.sender) {
 
 The following URL will be used for requesting Tableland state on-chain:
 
-- _[https://testnets.tableland.network/query?unwrap=true&s=select%20%2A%20from%20healthbot_421613_1](https://testnets.tableland.network/query?unwrap=true&s=select%20%2A%20from%20healthbot_421613_1)_
+- _[https://testnets.tableland.network/query?unwrap=true&statement=select%20%2A%20from%20healthbot_421613_1](https://testnets.tableland.network/query?unwrap=true&statement=select%20%2A%20from%20healthbot_421613_1)_
 
 It is the Tableland `healthbot` table deployed on the Arbitrum Goerli testnet, which simply increments a single `counter` key by an integer value. For mainnet chains, be sure to use the `tableland.network` gateway over the `testnets.tableland.network` gateway.
 
@@ -368,7 +368,7 @@ contract TableState is ChainlinkClient, ConfirmedOwner {
 
 To see the full deployment code, check out the [repo](https://github.com/dtbuchholz/tutorial-on-chain-reads-chainlink-arbitrum). Here, we’ll highlight some actions that should take place from within a deploy script:
 
-- Set the `url` value, using `setRequestUrl`, to the Tableland gateway at [https://testnets.tableland.network/query?unwrap=true&s=select%20%2A%20from%20healthbot_421613_1](https://testnets.tableland.network/query?unwrap=true&s=select%20%2A%20from%20healthbot_421613_1)
+- Set the `url` value, using `setRequestUrl`, to the Tableland gateway at [https://testnets.tableland.network/query?unwrap=true&statement=select%20%2A%20from%20healthbot_421613_1](https://testnets.tableland.network/query?unwrap=true&statement=select%20%2A%20from%20healthbot_421613_1)
 - Set the `path` value, using `setRequestPath`, to `counter`
 - Fund the contract with `LINK`.
 

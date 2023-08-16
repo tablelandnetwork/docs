@@ -11,7 +11,7 @@ keywords:
 Now that you have data stored as tables, you’ll need to serve it as metadata JSON so that marketplaces, wallets, and platforms can all pick it up for display. In short, you want to take a URL like this one:
 
 ```markdown
-https://testnets.tableland.network/query?unwrap=true&extract=true&s=SELECT json_object('id', '#' || id, 'image', image, 'image_alpha', image_alpha, 'thumb', thumb, 'thumb_alpha', thumb_alpha) FROM rigs_5_13 WHERE id=1
+https://testnets.tableland.network/query?unwrap=true&extract=true&statement=SELECT json_object('id', '#' || id, 'image', image, 'image_alpha', image_alpha, 'thumb', thumb, 'thumb_alpha', thumb_alpha) FROM rigs_5_13 WHERE id=1
 ```
 
 ...which returns:
@@ -50,7 +50,7 @@ import "@openzeppelin/contracts/token/ERC721/extensions/ERC721URIStorage.sol";
 
 contract Example {
   // The testnet gateway URI plus query parameter
-  string private _baseURIString = "https://testnets.tableland.network/query?unwrap=true&extract=true&s=";
+  string private _baseURIString = "https://testnets.tableland.network/query?unwrap=true&extract=true&statement=";
 
   // The base URI used by tokenURI
   function _baseURI() internal view override returns (string memory) {
@@ -63,7 +63,7 @@ By default, the `tokenURI()` method will take this URI and append the requested 
 
 ```tsx
 tokenURI(1) { return _baseURIString + '/' + 1 }
-// https://testnets.tableland.network/query?unwrap=true&extract=true&s=/1
+// https://testnets.tableland.network/query?unwrap=true&extract=true&statement=/1
 ```
 
 For most uses of Tableland, we’ll want to modify this so that SQL can be used to extract the correct metadata for a specific token.
@@ -124,7 +124,7 @@ import "@tableland/evm/contracts/utils/URITemplate.sol";
 
 contract Example {
   // The testnet gateway URI plus query parameter
-  string private _baseURIString = "https://testnets.tableland.network/query?unwrap=true&extract=true&s=";
+  string private _baseURIString = "https://testnets.tableland.network/query?unwrap=true&extract=true&statement=";
 
   constructor() {
     string private uriTemplate = "SELECT+json_object%28%27id%27%2C+id%2C+%27name%27%2C+name%2C+%27color%27%2C+color%29+FROM+tokenuri_table_1+WHERE+id%3D{id}"

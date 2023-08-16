@@ -73,6 +73,11 @@ const navbar = {
         },
         {
           type: "docSidebar",
+          sidebarId: "localTableland",
+          label: "Local Tableland",
+        },
+        {
+          type: "docSidebar",
           sidebarId: "tutorials",
           label: "Tutorials",
         },
