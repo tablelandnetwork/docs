@@ -68,7 +68,7 @@ See the following for the final product, which includes an NFT collection on Pol
 
 - Repo: [here](https://github.com/tablelandnetwork/two-tables-nft-polygon-tutorial)
 - Listing on OpenSea (Polygon Mumbai testnet): [here](https://testnets.opensea.io/collection/twotablesnft)
-- NFT metadata on Tableland: [here](https://testnets.tableland.network/api/v1/query?mode=list&s=SELECT%20json_object%28%27id%27%2Cid%2C%27name%27%2Cname%2C%27description%27%2Cdescription%2C%27image%27%2Cimage%2C%27attributes%27%2Cjson_group_array%28json_object%28%27trait_type%27%2Ctrait_type%2C%27value%27%2Cvalue%29%29%29%20FROM%20table_nft_main_80001_1510%20JOIN%20table_nft_attributes_80001_1511%20ON%20table_nft_main_80001_1510%2Eid%20%3D%20table_nft_attributes_80001_1511%2Emain_id%20WHERE%20id%3D0%20group%20by%20id)
+- NFT metadata on Tableland: [here](https://testnets.tableland.network/api/v1/query?mode=list&statement=SELECT%20json_object%28%27id%27%2Cid%2C%27name%27%2Cname%2C%27description%27%2Cdescription%2C%27image%27%2Cimage%2C%27attributes%27%2Cjson_group_array%28json_object%28%27trait_type%27%2Ctrait_type%2C%27value%27%2Cvalue%29%29%29%20FROM%20table_nft_main_80001_1510%20JOIN%20table_nft_attributes_80001_1511%20ON%20table_nft_main_80001_1510%2Eid%20%3D%20table_nft_attributes_80001_1511%2Emain_id%20WHERE%20id%3D0%20group%20by%20id)
 - Contract address: `0xDAa7F50C50018D7332da819be275693cA9604178`, verified & viewable on [Polygonscan](https://mumbai.polygonscan.com/address/0xDAa7F50C50018D7332da819be275693cA9604178)
 - Main table creation transaction: [0x2016f295221c235f62d89b44f8d6a51096a58c0a2722e93f2c2133e5471d0737](https://mumbai.polygonscan.com/tx/0x2016f295221c235f62d89b44f8d6a51096a58c0a2722e93f2c2133e5471d0737)
 - Attributes table creation transaction: [0x9f8e874bec740dc1299fe0357a9b093f1938272311948437072de8a2b91c5f04](https://mumbai.polygonscan.com/tx/0x9f8e874bec740dc1299fe0357a9b093f1938272311948437072de8a2b91c5f04)
@@ -507,8 +507,8 @@ import "@openzeppelin/contracts/utils/Strings.sol";
 
 contract TwoTablesNFT is ERC721 {
   /// A URI used to reference off-chain metadata.
-  // This will use the Tableland gateway: https://testnets.tableland.network/query?unwrap=true&extract=true&s=
-  // See the `query?unwrap=true&extract=true&s=` appended -- a SQL query `statement` and mode to format to ERC721 standard
+  // This will use the Tableland gateway: https://testnets.tableland.network/query?unwrap=true&extract=true&statement=
+  // See the `query?unwrap=true&extract=true&statement=` appended -- a SQL query `statement` and mode to format to ERC721 standard
   string public baseURIString;
   /// The name of the main metadata table in Tableland
   // Schema: id int primary key, name text, description text, image text
@@ -539,7 +539,7 @@ contract TwoTablesNFT is ERC721 {
 
 Let’s review the state variables:
 
-- `baseURIString` ⇒ The base URI for our NFTs; this will be the Tableland gateway. Note that it is in the format `https://testnets.tableland.network/query?unwrap=true&extract=true&s=` where appended `query?` allows for SQL read queries (SELECT \* …) and the `unwrap=true&extract=true` formats the response as ERC721 compliant metadata.
+- `baseURIString` ⇒ The base URI for our NFTs; this will be the Tableland gateway. Note that it is in the format `https://testnets.tableland.network/query?unwrap=true&extract=true&statement=` where appended `query?` allows for SQL read queries (SELECT \* …) and the `unwrap=true&extract=true` formats the response as ERC721 compliant metadata.
 - `mainTable` ⇒ This will be the name of the _main_ table that holds all NFT top-level metadata, except for the _attributes_, which will be joined in the `tokenURI` method.
 - `attributesTable` ⇒ For all attributes that are typically an array of objects that have `trait_type` and `value` keys.
 - `_tokenIdCounter` & `_maxTokens` ⇒ A counter for NFT tokenIds and the corresponding max that can be minted.
@@ -820,14 +820,14 @@ And now the tables have some life! The metadata has been written to the tables a
 
 ### Deploying to Polygon
 
-Time for the main event—getting our `TwoTablesNFT` deployed on Polygon to then leverage Tableland for composable metadata! We’ll first start off by defining the base URI to be used by the smart contract and the `tokenURI`. This will be the Tableland gateway with the appended `query` (which enables SQL statements to be appended) and `unwrap=true&extract=true` (formatting as ERC721 compliant): `https://testnets.tableland.network/query?unwrap=true&extract=true&s=`.
+Time for the main event—getting our `TwoTablesNFT` deployed on Polygon to then leverage Tableland for composable metadata! We’ll first start off by defining the base URI to be used by the smart contract and the `tokenURI`. This will be the Tableland gateway with the appended `query` (which enables SQL statements to be appended) and `unwrap=true&extract=true` (formatting as ERC721 compliant): `https://testnets.tableland.network/query?unwrap=true&extract=true&statement=`.
 
 Next, we’ll deploy the smart contract using an `ethers` method called `getContractFactory`, which simply takes the name of the smart contract. Calling the `deploy` method the returned valued from the factory (variable declared as `TwoTablesNFT`) will do just that—deploy the smart contract. The smart contract itself took a few parameters in the constructor—the parameters passed to the deploy function should match with what was defined in the smart contract.
 
 ```tsx title="scripts/deployTwoTables.js"
 // Set the Tableland gateway as the `baseURI` where a `tokenId` will get appended upon `tokenURI` calls
 // Note that `unwrap=true&extract=true` will format the metadata per the ERC721 standard
-const tablelandBaseURI = `https://testnets.tableland.network/query?unwrap=true&extract=true&s=`;
+const tablelandBaseURI = `https://testnets.tableland.network/query?unwrap=true&extract=true&statement=`;
 // Get the contract factory to create an instance of the TwoTablesNFT contract
 const TwoTablesNFT = await ethers.getContractFactory("TwoTablesNFT");
 // Deploy the contract, passing `tablelandBaseURI` in the constructor's `baseURI` and using the Tableland gateway
@@ -894,7 +894,7 @@ And BOOM. Tables have been deployed on Polygon:
 
 - **Contract**: [0xDAa7F50C50018D7332da819be275693cA9604178](https://mumbai.polygonscan.com/address/0xDAa7F50C50018D7332da819be275693cA9604178)
 - **Tableland metadata** (for tokenId `0`):
-  [](https://testnets.tableland.network/query?unwrap=true&extract=true&s=SELECT%20json_object%28%27id%27%2Cid%2C%27name%27%2Cname%2C%27description%27%2Cdescription%2C%27image%27%2Cimage%2C%27attributes%27%2Cjson_group_array%28json_object%28%27trait_type%27%2Ctrait_type%2C%27value%27%2Cvalue%29%29%29%20FROM%20table_nft_main_80001_1510%20JOIN%20table_nft_attributes_80001_1511%20ON%20table_nft_main_80001_1510%2Eid%20%3D%20table_nft_attributes_80001_1511%2Emain_id%20WHERE%20id%3D0%20group%20by%20id)
+  [](https://testnets.tableland.network/query?unwrap=true&extract=true&statement=SELECT%20json_object%28%27id%27%2Cid%2C%27name%27%2Cname%2C%27description%27%2Cdescription%2C%27image%27%2Cimage%2C%27attributes%27%2Cjson_group_array%28json_object%28%27trait_type%27%2Ctrait_type%2C%27value%27%2Cvalue%29%29%29%20FROM%20table_nft_main_80001_1510%20JOIN%20table_nft_attributes_80001_1511%20ON%20table_nft_main_80001_1510%2Eid%20%3D%20table_nft_attributes_80001_1511%2Emain_id%20WHERE%20id%3D0%20group%20by%20id)
 
 If you followed along and performed all of the optional actions and kept the associated logging, the output in the console should have looked something like this:
 
@@ -912,11 +912,11 @@ table_nft_attributes_80001_1511 table: INSERT INTO table_nft_attributes_80001_15
 table_nft_attributes_80001_1511 table: INSERT INTO table_nft_attributes_80001_1511 (main_id, trait_type, value) VALUES (1, 'Role', 'User');
 
 TwoTablesNFT contract deployed on polygon-mumbai at: 0xDAa7F50C50018D7332da819be275693cA9604178
-TwoTablesNFT is using baseURI: https://testnets.tableland.network/query?unwrap=true&extract=true&s=
+TwoTablesNFT is using baseURI: https://testnets.tableland.network/query?unwrap=true&extract=true&statement=
 
 NFT minted: tokenId '0' to owner '0x4D5286d81317E284Cd377cB98b478552Bbe641ae'
 See an example of 'tokenURI' using token '0' here:
-https://testnets.tableland.network/query?unwrap=true&extract=true&s=SELECT%20json_object%28%27id%27%2Cid%2C%27name%27%2Cname%2C%27description%27%2Cdescription%2C%27image%27%2Cimage%2C%27attributes%27%2Cjson_group_array%28json_object%28%27trait_type%27%2Ctrait_type%2C%27value%27%2Cvalue%29%29%29%20FROM%20table_nft_main_80001_1510%20JOIN%20table_nft_attributes_80001_1511%20ON%20table_nft_main_80001_1510%2Eid%20%3D%20table_nft_attributes_80001_1511%2Emain_id%20WHERE%20id%3D0%20group%20by%20id
+https://testnets.tableland.network/query?unwrap=true&extract=true&statement=SELECT%20json_object%28%27id%27%2Cid%2C%27name%27%2Cname%2C%27description%27%2Cdescription%2C%27image%27%2Cimage%2C%27attributes%27%2Cjson_group_array%28json_object%28%27trait_type%27%2Ctrait_type%2C%27value%27%2Cvalue%29%29%29%20FROM%20table_nft_main_80001_1510%20JOIN%20table_nft_attributes_80001_1511%20ON%20table_nft_main_80001_1510%2Eid%20%3D%20table_nft_attributes_80001_1511%2Emain_id%20WHERE%20id%3D0%20group%20by%20id
 
 Verifying contract...
 Nothing to compile

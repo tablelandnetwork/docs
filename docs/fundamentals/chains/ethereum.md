@@ -46,6 +46,7 @@ Because of its security, data can be viewed as more valuable on this chain. A hi
 - Faucet:
   - [https://sepoliafaucet.com/](https://sepoliafaucet.com/)
   - [https://faucet.paradigm.xyz/](https://faucet.paradigm.xyz/)
+  - [https://faucet.chainstack.com/sepolia-faucet](https://faucet.chainstack.com/sepolia-faucet)
 - RPC URL:
   - See [https://chainlist.org/chain/11155111](https://chainlist.org/chain/11155111)
 - Tableland contract address: <ChainInfo chain='sepolia' info='contractAddress' />
