@@ -7,7 +7,7 @@ This page highlights a few examples of how to create a controller contract in So
 
 ### "Allow all" policy
 
-Default ownership grants the owner the following "allow all" abilities to only the owner, but a custom controller could enble this for _anyone_:
+Default ownership grants the owner the following "allow all" abilities to only the owner, but a custom controller could enable this for _anyone_:
 
 - `allowInsert` ⇒ `true`
   Allow `INSERT`s into the table.

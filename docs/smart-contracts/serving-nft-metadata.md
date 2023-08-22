@@ -40,7 +40,7 @@ The current default response mode is designed for row-based responses. To get yo
 
 ### Adding baseURI support
 
-OpenZepplin and other frameworks support setting up a `baseURI` in your smart contract that will become the bases for all token URIs, adding this is simple. You’ll want to add a baseURI that points to the Tableland gateway.
+OpenZeppelin and other frameworks support setting up a `baseURI` in your smart contract that will become the bases for all token URIs, adding this is simple. You’ll want to add a baseURI that points to the Tableland gateway.
 
 ```solidity
 // SPDX-License-Identifier: MIT
@@ -63,7 +63,7 @@ By default, the `tokenURI()` method will take this URI and append the requested 
 
 ```tsx
 tokenURI(1) { return _baseURIString + '/' + 1 }
-// https://testnets.tableland.network/query?unwrap=true&extract=true&statement=/1
+// https://testnets.tableland.network/query?unwrap=true&extract=true&statement=1
 ```
 
 For most uses of Tableland, we’ll want to modify this so that SQL can be used to extract the correct metadata for a specific token.
