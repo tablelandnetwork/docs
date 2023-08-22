@@ -46,3 +46,19 @@ Output:
   ]
 }
 ```
+
+## Using a table alias
+
+If you create a table with a provided JSON file passed to the `--aliases` flag, a full table name (`{prefix}_{chainId}_{tableId}`) is not needed. For example, if you have a file `tableland.aliases.json` with the following:
+
+```json title="./tableland.aliases.json"
+{
+  "example": "example_31337_2"
+}
+```
+
+You can run the info command with the table alias.
+
+```bash
+tableland info example
+```

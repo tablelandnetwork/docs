@@ -59,3 +59,19 @@ Output:
   "confirmations": 0
 }
 ```
+
+## Using a table alias
+
+If you create a table with a provided JSON file passed to the `--aliases` flag, a full table name (`{prefix}_{chainId}_{tableId}`) is not needed. For example, if you have a file `tableland.aliases.json` with the following:
+
+```json title="./tableland.aliases.json"
+{
+  "example": "example_31337_2"
+}
+```
+
+You can run the transfer command with the table alias.
+
+```bash
+tableland transfer example 0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC
+```

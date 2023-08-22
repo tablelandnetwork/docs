@@ -119,3 +119,19 @@ Output:
 ```
 
 This allows you to then access the table by only referring to the ENS name such that the `prefix` is now a subdomain of the ENS name. See the [`namespace`](/cli/namespace) command for more details on how to add tables to ENS.
+
+## Using a table alias
+
+A table alias mapping will automatically be created is the provided JSON filepath, and subsequent queries will use the alias mapping such that the full table name (`{prefix}_{chainId}_{tableId}`) is not needed. For example, if you have a file `tableland.aliases.json`, running the following:
+
+```bash
+tableland create "id integer, message text" --prefix "example" --aliases "./tableland.aliases.json"
+```
+
+Will update `/tableland.aliases.json`:
+
+```json title="./tableland.aliases.json"
+{
+  "example": "example_31337_2"
+}
+```
