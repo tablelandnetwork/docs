@@ -235,8 +235,9 @@ const smartContracts = [
   ...section("Walkthroughs"),
   "smart-contracts/serving-nft-metadata",
   "smart-contracts/row-level-access",
-  "smart-contracts/immutable-table",
+  "smart-contracts/parsing-registry-events",
   "smart-contracts/uri-encoding",
+  "smart-contracts/immutable-table",
   {
     type: "category",
     label: "Example contracts",

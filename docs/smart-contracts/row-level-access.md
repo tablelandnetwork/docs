@@ -1,6 +1,6 @@
 ---
-title: Row-level access
-description: Create a table with row-level access controls.
+title: Row-level access controls
+description: Create a table with row-level guards on who can update specific columns.
 keywords:
   - row-level access
   - controller
