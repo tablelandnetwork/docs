@@ -133,6 +133,7 @@ const sql = [
   "playbooks/sql/functions",
   "playbooks/sql/access-control",
   "playbooks/sql/incrementing-values",
+  "playbooks/sql/alter-table",
   ...section("Walkthroughs"),
   "playbooks/walkthroughs/nft-metadata",
   "playbooks/walkthroughs/key-value",
