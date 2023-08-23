@@ -23,7 +23,7 @@ custom_edit_url: null
 
 #### Defined in
 
-@tableland/sdk/src/helpers/config.ts:24
+@tableland/sdk/src/helpers/config.ts:23
 
 ___
 
@@ -47,4 +47,4 @@ ___
 
 #### Defined in
 
-@tableland/sdk/src/helpers/config.ts:25
+@tableland/sdk/src/helpers/config.ts:24
