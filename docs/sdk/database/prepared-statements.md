@@ -111,4 +111,4 @@ In the example above, the returned object from the `prepare` method is assigned 
 }
 ```
 
-Recall that the `Database` API is compatible with Cloudflare is useful—because it matches the D1Database object, allowing any tools that are compatible with this object to also be compatiable with Tableland’s object as well.
+Recall that the `Database` API is compatible with Cloudflare is useful—because it matches the D1Database object, allowing any tools that are compatible with this object to also be compatible with Tableland’s object as well.

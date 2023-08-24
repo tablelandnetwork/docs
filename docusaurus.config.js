@@ -78,6 +78,7 @@ async function createConfig() {
           outDir: "docs/validator", // The base directory to output to
           documents: ["README.md"], // The file names to download
           performCleanup: false, // Make sure generated file is not deleted on subsequent builds
+          noRuntimeDownloads: true, // Don't download files at runtime (helps avoid infinite loop issue)
           modifyContent(filename, content) {
             if (filename.includes("README")) {
               // Remove all content above `## Background`, which includes the

@@ -1,11 +1,13 @@
 ---
 title: Signers
-sidebar_label: Network configuration
+sidebar_label: Signer & network settings
 description: Access the Tableland network by first connecting to the base chain.
 keywords:
   - read table
   - SQL query
 ---
+
+A `Database` connection requires a `Signer` from the [ethersjs](https://docs.ethers.org/v5/) package. This will provide a means for signing any table creation or mutations transactions sent to the Tableland network, and the connected provider will provide the chain information for the network you are connecting to.
 
 ## Connecting via the browser
 
@@ -48,6 +50,8 @@ const signer = wallet.connect(provider);
 // Connect to the database
 const db = new Database({ signer });
 ```
+
+## Nonce manager
 
 It might be useful to use the `NonceManager` (experimental), which will automatically manage the nonce for you so you can blast the network with as many transactions as you would like.
 
