@@ -23,17 +23,15 @@ function getChainCosts(token: string): number {
   // Hardcoded crypto prices
   const ethPrice = 1600;
   const maticPrice = 1.1;
-  // TODO: Update with static Filecoin price.
-  // const filPrice = 3.0;
+  const filPrice = 3.54;
 
   switch (token) {
     case "ETH":
       return ethPrice;
     case "MATIC":
       return maticPrice;
-    // TODO: Update with static Filecoin price.
-    // case "FIL":
-    //   return filPrice;
+    case "FIL":
+      return filPrice;
     default:
       return 0;
   }
@@ -44,14 +42,9 @@ function chainCostInfo(): ChainCost[] {
   let chains = supportedChains().filter(
     (chain) => chain.location === "mainnet"
   ) as ChainCost[];
-  // TODO: Calculate costs for Filecoin.
-  // TNP: Remove for now since costs are unknown.
-  chains = chains.filter((chain) => {
-    return chain.chainName !== "filecoin";
-  });
   const ethPrice = getChainCosts("ETH");
   const maticPrice = getChainCosts("MATIC");
-  // const filPrice = getChainCosts("FIL");
+  const filPrice = getChainCosts("FIL");
 
   chains.forEach((chain) => {
     switch (chain.chainName) {
@@ -130,9 +123,21 @@ function chainCostInfo(): ChainCost[] {
         chain.writeCostUsd = chain.writeCostCrypto * maticPrice;
         chain.writeCostUsdPerMb = chain.writeCostCryptoPerMb * maticPrice;
         break;
-      // TODO: Update with Filecoin information.
-      // case "filecoin":
-      //   chain.cryptoToken = "FIL";
+      case "filecoin":
+        chain.createSize = 133;
+        chain.cryptoToken = "FIL";
+        chain.createCostCrypto = 0.040647397496115186;
+        chain.createCostCryptoPerMb =
+          chain.createCostCrypto / (chain.createSize / 1000000);
+        chain.createCostUsd = chain.createCostCrypto * filPrice;
+        chain.createCostUsdPerMb = chain.createCostCryptoPerMb * filPrice;
+        chain.writeSize = 193;
+        chain.writeCostCrypto = 0.037353062628881108;
+        chain.writeCostCryptoPerMb =
+          chain.writeCostCrypto / (chain.writeSize / 1000000);
+        chain.writeCostUsd = chain.writeCostCrypto * filPrice;
+        chain.writeCostUsdPerMb = chain.writeCostCryptoPerMb * filPrice;
+        break;
       default:
         break;
     }

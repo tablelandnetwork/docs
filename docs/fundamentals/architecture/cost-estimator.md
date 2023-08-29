@@ -18,8 +18,9 @@ Please be sure to perform your own tests to understand price implications since 
 
 - **ETH price**: <TokenCost token={'ETH'} />
 - **MATIC price**: <TokenCost token={'MATIC'} />
+- **FIL price**: <TokenCost token={'FIL'} />
 
-Note that all chains' native token is ETH, except for Polygon (uses MATIC).
+Note that all chains' native token is ETH, except for Polygon (uses MATIC) and Filecoin (uses FIL).
 
 ## Create costs
 
