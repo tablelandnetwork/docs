@@ -167,7 +167,7 @@ contract RowController is TablelandController, Ownable {
         }
 
         // For all others, we'll let anyone insert but have controls on the update
-        // First, establish WHERE clauses (i.e., where the address it the caller)
+        // First, establish WHERE clauses (i.e., where the address is the caller)
         string[] memory whereClause = new string[](1);
         whereClause[0] = string.concat(
             "address=",
@@ -293,7 +293,7 @@ contract Example is Ownable {
 
 ### Hardhat deployment
 
-To demonstrate how this might look in a Hardhat project, here's an example script that deploys the contract, sets the control, and then does a test insert and update. Note that you can use the Tableland SDK, CLI, or Gateway APIs to check if the table data was mutated correctly.
+To demonstrate how this might look in a Hardhat project, here's an example script that deploys the contract, sets the controller, and then does a test insert and update. Note that you can use the Tableland SDK, CLI, or Gateway APIs to check if the table data was mutated correctly.
 
 ```javascript
 import { ethers } from "hardhat";
