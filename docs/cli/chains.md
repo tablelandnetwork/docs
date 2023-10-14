@@ -7,9 +7,7 @@ keywords:
   - tableland chains
 ---
 
-## chains
-
-`tableland chains`
+## `tableland chains`
 
 List information about supported chains.
 
@@ -23,7 +21,6 @@ tableland chains
 
 ```json
 {
-  "mainnet": {
     "chainName": "mainnet",
     "chainId": 1,
     "contractAddress": "0x012969f7e3439a9B04025b5a049EB9BAD82A8C12",
@@ -59,6 +56,12 @@ tableland chains
     "contractAddress": "0x5c4e6A9e5C1e1BF445A062006faF19EA6c49aFeA",
     "baseUrl": "https://tableland.network/api/v1"
   },
+  "filecoin": {
+    "chainName": "filecoin",
+    "chainId": 314,
+    "contractAddress": "0x59EF8Bf2d6c102B4c42AEf9189e1a9F0ABfD652d",
+    "baseUrl": "https://tableland.network/api/v1"
+  },
   "sepolia": {
     "chainName": "sepolia",
     "chainId": 11155111,
@@ -81,6 +84,12 @@ tableland chains
     "chainName": "maticmum",
     "chainId": 80001,
     "contractAddress": "0x4b48841d4b32C4650E4ABc117A03FE8B51f38F68",
+    "baseUrl": "https://testnets.tableland.network/api/v1"
+  },
+  "filecoin-calibration": {
+    "chainName": "filecoin-calibration",
+    "chainId": 314159,
+    "contractAddress": "0x030BCf3D50cad04c2e57391B12740982A9308621",
     "baseUrl": "https://testnets.tableland.network/api/v1"
   },
   "localhost": {
