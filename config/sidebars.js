@@ -178,6 +178,7 @@ const quickstarts = [
   "quickstarts/cli-quickstart",
   "quickstarts/api-quickstart",
   "quickstarts/local-tableland",
+  "quickstarts/templates",
   ...section("Web app frameworks"),
   "quickstarts/reactjs",
   "quickstarts/wagmi",
