@@ -83,6 +83,17 @@ const FeatureList: FeatureItem[] = [
 
 const BuildList: ProductItem[] = [
   {
+    name: "Studio",
+    icon: <AiOutlineConsoleSql size={20} />,
+    description: (
+      <>
+        Tableland project manage—create teams, projects, & tables via a web app
+      </>
+    ),
+
+    url: "https://console.tableland.xyz/",
+  },
+  {
     name: "SDK",
     icon: <DiJsBadge size={20} />,
     description: (
@@ -147,17 +158,6 @@ const ToolsList: ProductItem[] = [
     ),
 
     url: "/quickstarts/hardhat",
-  },
-  {
-    name: "Console",
-    icon: <AiOutlineConsoleSql size={20} />,
-    description: (
-      <>
-        Tableland network explorer—create, write, and read tables via a web app
-      </>
-    ),
-
-    url: "https://console.tableland.xyz/",
   },
   {
     name: "Wasm parser",

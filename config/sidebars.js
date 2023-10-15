@@ -9,6 +9,7 @@
  - Playbooks (/docs/playbooks)
 
  Develop:
+ - Studio (/studio)
  - Quickstarts (/quickstarts)
  - SDK (/docs/sdk)
  - Smart contracts (/docs/smart-contracts)
@@ -74,9 +75,6 @@ const useCases = {
 const architecture = [
   ...section("Architecture"),
   "fundamentals/architecture/protocol-design",
-  "fundamentals/architecture/table-token",
-  "fundamentals/architecture/limits",
-  "fundamentals/architecture/gateway",
   {
     type: "category",
     label: "Chains",
@@ -93,6 +91,9 @@ const architecture = [
       "fundamentals/chains/local",
     ],
   },
+  "fundamentals/architecture/table-token",
+  "fundamentals/architecture/limits",
+  "fundamentals/architecture/gateway",
   "fundamentals/architecture/query-optimization",
   "fundamentals/architecture/cost-estimator",
 ];
@@ -142,7 +143,29 @@ const sql = [
 ];
 
 // Playbooks (wraps `sql` and `related`)
-const playbooks = [...sidepageHeader("Playbooks"), "playbooks/README", sql];
+const playbooks = [...sidepageHeader("SQL playbooks"), "playbooks/README", sql];
+
+/* STUDIO */
+
+const studio = [
+  ...sidepageHeader("Studio"),
+  "studio/README",
+  ...section("Web app"),
+  "studio/web/getting-started",
+  "studio/web/create-table",
+  "studio/web/import-table",
+  "studio/web/collaborate",
+  ...section("Studio CLI"),
+  "studio/cli/README",
+  "studio/cli/login",
+  "studio/cli/logout",
+  "studio/cli/team",
+  "studio/cli/project",
+  "studio/cli/use",
+  "studio/cli/unuse",
+  "studio/cli/import-table",
+  "studio/cli/import-data",
+];
 
 /* DEVELOP */
 
@@ -274,29 +297,19 @@ const cli = [
   ...sidepageHeader("CLI"),
   ,
   "cli/README",
-  {
-    type: "category",
-    label: "Commands",
-    link: {
-      type: "doc",
-      id: "cli/commands",
-    },
-    items: [
-      "cli/chains",
-      "cli/controller",
-      "cli/create",
-      "cli/info",
-      "cli/init",
-      "cli/list",
-      "cli/namespace",
-      "cli/read",
-      "cli/receipt",
-      "cli/schema",
-      "cli/shell",
-      "cli/transfer",
-      "cli/write",
-    ],
-  },
+  "cli/chains",
+  "cli/controller",
+  "cli/create",
+  "cli/info",
+  "cli/init",
+  "cli/list",
+  "cli/namespace",
+  "cli/read",
+  "cli/receipt",
+  "cli/schema",
+  "cli/shell",
+  "cli/transfer",
+  "cli/write",
   ...section("Reference"),
   "cli/errors",
 ];
@@ -356,10 +369,16 @@ const sidebars = {
     {
       type: "doc",
       id: "playbooks/README",
-      label: "Playbooks",
+      label: "SQL playbooks",
       className: "sidebar-landing",
     },
     ...section("Develop", "landing"),
+    {
+      type: "doc",
+      id: "studio/README",
+      label: "Studio",
+      className: "sidebar-landing",
+    },
     {
       type: "doc",
       id: "quickstarts/README",
@@ -439,6 +458,7 @@ const sidebars = {
   fundamentals,
   playbooks,
   // Develop
+  studio,
   quickstarts,
   sdk,
   smartContracts,

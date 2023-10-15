@@ -110,6 +110,14 @@ const navbar = {
         },
       ],
     },
+    {
+      href: "https://studio.tableland.xyz",
+      label: "Studio",
+      target: "_blank",
+      className: "navbar__external",
+      rel: "noopener noreferrer",
+      position: "right",
+    },
     // If versioned docs are created, show the version dropdown
     // {
     //   type: "docsVersionDropdown",
@@ -119,14 +127,7 @@ const navbar = {
     // {
     //   type: "localeDropdown",
     //   position: "right",
-    // },
-    // This is a custom workaround detailed at:
-    // https://github.com/facebook/docusaurus/issues/7227
-    // It is a SIWE connect button.
-    // {
-    //   type: "custom-ConnectWallet",
-    //   position: "right",
-    // },
+    // }
   ],
 };
 
