@@ -30,6 +30,7 @@ custom_edit_url: null
 - [Result](interfaces/Result.md)
 - [RunSQLParams](interfaces/RunSQLParams.md)
 - [Runnable](interfaces/Runnable.md)
+- [Schema](interfaces/Schema.md)
 - [SetParams](interfaces/SetParams.md)
 - [Table](interfaces/Table.md)
 - [TableFormat](interfaces/TableFormat.md)
@@ -51,6 +52,16 @@ Renames and re-exports [CreateTableParams](interfaces/CreateTableParams.md)
 #### Defined in
 
 @tableland/sdk/src/helpers/binding.ts:90
+
+___
+
+### Column
+
+Ƭ **Column**: `Components`[``"schemas"``][``"Column"``]
+
+#### Defined in
+
+@tableland/sdk/src/validator/tables.ts:18
 
 ___
 

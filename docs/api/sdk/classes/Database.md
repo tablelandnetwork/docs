@@ -111,7 +111,7 @@ Not implemented yet!
 
 #### Defined in
 
-@tableland/sdk/src/database.ts:211
+@tableland/sdk/src/database.ts:218
 
 ___
 
@@ -152,7 +152,7 @@ A single run result.
 
 #### Defined in
 
-@tableland/sdk/src/database.ts:185
+@tableland/sdk/src/database.ts:192
 
 ___
 
