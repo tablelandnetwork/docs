@@ -18,7 +18,7 @@ When you visit the [Studio](https://studio.tableland.xyz/), you'll create a user
 - Further inspect deployment information (table name, chain, transaction hash, etc.) and underlying table data.
 - Create new teams that allow you to add collaborators to underlying projects.
 
-Check out the [Studio web app docs](/studio/web) for more details on how to use the app itself.
+Check out the [Studio web app docs](/studio/web/getting-started) for more details on how to use the app itself.
 
 ## Studio CLI
 

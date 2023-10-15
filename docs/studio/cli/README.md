@@ -7,7 +7,7 @@ keywords:
   - studio
 ---
 
-The `@tableland/studio-cli` package is a developer tool to help you interact with projects created in the [Studio web app](/studio/web). You can:
+The `@tableland/studio-cli` package is a developer tool to help you interact with projects created in the [Studio web app](/studio/web/getting-started). You can:
 
 - Login with the account you signed up for in the Studio.
 - List team and project information.

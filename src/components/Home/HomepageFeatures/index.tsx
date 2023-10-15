@@ -167,11 +167,11 @@ const ToolsList: ProductItem[] = [
     url: "https://github.com/tablelandnetwork/wasm-sqlparser",
   },
   {
-    name: "Starter kit",
+    name: "Starter templates",
     icon: <HiOutlineArrowPath size={20} />,
-    description: <>Use a template for building TypeScript applications</>,
+    description: <>Use quickstart templates for building applications</>,
 
-    url: "https://github.com/tablelandnetwork/js-template",
+    url: "/quickstarts/templates",
   },
 ];
 
