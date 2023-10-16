@@ -20,9 +20,9 @@ Use these commands to interact with your Studio projects, including listing proj
 
 You must also include the project ID for which the table is imported into (it's the same as the argument defined above).
 
-| Option  | Type     | Default | Description            |
-| ------- | -------- | ------- | ---------------------- |
-| `--pid` | `string` | --      | The unique project ID. |
+| Option                 | Type     | Default | Description            |
+| ---------------------- | -------- | ------- | ---------------------- |
+| `--projectId`, `--pid` | `string` | --      | The unique project ID. |
 
 ## Example
 

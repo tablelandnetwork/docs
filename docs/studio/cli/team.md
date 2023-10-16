@@ -19,30 +19,6 @@ List all of your teams and underlying projects tied to your Studio account, opti
 | -------------- | -------- | ------- | ----------------------------------- |
 | `[identifier]` | `string` | --      | (Optional) the team's ID, if known. |
 
-### `create <name> [personalTeamId]`
-
-Create a new team by defining the new name.
-
-| Argument | Type     | Description      |
-| -------- | -------- | ---------------- |
-| `<name>` | `string` | The team's name. |
-
-Optionally, you can pass a personal team ID flag or invite users to the team after creation.
-
-| Option             | Type     | Default | Description                                                     |
-| ------------------ | -------- | ------- | --------------------------------------------------------------- |
-| `--personalTeamId` | `string` | --      | The personal unique team ID (via the `studio team ls` command). |
-| `--invites`        | `string` | --      | Comma separated list of emails to be invited to the team.       |
-
-### `add [team] [user]`
-
-Add a user to a specified team.
-
-| Option   | Type     | Default | Description                                              |
-| -------- | -------- | ------- | -------------------------------------------------------- |
-| `--team` | `string` | --      | The unique team name (via the `studio team ls` command). |
-| `--user` | `string` | --      | The user to add to the team.                             |
-
 ## Examples
 
 ### `ls`
@@ -80,21 +56,3 @@ The output might resemble the snippet below. Note the distinction between person
 ```
 
 This example shows there is a personal team with a `starter` project, and a non-personal team called `collabs` with no projects.
-
-### `create`
-
-```bash
-studio team create new_team_name
-```
-
-This will log some additional information before the new team is available for use. If you then use the `ls` command or check back in the Studio web app, you'll now see this new team has been created.
-
-### `add`
-
-Within a team, you can add a user to the team for collaboration purposes—this example is adding a user to a team called "collabs":
-
-```bash
-studio team add --team collabs --user example@example.com
-```
-
-An output message will log additional context before making the user available as a collaborator on the team.

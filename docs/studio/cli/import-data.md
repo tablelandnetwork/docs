@@ -7,18 +7,18 @@ keywords:
   - studio
 ---
 
-## `studio import-data <table> <file>`
+## `studio import-data <table> <file> [projectId]`
 
 | Argument  | Type     | Default | Description                    |
 | --------- | -------- | ------- | ------------------------------ |
 | `<table>` | `string` | --      | The Studio-defined table name. |
 | `<file>`  | `string` | --      | Path to the CSV file.          |
 
-You must also include the project ID the table is a part of.
+You **must** also include the project ID the table is a part of.
 
-| Option  | Type     | Default | Description            |
-| ------- | -------- | ------- | ---------------------- |
-| `--pid` | `string` | --      | The unique project ID. |
+| Option                 | Type     | Default | Description            |
+| ---------------------- | -------- | ------- | ---------------------- |
+| `--projectId`, `--pid` | `string` | --      | The unique project ID. |
 
 ## Example
 

@@ -59,16 +59,12 @@ You can see all of these commands available by either running the `help` command
 `studio team <subcommand>`: Manage your studio teams.
 
 - `ls [identifier]`: Get a list of your teams, or get the teams for a default team ID.
-- `create <name> `: Create a team with the given name.
-- `add [team] [user]`: Add user to a team.
 
 ### Project
 
 `studio project <subcommand>`: Manage your studio projects.
 
 - `ls [team_id]`: List the projects for the given ID, or if no id is given, use the default context.
-- `create <name> <description>`: Create a team with the given name and description.
-- `add [team] [user]`: Add user to a team.
 
 ### Use
 
@@ -135,7 +131,7 @@ Local (for development mode only)
 
 ### Project ID
 
-`--projectId, --pid <project_id>`: Project ID the command is scoped to. Defaults to an empty string.
+`--pid, --projectId <project_id>`: Project ID the command is scoped to. Defaults to an empty string.
 
 ### API URL
 
