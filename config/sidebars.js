@@ -164,7 +164,7 @@ const studio = [
   "studio/cli/use",
   "studio/cli/unuse",
   "studio/cli/import-table",
-  "studio/cli/import-data",
+  // "studio/cli/import-data",
 ];
 
 /* DEVELOP */

@@ -78,10 +78,6 @@ You can see all of these commands available by either running the `help` command
 
 `studio import-table <table> <project> <description> [name]`: Import an existing Tableland table into a project with description and (optionally) with a new name/alias, defined only in the Studio.
 
-### Import data
-
-`studio import-data <table> <file>`: Write the content of a CSV file into an existing table, using the Studio-defined table name/alias.
-
 ## Global flags
 
 The Tableland CLI includes a number of global flags.
