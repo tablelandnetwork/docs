@@ -48,7 +48,6 @@ contract Lock is ERC721Holder {
   string private constant _TABLE_PREFIX = "my_hardhat_table";
   // highlight-end
 }
-
 ```
 
 ## 2. Create & insert to a table

@@ -6,7 +6,7 @@ keywords:
   - schema
 ---
 
-If you create a table and later want to change its structure, this is possible but with a couple of limitations. Developers can take advantage of the `ALTER TABLE` statement but only to add additional columns; you **cannot** remove or change types/name definitions for existing columns.
+If you create a table and later want to change its structure, this is possible but with a couple of limitations. Developers can take advantage of the `ALTER TABLE` statement but only for adding additional columns, renaming an existing one, or dropping a column. You **cannot** remove or change type definitions for existing columns nor rename the table itself, and a column with a `PRIMARY KEY` constraint cannot be dropped.
 
 ## Overview
 

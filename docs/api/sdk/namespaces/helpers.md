@@ -9,9 +9,11 @@ custom_edit_url: null
 ## Classes
 
 - [Signer](../classes/helpers.Signer.md)
+- [TableEventBus](../classes/helpers.TableEventBus.md)
 
 ## Interfaces
 
+- [AliasesNameMap](../interfaces/helpers.AliasesNameMap.md)
 - [AutoWaitConfig](../interfaces/helpers.AutoWaitConfig.md)
 - [ChainInfo](../interfaces/helpers.ChainInfo.md)
 - [ContractReceipt](../interfaces/helpers.ContractReceipt.md)
@@ -43,7 +45,7 @@ ___
 
 #### Defined in
 
-@tableland/sdk/src/helpers/config.ts:17
+@tableland/sdk/src/helpers/config.ts:20
 
 ___
 
@@ -54,6 +56,16 @@ ___
 #### Defined in
 
 @tableland/sdk/src/helpers/ethers.ts:11
+
+___
+
+### NameMapping
+
+Ƭ **NameMapping**: `Record`<`string`, `string`\>
+
+#### Defined in
+
+@tableland/sdk/src/helpers/config.ts:22
 
 ___
 
@@ -129,7 +141,7 @@ The set of chains and their information as supported by the Tableland network.
 
 #### Defined in
 
-@tableland/sdk/src/helpers/config.ts:19
+@tableland/sdk/src/helpers/config.ts:29
 
 ___
 
@@ -150,7 +162,7 @@ ___
 
 #### Defined in
 
-@tableland/sdk/src/helpers/config.ts:30
+@tableland/sdk/src/helpers/config.ts:40
 
 ___
 
@@ -170,7 +182,7 @@ ___
 
 #### Defined in
 
-@tableland/sdk/src/helpers/config.ts:59
+@tableland/sdk/src/helpers/config.ts:69
 
 ___
 
@@ -191,7 +203,7 @@ ___
 
 #### Defined in
 
-@tableland/sdk/src/helpers/config.ts:49
+@tableland/sdk/src/helpers/config.ts:59
 
 ___
 
@@ -291,6 +303,32 @@ A hex string representing the default address for the Tableland registry contrac
 
 ___
 
+### getContractReceipt
+
+▸ **getContractReceipt**(`tx`): `Promise`<[`MultiEventTransactionReceipt`](../interfaces/helpers.MultiEventTransactionReceipt.md)\>
+
+Given a transaction, this helper will return the tableIds that were part of the transaction.
+Especially useful for transactions that create new tables because you need the tableId to
+calculate the full table name.
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `tx` | [`ContractTransaction`](../interfaces/helpers.ContractTransaction.md) |
+
+#### Returns
+
+`Promise`<[`MultiEventTransactionReceipt`](../interfaces/helpers.MultiEventTransactionReceipt.md)\>
+
+tableland receipt
+
+#### Defined in
+
+@tableland/sdk/src/helpers/ethers.ts:75
+
+___
+
 ### getDefaultProvider
 
 ▸ **getDefaultProvider**(`network?`, `options?`): `BaseProvider`
@@ -360,15 +398,36 @@ ___
 
 ___
 
+### jsonFileAliases
+
+▸ **jsonFileAliases**(`filepath`): [`AliasesNameMap`](../interfaces/helpers.AliasesNameMap.md)
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `filepath` | `string` |
+
+#### Returns
+
+[`AliasesNameMap`](../interfaces/helpers.AliasesNameMap.md)
+
+#### Defined in
+
+@tableland/sdk/src/helpers/config.ts:106
+
+___
+
 ### normalize
 
-▸ **normalize**(`sql`): `Promise`<[`NormalizedStatement`](helpers.md#normalizedstatement)\>
+▸ **normalize**(`sql`, `nameMap?`): `Promise`<[`NormalizedStatement`](helpers.md#normalizedstatement)\>
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
 | `sql` | `string` |
+| `nameMap?` | [`NameMapping`](helpers.md#namemapping) |
 
 #### Returns
 
@@ -376,7 +435,7 @@ ___
 
 #### Defined in
 
-@tableland/sdk/src/helpers/parser.ts:12
+@tableland/sdk/src/helpers/parser.ts:13
 
 ___
 
@@ -405,6 +464,26 @@ void
 
 ___
 
+### prepReadConfig
+
+▸ **prepReadConfig**(`config`): `FetchConfig`
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `config` | `Partial`<[`ReadConfig`](../interfaces/helpers.ReadConfig.md)\> |
+
+#### Returns
+
+`FetchConfig`
+
+#### Defined in
+
+@tableland/sdk/src/helpers/config.ts:119
+
+___
+
 ### validateTableName
 
 ▸ **validateTableName**(`tableName`, `isCreate?`): `Promise`<`ValidatedTable`\>
@@ -422,4 +501,4 @@ ___
 
 #### Defined in
 
-@tableland/sdk/src/helpers/parser.ts:23
+@tableland/sdk/src/helpers/parser.ts:27

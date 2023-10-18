@@ -109,7 +109,7 @@ ___
 
 #### Defined in
 
-@tableland/sdk/src/statement.ts:113
+@tableland/sdk/src/statement.ts:133
 
 ___
 
@@ -139,7 +139,7 @@ Executes a query and returns all rows and metadata.
 
 #### Defined in
 
-@tableland/sdk/src/statement.ts:125
+@tableland/sdk/src/statement.ts:145
 
 ▸ **all**<`T`, `K`\>(`colName`, `opts?`): `Promise`<[`Result`](../interfaces/Result.md)<`T`[`K`]\>\>
 
@@ -163,7 +163,7 @@ Executes a query and returns all rows and metadata.
 
 #### Defined in
 
-@tableland/sdk/src/statement.ts:129
+@tableland/sdk/src/statement.ts:149
 
 ___
 
@@ -221,7 +221,7 @@ rows, then first() will return null.
 
 #### Defined in
 
-@tableland/sdk/src/statement.ts:177
+@tableland/sdk/src/statement.ts:197
 
 ▸ **first**<`T`, `K`\>(`colName`, `opts?`): `Promise`<`T`\>
 
@@ -245,7 +245,7 @@ rows, then first() will return null.
 
 #### Defined in
 
-@tableland/sdk/src/statement.ts:179
+@tableland/sdk/src/statement.ts:199
 
 ▸ **first**<`T`, `K`\>(`colName`, `opts?`): `Promise`<``null`` \| `T`[`K`]\>
 
@@ -269,7 +269,7 @@ rows, then first() will return null.
 
 #### Defined in
 
-@tableland/sdk/src/statement.ts:183
+@tableland/sdk/src/statement.ts:203
 
 ___
 
@@ -299,7 +299,7 @@ An array of raw query results.
 
 #### Defined in
 
-@tableland/sdk/src/statement.ts:259
+@tableland/sdk/src/statement.ts:279
 
 ___
 
@@ -325,7 +325,7 @@ A results object with metadata only (results are null or an empty array).
 
 #### Defined in
 
-@tableland/sdk/src/statement.ts:228
+@tableland/sdk/src/statement.ts:248
 
 ___
 

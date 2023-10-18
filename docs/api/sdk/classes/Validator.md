@@ -24,7 +24,7 @@ Create a Validator instance with the specified connection configuration.
 
 #### Defined in
 
-@tableland/sdk/src/validator/index.ts:45
+@tableland/sdk/src/validator/index.ts:53
 
 ## Properties
 
@@ -34,7 +34,7 @@ Create a Validator instance with the specified connection configuration.
 
 #### Defined in
 
-@tableland/sdk/src/validator/index.ts:38
+@tableland/sdk/src/validator/index.ts:46
 
 ## Methods
 
@@ -63,7 +63,7 @@ Returns information about a single table, including schema information
 
 #### Defined in
 
-@tableland/sdk/src/validator/index.ts:83
+@tableland/sdk/src/validator/index.ts:91
 
 ___
 
@@ -89,7 +89,7 @@ Returns OK if the validator considers itself healthy
 
 #### Defined in
 
-@tableland/sdk/src/validator/index.ts:67
+@tableland/sdk/src/validator/index.ts:75
 
 ___
 
@@ -118,7 +118,7 @@ Polls for the status of a given transaction receipt by hash until
 
 #### Defined in
 
-@tableland/sdk/src/validator/index.ts:127
+@tableland/sdk/src/validator/index.ts:135
 
 ___
 
@@ -151,7 +151,7 @@ Returns the results of a SQL read query against the Tabeland network
 
 #### Defined in
 
-@tableland/sdk/src/validator/index.ts:97
+@tableland/sdk/src/validator/index.ts:105
 
 ▸ **queryByStatement**<`T`\>(`params`, `opts?`): `Promise`<[`TableFormat`](../interfaces/TableFormat.md)<`T`\>\>
 
@@ -174,7 +174,7 @@ Returns the results of a SQL read query against the Tabeland network
 
 #### Defined in
 
-@tableland/sdk/src/validator/index.ts:101
+@tableland/sdk/src/validator/index.ts:109
 
 ___
 
@@ -203,7 +203,7 @@ Returns the status of a given transaction receipt by hash
 
 #### Defined in
 
-@tableland/sdk/src/validator/index.ts:116
+@tableland/sdk/src/validator/index.ts:124
 
 ___
 
@@ -229,7 +229,7 @@ Returns version information about the validator daemon
 
 #### Defined in
 
-@tableland/sdk/src/validator/index.ts:75
+@tableland/sdk/src/validator/index.ts:83
 
 ___
 
@@ -253,4 +253,4 @@ A Validator with a default baseUrl.
 
 #### Defined in
 
-@tableland/sdk/src/validator/index.ts:58
+@tableland/sdk/src/validator/index.ts:66

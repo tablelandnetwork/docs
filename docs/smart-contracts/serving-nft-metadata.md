@@ -11,7 +11,7 @@ keywords:
 Now that you have data stored as tables, you’ll need to serve it as metadata JSON so that marketplaces, wallets, and platforms can all pick it up for display. In short, you want to take a URL like this one:
 
 ```markdown
-https://testnets.tableland.network/query?unwrap=true&extract=true&statement=SELECT json_object('id', '#' || id, 'image', image, 'image_alpha', image_alpha, 'thumb', thumb, 'thumb_alpha', thumb_alpha) FROM rigs_5_13 WHERE id=1
+https://testnets.tableland.network/api/v1/query?unwrap=true&extract=true&statement=SELECT json_object('id', '#' || id, 'image', image, 'image_alpha', image_alpha, 'thumb', thumb, 'thumb_alpha', thumb_alpha) FROM rigs_5_13 WHERE id=1
 ```
 
 ...which returns:
@@ -48,9 +48,9 @@ pragma solidity ^0.8.12;
 
 import "@openzeppelin/contracts/token/ERC721/extensions/ERC721URIStorage.sol";
 
-contract Example {
+contract Example is ERC721URIStorage {
   // The testnet gateway URI plus query parameter
-  string private _baseURIString = "https://testnets.tableland.network/query?unwrap=true&extract=true&statement=";
+  string private _baseURIString = "https://testnets.tableland.network/api/v1/query?unwrap=true&extract=true&statement=";
 
   // The base URI used by tokenURI
   function _baseURI() internal view override returns (string memory) {
@@ -62,8 +62,8 @@ contract Example {
 By default, the `tokenURI()` method will take this URI and append the requested tokenId to get a final URI for the token’s metadata. So the following example shows the default implementation giving us the wrong result.
 
 ```tsx
-tokenURI(1) { return _baseURIString + '/' + 1 }
-// https://testnets.tableland.network/query?unwrap=true&extract=true&statement=1
+tokenURI(1) { return _baseURIString + '/api/v1/' + 1 }
+// https://testnets.tableland.network/api/v1/query?unwrap=true&extract=true&statement=1
 ```
 
 For most uses of Tableland, we’ll want to modify this so that SQL can be used to extract the correct metadata for a specific token.
@@ -86,7 +86,7 @@ To get the right row for any of our sample data to the `tokenURI` call, we’ll 
 
 ```solidity
 tokenURI(1) =>
-// SELECT+json_object%28%27id%27%2C+id%2C+%27name%27%2C+name%2C+%27color%27%2C+color%29+FROM+tokenuri_table_1+WHERE+id%3D1
+// SELECT+json_object%28%27id%27%2C+id%2C+%27name%27%2C+name%2C+%27color%27%2C+color%29+FROM+tokenuri_table_31337_2+WHERE+id%3D1
 ```
 
 #### URL encoding SQL template
@@ -100,18 +100,18 @@ SELECT json_object('id', id, 'name', name, 'color', color) FROM tokenuri_table_1
 Encoded, it’s now
 
 ```html
-SELECT+json_object%28%27id%27%2C+id%2C+%27name%27%2C+name%2C+%27color%27%2C+color%29+FROM+tokenuri_table_1+WHERE+id%3D
+SELECT+json_object%28%27id%27%2C+id%2C+%27name%27%2C+name%2C+%27color%27%2C+color%29+FROM+tokenuri_table_31337_2+WHERE+id%3D
 ```
 
 Finally, we add the templating string `{id}` back where it was
 
 ```html
-SELECT+json_object%28%27id%27%2C+id%2C+%27name%27%2C+name%2C+%27color%27%2C+color%29+FROM+tokenuri_table_1+WHERE+id%3D{id}
+SELECT+json_object%28%27id%27%2C+id%2C+%27name%27%2C+name%2C+%27color%27%2C+color%29+FROM+tokenuri_table_31337_2+WHERE+id%3D{id}
 ```
 
 ## String templating and SQL in tokenURI
 
-Additionally, the client will expect the resulting URI string to be nicely URL encoded. Tableland provides a couple of simple utiliities to make this work nicely for you. The main one we’ll want to use here is a URITemplate function that will replace the `{id}` template in a string with a supplied value for ID on the fly. With that, we can replace the `tokenURI()` default method with one that uses the templating to create a SQL read command on the fly.
+Additionally, the client will expect the resulting URI string to be nicely URL encoded. Tableland provides a couple of simple utilities to make this work nicely for you. The main one we’ll want to use here is a URITemplate function that will replace the `{id}` template in a string with a supplied value for ID on the fly. With that, we can replace the `tokenURI()` default method with one that uses the templating to create a SQL read command on the fly.
 
 Let’s look at an updated ERC-721 contract written with OpenZeppelin’s contracts.
 
@@ -122,12 +122,12 @@ pragma solidity ^0.8.12;
 import "@openzeppelin/contracts/token/ERC721/extensions/ERC721URIStorage.sol";
 import "@tableland/evm/contracts/utils/URITemplate.sol";
 
-contract Example {
+contract Example is ERC721URIStorage, URITemplate {
   // The testnet gateway URI plus query parameter
-  string private _baseURIString = "https://testnets.tableland.network/query?unwrap=true&extract=true&statement=";
+  string private _baseURIString = "https://testnets.tableland.network/api/v1/query?unwrap=true&extract=true&statement=";
 
   constructor() {
-    string private uriTemplate = "SELECT+json_object%28%27id%27%2C+id%2C+%27name%27%2C+name%2C+%27color%27%2C+color%29+FROM+tokenuri_table_1+WHERE+id%3D{id}"
+    string private uriTemplate = "SELECT+json_object%28%27id%27%2C+id%2C+%27name%27%2C+name%2C+%27color%27%2C+color%29+FROM+tokenuri_table_31337_2+WHERE+id%3D{id}"
 		setURITemplate(uriTemplate);
   }
 
@@ -174,9 +174,9 @@ In an ERC-1155, you can store your template and return it! Here's how.
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.12;
 
-contract Example {
+contract Example is URITemplate {
 
-  string private _uriTemplate = "SELECT+json_object%28%27id%27%2C+id%2C+%27name%27%2C+name%2C+%27color%27%2C+color%29+FROM+tokenuri_table_1+WHERE+id%3D{id}"
+  string private _uriTemplate = "SELECT+json_object%28%27id%27%2C+id%2C+%27name%27%2C+name%2C+%27color%27%2C+color%29+FROM+tokenuri_table_31337_2+WHERE+id%3D{id}"
 
   function uri(uint256 _id) external view returns (string memory) {
 		return _uriTemplate;

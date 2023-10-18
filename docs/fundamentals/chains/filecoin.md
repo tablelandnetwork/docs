@@ -41,6 +41,10 @@ From the time an on-chain SQL transaction is submitted until it is materialized 
 - SDK network name: <ChainInfo chain='filecoin' info='chainName' />
 - Tableland gateway: <ChainInfo chain='filecoin' info='baseUrl' />
 
+:::tip
+To get FIL into an EVM wallet (e.g., MetaMask), you'll have to buy FIL on an exchange and send it to an f1 address on the Filecoin network. You can use [Glif.io](https://www.glif.io/) to do this, but there's a bit of nuance to the process; you have to create a burner f1 wallet first and then transfer the FIL to the EVM wallet—an f4 address type. See an overview [here](https://www.youtube.com/watch?v=Skim_qHnmjE) for how to do this.
+:::
+
 ### Filecoin Calibration (testnet)
 
 - Average block time: 30s

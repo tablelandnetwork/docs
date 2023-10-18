@@ -70,7 +70,7 @@ ___
 
 ### schema
 
-• **schema**: `Schema`
+• **schema**: [`Schema`](Schema.md)
 
 #### Inherited from
 

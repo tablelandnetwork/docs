@@ -1,7 +1,6 @@
 ---
-title: CLI Shell command
-sidebar_label: Commands
-description: The Tableland CLI comes with purpose built commands, which slightly differs from the convention in other clients.
+title: Shell
+description: Open up a shell environment and run raw SQL statements for ease of use.
 keywords:
   - cli
   - command line
