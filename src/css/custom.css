@@ -547,10 +547,7 @@ html[data-theme="dark"] .navbar__link--active,
 
 .sidebar-landing .menu__link {
   font-size: var(--ifm-h5-font-size);
-  /* background-color: transparent; */
   color: var(--ifm-heading-color);
-  margin-top: 7px;
-  margin-bottom: 7px;
   font-weight: var(--ifm-font-weight-semibold);
 }
 
@@ -563,7 +560,13 @@ html[data-theme="dark"] .navbar__link--active,
   color: var(--ifm-color-primary);
 }
 
-.sidebar-footer a svg {
+.navbar__external {
+  display: flex;
+  align-items: center;
+}
+
+.sidebar-footer a svg,
+.navbar__external svg {
   width: 11px !important;
 }
 
