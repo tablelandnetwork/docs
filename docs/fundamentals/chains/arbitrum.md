@@ -28,7 +28,7 @@ Thus, you can imagine how high volume applications can take advantage of both th
 ### Goerli (testnet)
 
 - Average block time: 2 seconds
-- Chain ID: <ChainInfo chain='arbitrum-goerli' info='chainId' />
+- Chain ID: <ChainInfo chain='arbitrum-sepolia' info='chainId' />
 - Symbol: ETH
 - Status Dashboard:
   - N/A
@@ -42,9 +42,9 @@ Thus, you can imagine how high volume applications can take advantage of both th
   - [https://bridge.arbitrum.io/](https://bridge.arbitrum.io/)
 - RPC URL:
   - See [https://chainlist.org/chain/421613](https://chainlist.org/chain/421613)
-- Tableland contract address: <ChainInfo chain='arbitrum-goerli' info='contractAddress' />
-- SDK network name: <ChainInfo chain='arbitrum-goerli' info='chainName' />
-- Tableland gateway: <ChainInfo chain='arbitrum-goerli' info='baseUrl' />
+- Tableland contract address: <ChainInfo chain='arbitrum-sepolia' info='contractAddress' />
+- SDK network name: <ChainInfo chain='arbitrum-sepolia' info='chainName' />
+- Tableland gateway: <ChainInfo chain='arbitrum-sepolia' info='baseUrl' />
 
 ### Arbitrum One (mainnet)
 

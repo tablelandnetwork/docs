@@ -75,9 +75,9 @@ tableland chains
     "baseUrl": "https://testnets.tableland.network/api/v1"
   },
   "arbitrum-goerli": {
-    "chainName": "arbitrum-goerli",
-    "chainId": 421613,
-    "contractAddress": "0x033f69e8d119205089Ab15D340F5b797732f646b",
+    "chainName": "arbitrum-sepolia",
+    "chainId": 421614,
+    "contractAddress": "0x223A74B8323914afDC3ff1e5005564dC17231d6e",
     "baseUrl": "https://testnets.tableland.network/api/v1"
   },
   "maticmum": {
