@@ -104,7 +104,7 @@ There are two prerequisites for running a validator:
 Tableland has two separate networks:
 
 - `mainnet`: this network syncs mainnet EVM chains (e.g., Ethereum mainnet, Arbitrum mainnet, etc.).
-- `testnet`: this network is syncing testnet EVM chains (e.g., Ethereum Sepolia, Arbitrum Goerli, etc.).
+- `testnet`: this network is syncing testnet EVM chains (e.g., Ethereum Sepolia, Arbitrum Sepolia, etc.).
 
 This guide will focus on running the validator in the `mainnet` network.
 
