@@ -45,7 +45,7 @@ any runtime errors occur.
 
 #### Defined in
 
-@tableland/sdk/src/statement.ts:52
+@tableland/sdk/src/statement.ts:62
 
 ## Properties
 
@@ -55,7 +55,7 @@ any runtime errors occur.
 
 #### Defined in
 
-@tableland/sdk/src/statement.ts:48
+@tableland/sdk/src/statement.ts:58
 
 ___
 
@@ -65,7 +65,7 @@ ___
 
 #### Defined in
 
-@tableland/sdk/src/statement.ts:50
+@tableland/sdk/src/statement.ts:60
 
 ___
 
@@ -75,9 +75,29 @@ ___
 
 #### Defined in
 
-@tableland/sdk/src/statement.ts:49
+@tableland/sdk/src/statement.ts:59
 
 ## Methods
+
+### #checkIsValidOpts
+
+▸ `Private` **#checkIsValidOpts**(`opts`): opts is Options
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `opts` | `any` |
+
+#### Returns
+
+opts is Options
+
+#### Defined in
+
+@tableland/sdk/src/statement.ts:185
+
+___
 
 ### #parseAndExtract
 
@@ -89,19 +109,20 @@ ___
 
 #### Defined in
 
-@tableland/sdk/src/statement.ts:102
+@tableland/sdk/src/statement.ts:112
 
 ___
 
 ### #waitExec
 
-▸ `Private` **#waitExec**(`params`): `Promise`<[`WaitableTransactionReceipt`](../modules.md#waitabletransactionreceipt)\>
+▸ `Private` **#waitExec**(`params`, `controller?`): `Promise`<[`WaitableTransactionReceipt`](../modules.md#waitabletransactionreceipt)\>
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
 | `params` | `ExtractedStatement` |
+| `controller?` | [`PollingController`](../namespaces/helpers.md#pollingcontroller) |
 
 #### Returns
 
@@ -109,13 +130,13 @@ ___
 
 #### Defined in
 
-@tableland/sdk/src/statement.ts:133
+@tableland/sdk/src/statement.ts:143
 
 ___
 
 ### all
 
-▸ **all**<`T`, `K`\>(`colName?`, `opts?`): `Promise`<[`Result`](../interfaces/Result.md)<`T`\>\>
+▸ **all**<`T`\>(`opts?`): `Promise`<[`Result`](../interfaces/Result.md)<`T`\>\>
 
 Executes a query and returns all rows and metadata.
 
@@ -123,15 +144,13 @@ Executes a query and returns all rows and metadata.
 
 | Name | Type |
 | :------ | :------ |
-| `T` | `S` |
-| `K` | extends `string` \| `number` \| `symbol` = keyof `T` |
+| `T` | `Record`<`string`, `S`\> |
 
 #### Parameters
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `colName?` | `undefined` | If provided, filter results to the provided column. |
-| `opts?` | [`SignalAndInterval`](../namespaces/helpers.md#signalandinterval) | Additional options to control execution. |
+| `opts` | [`Options`](../interfaces/Options.md) | An optional object used to control behavior, see [Options](../interfaces/Options.md) |
 
 #### Returns
 
@@ -139,31 +158,7 @@ Executes a query and returns all rows and metadata.
 
 #### Defined in
 
-@tableland/sdk/src/statement.ts:145
-
-▸ **all**<`T`, `K`\>(`colName`, `opts?`): `Promise`<[`Result`](../interfaces/Result.md)<`T`[`K`]\>\>
-
-#### Type parameters
-
-| Name | Type |
-| :------ | :------ |
-| `T` | `S` |
-| `K` | extends `string` \| `number` \| `symbol` = keyof `T` |
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `colName` | `K` |
-| `opts?` | [`SignalAndInterval`](../namespaces/helpers.md#signalandinterval) |
-
-#### Returns
-
-`Promise`<[`Result`](../interfaces/Result.md)<`T`[`K`]\>\>
-
-#### Defined in
-
-@tableland/sdk/src/statement.ts:149
+@tableland/sdk/src/statement.ts:158
 
 ___
 
@@ -195,13 +190,13 @@ A new bound Statement.
 
 #### Defined in
 
-@tableland/sdk/src/statement.ts:73
+@tableland/sdk/src/statement.ts:83
 
 ___
 
 ### first
 
-▸ **first**<`T`, `K`\>(): `Promise`<`T`\>
+▸ **first**<`T`\>(`opts?`): `Promise`<``null`` \| `T`\>
 
 Executes a query and returns the first row of the results.
 This does not return metadata like the other methods.
@@ -212,12 +207,17 @@ rows, then first() will return null.
 
 | Name | Type |
 | :------ | :------ |
-| `T` | `S` |
-| `K` | extends `string` \| `number` \| `symbol` = keyof `T` |
+| `T` | `Record`<`string`, `S`\> |
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `opts?` | [`Options`](../interfaces/Options.md) | An optional object used to control behavior, see [Options](../interfaces/Options.md) |
 
 #### Returns
 
-`Promise`<`T`\>
+`Promise`<``null`` \| `T`\>
 
 #### Defined in
 
@@ -230,14 +230,14 @@ rows, then first() will return null.
 | Name | Type |
 | :------ | :------ |
 | `T` | `S` |
-| `K` | extends `string` \| `number` \| `symbol` = keyof `T` |
+| `K` | extends `string` = keyof `T` & `string` |
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
 | `colName` | `undefined` |
-| `opts?` | [`SignalAndInterval`](../namespaces/helpers.md#signalandinterval) |
+| `opts?` | [`Options`](../interfaces/Options.md) |
 
 #### Returns
 
@@ -254,14 +254,14 @@ rows, then first() will return null.
 | Name | Type |
 | :------ | :------ |
 | `T` | `S` |
-| `K` | extends `string` \| `number` \| `symbol` = keyof `T` |
+| `K` | extends `string` = keyof `T` & `string` |
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
 | `colName` | `K` |
-| `opts?` | [`SignalAndInterval`](../namespaces/helpers.md#signalandinterval) |
+| `opts?` | [`Options`](../interfaces/Options.md) |
 
 #### Returns
 
@@ -289,7 +289,7 @@ Same as stmt.all(), but returns an array of rows instead of objects.
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `opts` | [`SignalAndInterval`](../namespaces/helpers.md#signalandinterval) | Additional options to control execution. |
+| `opts` | [`Options`](../interfaces/Options.md) | An optional object used to control behavior, see [Options](../interfaces/Options.md) |
 
 #### Returns
 
@@ -299,33 +299,39 @@ An array of raw query results.
 
 #### Defined in
 
-@tableland/sdk/src/statement.ts:279
+@tableland/sdk/src/statement.ts:286
 
 ___
 
 ### run
 
-▸ **run**(`opts?`): `Promise`<[`Result`](../interfaces/Result.md)<`never`\>\>
+▸ **run**<`T`\>(`opts?`): `Promise`<[`Result`](../interfaces/Result.md)<`T`\>\>
 
 Runs the query/queries, but returns no results. Instead, run()
 returns the metrics only. Useful for write operations like
 UPDATE, DELETE or INSERT.
 
+#### Type parameters
+
+| Name | Type |
+| :------ | :------ |
+| `T` | `Record`<`string`, `S`\> |
+
 #### Parameters
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `opts` | [`SignalAndInterval`](../namespaces/helpers.md#signalandinterval) | Additional options to control execution. |
+| `opts` | [`Options`](../interfaces/Options.md) | An optional object used to control behavior, see [Options](../interfaces/Options.md) |
 
 #### Returns
 
-`Promise`<[`Result`](../interfaces/Result.md)<`never`\>\>
+`Promise`<[`Result`](../interfaces/Result.md)<`T`\>\>
 
 A results object with metadata only (results are null or an empty array).
 
 #### Defined in
 
-@tableland/sdk/src/statement.ts:248
+@tableland/sdk/src/statement.ts:255
 
 ___
 
@@ -346,7 +352,7 @@ Export a Statement's sql string and parameters.
 
 #### Defined in
 
-@tableland/sdk/src/statement.ts:95
+@tableland/sdk/src/statement.ts:105
 
 ___
 
@@ -364,4 +370,4 @@ A valid SQL string.
 
 #### Defined in
 
-@tableland/sdk/src/statement.ts:82
+@tableland/sdk/src/statement.ts:92

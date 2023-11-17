@@ -22,13 +22,14 @@ custom_edit_url: null
 
 - [CreateManyParams](interfaces/CreateManyParams.md)
 - [CreateTableParams](interfaces/CreateTableParams.md)
+- [ExecResult](interfaces/ExecResult.md)
 - [Metadata](interfaces/Metadata.md)
 - [MutateManyParams](interfaces/MutateManyParams.md)
 - [MutateOneParams](interfaces/MutateOneParams.md)
 - [Named](interfaces/Named.md)
+- [Options](interfaces/Options.md)
 - [Parameters](interfaces/Parameters.md)
 - [Result](interfaces/Result.md)
-- [RunSQLParams](interfaces/RunSQLParams.md)
 - [Runnable](interfaces/Runnable.md)
 - [Schema](interfaces/Schema.md)
 - [SetParams](interfaces/SetParams.md)
@@ -81,7 +82,7 @@ ___
 
 #### Defined in
 
-@tableland/sdk/src/registry/run.ts:76
+@tableland/sdk/src/registry/run.ts:65
 
 ___
 
@@ -125,7 +126,7 @@ ___
 
 #### Defined in
 
-@tableland/sdk/src/validator/receipt.ts:26
+@tableland/sdk/src/validator/receipt.ts:27
 
 ___
 

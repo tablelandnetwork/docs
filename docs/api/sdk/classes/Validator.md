@@ -40,7 +40,7 @@ Create a Validator instance with the specified connection configuration.
 
 ### getTableById
 
-▸ **getTableById**(`params`, `opts?`): `Promise`<[`Table`](../interfaces/Table.md)\>
+▸ **getTableById**(`params`, `signal?`): `Promise`<[`Table`](../interfaces/Table.md)\>
 
 Get table information
 
@@ -55,7 +55,7 @@ Returns information about a single table, including schema information
 | `params` | `Object` | - |
 | `params.chainId` | `number` | **`Description`** The parent chain to target **`Example`** ```ts 80001 ``` |
 | `params.tableId` | `string` | **`Description`** Table identifier **`Example`** ```ts 1 ``` |
-| `opts` | [`Signal`](../interfaces/helpers.Signal.md) | - |
+| `signal?` | [`Signal`](../interfaces/helpers.Signal.md) | - |
 
 #### Returns
 
@@ -69,7 +69,7 @@ ___
 
 ### health
 
-▸ **health**(`opts?`): `Promise`<`boolean`\>
+▸ **health**(`signal?`): `Promise`<`boolean`\>
 
 Get health status
 
@@ -81,7 +81,7 @@ Returns OK if the validator considers itself healthy
 
 | Name | Type |
 | :------ | :------ |
-| `opts` | [`Signal`](../interfaces/helpers.Signal.md) |
+| `signal?` | [`Signal`](../interfaces/helpers.Signal.md) |
 
 #### Returns
 
@@ -95,7 +95,7 @@ ___
 
 ### pollForReceiptByTransactionHash
 
-▸ **pollForReceiptByTransactionHash**(`params`, `opts?`): `Promise`<`Camelize`<`AssertedResponse`\>\>
+▸ **pollForReceiptByTransactionHash**(`params`, `controller?`): `Promise`<`Camelize`<`AssertedResponse`\>\>
 
 Wait for transaction status
 
@@ -110,7 +110,7 @@ Polls for the status of a given transaction receipt by hash until
 | `params` | `Object` | - |
 | `params.chainId` | `number` | **`Description`** The parent chain to target **`Example`** ```ts 80001 ``` |
 | `params.transactionHash` | `string` | **`Description`** The transaction hash to request **`Example`** ```ts 0x02f319429b8a7be1cbb492f0bfbf740d2472232a2edadde7df7c16c0b61aa78b ``` |
-| `opts` | [`SignalAndInterval`](../namespaces/helpers.md#signalandinterval) | - |
+| `controller?` | [`PollingController`](../namespaces/helpers.md#pollingcontroller) | - |
 
 #### Returns
 
@@ -124,7 +124,7 @@ ___
 
 ### queryByStatement
 
-▸ **queryByStatement**<`T`\>(`params`, `opts?`): `Promise`<[`ObjectsFormat`](../modules.md#objectsformat)<`T`\>\>
+▸ **queryByStatement**<`T`\>(`params`, `signal?`): `Promise`<[`ObjectsFormat`](../modules.md#objectsformat)<`T`\>\>
 
 Query the network
 
@@ -143,7 +143,7 @@ Returns the results of a SQL read query against the Tabeland network
 | Name | Type |
 | :------ | :------ |
 | `params` | [`QueryParams`](../modules.md#queryparams)<`undefined` \| ``"objects"``\> |
-| `opts?` | [`Signal`](../interfaces/helpers.Signal.md) |
+| `signal?` | [`Signal`](../interfaces/helpers.Signal.md) |
 
 #### Returns
 
@@ -153,7 +153,7 @@ Returns the results of a SQL read query against the Tabeland network
 
 @tableland/sdk/src/validator/index.ts:105
 
-▸ **queryByStatement**<`T`\>(`params`, `opts?`): `Promise`<[`TableFormat`](../interfaces/TableFormat.md)<`T`\>\>
+▸ **queryByStatement**<`T`\>(`params`, `signal?`): `Promise`<[`TableFormat`](../interfaces/TableFormat.md)<`T`\>\>
 
 #### Type parameters
 
@@ -166,7 +166,7 @@ Returns the results of a SQL read query against the Tabeland network
 | Name | Type |
 | :------ | :------ |
 | `params` | [`QueryParams`](../modules.md#queryparams)<``"table"``\> |
-| `opts?` | [`Signal`](../interfaces/helpers.Signal.md) |
+| `signal?` | [`Signal`](../interfaces/helpers.Signal.md) |
 
 #### Returns
 
@@ -180,7 +180,7 @@ ___
 
 ### receiptByTransactionHash
 
-▸ **receiptByTransactionHash**(`params`, `opts?`): `Promise`<`Camelize`<`AssertedResponse`\>\>
+▸ **receiptByTransactionHash**(`params`, `signal?`): `Promise`<`Camelize`<`AssertedResponse`\>\>
 
 Get transaction status
 
@@ -195,7 +195,7 @@ Returns the status of a given transaction receipt by hash
 | `params` | `Object` | - |
 | `params.chainId` | `number` | **`Description`** The parent chain to target **`Example`** ```ts 80001 ``` |
 | `params.transactionHash` | `string` | **`Description`** The transaction hash to request **`Example`** ```ts 0x02f319429b8a7be1cbb492f0bfbf740d2472232a2edadde7df7c16c0b61aa78b ``` |
-| `opts` | [`Signal`](../interfaces/helpers.Signal.md) | - |
+| `signal?` | [`Signal`](../interfaces/helpers.Signal.md) | - |
 
 #### Returns
 
@@ -209,7 +209,7 @@ ___
 
 ### version
 
-▸ **version**(`opts?`): `Promise`<`Camelize`<`Required`<{ `binary_version?`: `string` ; `build_date?`: `string` ; `git_branch?`: `string` ; `git_commit?`: `string` ; `git_state?`: `string` ; `git_summary?`: `string` ; `version?`: `number`  }\>\>\>
+▸ **version**(`signal?`): `Promise`<`Camelize`<`Required`<{ `binary_version?`: `string` ; `build_date?`: `string` ; `git_branch?`: `string` ; `git_commit?`: `string` ; `git_state?`: `string` ; `git_summary?`: `string` ; `version?`: `number`  }\>\>\>
 
 Get version information
 
@@ -221,7 +221,7 @@ Returns version information about the validator daemon
 
 | Name | Type |
 | :------ | :------ |
-| `opts` | [`Signal`](../interfaces/helpers.Signal.md) |
+| `signal?` | [`Signal`](../interfaces/helpers.Signal.md) |
 
 #### Returns
 

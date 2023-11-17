@@ -15,7 +15,7 @@ custom_edit_url: null
 
 #### Defined in
 
-@tableland/sdk/src/helpers/config.ts:8
+@tableland/sdk/src/helpers/config.ts:10
 
 ___
 
@@ -25,7 +25,7 @@ ___
 
 #### Defined in
 
-@tableland/sdk/src/helpers/config.ts:9
+@tableland/sdk/src/helpers/config.ts:11
 
 ___
 
@@ -35,4 +35,4 @@ ___
 
 #### Defined in
 
-@tableland/sdk/src/helpers/config.ts:7
+@tableland/sdk/src/helpers/config.ts:9

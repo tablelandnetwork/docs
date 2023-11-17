@@ -19,7 +19,7 @@ SQL statement string.
 
 #### Defined in
 
-@tableland/sdk/src/registry/run.ts:61
+@tableland/sdk/src/registry/run.ts:50
 
 ___
 
@@ -29,4 +29,4 @@ ___
 
 #### Defined in
 
-@tableland/sdk/src/registry/run.ts:62
+@tableland/sdk/src/registry/run.ts:51

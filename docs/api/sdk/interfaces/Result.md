@@ -18,13 +18,13 @@ Result represents the core return result for an executed statement.
 
 ### error
 
-• `Optional` **error**: `string`
+• **error**: `undefined`
 
 If there was an error, this will contain the error string.
 
 #### Defined in
 
-@tableland/sdk/src/registry/utils.ts:138
+@tableland/sdk/src/registry/utils.ts:169
 
 ___
 
@@ -36,7 +36,7 @@ Additional meta information.
 
 #### Defined in
 
-@tableland/sdk/src/registry/utils.ts:142
+@tableland/sdk/src/registry/utils.ts:173
 
 ___
 
@@ -48,16 +48,16 @@ Possibly empty list of query results.
 
 #### Defined in
 
-@tableland/sdk/src/registry/utils.ts:130
+@tableland/sdk/src/registry/utils.ts:159
 
 ___
 
 ### success
 
-• **success**: `boolean`
+• **success**: ``true``
 
 Whether the query or transaction was successful.
 
 #### Defined in
 
-@tableland/sdk/src/registry/utils.ts:134
+@tableland/sdk/src/registry/utils.ts:163

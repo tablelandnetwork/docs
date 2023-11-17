@@ -40,7 +40,7 @@ SQL statement string.
 
 #### Defined in
 
-@tableland/sdk/src/registry/run.ts:50
+@tableland/sdk/src/registry/run.ts:39
 
 ___
 

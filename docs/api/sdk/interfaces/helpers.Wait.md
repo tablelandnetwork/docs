@@ -7,6 +7,8 @@ custom_edit_url: null
 
 [helpers](../namespaces/helpers.md).Wait
 
+A waitable interface to check for results.
+
 ## Type parameters
 
 | Name | Type |
@@ -17,17 +19,19 @@ custom_edit_url: null
 
 ### wait
 
-• **wait**: (`opts?`: [`SignalAndInterval`](../namespaces/helpers.md#signalandinterval)) => `Promise`<`T`\>
+• **wait**: (`controller?`: [`PollingController`](../namespaces/helpers.md#pollingcontroller)) => `Promise`<`T`\>
 
 #### Type declaration
 
-▸ (`opts?`): `Promise`<`T`\>
+▸ (`controller?`): `Promise`<`T`\>
+
+A function to check for results.
 
 ##### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts?` | [`SignalAndInterval`](../namespaces/helpers.md#signalandinterval) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `controller?` | [`PollingController`](../namespaces/helpers.md#pollingcontroller) | A [PollingController](../namespaces/helpers.md#pollingcontroller) with the custom timeout & interval. |
 
 ##### Returns
 
@@ -35,4 +39,4 @@ custom_edit_url: null
 
 #### Defined in
 
-@tableland/sdk/src/helpers/await.ts:14
+@tableland/sdk/src/helpers/await.ts:59

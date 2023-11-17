@@ -14,8 +14,6 @@ TableIdentifier represents the information required to identify a table on the T
 
   ↳ [`MutateOneParams`](MutateOneParams.md)
 
-  ↳ [`RunSQLParams`](RunSQLParams.md)
-
 ## Properties
 
 ### chainId
