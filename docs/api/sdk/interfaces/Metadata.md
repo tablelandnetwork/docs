@@ -22,7 +22,7 @@ Total client-side duration of the async call.
 
 #### Defined in
 
-@tableland/sdk/src/registry/utils.ts:112
+@tableland/sdk/src/registry/utils.ts:141
 
 ___
 
@@ -30,8 +30,8 @@ ___
 
 • `Optional` **txn**: [`WaitableTransactionReceipt`](../modules.md#waitabletransactionreceipt)
 
-The optional transactionn information receipt.
+The optional transaction information receipt.
 
 #### Defined in
 
-@tableland/sdk/src/registry/utils.ts:116
+@tableland/sdk/src/registry/utils.ts:145

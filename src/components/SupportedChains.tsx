@@ -19,8 +19,8 @@ function getChainExplorer(
       return `https://arbiscan.io/address/${contract}`;
     case "arbitrum-nova":
       return `https://nova.arbiscan.io/address/${contract}`;
-    case "arbitrum-goerli":
-      return `https://goerli.arbiscan.io/address/${contract}`;
+    case "arbitrum-sepolia":
+      return `https://sepolia.arbiscan.io/address/${contract}`;
     case "filecoin":
       return `https://filfox.info/address/${contract}`;
     case "filecoin-calibration":

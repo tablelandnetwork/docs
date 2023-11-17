@@ -19,9 +19,11 @@ Chain information used to determine defaults for the set of supported chains.
 
 • **baseUrl**: `string`
 
+The validator base URL for the chain.
+
 #### Defined in
 
-@tableland/sdk/src/helpers/chains.ts:19
+@tableland/sdk/src/helpers/chains.ts:28
 
 ___
 
@@ -29,9 +31,11 @@ ___
 
 • **chainId**: `number`
 
+The chain ID.
+
 #### Defined in
 
-@tableland/sdk/src/helpers/chains.ts:17
+@tableland/sdk/src/helpers/chains.ts:26
 
 ___
 
@@ -39,9 +43,11 @@ ___
 
 • **chainName**: keyof `TablelandNetworkConfig`
 
+The name of the chain as defined in [ChainName](../namespaces/helpers.md#chainname).
+
 #### Defined in
 
-@tableland/sdk/src/helpers/chains.ts:16
+@tableland/sdk/src/helpers/chains.ts:25
 
 ___
 
@@ -49,6 +55,32 @@ ___
 
 • **contractAddress**: `string`
 
+The registry contract address for the chain.
+
 #### Defined in
 
-@tableland/sdk/src/helpers/chains.ts:18
+@tableland/sdk/src/helpers/chains.ts:27
+
+___
+
+### pollingInterval
+
+• **pollingInterval**: `number`
+
+The validator polling interval for the chain.
+
+#### Defined in
+
+@tableland/sdk/src/helpers/chains.ts:30
+
+___
+
+### pollingTimeout
+
+• **pollingTimeout**: `number`
+
+The validator polling timeout for the chain.
+
+#### Defined in
+
+@tableland/sdk/src/helpers/chains.ts:29

@@ -40,7 +40,7 @@ Create a Database instance with the specified connection configuration.
 
 #### Defined in
 
-@tableland/sdk/src/database.ts:36
+@tableland/sdk/src/database.ts:41
 
 ## Properties
 
@@ -50,13 +50,13 @@ Create a Database instance with the specified connection configuration.
 
 #### Defined in
 
-@tableland/sdk/src/database.ts:27
+@tableland/sdk/src/database.ts:32
 
 ## Methods
 
 ### batch
 
-▸ **batch**<`T`\>(`statements`, `opts?`): `Promise`<[`Result`](../interfaces/Result.md)<`T`\>[]\>
+▸ **batch**<`T`\>(`statements`, `controller?`): `Promise`<[`Result`](../interfaces/Result.md)<`T`\>[]\>
 
 Execute a set of Statements in batch mode.
 Batching sends multiple SQL statements inside a single call to the
@@ -78,7 +78,7 @@ statement, and it aborts or rolls back the entire sequence.
 | Name | Type | Description |
 | :------ | :------ | :------ |
 | `statements` | [`Statement`](Statement.md)<`unknown`\>[] | A set of Statement objects to batch and submit. |
-| `opts` | [`Signal`](../interfaces/helpers.Signal.md) | Additional options to control execution. |
+| `controller?` | [`PollingController`](../namespaces/helpers.md#pollingcontroller) | An optional object used to control receipt polling behavior. |
 
 #### Returns
 
@@ -88,22 +88,22 @@ An array of run results.
 
 #### Defined in
 
-@tableland/sdk/src/database.ts:93
+@tableland/sdk/src/database.ts:98
 
 ___
 
 ### dump
 
-▸ **dump**(`_opts?`): `Promise`<`ArrayBuffer`\>
+▸ **dump**(`_controller?`): `Promise`<`ArrayBuffer`\>
 
 Export a (set of) tables to the SQLite binary format.
 Not implemented yet!
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `_opts` | [`Signal`](../interfaces/helpers.Signal.md) | Additional options to control execution. |
+| Name | Type |
+| :------ | :------ |
+| `_controller?` | [`PollingController`](../namespaces/helpers.md#pollingcontroller) |
 
 #### Returns
 
@@ -111,13 +111,13 @@ Not implemented yet!
 
 #### Defined in
 
-@tableland/sdk/src/database.ts:218
+@tableland/sdk/src/database.ts:223
 
 ___
 
 ### exec
 
-▸ **exec**<`T`\>(`statementStrings`, `opts?`): `Promise`<[`Result`](../interfaces/Result.md)<`T`\>\>
+▸ **exec**<`T`\>(`statementStrings`, `controller?`): `Promise`<[`ExecResult`](../interfaces/ExecResult.md)<`T`\>\>
 
 Executes one or more queries directly without prepared statements
 or parameters binding. This method can have poorer performance
@@ -142,17 +142,17 @@ splitting, and batching may be used.
 | Name | Type | Description |
 | :------ | :------ | :------ |
 | `statementStrings` | `string` | A set of SQL statement strings separated by semi-colons. |
-| `opts` | [`Signal`](../interfaces/helpers.Signal.md) | Additional options to control execution. |
+| `controller?` | [`PollingController`](../namespaces/helpers.md#pollingcontroller) | An optional object used to control receipt polling behavior. |
 
 #### Returns
 
-`Promise`<[`Result`](../interfaces/Result.md)<`T`\>\>
+`Promise`<[`ExecResult`](../interfaces/ExecResult.md)<`T`\>\>
 
 A single run result.
 
 #### Defined in
 
-@tableland/sdk/src/database.ts:192
+@tableland/sdk/src/database.ts:199
 
 ___
 
@@ -185,7 +185,7 @@ A Statement object constructed with the given SQL string.
 
 #### Defined in
 
-@tableland/sdk/src/database.ts:72
+@tableland/sdk/src/database.ts:77
 
 ___
 
@@ -209,7 +209,7 @@ A Database with a Signer, and a default baseUrl.
 
 #### Defined in
 
-@tableland/sdk/src/database.ts:59
+@tableland/sdk/src/database.ts:64
 
 ___
 
@@ -237,4 +237,4 @@ A Database without a signer configured.
 
 #### Defined in
 
-@tableland/sdk/src/database.ts:46
+@tableland/sdk/src/database.ts:51

@@ -99,5 +99,3 @@ Let’s assume you’ve created a table on Ethereum Sepolia. You can use [Ethers
 9. Once the transaction is successful, the table is officially immutable! Click on _View your transaction_ to see the results.
 
    <img src={viewTx} width='40%'/>
-
-You can check out this example transaction, which burned the table `mytable_5_37`: [here](https://goerli.etherscan.io/tx/0x45d6b0c9d933a920d6d50d53a8bdf2f44429ad0c6f0f9df3d46b1c742efee61e)

@@ -7,12 +7,36 @@ custom_edit_url: null
 
 [helpers](../namespaces/helpers.md).Interval
 
+A polling interval to check for results.
+
 ## Properties
 
-### interval
+### cancel
 
-• `Optional` **interval**: `number`
+• **cancel**: () => `void`
+
+#### Type declaration
+
+▸ (): `void`
+
+A function to cancel a polling interval.
+
+##### Returns
+
+`void`
 
 #### Defined in
 
-@tableland/sdk/src/helpers/await.ts:8
+@tableland/sdk/src/helpers/await.ts:32
+
+___
+
+### interval
+
+• **interval**: `number`
+
+The interval period to make new requests, in milliseconds.
+
+#### Defined in
+
+@tableland/sdk/src/helpers/await.ts:28

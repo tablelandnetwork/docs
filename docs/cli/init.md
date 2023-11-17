@@ -35,7 +35,7 @@ matic
 filecoin
 sepolia
 optimism-goerli
-arbitrum-goerli
+arbitrum-sepolia
 maticmum
 filecoin-calibration
 localhost

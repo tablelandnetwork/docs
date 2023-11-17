@@ -35,7 +35,7 @@ The set of supported chain names as used by the Tableland network.
 
 #### Defined in
 
-@tableland/sdk/src/helpers/chains.ts:10
+@tableland/sdk/src/helpers/chains.ts:12
 
 ___
 
@@ -45,7 +45,7 @@ ___
 
 #### Defined in
 
-@tableland/sdk/src/helpers/config.ts:20
+@tableland/sdk/src/helpers/config.ts:22
 
 ___
 
@@ -63,9 +63,11 @@ ___
 
 Ƭ **NameMapping**: `Record`<`string`, `string`\>
 
+A series of mappings from a table alias to its globally unique table name.
+
 #### Defined in
 
-@tableland/sdk/src/helpers/config.ts:22
+@tableland/sdk/src/helpers/config.ts:27
 
 ___
 
@@ -79,6 +81,18 @@ ___
 
 ___
 
+### PollingController
+
+Ƭ **PollingController**: [`Signal`](../interfaces/helpers.Signal.md) & [`Interval`](../interfaces/helpers.Interval.md) & `Timeout`
+
+A polling controller with a custom timeout & interval.
+
+#### Defined in
+
+@tableland/sdk/src/helpers/await.ts:48
+
+___
+
 ### RegistryReceipt
 
 Ƭ **RegistryReceipt**: `Required`<`Omit`<[`TransactionReceipt`](../modules.md#transactionreceipt), ``"error"`` \| ``"errorEventIdx"``\>\>
@@ -89,16 +103,6 @@ The API v1 has a known problem where it only returns the first tableId from a tr
 #### Defined in
 
 @tableland/sdk/src/helpers/ethers.ts:46
-
-___
-
-### SignalAndInterval
-
-Ƭ **SignalAndInterval**: [`Signal`](../interfaces/helpers.Signal.md) & [`Interval`](../interfaces/helpers.Interval.md)
-
-#### Defined in
-
-@tableland/sdk/src/helpers/await.ts:11
 
 ___
 
@@ -120,13 +124,13 @@ The set of chains and their information as supported by the Tableland network.
 
 #### Defined in
 
-@tableland/sdk/src/helpers/chains.ts:44
+@tableland/sdk/src/helpers/chains.ts:71
 
 ## Functions
 
 ### checkWait
 
-▸ **checkWait**(`config`, `receipt`): `Promise`<[`WaitableTransactionReceipt`](../modules.md#waitabletransactionreceipt)\>
+▸ **checkWait**(`config`, `receipt`, `controller?`): `Promise`<[`WaitableTransactionReceipt`](../modules.md#waitabletransactionreceipt)\>
 
 #### Parameters
 
@@ -134,6 +138,7 @@ The set of chains and their information as supported by the Tableland network.
 | :------ | :------ |
 | `config` | `Partial`<[`ReadConfig`](../interfaces/helpers.ReadConfig.md) & [`SignerConfig`](../interfaces/helpers.SignerConfig.md)\> & `Partial`<[`AutoWaitConfig`](../interfaces/helpers.AutoWaitConfig.md)\> |
 | `receipt` | [`WaitableTransactionReceipt`](../modules.md#waitabletransactionreceipt) |
+| `controller?` | [`PollingController`](helpers.md#pollingcontroller) |
 
 #### Returns
 
@@ -141,7 +146,50 @@ The set of chains and their information as supported by the Tableland network.
 
 #### Defined in
 
-@tableland/sdk/src/helpers/config.ts:29
+@tableland/sdk/src/helpers/config.ts:41
+
+___
+
+### createPollingController
+
+▸ **createPollingController**(`timeout?`, `pollingInterval?`): [`PollingController`](helpers.md#pollingcontroller)
+
+Create a polling controller with a custom timeout & interval.
+
+#### Parameters
+
+| Name | Type | Default value | Description |
+| :------ | :------ | :------ | :------ |
+| `timeout` | `number` | `60_000` | The timeout period in milliseconds. |
+| `pollingInterval` | `number` | `1500` | - |
+
+#### Returns
+
+[`PollingController`](helpers.md#pollingcontroller)
+
+A [PollingController](helpers.md#pollingcontroller) with the custom timeout & interval.
+
+#### Defined in
+
+@tableland/sdk/src/helpers/await.ts:95
+
+___
+
+### createSignal
+
+▸ **createSignal**(): [`Signal`](../interfaces/helpers.Signal.md)
+
+Create a signal to abort a request.
+
+#### Returns
+
+[`Signal`](../interfaces/helpers.Signal.md)
+
+A [Signal](../interfaces/helpers.Signal.md) to abort a request.
+
+#### Defined in
+
+@tableland/sdk/src/helpers/await.ts:79
 
 ___
 
@@ -162,7 +210,7 @@ ___
 
 #### Defined in
 
-@tableland/sdk/src/helpers/config.ts:40
+@tableland/sdk/src/helpers/config.ts:53
 
 ___
 
@@ -182,7 +230,7 @@ ___
 
 #### Defined in
 
-@tableland/sdk/src/helpers/config.ts:69
+@tableland/sdk/src/helpers/config.ts:82
 
 ___
 
@@ -203,7 +251,7 @@ ___
 
 #### Defined in
 
-@tableland/sdk/src/helpers/config.ts:59
+@tableland/sdk/src/helpers/config.ts:72
 
 ___
 
@@ -227,7 +275,7 @@ A string representing the default host uri for a given chain.
 
 #### Defined in
 
-@tableland/sdk/src/helpers/chains.ts:107
+@tableland/sdk/src/helpers/chains.ts:139
 
 ___
 
@@ -235,23 +283,23 @@ ___
 
 ▸ **getChainId**(`chainNameOrId`): `number`
 
-Get the default chain id for a given chain name.
+Get the default chain ID for a given chain name.
 
 #### Parameters
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `chainNameOrId` | `number` \| keyof `TablelandNetworkConfig` | The requested chain name. |
+| `chainNameOrId` | `number` \| keyof `TablelandNetworkConfig` | The requested chain name or ID. |
 
 #### Returns
 
 `number`
 
-A number representing the default chain id of the requested chain.
+A number representing the default chain ID of the requested chain.
 
 #### Defined in
 
-@tableland/sdk/src/helpers/chains.ts:98
+@tableland/sdk/src/helpers/chains.ts:130
 
 ___
 
@@ -265,7 +313,7 @@ Get the default chain information for a given chain name.
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `chainNameOrId` | `number` \| keyof `TablelandNetworkConfig` | The requested chain name. |
+| `chainNameOrId` | `number` \| keyof `TablelandNetworkConfig` | The requested chain name or ID. |
 
 #### Returns
 
@@ -275,7 +323,7 @@ An object containing the default chainId, contractAddress, chainName, and baseUr
 
 #### Defined in
 
-@tableland/sdk/src/helpers/chains.ts:59
+@tableland/sdk/src/helpers/chains.ts:86
 
 ___
 
@@ -289,7 +337,7 @@ Get the default contract address for a given chain name.
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `chainNameOrId` | `number` \| keyof `TablelandNetworkConfig` | The requested chain name. |
+| `chainNameOrId` | `number` \| keyof `TablelandNetworkConfig` | The requested chain name or ID. |
 
 #### Returns
 
@@ -299,7 +347,7 @@ A hex string representing the default address for the Tableland registry contrac
 
 #### Defined in
 
-@tableland/sdk/src/helpers/chains.ts:89
+@tableland/sdk/src/helpers/chains.ts:121
 
 ___
 
@@ -382,39 +430,23 @@ ___
 
 ▸ **isTestnet**(`chainNameOrId`): `boolean`
 
+Get whether or not a chain is a testnet.
+
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `chainNameOrId` | `number` \| keyof `TablelandNetworkConfig` |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `chainNameOrId` | `number` \| keyof `TablelandNetworkConfig` | The requested chain name or ID. |
 
 #### Returns
 
 `boolean`
 
-#### Defined in
-
-@tableland/sdk/src/helpers/chains.ts:73
-
-___
-
-### jsonFileAliases
-
-▸ **jsonFileAliases**(`filepath`): [`AliasesNameMap`](../interfaces/helpers.AliasesNameMap.md)
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `filepath` | `string` |
-
-#### Returns
-
-[`AliasesNameMap`](../interfaces/helpers.AliasesNameMap.md)
+An boolean to indicate the testnet classification of the given chain.
 
 #### Defined in
 
-@tableland/sdk/src/helpers/config.ts:106
+@tableland/sdk/src/helpers/chains.ts:105
 
 ___
 
@@ -460,7 +492,7 @@ void
 
 #### Defined in
 
-@tableland/sdk/src/helpers/chains.ts:120
+@tableland/sdk/src/helpers/chains.ts:164
 
 ___
 
@@ -480,7 +512,34 @@ ___
 
 #### Defined in
 
-@tableland/sdk/src/helpers/config.ts:119
+@tableland/sdk/src/helpers/config.ts:96
+
+___
+
+### readNameMapping
+
+▸ **readNameMapping**(`aliases`): `Promise`<[`NameMapping`](helpers.md#namemapping)\>
+
+Read the [NameMapping](helpers.md#namemapping) from an [AliasesNameMap](../interfaces/helpers.AliasesNameMap.md), which can
+support either synchronous or asynchronous `read()` execution. It will wrap a
+synchronous name mapping result, or wrap an unwrapped name mapping if
+asynchronous.
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `aliases` | [`AliasesNameMap`](../interfaces/helpers.AliasesNameMap.md) | An `AliasesNameMap` object. |
+
+#### Returns
+
+`Promise`<[`NameMapping`](helpers.md#namemapping)\>
+
+A promise containing a `NameMapping` object.
+
+#### Defined in
+
+@tableland/sdk/src/helpers/config.ts:117
 
 ___
 
@@ -502,3 +561,31 @@ ___
 #### Defined in
 
 @tableland/sdk/src/helpers/parser.ts:27
+
+___
+
+### writeNameMapping
+
+▸ **writeNameMapping**(`aliases`, `nameMap`): `Promise`<`void`\>
+
+Write table aliases with an [AliasesNameMap](../interfaces/helpers.AliasesNameMap.md) and a provided
+[NameMapping](helpers.md#namemapping), which can support either synchronous or asynchronous
+`write()` execution. It will wrap a synchronous result, or wrap an unwrapped
+result if asynchronous.
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `aliases` | [`AliasesNameMap`](../interfaces/helpers.AliasesNameMap.md) | An `AliasesNameMap` object to write to. |
+| `nameMap` | [`NameMapping`](helpers.md#namemapping) | A `NameMapping` object to write to the `AliasesNameMap`. |
+
+#### Returns
+
+`Promise`<`void`\>
+
+A promise containing `void` upon write completion.
+
+#### Defined in
+
+@tableland/sdk/src/helpers/config.ts:133

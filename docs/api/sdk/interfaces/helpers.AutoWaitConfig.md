@@ -15,4 +15,4 @@ custom_edit_url: null
 
 #### Defined in
 
-@tableland/sdk/src/helpers/config.ts:17
+@tableland/sdk/src/helpers/config.ts:19

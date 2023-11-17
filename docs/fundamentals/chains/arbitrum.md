@@ -25,26 +25,25 @@ Thus, you can imagine how high volume applications can take advantage of both th
 
 ## Setup & resources
 
-### Goerli (testnet)
+### Sepolia (testnet)
 
 - Average block time: 2 seconds
-- Chain ID: <ChainInfo chain='arbitrum-goerli' info='chainId' />
+- Chain ID: <ChainInfo chain='arbitrum-sepolia' info='chainId' />
 - Symbol: ETH
 - Status Dashboard:
   - N/A
 - Block Explorer:
-  - [https://goerli-rollup-explorer.arbitrum.io/](https://goerli-rollup-explorer.arbitrum.io/)
-- Faucet (use the Ethereum Goerli faucet and then bridge ETH to Arbitrum):
-- [https://goerlifaucet.com/](https://goerlifaucet.com/)
-- [https://faucet.paradigm.xyz/](https://faucet.paradigm.xyz/)
-- [https://faucet.chainstack.com/goerli-faucet](https://faucet.chainstack.com/goerli-faucet)
+  - [https://sepolia.arbitrum.io/](https://sepolia.arbitrum.io/)
+- Faucet (use the Ethereum Sepolia faucet and then bridge ETH to Arbitrum):
+  - [https://sepoliafaucet.com/](https://sepoliafaucet.com/)
+  - [https://faucet.chainstack.com/sepolia-testnet-faucet](https://faucet.chainstack.com/sepolia-testnet-faucet)
 - Bridge:
-  - [https://bridge.arbitrum.io/](https://bridge.arbitrum.io/)
+  - [https://bridge.arbitrum.io/](https://bridge.arbitrum.io/?l2ChainId=421614)
 - RPC URL:
-  - See [https://chainlist.org/chain/421613](https://chainlist.org/chain/421613)
-- Tableland contract address: <ChainInfo chain='arbitrum-goerli' info='contractAddress' />
-- SDK network name: <ChainInfo chain='arbitrum-goerli' info='chainName' />
-- Tableland gateway: <ChainInfo chain='arbitrum-goerli' info='baseUrl' />
+  - See [https://chainlist.org/chain/421614](https://chainlist.org/chain/421614)
+- Tableland contract address: <ChainInfo chain='arbitrum-sepolia' info='contractAddress' />
+- SDK network name: <ChainInfo chain='arbitrum-sepolia' info='chainName' />
+- Tableland gateway: <ChainInfo chain='arbitrum-sepolia' info='baseUrl' />
 
 ### Arbitrum One (mainnet)
 
@@ -79,9 +78,9 @@ Thus, you can imagine how high volume applications can take advantage of both th
 
 ## Getting testnet funds
 
-1. Request testnet Ether from a faucet noted above (e.g., [here](https://goerlifaucet.com/) or [here](https://faucet.paradigm.xyz/)).
-2. Move the ETH from Ethereum to Arbitrum at [https://bridge.arbitrum.io/](https://bridge.arbitrum.io/)—i.e., select "ETH" (or, as in the screenshot below, other ERC20 tokens that exist on Ethereum Goerli can be bridged).
+1. Request testnet Ether from a faucet noted above (e.g., [here](https://sepoliafaucet.com/) or [here](https://faucet.chainstack.com/sepolia-testnet-faucet)).
+2. Move the ETH from Ethereum to Arbitrum at [https://bridge.arbitrum.io/](https://bridge.arbitrum.io/)—i.e., select "ETH" (or, as in the screenshot below, other ERC20 tokens that exist on Ethereum Sepolia can be bridged).
 
-import bridge from "@site/static/assets/tutorials/table-reads-chainlink/arb-goerli.png"
+import bridge from "@site/static/assets/arb-sepolia.png"
 
 <img src={bridge} width="80%"/>

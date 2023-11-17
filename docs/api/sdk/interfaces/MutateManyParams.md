@@ -18,7 +18,7 @@ The target chain id.
 
 #### Defined in
 
-@tableland/sdk/src/registry/run.ts:73
+@tableland/sdk/src/registry/run.ts:62
 
 ___
 
@@ -30,4 +30,4 @@ List of Runnables.
 
 #### Defined in
 
-@tableland/sdk/src/registry/run.ts:72
+@tableland/sdk/src/registry/run.ts:61

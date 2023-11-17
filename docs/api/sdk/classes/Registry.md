@@ -24,7 +24,7 @@ Create a Registry instance with the specified connection configuration.
 
 #### Defined in
 
-@tableland/sdk/src/registry/index.ts:63
+@tableland/sdk/src/registry/index.ts:62
 
 ## Properties
 
@@ -34,7 +34,7 @@ Create a Registry instance with the specified connection configuration.
 
 #### Defined in
 
-@tableland/sdk/src/registry/index.ts:56
+@tableland/sdk/src/registry/index.ts:55
 
 ## Methods
 
@@ -63,29 +63,7 @@ Requirements:
 
 #### Defined in
 
-@tableland/sdk/src/registry/index.ts:164
-
-___
-
-### createTable
-
-▸ **createTable**(`params`): `Promise`<[`ContractTransaction`](../interfaces/helpers.ContractTransaction.md)\>
-
-@custom:deprecated Use `create` instead.
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `params` | [`CreateTableParams`](../interfaces/CreateTableParams.md) |
-
-#### Returns
-
-`Promise`<[`ContractTransaction`](../interfaces/helpers.ContractTransaction.md)\>
-
-#### Defined in
-
-@tableland/sdk/src/registry/index.ts:171
+@tableland/sdk/src/registry/index.ts:163
 
 ___
 
@@ -109,7 +87,7 @@ tableId - the id of the target table
 
 #### Defined in
 
-@tableland/sdk/src/registry/index.ts:150
+@tableland/sdk/src/registry/index.ts:149
 
 ___
 
@@ -131,7 +109,7 @@ Gets the list of table IDs of the requested owner.
 
 #### Defined in
 
-@tableland/sdk/src/registry/index.ts:83
+@tableland/sdk/src/registry/index.ts:82
 
 ___
 
@@ -165,7 +143,7 @@ Requirements:
 
 #### Defined in
 
-@tableland/sdk/src/registry/index.ts:139
+@tableland/sdk/src/registry/index.ts:138
 
 ___
 
@@ -199,7 +177,7 @@ Requirements:
 
 #### Defined in
 
-@tableland/sdk/src/registry/index.ts:190
+@tableland/sdk/src/registry/index.ts:182
 
 ___
 
@@ -222,7 +200,7 @@ Runs a set of SQL statements for `caller` using `runnables`.
 
 #### Defined in
 
-@tableland/sdk/src/registry/index.ts:198
+@tableland/sdk/src/registry/index.ts:190
 
 ___
 
@@ -246,7 +224,7 @@ Requires the msg sender to be the owner, approved, or operator
 
 #### Defined in
 
-@tableland/sdk/src/registry/index.ts:92
+@tableland/sdk/src/registry/index.ts:91
 
 ___
 
@@ -289,7 +267,7 @@ Requirements:
 
 #### Defined in
 
-@tableland/sdk/src/registry/index.ts:120
+@tableland/sdk/src/registry/index.ts:119
 
 ___
 
@@ -311,4 +289,4 @@ Create a Registry that is connected to the given Signer.
 
 #### Defined in
 
-@tableland/sdk/src/registry/index.ts:75
+@tableland/sdk/src/registry/index.ts:74
