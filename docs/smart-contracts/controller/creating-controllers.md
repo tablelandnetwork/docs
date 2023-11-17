@@ -50,7 +50,7 @@ pragma solidity ^0.8.12;
 import "@tableland/evm/contracts/ITablelandController.sol";
 import "@tableland/evm/contracts/policies/Policies.sol";
 
-contract ExamplePolicy {
+contract ExamplePolicy is ITablelandController {
   function getPolicy(address sender)
       public
       payable
