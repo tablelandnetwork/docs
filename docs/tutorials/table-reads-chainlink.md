@@ -1,57 +1,51 @@
 ---
-title: On-Chain reads with Chainlink + Arbitrum
-sidebar_label: On-chain reads with Chainlink
-description: Use Chainlink’s node operator network to get table state back on-chain to the Arbitrum network.
+title: OnChain reads with Chainlink + Ethereum
+sidebar_label: Onchain reads with Chainlink
+description: Use Chainlink’s node operator network to get table state back onchain to the Ethereum network.
 keywords:
   - chainlink
   - dynamic nft
 ---
 
-The following walks through how to query off-chain table state and write it back on-chain. It walks through how to do so using Chainlink’s [Any API](https://docs.chain.link/any-api/api-reference/). Note that this is possible with all networks in which Tableland is deployed on, but be sure to use the correct contract address! This example _hardcodes_ values with [Arbitrum Goerli](https://docs.chain.link/resources/link-token-contracts/#arbitrum-goerli-testnet) for simplicity sake.
+The following walks through how to query offchain table state and write it back onchain. It walks through how to do so using Chainlink’s [Any API](https://docs.chain.link/any-api/api-reference/). Note that this is possible with all networks in which Tableland is deployed on, but be sure to use the correct contract address! This example _hardcodes_ values with [Ethereum Sepolia](https://docs.chain.link/resources/link-token-contracts/#sepolia-testnet) for simplicity sake.
 
 ## Synopsis
 
-We’ll be using the Chainlink [Any API](https://docs.chain.link/getting-started/advanced-tutorial/) to read data from the Tableland network and write it back on-chain. It will use the "single word response" [GET method](https://docs.chain.link/any-api/get-request/examples/single-word-response/) to retrieve a single unsigned integer value from Tableland ([here](https://testnets.tableland.network/query?unwrap=true&statement=select%20%2A%20from%20healthbot_11155111_1)) and write it back on-chain.
+We’ll be using the Chainlink [Any API](https://docs.chain.link/getting-started/advanced-tutorial/) to read data from the Tableland network and write it back onchain. It will use the "single word response" [GET method](https://docs.chain.link/any-api/get-request/examples/single-word-response/) to retrieve a single unsigned integer value from Tableland ([here](https://testnets.tableland.network/api/v1/query?unwrap=true&statement=select%20%2A%20from%20healthbot_11155111_1)) and write it back onchain.
 
-Recall that writing data to Tableland happens with on-chain actions, whereas reading \***\*from\*\*** the Tableland network occurs via an off-chain gateway query. If a developer wants to query for data and make some on-chain action based on the result, they’ll need to use an oracle to retrieve the data.
+Recall that writing data to Tableland happens with onchain actions, whereas reading _from_ the Tableland network occurs via an offchain gateway query. If a developer wants to query for data and make some onchain action based on the result, they’ll need to use an oracle to retrieve the data.
 
 ### Repo
 
-To see the final source code, check out the following repo, which removes some of the hardcoding and makes it easier to work with:
-
-- [https://github.com/dtbuchholz/tutorial-on-chain-reads-chainlink-arbitrum](https://github.com/dtbuchholz/tutorial-on-chain-reads-chainlink-arbitrum)
+To see the final source code, check out the following repo, which removes some of the hardcoding and makes it easier to work with: [here](https://github.com/dtbuchholz/tutorial-onchain-reads-chainlink-ethereum).
 
 ### Node Operators
 
-First, a brief on Chainlink node operators. A node operator is a specific node that deploys an on-chain Chainlink [Operator](https://github.com/smartcontractkit/chainlink/blob/develop/contracts/src/v0.7/Operator.sol) contract, watches for interactions with that contract, and then responds appropriately (e.g., hears a query for data, then writes data on-chain). Each node can implement its own customizations, such as data transformation. Plus, each node has a _unique_ `jobId` that it runs, which tells the node which job it should perform (e.g., GET uint256 single word).
+First, a brief on Chainlink node operators. A node operator is a specific node that deploys an onchain Chainlink [Operator](https://github.com/smartcontractkit/chainlink/blob/develop/contracts/src/v0.7/Operator.sol) contract, watches for interactions with that contract, and then responds appropriately (e.g., hears a query for data, then writes data onchain). Each node can implement its own customizations, such as data transformation. Plus, each node has a _unique_ `jobId` that it runs, which tells the node which job it should perform (e.g., GET `uint256` single word).
 
-For example, the Chainlink documentation notes an [`addInt`](https://docs.chain.link/any-api/api-reference/#addint) method (used with the single uint256 word) in which you can pass the value `times` to indicate that an API response’s value should be multiplied ("times") by a certain value. This is useful if a response. Alternatively, a node operator named [Translucent](https://translucent.link/products/get-uint256/) decided to implement the keyword `multiply` instead of `times` as it provided greater clarity to what the operation meant. Point being, beware that each node operator **\***could**\*** have certain transformations that are unique. Thus, you build a request in your contract that looks something like the following:
+For example, the Chainlink documentation notes an [`addInt`](https://docs.chain.link/any-api/api-reference/#addint) method (used with the single `uint256` word) in which you can pass the value `times` to indicate that an API response’s value should be multiplied ("times") by a certain value. This is useful if a response should be further changed after the query. Thus, you build a request in your contract that looks something like the following:
 
-```tsx
+```solidity
 // The URL to perform the GET request on
 req.add("get", url);
 // A comma-separated path to extract the desired data from the API response
 req.add("path", path);
 // Required parameter, set to `1` to denote no multiplication needed in return value
-req.addInt("multiply", 1); // Or, a node may choose to implement "times" here, which is the Chainlink default
+req.addInt("times", 1);
 ```
-
-This example uses a custom node operator, so be aware that a Chainlink-managed (or other operator) node may have different values (`times` vs. `multiply`).
 
 ### Chain support
 
-By default, Chainlink operated Any API nodes do not offer support for the Arbitrum Goerli testnet; they only support mainnet.
+Chainlink-operated Any API nodes offers support for a number of testnets, including **Ethereum Sepolia**:
 
-Instead, we’ll be using a node operator named [Translucent](https://translucent.link/) and their "Get Uint256" job with the following information for **Arbitrum Goerli**:
-
-- Contract address: [`0x2362A262148518Ce69600Cc5a6032aC8391233f5`](https://testnet.arbiscan.io/address/0x2362A262148518Ce69600Cc5a6032aC8391233f5)
-- Job ID: `7599d3c8f31e4ce78ad2b790cbcfc673`
-- LINK token address: `0xd14838A68E8AFBAdE5efb411d5871ea0011AFd28`
+- Node operator contract address: [`0x6090149792dAAeE9D1D568c9f9a6F6B46AA29eFD`](https://docs.chain.link/any-api/testnet-oracles/#operator-contracts)
+- Job ID (`GET>uint256`): `ca98366cc7314957b8c012c72f05aeeb` (others available [here](https://docs.chain.link/any-api/testnet-oracles/#job-ids))
+- LINK token address: [`0x779877A7B0D9E8603169DdbD7836e478b4624789`](https://docs.chain.link/resources/link-token-contracts/#sepolia-testnet)
 
 For a full list of Chainlink-managed contracts, see the following references in the Chainlink docs:
 
 - Any API contracts & job IDs: [here](https://docs.chain.link/any-api/testnet-oracles/)
-- LINK token addresses: [here](https://docs.chain.link/resources/link-token-contracts/#arbitrum-goerli-testnet)
+- LINK token addresses: [here](https://docs.chain.link/resources/link-token-contracts/)
 
 Similarly, see the other options listed in the [Translucent docs](https://translucent.link/products/get-uint256/).
 
@@ -59,56 +53,47 @@ Similarly, see the other options listed in the [Translucent docs](https://transl
 
 ### Testnet LINK
 
-Arbtirum is a rollup and requires you to first get test LINK tokens from Ethereum Goerli and the _bridge_ them to Arbitrum Goerli:
-
-1. Request testnet LINK from [https://faucets.chain.link/](https://faucets.chain.link/).
-2. Move the LINK from Ethereum to Arbitrum at [https://bridge.arbitrum.io/](https://bridge.arbitrum.io/).
-
-   ![Arbitrum Goerli](@site/static/assets/tutorials/table-reads-chainlink/arb-goerli.png)
-
-   1. In this step, you’ll need to specify the LINK token address on Ethereum Goerli, which is `0x326C977E6efc84E512bB9C30f76E30c160eD06FB`, in the _Select Token_ area (click on the token name next to the _Enter amount_)
-
-As part of the deployment flow, we’ll be depositing LINK into the contract, which will pay for API requests fulfilled by the Chainlink node operator. The default value per request is typically `0.1 LINK`.
+First, request testnet LINK from [https://faucets.chain.link/sepolia](https://faucets.chain.link/sepolia). This should give you 20 test LINK tokens. As part of the deployment flow, we’ll be depositing LINK into the contract, which will pay for API requests fulfilled by the Chainlink node operator. The default value per request is typically `0.1 LINK`.
 
 ### Oracle & job values
 
-In this example, the oracle and job ID are for the node operator Translucent; the LINK token address is the ERC20 LINK token on Arbitrum Goerli:
+In this example, the oracle and job ID are for the node operator Translucent; the LINK token address is the ERC20 LINK token on Ethereum Sepolia:
 
-```tsx
+```solidity
 /**
  * @dev Initialize the LINK token and target oracle
  *
- * Arbitrum Goerli Testnet details:
- * LINK Token: 0xf97f4df75117a78c1A5a0DBb814Af92458539FB4
- * Oracle: 0x2362A262148518Ce69600Cc5a6032aC8391233f5 (Translucent)
- * _jobId: 7599d3c8f31e4ce78ad2b790cbcfc673 (defined by Translucent at: https://translucent.link/products/get-uint256)
+ * Ethereum Sepolia Testnet details:
+ * LINK Token: 0x779877A7B0D9E8603169DdbD7836e478b4624789
+ * Oracle: 0x6090149792dAAeE9D1D568c9f9a6F6B46AA29eFD (Chainlink's Ethereum Sepolia oracle)
+ * _jobId: ca98366cc7314957b8c012c72f05aeeb
  *
  */
 constructor() ConfirmedOwner(msg.sender) {
-    setChainlinkToken(0xf97f4df75117a78c1A5a0DBb814Af92458539FB4);
-    setChainlinkOracle(0x2362A262148518Ce69600Cc5a6032aC8391233f5);
-    _jobId = "7599d3c8f31e4ce78ad2b790cbcfc673";
+    setChainlinkToken(0x779877A7B0D9E8603169DdbD7836e478b4624789);
+    setChainlinkOracle(0x6090149792dAAeE9D1D568c9f9a6F6B46AA29eFD);
+    _jobId = "ca98366cc7314957b8c012c72f05aeeb";
     _fee = (1 * LINK_DIVISIBILITY) / 10; // This is 0.1 LINK, where `LINK_DIVISIBILITY` is 10**18
 }
 ```
 
 ### Tableland request
 
-The following URL will be used for requesting Tableland state on-chain:
+The following URL will be used for requesting Tableland state onchain:
 
-- _[https://testnets.tableland.network/query?unwrap=true&statement=select%20%2A%20from%20healthbot_421613_1](https://testnets.tableland.network/query?unwrap=true&statement=select%20%2A%20from%20healthbot_421613_1)_
+- _[https://testnets.tableland.network/api/v1/query?unwrap=true&statement=select%20%2A%20from%20healthbot_11155111_1](https://testnets.tableland.network/api/v1/query?unwrap=true&statement=select%20%2A%20from%20healthbot_11155111_1)_
 
-It is the Tableland `healthbot` table deployed on the Arbitrum Goerli testnet, which simply increments a single `counter` key by an integer value. For mainnet chains, be sure to use the `tableland.network` gateway over the `testnets.tableland.network` gateway.
+It is the Tableland `healthbot` table deployed on the Ethereum Sepolia testnet, which simply increments a single `counter` key by an integer value. For mainnet chains, be sure to use the `tableland.network` gateway over the `testnets.tableland.network` gateway.
 
 The API response should look like the following:
 
 ```json
 {
-  "counter": 68935
+  "counter": 4994
 }
 ```
 
-Hence, the `path` referenced below is this single `"counter"` value. If there was nested JSON data, then that would simply be a longer comma separated value (e.g., `{ counter: { data: 68935 } }` would be represented with a path of `"counter,data"`).
+Hence, the `path` referenced below is this single `"counter"` value. If there was nested JSON data, then that would simply be a longer comma separated value (e.g., `{ counter: { data: 4994 } }` would be represented with a path of `"counter,data"`).
 
 ## Smart Contract
 
@@ -118,7 +103,7 @@ You’ll need to create a contract that inherits from the following Chainlink co
 
 A few key points, and note that the majority of these are set in an example deployment script, provided toward the end of this page:
 
-- `data` ⇒ The off-chain `data` returned by Chainlink from the Tableland network (i.e., table state get written on-chain by the oracle).
+- `data` ⇒ The offchain `data` returned by Chainlink from the Tableland network (i.e., table state get written onchain by the oracle).
 - `url` ⇒ URL to make an HTTP request to (i.e,. the Tableland gateway).
 - `path` ⇒ A comma separated HTTP response path that must lead to a single `uint256` (e.g., `"counter"`).
 - `_jobId` ⇒ Chainlink job ID (in this case, for getting a single word as `uint256`, which is noted above).
@@ -145,8 +130,8 @@ contract TableState is ChainlinkClient, ConfirmedOwner {
     event RequestData(bytes32 indexed requestId, uint256 data);
 
     constructor() ConfirmedOwner(msg.sender) {
-        setChainlinkToken(0xf97f4df75117a78c1A5a0DBb814Af92458539FB4);
-        setChainlinkOracle(0x2362A262148518Ce69600Cc5a6032aC8391233f5);
+        setChainlinkToken(0x779877A7B0D9E8603169DdbD7836e478b4624789);
+        setChainlinkOracle(0x6090149792dAAeE9D1D568c9f9a6F6B46AA29eFD);
         _jobId = "ca98366cc7314957b8c012c72f05aeeb";
         _fee = (1 * LINK_DIVISIBILITY) / 10;
     }
@@ -157,9 +142,9 @@ contract TableState is ChainlinkClient, ConfirmedOwner {
 
 A number of helper methods are included for setting the request URL, path, fee, and oracle:
 
-- `setRequestUrl` ⇒ Set the `url` to some HTTPS URL (e.g., the one noted above) for the Tableland `healthbot` table).
-- setRequestPath ⇒ Set the `path` to a single word response that maps to a `uint256`.
-- `setOracle` ⇒ Set the oracle contract address by which to make the off-chain request.
+- `setRequestUrl` ⇒ Set the `url` to some HTTPS URL (e.g., the one noted above) for the Tableland `healthbot` table.
+- `setRequestPath` ⇒ Set the `path` to a single word response that maps to a `uint256`.
+- `setOracle` ⇒ Set the oracle contract address by which to make the offchain request.
 - `setJobId` ⇒ Set the `_jobId` as specified by the oracle.
 - `setFee` ⇒ Set the Chainlink `fee`.
 - `setLinkToken` ⇒ Set the Chainlink LINK token address (can be helpful in testing scenarios but in theory, not needed after deployment).
@@ -201,12 +186,12 @@ function withdrawLink() public onlyOwner {
 
 ### Chainlink request-receive
 
-With oracles, there’s a "request-receive" pattern. Make an on-chain call to request off-chain data, and receive the result via the oracle. This is what will enable table state to be brought back into the contact:
+With oracles, there’s a "request-receive" pattern. Make an onchain call to request offchain data, and receive the result via the oracle. This is what will enable table state to be brought back into the contact:
 
 - `requestData` ⇒ Create a Chainlink request to retrieve API response, which include:
   - `req.add("get", url)` ⇒ Specify the request type and the URL, where `url` is a storage variable in this example.
   - `req.add("path", path)` ⇒ Specify the path to the data in the API response (e.g., `"counter"` is the key of the example URL).
-  - `req.addInt("multiply", 1)` ⇒ (Required) Specify how to transform the response data, which can be useful when working with non-integer response values on-chain.
+  - `req.addInt("times", 1)` ⇒ (Required) Specify how to transform the response data, which can be useful when working with non-integer response values onchain.
     - Note: `multiply` may be replaced with `times` if using a Chainlink-managed node; `multiply` is defined by the node operator Translucent.
   - `sendChainlinkRequest` ⇒ Makes the call to the oracle contract.
 - `fulfill` ⇒ Receive the API response in the form of `uint256`, which is then set to the storage variable `data`.
@@ -220,7 +205,7 @@ function requestData() public returns (bytes32 requestId) {
   );
   req.add("get", url);
   req.add("path", path);
-  req.addInt("multiply", 1); // Or, a node may choose to implement "times" here, which is the Chainlink default
+  req.addInt("times", 1); // Or, a node may choose to implement "times" here, which is the Chainlink default
   // Sends the request
   requestId = sendChainlinkRequest(req, _fee);
 }
@@ -234,7 +219,7 @@ function fulfill(
 }
 ```
 
-Namely, call `requestData` to make an off-chain request and retrieve table state written on-chain via `fulfill`, which emits the request event.
+Namely, call `requestData` to make an offchain request and retrieve table state written onchain via `fulfill`, which emits the request event.
 
 ### Full contract code
 
@@ -250,7 +235,7 @@ import "@chainlink/contracts/src/v0.8/ConfirmedOwner.sol";
 contract TableState is ChainlinkClient, ConfirmedOwner {
     using Chainlink for Chainlink.Request;
 
-    // The off-chain `data` returned by Chainlink from the Tableland network
+    // The offchain `data` returned by Chainlink from the Tableland network
     uint256 public data;
     // URL to make an HTTP request to
     string public url;
@@ -265,18 +250,19 @@ contract TableState is ChainlinkClient, ConfirmedOwner {
     event RequestData(bytes32 indexed requestId, uint256 data);
 
     /**
-     * @dev Initialize the LINK token and target oracle.
-     *
-     * Arbitrum Goerli Testnet details:
-     * LINK Token: 0xf97f4df75117a78c1A5a0DBb814Af92458539FB4
-     * Oracle: 0x2362A262148518Ce69600Cc5a6032aC8391233f5 (Translucent)
-     * _jobId: 7599d3c8f31e4ce78ad2b790cbcfc673 (defined by Translucent at: https://translucent.link/products/get-uint256)
-     */
+    * @dev Initialize the LINK token and target oracle
+    *
+    * Ethereum Sepolia Testnet details:
+    * LINK Token: 0x779877A7B0D9E8603169DdbD7836e478b4624789
+    * Oracle: 0x6090149792dAAeE9D1D568c9f9a6F6B46AA29eFD (Chainlink's Ethereum Sepolia oracle)
+    * _jobId: ca98366cc7314957b8c012c72f05aeeb
+    *
+    */
     constructor() ConfirmedOwner(msg.sender) {
-        setChainlinkToken(0xf97f4df75117a78c1A5a0DBb814Af92458539FB4);
-        setChainlinkOracle(0x2362A262148518Ce69600Cc5a6032aC8391233f5);
-        _jobId = "7599d3c8f31e4ce78ad2b790cbcfc673";
-        _fee = (1 * LINK_DIVISIBILITY) / 10;
+        setChainlinkToken(0x779877A7B0D9E8603169DdbD7836e478b4624789);
+        setChainlinkOracle(0x6090149792dAAeE9D1D568c9f9a6F6B46AA29eFD);
+        _jobId = "ca98366cc7314957b8c012c72f05aeeb";
+        _fee = (1 * LINK_DIVISIBILITY) / 10; // This is 0.1 LINK, where `LINK_DIVISIBILITY` is 10**18
     }
 
     /**
@@ -294,7 +280,7 @@ contract TableState is ChainlinkClient, ConfirmedOwner {
     }
 
     /**
-     * @dev Set the oracle to make the off-chain request.
+     * @dev Set the oracle to make the offchain request.
      */
     function setOracle(address oracle) external onlyOwner {
         setChainlinkOracle(oracle);
@@ -335,7 +321,7 @@ contract TableState is ChainlinkClient, ConfirmedOwner {
         // Set the path to find the desired data in the API response
         req.add("path", path);
         // Required parameter, set to `1` to denote no multiplication needed in return value
-        req.addInt("multiply", 1); // Or, a node may choose to implement "times" here, which is the Chainlink default
+        req.addInt("times", 1);
         // Sends the request
         requestId = sendChainlinkRequest(req, _fee);
     }
@@ -366,9 +352,9 @@ contract TableState is ChainlinkClient, ConfirmedOwner {
 
 ## Deployment
 
-To see the full deployment code, check out the [repo](https://github.com/dtbuchholz/tutorial-on-chain-reads-chainlink-arbitrum). Here, we’ll highlight some actions that should take place from within a deploy script:
+To see the full deployment code, check out the [repo](https://github.com/dtbuchholz/tutorial-onchain-reads-chainlink-ethereum). Here, we’ll highlight some actions that should take place from within a deploy script:
 
-- Set the `url` value, using `setRequestUrl`, to the Tableland gateway at [https://testnets.tableland.network/query?unwrap=true&statement=select%20%2A%20from%20healthbot_421613_1](https://testnets.tableland.network/query?unwrap=true&statement=select%20%2A%20from%20healthbot_421613_1)
+- Set the `url` value, using `setRequestUrl`, to the Tableland gateway at [https://testnets.tableland.network/api/v1/query?unwrap=true&statement=select%20%2A%20from%20healthbot_11155111_1](https://testnets.tableland.network/api/v1/query?unwrap=true&statement=select%20%2A%20from%20healthbot_11155111_1)
 - Set the `path` value, using `setRequestPath`, to `counter`
 - Fund the contract with `LINK`.
 
@@ -376,12 +362,12 @@ To see the full deployment code, check out the [repo](https://github.com/dtbuchh
 
 A number of tasks are also included in the sample repo, including:
 
-- Initiate a request for off-chain data (`request-data`).
-- Read the off-chain data that’s written to the contract (`read-data`).
+- Initiate a request for offchain data (`request-data`).
+- Read the offchain data that’s written to the contract (`read-data`).
 - Other helper tasks, like setting the URL, path, etc.
 
 To access these, simply run `npx hardhat <task>` on the target network, along with the specified parameters, where applicable. Tasks make it easy to interact with the contract using the command line.
 
 ## Next steps
 
-From there, the possibilities are endless! This is a _very_ simple example of a single word response, but it should provide enough context to get started with requesting table state on-chain.
+From there, the possibilities are endless! This is a _very_ simple example of a single word response, but it should provide enough context to get started with requesting table state onchain.

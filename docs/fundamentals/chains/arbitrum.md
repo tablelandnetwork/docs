@@ -81,6 +81,6 @@ Thus, you can imagine how high volume applications can take advantage of both th
 1. Request testnet Ether from a faucet noted above (e.g., [here](https://sepoliafaucet.com/) or [here](https://faucet.chainstack.com/sepolia-testnet-faucet)).
 2. Move the ETH from Ethereum to Arbitrum at [https://bridge.arbitrum.io/](https://bridge.arbitrum.io/)—i.e., select "ETH" (or, as in the screenshot below, other ERC20 tokens that exist on Ethereum Sepolia can be bridged).
 
-import bridge from "@site/static/assets/tutorials/table-reads-chainlink/arb-sepolia.png"
+import bridge from "@site/static/assets/arb-sepolia.png"
 
 <img src={bridge} width="80%"/>
