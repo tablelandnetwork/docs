@@ -89,16 +89,16 @@ Consider only a use case that, at its fastest, needs to write data at the **same
 
 For reference, Ethereum and the "rollup" scaling solutions all have a max block gas limit of 30 million gas. Polygon has a maximum of 20 million gas per block. Knowing this, along with the gas used for create / write transactions, can be helpful when designing and understanding if a use case make sense for Tableland.
 
-## Competitive solutions
+## Alternative web3 options
 
-Tableland is, obviously, the best choice for decentralized data storage, but there are others tackling this issue. You should already be familiar with web3 data choices developers have had to make around on-chain storage, decentralized file solutions (IPFS / similar), and centralized service providers. These aren't really _competitive_ solutions, per se, but alternatives developers have had to use due to lack of web3-native options.
+Tableland is a great solution for decentralized data storage, but we appreciate all builders; there are others tackling this issue. You should already be familiar with web3 data choices developers have had to make around on-chain storage, decentralized file solutions (IPFS / similar), and centralized service providers.
 
 In the web3-specific database space, there are a few protocols developers are using—each with a different approach:
 
-- [Ceramic](https://ceramic.network/): Rather complex concepts, acts as a standalone network (no interaction with any host chains), and uses its own identity system (rather than EVM accounts).
-- [Polybase](https://polybase.xyz/docs/introduction): Not intended for smart contract devs, _somewhat_ decoupled from the host chain (it's a zk-rollup). You lose ability to create on-chain data & rules to drive table changes, so it complicates application development since you can't, for example, have a smart contract write to the database.
-- [Space and Time](https://www.spaceandtime.io/): Primarily focused on being a general web3 data warehouse with on- and off-chain data flowing into its indexing layer.
-- [The Graph](https://thegraph.com/docs/en/): Data indexing solution, not _really_ a competitor. Think of The Graph as a way to query EVM data (i.e., historical event store), whereas Tableland is intended for chain-driven data liveliness—a cache-like _store only latest state_ approach. (Although, you _could_ build an index with tables!)
+- [Ceramic](https://ceramic.network/): Some complex concepts and uses its own identity system (rather than EVM accounts). But, it's built on top of IPFS and has some novel capabilities.
+- [Polybase](https://polybase.xyz/docs/introduction): Not intended for smart contract devs, _somewhat_ decoupled from the host chain (it's a zk-rollup). But, it comes with some nice privacy-focused features.
+- [Space and Time](https://www.spaceandtime.io/): Primarily focused on being a general web3 data warehouse with on- and off-chain data flowing into its indexing layer. Some SQL features but not focused on the same chain-driven type of data storage; it operates a bit differently.
+- [The Graph](https://thegraph.com/docs/en/): Data indexing solution that could be used in a similar context, but it's more about pure generalized indexing. Think of The Graph as a way to query EVM data (i.e., historical event store), whereas Tableland is intended for chain-driven data liveliness—a cache-like _store only latest state_ approach. It does require a bit of overhead are subgraphs and transformations vs. Tableland's pure serverless SQL setup.
 
 ## Resources
 

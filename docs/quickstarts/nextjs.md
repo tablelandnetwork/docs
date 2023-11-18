@@ -1,11 +1,12 @@
 ---
-title: Use Tableland with React
-sidebar_label: React
-description: Quickly set up a React application with Tableland via an account and database connection.
+title: Use Tableland with Next.js
+sidebar_label: Next.js
+description: Quickly set up a Next.js application with Tableland via an account and database connection.
 keywords:
   - quickstart
   - quickstarts
-  - react
+  - nextjs
+  - next.js
 ---
 
 import Tabs from "@theme/Tabs";
@@ -13,20 +14,20 @@ import TabItem from "@theme/TabItem";
 
 ## 1. Installation & setup
 
-Create a React app and install Tableland as a dependency.
+Create a Next.js app and install Tableland as a dependency.
 
 <Tabs groupId="sdk">
 <TabItem value="js" label="JavaScript" default>
 
 ```bash
-npx create-react-app my-tableland-app
+npx create-next-app --js my-tableland-app
 ```
 
 </TabItem>
 <TabItem value="ts" label="TypeScript">
 
 ```bash
-npx create-react-app my-tableland-app --template typescript
+npx create-next-app --ts my-tableland-app
 ```
 
 </TabItem>
@@ -38,45 +39,42 @@ Then, `cd` into the project and install Tableland.
 npm install --save @tableland/sdk
 ```
 
-Under `src`, find the `App` component, and import `Database` from `@tableland/sdk`. The SDK already provides access to [`ethers v5`](https://docs.ethers.org/v5/)—for setting up an account connection, you should also import `Signer` and `providers`. Lastly, import `useState` from `react` for a simple way to track the signer in your application's state.
+Under `src/app`, go to the `app.js` component, and import `Database` from `@tableland/sdk`. The SDK already provides access to [`ethers v5`](https://docs.ethers.org/v5/)—for setting up an account connection, you should also import `Signer` and `providers`. Lastly, we'll import `useState` from `react` for a simple way to track the signer in your application's state.
 
 <Tabs groupId="sdk">
 <TabItem value="js" label="JavaScript" default>
 
-```js title="src/App.js"
+```jsx title="src/app/page.js"
 // highlight-start
+"use client";
+
 import { Database } from "@tableland/sdk";
-import { Signer, providers } from "ethers";
+import { providers } from "ethers";
 import { useState } from "react";
 // highlight-end
 
-function App() {
-  return <div></div>;
+export function Home() {
+  return <></>;
 }
-
-export default App;
 ```
 
 </TabItem>
 <TabItem value="ts" label="TypeScript">
 
-```ts title="src/App.tsx"
+```tsx title="src/app/page.tsx"
 // highlight-start
+"use client";
+
 import { Database } from "@tableland/sdk";
 import { Signer, providers } from "ethers";
 import { useState } from "react";
-// highlight-end
 
-// highlight-start
-// Provide a global `window` variable to prevent type errors
 declare const window: any;
 // highlight-end
 
-function App() {
-  return <div></div>;
+export default function Home() {
+  return <></>;
 }
-
-export default App;
 ```
 
 </TabItem>
@@ -89,11 +87,7 @@ All database creates and writes need a `Signer`. Create a `connectSigner` method
 <Tabs groupId="sdk">
 <TabItem value="js" label="JavaScript" default>
 
-```js title="src/App.js"
-import { Database } from "@tableland/sdk";
-import { Signer, providers } from "ethers";
-import { useState } from "react";
-
+```jsx title="src/app/page.js"
 // highlight-start
 async function connectSigner() {
   // Establish a connection with the browser wallet's provider.
@@ -107,25 +101,17 @@ async function connectSigner() {
 }
 // highlight-end
 
-function App() {
+export default function Home() {
   // highlight-next-line
   const [signer, setSigner] = useState();
   return <div></div>;
 }
-
-export default App;
 ```
 
 </TabItem>
 <TabItem value="ts" label="TypeScript">
 
-```ts title="src/App.tsx"
-import { Database } from "@tableland/sdk";
-import { Signer, providers } from "ethers";
-import { useState } from "react";
-
-declare const window: any;
-
+```tsx title="src/app/page.tsx"
 // highlight-start
 async function connectSigner(): Promise<Signer> {
   // Establish a connection with the browser wallet's provider.
@@ -139,13 +125,11 @@ async function connectSigner(): Promise<Signer> {
 }
 // highlight-end
 
-function App() {
+export default function Home() {
   // highlight-next-line
   const [signer, setSigner] = useState<Signer>();
   return <div></div>;
 }
-
-export default App;
 ```
 
 </TabItem>
@@ -156,8 +140,8 @@ You'll want create some way of calling this connect method, such as a "connect" 
 <Tabs groupId="sdk">
 <TabItem value="js" label="JavaScript" default>
 
-```js title="src/App.js"
-function App() {
+```jsx title="src/app/page.js"
+export function Home() {
   const [signer, setSigner] = useState();
 
   // highlight-start
@@ -170,8 +154,11 @@ function App() {
 
   return (
     <div>
-      // highlight-next-line
-      <button onClick={async () => handleConnect()}>Connect</button>
+      // highlight-start
+      <button onClick={handleConnect}>
+        {signer ? "Connected!" : "Connect"}
+      </button>
+      // highlight-end
     </div>
   );
 }
@@ -180,8 +167,8 @@ function App() {
 </TabItem>
 <TabItem value="ts" label="TypeScript">
 
-```ts title="src/App.tsx"
-function App() {
+```tsx title="src/app/page.tsx"
+export default function Home() {
   const [signer, setSigner] = useState<Signer>();
 
   // highlight-start
@@ -194,8 +181,11 @@ function App() {
 
   return (
     <div>
-      // highlight-next-line
-      <button onClick={async () => handleConnect()}>Connect</button>
+      // highlight-start
+      <button onClick={handleConnect}>
+        {signer ? "Connected!" : "Connect"}
+      </button>
+      // highlight-end
     </div>
   );
 }
@@ -211,7 +201,12 @@ Setting up a connection is rather straightforward once you have a signer. Simply
 <Tabs groupId="sdk">
 <TabItem value="js" label="JavaScript" default>
 
-```js title="src/App.js"
+```jsx title="src/app/page.js"
+async function handleConnect() {
+  // Connect a signer
+  const signer = await connectSigner();
+  setSigner(signer);
+}
 // highlight-start
 async function connectDatabase(signer) {
   // Establish a connection with the database
@@ -220,7 +215,7 @@ async function connectDatabase(signer) {
 }
 // highlight-end
 
-function App() {
+export default function Home() {
   const [signer, setSigner] = useState();
 
   async function handleConnect() {
@@ -234,18 +229,24 @@ function App() {
 
   return (
     <div>
-      <button onClick={async () => handleConnect()}>Connect</button>
+      <button onClick={handleConnect}>
+        {signer ? "Connected!" : "Connect"}
+      </button>
     </div>
   );
 }
-
-export default App;
 ```
 
 </TabItem>
 <TabItem value="ts" label="TypeScript">
 
-```ts title="src/App.tsx"
+```tsx title="src/app/page.tsx"
+async function handleConnect() {
+  // Connect a signer
+  const signer = await connectSigner();
+  setSigner(signer);
+}
+
 // highlight-start
 async function connectDatabase(signer: Signer) {
   // Establish a connection with the database
@@ -254,7 +255,7 @@ async function connectDatabase(signer: Signer) {
 }
 // highlight-end
 
-function App() {
+export default function Home() {
   const [signer, setSigner] = useState<Signer>();
 
   async function handleConnect() {
@@ -268,12 +269,12 @@ function App() {
 
   return (
     <div>
-      <button onClick={async () => handleConnect()}>Connect</button>
+      <button onClick={handleConnect}>
+        {signer ? "Connected!" : "Connect"}
+      </button>
     </div>
   );
 }
-
-export default App;
 ```
 
 </TabItem>
@@ -286,7 +287,7 @@ Also, you _could_ track a database singleton using the `useState` hook, similar 
 <Tabs groupId="sdk">
 <TabItem value="js" label="JavaScript" default>
 
-```js title="src/App.js"
+```jsx title="src/app/page.js"
 async function connectDatabase(signer) {
   // Establish a connection with the database
   const db = new Database({ signer });
@@ -295,7 +296,7 @@ async function connectDatabase(signer) {
   return db;
 }
 
-function App() {
+export default function Home() {
   const [signer, setSigner] = useState();
   // highlight-next-line
   const [database, setDatabase] = useState();
@@ -313,18 +314,18 @@ function App() {
 
   return (
     <div>
-      <button onClick={async () => handleConnect()}>Connect</button>
+      <button onClick={handleConnect}>
+        {signer ? "Connected!" : "Connect"}
+      </button>
     </div>
   );
 }
-
-export default App;
 ```
 
 </TabItem>
 <TabItem value="ts" label="TypeScript">
 
-```ts title="src/App.tsx"
+```tsx title="src/app/page.tsx"
 async function connectDatabase(signer: Signer): Promise<Database> {
   // Establish a connection with the database
   const db = new Database({ signer });
@@ -333,7 +334,7 @@ async function connectDatabase(signer: Signer): Promise<Database> {
   return db;
 }
 
-function App() {
+export default function Home() {
   const [signer, setSigner] = useState<Signer>();
   // highlight-next-line
   const [database, setDatabase] = useState<Database>();
@@ -351,12 +352,123 @@ function App() {
 
   return (
     <div>
-      <button onClick={async () => handleConnect()}>Connect</button>
+      <button onClick={handleConnect}>
+        {signer ? "Connected!" : "Connect"}
+      </button>
     </div>
   );
 }
+```
 
-export default App;
+</TabItem>
+</Tabs>
+
+## Putting it all together
+
+Here is the final code from above, all in one place.
+
+<Tabs groupId="sdk">
+<TabItem value="js" label="JavaScript" default>
+
+```jsx title="src/app/page.js"
+"use client";
+
+import { Database } from "@tableland/sdk";
+import { providers } from "ethers";
+import { useState } from "react";
+
+async function connectSigner() {
+  // Establish a connection with the browser wallet's provider.
+  const provider = new providers.Web3Provider(window.ethereum);
+  // Request the connected accounts, prompting a browser wallet popup to connect.
+  await provider.send("eth_requestAccounts", []);
+  // Create a signer from the returned provider connection.
+  const signer = provider.getSigner();
+  // Return the signer
+  return signer;
+}
+
+async function connectDatabase(signer) {
+  // Establish a connection with the database
+  const db = new Database({ signer });
+  // Return the database instance
+  return db;
+}
+
+export default function Home() {
+  const [signer, setSigner] = useState();
+  const [database, setDatabase] = useState();
+
+  async function handleConnect() {
+    // Connect a signer
+    const signer = await connectSigner();
+    setSigner(signer);
+    // Connect and interact with the database
+    const database = await connectDatabase(signer);
+    setDatabase(database);
+  }
+
+  return (
+    <div>
+      <button onClick={handleConnect}>
+        {signer ? "Connected!" : "Connect"}
+      </button>
+    </div>
+  );
+}
+```
+
+</TabItem>
+<TabItem value="ts" label="TypeScript">
+
+```tsx title="src/app/page.tsx"
+"use client";
+
+import { Database } from "@tableland/sdk";
+import { Signer, providers } from "ethers";
+import { useState } from "react";
+
+declare const window: any;
+
+async function connectSigner(): Promise<Signer> {
+  // Establish a connection with the browser wallet's provider.
+  const provider = new providers.Web3Provider(window.ethereum);
+  // Request the connected accounts, prompting a browser wallet popup to connect.
+  await provider.send("eth_requestAccounts", []);
+  // Create a signer from the returned provider connection.
+  const signer = provider.getSigner();
+  // Return the signer
+  return signer;
+}
+
+async function connectDatabase(signer: Signer): Promise<Database> {
+  // Establish a connection with the database
+  const db = new Database({ signer });
+  // Return the database instance
+  return db;
+}
+
+export default function Home() {
+  const [signer, setSigner] = useState<Signer>();
+  const [database, setDatabase] = useState<Database>();
+
+  async function handleConnect() {
+    // Connect a signer
+    const signer = await connectSigner();
+    setSigner(signer);
+    // Connect and interact with the database
+    const database = await connectDatabase(signer);
+    setDatabase(database);
+  }
+
+  return (
+    <div>
+      <button onClick={handleConnect}>
+        {signer ? "Connected!" : "Connect"}
+      </button>
+    </div>
+  );
+}
 ```
 
 </TabItem>
@@ -370,10 +482,10 @@ For private variable like wallet private keys, these should be placed in a `.env
 PRIVATE_KEY=your_wallet_private_key
 ```
 
-Public variable should exist in a `.env` file in your project's root and save your private key here. For Next to read an environment variable on the client-side, you'll need to prefix it with `VITE`.
+Public variable should exist in a `.env` file in your project's root and save your private key here. For Next to read an environment variable on the client-side, you'll need to prefix it with `NEXT_PUBLIC`.
 
 ```title='.env'
-VITE_VAR=your_public_variable
+NEXT_PUBLIC_VAR=your_public_variable
 ```
 
-Then, you can access these with the pattern: `import.meta.env.VITE_VAR`.
+Then, you can access these with the pattern: `process.env.NEXT_PUBLIC_VAR`.

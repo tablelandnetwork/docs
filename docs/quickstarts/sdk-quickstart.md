@@ -53,7 +53,11 @@ npx local-tableland
 
 The snippet below is not needed if you're connecting to a browser wallet. But, if you're developing in Node, you'll have to instantiate a `Signer` and then pass the signer to the `Database` constructor. Let's review this first with a Hardhat account being used as the signer & private key.
 
+<Tabs groupId="sdk">
+<TabItem value="nodejs" label="Node.js" default>
+
 ```js
+import { Database } from "@tableland/sdk";
 import { Wallet, getDefaultProvider } from "ethers";
 
 const privateKey =
@@ -67,7 +71,25 @@ const signer = wallet.connect(provider);
 const db = new Database({ signer });
 ```
 
-If you _are_ using a browser wallet connection, you can simply skip the step above and instantiate the `Database` class without a `Signer`.
+</TabItem>
+<TabItem value="web" label="Web">
+
+```js
+import { Database } from "@tableland/sdk";
+import { providers, Signer } from "ethers";
+
+// Establish a connection with a `Signer`
+const provider = new providers.Web3Provider(window.ethereum);
+// Request the connected accounts, prompting a browser wallet popup to connect.
+await provider.send("eth_requestAccounts", []);
+// Create a signer from the returned provider connection.
+const signer = provider.getSigner();
+
+const tableland = Database({ signer });
+```
+
+</TabItem>
+</Tabs>
 
 ## 3. Create a table
 
@@ -75,13 +97,12 @@ As mentioned, you can create a table by instantiating an ethers a `Signer`, but 
 
 Start by connecting to an instance of the `Database` class, and use the `prepare` method while passing a `CREATE TABLE {prefix} ...` statement. You can then `run` this statement to execute it.
 
-Note the example below do use a signer passed to the `Database`, but the only difference is that instead of passing the signer, you will just instantiate the `Database` with nothing, like `const db = new Database()`.
+Note the examples below do use a `signer` passed to the `Database`. If you want to default to a browser connect, instead of passing the signer, you can choose to instantiate the `Database` with nothing, like `const db = new Database()`. This is an alternative to the example from the previous step.
 
 <Tabs groupId="sdk">
 <TabItem value="js" label="JavaScript" default>
 
 ```js
-// Default to grabbing a wallet connection in a browser
 const db = new Database({ signer });
 
 // This is the table's `prefix`--a custom table value prefixed as part of the table's name
@@ -98,15 +119,14 @@ await create.txn?.wait();
 </TabItem>
 <TabItem value="ts" label="TypeScript">
 
-```js
+```ts
 // Interface for the table's schema
 interface TableSchema {
   id: number;
   val: string;
 }
 
-// Default to grabbing a wallet connection in a browser
-const db = new Database() < TableSchema > { signer };
+const db = new Database<TableSchema>({ signer });
 
 // This is the table's `prefix`--a custom table value prefixed as part of the table's name
 const prefix: string = "my_table";
@@ -163,12 +183,14 @@ Static statements are still possible (e.g., specifying `0` and `"Bobby Tables"` 
 
 ## 5. Read from a table
 
-Table _reads_ do not require an onchain connection. Technically, you can instate the `Database` class without needing a signer in order to make a read query (`SELECT` statement) using the same `prepare`, which returns the values in the table. Let's continue using the same table created and written to in the prior steps, which was saved in the `tableName` variable.
+Table _reads_ do not require an onchain connection. Technically, you can instate the `Database` class without needing a signer in order to make a read query (`SELECT` statement) using the same `prepare`, which returns the values in the table. Let's continue using the same table created and written to in the prior steps, which was saved in the `tableName` variable. Note that in these examples, we show a "read-only" `Database` instantiation. There's no need to instantiate a different database connection for creates vs. writes vs. reads, but we're doing so here to show that you can use the `Database` class a bit differently in read-only use cases. Namely, no signer required!
 
 <Tabs groupId="sdk">
 <TabItem value="js" label="JavaScript" default>
 
 ```js
+const db = new Database();
+
 const { results } = await db.prepare(`SELECT * FROM ${tableName};`).all();
 console.log(results);
 ```

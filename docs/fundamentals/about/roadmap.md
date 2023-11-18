@@ -28,10 +28,14 @@ We’re here to build a new web. Together.
 
 ### 2023
 
+#### Q3
+
+- Studio web application MVP.
+- Core protocol research and development.
+- Tableland Basin initial MVP/alpha.
+
 #### Q2
 
-- Tableland protocol litepaper.
-- Studio web application MVP.
 - Arbitrum Nova support.
 - Filecoin (FVM) support.
 - Improved on-chain access control.
@@ -41,7 +45,6 @@ We’re here to build a new web. Together.
 - Inclusion proof PoC.
 - Table configurations feature.
 - Local-first wasm based SQLite support.
-- Author a token reputation EIP.
 - Docs site content refresh & deployment.
 
 #### Q1

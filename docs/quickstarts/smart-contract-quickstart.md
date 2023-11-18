@@ -30,7 +30,7 @@ contract Starter {
   // The table token ID, assigned upon `TablelandTables` minting a table
   uint256 private _tableId;
   // Table prefix for the table (custom value)
-  string private constant _TABLE_PREFIX = "my_smart_contract_table";
+  string private constant _TABLE_PREFIX = "my_table";
 }
 ```
 
@@ -54,7 +54,7 @@ contract Starter {
   // The table token ID, assigned upon `TablelandTables` minting a table
   uint256 private _tableId;
   // Table prefix for the table (custom value)
-  string private constant _TABLE_PREFIX = "my_smart_contract_table";
+  string private constant _TABLE_PREFIX = "my_table";
 }
 ```
 
@@ -63,7 +63,7 @@ contract Starter {
 Call `TablelandDeployments.get().create()` and pass parameters for the address that should receive the table as well as the `CREATE TABLE` statement that defines the table schema and prefix. The `SQLHelper`'s `toCreateFromSchema()` method makes this a little easier to do.
 
 ```solidity
-function create() public payable {
+function createTable() public payable {
  /*  Under the hood, SQL helpers formulates:
   *
   *  CREATE TABLE {prefix}_{chainId} (
@@ -84,6 +84,12 @@ function create() public payable {
 
 Note that the table here is created and owned by `msg.sender`, so only this account will be able to write mutating SQL statements, by default. The contract will be unable to send SQL statements without additional configuration.
 
+:::note
+_Is it possible to read data in a smart contract?_ Short answer: **no**. Table reads are entirely offchain and interact directly with a Tableland validator node. A smart contract can _only_ create tables or write to them. In order to read table data in a smart contract, you would have to implement custom offchain logic or use [oracles](/tutorials/table-reads-chainlink) to then write the offchain materialized data back onchain.
+
+If you need to read data in the contract, it's best to store it in a mapping or other data structure while also writing to a Tableland table.
+:::
+
 ## 3. Add contract table ownership
 
 To make calls SQL from the contract, the easiest approach is to have the contract own the table itself. OpenZeppelin has an `ERC721Holder` contract that enables this functionality, allowing you to use `address(this)` within the Tableland table creates and writes.
@@ -99,7 +105,7 @@ import "@openzeppelin/contracts/token/ERC721/utils/ERC721Holder.sol";
 contract Starter is ERC721Holder {
   // Existing code here
 
-  function create() public payable {
+  function createTable() public payable {
     _tableId = TablelandDeployments.get().create(
       // highlight-next-line
       address(this),
@@ -121,29 +127,29 @@ You can insert, update, or delete data using `TablelandDeployments.get().mutate(
 
 ```solidity
 // Insert data into a table
-function insert() public payable {
- /*  Under the hood, SQL helpers formulates:
-  *
-  *  INSERT INTO {prefix}_{chainId}_{tableId} (id,val) VALUES(
-  *    1
-  *    'msg.sender'
-  *  );
-  */
-  TablelandDeployments.get().mutate(
-    address(this),
-    _tableId,
-    SQLHelpers.toInsert(
-      _TABLE_PREFIX,
-      _tableId,
-      "id,val",
-      string.concat(
-        Strings.toString(1), // Convert to a string
-        ",",
-        SQLHelpers.quote(Strings.toHexString(msg.sender)) // Wrap strings in single quotes
-      )
-    )
-  );
-};
+function insertIntoTable(uint256 id, string memory val) external {
+   /*  Under the hood, SQL helpers formulates:
+    *
+    *  INSERT INTO {prefix}_{chainId}_{tableId} (id,val) VALUES(
+    *    1
+    *    'msg.sender'
+    *  );
+    */
+    TablelandDeployments.get().mutate(
+        address(this), // Table owner, i.e., this contract
+        _tableId,
+        SQLHelpers.toInsert(
+            _TABLE_PREFIX,
+            _tableId,
+            "id,val",
+            string.concat(
+                Strings.toString(id), // Convert to a string
+                ",",
+                SQLHelpers.quote(val) // Wrap strings in single quotes with the `quote` method
+            )
+        )
+    );
+}
 ```
 
 The `Strings.toHexString()` method is used for hexadecimals like an `address`, but for other strings, keep in mind that `Strings.toString()` should be used.
@@ -158,32 +164,127 @@ If you want to update table values, it technically goes through the same `mutate
 
 ```solidity
 // Update data in the table
-function update(uint256 myId, string memory myVal) public payable {
-  // Set values to update, like the "val" column to the function input param
-  string memory setters = string.concat(
-    "val=",
-    SQLHelpers.quote(myVal) // Wrap strings in single quotes
-  );
-  // Only update the row with the matching `id`
-  string memory filters = string.concat(
-    "id=",
-    Strings.toString(myId)
-  );
-  /*  Under the hood, SQL helpers formulates:
-   *
-   *  UPDATE {prefix}_{chainId}_{tableId} SET val=<myVal> WHERE id=<id>
-   */
-  TablelandDeployments.get().mutate(
-    address(this),
-    _tableId,
-    SQLHelpers.toUpdate(
-      _TABLE_PREFIX,
-      _tableId,
-      setters,
-      filters
-    )
-  );
+function updateTable(uint256 id, string memory val) external {
+   /*  Under the hood, SQL helpers formulates:
+    *
+    *  UPDATE {prefix}_{chainId}_{tableId} SET val=<val> WHERE id=<id>
+    */
+    // Set the values to update
+    string memory setters = string.concat("val=", SQLHelpers.quote(val));
+    // Specify filters for which row to update
+    string memory filters = string.concat(
+        "id=",
+        Strings.toString(id)
+    );
+    // Mutate a row at `id` with a new `val`
+    TablelandDeployments.get().mutate(
+        address(this),
+        _tableId,
+        SQLHelpers.toUpdate(_TABLE_PREFIX, _tableId, setters, filters)
+    );
 }
+```
+
+## Putting it all together
+
+Here is the full smart contract code from above, along with some other examples for updating, deleting, setting [access control](/smart-contracts/controller), and getting table information.
+
+```solidity
+// SPDX-License-Identifier: MIT
+pragma solidity >=0.8.10 <0.9.0;
+
+import {Strings} from "@openzeppelin/contracts/utils/Strings.sol";
+import {ERC721Holder} from "@openzeppelin/contracts/token/ERC721/utils/ERC721Holder.sol";
+import {TablelandDeployments} from "@tableland/evm/contracts/utils/TablelandDeployments.sol";
+import {SQLHelpers} from "@tableland/evm/contracts/utils/SQLHelpers.sol";
+
+contract Example is ERC721Holder {
+    // Store relevant table info
+    uint256 private _tableId; // Unique table ID
+    string private constant _TABLE_PREFIX = "my_table"; // Custom table prefix
+
+    // Creates a simple table with an `id` and `val` column
+    function createTable() public payable {
+      _tableId = TablelandDeployments.get().create(
+            address(this),
+            SQLHelpers.toCreateFromSchema(
+              "id integer primary key," // Notice the trailing comma
+              "val text",
+              _TABLE_PREFIX
+            )
+        );
+    }
+
+    // Let anyone insert into the table
+    function insertIntoTable(uint256 id, string memory val) external {
+        TablelandDeployments.get().mutate(
+            address(this), // Table owner, i.e., this contract
+            _tableId,
+            SQLHelpers.toInsert(
+                _TABLE_PREFIX,
+                _tableId,
+                "id,val",
+                string.concat(
+                    Strings.toString(id), // Convert to a string
+                    ",",
+                    SQLHelpers.quote(val) // Wrap strings in single quotes with the `quote` method
+                )
+            )
+        );
+    }
+
+    // Update only the row that the caller inserted
+    function updateTable(uint256 id, string memory val) external {
+        // Set the values to update
+        string memory setters = string.concat("val=", SQLHelpers.quote(val));
+        // Specify filters for which row to update
+        string memory filters = string.concat(
+            "id=",
+            Strings.toString(id)
+        );
+        // Mutate a row at `id` with a new `val`
+        TablelandDeployments.get().mutate(
+            address(this),
+            _tableId,
+            SQLHelpers.toUpdate(_TABLE_PREFIX, _tableId, setters, filters)
+        );
+    }
+
+    // Delete a row from the table by ID
+    function deleteFromTable(uint256 id) external {
+        // Specify filters for which row to delete
+        string memory filters = string.concat(
+            "id=",
+            Strings.toString(id)
+        );
+        // Mutate a row at `id`
+        TablelandDeployments.get().mutate(
+            address(this),
+            _tableId,
+            SQLHelpers.toDelete(_TABLE_PREFIX, _tableId, filters)
+        );
+    }
+
+    // Set the ACL controller to enable row-level writes with dynamic policies
+    function setAccessControl(address controller) external {
+        TablelandDeployments.get().setController(
+            address(this), // Table owner, i.e., this contract
+            _tableId,
+            controller // Set the controller address—a separate controller contract
+        );
+    }
+
+    // Return the table ID
+    function getTableId() external view returns (uint256) {
+        return _tableId;
+    }
+
+    // Return the table name
+    function getTableName() external view returns (string memory) {
+        return SQLHelpers.toNameFromId(_TABLE_PREFIX, _tableId);
+    }
+}
+
 ```
 
 ## Errors & issues

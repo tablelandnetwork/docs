@@ -33,6 +33,27 @@ Under the hood, a few things will then happen:
 
 If you’re using the SDK, connecting to the local Tableland network comes as part of the `Signer` connection. For example, with a browser wallet, the following would prompt for a connection, and assuming the wallet connects to a local Hardhat node running on `http://127.0.0.1:8545` and chain `31337`, then it should be good to go.
 
+<Tabs groupId="sdk">
+<TabItem value="nodejs" label="Node.js" default>
+
+```js
+import { Database } from "@tableland/sdk";
+import { Wallet, getDefaultProvider } from "ethers";
+
+const privateKey =
+  "59c6995e998f97a5a0044966f0945389dc9e86dae88c7a8412f4603b6b78690d"; // Your private key
+const wallet = new Wallet(privateKey);
+// To avoid connecting to the browser wallet (locally, port 8545),
+// replace the URL with a provider like Alchemy, Infura, Etherscan, etc.
+const provider = getDefaultProvider("http://127.0.0.1:8545"); // For example: "https://polygon-mumbai.g.alchemy.com/v2/${process.env.YOUR_ALCHEMY_KEY}"
+const signer = wallet.connect(provider);
+// Connect to the database
+const db = new Database({ signer });
+```
+
+</TabItem>
+<TabItem value="web" label="Web">
+
 ```js
 import { Database } from "@tableland/sdk";
 import { providers, Signer } from "ethers";
@@ -46,6 +67,9 @@ const signer = provider.getSigner();
 
 const tableland = Database({ signer });
 ```
+
+</TabItem>
+</Tabs>
 
 Thus, creating, writing to, and reading from tables will all happen locally, without needing to connect to a testnet or mainnet chain. See the [JavaScript SDK](/sdk) documentation for more SDK usage details.
 
@@ -112,7 +136,7 @@ When testing locally, you may want to import an account created during the hardh
 For example, with the **_second_** account created, import the private key value into your wallet, which will allow you to use the 10000 test ETH provided:
 
 - Public key: `0x70997970C51812dc3A010C7d01b50e0d17dc79C8`
-- Private key: `0x59c6995e998f97a5a0044966f0945389dc9e86dae88c7a8412f4603b6b78690d`
+- Private key: `59c6995e998f97a5a0044966f0945389dc9e86dae88c7a8412f4603b6b78690d`
 
 :::tip
 For more information, dive into the [Local Tableland](/local-tableland) documentation.

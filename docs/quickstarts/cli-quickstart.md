@@ -32,11 +32,13 @@ The rest of these examples will make use of the local nodes, but you can also co
 
 ## 2. Create a configuration file
 
-Specify your development environment's `privateKey`, `chain`, and `providerUrl` (e.g., Alchemy, Infura, Etherscan, etc.). This creates a configuration file at `/Users/$USER/.tablelandrc.json` that is automatically read by the `tableland` commands.
+Specify your development environment's `privateKey`, `chain`, and `providerUrl` (e.g., Alchemy, Infura, etc.). This creates a configuration file at `/Users/$USER/.tablelandrc.json` that is automatically read by the `tableland` commands.
 
 ```bash
 tableland init
 ```
+
+Ideally, you should choose to ues the `aliases` feature. This is an option during the config step, and it allows you to write SQL statement with a locally saved alias to table name map. Thus, you can write statements with something like `my_table` instead of `my_table_31337_2`.
 
 Note that values for the `chain` can be found [here](/sdk/#chain-configuration); the values used are those that ethers uses (e.g., Polygon Mumbai is called `maticmum`).
 

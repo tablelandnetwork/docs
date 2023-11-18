@@ -58,26 +58,9 @@ const introduction = [
       "fundamentals/why-sqlite",
     ],
   },
-];
-
-// Use cases
-const useCases = {
-  type: "category",
-  label: "Use cases",
-  link: {
-    type: "doc",
-    id: "fundamentals/use-cases/README",
-  },
-  items: [],
-};
-
-// Architecture
-const architecture = [
-  ...section("Architecture"),
-  "fundamentals/architecture/protocol-design",
   {
     type: "category",
-    label: "Chains",
+    label: "Supported chains",
     link: {
       type: "doc",
       id: "fundamentals/chains/README",
@@ -91,6 +74,21 @@ const architecture = [
       "fundamentals/chains/local",
     ],
   },
+  {
+    type: "category",
+    label: "Use cases",
+    link: {
+      type: "doc",
+      id: "fundamentals/use-cases/README",
+    },
+    items: [],
+  },
+];
+
+// Architecture
+const architecture = [
+  ...section("Architecture"),
+  "fundamentals/architecture/protocol-design",
   "fundamentals/architecture/table-token",
   "fundamentals/architecture/limits",
   "fundamentals/architecture/gateway",
@@ -115,7 +113,6 @@ const about = [
 const fundamentals = [
   ...sidepageHeader("Fundamentals"),
   introduction,
-  useCases,
   architecture,
   concepts,
   about,
@@ -178,12 +175,12 @@ const quickstarts = [
   "quickstarts/cli-quickstart",
   "quickstarts/api-quickstart",
   "quickstarts/local-tableland",
+  ...section("Frameworks"),
   "quickstarts/templates",
-  ...section("Web app frameworks"),
-  "quickstarts/reactjs",
-  "quickstarts/wagmi",
-  ...section("Contract frameworks"),
   "quickstarts/hardhat",
+  "quickstarts/reactjs",
+  "quickstarts/nextjs",
+  "quickstarts/wagmi",
   ...section("Guides"),
   "quickstarts/how-to-build-an-nft",
 ];
@@ -220,6 +217,7 @@ const sdk = [
   "sdk/database/query-statement-methods",
   "sdk/database/batching",
   "sdk/database/aliases",
+  "sdk/database/polling",
   "sdk/database/timeouts-error-handling",
   ...section("Validator API"),
   "sdk/validator/README",
@@ -242,6 +240,7 @@ const smartContracts = [
   ...sidepageHeader("Smart contracts"),
   "smart-contracts/README",
   "smart-contracts/get-started",
+  "smart-contracts/registry",
   "smart-contracts/contract-owned-tables",
   {
     type: "category",

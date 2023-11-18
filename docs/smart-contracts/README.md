@@ -7,7 +7,7 @@ Tableland is a protocol that incorporates both on-chain and off-chain components
 
 ## Registry contract
 
-The [`TablelandTables`](/smart-contracts/registry-contract) registry contract is where you can create tables, write to them, and set the controller of the table itself. The primary methods exist for creating tables (`create`), writing SQL (`mutate`), and setting controllers for the table itself. The registry is managed by and is part of the Tableland protocol, so there is no need for developers to deploy this on their own. You will just make calls to one of the [deployed contracts](/smart-contracts/deployed-contracts).
+The [`TablelandTables`](/smart-contracts/registry-contract) registry contract is where you can create tables, write to them, and set the controller of the table itself. The primary methods exist for creating tables (`create`), writing SQL (`mutate`), and setting controllers for the table itself. Table _reads_, however, are not possible in smart contracts and happen entirely offchain. The registry is managed by and is part of the Tableland protocol, so there is no need for developers to deploy this on their own. You will just make calls to one of the [deployed contracts](/smart-contracts/deployed-contracts).
 
 ## Controller contract
 
