@@ -14,7 +14,7 @@ Developers can leverage a local-only instance of the Tableland network that spin
 Install `@tableland/local` within a project:
 
 ```bash npm2yarn
-npm install --save-dev @tableland/local
+npm install -g @tableland/local
 ```
 
 You can simply run the following command, which will spin up a Local Tableland and Hardhat node for local-only prototyping.

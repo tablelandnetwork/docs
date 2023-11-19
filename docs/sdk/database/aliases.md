@@ -38,7 +38,7 @@ When you use aliases, you pass them as the `aliases` value upon instantiating a 
 
 For context, the type and interface below underpin the `aliases` parameter, shown in TypeScript. A `NameMapping` is a simple object that maps a table alias to a table name. The `AliasesNameMap` is an object that contains the `read` and `write` functions; the former returns an object of table names to table aliases, and the latter will write aliases to the config file. This all happens under the hood, so you don't have to worry about it once you set it up.
 
-```ts
+```ts title="@tableland/sdk/helpers"
 type NameMapping = Record<string, string>;
 
 interface AliasesNameMap {
@@ -53,9 +53,11 @@ The `@tableland/node-helpers` is designed to operate in a Node.js environment, c
 
 As a best practice, the alias config file should exist in your project's directory to ensure the mappings from table aliases to the generated names are persisted and do not get lost. It will ultimately contain all of your table aliases. You can either create a file (e.g., name it `tableland.aliases.json`), or you can simply pass a path to a directly or path to a non-existent file to have one created for you. All of these would be valid ways to define the `aliases` parameter:
 
-- Path to a file that exists: `jsonFileAliases("./tableland.aliases.json")`
+- Path to a file that exists: `jsonFileAliases("/path/to/tableland.aliases.json")`
 - Path to a directory without an existing aliases file: `jsonFileAliases("./")`
+  - This will create one called `tableland.aliases.json` in the directory.
 - Path to a custom filename that doesn't exist: `jsonFileAliases("./my-aliases.json")`
+  - This will create one with the custom name in the directory.
 
 First, import `jsonFileAliases` from the `node-helpers` package into your source code; this is a utility function that allows you to simply provide the path to your aliases file.
 
@@ -91,7 +93,7 @@ await write.txn?.wait();
 const { results } = await db.prepare(`SELECT * FROM my_table`).all();
 ```
 
-Creating a table will automatically write the mapping to the `tableland.aliases.json` file. The config file will look something like the following (e.g., if you create a `main` prefixed table using Local Tableland):
+Creating a table will automatically write the mapping to the `tableland.aliases.json` file. The aliases file will look something like the following (e.g., if you create a `main` prefixed table using Local Tableland):
 
 ```json
 {

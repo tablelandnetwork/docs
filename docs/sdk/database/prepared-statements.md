@@ -8,7 +8,7 @@ keywords:
 
 The Tableland SDK comes with a `Database` API that supports both _static_ and _prepared_ statements. A static statement is typical SQL where the values are part of the statement; prepared statement will _bind_ values to the statement as part of a separate method.
 
-```tsx
+```ts
 const preparedStmt = db
   .prepare("SELECT * FROM users WHERE name = ?1")
   .bind("Bobby Tables");
@@ -32,7 +32,7 @@ Tableland follows the [SQLite convention](https://www.sqlite.org/lang_expr.html#
 
 With anonymous binding, the order in which values are passed is the order assigned within the query. The ordered style allows you to specify a number that corresponds to position of the parameter within the statement, starting at `1`.
 
-```tsx
+```ts
 const stmt = db
   .prepare("SELECT * FROM users WHERE name = ? AND age = ?")
   .bind("John Doe", 41);
@@ -44,7 +44,7 @@ const stmt = db
 
 More complex binding is possible using named parameters and complex data types, which are converted to basic types on the fly. Named parameters are prefixed with `@`, `:`, or `$`, and it is best to not mix named and numbered parameters, as it can get a bit confusing.
 
-```tsx
+```ts
 const stmt = db
   .prepare(
     "INSERT INTO people VALUES (@first, ?, :first, ?, ?4, ?3, ?, $last);"
@@ -61,7 +61,7 @@ const stmt = db
 
 Prepared statements can be reused with new bindings; there is no need to redefine the prepared statement:
 
-```tsx
+```ts
 const stmt = db.prepare("SELECT name, age FROM users WHERE age < ?1");
 const young = await stmt.bind(20).all();
 console.log(young);
@@ -91,24 +91,24 @@ console.log(old);
 
 In the example above, the returned object from the `prepare` method is assigned to the `stmt` variable. Using the methods `stmt.run()`, `stmt.all()` and `db.batch()` will return an object that contains the results (if applicable), the success status, and a `meta` object with the internal duration of the operation in milliseconds, and any transaction information available.
 
-```json
+```js
 {
-  results: [], // may be empty
+  results: [], // may be empty if the query is a mutating query
   success: boolean, // true if the operation was successful
-  error?: string,
+  error?: string, // undefined if no error
   meta: {
     duration: number, // duration of operation in milliseconds
     txn?: {
-        chainId: number,
-        tableId: string,
+        tableIds: string[],
         transactionHash: string,
         blockNumber: number,
-        error?: string,
-        name?: string
+        chainId: number,
+        names: string[],
+        prefixes: string[],
         wait(): Promise<{ ... }>
     }
   }
 }
 ```
 
-Recall that the `Database` API is compatible with Cloudflare is useful—because it matches the D1Database object, allowing any tools that are compatible with this object to also be compatible with Tableland’s object as well.
+See the [query statement methods](/sdk/database/query-statement-methods) page for more details.

@@ -98,6 +98,40 @@ function insertIntoTable() external {
 }
 ```
 
+#### Set a table `controller`
+
+A simple example of mutating data a table—the `TablelandDeployments.get()` chains with the `mutate` method from the registry contract. Note this method should have guard logic to ensure the caller is the table owner, like an `onlyOwner` modifier:
+
+```solidity
+uint256 private _tableId; // Unique table ID
+string private constant _TABLE_PREFIX = "my_table"; // Custom table prefix
+
+function updateController() external {
+   TablelandDeployments.get().setController(
+      address(this), // Table owner
+      _tableId, // Table ID
+      "0x70997970C51812dc3A010C7d01b50e0d17dc79C8" // New owner
+    );
+}
+```
+
+#### Transfer a table
+
+The `safeTransferFrom` method will transfer a table from the owner to a new address. The caller _must_ own the table or be an approved operator—this functions like an NFT transfer would.
+
+```solidity
+uint256 private _tableId; // Unique table ID
+string private constant _TABLE_PREFIX = "my_table"; // Custom table prefix
+
+function transferTable(uint256 tableId) external {
+   TablelandDeployments.get().safeTransferFrom(
+      address(this), // Table owner
+      msg.sender, // New owner
+      _tableId // Table ID
+    );
+}
+```
+
 ## [`getBaseURI`](https://github.com/tablelandnetwork/evm-tableland/blob/e0a6802cf3c55d6df54dbe6260079b613c88b184/contracts/utils/TablelandDeployments.sol#L104) for the gateway
 
 The `getBaseURI()` method returns the correct gateway base URI for the Tableland validator:

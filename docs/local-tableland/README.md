@@ -14,6 +14,20 @@ The `@tableland/local` package is a tool that works with any of the other Tablel
 See the [quickstart page](/quickstarts/local-tableland) if you’re looking to get up and running without all of the details.
 :::
 
+## Installation & setup
+
+Install `@tableland/local` within a project:
+
+```bash npm2yarn
+npm install -g @tableland/local
+```
+
+You can simply run the following command, which will spin up a Local Tableland and Hardhat node for local-only prototyping.
+
+```bash
+npx local-tableland
+```
+
 ## Startup & logging
 
 Starting `local-tableland` will provide logging for both the local hardhat blockchain and the Local Tableland network. This will happen irrespective of the method you're using it. Note there are optional `silent` and `verbose` flags for silencing the logs or making them verbose.

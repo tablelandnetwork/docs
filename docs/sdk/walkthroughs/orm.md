@@ -272,7 +272,7 @@ Once the following is set up, you can run `npm run gen-migrate` to generate the 
 ```
 
 </TabItem>
-<TabItem value="ts" label="TypeScript)">
+<TabItem value="ts" label="TypeScript">
 
 ```json
 {
@@ -301,19 +301,16 @@ import { readFile, readdir, stat } from "fs/promises";
 import path from "path";
 
 const migrationsFolder = "drizzle";
-
-const aliases = /* set up your async aliases file */
-
+const aliases = jsonFileAliases("./tableland.aliases.json");
 const signer = /* set up your ethers signer */
-
-const tbl = new Database({ signer, aliases });
+const db = new Database({ signer, aliases });
 
 async function migrate() {
   // Set up a reference `a` to the aliases file
   const a = await aliases.read();
   // Create the migrations table if it doesn't exist
   if (!a.migrations) {
-    const res = await tbl
+    const res = await db
       .prepare(
         "create table migrations (id integer primary key, file text not null unique, hash text not null);",
       )
@@ -325,7 +322,7 @@ async function migrate() {
   }
   // Get the migrations `drizzle` folder and find all table migrations, which get stored in the table
   const files = await readdir(migrationsFolder);
-  const migrations = await tbl
+  const migrations = await db
     .prepare("select * from migrations order by id asc")
     .all();
   if (migrations.error) {
@@ -359,16 +356,16 @@ async function migrate() {
       continue;
     }
     // Execute the statements
-    const preparedStatements = statements.map((s) => tbl.prepare(s));
+    const preparedStatements = statements.map((s) => db.prepare(s));
     console.log(`Executing migration ${file}...`);
-    const res = await tbl.batch(preparedStatements);
+    const res = await db.batch(preparedStatements);
     const errors = res.filter((r) => r.error).map((r) => r.error);
     if (errors.length > 0) {
       throw new Error(errors.join("\n"));
     }
     console.log(`Success!`);
     // Write these values to our migrations table
-    const { error } = await tbl
+    const { error } = await db
       .prepare("insert into migrations (id, file, hash) values (?, ?, ?)")
       .bind(i, file, hash)
       .run();
@@ -399,12 +396,9 @@ import { readFile, readdir, stat } from "fs/promises";
 import path from "path";
 
 const migrationsFolder = "drizzle";
-
-const aliases = /* set up your async aliases file */
-
+const aliases = jsonFileAliases("./tableland.aliases.json");
 const signer = /* set up your ethers signer */
-
-const tbl = new Database({ signer, aliases });
+const db = new Database({ signer, aliases });
 
 async function migrate() {
   // Set up a reference `a` to the aliases file
@@ -414,7 +408,7 @@ async function migrate() {
   >;
   // Create the migrations table if it doesn't exist
   if (!a.migrations) {
-    const res = await tbl
+    const res = await db
       .prepare(
         "create table migrations (id integer primary key, file text not null unique, hash text not null);",
       )
@@ -426,7 +420,7 @@ async function migrate() {
   }
   // Get the migrations `drizzle` folder and find all table migrations, which get stored in the table
   const files = await readdir(migrationsFolder);
-  const migrations = await tbl
+  const migrations = await db
     .prepare("select * from migrations order by id asc")
     .all<{ id: number; file: string; hash: string }>();
   if (migrations.error) {
@@ -460,16 +454,16 @@ async function migrate() {
       continue;
     }
     // Execute the statements
-    const preparedStatements = statements.map((s) => tbl.prepare(s));
+    const preparedStatements = statements.map((s) => db.prepare(s));
     console.log(`Executing migration ${file}...`);
-    const res = await tbl.batch(preparedStatements);
+    const res = await db.batch(preparedStatements);
     const errors = res.filter((r) => r.error).map((r) => r.error);
     if (errors.length > 0) {
       throw new Error(errors.join("\n"));
     }
     console.log(`Success!`);
     // Write these values to our migrations table
-    const { error } = await tbl
+    const { error } = await db
       .prepare("insert into migrations (id, file, hash) values (?, ?, ?)")
       .bind(i, file, hash)
       .run();

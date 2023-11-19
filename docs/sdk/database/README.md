@@ -4,6 +4,9 @@ description: Get up an running with the Tableland SDK.
 keywords:
   - SQL query
   - Tableland SDK
+  - ethers
+  - ethersjs
+  - database
 ---
 
 import Tabs from "@theme/Tabs";
@@ -16,7 +19,7 @@ The JavaScript / TypeScript SDK allows developers to create tables on their chai
 You can install the SDK from the command line—navigate to the project's directory and run the following:
 
 ```bash npm2yarn
-npm install --save @tableland/sdk
+npm install @tableland/sdk
 ```
 
 <br />
@@ -31,7 +34,9 @@ Also note Tableland SDK uses the modern `fetch` API, which is only available sta
 
 All table creates, writes, and reads fall under a single method: [`prepare`](/sdk/database/prepared-statements).
 
-Start by creating an instance of a `Database` and then pass SQL, such as `CREATE TABLE`, `INSERT INTO`, `UPDATE`, `DELETE`, and `SELECT` statements. Let’s start with a simple table read query. Every chain comes with a "healthbot" table that can be queried, which has a single `counter` column with integer value. For example, on Polygon Mumbai, this table is `healthbot_80001_1`.
+Start by creating an instance of a `Database` and then pass SQL, such as `CREATE TABLE`, `INSERT INTO`, `UPDATE`, `DELETE`, and `SELECT` statements. The `prepare` method returns a `Statement` object, which can then be used to execute the query with statement methods: `all()`, `run()`, `raw()`, and `first()`.
+
+Alternatively, the `Database` has a `batch()` method that allows you to send multiple prepared statements in a single call to the network. This can have a huge performance impact as it reduces latency from network round trips to Tableland. Lastly, the `Database`'s `exec()` method allows you to execute a string of SQL statements without preparing it first.
 
 ### Ethers
 
@@ -43,10 +48,10 @@ npm i --save ethers@^5.7.2
 
 ### Local development
 
-It's easiest to also use Local Tableland when you're first getting started. Install the `@tableland/local` package globally (see [here](/local-tableland) for details) and then start the local nodes. This will spin up a local Tableland validator node as well as a Hardhat node, allowing you to connect to chain ID `31337` and RPC URL `http://127.0.0.1` for testing purposes.
+It's easiest to also use Local Tableland when you're first getting started. Install the `@tableland/local` package globally (see [here](/local-tableland) for details) and then start the local nodes. This will spin up a local Tableland validator node as well as a Hardhat node, allowing you to connect to chain ID `31337` and RPC URL `http://127.0.0.1:8545` for testing purposes.
 
 ```bash npm2yarn
-npm install -g @tableland/local
+npm install --save-dev @tableland/local
 ```
 
 And then spin the nodes up so that you can use Tableland without needing to connect to any testnets or mainnets:
