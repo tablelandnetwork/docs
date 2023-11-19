@@ -2,6 +2,12 @@
 title: Configure table write access
 sidebar_label: Configure write access
 description: Everything you need to know to control access for programmable tables.
+keywords:
+  - smart contracts
+  - controllers
+  - access control
+tags:
+  - access control
 ---
 
 By default, the _owner_ of a table is the only one that can modify data. However, Tableland gives you a suite of options for programming ownership in useful ways. The most feature rich way to use a _controller_; a smart contract that implements the `ITablelandTables` interface, enabling on-chain rules that govern off-chain table mutations.

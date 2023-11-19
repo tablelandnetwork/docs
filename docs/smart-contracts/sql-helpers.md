@@ -1,7 +1,7 @@
 ---
 title: SQL helpers library
 description: Use the SQL helpers library to make it easier write SQL in Solidity.
-tags:
+keywords:
   - sql helpers
   - solidity
   - toCreateFromSchema

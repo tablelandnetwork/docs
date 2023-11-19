@@ -2,6 +2,12 @@
 title: Controller contract anatomy
 sidebar_label: Controller contract
 description: Dive into into the Tableland controller contract's design.
+keywords:
+  - smart contracts
+  - controllers
+  - access control
+tags:
+  - access control
 ---
 
 A controller needs to implement the `TablelandController` abstract contract (or the `ITablelandController` interface). This enables advanced, custom access control features. Note the default access controls define that only the owner can control everything on the table—this is implemented by default in the `TablelandTables` registry contract, so if you don't create/set your own controller, those rules are applied.

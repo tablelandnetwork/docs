@@ -1,6 +1,10 @@
 ---
 title: Setting controllers
 description: Understand how to set or unset a controller contract.
+tags:
+  - smart contracts
+  - controllers
+  - access control
 ---
 
 It’s important to note that when the owner explicitly sets the controller (using the registry's `setController`), a new controller contract will be used and no longer abide by the default permissions. This is "setting" the controller. To "unset" the controller back to its original value, set it back to the `0x0` address—thus, default permissions will go back into place.

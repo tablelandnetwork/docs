@@ -6,6 +6,9 @@ keywords:
   - grant
   - revoke
   - access control
+  - access control list
+  - grant
+  - revoke
 ---
 
 import Tabs from "@theme/Tabs";

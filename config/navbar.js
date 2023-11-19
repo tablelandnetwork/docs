@@ -38,7 +38,7 @@ const navbar = {
         {
           type: "docSidebar",
           sidebarId: "playbooks",
-          label: "Playbooks",
+          label: "SQL playbooks",
         },
       ],
     },
@@ -46,6 +46,11 @@ const navbar = {
       label: "Develop",
       position: "right",
       items: [
+        {
+          type: "docSidebar",
+          sidebarId: "studio",
+          label: "Studio",
+        },
         {
           type: "docSidebar",
           sidebarId: "quickstarts",

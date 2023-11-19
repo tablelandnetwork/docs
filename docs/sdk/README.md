@@ -44,3 +44,7 @@ The Tableland SDK supports both JavaScript and TypeScript. If you're using TypeS
 Types can be provided on the `Database` constructor, on the `Statement` constructor (`prepare`), or callers can override them on any of the query/execution APIs directly (i.e., `run`, `all`, `first`, or `raw`).
 
 For example, start by defining the type associated with the table’s schema and use this type in the database constructor.
+
+## Web frameworks
+
+If you're building a frontend application, check out the [React](/quickstarts/reactjs), [Next.js](/quickstarts/nextjs), or [wagmi](/quickstarts/wagmi) for a full example of how to use the SDK there. There are also starter [template repos](/quickstarts/templates) to get you up and running even more quickly.

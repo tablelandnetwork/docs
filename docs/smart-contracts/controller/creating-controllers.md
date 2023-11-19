@@ -1,6 +1,12 @@
 ---
 title: Creating controllers
 description: Understand how to create a controller contract.
+keywords:
+  - smart contracts
+  - controllers
+  - access control
+tags:
+  - access control
 ---
 
 This page highlights a few examples of how to create a controller contract in Solidity.

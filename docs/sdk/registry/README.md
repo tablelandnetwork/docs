@@ -1,8 +1,10 @@
 ---
 title: Registry API
 description: Use the Registry API for directly calling the Tableland registry smart contract.
-tags:
+keywords:
   - registry api
+  - access control
+  - controller
 ---
 
 import Tabs from "@theme/Tabs";

@@ -2,7 +2,7 @@
 title: Polling controller & aborting queries
 sidebar_label: Polling controller
 description: Define custom logic to control Database methods & transaction polling behavior.
-tags:
+keywords:
   - polling
   - abort signal
   - abort query

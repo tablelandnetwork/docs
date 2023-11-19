@@ -545,6 +545,19 @@ html[data-theme="dark"] .navbar__link--active,
   padding-bottom: 0 !important;
 }
 
+/* Hide the "Home" in the sidebar since it serves no purpose */
+@media (min-width: 997px) {
+  .theme-doc-sidebar-menu > .sidebar-landing:first-child {
+    display: none !important;
+  }
+
+  .theme-doc-sidebar-menu > :nth-child(2).menu__list-item,
+  .theme-doc-sidebar-menu > :nth-child(2).menu__list-item > .landing-section {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+  }
+}
+
 .sidebar-landing .menu__link {
   font-size: var(--ifm-h5-font-size);
   color: var(--ifm-heading-color);

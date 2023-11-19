@@ -7,7 +7,7 @@ All database mutating statements are on-chain actions. If you're using the SDK o
 
 ## Prerequisites
 
-There are two things every developer will need if they are trying to use Tableland:
+There are a few things every developer will need if they are trying to use Tableland:
 
 - **Wallet**: You'll need to set up an account, such as [MetaMask](https://metamask.io/) for browser wallet-based connections. You'll use your EVM account to create and write to tables across any of the networks Tableland is live on.
 - **Funds**: If you want to create or write to a table, it requires an on-chain transaction—you need to own currency in the native chain's denomination if you want to make database state changes.
@@ -18,3 +18,7 @@ If you're developing on a testnet, you should get testnet currency, and the way 
 :::
 
 Once you're ready to go, you can start building with any of the quickstarts or dive into subsequent deeper documentation! Note that the Tableland SDK (and the CLI built on top of it) use Node 18, so if you're using an older version of node, you'll have to implement the `fetch` and `Header` polyfills—check out the [SDK docs](/sdk/reference/node-polyfills) for how to do this.
+
+## Local development
+
+To make it easier to get started, you should check out the [Local Tableland quickstart](/quickstarts/local-tableland) or dive deeper into the docs on how it works. It's, essentially, a sandboxed network running a local-only Tableland validator node, and a local-only Hardhat node in which Tableland registry smart contracts are deployed. So, you can develop and test your application locally without having to worry about deploying to a testnet or mainnet.

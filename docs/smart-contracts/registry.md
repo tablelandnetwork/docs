@@ -34,8 +34,6 @@ function create(
 ) external payable returns (uint256);
 ```
 
-### Example
-
 See the SQL Helpers page with an example for creating a table: [here](/smart-contracts/sql-helpers#example-create-single-table).
 
 ## Batch [`create`](https://github.com/tablelandnetwork/evm-tableland/blob/ab6162634347028f1138fb04504de7209e797e55/contracts/TablelandTables.sol#L77)
@@ -48,8 +46,6 @@ function create(
     string[] calldata statements
 ) external payable returns (uint256[] memory);
 ```
-
-### Example
 
 See the SQL Helpers page with an example for creating multiple table: [here](/smart-contracts/sql-helpers#example-batch-create-tables).
 
@@ -69,8 +65,6 @@ function mutate(
     string calldata statement
 ) external payable;
 ```
-
-### Example
 
 See the SQL Helpers page with an example for a single `INSERT` statement against a table: [here](/smart-contracts/sql-helpers#example-single-insert-statement). The same pattern can be used for the other possible mutating methods noted above.
 
@@ -94,8 +88,6 @@ function mutate(
 ) external payable;
 ```
 
-### Example
-
 See the SQL Helpers page with an example for multiple `INSERT` statements against a table. [here](/smart-contracts/sql-helpers#example-batch-insert-statements), and there are other examples for `UPDATES` or `DELETES` as well.
 
 ## [`getController`](https://github.com/tablelandnetwork/evm-tableland/blob/e0a6802cf3c55d6df54dbe6260079b613c88b184/contracts/TablelandTables.sol#L262)
@@ -109,8 +101,6 @@ function getController(uint256 tableId) external returns (address);
 ```
 
 If a table has its controller set (e.g., using `setController`), this method will return the corresponding address via a _direct_ smart contract call. Otherwise, all tables default to the `0x0` address as being the table’s controller.
-
-### Example
 
 See the controllers page for an example: [here](/smart-contracts/controller/setting-controllers#getting-the-controller).
 
@@ -132,8 +122,6 @@ function setController(
 
 Only the table owner can set the controller of a table to an address, such as another account address or contract that implements the `ITablelandController` ACL policy. However, a table with a _locked_ controller can no longer have its controller be set, again.
 
-### Example
-
 See the controllers page for an example: [here](/smart-contracts/controller/setting-controllers#setting-the-controller).
 
 ## [`lockController`](https://github.com/tablelandnetwork/evm-tableland/blob/e0a6802cf3c55d6df54dbe6260079b613c88b184/contracts/TablelandTables.sol#L271)
@@ -148,8 +136,6 @@ function lockController(address caller, uint256 tableId) external;
 ```
 
 A table can have its controller **permanently locked**. This can be useful as a final ACL "lock" to ensure the table owner can no longer make any ACL changes (e.g., after some steady state in a production setting). Only the table owner can call this method.
-
-### Example
 
 See the controllers page for an example: [here](/smart-contracts/controller/setting-controllers#locking-the-controller).
 
@@ -168,7 +154,5 @@ function safeTransferFrom(
     uint256 tokenId
 ) external payable;
 ```
-
-### Example
 
 See the Tableland Deployments page for example: [here](/smart-contracts/controller/setting-controllers#transfer-a-table).
