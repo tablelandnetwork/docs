@@ -20,6 +20,8 @@ Because of its security, data can be viewed as more valuable on this chain. A hi
 ### Ethereum (mainnet)
 
 - Average block time: 13.5 seconds
+- Block depth: 1
+- Average SQL materialization time: 30-40 seconds
 - Chain ID: <ChainInfo chain='mainnet' info='chainId' />
 - Symbol: ETH
 - Status Dashboard:
@@ -37,6 +39,8 @@ Because of its security, data can be viewed as more valuable on this chain. A hi
 ### Sepolia (testnet)
 
 - Average block time: 13.5 seconds
+- Block depth: 1
+- Average SQL materialization time: 30-40 seconds
 - Chain ID: <ChainInfo chain='sepolia' info='chainId' />
 - Symbol: ETH
 - Status Dashboard:

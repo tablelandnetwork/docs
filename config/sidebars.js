@@ -129,13 +129,13 @@ const sql = [
   "playbooks/sql/read",
   "playbooks/sql/write",
   "playbooks/sql/composing-data",
+  "playbooks/sql/expressions",
   "playbooks/sql/functions",
   "playbooks/sql/incrementing-values",
   "playbooks/sql/alter-table",
   ...section("Walkthroughs"),
   "playbooks/walkthroughs/nft-metadata",
   "playbooks/walkthroughs/key-value",
-
   "playbooks/walkthroughs/sql-faqs",
 ];
 
@@ -230,13 +230,14 @@ const sdk = [
 
   "sdk/database/timeouts-error-handling",
   ...section("Walkthroughs"),
+  "sdk/walkthroughs/sql-parser",
   "sdk/walkthroughs/orm",
   "sdk/walkthroughs/testing",
   ...section("Plugins"),
   "sdk/plugins/JETI",
   ...section("Reference"),
   "sdk/reference/type-conversion",
-  "sdk/reference/node-polyfills",
+  "sdk/reference/compatability",
   // "sdk/reference/sdk-faqs",
 ];
 

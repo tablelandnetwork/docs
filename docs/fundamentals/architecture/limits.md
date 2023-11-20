@@ -53,16 +53,16 @@ You can create tables and write data to it within the same on-chain transaction,
 
 ### Query "lag"
 
-When a table is created or written to, there will be a "lag" between calling the smart contract and the time at which the event’s SQL instructions are materialized in Tableland. This "lag" is documented below as **a chain-driven limitation** due to block times.
+When a table is created or written to, there will be a "lag" between calling the smart contract and the time at which the event’s SQL instructions are materialized in Tableland. This "lag" is documented below as **a chain-driven limitation** due to block times and block depth. See the [chains](/fundamentals/chains) page for more information on how this works.
 
-| Chain         | Average block finalization time |
-| ------------- | ------------------------------- |
-| Ethereum      | 13.5 seconds                    |
-| Optimism      | 2 seconds                       |
-| Arbitrum One  | <0.5 seconds                    |
-| Arbitrum Nova | 2-3 seconds                     |
-| Polygon       | 2 seconds                       |
-| Filecoin      | 30 seconds                      |
+| Chain         | Avg. block finalization time | Block depth | Avg. SQL materialize time |
+| ------------- | ---------------------------- | ----------- | ------------------------- |
+| Ethereum      | 13.5 seconds                 | 1           | 30-40 seconds             |
+| Optimism      | 2 seconds                    | 0           | <5 seconds                |
+| Arbitrum One  | <2 seconds                   | 0           | <5 seconds                |
+| Arbitrum Nova | 2-3 seconds                  | 0           | <5 seconds                |
+| Polygon       | 2 seconds                    | 1           | <10 seconds               |
+| Filecoin      | 30 seconds                   | 5           | ~ 4 mins.                 |
 
 ### Table reads
 

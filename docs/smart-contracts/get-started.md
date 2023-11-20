@@ -50,7 +50,7 @@ string private constant _TABLE_PREFIX = "my_table";
 
 ## Create a table
 
-Creating a table (calling `create()` on the Tableland [registry](/smart-contracts/registry-contract)) requires the following parameters:
+Creating a table (calling `create()` on the Tableland [registry](/smart-contracts/registry)) requires the following parameters:
 
 - `owner`: The `address` that should own the table (i.e., ERC721 TABLE token is minted here).
 - `statement`: A `string` that defines a `CREATE TABLE` statement.

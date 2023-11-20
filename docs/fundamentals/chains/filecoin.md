@@ -29,6 +29,7 @@ From the time an on-chain SQL transaction is submitted until it is materialized 
 ### Filecoin (mainnet)
 
 - Average block time: 30s
+- Block depth: 5
 - Average SQL materialization time: 4 minutes
 - Chain ID: 314
 - Symbol: FIL
@@ -48,6 +49,7 @@ To get FIL into an EVM wallet (e.g., MetaMask), you'll have to buy FIL on an exc
 ### Filecoin Calibration (testnet)
 
 - Average block time: 30s
+- Block depth: 5
 - Average SQL materialization time: 4 minutes
 - Chain ID: 314159
 - Symbol: TFIL

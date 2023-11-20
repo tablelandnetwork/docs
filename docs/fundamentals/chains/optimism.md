@@ -20,6 +20,8 @@ Off-chain, the transactions happen much quicker than the batching. Note that dev
 ### Optimism (mainnet)
 
 - Average block time: 2 seconds
+- Block depth: 0
+- Average SQL materialization time: <5 seconds
 - Chain ID: <ChainInfo chain='optimism' info='chainId' />
 - Symbol: ETH
 - Status Dashboard:
@@ -35,6 +37,8 @@ Off-chain, the transactions happen much quicker than the batching. Note that dev
 ### Optimism Goerli (testnet)
 
 - Average block time: 2 seconds
+- Block depth: 0
+- Average SQL materialization time: <5 seconds
 - Chain ID: <ChainInfo chain='optimism-goerli' info='chainId' />
 - Symbol: ETH
 - Status Dashboard:

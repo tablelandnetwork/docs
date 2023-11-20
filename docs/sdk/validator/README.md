@@ -241,7 +241,7 @@ If the transaction is still pending and has _not_ been seen by the validator, it
 
 ## `pollForReceiptByTransactionHash`
 
-Polls for the status of a given transaction receipt by `chainId` and `transactionHash`, waiting until its complete. See the [polling transactions](/sdk/validator/polling-transactoin) docs for more advanced polling usage.
+Polls for the status of a given transaction receipt by `chainId` and `transactionHash`, waiting until its complete. See the [polling transactions](/sdk/validator/polling-transactions) docs for more advanced polling usage.
 
 ```js
 const poll = await validator.pollForReceiptByTransactionHash({

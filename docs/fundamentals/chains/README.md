@@ -1,5 +1,5 @@
 ---
-title: Choosing a chain
+title: Supported chains
 description: Selecting a base chain is an important step in any application’s design and, especially, for tables.
 keywords:
   - evm
@@ -7,7 +7,9 @@ keywords:
   - blockchains
 ---
 
-Chain selection makes a significant impact on the database's usability. Choose a chain that’s too slow or expensive, and it won’t be feasible for table writes to occur frequently. Deploy a cross-chain data model for value layering purposes, and certain on-chain access control features are lost. This page explains general chain related concepts; the following chains are supported and described in more detail in the subsequent pages:
+Chain selection makes a significant impact on the database's usability. Choose a chain that’s too slow or expensive, and it won’t be feasible for table writes to occur frequently. Deploy a cross-chain data model for value layering purposes, and certain on-chain access control features are lost. This page explains general chain related concepts; the following chains are supported and described in more detail in the subsequent pages.
+
+Note that in addition to each chain's unique block time, there is also a chain-specific block depth required until SQL data is made available in Tableland. For example, Ethereum has a block time of ~13.5 seconds and a block depth of 1, so it takes ~27.5 seconds for data to be available in Tableland. Since a transaction could be submitted _mid_-block, it's possible for a transaction to take from ~30-40 seconds to be materialized in Tableland. The chain-specific docs pages (see below) describe this in more detail.
 
 import { ChainsList } from '@site/src/components/SupportedChains'
 
@@ -23,6 +25,17 @@ Review the [cost estimation](/fundamentals/architecture/cost-estimator) table th
 If would like to dive straight into chain-specific overviews, with decision considerations and other chain information (chain ID, contracts, block explorers, faucets, etc.), head to one of the pages below.
 
 import DocCardList from '@theme/DocCardList';
+
+Here's a summary of how the chains works in terms of speed:
+
+| Chain         | Avg. block finalization time | Block depth | Avg. SQL materialize time |
+| ------------- | ---------------------------- | ----------- | ------------------------- |
+| Ethereum      | 13.5 seconds                 | 1           | 30-40 seconds             |
+| Optimism      | 2 seconds                    | 0           | <5 seconds                |
+| Arbitrum One  | <2 seconds                   | 0           | <5 seconds                |
+| Arbitrum Nova | 2-3 seconds                  | 0           | <5 seconds                |
+| Polygon       | 2 seconds                    | 1           | <10 seconds               |
+| Filecoin      | 30 seconds                   | 5           | ~ 4 mins.                 |
 
 <DocCardList />
 
