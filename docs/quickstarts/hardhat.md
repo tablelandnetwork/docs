@@ -45,7 +45,7 @@ contract Lock is ERC721Holder {
   // The table token ID, assigned upon `TablelandTables` minting a table
   uint256 public tableId;
   // Table prefix for the table (custom value)
-  string private constant _TABLE_PREFIX = "my_hardhat_table";
+  string private constant _TABLE_PREFIX = "my_table";
   // highlight-end
 }
 ```
@@ -57,7 +57,7 @@ Create a table that is sent to the caller (`msg.sender`)—note that if you want
 ```solidity title="contracts/Lock.sol"
 contract Lock is ERC721Holder {
   uint256 public tableId;
-  string private constant _TABLE_PREFIX = "my_hardhat_table";
+  string private constant _TABLE_PREFIX = "my_table";
 
   // Add a constructor that creates and inserts data
   constructor() {
@@ -186,7 +186,7 @@ It should print some deployment information:
 
 ```json
 Lock deployed to 0x98dd705fBD9B12B90b8C997afd0362EB7a9fbe37
-Data in table 'my_hardhat_table_31337_2':
+Data in table 'my_table_31337_2':
 [
   {
     "id": 0,

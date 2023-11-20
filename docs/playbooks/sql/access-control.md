@@ -6,6 +6,9 @@ keywords:
   - grant
   - revoke
   - access control
+  - access control list
+  - grant
+  - revoke
 ---
 
 import Tabs from "@theme/Tabs";
@@ -15,7 +18,7 @@ Tableland allows for _some_ SQL-based access control, along with smart contracts
 
 ## Usage
 
-To grant permissions for all table mutation abilities, you can make a write query that follows the general format below. Namely, you set the rules for `INSERT`, `UPDATE`, or `DELETE` permissions on a specific table to a specific on-chain address. Keep in mind the `0x` address should be treated as a `TEXT` value and **wrapped in single quotes**, and the examples below show `0xYOUR_EVM_ADDRESS` but be sure to update this accordingly with the correct EVM address.
+To grant permissions for all table mutation abilities, you can make a write query that follows the general format below. Namely, you set the rules for `INSERT`, `UPDATE`, or `DELETE` permissions on a specific table to a specific onchain address. Keep in mind the `0x` address should be treated as a `TEXT` value and **wrapped in single quotes**, and the examples below show `0xYOUR_EVM_ADDRESS` but be sure to update this accordingly with the correct EVM address.
 
 <Tabs>
 <TabItem value='grant' label="GRANT" default>

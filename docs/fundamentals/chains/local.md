@@ -21,7 +21,9 @@ Check out the page about [Local Tableland](/quickstarts/local-tableland) to unde
 
 ### Local node
 
-- Average block time: configurable
+- Average block time: configurable, but typically 1-2 second
+- Block depth: 0
+- Average SQL materialization time: 2-3 seconds
 - Chain ID: <ChainInfo chain='local-tableland' info='chainId' />
 - Symbol: ETH
 - RPC URL: http://localhost:8545

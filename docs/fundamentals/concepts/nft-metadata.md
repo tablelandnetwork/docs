@@ -4,14 +4,30 @@ description: Understand the basics of storing and querying ERC721 metadata in ta
 keywords:
   - nfts
   - nft metadata
+  - nft metadata standards
   - erc721 metadata
+  - erc1155 metadata
+  - enjin metadata
+  - opensea nft metadata
+  - erc721a metadata
 ---
 
-Today, the primary standard for Non-Fungible Tokens (NFTs) is [Ethereum's ERC-721 Non-Fungible Token Standard](https://eips.ethereum.org/EIPS/eip-721) as well as the [Ethereum ERC-1155 Multi Token Standard](https://eips.ethereum.org/EIPS/eip-1155). Platforms such as OpenSea have adopted these NFT standards, along with [modifications of their own](https://docs.opensea.io/docs/metadata-standards), to support a wide range of NFT projects.
+Today, the primary standard for Non-Fungible Tokens (NFTs) is Ethereum's ERC-721 Non-Fungible Token Standard as well as the Ethereum ERC-1155 Multi Token Standard. Platforms such as OpenSea have adopted these NFT standards, along with modifications of their own, to support a wide range of NFT projects.
 
 :::tip
 To learn how to actually store and query NFT metadata in tables, check out the [crafting NFT metadata playbook](/playbooks/walkthroughs/nft-metadata).
 :::
+
+## NFT metadata standards
+
+The table below defines the most used standards for ERC-721 or ERC-1155 metadata. All of these are accepted and will render NFT metadata on marketplaces like OpenSea.
+
+<!-- prettier-ignore -->
+| Standard | Description | Link |
+| -------- | ----------- | ---- |
+| ERC721 | The original NFT standard—the metadata attributes are provided in a `properties` object. | [EIP-721](https://eips.ethereum.org/EIPS/eip-721) |
+| ERC1155 | A newer standard that supports multiple tokens in a single contract. Similar to ERC-721, it uses a `properties` object to store attributes and allows for more rich optionality. | [EIP-1155](https://eips.ethereum.org/EIPS/eip-1155) |
+| OpenSea | OpenSea's metadata reference uses an `attributes` array to store NFT traits as objects. It's a slightly different setup than those above. | [OpenSea](https://docs.opensea.io/docs/metadata-standards) |
 
 ## Highly structured data
 

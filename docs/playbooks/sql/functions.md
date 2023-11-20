@@ -1,5 +1,6 @@
 ---
 title: SQL functions
+sidebar_label: SQL functions & JSON
 description: Use built-in SQL functions to transform query data.
 keywords:
   - sql functions
@@ -20,7 +21,7 @@ Currently, there are two functions unique to the Tableland protocol: `BLOCK_NUM(
 
 ### Block number
 
-When a SQL write query is submitted, it is associated with an on-chain transaction. Using the `BLOCK_NUM()` function, you can insert the value of the associated block of the query. In other words, the Tableland network will replace this text with the number of the block that delivered the SQL event.
+When a SQL write query is submitted, it is associated with an onchain transaction. Using the `BLOCK_NUM()` function, you can insert the value of the associated block of the query. In other words, the Tableland network will replace this text with the number of the block that delivered the SQL event.
 
 ```sql
 INSERT INTO
@@ -148,20 +149,27 @@ This will take each row's values from `my_table` and map them to the associated 
 ]
 ```
 
-### String concatenation
+### Coalesce
 
-Note that the aggregate concatenation function ([`group_concat()`](https://www.sqlite.org/lang_aggfunc.html#group_concat)) is only for a _group_ of data, such as concatenating all values in a column into a single string. If you wanted to concatenate each value in `my_table` to have a custom string output, the double pipe (`||`) can be used. It's not a function per se but is often useful in tandem with the JSON functions to further customize response data.
-
-To combine two or more strings, use `||` between each value:
+The [coalesce](https://www.sqlite.org/lang_corefunc.html#coalesce) function can be useful if you're making queries that might have a `NULL` value. For example, here, we're saying that if the value is `NULL`, then insert the string `New val` instead:
 
 ```sql
-SELECT
-  val || ' is #' || id
-FROM
-  my_table;
+UPDATE my_table
+SET
+    val = COALESCE(NULL, 'New val'),
+WHERE id = 1;
 ```
 
-Thus, you now have access to phrases like `Bobby Tables is #1` and `Molly Tables is #2`!
+More notably, it's relevant with parameter binding when you use clients like the SDK, CLI, or smart contracts. Instead of directly passing `NULL` the statement might look like:
+
+```sql
+UPDATE my_table
+SET
+    val = COALESCE(?1, 'New val'),
+WHERE id = ?2;
+```
+
+Where in the client, you bind parameters from application logic to the `?1` and `?2` placeholders. If the value is `NULL`, then the `COALESCE` function will insert the string `New val` instead.
 
 ## Date & time functions
 
@@ -177,8 +185,72 @@ There is **not** support for any of the [SQLite window functions](https://www.sq
 
 ## Aggregate functions
 
-**All** of the built-in [aggregate functions](https://www.sqlite.org/lang_aggfunc.html#group_concat) are supported. These are useful for operations across multiple rows, such as summing, averaging, and concatenating values.
+**All** of the built-in [aggregate functions](https://www.sqlite.org/lang_aggfunc.html) are supported. These are useful for operations across multiple rows, such as summing, averaging, and concatenating values. This includes the following:
+
+- `avg(X)`: Average value of all non-NULL X within a group (`TEXT` or `BLOB` that do not look like numbers are interpreted as `0`).
+- `count(X)`, `count(*)`: Count of the number of times that X is not NULL, or total number of rows in the group
+- `group_concat(X)`: Returns a string which is the concatenation of all non-NULL values of X.
+- `group_concat(X,Y)`: Same as `group_concat(X)` but with a separator Y between instances of X.
+  - For example, `group_concat(X, '|')` will return a pipe-separated list of values.
+- `max(X)`: Maximum value of all non-NULL X within a group (ORDER BY is applied to determine the maximum value).
+- `min(X)`: Minimum value of all non-NULL X within a group (ORDER BY is applied to determine the minimum value).
+- `sum(X)`, `total(X)`: Sum of all non-NULL X within a group.
 
 ## Scalar functions
 
 Tableland supports **the majority of** [SQLite's core scalar functions](https://www.sqlite.org/lang_corefunc.html) (an output for each row of input), which can be used to further transform a value within some query (a value's length, matching substrings, absolute values, formatting, etc.). Those unsupported are due to [determinism](https://www.sqlite.org/deterministic.html#overview) issues.
+
+| Function                                                                                            | Compatible?                            | Example                                           |
+| --------------------------------------------------------------------------------------------------- | -------------------------------------- | ------------------------------------------------- |
+| [abs(X)](https://www.sqlite.org/lang_corefunc.html#abs)                                             | <span className="circle-green"></span> | SELECT abs(id) from my_table;                     |
+| [changes()](https://www.sqlite.org/lang_corefunc.html#changes)                                      | <span className="circle-red"></span>   | N/A                                               |
+| [char(X1,X2,...,XN)](https://www.sqlite.org/lang_corefunc.html#char)                                | <span className="circle-green"></span> | SELECT char(72,105) from my_table;                |
+| [coalesce(X,Y,...)](https://www.sqlite.org/lang_corefunc.html#coalesce)                             | <span className="circle-green"></span> | SELECT coalesce(NULL,val) FROM my_table;          |
+| [format(FORMAT,...)](https://www.sqlite.org/lang_corefunc.html#format)                              | <span className="circle-green"></span> | SELECT format('%s', 123) from my_table;           |
+| [glob(X,Y)](https://www.sqlite.org/lang_corefunc.html#glob)                                         | <span className="circle-green"></span> | SELECT glob('abc','abc') from my_table;           |
+| [hex(X)](https://www.sqlite.org/lang_corefunc.html#hex)                                             | <span className="circle-green"></span> | SELECT hex(0x1234) from my_table;                 |
+| [ifnull(X,Y)](https://www.sqlite.org/lang_corefunc.html#ifnull)                                     | <span className="circle-green"></span> | SELECT ifnull(NULL,1) from my_table;              |
+| [iif(X,Y,Z)](https://www.sqlite.org/lang_corefunc.html#iif)                                         | <span className="circle-green"></span> | SELECT iif(0,1,'false') from my_table;            |
+| [instr(X,Y)](https://www.sqlite.org/lang_corefunc.html#instr)                                       | <span className="circle-green"></span> | SELECT instr('Hello','o') from my_table;          |
+| [last_insert_rowid()](https://www.sqlite.org/lang_corefunc.html#last_insert_rowid)                  | <span className="circle-red"></span>   | N/A                                               |
+| [length(X)](https://www.sqlite.org/lang_corefunc.html#length)                                       | <span className="circle-green"></span> | SELECT length(val) from my_table;                 |
+| [like(X,Y)](https://www.sqlite.org/lang_corefunc.html#like)                                         | <span className="circle-green"></span> | SELECT like('abc','abc') from my_table;           |
+| [like(X,Y,Z)](https://www.sqlite.org/lang_corefunc.html#like)                                       | <span className="circle-green"></span> | SELECT like('a*b','ab','*') from my_table;        |
+| [likelihood(X,Y)](https://www.sqlite.org/lang_corefunc.html#likelihood)                             | <span className="circle-red"></span>   | N/A                                               |
+| [likely(X)](https://www.sqlite.org/lang_corefunc.html#likely)                                       | <span className="circle-red"></span>   | N/A                                               |
+| [load_extension(X)](https://www.sqlite.org/lang_corefunc.html#load_extension)                       | <span className="circle-red"></span>   | N/A                                               |
+| [load_extension(X)](https://www.sqlite.org/lang_corefunc.html#load_extension)                       | <span className="circle-red"></span>   | N/A                                               |
+| [lower(X)](https://www.sqlite.org/lang_corefunc.html#lower)                                         | <span className="circle-green"></span> | SELECT lower(val) FROM my_table;                  |
+| [ltrim(X)](https://www.sqlite.org/lang_corefunc.html#ltrim)                                         | <span className="circle-green"></span> | SELECT ltrim(val) FROM my_table;                  |
+| [ltrim(X,Y)](https://www.sqlite.org/lang_corefunc.html#ltrim)                                       | <span className="circle-green"></span> | SELECT ltrim(val, ‘Bobby') FROM my_table;         |
+| [max(X,Y,...)](https://www.sqlite.org/lang_corefunc.html#max_scalar)                                | <span className="circle-green"></span> | SELECT max(1,2) FROM my_table;                    |
+| [min(X,Y,...)](https://www.sqlite.org/lang_corefunc.html#min_scalar)                                | <span className="circle-green"></span> | SELECT min(1,2) FROM my_table;                    |
+| [nullif(X,Y)](https://www.sqlite.org/lang_corefunc.html#nullif)                                     | <span className="circle-green"></span> | SELECT nullif(NULL,2) FROM my_table;              |
+| [printf(FORMAT,...)](https://www.sqlite.org/lang_corefunc.html#printf)                              | <span className="circle-green"></span> | SELECT format('%s', 123) from my_table;           |
+| [quote(X)](https://www.sqlite.org/lang_corefunc.html#quote)                                         | <span className="circle-green"></span> | SELECT quote(id) FROM my_table;                   |
+| [random()](https://www.sqlite.org/lang_corefunc.html#random)                                        | <span className="circle-red"></span>   | N/A                                               |
+| [randomblob(N)](https://www.sqlite.org/lang_corefunc.html#randomblob)                               | <span className="circle-red"></span>   | N/A                                               |
+| [replace(X,Y,Z)](https://www.sqlite.org/lang_corefunc.html#replace)                                 | <span className="circle-green"></span> | SELECT replace(val,'Bobby', 'Dan') FROM my_table; |
+| [round(X)](https://www.sqlite.org/lang_corefunc.html#round)                                         | <span className="circle-green"></span> | SELECT round('1.1234') FROM my_table;             |
+| [round(X,Y)](https://www.sqlite.org/lang_corefunc.html#round)                                       | <span className="circle-green"></span> | SELECT round('1.1234',2) FROM my_table;           |
+| [rtrim(X)](https://www.sqlite.org/lang_corefunc.html#rtrim)                                         | <span className="circle-green"></span> | SELECT rtrim(val) FROM my_table;                  |
+| [rtrim(X,Y)](https://www.sqlite.org/lang_corefunc.html#rtrim)                                       | <span className="circle-green"></span> | SELECT rtrim(val,'Tables') FROM my_table;         |
+| [sign(X)](https://www.sqlite.org/lang_corefunc.html#sign)                                           | <span className="circle-green"></span> | SELECT sign(-1) FROM my_table;                    |
+| [soundex(X)](https://www.sqlite.org/lang_corefunc.html#soundex)                                     | <span className="circle-red"></span>   | N/A                                               |
+| [sqlite_compileoption_get(N)](https://www.sqlite.org/lang_corefunc.html#sqlite_compileoption_get)   | <span className="circle-red"></span>   | N/A                                               |
+| [sqlite_compileoption_used(X)](https://www.sqlite.org/lang_corefunc.html#sqlite_compileoption_used) | <span className="circle-red"></span>   | N/A                                               |
+| [sqlite_offset(X)](https://www.sqlite.org/lang_corefunc.html#sqlite_offset)                         | <span className="circle-red"></span>   | N/A                                               |
+| [sqlite_source_id()](https://www.sqlite.org/lang_corefunc.html#sqlite_source_id)                    | <span className="circle-red"></span>   | N/A                                               |
+| [sqlite_version()](https://www.sqlite.org/lang_corefunc.html#sqlite_version)                        | <span className="circle-red"></span>   | N/A                                               |
+| [substr(X,Y), substring(X,Y)](https://www.sqlite.org/lang_corefunc.html#substr)                     | <span className="circle-green"></span> | SELECT substr(val,7) FROM my_table;               |
+| [substr(X,Y,Z), substring(X,Y,Z)](https://www.sqlite.org/lang_corefunc.html#substr)                 | <span className="circle-green"></span> | SELECT substr(val,7,3) FROM my_table;             |
+| [total_changes()](https://www.sqlite.org/lang_corefunc.html#total_changes)                          | <span className="circle-red"></span>   | N/A                                               |
+| [trim(X)](https://www.sqlite.org/lang_corefunc.html#trim)                                           | <span className="circle-green"></span> | SELECT trim(val) FROM my_table;                   |
+| [trim(X,Y)](https://www.sqlite.org/lang_corefunc.html#trim)                                         | <span className="circle-green"></span> | SELECT trim(val, ' Tables') FROM my_table;        |
+| [typeof(X)](https://www.sqlite.org/lang_corefunc.html#typeof)                                       | <span className="circle-green"></span> | SELECT typeof(id) FROM my_table                   |
+| [unhex(X)](https://www.sqlite.org/lang_corefunc.html#unhex)                                         | <span className="circle-red"></span>   | N/A                                               |
+| [unhex(X,Y)](https://www.sqlite.org/lang_corefunc.html#unhex)                                       | <span className="circle-red"></span>   | N/A                                               |
+| [unicode(X)](https://www.sqlite.org/lang_corefunc.html#unicode)                                     | <span className="circle-green"></span> | SELECT unicode('a') FROM my_table;                |
+| [unlikely(X)](https://www.sqlite.org/lang_corefunc.html#unlikely)                                   | <span className="circle-red"></span>   | N/A                                               |
+| [upper(X)](https://www.sqlite.org/lang_corefunc.html#upper)                                         | <span className="circle-green"></span> | SELECT upper(val) FROM my_table;                  |
+| [zeroblob(N)](https://www.sqlite.org/lang_corefunc.html#zeroblob)                                   | <span className="circle-red"></span>   | N/A                                               |

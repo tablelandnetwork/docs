@@ -18,8 +18,19 @@ Tableland currently supports the following SQL clauses:
 - [`UPDATE`](/playbooks/sql/write#updating-data): Update a table's values where some condition is met.
 - [`DELETE`](/playbooks/sql/write#deleting-data): Delete a value from a table where some condition is met.
 - [`SELECT`](/playbooks/sql/read): Select a set of data from a table(s), along with conditions.
+- [`GRANT`/`REVOKE`](/playbooks/sql/access-control): Control how users can write to tables.
+- [`ALTER TABLE`](/playbooks/sql/alter-table): Adjust an existing table's structure.
 
 To access the database, Tableland clients like the [SDK](/sdk), [smart contracts](/smart-contracts), and [CLI](/cli) can be used to create and mutate table data. These also use the [Gateway REST API](/gateway-api) to actually read data directly from the Tableland network by directly writing `SELECT` statement against it.
+
+## Expressions, operators, & functions
+
+Expressions, operators, and functions are the building blocks of SQL. They allow you to compute on or transform data. You can do things like conditional logic, type casting, working with JSON, etc. Check out the following pages for more details:
+
+- [Expressions & operators](/playbooks/sql/expressions): Logic or simple transformations on data.
+- [Functions](/playbooks/sql/functions): Execute a function on a value or set of values to transform the data.
+- [Incrementing values](/playbooks/sql/incrementing-values): Automatically increment a value in a table upon inserts.
+- [JOINs](/playbooks/sql/composing-data): Compose data across two or more tables.
 
 ## Data types
 

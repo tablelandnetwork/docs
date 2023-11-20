@@ -1,43 +1,21 @@
 ---
 title: Setting controllers
 description: Understand how to set or unset a controller contract.
+tags:
+  - smart contracts
+  - controllers
+  - access control
 ---
 
 It’s important to note that when the owner explicitly sets the controller (using the registry's `setController`), a new controller contract will be used and no longer abide by the default permissions. This is "setting" the controller. To "unset" the controller back to its original value, set it back to the `0x0` address—thus, default permissions will go back into place.
 
 ## Registry methods
 
-The `TablelandTables` registry smart contract has three dedicated controller methods, which are helpful to understand within this context.
-
----
-
-`getController(uint256 tableId)`
-
-Get the current controller address for a table.
-
-If a table has its controller set (e.g., using `setController`), this method will return the corresponding address via a _direct_ smart contract call. Otherwise, all tables default to the `0x0` address as being the table’s controller.
-
----
-
-`setController(address caller, uint256 tableId, address controller)`
-
-Set the controller address for a table.
-
-Only the table owner can set the controller of a table to an address, such as another account address or contract that implements Tableland’s `ITablelandTables` ACL policy. However, a table with a _locked_ controller can no longer have its controller be set.
-
----
-
-`lockController(address caller, uint256 tableId)`
-
-Lock the controller address for a table.
-
-A table can have its controller **permanently locked**. This can be useful as a final ACL "lock" to ensure the table owner can no longer make any ACL changes (e.g., after some steady state in a production setting). Only the table owner can call this method.
-
----
+The `TablelandTables` registry smart contract has three dedicated controller methods, which are helpful to understand within this context. See the [`registry` docs](/smart-contracts/registry) for more details.
 
 ## Setting the controller
 
-The owner of a contract needs to call the Tableland registry’s `setController` method to register a _deployed_ policy on-chain.
+The owner of a contract needs to call the Tableland registry’s `setController` method to register a _deployed_ policy onchain.
 
 ```solidity
 function setController(
@@ -87,6 +65,16 @@ function lockController(uint256 tableId) public onlyOwner {
     address(this),
     tableId
   );
+}
+```
+
+## Getting the controller
+
+If you want to check what address is the table's controller, the `getController` method will return the address.
+
+```solidity
+function getController(uint256 tableId) public view returns (address) {
+  return TablelandDeployments.get().getController(tableId);
 }
 ```
 

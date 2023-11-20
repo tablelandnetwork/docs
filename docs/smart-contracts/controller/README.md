@@ -2,9 +2,15 @@
 title: Configure table write access
 sidebar_label: Configure write access
 description: Everything you need to know to control access for programmable tables.
+keywords:
+  - smart contracts
+  - controllers
+  - access control
+tags:
+  - access control
 ---
 
-By default, the _owner_ of a table is the only one that can modify data. However, Tableland gives you a suite of options for programming ownership in useful ways. The most feature rich way to use a _controller_; a smart contract that implements the `ITablelandTables` interface, enabling on-chain rules that govern off-chain table mutations.
+By default, the _owner_ of a table is the only one that can modify data. However, Tableland gives you a suite of options for programming ownership in useful ways. The most feature rich way to use a _controller_; a smart contract that implements the `ITablelandTables` interface, enabling onchain rules that govern offchain table mutations.
 
 ## Access control with controllers
 
@@ -14,7 +20,7 @@ There are default options that allow for the owner to have full control of the t
 
 ## Creating a `TablelandController`
 
-A `TablelandController` compliant contract is one that implements `ITablelandController`, meaning, it supports a `getPolicy` read method that returns the `ITablelandController`’s `Policy` struct. This method can include on-chain rules as logical checks prior to the `Policy` being returned (e.g., conditional logic to check ownership of a token or certain balance).
+A `TablelandController` compliant contract is one that implements `ITablelandController`, meaning, it supports a `getPolicy` read method that returns the `ITablelandController`’s `Policy` struct. This method can include onchain rules as logical checks prior to the `Policy` being returned (e.g., conditional logic to check ownership of a token or certain balance).
 
 ### How it works
 

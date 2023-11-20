@@ -21,7 +21,7 @@ For example, a table name might look like `healthbot_11155111_1`—this means th
 
 ## The TABLE Token
 
-For each of the contracts deployed above, a globally unique TABLE ERC721 token will be minted. Anyone can create _and own_ a table. On-chain access controls can be established to make the table itself collaborative in nature, such as a shared ownership model where certain permissioned users can insert or update rows in the table itself.
+For each of the contracts deployed above, a globally unique TABLE ERC721 token will be minted. Anyone can create _and own_ a table. Onchain access controls can be established to make the table itself collaborative in nature, such as a shared ownership model where certain permissioned users can insert or update rows in the table itself.
 
 At a minimum, a TABLE owner has permissions to do whatever they want with the table, such as inserting new rows, updating / deleting existing ones, or setting a table _controller_ that manages table the access controls. For example, take a table minted on Ethereum that [tracks user session data](https://tableland.network/api/v1/tables/1/7). The table metadata has a number of characteristics, including the table's name, description, schema, image, animation URL, and created time.
 

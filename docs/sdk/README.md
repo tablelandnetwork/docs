@@ -13,7 +13,7 @@ The Tableland SDK provides a minimal client that implements the Cloudflare D1 D
 
 ## Synopsis
 
-The `@tableland/sdk` comes with a few APIs: "primary" [Cloudflare D1 client compatible](https://developers.cloudflare.com/d1/platform/client-api/) API for [`Database`](/sdk/database) connections, and two additional "secondary" APIs ([`Validator`](/sdk/validator) and [`Registry`](/sdk/registry)) that are unique to Tableland operations. Generally, users will leverage the primary database API for typical SQL operations, and the secondary APIs are useful when needing to interact directly with a Tableland Validator node or directly calling Tableland’s smart contracts (on-chain access control, direct contract calls, etc.).
+The `@tableland/sdk` comes with a few APIs: "primary" [Cloudflare D1 client compatible](https://developers.cloudflare.com/d1/platform/client-api/) API for [`Database`](/sdk/database) connections, and two additional "secondary" APIs ([`Validator`](/sdk/validator) and [`Registry`](/sdk/registry)) that are unique to Tableland operations. Generally, users will leverage the primary database API for typical SQL operations, and the secondary APIs are useful when needing to interact directly with a Tableland Validator node or directly calling Tableland’s smart contracts (onchain access control, direct contract calls, etc.). Both ESM and CommonJS are supported.
 
 :::tip
 If you're looking for the SDK API reference, you can check it out [here](/api/sdk/modules).
@@ -44,3 +44,7 @@ The Tableland SDK supports both JavaScript and TypeScript. If you're using TypeS
 Types can be provided on the `Database` constructor, on the `Statement` constructor (`prepare`), or callers can override them on any of the query/execution APIs directly (i.e., `run`, `all`, `first`, or `raw`).
 
 For example, start by defining the type associated with the table’s schema and use this type in the database constructor.
+
+## Web frameworks
+
+If you're building a frontend application, check out the [React](/quickstarts/reactjs), [Next.js](/quickstarts/nextjs), or [wagmi](/quickstarts/wagmi) for a full example of how to use the SDK there. There are also starter [template repos](/quickstarts/templates) to get you up and running even more quickly.

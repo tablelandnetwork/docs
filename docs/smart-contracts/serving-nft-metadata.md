@@ -164,7 +164,7 @@ Now `tokenURI()` will provide a direct read request for the metadata stored in a
 
 All of the above holds for returning URIs for your 1155 as well. Except, for many projects, it may be a bit easier. The [ERC-1155](https://eips.ethereum.org/EIPS/eip-1155#metadata) standard is to return a URI template from the read endpoint (versus ERC-721, which evaluates the template too). From the docs,
 
-> The URI value allows for ID substitution by clients. If the string `{id}` exists in any URI, clients MUST replace this with the actual token ID in hexadecimal form. This allows for a large number of tokens to use the same on-chain string by defining a URI once, for that large number of tokens.
+> The URI value allows for ID substitution by clients. If the string `{id}` exists in any URI, clients MUST replace this with the actual token ID in hexadecimal form. This allows for a large number of tokens to use the same onchain string by defining a URI once, for that large number of tokens.
 
 As a side-note, this templating rule also exists in the final JSON for the NFT, where `{id}` found anywhere in the JSON must be replaced by the client.
 

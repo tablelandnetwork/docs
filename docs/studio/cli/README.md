@@ -1,5 +1,5 @@
 ---
-title: Getting started
+title: Get started
 description: Use the Studio from the command line to interact with team, projects, and tables.
 keywords:
   - CLI

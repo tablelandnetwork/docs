@@ -172,21 +172,3 @@ The offset will skip the first `Bobby Tables` row and return the next two rows (
 :::tip
 A `LIMIT` can be `-1` to signal no upper bound, which may be useful with an `OFFSET` in case you want to, basically, ignore imposing any `LIMIT`.
 :::
-
-## Distinct (deduplicate)
-
-If you want a query to only include unique data, the `DISTINCT` clause will remove duplicate values from the return set. Take, for example, the desire to only include unique values in the `val` column, which currently has two duplicate rows with `Molly Tables`:
-
-```sql
-SELECT
-  DISTINCT val
-FROM
-  my_table;
-```
-
-This will only return the two distinct `val`s instead of one `Bobby Tables` and two `Molly Tables`:
-
-| val          |
-| ------------ |
-| Bobby Tables |
-| Molly Tables |

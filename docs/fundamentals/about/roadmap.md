@@ -28,20 +28,23 @@ We’re here to build a new web. Together.
 
 ### 2023
 
+#### Q3
+
+- Studio web application MVP.
+- Core protocol research and development.
+- Tableland Basin initial MVP/alpha.
+
 #### Q2
 
-- Tableland protocol litepaper.
-- Studio web application MVP.
 - Arbitrum Nova support.
 - Filecoin (FVM) support.
-- Improved on-chain access control.
+- Improved onchain access control.
 - Decentralized validator metrics.
 - ENS table namespaces.
 - Zero downtime deployments.
 - Inclusion proof PoC.
 - Table configurations feature.
 - Local-first wasm based SQLite support.
-- Author a token reputation EIP.
 - Docs site content refresh & deployment.
 
 #### Q1
@@ -107,7 +110,7 @@ We’re here to build a new web. Together.
 - Metadata updates extension ([EIP-4906](https://eips.ethereum.org/EIPS/eip-4906)) to trigger marketplaces to fetch dynamic changes.
 - Filecoin backed assets / metadata.
 - Tableland-based voting in the Garage.
-- Support for earning Flight Time (FT) from off-chain actions.
+- Support for earning Flight Time (FT) from offchain actions.
 - Show FT for Rigs holders as Discord badges.
 
 #### Q1

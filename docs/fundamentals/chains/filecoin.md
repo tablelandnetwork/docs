@@ -22,13 +22,14 @@ Filecoin block times are 30 seconds long. But, there are two components to SQL b
 
 The FVM generates receipts in the tipset _following_ a transaction's submission to the mempool. Since Tableland needs the event / receipt in order to see any SQL that's written, this typically adds a **~1 minute delay** after transaction submission—thus, 1 block (30 seconds) plus waiting for the following tipset's receipt (~1 minute) (see [here](https://docs.filecoin.io/smart-contracts/developing-contracts/best-practices/#consistently-generating-transaction-receipts) for more detail). Additionally, Tableland **waits 5 blocks for finality** (~2.5 mins) until the SQL is materialized in Tableland. Finality in Filecoin is actually _900 epochs_ (~7.5 hours), but in practice, the 5 block finality is sufficient for Tableland.
 
-From the time an on-chain SQL transaction is submitted until it is materialized in the Tableland database network, it can take up to **~4 minutes**.
+From the time an onchain SQL transaction is submitted until it is materialized in the Tableland database network, it can take up to **~4 minutes**.
 
 ## Setup & resources
 
 ### Filecoin (mainnet)
 
 - Average block time: 30s
+- Block depth: 5
 - Average SQL materialization time: 4 minutes
 - Chain ID: 314
 - Symbol: FIL
@@ -48,6 +49,7 @@ To get FIL into an EVM wallet (e.g., MetaMask), you'll have to buy FIL on an exc
 ### Filecoin Calibration (testnet)
 
 - Average block time: 30s
+- Block depth: 5
 - Average SQL materialization time: 4 minutes
 - Chain ID: 314159
 - Symbol: TFIL

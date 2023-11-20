@@ -1,5 +1,5 @@
 ---
-title: Getting started
+title: Get started
 description: Learn how to login in and set up your first project.
 keywords:
   - studio

@@ -17,7 +17,9 @@ For comparison, Polygon supports 7k tx/s compared to Ethereum’s 15 tx/s and ~1
 
 ### Polygon (mainnet)
 
-- Average block time: ≤ 2 seconds
+- Average block time: 2-3 seconds
+- Block depth: 1
+- Average SQL materialization time: <10 seconds
 - Chain ID: <ChainInfo chain='matic' info='chainId' />
 - Symbol: MATIC
 - Status Dashboard:
@@ -36,7 +38,9 @@ For comparison, Polygon supports 7k tx/s compared to Ethereum’s 15 tx/s and ~1
 
 ### Polygon Mumbai (testnet)
 
-- Average block time: ≤ 2 seconds
+- Average block time: 2 seconds
+- Block depth: 1
+- Average SQL materialization time: <10 seconds
 - Chain ID: <ChainInfo chain='maticmum' info='chainId' />
 - Symbol: MATIC
 - Status Dashboard:

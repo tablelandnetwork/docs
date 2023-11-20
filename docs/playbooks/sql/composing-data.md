@@ -5,6 +5,13 @@ description: Extract data across multiple tables by joining them together.
 keywords:
   - reads
   - reading data
+  - join
+  - inner join
+  - outer join
+  - union
+  - union all
+  - intersect
+  - except
 ---
 
 import Tabs from "@theme/Tabs";
@@ -110,3 +117,128 @@ ON
 ```
 
 Note that because both `my_table` and `other_table` have the same column name of `id`, the query had to specify which table to look at (i.e., `my_table.id` and `other_table.id`). If, instead, the `other_table` had named its `id` column as `other_id`, the query could have been simplified a bit by providing the column name _without_ the preceding table it belongs to (i.e., `other_id` vs. `other_table.id`, `id` vs. `my_table.id`).
+
+## Aliasing
+
+To make it easier to write queries, you can use the concept of aliasing to rename columns and tables. This is especially useful when you're composing data across multiple tables and need to disambiguate columns. For example, in the `JOIN` example above, we could have renamed the `id` column in `other_table` to `other_id` and then used that in the `ON` clause. Similarly, we can have alias the table entirely.
+
+```sql
+SELECT
+  m.id AS mid,
+  o.num AS onum,
+  m.val AS mval
+FROM
+  my_table as m
+JOIN
+  other_table as o
+ON
+  mid = o.id;
+```
+
+Notice the `SELECT` defines column aliases, including `mid` for `m.id`, and the `ON` looks where this `mid` column alias is equal to the `other_table`'s `o` alias and `id` column. Thus, our final result set will look like:
+
+| mid | onum | mval         |
+| --- | ---- | ------------ |
+| 1   | 1000 | Bobby Tables |
+| 2   | 2000 | Molly Tables |
+
+## `UNION`
+
+The `UNION` clause will combine results from multiple `SELECT` statements and remove duplicates. Let's create a new `some_table` with a schema of `id int, val text` that has the a couple duplicate rows from `my_table` and a distinct one.
+
+| id  | val          |
+| --- | ------------ |
+| 1   | Bobby Tables |
+| 2   | Molly Tables |
+| 3   | Danny Tables |
+
+```sql
+SELECT
+  id
+FROM
+  my_table
+UNION
+SELECT
+  id
+FROM
+  some_table;
+```
+
+The output for this will be a single column of `id`s with no duplicates.
+
+| id  |
+| --- |
+| 1   |
+| 2   |
+| 3   |
+
+## `UNION ALL`
+
+To include duplicate, the `UNION ALL` clause can be used instead.
+
+```sql
+SELECT
+  id
+FROM
+  my_table
+UNION ALL
+SELECT
+  id
+FROM
+  some_table;
+```
+
+The output for this will be a single column of `id`s with duplicates included since `my_table` and `some_table` both have two rows with `id` of `1` and `2` and one unique `3`.
+
+| id  |
+| --- |
+| 1   |
+| 2   |
+| 1   |
+| 2   |
+| 3   |
+
+## `INTERSECT`
+
+With `INTERSECT`, you can find the intersection across `SELECT` statements. This will return only the rows that are common between the two tables.
+
+```sql
+SELECT
+  id
+FROM
+  my_table
+INTERSECT
+SELECT
+  id
+FROM
+  some_table;
+```
+
+The output for this will only include the rows with `id` of `1` and `2` since those are the only rows that are common between `my_table` and `some_table`.
+
+| id  |
+| --- |
+| 1   |
+| 2   |
+
+## `EXCEPT`
+
+The `EXCEPT` will return only the rows that are unique to the first `SELECT` statement; it can be viewed as the inverse of `INTERSECT` but where the query order matters. So, we'll change up the order so that we query `some_table` first since it contains a unique row of `id` of `3`.
+
+```sql
+SELECT
+  id
+FROM
+  some_table
+INTERSECT
+SELECT
+  id
+FROM
+  my_table;
+```
+
+Thus, only the row with `id` of `3` will be returned.
+
+| id  |
+| --- |
+| 3   |

@@ -7,7 +7,7 @@ keywords:
   - dynamic nft
 ---
 
-The Chainlink network can help make autonomous on-chain calls and enable truly dynamic NFTs. All of the logic can be created with smart contracts and registered in the Chainlink automation portal, enabling dynamic NFTs using on-chain logic, only.
+The Chainlink network can help make autonomous onchain calls and enable truly dynamic NFTs. All of the logic can be created with smart contracts and registered in the Chainlink automation portal, enabling dynamic NFTs using onchain logic, only.
 
 ## Setup
 
@@ -38,7 +38,7 @@ For context, we’ll end up with the following:
 
 - Deployed contract: [here](https://mumbai.polygonscan.com/token/0x86aa63f233a41a4af09e28f5953f4aa627978e31)
 - Dynamic NFT collection: [here](https://testnets.opensea.io/collection/tableland-chainlink-dnft)
-  - The "seed" NFT will grow into a "bloom" — all of these mutations are handled by on-chain table writes that are updated by the Chainlink network
+  - The "seed" NFT will grow into a "bloom" — all of these mutations are handled by onchain table writes that are updated by the Chainlink network
     ![Table Chainlink dNFT](@site/static/assets/tutorials/dynamic-nft-chainlink/tbl-link-dnft.png)
 
 ### Repo
@@ -49,7 +49,7 @@ The repo can be found on GitHub at the following link: [here](https://github.com
 
 First, set up our basic contract. It’ll import from Tableland, OpenZeppelin, and Chainlink, and the constructor allows for the `_baseURIString` to be set to the Tableland gateway. We’ll also go ahead and create our `onERC721Received` method. This allows the contract to receive / own an ERC-721 token, and since we’ll be creating tables from our contract, we’ll need the contract to own the Tableland ERC-721 tables.
 
-We’ll use a `_tokenIdCounter` to track the current token, store "flowers" and "tokens" related table information, create a `stage` mapping (for reading current NFT state), and some additional configuration information needed for Chainlink or Tableland. Essentially, if you need on-chain NFT data, it might be beneficial to track that aspect in contract storage while also virtualized in Tableland tables.
+We’ll use a `_tokenIdCounter` to track the current token, store "flowers" and "tokens" related table information, create a `stage` mapping (for reading current NFT state), and some additional configuration information needed for Chainlink or Tableland. Essentially, if you need onchain NFT data, it might be beneficial to track that aspect in contract storage while also virtualized in Tableland tables.
 
 ```solidity
 // SPDX-License-Identifier: MIT
@@ -222,7 +222,7 @@ function mint(address to) external {
 
 ### Grow flower
 
-This is where Chainlink comes into play! When the Keeper network calls `performUpkeep` (assuming the conditions are valid), the NFT will be mutated using `growFlower` by increasing its stage by `1`. Recall that a token is minted and inserted into the "tokens" table. With `growFlower`, this token’s row is mutated to where a new `stage_id` is assigned within Tableland, and the `stage` mapping in the contact is also updated with this same value. The purpose of this mirroring allow for the contract to make on-chain calls to `stage` with off-chain metadata easily composes the current `stage_id` into the proper NFT.
+This is where Chainlink comes into play! When the Keeper network calls `performUpkeep` (assuming the conditions are valid), the NFT will be mutated using `growFlower` by increasing its stage by `1`. Recall that a token is minted and inserted into the "tokens" table. With `growFlower`, this token’s row is mutated to where a new `stage_id` is assigned within Tableland, and the `stage` mapping in the contact is also updated with this same value. The purpose of this mirroring allow for the contract to make onchain calls to `stage` with offchain metadata easily composes the current `stage_id` into the proper NFT.
 
 ```solidity
 function growFlower(uint256 _tokenId) public {

@@ -89,7 +89,7 @@ NFT metadata has top-level keys of `name`, `image`, and `external_url`, which of
 
 You'll need to create an object that contains these top-level definitions, and the `attributes` will need to make use of the [JSON group array](/playbooks/sql/functions#objects) function. Namely, the `json_group_array()` will allow you to take one or more table rows that meet the `WHERE` clause condition and create JSON objects from them.
 
-Here, you're using both the JSON object and array functions along with the `||` operator to [concatenate values into strings](/playbooks/sql/functions#string-concatenation). Note that if you're _not_ using IPFS to store images (e.g., if storing on a hosted server), you should replace `'ipfs://QmVK.../'` with your base URL.
+Here, you're using both the JSON object and array functions along with the `||` operator to [concatenate values into strings](/playbooks/sql/expressions#concatenation). Note that if you're _not_ using IPFS to store images (e.g., if storing on a hosted server), you should replace `'ipfs://QmVK.../'` with your base URL.
 
 ```sql
 SELECT

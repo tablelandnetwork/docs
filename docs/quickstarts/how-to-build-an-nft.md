@@ -9,7 +9,7 @@ keywords:
 slug: /how-to-build-an-nft
 ---
 
-Tableland closes the gap between on-chain and off-chain state synchronicity, which is especially useful for NFT developers. Namely, on-chain can automatically drive off-chain metadata changes while also offering performant query capabilities at the application layer.
+Tableland closes the gap between onchain and offchain state synchronicity, which is especially useful for NFT developers. Namely, onchain can automatically drive offchain metadata changes while also offering performant query capabilities at the application layer.
 
 ## Learn
 

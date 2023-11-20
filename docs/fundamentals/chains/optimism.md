@@ -11,15 +11,17 @@ Optimism is one of the EVM-compatible Layer 2 solutions that Tableland currently
 
 ## Overview
 
-[Optimism](https://www.optimism.io/about) is an [optimistic rollup](https://ethereum.org/en/developers/docs/scaling/optimistic-rollups/) built on top of Ethereum. It is a sidechain that inherits Ethereum’s security but operates as a separate protocol with its own set of nodes running. Rollups sequencers batch transactions onto the L1 [at various intervals](https://optimistic.etherscan.io/batches) and leverage [fraud proofs](https://ethereum.org/en/glossary/#fraud-proof) for self-enforced validation of the off-chain transaction.
+[Optimism](https://www.optimism.io/about) is an [optimistic rollup](https://ethereum.org/en/developers/docs/scaling/optimistic-rollups/) built on top of Ethereum. It is a sidechain that inherits Ethereum’s security but operates as a separate protocol with its own set of nodes running. Rollups sequencers batch transactions onto the L1 [at various intervals](https://optimistic.etherscan.io/batches) and leverage [fraud proofs](https://ethereum.org/en/glossary/#fraud-proof) for self-enforced validation of the offchain transaction.
 
-Off-chain, the transactions happen much quicker than the batching. Note that developers must bridge assets from Ethereum to Optimism to take advantage of the faster transaction confirmation speeds and low costs.
+Offchain, the transactions happen much quicker than the batching. Note that developers must bridge assets from Ethereum to Optimism to take advantage of the faster transaction confirmation speeds and low costs.
 
 ## Setup & resources
 
 ### Optimism (mainnet)
 
 - Average block time: 2 seconds
+- Block depth: 0
+- Average SQL materialization time: <5 seconds
 - Chain ID: <ChainInfo chain='optimism' info='chainId' />
 - Symbol: ETH
 - Status Dashboard:
@@ -35,6 +37,8 @@ Off-chain, the transactions happen much quicker than the batching. Note that dev
 ### Optimism Goerli (testnet)
 
 - Average block time: 2 seconds
+- Block depth: 0
+- Average SQL materialization time: <5 seconds
 - Chain ID: <ChainInfo chain='optimism-goerli' info='chainId' />
 - Symbol: ETH
 - Status Dashboard:

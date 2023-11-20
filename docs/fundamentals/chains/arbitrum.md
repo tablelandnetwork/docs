@@ -13,13 +13,13 @@ import { ChainInfo } from '@site/src/components/SupportedChains'
 
 ### Arbitrum One
 
-Arbitrum One is a rollup scaling solution that works by [batching transactions](https://arbiscan.io/batches) from L2 to L1 at various intervals. Off-chain transactions happen much more frequently and allow for very low costs and fast transaction confirmation times. Arbitrum operates a network of EVM-compatible nodes and uses fraud proofs to validate if the off-chain transaction are valid, doing so in a way that inherits Ethereum’s security.
+Arbitrum One is a rollup scaling solution that works by [batching transactions](https://arbiscan.io/batches) from L2 to L1 at various intervals. Offchain transactions happen much more frequently and allow for very low costs and fast transaction confirmation times. Arbitrum operates a network of EVM-compatible nodes and uses fraud proofs to validate if the offchain transaction are valid, doing so in a way that inherits Ethereum’s security.
 
 One key difference to note between Arbitrum and Optimism is that Arbitrum uses multi-round fraud proofs and single transaction disputes. This differs from single-round fraud proofs (e.g., Optimism) that execute the _entire rollup_ on Ethereum if a challenge is made.
 
 ### Arbitrum Nova
 
-[Arbitrum Nova](https://nova.arbitrum.io/) enables ultra-low transaction fees through a _Data Availability Committee_. With games or certain apps, high transaction volume can make things cost prohibitive and diminish the user experience—but Nova helps address these issues. It becomes more scalable to build these types of on-chain experiences, especially, when coupled with a decentralized SQL database like Tableland.
+[Arbitrum Nova](https://nova.arbitrum.io/) enables ultra-low transaction fees through a _Data Availability Committee_. With games or certain apps, high transaction volume can make things cost prohibitive and diminish the user experience—but Nova helps address these issues. It becomes more scalable to build these types of onchain experiences, especially, when coupled with a decentralized SQL database like Tableland.
 
 Thus, you can imagine how high volume applications can take advantage of both the speed and associated costs. Nova makes it much cheaper than, say, using Ethereum mainnet or even Arbitrum One, which would be too expensive to build applications with these requirements. Common use cases include gaming and anything with high volume requirements, such as social projects or dapp application data.
 
@@ -28,6 +28,8 @@ Thus, you can imagine how high volume applications can take advantage of both th
 ### Sepolia (testnet)
 
 - Average block time: 2 seconds
+- Block depth: 0
+- Average SQL materialization time: <5 seconds
 - Chain ID: <ChainInfo chain='arbitrum-sepolia' info='chainId' />
 - Symbol: ETH
 - Status Dashboard:
@@ -47,6 +49,9 @@ Thus, you can imagine how high volume applications can take advantage of both th
 
 ### Arbitrum One (mainnet)
 
+- Average block time: 2 seconds
+- Block depth: 0
+- Average SQL materialization time: <5 seconds
 - Chain ID: <ChainInfo chain='arbitrum' info='chainId' />
 - Symbol: ETH
 - Status Dashboard:
@@ -63,6 +68,9 @@ Thus, you can imagine how high volume applications can take advantage of both th
 
 ### Arbitrum Nova (mainnet)
 
+- Average block time: 2 seconds
+- Block depth: 0
+- Average SQL materialization time: <5 seconds
 - Chain ID: <ChainInfo chain='arbitrum-nova' info='chainId' />
 - Symbol: ETH
 - Status Dashboard:

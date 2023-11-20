@@ -10,12 +10,18 @@ This general API specification is used to automatically generate clients and bac
 
 ### Table of Contents
 
+- [Synopsis](#synopsis)
+  - [Table of Contents](#table-of-contents)
 - [Query the network](#query-the-network)
 - [Get transaction status](#get-transaction-status)
 - [Get table information](#get-table-information)
 - [Get health status](#get-health-status)
 - [Get version information](#get-version-information)
-- [Schemas](#schemas)
+  - [Properties](#properties)
+  - [Properties](#properties-1)
+  - [Properties](#properties-2)
+  - [Properties](#properties-3)
+  - [Properties](#properties-4)
 
 <!-- Generator: Widdershins v4.0.1 -->
 <h1 id="tableland-validator-openapi-3-0">
@@ -27,7 +33,7 @@ Tableland Validator - OpenAPI 3.0 v1.0.1
 > menu.
 
 In Tableland, Validators are the execution unit/actors of the protocol.
-They have the following responsibilities: - Listen to on-chain events to
+They have the following responsibilities: - Listen to onchain events to
 materialize Tableland-compliant SQL queries in a database engine
 (currently, SQLite by default). - Serve read-queries (e.g: SELECT \*
 FROM foo_69_1) to the external world. - Serve state queries (e.g. list
@@ -63,7 +69,7 @@ Query the Tableland network
 
 > Code samples
 
-``` shell
+```shell
 # You can also use wget
 curl -X GET https://testnets.tableland.network/api/v1/query?statement=select%20%2A%20from%20healthbot_80001_1 \
   -H 'Accept: application/json'
@@ -78,7 +84,7 @@ Parameters
 </h3>
 
 | Name      | In    | Type    | Required | Description                                                                                 |
-|-----------|-------|---------|----------|---------------------------------------------------------------------------------------------|
+| --------- | ----- | ------- | -------- | ------------------------------------------------------------------------------------------- |
 | statement | query | string  | true     | The SQL read query statement                                                                |
 | format    | query | string  | false    | The requested response format:                                                              |
 | extract   | query | boolean | false    | Whether to extract the JSON object from the single property of the surrounding JSON object. |
@@ -93,7 +99,7 @@ query results as a JSON object with columns and rows properties.
 #### Enumerated Values
 
 | Parameter | Value   |
-|-----------|---------|
+| --------- | ------- |
 | format    | objects |
 | format    | table   |
 
@@ -101,7 +107,7 @@ query results as a JSON object with columns and rows properties.
 
 > 200 Response
 
-``` json
+```json
 {}
 ```
 
@@ -110,7 +116,7 @@ Responses
 </h3>
 
 | Status | Meaning                                                            | Description                   | Schema |
-|--------|--------------------------------------------------------------------|-------------------------------|--------|
+| ------ | ------------------------------------------------------------------ | ----------------------------- | ------ |
 | 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)            | Successful operation          | Inline |
 | 400    | [Bad Request](https://tools.ietf.org/html/rfc7231#section-6.5.1)   | Invalid query/statement value | None   |
 | 404    | [Not Found](https://tools.ietf.org/html/rfc7231#section-6.5.4)     | Row Not Found                 | None   |
@@ -136,7 +142,7 @@ Get information about transaction progress
 
 > Code samples
 
-``` shell
+```shell
 # You can also use wget
 curl -X GET https://testnets.tableland.network/api/v1/receipt/{chainId}/{transactionHash} \
   -H 'Accept: application/json'
@@ -151,7 +157,7 @@ Parameters
 </h3>
 
 | Name            | In   | Type           | Required | Description                     |
-|-----------------|------|----------------|----------|---------------------------------|
+| --------------- | ---- | -------------- | -------- | ------------------------------- |
 | chainId         | path | integer(int32) | true     | The parent chain to target      |
 | transactionHash | path | string         | true     | The transaction hash to request |
 
@@ -159,13 +165,10 @@ Parameters
 
 > 200 Response
 
-``` json
+```json
 {
   "table_id": "1",
-  "table_ids": [
-    "1",
-    "2"
-  ],
+  "table_ids": ["1", "2"],
   "transaction_hash": "0x02f319429b8a7be1cbb492f0bfbf740d2472232a2edadde7df7c16c0b61aa78b",
   "block_number": 27055540,
   "chain_id": 80001,
@@ -179,7 +182,7 @@ Responses
 </h3>
 
 | Status | Meaning                                                            | Description                                         | Schema                                          |
-|--------|--------------------------------------------------------------------|-----------------------------------------------------|-------------------------------------------------|
+| ------ | ------------------------------------------------------------------ | --------------------------------------------------- | ----------------------------------------------- |
 | 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)            | successful operation                                | [TransactionReceipt](#schematransactionreceipt) |
 | 400    | [Bad Request](https://tools.ietf.org/html/rfc7231#section-6.5.1)   | Invalid chain identifier or transaction hash format | None                                            |
 | 404    | [Not Found](https://tools.ietf.org/html/rfc7231#section-6.5.4)     | No transaction receipt found with the provided hash | None                                            |
@@ -202,7 +205,7 @@ Access to table information
 
 > Code samples
 
-``` shell
+```shell
 # You can also use wget
 curl -X GET https://testnets.tableland.network/api/v1/tables/{chainId}/{tableId} \
   -H 'Accept: application/json'
@@ -217,7 +220,7 @@ Parameters
 </h3>
 
 | Name    | In   | Type           | Required | Description                |
-|---------|------|----------------|----------|----------------------------|
+| ------- | ---- | -------------- | -------- | -------------------------- |
 | chainId | path | integer(int32) | true     | The parent chain to target |
 | tableId | path | string         | true     | Table identifier           |
 
@@ -225,7 +228,7 @@ Parameters
 
 > 200 Response
 
-``` json
+```json
 {
   "name": "healthbot_80001_1",
   "external_url": "https://testnets.tableland.network/api/v1/tables/80001/1",
@@ -241,16 +244,10 @@ Parameters
       {
         "name": "id",
         "type": "integer",
-        "constraints": [
-          "NOT NULL",
-          "PRIMARY KEY",
-          "UNIQUE"
-        ]
+        "constraints": ["NOT NULL", "PRIMARY KEY", "UNIQUE"]
       }
     ],
-    "table_constraints": [
-      "PRIMARY KEY (id)"
-    ]
+    "table_constraints": ["PRIMARY KEY (id)"]
   }
 }
 ```
@@ -260,7 +257,7 @@ Responses
 </h3>
 
 | Status | Meaning                                                                    | Description                       | Schema                |
-|--------|----------------------------------------------------------------------------|-----------------------------------|-----------------------|
+| ------ | -------------------------------------------------------------------------- | --------------------------------- | --------------------- |
 | 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)                    | successful operation              | [Table](#schematable) |
 | 400    | [Bad Request](https://tools.ietf.org/html/rfc7231#section-6.5.1)           | Invalid chain or table identifier | None                  |
 | 404    | [Not Found](https://tools.ietf.org/html/rfc7231#section-6.5.4)             | Table Not Found                   | None                  |
@@ -280,7 +277,7 @@ health
 
 > Code samples
 
-``` shell
+```shell
 # You can also use wget
 curl -X GET https://testnets.tableland.network/api/v1/health
 ```
@@ -294,7 +291,7 @@ Responses
 </h3>
 
 | Status | Meaning                                                 | Description               | Schema |
-|--------|---------------------------------------------------------|---------------------------|--------|
+| ------ | ------------------------------------------------------- | ------------------------- | ------ |
 | 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1) | The validator is healthy. | None   |
 
 <aside class="success">
@@ -310,7 +307,7 @@ version
 
 > Code samples
 
-``` shell
+```shell
 # You can also use wget
 curl -X GET https://testnets.tableland.network/api/v1/version \
   -H 'Accept: application/json'
@@ -324,7 +321,7 @@ Returns version information about the validator daemon.
 
 > 200 Response
 
-``` json
+```json
 {
   "version": 0,
   "git_commit": "79688910d4689dcc0991a0d8eb9d988200586d8f",
@@ -341,7 +338,7 @@ Responses
 </h3>
 
 | Status | Meaning                                                 | Description          | Schema                            |
-|--------|---------------------------------------------------------|----------------------|-----------------------------------|
+| ------ | ------------------------------------------------------- | -------------------- | --------------------------------- |
 | 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1) | successful operation | [VersionInfo](#schemaversioninfo) |
 
 <aside class="success">
@@ -358,7 +355,7 @@ Table
 <a id="schematable"></a> <a id="schema_Table"></a>
 <a id="tocStable"></a> <a id="tocstable"></a>
 
-``` json
+```json
 {
   "name": "healthbot_80001_1",
   "external_url": "https://testnets.tableland.network/api/v1/tables/80001/1",
@@ -374,16 +371,10 @@ Table
       {
         "name": "id",
         "type": "integer",
-        "constraints": [
-          "NOT NULL",
-          "PRIMARY KEY",
-          "UNIQUE"
-        ]
+        "constraints": ["NOT NULL", "PRIMARY KEY", "UNIQUE"]
       }
     ],
-    "table_constraints": [
-      "PRIMARY KEY (id)"
-    ]
+    "table_constraints": ["PRIMARY KEY (id)"]
   }
 }
 ```
@@ -391,7 +382,7 @@ Table
 ### Properties
 
 | Name           | Type       | Required | Restrictions | Description                       |
-|----------------|------------|----------|--------------|-----------------------------------|
+| -------------- | ---------- | -------- | ------------ | --------------------------------- |
 | name           | string     | false    | none         | none                              |
 | external_url   | string     | false    | none         | none                              |
 | animation_url  | string     | false    | none         | none                              |
@@ -404,37 +395,37 @@ Table
 oneOf
 
 | Name           | Type   | Required | Restrictions | Description |
-|----------------|--------|----------|--------------|-------------|
-| »» *anonymous* | string | false    | none         | none        |
+| -------------- | ------ | -------- | ------------ | ----------- |
+| »» _anonymous_ | string | false    | none         | none        |
 
 xor
 
 | Name           | Type   | Required | Restrictions | Description |
-|----------------|--------|----------|--------------|-------------|
-| »» *anonymous* | number | false    | none         | none        |
+| -------------- | ------ | -------- | ------------ | ----------- |
+| »» _anonymous_ | number | false    | none         | none        |
 
 xor
 
 | Name           | Type    | Required | Restrictions | Description |
-|----------------|---------|----------|--------------|-------------|
-| »» *anonymous* | integer | false    | none         | none        |
+| -------------- | ------- | -------- | ------------ | ----------- |
+| »» _anonymous_ | integer | false    | none         | none        |
 
 xor
 
 | Name           | Type    | Required | Restrictions | Description |
-|----------------|---------|----------|--------------|-------------|
-| »» *anonymous* | boolean | false    | none         | none        |
+| -------------- | ------- | -------- | ------------ | ----------- |
+| »» _anonymous_ | boolean | false    | none         | none        |
 
 xor
 
 | Name           | Type   | Required | Restrictions | Description |
-|----------------|--------|----------|--------------|-------------|
-| »» *anonymous* | object | false    | none         | none        |
+| -------------- | ------ | -------- | ------------ | ----------- |
+| »» _anonymous_ | object | false    | none         | none        |
 
 continued
 
 | Name   | Type                    | Required | Restrictions | Description |
-|--------|-------------------------|----------|--------------|-------------|
+| ------ | ----------------------- | -------- | ------------ | ----------- |
 | schema | [Schema](#schemaschema) | false    | none         | none        |
 
 <h2 id="tocS_TransactionReceipt">
@@ -446,13 +437,10 @@ TransactionReceipt
 <a id="schema_TransactionReceipt"></a>
 <a id="tocStransactionreceipt"></a> <a id="tocstransactionreceipt"></a>
 
-``` json
+```json
 {
   "table_id": "1",
-  "table_ids": [
-    "1",
-    "2"
-  ],
+  "table_ids": ["1", "2"],
   "transaction_hash": "0x02f319429b8a7be1cbb492f0bfbf740d2472232a2edadde7df7c16c0b61aa78b",
   "block_number": 27055540,
   "chain_id": 80001,
@@ -464,7 +452,7 @@ TransactionReceipt
 ### Properties
 
 | Name             | Type           | Required | Restrictions | Description              |
-|------------------|----------------|----------|--------------|--------------------------|
+| ---------------- | -------------- | -------- | ------------ | ------------------------ |
 | table_id         | string         | false    | none         | This field is deprecated |
 | table_ids        | \[string\]     | false    | none         | none                     |
 | transaction_hash | string         | false    | none         | none                     |
@@ -481,29 +469,23 @@ Schema
 <a id="schemaschema"></a> <a id="schema_Schema"></a>
 <a id="tocSschema"></a> <a id="tocsschema"></a>
 
-``` json
+```json
 {
   "columns": [
     {
       "name": "id",
       "type": "integer",
-      "constraints": [
-        "NOT NULL",
-        "PRIMARY KEY",
-        "UNIQUE"
-      ]
+      "constraints": ["NOT NULL", "PRIMARY KEY", "UNIQUE"]
     }
   ],
-  "table_constraints": [
-    "PRIMARY KEY (id)"
-  ]
+  "table_constraints": ["PRIMARY KEY (id)"]
 }
 ```
 
 ### Properties
 
 | Name              | Type                        | Required | Restrictions | Description |
-|-------------------|-----------------------------|----------|--------------|-------------|
+| ----------------- | --------------------------- | -------- | ------------ | ----------- |
 | columns           | \[[Column](#schemacolumn)\] | false    | none         | none        |
 | table_constraints | \[string\]                  | false    | none         | none        |
 
@@ -515,22 +497,18 @@ Column
 <a id="schemacolumn"></a> <a id="schema_Column"></a>
 <a id="tocScolumn"></a> <a id="tocscolumn"></a>
 
-``` json
+```json
 {
   "name": "id",
   "type": "integer",
-  "constraints": [
-    "NOT NULL",
-    "PRIMARY KEY",
-    "UNIQUE"
-  ]
+  "constraints": ["NOT NULL", "PRIMARY KEY", "UNIQUE"]
 }
 ```
 
 ### Properties
 
 | Name        | Type       | Required | Restrictions | Description |
-|-------------|------------|----------|--------------|-------------|
+| ----------- | ---------- | -------- | ------------ | ----------- |
 | name        | string     | false    | none         | none        |
 | type        | string     | false    | none         | none        |
 | constraints | \[string\] | false    | none         | none        |
@@ -543,7 +521,7 @@ VersionInfo
 <a id="schemaversioninfo"></a> <a id="schema_VersionInfo"></a>
 <a id="tocSversioninfo"></a> <a id="tocsversioninfo"></a>
 
-``` json
+```json
 {
   "version": 0,
   "git_commit": "79688910d4689dcc0991a0d8eb9d988200586d8f",
@@ -558,7 +536,7 @@ VersionInfo
 ### Properties
 
 | Name           | Type           | Required | Restrictions | Description |
-|----------------|----------------|----------|--------------|-------------|
+| -------------- | -------------- | -------- | ------------ | ----------- |
 | version        | integer(int32) | false    | none         | none        |
 | git_commit     | string         | false    | none         | none        |
 | git_branch     | string         | false    | none         | none        |

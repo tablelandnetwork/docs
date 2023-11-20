@@ -4,6 +4,8 @@ sidebar_label: JETI Extension
 description: Use IPFS for Tableland data
 ---
 
+TODO: update
+
 ## JavaScript Extension for Tableland Integrations
 
 Using JETI

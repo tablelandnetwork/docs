@@ -5,7 +5,7 @@ description: Figure out where to begin with Tableland, whether that's starting t
 
 import { ChainsList } from '@site/src/components/SupportedChains'
 
-Tableland is a web3 SQL database that can be used on EVM chains like Ethereum and Layer 2 (L2) solutions. It helps extend and enhance data storage while offloading accessibility to a decentralized network of validator nodes that watch the host chain for updates, which is where SQL data is made available. Developers can use Tableland to help scale, mutate, and effectively access chain-driven data—including on-chain rules and identity—across <ChainsList type={'mainnets'} format={'string'} />.
+Tableland is a web3 SQL database that can be used on EVM chains like Ethereum and Layer 2 (L2) solutions. It helps extend and enhance data storage while offloading accessibility to a decentralized network of validator nodes that watch the host chain for updates, which is where SQL data is made available. Developers can use Tableland to help scale, mutate, and effectively access chain-driven data—including onchain rules and identity—across <ChainsList type={'mainnets'} format={'string'} />.
 
 ## Get started
 

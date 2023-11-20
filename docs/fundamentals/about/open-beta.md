@@ -53,7 +53,7 @@ During the open beta phase (between now and the production release), projects de
 - In terms of physically migrating the beta period’s data to the production database—**no**. The data migration _should_ happen automatically and does not require additional payment.
 - In terms of updating smart contracts—**yes**. If you have a contract that, for example, must change an NFT’s `baseURI` variable to point to a new Tableland gateway, this cost must be handled by the developer and will not be covered by Tableland.
 - **New!**—a new cost component will be introduced: _additional_ payment for writes.
-  - With the Tableland production launch, there will be an additional cost for writing to tables that are stored by validator nodes. Thus, every write query comes with an on-chain transaction cost _plus_ an additional fee; this additive cost is still being researched.
+  - With the Tableland production launch, there will be an additional cost for writing to tables that are stored by validator nodes. Thus, every write query comes with an onchain transaction cost _plus_ an additional fee; this additive cost is still being researched.
   - For example, a table deployed on a mainnet chain during the beta period _should_ automatically be moved to a production table. Thus, once the table has transitioned, all _new_ writes from that point onward must take into account these new additive costs and will require developers to take action.
 
 ### Will there be "downtime"?

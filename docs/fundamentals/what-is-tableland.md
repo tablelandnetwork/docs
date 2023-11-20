@@ -7,13 +7,13 @@ import ThemedImage from "@theme/ThemedImage";
 
 ## Problem
 
-Web3-native apps are forced to make a choice when storing application data: fit everything into the web3 mould, or use a partial web2 approach. Fitting everything into a web3-native stack often equates to costly or complex designs to store all data on-chain or use decentralized file storage as a pseudo-database. With a partial approach, apps are deployed on web3 (using smart contract backends, frontends deployed on IPFS, etc.), but traditional, centralized web2 databases (AWS, Google Cloud, etc.) are still being used for a subset of **structured data**.
+Web3-native apps are forced to make a choice when storing application data: fit everything into the web3 mould, or use a partial web2 approach. Fitting everything into a web3-native stack often equates to costly or complex designs to store all data onchain or use decentralized file storage as a pseudo-database. With a partial approach, apps are deployed on web3 (using smart contract backends, frontends deployed on IPFS, etc.), but traditional, centralized web2 databases (AWS, Google Cloud, etc.) are still being used for a subset of **structured data**.
 
 Let's expand a bit. IPFS ensures data is openly accessible, but the data itself is stored in a file and makes it [_immutable_](https://docs.ipfs.io/concepts/immutability/). This leads to a limiting experience since this data itself cannot change ("mutate"), and files (and their internal data) are not easily [queryable](https://en.wikipedia.org/wiki/Information_retrieval) nor [composable](https://en.wikipedia.org/wiki/Composability). Alternatively, a centralized service provide an effective solution for highly dynamic that supports support query capabilities (needed for any application): a database. But, centralized databases are not "open" web3-native solutions; data is kept behind a permissioned wall and is not interoperable nor composable.
 
 ## Solution
 
-Tableland offers a new approach that enables dapps to _store **relational data** in a web3-native network_, without having to make these decision tradeoffs. Traditional relational database capabilities are now possible by leveraging the blockchain layer for access control and database instructions—**it’s just web3-native relational tables** in a shared and permissionless database. In other words, data _can be_ mutated (if desired, using on-chain access controls), queried (using the familiar SQL), and is composable (with any other tables).
+Tableland offers a new approach that enables dapps to _store **relational data** in a web3-native network_, without having to make these decision tradeoffs. Traditional relational database capabilities are now possible by leveraging the blockchain layer for access control and database instructions—**it’s just web3-native relational tables** in a shared and permissionless database. In other words, data _can be_ mutated (if desired, using onchain access controls), queried (using the familiar SQL), and is composable (with any other tables).
 
 Tableland is the **database for fullstack decentralized applications**.
 
@@ -23,7 +23,7 @@ In tandem with other distributed work infrastructure, web3 now has a home for st
 - The underpinning blockchain's features provide a framework for ownership, access, and compute (e.g., any account can send transactions and own tokens).
 - Alongside the host chain, you have web3 infrastructure like databases for "small" data (up to 1kb) and persisted file storage (for large media).
 
-One key callout is that Tableland is always tied to the host chain since table creates and mutations must pass through the host. Not all decentralized infrastructure behaves this way, as some networks may primarily act as a standalone protocol and do not have the required on-chain anchoring like Tableland does.
+One key callout is that Tableland is always tied to the host chain since table creates and mutations must pass through the host. Not all decentralized infrastructure behaves this way, as some networks may primarily act as a standalone protocol and do not have the required onchain anchoring like Tableland does.
 
 import web3StackLight from "@site/static/assets/web3-stack-light-mode.png";
 import web3StackDark from "@site/static/assets/web3-stack-dark-mode.png";
@@ -40,8 +40,8 @@ width='60%'
 Really, any type of structured data can be stored in Tableland.
 
 - NFT collections store pointers to large media files, along with other NFT attributes, and can have owner-driven actions mutate the metadata.
-- Data DAOs can upload large datasets to persisted file storage but store its metadata in Tableland tables—and enable shared access for collaborating (with on-chain accounts / rules).
-- Gaming-related data like scoreboards and leaderboards make it easy for chain-driven data to be immediately queried at the application layer, off-chain.
+- Data DAOs can upload large datasets to persisted file storage but store its metadata in Tableland tables—and enable shared access for collaborating (with onchain accounts / rules).
+- Gaming-related data like scoreboards and leaderboards make it easy for chain-driven data to be immediately queried at the application layer, offchain.
 
 import abstractedTablelandLight from "@site/static/assets/abstracted-tableland-light-mode.png";
 import abstractedTablelandDark from "@site/static/assets/abstracted-tableland-dark-mode.png";
@@ -60,10 +60,10 @@ This underpinning infrastructure makes the developer’s journey significantly e
 
 Tableland decomposes a traditional relational database into two primary components:
 
-- On-chain registry with EVM account-based Access Control Logic (ACL).
+- Onchain registry with EVM account-based Access Control Logic (ACL).
 - A network of permissionless databases running a web3-limited SQLite.
 
-Each table in Tableland is initially minted as an [ERC721](https://docs.openzeppelin.com/contracts/3.x/api/token/erc721#ERC721) token on the base EVM-compatible layer. Thus, there’s an on-chain table owner that can set ACL privileges for a table, and the off-chain Tableland network manages the creation of and subsequent mutations to the table itself. The link between on-chain and off-chain is all handled at the Tableland [gateway](/fundamentals/architecture/gateway)—off-chain read queries allow for accessibility of SQL data while the core data availability is all on-chain.
+Each table in Tableland is initially minted as an [ERC721](https://docs.openzeppelin.com/contracts/3.x/api/token/erc721#ERC721) token on the base EVM-compatible layer. Thus, there’s an onchain table owner that can set ACL privileges for a table, and the offchain Tableland network manages the creation of and subsequent mutations to the table itself. The link between onchain and offchain is all handled at the Tableland [gateway](/fundamentals/architecture/gateway)—offchain read queries allow for accessibility of SQL data while the core data availability is all onchain.
 
 For example, at the contract level, you might have some web3 app that mints ERC721 tokens. The contract simply points to the Tableland network (like using the [`baseURI`](https://docs.openzeppelin.com/contracts/2.x/api/token/erc721#ERC721Metadata-baseURI--) + [`tokenURI`](https://docs.openzeppelin.com/contracts/2.x/api/token/erc721#ERC721Metadata-tokenURI-uint256-)), just as many existing ERC721 tokens use IPFS gateways or centralized servers. The key difference is that the underpinning infrastructure behind the gateway is a fully decentralized database network that offers the best of both worlds.
 
@@ -80,9 +80,9 @@ sources={{
 
 ### Access control
 
-Only those with the proper on-chain privileges can _write_ to a specific table. Table _reads_, however, **do not have an on-chain operation** and use the Tableland gateway. Thus, read queries are open and can come from a simple frontend request or even other non-EVM blockchains. Anyone can read table data.
+Only those with the proper onchain privileges can _write_ to a specific table. Table _reads_, however, **do not have an onchain operation** and use the Tableland gateway. Thus, read queries are open and can come from a simple frontend request or even other non-EVM blockchains. Anyone can read table data.
 
-Now, in order to use Tableland, a table must first be created (i.e., minted on-chain as an ERC721 at the Tableland registry contract). The deploying address is initially set as the table owner, and this owner gets to set the permissions for any other users that attempt to interact with the table in a mutating capacity. For example, the owner can set rules for who can update/insert/delete values, which data they can alter, or even decide if they’d like to _transfer ownership_ of the table to another party. Plus, more complex queries can join data from multiple tables (owned or non-owned) to create an entirely dynamic and composable relational data layer.
+Now, in order to use Tableland, a table must first be created (i.e., minted onchain as an ERC721 at the Tableland registry contract). The deploying address is initially set as the table owner, and this owner gets to set the permissions for any other users that attempt to interact with the table in a mutating capacity. For example, the owner can set rules for who can update/insert/delete values, which data they can alter, or even decide if they’d like to _transfer ownership_ of the table to another party. Plus, more complex queries can join data from multiple tables (owned or non-owned) to create an entirely dynamic and composable relational data layer.
 
 Consider the following diagram, which generalizes a new user’s interactions with a table that’s already been deployed to Tableland by some dapp:
 

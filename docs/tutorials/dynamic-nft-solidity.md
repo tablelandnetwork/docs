@@ -1,17 +1,17 @@
 ---
 title: Build a dynamic NFT in Solidity
-description: Create an on-chain game that uses SQL queries to create and populate a table of game state.
+description: Create an onchain game that uses SQL queries to create and populate a table of game state.
 keywords:
   - dynamic nft
   - nft metadata
   - nft solidity
 ---
 
-Tableland enables ownership & on-chain rules to dictate table state mutation. For every mutation, the data is accessible with off-chain queries that can be displayed in an interface, such as an NFT-based game board. This tutorial walks through the basics of Solidity ERC721s and an app with shared state. Note that in the [second part of this tutorial](/tutorials/dynamic-nft-p5js.md), you'll use `p5.js` to add a visualization component to the app!
+Tableland enables ownership & onchain rules to dictate table state mutation. For every mutation, the data is accessible with offchain queries that can be displayed in an interface, such as an NFT-based game board. This tutorial walks through the basics of Solidity ERC721s and an app with shared state. Note that in the [second part of this tutorial](/tutorials/dynamic-nft-p5js.md), you'll use `p5.js` to add a visualization component to the app!
 
 ## Overview
 
-Let's create a small on-chain game. In the game, we’ll allow the owner of an NFT to update only specific properties of their NFT dynamically (and for those updates to appear on all marketplaces, platforms, and wallets that display the NFT).
+Let's create a small onchain game. In the game, we’ll allow the owner of an NFT to update only specific properties of their NFT dynamically (and for those updates to appear on all marketplaces, platforms, and wallets that display the NFT).
 
 Suppose in this game that you are a pixel moving around a 512x512 canvas. The game would consist of users, the pixels they own, and the coordinates of those pixels. An interface may include a 512x512 canvas that renders your and others' locations.
 
@@ -21,7 +21,7 @@ import GameBoard from "@site/static/assets/tutorials/dynamic-nft-solidity/game-b
 
 When you build the game, you want users to own their pixels as an NFT. So, we can think of the game's architecture in two parts. The first part is an ERC-721 smart contract where users can mint pixels and then update the coordinates of pixels they own. The second part is a web app that displays the live locations of all the minted pixels and provides an interface for each owner to move their pixel. Today, we'll cover just the first part.
 
-The data's simplicity would make it great fun to build fully on-chain, but we'll use it to illustrate the basics of creating a smart contract that owns and populates relational data tables. Let's go!
+The data's simplicity would make it great fun to build fully onchain, but we'll use it to illustrate the basics of creating a smart contract that owns and populates relational data tables. Let's go!
 
 :::tip
 Looking for more? Check out the page on [how to build an NFT](/how-to-build-an-nft) to view additional resources for developing on Tableland, such as ERC721 compliant metadata standards.
@@ -150,7 +150,7 @@ contract CanvasGame is
     function makeMove(uint256 tokenId, uint256 x, uint256 y) public {
         // Check token ownership
         require(this.ownerOf(tokenId) == msg.sender, "Invalid owner");
-        // Simple on-chain gameplay enforcement
+        // Simple onchain gameplay enforcement
         require(x < 512 && 0 <= x, "Out of bounds");
         require(y < 512 && 0 <= y, "Out of bounds");
 
@@ -387,7 +387,7 @@ function tokenURI(
 
 ### Setting the external link
 
-With `setExternalURL`, we can implement some optional functionality that allows only the contract owner to update this value. For example, if you were to create some renderer of on-chain data, the link can be updated to a different value from the existing one chosen during the `initialize` call. Here, the example assume the URL would be something like `https://my.example-render.com?tokenId=` where `?tokenId=` is some query parameters for the specific token ID. To make this possible, you could do something like appending `||'?tokenId='||id` to the `external_url` JSON value, thus, turning every row's URL into including get param for `tokenId`:
+With `setExternalURL`, we can implement some optional functionality that allows only the contract owner to update this value. For example, if you were to create some renderer of onchain data, the link can be updated to a different value from the existing one chosen during the `initialize` call. Here, the example assume the URL would be something like `https://my.example-render.com?tokenId=` where `?tokenId=` is some query parameters for the specific token ID. To make this possible, you could do something like appending `||'?tokenId='||id` to the `external_url` JSON value, thus, turning every row's URL into including get param for `tokenId`:
 
 ```sql
 json_object(
@@ -409,7 +409,7 @@ Let’s update the function called, `makeMove` so that it can be called by any t
 function makeMove(uint256 tokenId, uint256 x, uint256 y) public {
   // Check token ownership
   require(this.ownerOf(tokenId) == msg.sender, "Invalid owner");
-  // Simple on-chain gameplay enforcement
+  // Simple onchain gameplay enforcement
   require(x < 512 && 0 <= x, "Out of bounds");
   require(y < 512 && 0 <= y, "Out of bounds");
   // Update the row in tableland

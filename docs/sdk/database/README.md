@@ -4,6 +4,9 @@ description: Get up an running with the Tableland SDK.
 keywords:
   - SQL query
   - Tableland SDK
+  - ethers
+  - ethersjs
+  - database
 ---
 
 import Tabs from "@theme/Tabs";
@@ -16,7 +19,7 @@ The JavaScript / TypeScript SDK allows developers to create tables on their chai
 You can install the SDK from the command line—navigate to the project's directory and run the following:
 
 ```bash npm2yarn
-npm install --save @tableland/sdk
+npm install @tableland/sdk
 ```
 
 <br />
@@ -24,14 +27,16 @@ npm install --save @tableland/sdk
 :::note
 Note that Tableland uses [ethersjs](https://docs.ethers.org/v5/) under the hood. The version being used is the **last version of ethersjs v5** (5.7.2) and **not the latest version overall** (v6).
 
-Also note Tableland SDK uses the modern `fetch` API, which is only available starting with Node 18. If you're using an earlier version (Node 16 or before), you must [provide global access](https://github.com/node-fetch/node-fetch#providing-global-access) to `fetch` as well as `Headers` to use the SDK. [Check out this walkthrough](/sdk/reference/node-polyfills) for how to do this.
+Also note Tableland SDK uses the modern `fetch` API, which is only available starting with Node 18. If you're using an earlier version (Node 16 or before), you must [provide global access](https://github.com/node-fetch/node-fetch#providing-global-access) to `fetch` as well as `Headers` to use the SDK. [Check out this walkthrough](/sdk/reference/compatability#node-polyfills) for how to do this.
 :::
 
 ## Usage
 
 All table creates, writes, and reads fall under a single method: [`prepare`](/sdk/database/prepared-statements).
 
-Start by creating an instance of a `Database` and then pass SQL, such as `CREATE TABLE`, `INSERT INTO`, `UPDATE`, `DELETE`, and `SELECT` statements. Let’s start with a simple table read query. Every chain comes with a "healthbot" table that can be queried, which has a single `counter` column with integer value. For example, on Polygon Mumbai, this table is `healthbot_80001_1`.
+Start by creating an instance of a `Database` and then pass SQL, such as `CREATE TABLE`, `INSERT INTO`, `UPDATE`, `DELETE`, and `SELECT` statements. The `prepare` method returns a `Statement` object, which can then be used to execute the query with statement methods: `all()`, `run()`, `raw()`, and `first()`.
+
+Alternatively, the `Database` has a `batch()` method that allows you to send multiple prepared statements in a single call to the network. This can have a huge performance impact as it reduces latency from network round trips to Tableland. Lastly, the `Database`'s `exec()` method allows you to execute a string of SQL statements without preparing it first.
 
 ### Ethers
 
@@ -43,10 +48,10 @@ npm i --save ethers@^5.7.2
 
 ### Local development
 
-It's easiest to also use Local Tableland when you're first getting started. Install the `@tableland/local` package globally (see [here](/local-tableland) for details) and then start the local nodes. This will spin up a local Tableland validator node as well as a Hardhat node, allowing you to connect to chain ID `31337` and RPC URL `http://127.0.0.1` for testing purposes.
+It's easiest to also use Local Tableland when you're first getting started. Install the `@tableland/local` package globally (see [here](/local-tableland) for details) and then start the local nodes. This will spin up a local Tableland validator node as well as a Hardhat node, allowing you to connect to chain ID `31337` and RPC URL `http://127.0.0.1:8545` for testing purposes.
 
 ```bash npm2yarn
-npm install -g @tableland/local
+npm install --save-dev @tableland/local
 ```
 
 And then spin the nodes up so that you can use Tableland without needing to connect to any testnets or mainnets:
@@ -180,8 +185,8 @@ await insert.txn?.wait();
 
 When a table is written to, it includes two steps:
 
-1. On-chain interaction—this is what the `wait` method is waiting for (i.e., transaction finality).
-2. Off-chain materialization—once `wait` is fulfilled, the mutating SQL query will have been materialized by the Tableland network and is now readable with the `SELECT` statement.
+1. Onchain interaction—this is what the `wait` method is waiting for (i.e., transaction finality).
+2. Offchain materialization—once `wait` is fulfilled, the mutating SQL query will have been materialized by the Tableland network and is now readable with the `SELECT` statement.
 
 :::tip
 A commonly used pattern with an `INTEGER PRIMARY KEY` constraint is to use it for auto-incrementing purposes, where you _don't_ specify that column upon inserts so that the value will increment automatically. See [here](/playbooks/sql/incrementing-values) for more details.
@@ -189,7 +194,7 @@ A commonly used pattern with an `INTEGER PRIMARY KEY` constraint is to use it fo
 
 ### Reads
 
-Start by importing the `Database` and establishing a read-only connection. This allows developers to bypass any wallet connection since table reads are not an on-chain operation. You’ll notice the `all` method (and `run` in the example below) is chained to the statement—more details are provided in the [query statement methods](/sdk/database/query-statement-methods) section.
+Start by importing the `Database` and establishing a read-only connection. This allows developers to bypass any wallet connection since table reads are not an onchain operation. You’ll notice the `all` method (and `run` in the example below) is chained to the statement—more details are provided in the [query statement methods](/sdk/database/query-statement-methods) section.
 
 <Tabs groupId="sdk">
 <TabItem value="js" label="JavaScript" default>

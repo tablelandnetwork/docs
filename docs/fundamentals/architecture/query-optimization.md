@@ -1,7 +1,7 @@
 ---
 title: Query optimization & gas
 sidebar_label: Queries & gas
-description: Gas is paid for any on-chain query, so statement structure has an impact on cost.
+description: Gas is paid for any onchain query, so statement structure has an impact on cost.
 keywords:
   - query optimization
 ---
