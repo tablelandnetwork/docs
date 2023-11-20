@@ -27,7 +27,7 @@ At the protocol level, the Tableland network is separated such that nodes proces
 The following endpoints are available at the Base URL gateways above:
 
 - [`/query`](/gateway-api/endpoints#query) ⇒ Write a SQL read query and get table data.
-- [`/receipt/{chainId}/{transactionHash}`](/gateway-api/endpoints#receipt) ⇒ Retrieve on-chain transaction information regarding a table create or write query.
+- [`/receipt/{chainId}/{transactionHash}`](/gateway-api/endpoints#receipt) ⇒ Retrieve onchain transaction information regarding a table create or write query.
 - [`/tables/{chainId}/{tableId}`}](/gateway-api/endpoints#tables) ⇒ Get table metadata and information.
 - [`/health`](/gateway-api/endpoints#health) ⇒ Check if the validator is up and running.
 - [`/version`](/gateway-api/endpoints#version) ⇒ Check version information about the validator daemon.
@@ -36,7 +36,7 @@ The following endpoints are available at the Base URL gateways above:
 
 import { ChainsList } from '@site/src/components/SupportedChains'
 
-- `transactionHash` ⇒ Resultant on-chain transaction hash corresponding to a table’s creation or a write query.
+- `transactionHash` ⇒ Resultant onchain transaction hash corresponding to a table’s creation or a write query.
 - `tableId` ⇒ The unique identifier assigned to the created table upon the registry contract minting the table as an ERC721 token.
 - `chainId` ⇒ Blockchain or L2 solution on which transactions are being sent; available _chainId_ include the following:
   <ChainsList type={'all'} format={'list'} info={'chainId'} />

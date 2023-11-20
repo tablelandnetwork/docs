@@ -60,7 +60,7 @@ $$
 
 Where $\mathtt{prefix}$ is optional. When a prefix is included, it must start with a letter and be followed by any combination of (zero or more) letters, numbers, and/or underscores. A prefix string may be up to 32 bytes in length. In practice, long names with spaces must be slug-ified with underscores. For example, `"my amazing table"` would become `"my_amazing_table"`. The last two components of the table name, _must be_ the chain id and the table id, which are numeric values separated by an underscore. For example, a valid table name without a prefix looks like `_42_0` (or `42_1`), whereas a valid table name _with_ a prefix might look like `dogs_42_0`.
 
-> ⚠️ It is _not_ up to the caller to determine what table id to use in a `CREATE TABLE` statement. The table id is a monotonically-increasing numeric value which is provided by the smart contract that is processing the create statements. See the On-Chain API Specification for details on the smart contract calls used to generate `CREATE TABLE` statements in practice.
+> ⚠️ It is _not_ up to the caller to determine what table id to use in a `CREATE TABLE` statement. The table id is a monotonically-increasing numeric value which is provided by the smart contract that is processing the create statements. See the Onchain API Specification for details on the smart contract calls used to generate `CREATE TABLE` statements in practice.
 
 Table names are globally unique. The combination of chain id and monotonically increasing table id ensures this is the case in practice. As such, the addition of a user-defined prefix string is an aesthetic feature that most developers will find useful (but is not required). The maximum (slug-ified) prefix length is 32 bytes.
 
@@ -217,7 +217,7 @@ RENAME [ COLUMN ] *column_name* TO *new_column_name*
 ADD [ COLUMN ] *column_name* *data_type* [ *column_constraint* [,  ... ] ]
 
 -- For dropping a dolumn
-DROP [ COLUMN ] *column_name* 
+DROP [ COLUMN ] *column_name*
 ```
 
 #### Details
@@ -379,7 +379,7 @@ REVOKE { INSERT | UPDATE | DELETE } [, ...]
 
 The `GRANT` command gives specific privileges on a table to one or more `role`. These privileges are added to those already granted, if any. By default, the creator of a table (as specified by a public ETH address) has all (valid) privileges on creation. The owner could, however, choose to revoke some of their own privileges for safety reasons.
 
-Related, if a table is created with an access controller contract specified, or if an address with sufficient privileges updates a table’s access control rules to use a controller contract, then all command-based access control rules are ignored in favor of the controller contract access control. In other words, if a controller contract is set, `GRANT`/`REVOKE` is _disabled._ See On-Chain API Specification for further details on specifying and controlling access via a controller smart contract.
+Related, if a table is created with an access controller contract specified, or if an address with sufficient privileges updates a table’s access control rules to use a controller contract, then all command-based access control rules are ignored in favor of the controller contract access control. In other words, if a controller contract is set, `GRANT`/`REVOKE` is _disabled._ See Onchain API Specification for further details on specifying and controlling access via a controller smart contract.
 
 > ⚠️ Currently, the only allowable privileges for granting are `INSERT`, `UPDATE` and `DELETE`. Note that `SELECT` privileges are not required at this time, as `SELECT` statements are not access controlled (all reads are allowed). See the `SELECT` section for further details.
 

@@ -4,7 +4,7 @@ sidebar_label: Smart contracts
 description: Learn how to create a table and insert add some sample data using the Solidity.
 ---
 
-Tableland smart contracts support both table creates and writes that interact with a `TablelandTables` registry smart contract that exist on each chain. Reads are an off-chain operation, better suited for the SDK, CLI, or Gateway API. If you're using [Hardhat](https://hardhat.org/), you should also the [quickstart](/quickstarts/hardhat)—it walks through how to configure Local Tableland during local development with hardhat.
+Tableland smart contracts support both table creates and writes that interact with a `TablelandTables` registry smart contract that exist on each chain. Reads are an offchain operation, better suited for the SDK, CLI, or Gateway API. If you're using [Hardhat](https://hardhat.org/), you should also the [quickstart](/quickstarts/hardhat)—it walks through how to configure Local Tableland during local development with hardhat.
 
 ## 1. Installation & setup
 
@@ -289,4 +289,4 @@ contract Example is ERC721Holder {
 
 ## Errors & issues
 
-When in doubt, use the Tableland CLI's [`receipt`](/cli#receipt) command or [REST API endpoint](api-quickstart#3-get-other-table-info) and pass the transaction hash. If a table create or write transaction is successful, that doesn't mean the table was successfully created or mutated. More advanced validation is all handled off-chain at the Tableland validator to help save on gas costs, so an invalid schema type or mutating a column that doesn't exist will result in a successful transaction but never materialize. The receipt will explain what the issue was.
+When in doubt, use the Tableland CLI's [`receipt`](/cli#receipt) command or [REST API endpoint](api-quickstart#3-get-other-table-info) and pass the transaction hash. If a table create or write transaction is successful, that doesn't mean the table was successfully created or mutated. More advanced validation is all handled offchain at the Tableland validator to help save on gas costs, so an invalid schema type or mutating a column that doesn't exist will result in a successful transaction but never materialize. The receipt will explain what the issue was.

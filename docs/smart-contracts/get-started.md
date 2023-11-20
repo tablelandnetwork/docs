@@ -9,7 +9,7 @@ keywords:
   - tableland/evm
 ---
 
-Tableland is live on a number of EVM chains and allows you to write SQL directly on-chain. If you're looking for what the addresses of these contracts are, head over to the [deployed contracts](deployed-contracts) section of the docs.
+Tableland is live on a number of EVM chains and allows you to write SQL directly onchain. If you're looking for what the addresses of these contracts are, head over to the [deployed contracts](deployed-contracts) section of the docs.
 
 :::note
 _Is it possible to read data in a smart contract?_ Short answer: **no**. Table reads are entirely offchain and interact directly with a Tableland validator node. A smart contract can _only_ create tables or write to them. In order to read table data in a smart contract, you would have to implement custom offchain logic or use [oracles](/tutorials/table-reads-chainlink) to then write the offchain materialized data back onchain.

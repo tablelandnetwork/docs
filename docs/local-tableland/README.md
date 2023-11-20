@@ -98,7 +98,7 @@ Then, the first table on the network — the `healthbot` table, consisting of a 
 
 ## Nonce too high errors
 
-If, for some reason, "nonce" errors do occur, such as the "Nonce too high" warning, which might look like the snippet below. Basically, if you were interacting with a local node, the nonce gets tracked for each on-chain action. When you stop the node, that history is maintained such that a new node session is using old nonce tracking. The new node session wants the nonce to start at `0`, but old history says the nonce starts at some other number.
+If, for some reason, "nonce" errors do occur, such as the "Nonce too high" warning, which might look like the snippet below. Basically, if you were interacting with a local node, the nonce gets tracked for each onchain action. When you stop the node, that history is maintained such that a new node session is using old nonce tracking. The new node session wants the nonce to start at `0`, but old history says the nonce starts at some other number.
 
 ```json
 MetaMask - RPC Error: [ethjs-query] while formatting outputs from RPC '

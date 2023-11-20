@@ -128,7 +128,7 @@ might look like `dogs_42_0`.
 > ⚠️ It is _not_ up to the caller to determine what table id to use in a
 > `CREATE TABLE` statement. The table id is a monotonically-increasing
 > numeric value which is provided by the smart contract that is
-> processing the create statements. See the On-Chain API Specification
+> processing the create statements. See the Onchain API Specification
 > for details on the smart contract calls used to generate
 > `CREATE TABLE` statements in practice.
 
@@ -738,7 +738,7 @@ specified, or if an address with sufficient privileges updates a table’s
 access control rules to use a controller contract, then all
 command-based access control rules are ignored in favor of the
 controller contract access control. In other words, if a controller
-contract is set, `GRANT`/`REVOKE` is _disabled._ See On-Chain API
+contract is set, `GRANT`/`REVOKE` is _disabled._ See Onchain API
 Specification for further details on specifying and controlling access
 via a controller smart contract.
 

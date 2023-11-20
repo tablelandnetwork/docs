@@ -6,7 +6,7 @@ keywords:
   - relational database
 ---
 
-Although an oversimplification, the Tableland network is sorta like a bunch of SQL databases communicating & agreeing with one another about table state directed by on-chain instructions. It's important to understand the very basics of what databases are and why a permissionless relational database is a perfect solution for scaling structured web3 data.
+Although an oversimplification, the Tableland network is sorta like a bunch of SQL databases communicating & agreeing with one another about table state directed by onchain instructions. It's important to understand the very basics of what databases are and why a permissionless relational database is a perfect solution for scaling structured web3 data.
 
 ## Background
 
@@ -66,7 +66,7 @@ Tableland's [SQL playbooks](/playbooks/sql/) walk through how to use SQL, blockc
 
 ## Blockchains & databases
 
-A common misnomer in web3 is that blockchains are databases. They are not databases but a global state machine that transparently and permissionlessly shares computation through incentivized program execution and consensus. If you've ever tried to query on-chain data without an external indexing solution, that experience alone should paint the picture quite clear about how blockchains are _not_ databases (it's not easy!). But, since blockchains provide a global framework for ownership, identification, computation, and state, they act as the perfect base layer _for_ a database.
+A common misnomer in web3 is that blockchains are databases. They are not databases but a global state machine that transparently and permissionlessly shares computation through incentivized program execution and consensus. If you've ever tried to query onchain data without an external indexing solution, that experience alone should paint the picture quite clear about how blockchains are _not_ databases (it's not easy!). But, since blockchains provide a global framework for ownership, identification, computation, and state, they act as the perfect base layer _for_ a database.
 
 But, web3 has lacked a native relational database and SQL, making it difficult to build complex decentralized applications that require efficient data storage and retrieval—until Tableland came along!
 
@@ -74,4 +74,4 @@ Tableland solves this problem by providing a secure and scalable foundation for 
 
 There are two components to Tableland: data _availability_, and data _accessibility_. If you think about how a database works, you have some set of instructions for creating or mutating data, which directly alters the database's state. When you want to access that data, you're not altering table data but only reading it (e.g., retrieve a set of values, aggregate across tables, etc.).
 
-In other words, think of any chain as the means to define access control in a secure and trustless way, and the instructions for what to do are also only controlled by the chain's data itself. With this model in mind, any mutating SQL data is made available by the base chain. But, since blockchains aren't designed for complex queries, there needs to exist additional, off-chain infrastructure to access that on-chain data. Rather than opting for a centralized approach, applications can leverage a [hybrid state](/fundamentals/architecture/protocol-design#hybrid-state) model; the data is directly accessible only on the Tableland network.
+In other words, think of any chain as the means to define access control in a secure and trustless way, and the instructions for what to do are also only controlled by the chain's data itself. With this model in mind, any mutating SQL data is made available by the base chain. But, since blockchains aren't designed for complex queries, there needs to exist additional, offchain infrastructure to access that onchain data. Rather than opting for a centralized approach, applications can leverage a [hybrid state](/fundamentals/architecture/protocol-design#hybrid-state) model; the data is directly accessible only on the Tableland network.

@@ -3,14 +3,14 @@ title: Overview
 description: Make sure you're ready to start building by properly setting up your development environment.
 ---
 
-All database mutating statements are on-chain actions. If you're using the SDK or CLI, much of the blockchain and smart contract specifics are abstracted away from the developer experience. If you're a web3 or smart contract developer, you're already familiar with what on-chain transactions require.
+All database mutating statements are onchain actions. If you're using the SDK or CLI, much of the blockchain and smart contract specifics are abstracted away from the developer experience. If you're a web3 or smart contract developer, you're already familiar with what onchain transactions require.
 
 ## Prerequisites
 
 There are a few things every developer will need if they are trying to use Tableland:
 
 - **Wallet**: You'll need to set up an account, such as [MetaMask](https://metamask.io/) for browser wallet-based connections. You'll use your EVM account to create and write to tables across any of the networks Tableland is live on.
-- **Funds**: If you want to create or write to a table, it requires an on-chain transaction—you need to own currency in the native chain's denomination if you want to make database state changes.
+- **Funds**: If you want to create or write to a table, it requires an onchain transaction—you need to own currency in the native chain's denomination if you want to make database state changes.
 - **Fundamentals**: Developers should be aware of [fundamental network concepts](/fundamentals/chains#chain-information) like table naming convention, limits, and supported chains.
 
 :::tip

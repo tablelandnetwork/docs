@@ -10,7 +10,7 @@ keywords:
 
 Tableland is a web3-native database that can be used to store data in relational tables. One of the most exciting use cases is using Tableland for _[NFT metadata](https://docs.opensea.io/docs/metadata-standards)_—which is a challenging problem in web3, especially for novel _dynamic NFT_ use cases. Developers must make tradeoffs between:
 
-- Expensive on-chain storage with very limited query-ability
+- Expensive onchain storage with very limited query-ability
 - Centralized storage, which doesn’t _enable_ web3 paradigms
 - Decentralized storage (e.g., IPFS), which is _great_ for file/image storage, but immutable files (CIDs) pose a challenge for novel NFT metadata use cases
 
@@ -20,7 +20,7 @@ New to NFTs? Check out the page on [how to build an NFT](/how-to-build-an-nft), 
 
 ## Overview
 
-Tableland solves the web3 metadata problem with ERC721-based tables that are powered by smart contracts. Create, insert, and update tables, all using smart contracts and/or libraries built on top of the Tableland protocol. Although not covered in this walkthrough, the metadata can also be _dynamic_ and change based on user interactions or on-chain events. The Tableland contracts are currently deployed on Polygon mainnet & Mumbai testnet, as well as a number of other chains—this tutorial will use Polygon’s Mumbai testnet.
+Tableland solves the web3 metadata problem with ERC721-based tables that are powered by smart contracts. Create, insert, and update tables, all using smart contracts and/or libraries built on top of the Tableland protocol. Although not covered in this walkthrough, the metadata can also be _dynamic_ and change based on user interactions or onchain events. The Tableland contracts are currently deployed on Polygon mainnet & Mumbai testnet, as well as a number of other chains—this tutorial will use Polygon’s Mumbai testnet.
 
 All in all, this tutorial will walk through:
 
@@ -506,7 +506,7 @@ import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
 import "@openzeppelin/contracts/utils/Strings.sol";
 
 contract TwoTablesNFT is ERC721 {
-  /// A URI used to reference off-chain metadata.
+  /// A URI used to reference offchain metadata.
   // This will use the Tableland gateway: https://testnets.tableland.network/query?unwrap=true&extract=true&statement=
   // See the `query?unwrap=true&extract=true&statement=` appended -- a SQL query `statement` and mode to format to ERC721 standard
   string public baseURIString;
@@ -719,7 +719,7 @@ When using `create`, there returned values include a couple of useful fields in 
 ```tsx
 // deployTwoTables.js
 
-// Create the main table and retrieve its returned `name` and on-chain tx as `txnHash`
+// Create the main table and retrieve its returned `name` and onchain tx as `txnHash`
 const { name: mainName, txn: mainTxn } = await db
   .prepare(`CREATE TABLE ${mainPrefix} ${mainSchema}`)
   .run();
@@ -738,7 +738,7 @@ if (receipt) {
   );
 }
 
-// Create the attributes table and retrieve its returned `name` and on-chain tx as `txnHash`
+// Create the attributes table and retrieve its returned `name` and onchain tx as `txnHash`
 const { name: attributesName, txn: attributesTxn } = await db
   .prepare(`CREATE TABLE ${attributesPrefix} ${attributesSchema}`)
   .run();
@@ -768,7 +768,7 @@ Recall that our method `prepareSqlForTwoTables` allowed use to pass a _main_ and
 
 - The `sqlInsertStatements` is iterated over and destructured into `main` and `attributes` variables, which are the SQL statement for each table.
 - Using the `write` method, the _main_ table is written to, and thereafter in another loop, the _attributes_ table is written to (twice, since our metadata had two `trait_type`s). We could get more efficient here on write queries and JavaScript logic, but let’s keep it simple.
-- The `write` method will return the on-chain transaction’s `hash`—this can be used with `receipt` to make sure everything worked as expected.
+- The `write` method will return the onchain transaction’s `hash`—this can be used with `receipt` to make sure everything worked as expected.
 
 ```js title="scripts/deployTwoTables.js"
 // Prepare the SQL INSERT statements, which pass the table names to help prepare the statements

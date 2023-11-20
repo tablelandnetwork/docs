@@ -12,7 +12,7 @@ This general API specification is used to automatically generate clients and bac
 
 In Tableland, Validators are the execution unit/actors of the protocol. They have the following responsibilities:
 
-- Listen to on-chain events to materialize Tableland-compliant SQL queries in a database engine (currently, SQLite by default).
+- Listen to onchain events to materialize Tableland-compliant SQL queries in a database engine (currently, SQLite by default).
 - Serve read-queries (e.g: `SELECT * FROM foo_69_1`) to the external world.
 - Serve state queries (e.g. list tables, get receipts, etc) to the external world.
 
@@ -110,10 +110,7 @@ Example responses
 ```json
 {
   "table_id": "1",
-  "table_ids": [
-    "1",
-    "2"
-  ],
+  "table_ids": ["1", "2"],
   "transaction_hash": "0x02f319429b8a7be1cbb492f0bfbf740d2472232a2edadde7df7c16c0b61aa78b",
   "block_number": 27055540,
   "chain_id": 80001,
@@ -343,10 +340,7 @@ This operation does not require authentication
 ```json
 {
   "table_id": "1",
-  "table_ids": [
-    "1",
-    "2"
-  ],
+  "table_ids": ["1", "2"],
   "transaction_hash": "0x02f319429b8a7be1cbb492f0bfbf740d2472232a2edadde7df7c16c0b61aa78b",
   "block_number": 27055540,
   "chain_id": 80001,
@@ -358,7 +352,7 @@ This operation does not require authentication
 #### Properties
 
 | Name             | Type           | Required | Restrictions | Description              |
-|------------------|----------------|----------|--------------|--------------------------|
+| ---------------- | -------------- | -------- | ------------ | ------------------------ |
 | table_id         | string         | false    | none         | This field is deprecated |
 | table_ids        | \[string\]     | false    | none         | none                     |
 | transaction_hash | string         | false    | none         | none                     |

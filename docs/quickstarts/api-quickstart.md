@@ -60,13 +60,11 @@ curl -X GET https://testnets.tableland.network/api/v1/receipt/80001/0x02f319429b
   -H 'Accept: application/json'
 ```
 
-It [returns on-chain transaction information](https://testnets.tableland.network/api/v1/receipt/80001/0x02f319429b8a7be1cbb492f0bfbf740d2472232a2edadde7df7c16c0b61aa78b) about a table creation or mutation.
+It [returns onchain transaction information](https://testnets.tableland.network/api/v1/receipt/80001/0x02f319429b8a7be1cbb492f0bfbf740d2472232a2edadde7df7c16c0b61aa78b) about a table creation or mutation.
 
 ```json
 {
-  "table_ids": [
-    "1"
-  ],
+  "table_ids": ["1"],
   "transaction_hash": "0x02f319429b8a7be1cbb492f0bfbf740d2472232a2edadde7df7c16c0b61aa78b",
   "block_number": 27055540,
   "chain_id": 80001

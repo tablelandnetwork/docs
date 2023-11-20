@@ -15,7 +15,7 @@ The `TablelandTables` registry smart contract has three dedicated controller met
 
 ## Setting the controller
 
-The owner of a contract needs to call the Tableland registry’s `setController` method to register a _deployed_ policy on-chain.
+The owner of a contract needs to call the Tableland registry’s `setController` method to register a _deployed_ policy onchain.
 
 ```solidity
 function setController(

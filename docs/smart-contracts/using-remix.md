@@ -133,9 +133,9 @@ From there, you can deploy this contract to a live testnet—the example below p
 - Transaction hash: [0x74ec88ad290625c8c17fc601f4431e5ee1b6277290ab6b69b277273b58c02499](https://mumbai.polygonscan.com/tx/0x74ec88ad290625c8c17fc601f4431e5ee1b6277290ab6b69b277273b58c02499)
 - Contract address (bottom left corner): [0x966b2E6615962cdeeD891323e66504B6C3214cB1](https://mumbai.polygonscan.com/address/0x966b2E6615962cdeeD891323e66504B6C3214cB1)
 
-![An example of sending an on-chain testnet transaction and deploying the controller contract.](@site/static/assets/smart-contracts/using-remix/5.png)
+![An example of sending an onchain testnet transaction and deploying the controller contract.](@site/static/assets/smart-contracts/using-remix/5.png)
 
-An example of sending an on-chain testnet transaction and deploying the controller contract.
+An example of sending an onchain testnet transaction and deploying the controller contract.
 
 ### Setting the controller
 

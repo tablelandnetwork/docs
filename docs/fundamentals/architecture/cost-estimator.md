@@ -14,7 +14,7 @@ Every byte [contributes to the cost](/fundamentals/architecture/query-optimizati
 - Cost in the chain's native crypto token or USD.
 - These costs mapped per megabyte (MB).
 
-Please be sure to perform your own tests to understand price implications since the live market impacts the price of any on-chain transaction. For these estimates, the following market prices (USD) are hardcoded in the calculation:
+Please be sure to perform your own tests to understand price implications since the live market impacts the price of any onchain transaction. For these estimates, the following market prices (USD) are hardcoded in the calculation:
 
 - **ETH price**: <TokenCost token={'ETH'} />
 - **MATIC price**: <TokenCost token={'MATIC'} />

@@ -11,7 +11,7 @@ This page identifies some potential use cases. It is non-exhaustive but provides
 
 Ultimately, Tableland aims to provide a web3-native database that is competitive to that of traditional web2 database solutions. The chain in which you deploy to dictates [how expensive](/fundamentals/architecture/cost-estimator) it is to write data, so this should be a major consideration in what type of data you're storing.
 
-The TL;DR is that Tableland can be used as a data storage option with on-chain data availability and off-chain data accessibility within the decentralized SQL database network. This opens the doors for endless possibilities that provide a dual pronged approach toward web3 data: on-chain actions trigger off-chain mutations that can easily be read at the application layer. It's sort of a lively cache for smart contract state / on-chain data.
+The TL;DR is that Tableland can be used as a data storage option with onchain data availability and offchain data accessibility within the decentralized SQL database network. This opens the doors for endless possibilities that provide a dual pronged approach toward web3 data: onchain actions trigger offchain mutations that can easily be read at the application layer. It's sort of a lively cache for smart contract state / onchain data.
 
 ### Application data
 
@@ -34,7 +34,7 @@ Looking for more? Check out the page on [how to build an NFT](/how-to-build-an-n
 ### Data DAOs & token gating
 
 - Storing large media on file storage networks (IPFS, Filecoin, etc.) where pointers and metadata exist in tables.
-- Access controls are baked into the protocol to allow for token ownership or on-chain checks to dictate table mutations (e.g., mutate a row only if provisioned by the dataset's controller).
+- Access controls are baked into the protocol to allow for token ownership or onchain checks to dictate table mutations (e.g., mutate a row only if provisioned by the dataset's controller).
 - Storing publicly shared data, like a CMS or knowledge base, related to DAO operations.
 
 :::note

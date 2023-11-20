@@ -19,7 +19,7 @@ Validators are the execution unit/actors of the protocol.
 
 They have the following responsibilities:
 
-- Listen to on-chain events to materialize Tableland-compliant SQL queries in a database engine (currently, SQLite by default).
+- Listen to onchain events to materialize Tableland-compliant SQL queries in a database engine (currently, SQLite by default).
 - Serve read-queries (e.g., `SELECT * FROM foo_69_1`) to the external world.
 
 :::tip

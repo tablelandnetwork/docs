@@ -1,5 +1,5 @@
 ---
-title: OnChain reads with Chainlink + Ethereum
+title: Onchain reads with Chainlink + Ethereum
 sidebar_label: Onchain reads with Chainlink
 description: Use Chainlink’s node operator network to get table state back onchain to the Ethereum network.
 keywords:

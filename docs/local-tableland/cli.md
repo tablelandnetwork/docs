@@ -26,7 +26,7 @@ To start running the Local Tableland network, do the following:
 npx local-tableland
 ```
 
-This will start a Local Tableland server on port `http://localhost:8080` and a hardhat node on `http://127.0.0.1:8545`. For example, it's common that you'll pass the hardhat RPC URL to clients trying to send on-chain transactions. For querying the Tableland network via the [Gateway API](/gateway-api), you can use the Local Tableland URL, such as making read queries with the `query?statement=...` endpoint and query param.
+This will start a Local Tableland server on port `http://localhost:8080` and a hardhat node on `http://127.0.0.1:8545`. For example, it's common that you'll pass the hardhat RPC URL to clients trying to send onchain transactions. For querying the Tableland network via the [Gateway API](/gateway-api), you can use the Local Tableland URL, such as making read queries with the `query?statement=...` endpoint and query param.
 
 ## Available flags
 
@@ -115,4 +115,4 @@ You can set a custom Registry port for hardhat via the `--registryPort` flag; th
 npx local-tableland --registryPort 9999
 ```
 
-A word of caution. When you'd like to make any on-chain actions (sending transactions, reading from contracts), this means the commonly used `http://127.0.0.1:8545` must be replaced with `http://127.0.0.1:9999`. Some clients automatically look for 8545 with a local network, so it's something to keep an eye for and make sure you pass the new, custom URL.
+A word of caution. When you'd like to make any onchain actions (sending transactions, reading from contracts), this means the commonly used `http://127.0.0.1:8545` must be replaced with `http://127.0.0.1:9999`. Some clients automatically look for 8545 with a local network, so it's something to keep an eye for and make sure you pass the new, custom URL.

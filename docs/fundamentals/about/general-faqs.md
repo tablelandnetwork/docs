@@ -10,7 +10,7 @@ import { SupportedChains } from '@site/src/components/SupportedChains'
 
 ## Which chains does Tableland support?
 
-Tableland is currently live on the following chains, and note that _writes_ to a table must come from the chain a table is a deployed on, but _reads_ can come from anywhere since a read query is an off-chain interaction that leverages the Tableland gateway:
+Tableland is currently live on the following chains, and note that _writes_ to a table must come from the chain a table is a deployed on, but _reads_ can come from anywhere since a read query is an offchain interaction that leverages the Tableland gateway:
 
 <SupportedChains />
 
@@ -62,11 +62,11 @@ In a traditional context, _relational databases_ provide storage and access to s
 
 ## Do I need a blockchain wallet to use Tableland?
 
-If you want to create tables or mutate their values—yes! Tableland leverages the underlying blockchain for data management & user write permissions, so every _creation of_ or _mutation to_ a table must have an associated on-chain interaction. However, read queries can leverage the Tableland gateway, which is not on-chain operation and is served over HTTPS. Hence, a wallet connection is not required for table reads.
+If you want to create tables or mutate their values—yes! Tableland leverages the underlying blockchain for data management & user write permissions, so every _creation of_ or _mutation to_ a table must have an associated onchain interaction. However, read queries can leverage the Tableland gateway, which is not onchain operation and is served over HTTPS. Hence, a wallet connection is not required for table reads.
 
 ## Does Tableland support mutable or immutable data?
 
-Both! With tableland's access control model, you get _mutable_ data (if you want) with _immutable_ on-chain access rules (if you want). It’s highly flexible do adapt to each and every use case.
+Both! With tableland's access control model, you get _mutable_ data (if you want) with _immutable_ onchain access rules (if you want). It’s highly flexible do adapt to each and every use case.
 
 ## What are some of the primary use cases for Tableland?
 
@@ -94,7 +94,7 @@ Of course—they’re deployed on open & decentralized blockchains ;). A common 
 
 ## Do you have app / smart contract logic authentication?
 
-We currently support address-level access control (EOAs or smart contracts). Contract-based access control allows a developer to delegate table gating to a separate contract, where it can do all sorts of things, like check ownership of a separate asset, do block-number checks, and just about any on-chain logic you can think of!
+We currently support address-level access control (EOAs or smart contracts). Contract-based access control allows a developer to delegate table gating to a separate contract, where it can do all sorts of things, like check ownership of a separate asset, do block-number checks, and just about any onchain logic you can think of!
 
 ## What is Tableland Rigs NFT?
 

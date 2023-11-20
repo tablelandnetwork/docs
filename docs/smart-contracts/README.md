@@ -3,7 +3,7 @@ title: Overview
 description: Interact with Tableland using smart contracts.
 ---
 
-Tableland is a protocol that incorporates both on-chain and off-chain components. On-chain, there are "Registry" smart contracts that allow anyone to create a table, but only provisioned users can write to it. Custom "controller" contracts define fine grained access to manage exactly how tables are created and written to.
+Tableland is a protocol that incorporates both onchain and offchain components. Onchain, there are "Registry" smart contracts that allow anyone to create a table, but only provisioned users can write to it. Custom "controller" contracts define fine grained access to manage exactly how tables are created and written to.
 
 ## Registry contract
 

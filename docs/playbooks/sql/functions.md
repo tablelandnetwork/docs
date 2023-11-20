@@ -21,7 +21,7 @@ Currently, there are two functions unique to the Tableland protocol: `BLOCK_NUM(
 
 ### Block number
 
-When a SQL write query is submitted, it is associated with an on-chain transaction. Using the `BLOCK_NUM()` function, you can insert the value of the associated block of the query. In other words, the Tableland network will replace this text with the number of the block that delivered the SQL event.
+When a SQL write query is submitted, it is associated with an onchain transaction. Using the `BLOCK_NUM()` function, you can insert the value of the associated block of the query. In other words, the Tableland network will replace this text with the number of the block that delivered the SQL event.
 
 ```sql
 INSERT INTO

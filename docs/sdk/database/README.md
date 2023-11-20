@@ -185,8 +185,8 @@ await insert.txn?.wait();
 
 When a table is written to, it includes two steps:
 
-1. On-chain interaction—this is what the `wait` method is waiting for (i.e., transaction finality).
-2. Off-chain materialization—once `wait` is fulfilled, the mutating SQL query will have been materialized by the Tableland network and is now readable with the `SELECT` statement.
+1. Onchain interaction—this is what the `wait` method is waiting for (i.e., transaction finality).
+2. Offchain materialization—once `wait` is fulfilled, the mutating SQL query will have been materialized by the Tableland network and is now readable with the `SELECT` statement.
 
 :::tip
 A commonly used pattern with an `INTEGER PRIMARY KEY` constraint is to use it for auto-incrementing purposes, where you _don't_ specify that column upon inserts so that the value will increment automatically. See [here](/playbooks/sql/incrementing-values) for more details.
@@ -194,7 +194,7 @@ A commonly used pattern with an `INTEGER PRIMARY KEY` constraint is to use it fo
 
 ### Reads
 
-Start by importing the `Database` and establishing a read-only connection. This allows developers to bypass any wallet connection since table reads are not an on-chain operation. You’ll notice the `all` method (and `run` in the example below) is chained to the statement—more details are provided in the [query statement methods](/sdk/database/query-statement-methods) section.
+Start by importing the `Database` and establishing a read-only connection. This allows developers to bypass any wallet connection since table reads are not an onchain operation. You’ll notice the `all` method (and `run` in the example below) is chained to the statement—more details are provided in the [query statement methods](/sdk/database/query-statement-methods) section.
 
 <Tabs groupId="sdk">
 <TabItem value="js" label="JavaScript" default>

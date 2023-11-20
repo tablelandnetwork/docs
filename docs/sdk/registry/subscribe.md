@@ -55,7 +55,7 @@ The data returned from the `event` is an object with the table ID, transaction h
 
 ## Controller changes
 
-The `set-controller` event type allows you to subscribe to change to the table's access controller. The data returned from the `event` is what's included in a standard on-chain event log, such as the block number/hash, transaction index/arguments, event name/signature, etc.
+The `set-controller` event type allows you to subscribe to change to the table's access controller. The data returned from the `event` is what's included in a standard onchain event log, such as the block number/hash, transaction index/arguments, event name/signature, etc.
 
 ```js
 listener.on("set-controller", function (event) {
@@ -73,7 +73,7 @@ listener.on("transfer", function (event) {
 });
 ```
 
-The data returned from the `event` also includes standard on-chain event log information.
+The data returned from the `event` also includes standard onchain event log information.
 
 ## Removing listeners
 

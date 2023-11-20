@@ -7,7 +7,7 @@ keywords:
   - blockchains
 ---
 
-Chain selection makes a significant impact on the database's usability. Choose a chain that’s too slow or expensive, and it won’t be feasible for table writes to occur frequently. Deploy a cross-chain data model for value layering purposes, and certain on-chain access control features are lost. This page explains general chain related concepts; the following chains are supported and described in more detail in the subsequent pages.
+Chain selection makes a significant impact on the database's usability. Choose a chain that’s too slow or expensive, and it won’t be feasible for table writes to occur frequently. Deploy a cross-chain data model for value layering purposes, and certain onchain access control features are lost. This page explains general chain related concepts; the following chains are supported and described in more detail in the subsequent pages.
 
 Note that in addition to each chain's unique block time, there is also a chain-specific block depth required until SQL data is made available in Tableland. For example, Ethereum has a block time of ~13.5 seconds and a block depth of 1, so it takes ~27.5 seconds for data to be available in Tableland. Since a transaction could be submitted _mid_-block, it's possible for a transaction to take from ~30-40 seconds to be materialized in Tableland. The chain-specific docs pages (see below) describe this in more detail.
 
@@ -45,24 +45,24 @@ Ethereum (Layer 1, "L1") can be expensive. Tableland extends a base chain’s fu
 
 ### L2 variants
 
-The most commonly used L2 types come in two flavors: **rollups** and **sidechains**. Currently, Tableland supports rollups like Optimism & Arbitrum, which are both "optimistic" rollups. For reference, there also exists "[zero knowledge](https://ethereum.org/en/developers/docs/scaling/zk-rollups/)" ("zk") rollups. The primary difference between the two is that optimistic rollups _are_ optimistic; batches of transactions are posted on-chain and assumed valid (unless challenged via [_fraud proofs_](https://ethereum.org/en/glossary/#fraud-proof)). Zk-rollups provide the validity proof by design but are still nascent.
+The most commonly used L2 types come in two flavors: **rollups** and **sidechains**. Currently, Tableland supports rollups like Optimism & Arbitrum, which are both "optimistic" rollups. For reference, there also exists "[zero knowledge](https://ethereum.org/en/developers/docs/scaling/zk-rollups/)" ("zk") rollups. The primary difference between the two is that optimistic rollups _are_ optimistic; batches of transactions are posted onchain and assumed valid (unless challenged via [_fraud proofs_](https://ethereum.org/en/glossary/#fraud-proof)). Zk-rollups provide the validity proof by design but are still nascent.
 
-Both rollups and sidechains operate an off-chain network. L2 nodes are running the same execution layer as Ethereum ("EVM") and allow users to "bridge" assets to the L2 network using a bridging contract, which locks the assets up on the L1. As users are leveraging an app deployed on L2 for its scaling and associated cost benefits, the L2 data is posted back to Ethereum L1, periodically.
+Both rollups and sidechains operate an offchain network. L2 nodes are running the same execution layer as Ethereum ("EVM") and allow users to "bridge" assets to the L2 network using a bridging contract, which locks the assets up on the L1. As users are leveraging an app deployed on L2 for its scaling and associated cost benefits, the L2 data is posted back to Ethereum L1, periodically.
 
 There is plenty of research and resources that describe considerations and differences between [optimistic rollups](https://ethereum.org/en/developers/docs/scaling/optimistic-rollups/), [zk-rollups](https://ethereum.org/en/developers/docs/scaling/zk-rollups/), and [sidechains](https://ethereum.org/en/developers/docs/scaling/sidechains/).
 
 ### Optimistic rollups
 
-- Off-chain network of nodes running the EVM.
-- On-chain smart contract bridge.
+- Offchain network of nodes running the EVM.
+- Onchain smart contract bridge.
 - Inherits L1 security.
 - Actors periodically post batched transaction data (as _calldata_) to the L1, using the bridge contract.
 - The bridge contract _self-enforces_ L2 transaction validity with [_fraud proofs_](https://ethereum.org/en/glossary/#fraud-proof) where _anyone_ can make a challenge to the data posted to L1 — if successful, the L2 re-executes the txs and updates the L2 state.
 
 ### Sidechains
 
-- Off-chain network of nodes running the EVM.
-- On-chain smart contract bridge.
+- Offchain network of nodes running the EVM.
+- Onchain smart contract bridge.
 - _Partially_ inherits L1 security but uses a separate consensus mechanism.
 - Actors periodically post batched L2 transaction data (as _calldata_) to the L1, using the bridge contract.
 - The correctness of the batched data posted to L1 is not openly challengeable nor self-enforcing but is managed by a set of trusted parties.

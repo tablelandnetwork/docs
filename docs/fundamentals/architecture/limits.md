@@ -42,12 +42,12 @@ Since the Tableland network is currently in [open beta](/fundamentals/about/open
 
 Query size is limited to a **maximum of 35kb.**
 
-Recall that mutating queries require an on-chain operation—thus, a limit for write queries must abide by standard blockspace constraints. That is, Tableland inherits EVM-based limitations, including computational gas that exceeds the gas limit. For reference, multiple transactions are fully supported such that one or more SQL statements can exist in a single block, which could near this query limit for a large set of writes.
+Recall that mutating queries require an onchain operation—thus, a limit for write queries must abide by standard blockspace constraints. That is, Tableland inherits EVM-based limitations, including computational gas that exceeds the gas limit. For reference, multiple transactions are fully supported such that one or more SQL statements can exist in a single block, which could near this query limit for a large set of writes.
 
 Note that on Ethereum, due to the block gas limit (30 million gas), the query limit is reached when it is around **14.5kb**. In other words, query size is limited to 14.5kb when writing to Ethereum mainnet only; other chains should assume a maximum of 35kb.
 
 :::tip
-You can create tables and write data to it within the same on-chain transaction, but note that database operations are _atomic_. If one of these fail, then all operations in that transaction fail—so be careful to not exceed the query size limit!
+You can create tables and write data to it within the same onchain transaction, but note that database operations are _atomic_. If one of these fail, then all operations in that transaction fail—so be careful to not exceed the query size limit!
 
 :::
 
@@ -66,11 +66,11 @@ When a table is created or written to, there will be a "lag" between calling the
 
 ### Table reads
 
-**All table reads** must happen through an off-chain interaction using an unauthenticated REST API call to a Tableland validator node's gateway.
+**All table reads** must happen through an offchain interaction using an unauthenticated REST API call to a Tableland validator node's gateway.
 
-The TL;DR is that table _reads_ directly access the Tableland network, and mutating database instructions (_create_ & _write_ transactions) are on-chain actions. You can make read queries at a gateway, such as the one hosted by the core Tableland team. For more information, see the docs on [gateways](/fundamentals/architecture/gateway).
+The TL;DR is that table _reads_ directly access the Tableland network, and mutating database instructions (_create_ & _write_ transactions) are onchain actions. You can make read queries at a gateway, such as the one hosted by the core Tableland team. For more information, see the docs on [gateways](/fundamentals/architecture/gateway).
 
 :::note
-**It is not possible** for a smart contract to read data from a table created in Tableland. Using an oracle or some off-chain logic to write data back on chain (e.g., inbox-outbox type of setup) is an alternative.
+**It is not possible** for a smart contract to read data from a table created in Tableland. Using an oracle or some offchain logic to write data back on chain (e.g., inbox-outbox type of setup) is an alternative.
 
 :::

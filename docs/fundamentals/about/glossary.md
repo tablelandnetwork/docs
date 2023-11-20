@@ -91,7 +91,7 @@ Layer 2 (L2) solutions are built on top of another chain to help [scale its perf
 
 ### Materialize
 
-Data that is stored in the Tableland global database first is written on-chain (to event logs) and then is processed by database validator nodes. The act of processing and altering the existing database state is to _materialize_ the data.
+Data that is stored in the Tableland global database first is written onchain (to event logs) and then is processed by database validator nodes. The act of processing and altering the existing database state is to _materialize_ the data.
 
 ### Mutate
 
@@ -105,17 +105,17 @@ A node (also called a "client") is one of many in a distributed network of compu
 
 ### NFT
 
-A Non-Fungible Token (NFT), also referred to as an ERC721 (or ERC1155) token, is an interface for representing data that is distinct and cannot be broken into smaller pieces. It is a widely adopted standard and paves the way for interoperable data objects to exist on-chain. One unique component of NFTs is that they allow for an off-chain pointer to exist, which is what all common marketplaces read from (e.g., JPEGs). However, this off-chain reference can really be anything that adheres to the correct ERC721 schema, and Tableland offers a gateway that can be used as this pointer reference.
+A Non-Fungible Token (NFT), also referred to as an ERC721 (or ERC1155) token, is an interface for representing data that is distinct and cannot be broken into smaller pieces. It is a widely adopted standard and paves the way for interoperable data objects to exist onchain. One unique component of NFTs is that they allow for an offchain pointer to exist, which is what all common marketplaces read from (e.g., JPEGs). However, this offchain reference can really be anything that adheres to the correct ERC721 schema, and Tableland offers a gateway that can be used as this pointer reference.
 
 ## O
 
-### Off-chain
+### Offchain
 
-When something is "off-chain," it means that it had no direct interaction with a base chain and is operating, at least somewhat, independently. As you sit on your computer and read these docs, you're performing an entirely off-chain action; none of what you're doing ever gets recorded on the chain itself. An application frontend is exactly the same—it doesn't exist _on_ the blockchain itself, but it _could_ allow you to then interact with one. Off-chain isn't necessarily a bad thing, especially, for an adjacent decentralized network like Tableland. It just adds some additional security and consensus considerations that are, often, decoupled from on-chain measures.
+When something is "offchain," it means that it had no direct interaction with a base chain and is operating, at least somewhat, independently. As you sit on your computer and read these docs, you're performing an entirely offchain action; none of what you're doing ever gets recorded on the chain itself. An application frontend is exactly the same—it doesn't exist _on_ the blockchain itself, but it _could_ allow you to then interact with one. Offchain isn't necessarily a bad thing, especially, for an adjacent decentralized network like Tableland. It just adds some additional security and consensus considerations that are, often, decoupled from onchain measures.
 
-### On-chain
+### Onchain
 
-Something is referred to as "on-chain" if it directly interacts with a blockchain and successful interactions are recorded within the distributed ledger. Namely, if you send a transaction, it happens on-chain. The data itself may or may not be _accessible within a smart contract_, though. Event logs are stored on-chain, for example, but cannot be read _from_ a smart contract.
+Something is referred to as "onchain" if it directly interacts with a blockchain and successful interactions are recorded within the distributed ledger. Namely, if you send a transaction, it happens onchain. The data itself may or may not be _accessible within a smart contract_, though. Event logs are stored onchain, for example, but cannot be read _from_ a smart contract.
 
 ## R
 
@@ -125,7 +125,7 @@ Reading data is to observe and extrapolate learnings from it without altering it
 
 ### Registry
 
-Tableland is one part on-chain, another part off-chain. The on-chain component is a "registry" smart contract that accepts SQL statements, thus, minting tables and providing data availability of SQL. Without the registry, you wouldn't be able to create nor mutate tables. The off-chain part is the Tableland network of validators that materialized the data.
+Tableland is one part onchain, another part offchain. The onchain component is a "registry" smart contract that accepts SQL statements, thus, minting tables and providing data availability of SQL. Without the registry, you wouldn't be able to create nor mutate tables. The offchain part is the Tableland network of validators that materialized the data.
 
 ## S
 
@@ -141,7 +141,7 @@ Structured Query Language (SQL) is a way to interface with database nodes to cre
 
 ### Table
 
-A table is a database object that acts as a container for data. It organizes it into highly structured rows and columns and allows for relationship mapping between related tables to occur. In Tableland, a table is represented on-chain as an ERC721 token that provides table ownership to an account.
+A table is a database object that acts as a container for data. It organizes it into highly structured rows and columns and allows for relationship mapping between related tables to occur. In Tableland, a table is represented onchain as an ERC721 token that provides table ownership to an account.
 
 ### Transaction
 

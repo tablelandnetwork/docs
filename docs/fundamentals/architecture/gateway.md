@@ -32,7 +32,7 @@ For context, the gateway uses [Cloudflare](https://www.cloudflare.com/learning/c
 
 Tableland tables are created or written to in three primary steps:
 
-1. On-chain contract interaction, which creates a transaction via the contract method called. This transaction is _pending_ and not "finalized" in a block, yet.
+1. Onchain contract interaction, which creates a transaction via the contract method called. This transaction is _pending_ and not "finalized" in a block, yet.
 2. Upon transaction confirmation, an event with SQL instructions is emitted.
 3. Upon the event emittance, a Tableland network node listens to, processes, and then materializes the SQL instructions (validate syntax, access controls, etc.).
 

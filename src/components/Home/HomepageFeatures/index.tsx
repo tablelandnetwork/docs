@@ -54,8 +54,8 @@ const FeatureList: FeatureItem[] = [
     icon: <FaFileContract size={20} />,
     description: (
       <>
-        Dynamically update your data using on-chain actions, with read queries
-        made directly to Tableland. Easily manage both on-chain and off-chain
+        Dynamically update your data using onchain actions, with read queries
+        made directly to Tableland. Easily manage both onchain and offchain
         data, providing greater flexibility and ease of use. Plus, with a
         network of nodes running SQLite, you can trust that your data is always
         available and up-to-date.
@@ -75,7 +75,7 @@ const FeatureList: FeatureItem[] = [
         </Link>{" "}
         by a Tableland registry smart contract on each chain, allowing for easy
         integration with smart contracts & enabling you to create adaptable
-        on-chain workflows for collaborative data.
+        onchain workflows for collaborative data.
       </>
     ),
   },
