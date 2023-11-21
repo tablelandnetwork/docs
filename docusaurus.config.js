@@ -164,6 +164,7 @@ ${content}`,
           apiKey: process.env.ALGOLIA_API_KEY || "_",
           indexName: "tableland",
           contextualSearch: true,
+          schedule: "0 8 * * 0", // Re-index every Sunday at 8am UTC
           custom_settings: {
             attributesForFaceting: [
               "language",
