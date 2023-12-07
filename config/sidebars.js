@@ -156,12 +156,13 @@ const studio = [
   "studio/cli/README",
   "studio/cli/login",
   "studio/cli/logout",
-  "studio/cli/team",
-  "studio/cli/project",
   "studio/cli/use",
   "studio/cli/unuse",
+  "studio/cli/project",
+  "studio/cli/team",
+  "studio/cli/import-data",
   "studio/cli/import-table",
-  // "studio/cli/import-data",
+  "studio/cli/deployment",
 ];
 
 /* DEVELOP */
