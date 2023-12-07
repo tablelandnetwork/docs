@@ -596,6 +596,8 @@ html[data-theme="dark"] .navbar__link--active,
   color: var(--ifm-color-primary);
 }
 
+/* HERE */
+
 /* Smaller font for code block's pre-title section */
 div[class*="codeBlockTitle"] {
   padding-top: 7px;
@@ -603,8 +605,8 @@ div[class*="codeBlockTitle"] {
   font-size: 90%;
 }
 
-/* Horizontally center all images by default */
-img {
+/* Horizontally center all images by default, except navbar and landing */
+img:not(.navbar__logo img, .landing-img) {
   display: block !important;
   margin: 0 auto 20px auto !important;
 }
@@ -625,6 +627,8 @@ figcaption {
 table {
   text-align: center;
 }
+
+/* HERE */
 
 .navbar-sidebar__back {
   display: none;
