@@ -12,7 +12,7 @@ import TabItem from "@theme/TabItem";
 
 ## Installation
 
-You can install the tool globally via `npm` or `yarn`.
+You can install the tool globally:
 
 ```bash npm2yarn
 npm install -g @tableland/local@latest

@@ -21,7 +21,7 @@ See the [CLI quickstart page](/quickstarts/cli-quickstart) if you’re looking t
 
 ### Install
 
-You can install the CLI tool globally via `npm` or `yarn`.
+You can install the CLI tool globally:
 
 ```bash npm2yarn
 npm install -g @tableland/cli@latest

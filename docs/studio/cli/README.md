@@ -20,7 +20,7 @@ The `@tableland/studio-cli` package is a developer tool to help you interact wit
 
 ### Install
 
-You can install the CLI tool globally via `npm` or `yarn`.
+You can install the CLI tool globally:
 
 ```bash npm2yarn
 npm install -g @tableland/studio-cli
