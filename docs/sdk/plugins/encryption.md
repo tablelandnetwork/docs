@@ -24,7 +24,7 @@ Make sure you've install the JETI package and SDK:
 npm install @tableland/jeti @tableland/sdk
 ```
 
-Note: the following assumes you've gone through the setup steps for instantiating a `Database` and creating a table (with Local Tableland): [here](/docs/sdk/plugins#installation--setup).
+Note: the following assumes you've gone through the setup steps for instantiating a `Database` and creating a table (with Local Tableland): [here](/sdk/plugins#installation--setup).
 
 ## Encrypting data
 

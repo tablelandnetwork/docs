@@ -9,7 +9,7 @@ keywords:
 
 ## Overview
 
-The truncate function is useful if you need to insert data longer than the [max cell size of 1024 bytes](/fundamentals/architecture/limits) and don't wish to use the [string-to-CID extension](/docs/sdk/plugins/pinning-to-ipfs). However, it is not recommended unless you are okay with lossy data because it **will truncate** inputs such that the **original value is unrecoverable**. It's intended to use if you're fine with losing data, such as if you're inserting a large string that you don't need to keep around.
+The truncate function is useful if you need to insert data longer than the [max cell size of 1024 bytes](/fundamentals/architecture/limits) and don't wish to use the [string-to-CID extension](/sdk/plugins/pinning-to-ipfs). However, it is not recommended unless you are okay with lossy data because it **will truncate** inputs such that the **original value is unrecoverable**. It's intended to use if you're fine with losing data, such as if you're inserting a large string that you don't need to keep around.
 
 ## Installation & setup
 
@@ -19,7 +19,7 @@ If you haven't already, install the JETI package and SDK:
 npm install @tableland/jeti @tableland/sdk
 ```
 
-The initial setup steps for instantiating a `Database` and creating a table (with Local Tableland running) can be found [here](/docs/sdk/plugins#installation--setup).
+The initial setup steps for instantiating a `Database` and creating a table (with Local Tableland running) can be found [here](/sdk/plugins#installation--setup).
 
 ## Truncating values
 
