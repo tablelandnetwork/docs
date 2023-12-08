@@ -145,7 +145,7 @@ This will produce an `INSERT` statement with its `VALUES`.
 
 ```solidity
 // Insert data into a table
-function insertIntoTable(uint256 id, string memory val) public payable {
+function insertIntoTable(uint256 id, string memory val) external {
  /*  Under the hood, SQL helpers formulates:
   *
   *  INSERT INTO {prefix}_{chainId}_{tableId} (id,val) VALUES(
@@ -153,22 +153,20 @@ function insertIntoTable(uint256 id, string memory val) public payable {
   *    '<val>'
   *  );
   */
-  function insertIntoTable(uint256 id, string memory val) external {
-    TablelandDeployments.get().mutate(
+  TablelandDeployments.get().mutate(
       address(this), // Table owner, i.e., this contract
       _tableId,
       SQLHelpers.toInsert(
-        _TABLE_PREFIX,
-        _tableId,
-        "id,val",
-        string.concat(
+      _TABLE_PREFIX,
+      _tableId,
+      "id,val",
+      string.concat(
           Strings.toString(id), // Convert to a string
           ",",
           SQLHelpers.quote(val) // Wrap strings in single quotes with the `quote` method
-        )
       )
-    );
-  }
+    )
+  );
 };
 ```
 

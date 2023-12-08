@@ -81,6 +81,7 @@ import "@tableland/evm/contracts/utils/TablelandDeployments.sol";
 import "@tableland/evm/contracts/utils/SQLHelpers.sol";
 
 contract CanvasGame is
+    Initializable,
     ERC721URIStorageUpgradeable,
     ERC721HolderUpgradeable,
     OwnableUpgradeable,
@@ -101,15 +102,20 @@ contract CanvasGame is
 
     event MakeMove(address caller, uint256 tokenId, uint256 x, uint256 y);
 
+    constructor() {
+        _disableInitializers();
+    }
+
     function initialize(
         string memory baseURI,
         string memory externalURL
     ) public initializer {
-        __ERC721URIStorage_init();
+        __ERC721URIStorage_init("Canvas", "ITM");
         __ERC721Holder_init();
-        __Ownable_init();
+        __Ownable_init(msg.sender);
         __Pausable_init();
         __ReentrancyGuard_init();
+        __UUPSUpgradeable_init();
 
         // Setup steps in our smart contract
     }
@@ -215,11 +221,12 @@ function initialize(
     string memory baseURI,
     string memory externalURL
 ) public initializer {
-    __ERC721URIStorage_init("Canvas", "ITM");
-    __ERC721Holder_init();
-    __Ownable_init_unchained();
-    __Pausable_init();
-    __ReentrancyGuard_init();
+  __ERC721URIStorage_init("Canvas", "ITM");
+  __ERC721Holder_init();
+  __Ownable_init(msg.sender);
+  __Pausable_init();
+  __ReentrancyGuard_init();
+  __UUPSUpgradeable_init();
 
     _baseURIString = baseURI;
     _tablePrefix = "canvas";
