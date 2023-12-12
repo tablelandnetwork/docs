@@ -16,7 +16,7 @@ ExecResult represents the return result for executed Database statements via `ex
 
 ## Hierarchy
 
-- `Pick`<[`Metadata`](Metadata.md), ``"duration"`` \| ``"txn"``\>
+- `Pick`\<[`Metadata`](Metadata.md), ``"duration"`` \| ``"txn"``\>
 
   ↳ **`ExecResult`**
 

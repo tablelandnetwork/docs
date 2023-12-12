@@ -8,7 +8,7 @@ custom_edit_url: null
 
 ## Hierarchy
 
-- `Camelize`<`BaseSchema`\>
+- `Camelize`\<`BaseSchema`\>
 
   ↳ **`Schema`**
 
@@ -16,7 +16,7 @@ custom_edit_url: null
 
 ### columns
 
-• `Readonly` **columns**: `PartialRequired`<{ `constraints?`: readonly `string`[] ; `name?`: `string` ; `type?`: `string`  }, ``"constraints"``\>[]
+• `Readonly` **columns**: `PartialRequired`\<\{ `constraints?`: readonly `string`[] ; `name?`: `string` ; `type?`: `string`  }, ``"constraints"``\>[]
 
 #### Overrides
 

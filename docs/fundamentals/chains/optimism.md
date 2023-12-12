@@ -21,7 +21,7 @@ Offchain, the transactions happen much quicker than the batching. Note that deve
 
 - Average block time: 2 seconds
 - Block depth: 0
-- Average SQL materialization time: <5 seconds
+- Average SQL materialization time: {'<'}5 seconds
 - Chain ID: <ChainInfo chain='optimism' info='chainId' />
 - Symbol: ETH
 - Status Dashboard:
@@ -38,7 +38,7 @@ Offchain, the transactions happen much quicker than the batching. Note that deve
 
 - Average block time: 2 seconds
 - Block depth: 0
-- Average SQL materialization time: <5 seconds
+- Average SQL materialization time: {'<'}5 seconds
 - Chain ID: <ChainInfo chain='optimism-goerli' info='chainId' />
 - Symbol: ETH
 - Status Dashboard:

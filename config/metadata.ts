@@ -1,4 +1,4 @@
-const metadata = [
+export default [
   {
     name: "description",
     content:
@@ -28,5 +28,3 @@ const metadata = [
       "tableland, table land, docs, documentation, web3, crypto, blockchain, SQL, SQLite, relational, database, serverless, permissionless, evm, decentralized, data pipeline, open source",
   },
 ];
-
-module.exports = metadata;

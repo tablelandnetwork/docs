@@ -41,7 +41,7 @@ ___
 
 ### Config
 
-Ƭ **Config**: `Partial`<[`ReadConfig`](../interfaces/helpers.ReadConfig.md) & [`SignerConfig`](../interfaces/helpers.SignerConfig.md)\>
+Ƭ **Config**: `Partial`\<[`ReadConfig`](../interfaces/helpers.ReadConfig.md) & [`SignerConfig`](../interfaces/helpers.SignerConfig.md)\>
 
 #### Defined in
 
@@ -61,7 +61,7 @@ ___
 
 ### NameMapping
 
-Ƭ **NameMapping**: `Record`<`string`, `string`\>
+Ƭ **NameMapping**: `Record`\<`string`, `string`\>
 
 A series of mappings from a table alias to its globally unique table name.
 
@@ -95,14 +95,14 @@ ___
 
 ### RegistryReceipt
 
-Ƭ **RegistryReceipt**: `Required`<`Omit`<[`TransactionReceipt`](../modules.md#transactionreceipt), ``"error"`` \| ``"errorEventIdx"``\>\>
+Ƭ **RegistryReceipt**: `Required`\<`Omit`\<[`TransactionReceipt`](../modules.md#transactionreceipt), ``"error"`` \| ``"errorEventIdx"``\>\>
 
 RegistryReceipt is based on the TransactionReceipt type which defined by the API spec.
 The API v1 has a known problem where it only returns the first tableId from a transaction.
 
 #### Defined in
 
-@tableland/sdk/src/helpers/ethers.ts:46
+@tableland/sdk/src/helpers/ethers.ts:55
 
 ___
 
@@ -118,7 +118,7 @@ ___
 
 ### supportedChains
 
-• `Const` **supportedChains**: `Record`<keyof `TablelandNetworkConfig`, [`ChainInfo`](../interfaces/helpers.ChainInfo.md)\>
+• `Const` **supportedChains**: `Record`\<keyof `TablelandNetworkConfig`, [`ChainInfo`](../interfaces/helpers.ChainInfo.md)\>
 
 The set of chains and their information as supported by the Tableland network.
 
@@ -130,19 +130,19 @@ The set of chains and their information as supported by the Tableland network.
 
 ### checkWait
 
-▸ **checkWait**(`config`, `receipt`, `controller?`): `Promise`<[`WaitableTransactionReceipt`](../modules.md#waitabletransactionreceipt)\>
+▸ **checkWait**(`config`, `receipt`, `controller?`): `Promise`\<[`WaitableTransactionReceipt`](../modules.md#waitabletransactionreceipt)\>
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `config` | `Partial`<[`ReadConfig`](../interfaces/helpers.ReadConfig.md) & [`SignerConfig`](../interfaces/helpers.SignerConfig.md)\> & `Partial`<[`AutoWaitConfig`](../interfaces/helpers.AutoWaitConfig.md)\> |
+| `config` | `Partial`\<[`ReadConfig`](../interfaces/helpers.ReadConfig.md) & [`SignerConfig`](../interfaces/helpers.SignerConfig.md)\> & `Partial`\<[`AutoWaitConfig`](../interfaces/helpers.AutoWaitConfig.md)\> |
 | `receipt` | [`WaitableTransactionReceipt`](../modules.md#waitabletransactionreceipt) |
 | `controller?` | [`PollingController`](helpers.md#pollingcontroller) |
 
 #### Returns
 
-`Promise`<[`WaitableTransactionReceipt`](../modules.md#waitabletransactionreceipt)\>
+`Promise`\<[`WaitableTransactionReceipt`](../modules.md#waitabletransactionreceipt)\>
 
 #### Defined in
 
@@ -195,18 +195,18 @@ ___
 
 ### extractBaseUrl
 
-▸ **extractBaseUrl**(`conn?`, `chainNameOrId?`): `Promise`<`string`\>
+▸ **extractBaseUrl**(`conn?`, `chainNameOrId?`): `Promise`\<`string`\>
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `conn` | `Partial`<[`ReadConfig`](../interfaces/helpers.ReadConfig.md) & [`SignerConfig`](../interfaces/helpers.SignerConfig.md)\> |
+| `conn` | `Partial`\<[`ReadConfig`](../interfaces/helpers.ReadConfig.md) & [`SignerConfig`](../interfaces/helpers.SignerConfig.md)\> |
 | `chainNameOrId?` | `number` \| keyof `TablelandNetworkConfig` |
 
 #### Returns
 
-`Promise`<`string`\>
+`Promise`\<`string`\>
 
 #### Defined in
 
@@ -216,17 +216,17 @@ ___
 
 ### extractChainId
 
-▸ **extractChainId**(`conn?`): `Promise`<`number`\>
+▸ **extractChainId**(`conn?`): `Promise`\<`number`\>
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `conn` | `Partial`<[`ReadConfig`](../interfaces/helpers.ReadConfig.md) & [`SignerConfig`](../interfaces/helpers.SignerConfig.md)\> |
+| `conn` | `Partial`\<[`ReadConfig`](../interfaces/helpers.ReadConfig.md) & [`SignerConfig`](../interfaces/helpers.SignerConfig.md)\> |
 
 #### Returns
 
-`Promise`<`number`\>
+`Promise`\<`number`\>
 
 #### Defined in
 
@@ -236,18 +236,18 @@ ___
 
 ### extractSigner
 
-▸ **extractSigner**(`conn?`, `external?`): `Promise`<[`Signer`](../classes/helpers.Signer.md)\>
+▸ **extractSigner**(`conn?`, `external?`): `Promise`\<[`Signer`](../classes/helpers.Signer.md)\>
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `conn` | `Partial`<[`ReadConfig`](../interfaces/helpers.ReadConfig.md) & [`SignerConfig`](../interfaces/helpers.SignerConfig.md)\> |
+| `conn` | `Partial`\<[`ReadConfig`](../interfaces/helpers.ReadConfig.md) & [`SignerConfig`](../interfaces/helpers.SignerConfig.md)\> |
 | `external?` | `ExternalProvider` |
 
 #### Returns
 
-`Promise`<[`Signer`](../classes/helpers.Signer.md)\>
+`Promise`\<[`Signer`](../classes/helpers.Signer.md)\>
 
 #### Defined in
 
@@ -353,7 +353,7 @@ ___
 
 ### getContractReceipt
 
-▸ **getContractReceipt**(`tx`): `Promise`<[`MultiEventTransactionReceipt`](../interfaces/helpers.MultiEventTransactionReceipt.md)\>
+▸ **getContractReceipt**(`tx`): `Promise`\<[`MultiEventTransactionReceipt`](../interfaces/helpers.MultiEventTransactionReceipt.md)\>
 
 Given a transaction, this helper will return the tableIds that were part of the transaction.
 Especially useful for transactions that create new tables because you need the tableId to
@@ -367,13 +367,13 @@ calculate the full table name.
 
 #### Returns
 
-`Promise`<[`MultiEventTransactionReceipt`](../interfaces/helpers.MultiEventTransactionReceipt.md)\>
+`Promise`\<[`MultiEventTransactionReceipt`](../interfaces/helpers.MultiEventTransactionReceipt.md)\>
 
 tableland receipt
 
 #### Defined in
 
-@tableland/sdk/src/helpers/ethers.ts:75
+@tableland/sdk/src/helpers/ethers.ts:84
 
 ___
 
@@ -400,13 +400,9 @@ ___
 
 ### getSigner
 
-▸ **getSigner**(`external?`): `Promise`<[`Signer`](../classes/helpers.Signer.md)\>
+▸ **getSigner**(`external?`): `Promise`\<[`Signer`](../classes/helpers.Signer.md)\>
 
 Request a signer object from the global ethereum object.
-
-**`Throws`**
-
-If no global ethereum object is available.
 
 #### Parameters
 
@@ -416,13 +412,17 @@ If no global ethereum object is available.
 
 #### Returns
 
-`Promise`<[`Signer`](../classes/helpers.Signer.md)\>
+`Promise`\<[`Signer`](../classes/helpers.Signer.md)\>
 
 A promise that resolves to a valid web3 provider/signer
 
+**`Throws`**
+
+If no global ethereum object is available.
+
 #### Defined in
 
-@tableland/sdk/src/helpers/ethers.ts:108
+@tableland/sdk/src/helpers/ethers.ts:117
 
 ___
 
@@ -452,7 +452,7 @@ ___
 
 ### normalize
 
-▸ **normalize**(`sql`, `nameMap?`): `Promise`<[`NormalizedStatement`](helpers.md#normalizedstatement)\>
+▸ **normalize**(`sql`, `nameMap?`): `Promise`\<[`NormalizedStatement`](helpers.md#normalizedstatement)\>
 
 #### Parameters
 
@@ -463,7 +463,7 @@ ___
 
 #### Returns
 
-`Promise`<[`NormalizedStatement`](helpers.md#normalizedstatement)\>
+`Promise`\<[`NormalizedStatement`](helpers.md#normalizedstatement)\>
 
 #### Defined in
 
@@ -482,7 +482,7 @@ Override the internal list of registry addresses and validator urls that will be
 | Name | Type | Description |
 | :------ | :------ | :------ |
 | `chainNameOrId` | `number` \| keyof `TablelandNetworkConfig` | Either the chain name or chainId. For a list of chain names see the evm-tableland networks file |
-| `values` | `Record`<keyof [`ChainInfo`](../interfaces/helpers.ChainInfo.md), `string` \| `number`\> | The values you would like to use to override the defaults. Example: {contractAddress: "0x000deadbeef", baseUrl: "https://my.validator.mydomain.tld"} |
+| `values` | `Record`\<keyof [`ChainInfo`](../interfaces/helpers.ChainInfo.md), `string` \| `number`\> | The values you would like to use to override the defaults. Example: {contractAddress: "0x000deadbeef", baseUrl: "https://my.validator.mydomain.tld"} |
 
 #### Returns
 
@@ -504,7 +504,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `config` | `Partial`<[`ReadConfig`](../interfaces/helpers.ReadConfig.md)\> |
+| `config` | `Partial`\<[`ReadConfig`](../interfaces/helpers.ReadConfig.md)\> |
 
 #### Returns
 
@@ -518,7 +518,7 @@ ___
 
 ### readNameMapping
 
-▸ **readNameMapping**(`aliases`): `Promise`<[`NameMapping`](helpers.md#namemapping)\>
+▸ **readNameMapping**(`aliases`): `Promise`\<[`NameMapping`](helpers.md#namemapping)\>
 
 Read the [NameMapping](helpers.md#namemapping) from an [AliasesNameMap](../interfaces/helpers.AliasesNameMap.md), which can
 support either synchronous or asynchronous `read()` execution. It will wrap a
@@ -533,7 +533,7 @@ asynchronous.
 
 #### Returns
 
-`Promise`<[`NameMapping`](helpers.md#namemapping)\>
+`Promise`\<[`NameMapping`](helpers.md#namemapping)\>
 
 A promise containing a `NameMapping` object.
 
@@ -545,7 +545,7 @@ ___
 
 ### validateTableName
 
-▸ **validateTableName**(`tableName`, `isCreate?`): `Promise`<`ValidatedTable`\>
+▸ **validateTableName**(`tableName`, `isCreate?`): `Promise`\<`ValidatedTable`\>
 
 #### Parameters
 
@@ -556,7 +556,7 @@ ___
 
 #### Returns
 
-`Promise`<`ValidatedTable`\>
+`Promise`\<`ValidatedTable`\>
 
 #### Defined in
 
@@ -566,7 +566,7 @@ ___
 
 ### writeNameMapping
 
-▸ **writeNameMapping**(`aliases`, `nameMap`): `Promise`<`void`\>
+▸ **writeNameMapping**(`aliases`, `nameMap`): `Promise`\<`void`\>
 
 Write table aliases with an [AliasesNameMap](../interfaces/helpers.AliasesNameMap.md) and a provided
 [NameMapping](helpers.md#namemapping), which can support either synchronous or asynchronous
@@ -582,7 +582,7 @@ result if asynchronous.
 
 #### Returns
 
-`Promise`<`void`\>
+`Promise`\<`void`\>
 
 A promise containing `void` upon write completion.
 

@@ -139,7 +139,7 @@ There are a couple of utility methods you can use for formatting sidebar items a
 
 - `section(text, type)` => Use this to create sidebar section with a divider and title—this is used purely for aesthetics. In the sidebar array, you then destructure this value (e.g., `...section("Tutorials")` will display a "Tutorials" label with a horizontal line below it). The `type` is optional and default to `sidebar`, and the other value that should be used it `landing`; the difference between the two is color formatting (the landing sidebar vs. a "side page" sidebar).
 - `hr()` => Use this to create simple divider line. It's used by the `section` method but can also be used independently, if needed.
-- `sidepageHeader(text)` => At the start of any _new_ grouping of pages, you'll notice a "<- Back to home" button and the groupings heading at the top of the sidebar. When you use and destructure `...sidepageHeader("Contribute")` in a sidebar array, it provides these sidebar items with the proper formatting. It is _only needed as the first item_ in a grouping that's defined on the landing page, so it's unlikely you'll need to use this.
+- `sidepageHeader(text)` => At the start of any _new_ grouping of pages, you'll notice a {'<'}- Back to home button and the groupings heading at the top of the sidebar. When you use and destructure `...sidepageHeader("Contribute")` in a sidebar array, it provides these sidebar items with the proper formatting. It is _only needed as the first item_ in a grouping that's defined on the landing page, so it's unlikely you'll need to use this.
 
 ## Next steps
 

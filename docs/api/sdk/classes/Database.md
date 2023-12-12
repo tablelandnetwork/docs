@@ -22,7 +22,7 @@ to the better-sqlite3, and D1 APIs in many respects.
 
 ### constructor
 
-• **new Database**<`D`\>(`config?`)
+• **new Database**\<`D`\>(`config?`): [`Database`](Database.md)\<`D`\>
 
 Create a Database instance with the specified connection configuration.
 
@@ -36,7 +36,11 @@ Create a Database instance with the specified connection configuration.
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `config` | `Partial`<[`ReadConfig`](../interfaces/helpers.ReadConfig.md) & [`SignerConfig`](../interfaces/helpers.SignerConfig.md)\> & `Partial`<[`AutoWaitConfig`](../interfaces/helpers.AutoWaitConfig.md)\> | The connection configuration. These keys are evaluated lazily, so it is possible to omit the baseUrl or signer, depending on your query needs. For a read-only Database for instance, only the baseUrl needs to be provided. |
+| `config` | `Partial`\<[`ReadConfig`](../interfaces/helpers.ReadConfig.md) & [`SignerConfig`](../interfaces/helpers.SignerConfig.md)\> & `Partial`\<[`AutoWaitConfig`](../interfaces/helpers.AutoWaitConfig.md)\> | The connection configuration. These keys are evaluated lazily, so it is possible to omit the baseUrl or signer, depending on your query needs. For a read-only Database for instance, only the baseUrl needs to be provided. |
+
+#### Returns
+
+[`Database`](Database.md)\<`D`\>
 
 #### Defined in
 
@@ -46,7 +50,7 @@ Create a Database instance with the specified connection configuration.
 
 ### config
 
-• `Readonly` **config**: `Partial`<[`ReadConfig`](../interfaces/helpers.ReadConfig.md) & [`SignerConfig`](../interfaces/helpers.SignerConfig.md)\> & `Partial`<[`AutoWaitConfig`](../interfaces/helpers.AutoWaitConfig.md)\>
+• `Readonly` **config**: `Partial`\<[`ReadConfig`](../interfaces/helpers.ReadConfig.md) & [`SignerConfig`](../interfaces/helpers.SignerConfig.md)\> & `Partial`\<[`AutoWaitConfig`](../interfaces/helpers.AutoWaitConfig.md)\>
 
 #### Defined in
 
@@ -56,7 +60,7 @@ Create a Database instance with the specified connection configuration.
 
 ### batch
 
-▸ **batch**<`T`\>(`statements`, `controller?`): `Promise`<[`Result`](../interfaces/Result.md)<`T`\>[]\>
+▸ **batch**\<`T`\>(`statements`, `controller?`): `Promise`\<[`Result`](../interfaces/Result.md)\<`T`\>[]\>
 
 Execute a set of Statements in batch mode.
 Batching sends multiple SQL statements inside a single call to the
@@ -77,12 +81,12 @@ statement, and it aborts or rolls back the entire sequence.
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `statements` | [`Statement`](Statement.md)<`unknown`\>[] | A set of Statement objects to batch and submit. |
+| `statements` | [`Statement`](Statement.md)\<`unknown`\>[] | A set of Statement objects to batch and submit. |
 | `controller?` | [`PollingController`](../namespaces/helpers.md#pollingcontroller) | An optional object used to control receipt polling behavior. |
 
 #### Returns
 
-`Promise`<[`Result`](../interfaces/Result.md)<`T`\>[]\>
+`Promise`\<[`Result`](../interfaces/Result.md)\<`T`\>[]\>
 
 An array of run results.
 
@@ -94,7 +98,7 @@ ___
 
 ### dump
 
-▸ **dump**(`_controller?`): `Promise`<`ArrayBuffer`\>
+▸ **dump**(`_controller?`): `Promise`\<`ArrayBuffer`\>
 
 Export a (set of) tables to the SQLite binary format.
 Not implemented yet!
@@ -107,7 +111,7 @@ Not implemented yet!
 
 #### Returns
 
-`Promise`<`ArrayBuffer`\>
+`Promise`\<`ArrayBuffer`\>
 
 #### Defined in
 
@@ -117,7 +121,7 @@ ___
 
 ### exec
 
-▸ **exec**<`T`\>(`statementStrings`, `controller?`): `Promise`<[`ExecResult`](../interfaces/ExecResult.md)<`T`\>\>
+▸ **exec**\<`T`\>(`statementStrings`, `controller?`): `Promise`\<[`ExecResult`](../interfaces/ExecResult.md)\<`T`\>\>
 
 Executes one or more queries directly without prepared statements
 or parameters binding. This method can have poorer performance
@@ -146,7 +150,7 @@ splitting, and batching may be used.
 
 #### Returns
 
-`Promise`<[`ExecResult`](../interfaces/ExecResult.md)<`T`\>\>
+`Promise`\<[`ExecResult`](../interfaces/ExecResult.md)\<`T`\>\>
 
 A single run result.
 
@@ -158,7 +162,7 @@ ___
 
 ### prepare
 
-▸ **prepare**<`T`\>(`sql`): [`Statement`](Statement.md)<`T`\>
+▸ **prepare**\<`T`\>(`sql`): [`Statement`](Statement.md)\<`T`\>
 
 Create a new prepared statement.
 Both static and prepared statements are supported. In the current
@@ -179,7 +183,7 @@ executed remotely (on-chain).
 
 #### Returns
 
-[`Statement`](Statement.md)<`T`\>
+[`Statement`](Statement.md)\<`T`\>
 
 A Statement object constructed with the given SQL string.
 
@@ -191,7 +195,7 @@ ___
 
 ### forSigner
 
-▸ `Static` **forSigner**(`signer`): `Promise`<[`Database`](Database.md)<`unknown`\>\>
+▸ **forSigner**(`signer`): `Promise`\<[`Database`](Database.md)\<`unknown`\>\>
 
 Create a Database that is connected to the given Signer.
 
@@ -203,7 +207,7 @@ Create a Database that is connected to the given Signer.
 
 #### Returns
 
-`Promise`<[`Database`](Database.md)<`unknown`\>\>
+`Promise`\<[`Database`](Database.md)\<`unknown`\>\>
 
 A Database with a Signer, and a default baseUrl.
 
@@ -215,13 +219,9 @@ ___
 
 ### readOnly
 
-▸ `Static` **readOnly**(`chainNameOrId`): [`Database`](Database.md)<`unknown`\>
+▸ **readOnly**(`chainNameOrId`): [`Database`](Database.md)\<`unknown`\>
 
 Create a Database that uses the default baseUrl for a given chain.
-
-**`Deprecated`**
-
-since 4.0.1, will be deleted in 5.0.0
 
 #### Parameters
 
@@ -231,9 +231,13 @@ since 4.0.1, will be deleted in 5.0.0
 
 #### Returns
 
-[`Database`](Database.md)<`unknown`\>
+[`Database`](Database.md)\<`unknown`\>
 
 A Database without a signer configured.
+
+**`Deprecated`**
+
+since 4.0.1, will be deleted in 5.0.0
 
 #### Defined in
 

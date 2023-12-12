@@ -20,7 +20,7 @@ ___
 
 ### named
 
-• `Optional` **named**: `Record`<`string`, [`BaseType`](../modules.md#basetype)\>
+• `Optional` **named**: `Record`\<`string`, [`BaseType`](../modules.md#basetype)\>
 
 #### Defined in
 

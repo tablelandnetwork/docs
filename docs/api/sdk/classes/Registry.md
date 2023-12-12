@@ -12,7 +12,7 @@ Registry provides direct access to remote Registry smart contract APIs.
 
 ### constructor
 
-• **new Registry**(`config?`)
+• **new Registry**(`config?`): [`Registry`](Registry.md)
 
 Create a Registry instance with the specified connection configuration.
 
@@ -20,7 +20,11 @@ Create a Registry instance with the specified connection configuration.
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `config` | `Partial`<[`SignerConfig`](../interfaces/helpers.SignerConfig.md)\> | The connection configuration. This must include an ethersjs Signer. If passing the config from a pre-existing Database instance, it must have a non-null signer key defined. |
+| `config` | `Partial`\<[`SignerConfig`](../interfaces/helpers.SignerConfig.md)\> | The connection configuration. This must include an ethersjs Signer. If passing the config from a pre-existing Database instance, it must have a non-null signer key defined. |
+
+#### Returns
+
+[`Registry`](Registry.md)
 
 #### Defined in
 
@@ -40,7 +44,7 @@ Create a Registry instance with the specified connection configuration.
 
 ### create
 
-▸ **create**(`params`): `Promise`<[`ContractTransaction`](../interfaces/helpers.ContractTransaction.md)\>
+▸ **create**(`params`): `Promise`\<[`ContractTransaction`](../interfaces/helpers.ContractTransaction.md)\>
 
 Creates a new table owned by `owner` using `statement` and returns its `tableId`.
 
@@ -59,7 +63,7 @@ Requirements:
 
 #### Returns
 
-`Promise`<[`ContractTransaction`](../interfaces/helpers.ContractTransaction.md)\>
+`Promise`\<[`ContractTransaction`](../interfaces/helpers.ContractTransaction.md)\>
 
 #### Defined in
 
@@ -69,7 +73,7 @@ ___
 
 ### getController
 
-▸ **getController**(`table`): `Promise`<`string`\>
+▸ **getController**(`table`): `Promise`\<`string`\>
 
 Returns the controller for a table.
 
@@ -83,7 +87,7 @@ tableId - the id of the target table
 
 #### Returns
 
-`Promise`<`string`\>
+`Promise`\<`string`\>
 
 #### Defined in
 
@@ -93,7 +97,7 @@ ___
 
 ### listTables
 
-▸ **listTables**(`owner?`): `Promise`<[`TableIdentifier`](../interfaces/TableIdentifier.md)[]\>
+▸ **listTables**(`owner?`): `Promise`\<[`TableIdentifier`](../interfaces/TableIdentifier.md)[]\>
 
 Gets the list of table IDs of the requested owner.
 
@@ -105,7 +109,7 @@ Gets the list of table IDs of the requested owner.
 
 #### Returns
 
-`Promise`<[`TableIdentifier`](../interfaces/TableIdentifier.md)[]\>
+`Promise`\<[`TableIdentifier`](../interfaces/TableIdentifier.md)[]\>
 
 #### Defined in
 
@@ -115,7 +119,7 @@ ___
 
 ### lockController
 
-▸ **lockController**(`table`): `Promise`<[`ContractTransaction`](../interfaces/helpers.ContractTransaction.md)\>
+▸ **lockController**(`table`): `Promise`\<[`ContractTransaction`](../interfaces/helpers.ContractTransaction.md)\>
 
 Locks the controller for a table _forever_. Controller can be an EOA or contract address.
 
@@ -139,7 +143,7 @@ Requirements:
 
 #### Returns
 
-`Promise`<[`ContractTransaction`](../interfaces/helpers.ContractTransaction.md)\>
+`Promise`\<[`ContractTransaction`](../interfaces/helpers.ContractTransaction.md)\>
 
 #### Defined in
 
@@ -149,7 +153,7 @@ ___
 
 ### mutate
 
-▸ **mutate**(`params`): `Promise`<[`ContractTransaction`](../interfaces/helpers.ContractTransaction.md)\>
+▸ **mutate**(`params`): `Promise`\<[`ContractTransaction`](../interfaces/helpers.ContractTransaction.md)\>
 
 Runs a SQL statement for `caller` using `statement`.
 
@@ -173,7 +177,7 @@ Requirements:
 
 #### Returns
 
-`Promise`<[`ContractTransaction`](../interfaces/helpers.ContractTransaction.md)\>
+`Promise`\<[`ContractTransaction`](../interfaces/helpers.ContractTransaction.md)\>
 
 #### Defined in
 
@@ -183,7 +187,7 @@ ___
 
 ### runSQL
 
-▸ **runSQL**(`params`): `Promise`<[`ContractTransaction`](../interfaces/helpers.ContractTransaction.md)\>
+▸ **runSQL**(`params`): `Promise`\<[`ContractTransaction`](../interfaces/helpers.ContractTransaction.md)\>
 
 Runs a set of SQL statements for `caller` using `runnables`.
 @custom:deprecated Using this with a single statement is deprecated. Use `mutate` instead.
@@ -196,7 +200,7 @@ Runs a set of SQL statements for `caller` using `runnables`.
 
 #### Returns
 
-`Promise`<[`ContractTransaction`](../interfaces/helpers.ContractTransaction.md)\>
+`Promise`\<[`ContractTransaction`](../interfaces/helpers.ContractTransaction.md)\>
 
 #### Defined in
 
@@ -206,7 +210,7 @@ ___
 
 ### safeTransferFrom
 
-▸ **safeTransferFrom**(`params`): `Promise`<[`ContractTransaction`](../interfaces/helpers.ContractTransaction.md)\>
+▸ **safeTransferFrom**(`params`): `Promise`\<[`ContractTransaction`](../interfaces/helpers.ContractTransaction.md)\>
 
 Safely transfers the ownership of a given table ID to another address.
 
@@ -220,7 +224,7 @@ Requires the msg sender to be the owner, approved, or operator
 
 #### Returns
 
-`Promise`<[`ContractTransaction`](../interfaces/helpers.ContractTransaction.md)\>
+`Promise`\<[`ContractTransaction`](../interfaces/helpers.ContractTransaction.md)\>
 
 #### Defined in
 
@@ -230,7 +234,7 @@ ___
 
 ### setController
 
-▸ **setController**(`params`): `Promise`<[`ContractTransaction`](../interfaces/helpers.ContractTransaction.md)\>
+▸ **setController**(`params`): `Promise`\<[`ContractTransaction`](../interfaces/helpers.ContractTransaction.md)\>
 
 Sets the controller for a table. Controller can be an EOA or contract address.
 
@@ -263,7 +267,7 @@ Requirements:
 
 #### Returns
 
-`Promise`<[`ContractTransaction`](../interfaces/helpers.ContractTransaction.md)\>
+`Promise`\<[`ContractTransaction`](../interfaces/helpers.ContractTransaction.md)\>
 
 #### Defined in
 
@@ -273,7 +277,7 @@ ___
 
 ### forSigner
 
-▸ `Static` **forSigner**(`signer`): `Promise`<[`Registry`](Registry.md)\>
+▸ **forSigner**(`signer`): `Promise`\<[`Registry`](Registry.md)\>
 
 Create a Registry that is connected to the given Signer.
 
@@ -285,7 +289,7 @@ Create a Registry that is connected to the given Signer.
 
 #### Returns
 
-`Promise`<[`Registry`](Registry.md)\>
+`Promise`\<[`Registry`](Registry.md)\>
 
 #### Defined in
 

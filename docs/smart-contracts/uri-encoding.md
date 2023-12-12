@@ -28,7 +28,7 @@ A simple example: a URI cannot include a space (` `), so the space must be encod
 There is also a set of _reserved characters_—delimiters that are distinguishable from other data within the URI. The following characters are in this [reserved set and protected](https://datatracker.ietf.org/doc/html/rfc3986#page-13) from normalization:
 
 :::note Reserved characters in URI encoding
-! \* ' ( ) ; : @ & = + $ , / ? # [ ]
+`! \* ' ( ) ; : @ & = + $ , / ? # [ ]`
 :::
 
 This is an important realization because if SQL is used in the `/query` endpoint, it’s possible the SQL statement will include one of these reserved characters. If this occurs, you must encode these characters—but many URL encoding libraries assume the reserved characters should not be encoded.
@@ -39,29 +39,29 @@ For context, the table below defines each of these reserved characters and their
 
 | Character | Encoding | Description                                          |
 | --------- | -------- | ---------------------------------------------------- |
-| &nbsp;    | %20      | A space (i.e., like this space: <code>&nbsp;</code>) |
-| !         | %21      | Exclamation point / bang symbol                      |
-| "         | %22      | Double quote                                         |
-| #         | %23      | Hash / number sign                                   |
-| %         | %25      | Percentage sign                                      |
-| &         | %26      | Ampersand                                            |
-| '         | %27      | Single quote (e.g., used to wrap text in SQL)        |
-| (         | %28      | Left parenthesis (e.g., when specifying values)      |
-| )         | %29      | Right parenthesis                                    |
-| \*        | %2A      | Asterisk (e.g, in a SELECT \* FROM statement)        |
-| +         | %2B      | The "plus" sign                                      |
-| ,         | %2C      | Comma (e.g., separating values in an INSERT)         |
-| /         | %2F      | Forward slash                                        |
-| :         | %3A      | A colon                                              |
-| ;         | %3B      | A semicolon (e.g., placed at the end of a statement) |
-| <         | %3C      | Less than                                            |
-| =         | %3D      | An equals sign (e.g., in WHERE clauses)              |
-| >         | %3E      | Greater than                                         |
-| ?         | %3F      | Question mark                                        |
-| @         | %40      | The "at" symbol                                      |
-| [         | %5B      | Left bracket                                         |
-| ]         | %5D      | Right bracket                                        |
-| \|        | %7C      | Pipe                                                 |
+| &nbsp;    | `%20`    | A space (i.e., like this space: <code>&nbsp;</code>) |
+| `!`       | `%21`    | Exclamation point / bang symbol                      |
+| `"`       | `%22`    | Double quote                                         |
+| `#`       | `%23`    | Hash / number sign                                   |
+| `%`       | `%25`    | Percentage sign                                      |
+| `&`       | `%26`    | Ampersand                                            |
+| `'`       | `%27`    | Single quote (e.g., used to wrap text in SQL)        |
+| `(`       | `%28`    | Left parenthesis (e.g., when specifying values)      |
+| `)`       | `%29`    | Right parenthesis                                    |
+| `\*`      | `%2A`    | Asterisk (e.g, in a `SELECT * FROM` statement)       |
+| `+`       | `%2B`    | The "plus" sign                                      |
+| `,`       | `%2C`    | Comma (e.g., separating values in an INSERT)         |
+| `/`       | `%2F`    | Forward slash                                        |
+| `:`       | `%3A`    | A colon                                              |
+| `;`       | `%3B`    | A semicolon (e.g., placed at the end of a statement) |
+| `<`       | `%3C`    | Less than                                            |
+| `=`       | `%3D`    | An equals sign (e.g., in `WHERE` clauses)            |
+| `>`       | `%3E`    | Greater than                                         |
+| `?`       | `%3F`    | Question mark                                        |
+| `@`       | `%40`    | The "at" symbol                                      |
+| `[`       | `%5B`    | Left bracket                                         |
+| `]`       | `%5D`    | Right bracket                                        |
+| `\|`      | `%7C`    | Pipe                                                 |
 
 For a full list of encoded characters, see the list [here](https://www.w3schools.com/tags/ref_urlencode.ASP), and note that up until `%7F`, both UTF-8 and Windows encoding have full parity.
 

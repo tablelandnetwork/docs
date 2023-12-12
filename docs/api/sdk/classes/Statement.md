@@ -27,7 +27,7 @@ any runtime errors occur.
 
 ### constructor
 
-• **new Statement**<`S`\>(`config`, `sql`, `parameters?`)
+• **new Statement**\<`S`\>(`config`, `sql`, `parameters?`): [`Statement`](Statement.md)\<`S`\>
 
 #### Type parameters
 
@@ -39,9 +39,13 @@ any runtime errors occur.
 
 | Name | Type |
 | :------ | :------ |
-| `config` | `Partial`<[`ReadConfig`](../interfaces/helpers.ReadConfig.md) & [`SignerConfig`](../interfaces/helpers.SignerConfig.md)\> & `Partial`<[`AutoWaitConfig`](../interfaces/helpers.AutoWaitConfig.md)\> |
+| `config` | `Partial`\<[`ReadConfig`](../interfaces/helpers.ReadConfig.md) & [`SignerConfig`](../interfaces/helpers.SignerConfig.md)\> & `Partial`\<[`AutoWaitConfig`](../interfaces/helpers.AutoWaitConfig.md)\> |
 | `sql` | `string` |
 | `parameters?` | [`Parameters`](../interfaces/Parameters.md) |
+
+#### Returns
+
+[`Statement`](Statement.md)\<`S`\>
 
 #### Defined in
 
@@ -51,7 +55,7 @@ any runtime errors occur.
 
 ### config
 
-• `Private` `Readonly` **config**: `Partial`<[`ReadConfig`](../interfaces/helpers.ReadConfig.md) & [`SignerConfig`](../interfaces/helpers.SignerConfig.md)\> & `Partial`<[`AutoWaitConfig`](../interfaces/helpers.AutoWaitConfig.md)\>
+• `Private` `Readonly` **config**: `Partial`\<[`ReadConfig`](../interfaces/helpers.ReadConfig.md) & [`SignerConfig`](../interfaces/helpers.SignerConfig.md)\> & `Partial`\<[`AutoWaitConfig`](../interfaces/helpers.AutoWaitConfig.md)\>
 
 #### Defined in
 
@@ -81,7 +85,7 @@ ___
 
 ### #checkIsValidOpts
 
-▸ `Private` **#checkIsValidOpts**(`opts`): opts is Options
+▸ **#checkIsValidOpts**(`opts`): opts is Options
 
 #### Parameters
 
@@ -101,11 +105,11 @@ ___
 
 ### #parseAndExtract
 
-▸ `Private` **#parseAndExtract**(): `Promise`<`ExtractedStatement`\>
+▸ **#parseAndExtract**(): `Promise`\<`ExtractedStatement`\>
 
 #### Returns
 
-`Promise`<`ExtractedStatement`\>
+`Promise`\<`ExtractedStatement`\>
 
 #### Defined in
 
@@ -115,7 +119,7 @@ ___
 
 ### #waitExec
 
-▸ `Private` **#waitExec**(`params`, `controller?`): `Promise`<[`WaitableTransactionReceipt`](../modules.md#waitabletransactionreceipt)\>
+▸ **#waitExec**(`params`, `controller?`): `Promise`\<[`WaitableTransactionReceipt`](../modules.md#waitabletransactionreceipt)\>
 
 #### Parameters
 
@@ -126,7 +130,7 @@ ___
 
 #### Returns
 
-`Promise`<[`WaitableTransactionReceipt`](../modules.md#waitabletransactionreceipt)\>
+`Promise`\<[`WaitableTransactionReceipt`](../modules.md#waitabletransactionreceipt)\>
 
 #### Defined in
 
@@ -136,7 +140,7 @@ ___
 
 ### all
 
-▸ **all**<`T`\>(`opts?`): `Promise`<[`Result`](../interfaces/Result.md)<`T`\>\>
+▸ **all**\<`T`\>(`opts?`): `Promise`\<[`Result`](../interfaces/Result.md)\<`T`\>\>
 
 Executes a query and returns all rows and metadata.
 
@@ -144,7 +148,7 @@ Executes a query and returns all rows and metadata.
 
 | Name | Type |
 | :------ | :------ |
-| `T` | `Record`<`string`, `S`\> |
+| `T` | `Record`\<`string`, `S`\> |
 
 #### Parameters
 
@@ -154,7 +158,7 @@ Executes a query and returns all rows and metadata.
 
 #### Returns
 
-`Promise`<[`Result`](../interfaces/Result.md)<`T`\>\>
+`Promise`\<[`Result`](../interfaces/Result.md)\<`T`\>\>
 
 #### Defined in
 
@@ -164,7 +168,7 @@ ___
 
 ### bind
 
-▸ **bind**<`T`\>(`...values`): [`Statement`](Statement.md)<`T`\>
+▸ **bind**\<`T`\>(`...values`): [`Statement`](Statement.md)\<`T`\>
 
 Bind a set of values to the parameters of the prepared statement.
 We follow the SQLite convention for prepared statements parameter binding.
@@ -184,7 +188,7 @@ We support Ordered (?NNNN), Anonymous (?), and Named (@name, :name, $name) param
 
 #### Returns
 
-[`Statement`](Statement.md)<`T`\>
+[`Statement`](Statement.md)\<`T`\>
 
 A new bound Statement.
 
@@ -196,7 +200,7 @@ ___
 
 ### first
 
-▸ **first**<`T`\>(`opts?`): `Promise`<``null`` \| `T`\>
+▸ **first**\<`T`\>(`opts?`): `Promise`\<``null`` \| `T`\>
 
 Executes a query and returns the first row of the results.
 This does not return metadata like the other methods.
@@ -207,7 +211,7 @@ rows, then first() will return null.
 
 | Name | Type |
 | :------ | :------ |
-| `T` | `Record`<`string`, `S`\> |
+| `T` | `Record`\<`string`, `S`\> |
 
 #### Parameters
 
@@ -217,13 +221,13 @@ rows, then first() will return null.
 
 #### Returns
 
-`Promise`<``null`` \| `T`\>
+`Promise`\<``null`` \| `T`\>
 
 #### Defined in
 
 @tableland/sdk/src/statement.ts:197
 
-▸ **first**<`T`, `K`\>(`colName`, `opts?`): `Promise`<`T`\>
+▸ **first**\<`T`, `K`\>(`colName`, `opts?`): `Promise`\<`T`\>
 
 #### Type parameters
 
@@ -241,13 +245,13 @@ rows, then first() will return null.
 
 #### Returns
 
-`Promise`<`T`\>
+`Promise`\<`T`\>
 
 #### Defined in
 
 @tableland/sdk/src/statement.ts:199
 
-▸ **first**<`T`, `K`\>(`colName`, `opts?`): `Promise`<``null`` \| `T`[`K`]\>
+▸ **first**\<`T`, `K`\>(`colName`, `opts?`): `Promise`\<``null`` \| `T`[`K`]\>
 
 #### Type parameters
 
@@ -265,7 +269,7 @@ rows, then first() will return null.
 
 #### Returns
 
-`Promise`<``null`` \| `T`[`K`]\>
+`Promise`\<``null`` \| `T`[`K`]\>
 
 #### Defined in
 
@@ -275,7 +279,7 @@ ___
 
 ### raw
 
-▸ **raw**<`T`\>(`opts?`): `Promise`<[`ValueOf`](../modules.md#valueof)<`T`\>[]\>
+▸ **raw**\<`T`\>(`opts?`): `Promise`\<[`ValueOf`](../modules.md#valueof)\<`T`\>[]\>
 
 Same as stmt.all(), but returns an array of rows instead of objects.
 
@@ -293,7 +297,7 @@ Same as stmt.all(), but returns an array of rows instead of objects.
 
 #### Returns
 
-`Promise`<[`ValueOf`](../modules.md#valueof)<`T`\>[]\>
+`Promise`\<[`ValueOf`](../modules.md#valueof)\<`T`\>[]\>
 
 An array of raw query results.
 
@@ -305,7 +309,7 @@ ___
 
 ### run
 
-▸ **run**<`T`\>(`opts?`): `Promise`<[`Result`](../interfaces/Result.md)<`T`\>\>
+▸ **run**\<`T`\>(`opts?`): `Promise`\<[`Result`](../interfaces/Result.md)\<`T`\>\>
 
 Runs the query/queries, but returns no results. Instead, run()
 returns the metrics only. Useful for write operations like
@@ -315,7 +319,7 @@ UPDATE, DELETE or INSERT.
 
 | Name | Type |
 | :------ | :------ |
-| `T` | `Record`<`string`, `S`\> |
+| `T` | `Record`\<`string`, `S`\> |
 
 #### Parameters
 
@@ -325,7 +329,7 @@ UPDATE, DELETE or INSERT.
 
 #### Returns
 
-`Promise`<[`Result`](../interfaces/Result.md)<`T`\>\>
+`Promise`\<[`Result`](../interfaces/Result.md)\<`T`\>\>
 
 A results object with metadata only (results are null or an empty array).
 

@@ -5,7 +5,7 @@
  *
  */
 
-const navbar = {
+export default {
   hideOnScroll: false,
   title: "", // Only use if you want a word next to the logo, like "DOCS"
   logo: {
@@ -134,6 +134,4 @@ const navbar = {
     //   position: "right",
     // }
   ],
-};
-
-module.exports = navbar;
+} as any;

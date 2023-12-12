@@ -18,7 +18,7 @@ TableFormat represents a object with rows and columns.
 
 ### columns
 
-• **columns**: { `name`: `string`  }[]
+• **columns**: \{ `name`: `string`  }[]
 
 #### Defined in
 
@@ -28,7 +28,7 @@ ___
 
 ### rows
 
-• **rows**: [`ValueOf`](../modules.md#valueof)<`T`\>[]
+• **rows**: [`ValueOf`](../modules.md#valueof)\<`T`\>[]
 
 #### Defined in
 

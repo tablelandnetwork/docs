@@ -300,9 +300,9 @@ It will return the first row of `my_table`. There are other way to approach this
 
 The `->` and `->>` operators take a JSON string as their left operand and a path expression or object field label or array index as their right operand, returning the JSON of the subcomponent. Let's say our table has this data:
 
-| id  | val                     |
-| --- | ----------------------- |
-| 1   | '{"my_key":"my_value"}' |
+| id  | val                       |
+| --- | ------------------------- |
+| 1   | `'{"my_key":"my_value"}'` |
 
 With `->`, the result is returned as a JSON object or array, including any string values being returned with quotes:
 

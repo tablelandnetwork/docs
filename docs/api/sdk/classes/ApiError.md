@@ -16,13 +16,17 @@ custom_edit_url: null
 
 ### constructor
 
-• **new ApiError**(`response`)
+• **new ApiError**(`response`): [`ApiError`](ApiError.md)
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `response` | `Omit`<`ApiResponse`<`any`\>, ``"ok"``\> |
+| `response` | `Omit`\<`ApiResponse`\<`any`\>, ``"ok"``\> |
+
+#### Returns
+
+[`ApiError`](ApiError.md)
 
 #### Overrides
 
@@ -44,7 +48,7 @@ Error.cause
 
 #### Defined in
 
-typescript/lib/lib.es2022.error.d.ts:26
+typescript/lib/lib.es2022.error.d.ts:24
 
 ___
 
@@ -78,7 +82,7 @@ Error.message
 
 #### Defined in
 
-typescript/lib/lib.es5.d.ts:1054
+typescript/lib/lib.es5.d.ts:1068
 
 ___
 
@@ -92,7 +96,7 @@ Error.name
 
 #### Defined in
 
-typescript/lib/lib.es5.d.ts:1053
+typescript/lib/lib.es5.d.ts:1067
 
 ___
 
@@ -106,7 +110,7 @@ Error.stack
 
 #### Defined in
 
-typescript/lib/lib.es5.d.ts:1055
+typescript/lib/lib.es5.d.ts:1069
 
 ___
 
@@ -150,10 +154,6 @@ ___
 
 Optional override for formatting stack traces
 
-**`See`**
-
-https://v8.dev/docs/stack-trace-api#customizing-stack-traces
-
 ##### Parameters
 
 | Name | Type |
@@ -165,13 +165,17 @@ https://v8.dev/docs/stack-trace-api#customizing-stack-traces
 
 `any`
 
+**`See`**
+
+https://v8.dev/docs/stack-trace-api#customizing-stack-traces
+
 #### Inherited from
 
 Error.prepareStackTrace
 
 #### Defined in
 
-@types/node/globals.d.ts:11
+@types/node/globals.d.ts:28
 
 ___
 
@@ -185,13 +189,13 @@ Error.stackTraceLimit
 
 #### Defined in
 
-@types/node/globals.d.ts:13
+@types/node/globals.d.ts:30
 
 ## Methods
 
 ### captureStackTrace
 
-▸ `Static` **captureStackTrace**(`targetObject`, `constructorOpt?`): `void`
+▸ **captureStackTrace**(`targetObject`, `constructorOpt?`): `void`
 
 Create .stack property on a target object
 
@@ -212,4 +216,4 @@ Error.captureStackTrace
 
 #### Defined in
 
-@types/node/globals.d.ts:4
+@types/node/globals.d.ts:21

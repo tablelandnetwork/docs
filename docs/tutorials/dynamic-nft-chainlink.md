@@ -270,7 +270,7 @@ Now, the real magic comes with the `tokenURI` method. It’s a SQL query to JOIN
 
 The query forms a `json_object` with two nested `json_object` values in a `json_array`. The top-level metadata fields include the `name`, `image`, and `attributes`, where the `attributes` hold the composed data from the "tokens" and "flowers" tables. For the `image`, there were images previously uploaded to IPFS and stored in the format `<IPFS_CID>/<stage>.jpg`. This string is recreated using SQL concatenation with `||`.
 
-Here’s the full SQL statement, and the <tokens_table> and <flowers_table> are values that should be replaced with the **actual** table names (`prefix_tableId_chainId`) within the contract:
+Here’s the full SQL statement, and the `<tokens_table>` and `<flowers_table>` are values that should be replaced with the **actual** table names (`prefix_tableId_chainId`) within the contract:
 
 ```sql
 select

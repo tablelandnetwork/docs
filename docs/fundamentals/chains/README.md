@@ -30,11 +30,11 @@ Here's a summary of how the chains works in terms of speed:
 | Chain         | Avg. block finalization time | Block depth | Avg. SQL materialize time |
 | ------------- | ---------------------------- | ----------- | ------------------------- |
 | Ethereum      | 13.5 seconds                 | 1           | 30-40 seconds             |
-| Optimism      | 2 seconds                    | 0           | <5 seconds                |
-| Arbitrum One  | <2 seconds                   | 0           | <5 seconds                |
-| Arbitrum Nova | 2-3 seconds                  | 0           | <5 seconds                |
-| Polygon       | 2 seconds                    | 1           | <10 seconds               |
-| Filecoin      | 30 seconds                   | 5           | ~ 4 mins.                 |
+| Optimism      | 2 seconds                    | 0           | {'<'}5 seconds            |
+| Arbitrum One  | {'<'}2 seconds               | 0           | {'<'}5 seconds            |
+| Arbitrum Nova | 2-3 seconds                  | 0           | {'<'}5 seconds            |
+| Polygon       | 2 seconds                    | 1           | {'<'}10 seconds           |
+| Filecoin      | 30 seconds                   | 5           | ~4 mins.                  |
 
 <DocCardList />
 
