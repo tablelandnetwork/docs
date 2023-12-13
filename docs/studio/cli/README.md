@@ -81,7 +81,7 @@ You can see all of these commands available by either running the `help` command
 `studio project <subcommand>`: Manage your studio projects.
 
 - `ls [team_id]`: List the projects for the given ID, or if no id is given, use the default context.
-- `create <name> <description>`: Creates a new project with the given name and description, also requiring the `--teamId` flag is passed.
+- `create <name> <description>`: Creates a new project with the given name and description.
 
 ### Use
 

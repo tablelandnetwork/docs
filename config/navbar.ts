@@ -134,4 +134,4 @@ export default {
     //   position: "right",
     // }
   ],
-} as any;
+};
