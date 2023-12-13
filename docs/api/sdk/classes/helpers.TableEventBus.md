@@ -14,7 +14,7 @@ TableEventBus provides a way to listen for:
 
 ### constructor
 
-• **new TableEventBus**(`config?`)
+• **new TableEventBus**(`config?`): [`TableEventBus`](helpers.TableEventBus.md)
 
 Create a TableEventBus instance with the specified connection configuration.
 
@@ -22,7 +22,11 @@ Create a TableEventBus instance with the specified connection configuration.
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `config` | `Partial`<`Partial`<[`ReadConfig`](../interfaces/helpers.ReadConfig.md) & [`SignerConfig`](../interfaces/helpers.SignerConfig.md)\>\> | The connection configuration. This must include an ethersjs Signer. If passing the config from a pre-existing Database instance, it must have a non-null signer key defined. |
+| `config` | `Partial`\<`Partial`\<[`ReadConfig`](../interfaces/helpers.ReadConfig.md) & [`SignerConfig`](../interfaces/helpers.SignerConfig.md)\>\> | The connection configuration. This must include an ethersjs Signer. If passing the config from a pre-existing Database instance, it must have a non-null signer key defined. |
+
+#### Returns
+
+[`TableEventBus`](helpers.TableEventBus.md)
 
 #### Defined in
 
@@ -32,7 +36,7 @@ Create a TableEventBus instance with the specified connection configuration.
 
 ### config
 
-• `Readonly` **config**: `Partial`<[`ReadConfig`](../interfaces/helpers.ReadConfig.md) & [`SignerConfig`](../interfaces/helpers.SignerConfig.md)\>
+• `Readonly` **config**: `Partial`\<[`ReadConfig`](../interfaces/helpers.ReadConfig.md) & [`SignerConfig`](../interfaces/helpers.SignerConfig.md)\>
 
 #### Defined in
 
@@ -84,7 +88,7 @@ ___
 
 ### \_ensureListening
 
-▸ **_ensureListening**(`listenerId`, `emitter`): `Promise`<`ContractEventListener`[]\>
+▸ **_ensureListening**(`listenerId`, `emitter`): `Promise`\<`ContractEventListener`[]\>
 
 #### Parameters
 
@@ -95,7 +99,7 @@ ___
 
 #### Returns
 
-`Promise`<`ContractEventListener`[]\>
+`Promise`\<`ContractEventListener`[]\>
 
 #### Defined in
 
@@ -105,7 +109,7 @@ ___
 
 ### \_getContract
 
-▸ **_getContract**(`chainId`): `Promise`<`TablelandTables`\>
+▸ **_getContract**(`chainId`): `Promise`\<`TablelandTables`\>
 
 #### Parameters
 
@@ -115,7 +119,7 @@ ___
 
 #### Returns
 
-`Promise`<`TablelandTables`\>
+`Promise`\<`TablelandTables`\>
 
 #### Defined in
 
@@ -125,7 +129,7 @@ ___
 
 ### addListener
 
-▸ **addListener**(`tableName`): `Promise`<`EventEmitter`\>
+▸ **addListener**(`tableName`): `Promise`\<`EventEmitter`\>
 
 Start listening to the Registry Contract for events that are associated
 with a given table.
@@ -141,7 +145,7 @@ supports.
 
 #### Returns
 
-`Promise`<`EventEmitter`\>
+`Promise`\<`EventEmitter`\>
 
 #### Defined in
 
@@ -151,7 +155,7 @@ ___
 
 ### addTableIterator
 
-▸ **addTableIterator**<`T`\>(`tableName`): `Promise`<`AsyncIterable`<`T`\>\>
+▸ **addTableIterator**\<`T`\>(`tableName`): `Promise`\<`AsyncIterable`\<`T`\>\>
 
 A simple wrapper around `addListener` that returns an async iterable
 which can be used with the for await ... of pattern.
@@ -170,7 +174,7 @@ which can be used with the for await ... of pattern.
 
 #### Returns
 
-`Promise`<`AsyncIterable`<`T`\>\>
+`Promise`\<`AsyncIterable`\<`T`\>\>
 
 #### Defined in
 

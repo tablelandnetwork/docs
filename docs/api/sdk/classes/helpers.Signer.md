@@ -11,7 +11,11 @@ custom_edit_url: null
 
 ### constructor
 
-• **new Signer**()
+• **new Signer**(): [`Signer`](helpers.Signer.md)
+
+#### Returns
+
+[`Signer`](helpers.Signer.md)
 
 #### Defined in
 
@@ -61,18 +65,18 @@ ___
 
 ### call
 
-▸ **call**(`transaction`, `blockTag?`): `Promise`<`string`\>
+▸ **call**(`transaction`, `blockTag?`): `Promise`\<`string`\>
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `transaction` | `Deferrable`<`TransactionRequest`\> |
+| `transaction` | `Deferrable`\<`TransactionRequest`\> |
 | `blockTag?` | `BlockTag` |
 
 #### Returns
 
-`Promise`<`string`\>
+`Promise`\<`string`\>
 
 #### Defined in
 
@@ -82,17 +86,17 @@ ___
 
 ### checkTransaction
 
-▸ **checkTransaction**(`transaction`): `Deferrable`<`TransactionRequest`\>
+▸ **checkTransaction**(`transaction`): `Deferrable`\<`TransactionRequest`\>
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `transaction` | `Deferrable`<`TransactionRequest`\> |
+| `transaction` | `Deferrable`\<`TransactionRequest`\> |
 
 #### Returns
 
-`Deferrable`<`TransactionRequest`\>
+`Deferrable`\<`TransactionRequest`\>
 
 #### Defined in
 
@@ -102,7 +106,7 @@ ___
 
 ### connect
 
-▸ `Abstract` **connect**(`provider`): [`Signer`](helpers.Signer.md)
+▸ **connect**(`provider`): [`Signer`](helpers.Signer.md)
 
 #### Parameters
 
@@ -122,17 +126,17 @@ ___
 
 ### estimateGas
 
-▸ **estimateGas**(`transaction`): `Promise`<`BigNumber`\>
+▸ **estimateGas**(`transaction`): `Promise`\<`BigNumber`\>
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `transaction` | `Deferrable`<`TransactionRequest`\> |
+| `transaction` | `Deferrable`\<`TransactionRequest`\> |
 
 #### Returns
 
-`Promise`<`BigNumber`\>
+`Promise`\<`BigNumber`\>
 
 #### Defined in
 
@@ -142,11 +146,11 @@ ___
 
 ### getAddress
 
-▸ `Abstract` **getAddress**(): `Promise`<`string`\>
+▸ **getAddress**(): `Promise`\<`string`\>
 
 #### Returns
 
-`Promise`<`string`\>
+`Promise`\<`string`\>
 
 #### Defined in
 
@@ -156,7 +160,7 @@ ___
 
 ### getBalance
 
-▸ **getBalance**(`blockTag?`): `Promise`<`BigNumber`\>
+▸ **getBalance**(`blockTag?`): `Promise`\<`BigNumber`\>
 
 #### Parameters
 
@@ -166,7 +170,7 @@ ___
 
 #### Returns
 
-`Promise`<`BigNumber`\>
+`Promise`\<`BigNumber`\>
 
 #### Defined in
 
@@ -176,11 +180,11 @@ ___
 
 ### getChainId
 
-▸ **getChainId**(): `Promise`<`number`\>
+▸ **getChainId**(): `Promise`\<`number`\>
 
 #### Returns
 
-`Promise`<`number`\>
+`Promise`\<`number`\>
 
 #### Defined in
 
@@ -190,11 +194,11 @@ ___
 
 ### getFeeData
 
-▸ **getFeeData**(): `Promise`<`FeeData`\>
+▸ **getFeeData**(): `Promise`\<`FeeData`\>
 
 #### Returns
 
-`Promise`<`FeeData`\>
+`Promise`\<`FeeData`\>
 
 #### Defined in
 
@@ -204,11 +208,11 @@ ___
 
 ### getGasPrice
 
-▸ **getGasPrice**(): `Promise`<`BigNumber`\>
+▸ **getGasPrice**(): `Promise`\<`BigNumber`\>
 
 #### Returns
 
-`Promise`<`BigNumber`\>
+`Promise`\<`BigNumber`\>
 
 #### Defined in
 
@@ -218,7 +222,7 @@ ___
 
 ### getTransactionCount
 
-▸ **getTransactionCount**(`blockTag?`): `Promise`<`number`\>
+▸ **getTransactionCount**(`blockTag?`): `Promise`\<`number`\>
 
 #### Parameters
 
@@ -228,7 +232,7 @@ ___
 
 #### Returns
 
-`Promise`<`number`\>
+`Promise`\<`number`\>
 
 #### Defined in
 
@@ -238,17 +242,17 @@ ___
 
 ### populateTransaction
 
-▸ **populateTransaction**(`transaction`): `Promise`<`TransactionRequest`\>
+▸ **populateTransaction**(`transaction`): `Promise`\<`TransactionRequest`\>
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `transaction` | `Deferrable`<`TransactionRequest`\> |
+| `transaction` | `Deferrable`\<`TransactionRequest`\> |
 
 #### Returns
 
-`Promise`<`TransactionRequest`\>
+`Promise`\<`TransactionRequest`\>
 
 #### Defined in
 
@@ -258,7 +262,7 @@ ___
 
 ### resolveName
 
-▸ **resolveName**(`name`): `Promise`<`string`\>
+▸ **resolveName**(`name`): `Promise`\<`string`\>
 
 #### Parameters
 
@@ -268,7 +272,7 @@ ___
 
 #### Returns
 
-`Promise`<`string`\>
+`Promise`\<`string`\>
 
 #### Defined in
 
@@ -278,17 +282,17 @@ ___
 
 ### sendTransaction
 
-▸ **sendTransaction**(`transaction`): `Promise`<`TransactionResponse`\>
+▸ **sendTransaction**(`transaction`): `Promise`\<`TransactionResponse`\>
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `transaction` | `Deferrable`<`TransactionRequest`\> |
+| `transaction` | `Deferrable`\<`TransactionRequest`\> |
 
 #### Returns
 
-`Promise`<`TransactionResponse`\>
+`Promise`\<`TransactionResponse`\>
 
 #### Defined in
 
@@ -298,7 +302,7 @@ ___
 
 ### signMessage
 
-▸ `Abstract` **signMessage**(`message`): `Promise`<`string`\>
+▸ **signMessage**(`message`): `Promise`\<`string`\>
 
 #### Parameters
 
@@ -308,7 +312,7 @@ ___
 
 #### Returns
 
-`Promise`<`string`\>
+`Promise`\<`string`\>
 
 #### Defined in
 
@@ -318,17 +322,17 @@ ___
 
 ### signTransaction
 
-▸ `Abstract` **signTransaction**(`transaction`): `Promise`<`string`\>
+▸ **signTransaction**(`transaction`): `Promise`\<`string`\>
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `transaction` | `Deferrable`<`TransactionRequest`\> |
+| `transaction` | `Deferrable`\<`TransactionRequest`\> |
 
 #### Returns
 
-`Promise`<`string`\>
+`Promise`\<`string`\>
 
 #### Defined in
 
@@ -338,7 +342,7 @@ ___
 
 ### isSigner
 
-▸ `Static` **isSigner**(`value`): value is Signer
+▸ **isSigner**(`value`): value is Signer
 
 #### Parameters
 

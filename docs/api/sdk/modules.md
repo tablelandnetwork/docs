@@ -48,7 +48,7 @@ Renames and re-exports [CreateTableParams](interfaces/CreateTableParams.md)
 
 ### BaseType
 
-Ƭ **BaseType**: `string` \| `boolean` \| `number` \| `bigint` \| `Uint8Array` \| ``null`` \| `undefined` \| `Date` \| `SQL` \| `Record`<`string`, `any`\>
+Ƭ **BaseType**: `string` \| `boolean` \| `number` \| `bigint` \| `Uint8Array` \| ``null`` \| `undefined` \| `Date` \| `SQL` \| `Record`\<`string`, `any`\>
 
 #### Defined in
 
@@ -88,7 +88,7 @@ ___
 
 ### ObjectsFormat
 
-Ƭ **ObjectsFormat**<`T`\>: `T`[]
+Ƭ **ObjectsFormat**\<`T`\>: `T`[]
 
 ObjectsFormat represents an array of rows as key/value objects.
 
@@ -106,7 +106,7 @@ ___
 
 ### QueryParams
 
-Ƭ **QueryParams**<`T`\>: `BaseParams` & { `format?`: `T`  }
+Ƭ **QueryParams**\<`T`\>: `BaseParams` & \{ `format?`: `T`  }
 
 #### Type parameters
 
@@ -122,7 +122,7 @@ ___
 
 ### TransactionReceipt
 
-Ƭ **TransactionReceipt**: `Camelize`<`AssertedResponse`\>
+Ƭ **TransactionReceipt**: `Camelize`\<`AssertedResponse`\>
 
 #### Defined in
 
@@ -132,7 +132,7 @@ ___
 
 ### ValueOf
 
-Ƭ **ValueOf**<`T`\>: `T`[keyof `T`]
+Ƭ **ValueOf**\<`T`\>: `T`[keyof `T`]
 
 ValueOf represents only the values of a given keyed interface.
 
@@ -150,7 +150,7 @@ ___
 
 ### ValuesType
 
-Ƭ **ValuesType**: [`BaseType`](modules.md#basetype) \| [`BaseType`](modules.md#basetype)[] \| `Record`<`string`, [`BaseType`](modules.md#basetype)\>
+Ƭ **ValuesType**: [`BaseType`](modules.md#basetype) \| [`BaseType`](modules.md#basetype)[] \| `Record`\<`string`, [`BaseType`](modules.md#basetype)\>
 
 #### Defined in
 
@@ -160,7 +160,7 @@ ___
 
 ### WaitableTransactionReceipt
 
-Ƭ **WaitableTransactionReceipt**: [`TransactionReceipt`](modules.md#transactionreceipt) & [`Wait`](interfaces/helpers.Wait.md)<[`TransactionReceipt`](modules.md#transactionreceipt) & [`Named`](interfaces/Named.md)\> & [`Named`](interfaces/Named.md)
+Ƭ **WaitableTransactionReceipt**: [`TransactionReceipt`](modules.md#transactionreceipt) & [`Wait`](interfaces/helpers.Wait.md)\<[`TransactionReceipt`](modules.md#transactionreceipt) & [`Named`](interfaces/Named.md)\> & [`Named`](interfaces/Named.md)
 
 WaitableTransactionReceipt represents a named TransactionReceipt with a wait method.
 See the Validator spec in the docs for more details.

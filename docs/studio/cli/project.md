@@ -19,6 +19,21 @@ List all of your projects tied to your Studio account, optionally, passing the t
 | -------------- | -------- | ---------------------- | ----------------------------------- |
 | `[identifier]` | `string` | Studio session default | (Optional) the team's ID, if known. |
 
+### `create <name> <description>`
+
+Creates a new project with the given name and description.
+
+| Argument        | Type     | Description               |
+| --------------- | -------- | ------------------------- |
+| `<name>`        | `string` | The name of the project.  |
+| `<description>` | `string` | The project's description |
+
+You must also include the team ID the project is a part of.
+
+| Option     | Type     | Description         |
+| ---------- | -------- | ------------------- |
+| `--teamId` | `string` | The unique team ID. |
+
 ## Examples
 
 ### `ls`
@@ -57,4 +72,21 @@ Output:
     "description": "this is a collabs project"
   }
 ]
+```
+
+### `create`
+
+```bash
+studio project create --teamId 3bb1d54b-bc06-4a29-8d61-39dc939e1406 new_test_proj "This is a test project."
+```
+
+The output will log project information.
+
+```json
+{
+  "id": "de24e0a0-508c-4e1f-aa96-176a5ff2890a",
+  "name": "new_test_proj",
+  "description": "This is a test project.",
+  "slug": "new_test_proj"
+}
 ```

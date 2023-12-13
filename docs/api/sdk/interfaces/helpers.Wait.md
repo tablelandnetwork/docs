@@ -19,11 +19,11 @@ A waitable interface to check for results.
 
 ### wait
 
-• **wait**: (`controller?`: [`PollingController`](../namespaces/helpers.md#pollingcontroller)) => `Promise`<`T`\>
+• **wait**: (`controller?`: [`PollingController`](../namespaces/helpers.md#pollingcontroller)) => `Promise`\<`T`\>
 
 #### Type declaration
 
-▸ (`controller?`): `Promise`<`T`\>
+▸ (`controller?`): `Promise`\<`T`\>
 
 A function to check for results.
 
@@ -35,7 +35,7 @@ A function to check for results.
 
 ##### Returns
 
-`Promise`<`T`\>
+`Promise`\<`T`\>
 
 #### Defined in
 

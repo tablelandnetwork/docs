@@ -68,7 +68,7 @@ export default function Home(): JSX.Element {
             >
               <ThemedImage
                 alt="Tableland code snippet"
-                className={clsx(styles.landingImage)}
+                className={clsx("landing-img", styles.landingImage)}
                 sources={{
                   light: useBaseUrl(
                     "/img/landing/landing-image-light-mode.png"

@@ -1,3 +1,5 @@
+import type { SidebarsConfig } from "@docusaurus/plugin-content-docs";
+
 /*
  Sidebars are organized into the following groupings—each has the main
  "grouping" that corresponds to a series of directories.  Each grouping is
@@ -156,12 +158,13 @@ const studio = [
   "studio/cli/README",
   "studio/cli/login",
   "studio/cli/logout",
-  "studio/cli/team",
-  "studio/cli/project",
   "studio/cli/use",
   "studio/cli/unuse",
+  "studio/cli/project",
+  "studio/cli/team",
+  "studio/cli/import-data",
   "studio/cli/import-table",
-  // "studio/cli/import-data",
+  "studio/cli/deployment",
 ];
 
 /* DEVELOP */
@@ -227,14 +230,25 @@ const sdk = [
       "sdk/registry/subscribe",
     ],
   },
-
-  "sdk/database/timeouts-error-handling",
   ...section("Walkthroughs"),
+  {
+    type: "category",
+    label: "Plugins",
+    link: {
+      type: "doc",
+      id: "sdk/plugins/README",
+    },
+    items: [
+      "sdk/plugins/pinning-to-ipfs",
+      "sdk/plugins/truncate",
+      "sdk/plugins/encryption",
+      "sdk/plugins/custom-plugin",
+    ],
+  },
+  "sdk/database/timeouts-error-handling",
   "sdk/walkthroughs/sql-parser",
   "sdk/walkthroughs/orm",
   "sdk/walkthroughs/testing",
-  ...section("Plugins"),
-  "sdk/plugins/JETI",
   ...section("Reference"),
   "sdk/reference/type-conversion",
   "sdk/reference/compatability",
@@ -358,9 +372,7 @@ const sqlSpecification = [...sidepageHeader("Reference"), "specs/sql/README"];
 /* You likely don't need to edit the following information, unless you're
 changing the landing page's sidebar layout or adding one-off routes */
 
-// @ts-check
-/** @type {import('@docusaurus/plugin-content-docs').SidebarsConfig} */
-const sidebars = {
+const sidebars: SidebarsConfig = {
   home: [
     {
       type: "doc",
@@ -490,7 +502,7 @@ const sidebars = {
 /* A series of helpers to formulate sidebar dividers and titles */
 
 // A simple horizontal divider.
-function hr() {
+function hr(): object {
   return {
     type: "html",
     value: "<hr />",
@@ -500,7 +512,7 @@ function hr() {
 }
 
 // For text section headers / dividers, pass the name of the `section`.
-function section(text, type = "sidebar") {
+function section(text: string, type = "sidebar"): Array<any> {
   const sidebarClass =
     type === "sidebar" ? "sidebar-section" : "landing-section";
   return [
@@ -516,7 +528,7 @@ function section(text, type = "sidebar") {
 // Only used as the "main" sidebar header—i.e., the landing page directs to a
 // number of side pages, like "Get started" and "Concepts". These sidebars have a
 // "Back to home" button followed by the passed name of the sidebar grouping.
-function sidepageHeader(text) {
+function sidepageHeader(text: string): Array<any> {
   return [
     {
       type: "link",
@@ -533,4 +545,4 @@ function sidepageHeader(text) {
   ];
 }
 
-module.exports = sidebars;
+export default sidebars;

@@ -12,6 +12,8 @@ Metadata represents meta information about an executed statement/transaction.
 
 ▪ [key: `string`]: `any`
 
+Metadata may constrain additional arbitrary key/values pairs.
+
 ## Properties
 
 ### duration

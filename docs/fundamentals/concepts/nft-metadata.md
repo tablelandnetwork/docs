@@ -9,7 +9,12 @@ keywords:
   - erc1155 metadata
   - enjin metadata
   - opensea nft metadata
-  - erc721a metadata
+  - erc721a
+  - erc721aupgradeable
+  - erc721
+  - erc1155
+  - chiru labs
+  - opensea
 ---
 
 Today, the primary standard for Non-Fungible Tokens (NFTs) is Ethereum's ERC-721 Non-Fungible Token Standard as well as the Ethereum ERC-1155 Multi Token Standard. Platforms such as OpenSea have adopted these NFT standards, along with modifications of their own, to support a wide range of NFT projects.
@@ -18,9 +23,9 @@ Today, the primary standard for Non-Fungible Tokens (NFTs) is Ethereum's ERC-721
 To learn how to actually store and query NFT metadata in tables, check out the [crafting NFT metadata playbook](/playbooks/walkthroughs/nft-metadata).
 :::
 
-## NFT metadata standards
+## NFT standards & metadata
 
-The table below defines the most used standards for ERC-721 or ERC-1155 metadata. All of these are accepted and will render NFT metadata on marketplaces like OpenSea.
+The table below defines the most used standards for ERC721 or ERC1155 metadata. All of these are accepted and will render NFT metadata on marketplaces like OpenSea.
 
 <!-- prettier-ignore -->
 | Standard | Description | Link |
@@ -28,6 +33,22 @@ The table below defines the most used standards for ERC-721 or ERC-1155 metadata
 | ERC721 | The original NFT standard—the metadata attributes are provided in a `properties` object. | [EIP-721](https://eips.ethereum.org/EIPS/eip-721) |
 | ERC1155 | A newer standard that supports multiple tokens in a single contract. Similar to ERC-721, it uses a `properties` object to store attributes and allows for more rich optionality. | [EIP-1155](https://eips.ethereum.org/EIPS/eip-1155) |
 | OpenSea | OpenSea's metadata reference uses an `attributes` array to store NFT traits as objects. It's a slightly different setup than those above. | [OpenSea](https://docs.opensea.io/docs/metadata-standards) |
+
+Here are a few frameworks you can use that adhere to the ERC721 or ERC1155 token standards. This is just a sample of the more popular ones, but there are many more out there.
+
+<!-- prettier-ignore -->
+| Contract | Source/description | Description | Link |
+| -------- | ------------------ | ----------- | ---- |
+| `ERC721.sol` | OpenZeppelin | OpenZeppelin's ERC721 implementation is a community-vetted, open-source framework for building NFTs. | [Docs](https://docs.openzeppelin.com/contracts/5.x/erc721) |
+| `ERC721Upgradeable.sol` | OpenZeppelin | An upgradeable variation of the OpenZeppelin ERC721 contract. | [Docs](https://docs.openzeppelin.com/contracts/5.x/upgradeable) |
+| `ERC721A.sol` | Chiru Labs | A more gas performant ERC721 implementation. | [Docs](https://chiru-labs.github.io/ERC721A/#/) |
+| `ERC721AUpgradeable.sol` | OpenZeppelin | An upgradeable variation of the Chiru Labs ERC721A contract. | [Docs](https://github.com/OpenZeppelin/openzeppelin-contracts-upgradeable/blob/master/contracts/token/ERC721/ERC721Upgradeable.sol) |
+| `ERC1155.sol` | OpenZeppelin | OpenZeppelin's ERC1155 implementation. | [Docs](https://docs.openzeppelin.com/contracts/3.x/erc1155) |
+| `ERC1155.sol` | OpenZeppelin | An upgradeable variation of the OpenZeppelin ERC1155 contract. | [Docs](https://github.com/OpenZeppelin/openzeppelin-contracts-upgradeable/blob/master/contracts/token/ERC1155/ERC1155Upgradeable.sol) |
+
+:::tip
+Fun fact: Tableland uses the `ERC721AUpgradeable` standard for its registry contract.
+:::
 
 ## Highly structured data
 

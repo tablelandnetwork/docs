@@ -13,7 +13,7 @@ Used to read and write table aliases within a `Database` instance
 
 ### read
 
-• **read**: () => `Promise`<[`NameMapping`](../namespaces/helpers.md#namemapping)\> \| () => [`NameMapping`](../namespaces/helpers.md#namemapping)
+• **read**: () => `Promise`\<[`NameMapping`](../namespaces/helpers.md#namemapping)\> \| () => [`NameMapping`](../namespaces/helpers.md#namemapping)
 
 A function that returns a [NameMapping](../namespaces/helpers.md#namemapping) object, or a
 `Promise` of a [NameMapping](../namespaces/helpers.md#namemapping) object.
@@ -26,7 +26,7 @@ ___
 
 ### write
 
-• **write**: (`map`: [`NameMapping`](../namespaces/helpers.md#namemapping)) => `Promise`<`void`\> \| (`map`: [`NameMapping`](../namespaces/helpers.md#namemapping)) => `void`
+• **write**: (`map`: [`NameMapping`](../namespaces/helpers.md#namemapping)) => `Promise`\<`void`\> \| (`map`: [`NameMapping`](../namespaces/helpers.md#namemapping)) => `void`
 
 A function that accepts a [NameMapping](../namespaces/helpers.md#namemapping) object and
 returns `void`, or a Promise of void.

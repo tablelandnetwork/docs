@@ -66,7 +66,8 @@ describe("unit", function () {
   test("passes when a table is created", async function () {
     const prefix = "test";
     const { meta } = await db.prepare(`CREATE TABLE ${prefix} (a int);`).run();
-    const tableName = meta.txn?.name ?? "";
+    await meta.txn?.wait();
+    const tableName = meta.txn?.names[0] ?? "";
     // We're using `chainId` 31337, and tables have the format `{prefix}_{chainId}_{tableId}`
     match(tableName, /test_31337_/);
   });

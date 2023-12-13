@@ -11,11 +11,11 @@ keywords:
 
 After you've [logged in & created an account](/studio/web/getting-started) in the Studio web app, you can use that account with the Studio CLI. There are three **required** flags to pass to the `login` command:
 
-| Option        | Type     | Default | Description                                                |
-| ------------- | -------- | ------- | ---------------------------------------------------------- |
-| --privateKey  | `string` | --      | Custom table prefix.                                       |
-| --chain       | `string` | --      | Path to a local file with a SQL create table statement.    |
-| --providerUrl | `string` | --      | Attach a table to an ENS namespace (experimental feature). |
+| Option          | Type     | Default | Description                                  |
+| --------------- | -------- | ------- | -------------------------------------------- |
+| `--chain`       | `string` | --      | The chain name to write data to.             |
+| `--providerUrl` | `string` | --      | The provider RPC URL for the chain.          |
+| `--privateKey`  | `string` | --      | The account's private key that's logging in. |
 
 ## Example
 

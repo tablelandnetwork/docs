@@ -29,8 +29,8 @@ Thus, you can imagine how high volume applications can take advantage of both th
 
 - Average block time: 2 seconds
 - Block depth: 0
-- Average SQL materialization time: <5 seconds
-- Chain ID: <ChainInfo chain='arbitrum-sepolia' info='chainId' />
+- Average SQL materialization time: {'<'}5 seconds
+- Chain ID: {'<'}ChainInfo chain='arbitrum-sepolia' info='chainId' />
 - Symbol: ETH
 - Status Dashboard:
   - N/A
@@ -51,7 +51,7 @@ Thus, you can imagine how high volume applications can take advantage of both th
 
 - Average block time: 2 seconds
 - Block depth: 0
-- Average SQL materialization time: <5 seconds
+- Average SQL materialization time: {'<'}5 seconds
 - Chain ID: <ChainInfo chain='arbitrum' info='chainId' />
 - Symbol: ETH
 - Status Dashboard:
@@ -70,7 +70,7 @@ Thus, you can imagine how high volume applications can take advantage of both th
 
 - Average block time: 2 seconds
 - Block depth: 0
-- Average SQL materialization time: <5 seconds
+- Average SQL materialization time: {'<'}5 seconds
 - Chain ID: <ChainInfo chain='arbitrum-nova' info='chainId' />
 - Symbol: ETH
 - Status Dashboard:

@@ -1,4 +1,6 @@
-const lightCodeTheme = {
+import { type PrismTheme } from "prism-react-renderer";
+
+const lightCodeTheme: PrismTheme = {
   plain: {
     color: "#393A34",
     backgroundColor: "#f6f8fa",
@@ -73,7 +75,7 @@ const lightCodeTheme = {
   ],
 };
 
-const darkCodeTheme = {
+const darkCodeTheme: PrismTheme = {
   plain: {
     color: "#F8F8F2",
     backgroundColor: "#484848",
@@ -137,4 +139,4 @@ const darkCodeTheme = {
   ],
 };
 
-module.exports = { lightCodeTheme, darkCodeTheme };
+export { lightCodeTheme, darkCodeTheme };

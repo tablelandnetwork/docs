@@ -110,10 +110,10 @@ const prefix = "my_table";
 const { meta: create } = await db
   .prepare(`CREATE TABLE ${prefix} (id integer primary key, val text);`)
   .run();
+await create.txn?.wait();
 
 // The table's `name` is in the format `{prefix}_{chainId}_{tableId}`
-const tableName = create.txn?.name ?? ""; // e.g., my_table_31337_2
-await create.txn?.wait();
+const tableName = create.txn?.names[0] ?? ""; // e.g., my_table_31337_2
 ```
 
 </TabItem>
@@ -133,10 +133,10 @@ const prefix: string = "my_table";
 const { meta: create } = await db
   .prepare(`CREATE TABLE ${prefix} (id integer primary key, val text);`)
   .run();
+await create.txn?.wait();
 
 // The table's `name` is in the format `{prefix}_{chainId}_{tableId}`
-const tableName = create.txn?.name ?? ""; // e.g., my_table_31337_2
-await create.txn?.wait();
+const tableName = create.txn?.names[0] ?? ""; // e.g., my_table_31337_2
 ```
 
 </TabItem>
@@ -239,10 +239,10 @@ const prefix = "my_table";
 const { meta: create } = await db
   .prepare(`CREATE TABLE ${prefix} (id integer primary key, val text);`)
   .run();
+await create.txn?.wait();
 
 // The table's `name` is in the format `{prefix}_{chainId}_{tableId}`
-const tableName = create.txn?.name ?? ""; // e.g., my_table_31337_2
-await create.txn?.wait();
+const tableName = create.txn?.names[0] ?? ""; // e.g., my_table_31337_2
 console.log(tableName);
 const { meta: insert } = await db
   .prepare(`INSERT INTO ${tableName} (id, val) VALUES (?, ?);`)
@@ -283,10 +283,10 @@ const prefix = "my_table";
 const { meta: create } = await db
   .prepare(`CREATE TABLE ${prefix} (id integer primary key, val text);`)
   .run();
+await create.txn?.wait();
 
 // The table's `name` is in the format `{prefix}_{chainId}_{tableId}`
-const tableName = create.txn?.name ?? ""; // e.g., my_table_31337_2
-await create.txn?.wait();
+const tableName = create.txn?.names[0] ?? ""; // e.g., my_table_31337_2
 console.log(tableName);
 const { meta: insert } = await db
   .prepare(`INSERT INTO ${tableName} (id, val) VALUES (?, ?);`)

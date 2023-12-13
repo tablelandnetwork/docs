@@ -8,7 +8,7 @@ custom_edit_url: null
 
 ## Hierarchy
 
-- `Camelize`<`AssertedResponse`\>
+- `Camelize`\<`AssertedResponse`\>
 
   ↳ **`Table`**
 
@@ -26,7 +26,7 @@ ___
 
 ### attributes
 
-• `Optional` **attributes**: `Camelize`<`Record`<`string`, `any`\>\>[]
+• `Optional` **attributes**: `Camelize`\<`Record`\<`string`, `any`\>\>[]
 
 #### Overrides
 

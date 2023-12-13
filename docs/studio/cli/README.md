@@ -10,7 +10,8 @@ keywords:
 The `@tableland/studio-cli` package is a developer tool to help you interact with projects created in the [Studio web app](/studio/web/getting-started). You can:
 
 - Login with the account you signed up for in the Studio.
-- List team and project information.
+- List team and project information, and create new projects.
+- List project deployment information, and deploy table blueprints you've staged.
 - Create new teams, add members, and create new projects.
 - Import existing tables into projects.
 - Import data (CSV files) from your machine and write the data to project tables.
@@ -20,7 +21,7 @@ The `@tableland/studio-cli` package is a developer tool to help you interact wit
 
 ### Install
 
-You can install the CLI tool globally via `npm` or `yarn`.
+You can install the CLI tool globally:
 
 ```bash npm2yarn
 npm install -g @tableland/studio-cli
@@ -46,6 +47,21 @@ studio <command> <arguments> [flags]
 
 You can see all of these commands available by either running the `help` command or passing the help flag `-h, --help`.
 
+### Deployment
+
+`studio deployment <subcommand>`: View your project deployments and deploy blueprints you've staged.
+
+- `ls [project_id]`: List the deployments for the given project ID, or if no id is given, use the default context.
+- `create <name> `: Create a new table deployment with the given name, description, chain, and provider URL, also requiring the `--projectId` flag is passed. Note: the `--chain`, `--providerUrl`, and `--privateKey` should be included since you are writing data to the chain.
+
+### Import data
+
+`studio import-data <table> <file>`: Import data from a CSV file into a table in a project. Note the `name` is the name of the table in the Studio, and `--chain`, `--providerUrl`, and `--privateKey` should also be included.
+
+### Import table
+
+`studio import-table <table> <project> <description> [name]`: Import an existing Tableland table into a project with description and (optionally) with a new name/alias, defined only in the Studio.
+
 ### Login
 
 `studio login`: Login to the Studio with your account, which creates a login session via a private key. Note: this will create a session file (`.studioclisession.json`) in your directory that will store session information.
@@ -65,6 +81,7 @@ You can see all of these commands available by either running the `help` command
 `studio project <subcommand>`: Manage your studio projects.
 
 - `ls [team_id]`: List the projects for the given ID, or if no id is given, use the default context.
+- `create <name> <description>`: Creates a new project with the given name and description, also requiring the `--teamId` flag is passed.
 
 ### Use
 
@@ -73,10 +90,6 @@ You can see all of these commands available by either running the `help` command
 ### Unuse
 
 `studio unuse [context]`: Remove a context set with `use`, where a context is one of: `team`, `project`, or `api`.
-
-### Import table
-
-`studio import-table <table> <project> <description> [name]`: Import an existing Tableland table into a project with description and (optionally) with a new name/alias, defined only in the Studio.
 
 ## Global flags
 

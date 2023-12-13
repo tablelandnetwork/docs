@@ -311,7 +311,7 @@ TransactionResponse.value
 
 ### wait
 
-▸ **wait**(`confirmations?`): `Promise`<[`ContractReceipt`](helpers.ContractReceipt.md)\>
+▸ **wait**(`confirmations?`): `Promise`\<[`ContractReceipt`](helpers.ContractReceipt.md)\>
 
 #### Parameters
 
@@ -321,7 +321,7 @@ TransactionResponse.value
 
 #### Returns
 
-`Promise`<[`ContractReceipt`](helpers.ContractReceipt.md)\>
+`Promise`\<[`ContractReceipt`](helpers.ContractReceipt.md)\>
 
 #### Overrides
 
