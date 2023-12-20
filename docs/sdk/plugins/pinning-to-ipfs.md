@@ -18,7 +18,7 @@ JETI comes packed with `pinToLocal` and `pinToProvider` methods that let you ins
 JETI requires you to have an IPFS node running locally on port 5001, and to have a remote pinning service configured. This is because the point of JETI is to pin your IPFS files when they go to Tableland. It can be tricky.
 
 More on remote pinning services can be found [here](https://docs.ipfs.tech/how-to/work-with-pinning-services/#use-an-existing-pinning-service).
-:::note
+:::
 
 ## Installation & setup
 
