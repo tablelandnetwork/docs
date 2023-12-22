@@ -32,53 +32,82 @@ In other words, if a custom `TablelandController` contract has not been set, the
 
 ### "Allow none" policy
 
-Similar to the example above, you could choose to disable everything by setting `false` or empty values:
+Similar to the example above, you could choose to disable everything by setting `false` or empty values. This would essentially lock the table from being mutated.
 
 ```solidity
-ITablelandController.Policy({
+TablelandPolicy({
   allowInsert: false,
   allowUpdate: false,
   allowDelete: false,
-  whereClause: Policies.joinClauses(new string[](0)),
-  withCheck: Policies.joinClauses(new string[](0)),
+  whereClause: "",
+  withCheck: "",
   updatableColumns: new string[](0)
 });
 ```
 
+### Allow update for columns
+
+You can easily create a policy that allows `UPDATE`s on a table, but only for certain columns and with restriction. For example, the following policy allows `UPDATE`s for:
+
+- Only the `baz` column can be updated.
+- Only for rows that pass the `WHERE` clause to check the value of `foo > 0` and `bar = 10`.
+- Also makes a check on the `baz` data being updated, ensuring it is less than 100.
+
+Note that if there are multiple `WHERE` or `WITH CHECK` clauses, the `Policies` (`@tableland/evm/contracts/policies/Policies.sol`) library's `joinClauses` should be used to concatenate them.
+
+```solidity
+// Updatable columns
+string[] updatableCols = new string[](1);
+updatableCols[0] = "baz";
+
+// WHERE clause
+string[] whereClause = new string[](2);
+whereClause[0] = "foo > 0";
+whereClause[1] = "bar = 10";
+
+// WITH CHECK clause
+string[] withClause = new string[](1);
+withClause[0] = "baz < 100";
+
+TablelandPolicy({
+  allowInsert: true,
+  allowUpdate: false,
+  allowDelete: false,
+  whereClause: Policies.joinClauses(whereClause),
+  withCheck: withClause,
+  updatableColumns: updatableCols
+});
+```
+
+For example, the example above will define `"WHERE foo > 0 AND bar = 10"`.
+
 ### Example implementation
 
-The following example shows how to import the `ITablelandController` interface and then create a policy that only allows `INSERT`s on a table, from any address.
+The following example shows how to import the `TablelandController` interface and then create a policy that only allows `INSERT`s on a table, from any address.
 
 ```solidity
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.12;
 
-import "@tableland/evm/contracts/ITablelandController.sol";
-import "@tableland/evm/contracts/policies/Policies.sol";
+import {TablelandController} from "@tableland/evm/contracts/TablelandController.sol";
+import {TablelandPolicy} from "@tableland/evm/contracts/TablelandPolicy.sol";
 
-contract ExamplePolicy is ITablelandController {
-  function getPolicy(address sender)
-      public
-      payable
-      override
-      returns (ITablelandController.Policy memory)
-  {
-
-    /*
-    * Add any custom ACL check here, like token ownership.
-    */
-
-    // Return allow-insert policy
-    return
-      ITablelandController.Policy({
-        allowInsert: true,
-        allowUpdate: false,
-        allowDelete: false,
-        whereClause: Policies.joinClauses(new string[](0)),
-        withCheck: Policies.joinClauses(new string[](0)),
-        updatableColumns: new string[](0)
-      });
-  }
+contract ExamplePolicy is TablelandController {
+    function getPolicy(
+        address,
+        uint256
+    ) public payable override returns (TablelandPolicy memory) {
+        // Return allow-insert policy
+        return
+            TablelandPolicy({
+                allowInsert: true,
+                allowUpdate: false,
+                allowDelete: false,
+                whereClause: "",
+                withCheck: "",
+                updatableColumns: new string[](0)
+            });
+    }
 }
 ```
 
