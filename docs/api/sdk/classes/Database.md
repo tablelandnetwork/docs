@@ -6,7 +6,7 @@ sidebar_position: 0
 custom_edit_url: null
 ---
 
-Database is the primary API for accessing the Tabeland network as a database.
+Database is the primary API for accessing the Tableland network as a database.
 This class provides a small and simple API that will feel very familiar to
 web2 database users. It includes the concept of prepared statements, SQL
 parameter binding, execution and query modes, and more. It is actually similar
@@ -44,7 +44,7 @@ Create a Database instance with the specified connection configuration.
 
 #### Defined in
 
-@tableland/sdk/src/database.ts:41
+@tableland/sdk/src/database.ts:39
 
 ## Properties
 
@@ -54,7 +54,7 @@ Create a Database instance with the specified connection configuration.
 
 #### Defined in
 
-@tableland/sdk/src/database.ts:32
+@tableland/sdk/src/database.ts:30
 
 ## Methods
 
@@ -92,7 +92,7 @@ An array of run results.
 
 #### Defined in
 
-@tableland/sdk/src/database.ts:98
+@tableland/sdk/src/database.ts:82
 
 ___
 
@@ -115,7 +115,7 @@ Not implemented yet!
 
 #### Defined in
 
-@tableland/sdk/src/database.ts:223
+@tableland/sdk/src/database.ts:207
 
 ___
 
@@ -156,7 +156,7 @@ A single run result.
 
 #### Defined in
 
-@tableland/sdk/src/database.ts:199
+@tableland/sdk/src/database.ts:183
 
 ___
 
@@ -189,7 +189,7 @@ A Statement object constructed with the given SQL string.
 
 #### Defined in
 
-@tableland/sdk/src/database.ts:77
+@tableland/sdk/src/database.ts:61
 
 ___
 
@@ -213,32 +213,4 @@ A Database with a Signer, and a default baseUrl.
 
 #### Defined in
 
-@tableland/sdk/src/database.ts:64
-
-___
-
-### readOnly
-
-▸ **readOnly**(`chainNameOrId`): [`Database`](Database.md)\<`unknown`\>
-
-Create a Database that uses the default baseUrl for a given chain.
-
-#### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `chainNameOrId` | `number` \| keyof `TablelandNetworkConfig` | The name or id of the chain to target. |
-
-#### Returns
-
-[`Database`](Database.md)\<`unknown`\>
-
-A Database without a signer configured.
-
-**`Deprecated`**
-
-since 4.0.1, will be deleted in 5.0.0
-
-#### Defined in
-
-@tableland/sdk/src/database.ts:51
+@tableland/sdk/src/database.ts:48

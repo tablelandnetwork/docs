@@ -22,7 +22,7 @@
     "@docusaurus/theme-mermaid": "^3.0.1",
     "@docusaurus/theme-search-algolia": "^3.0.1",
     "@mdx-js/react": "^3.0.0",
-    "@tableland/sdk": "^5.1.1",
+    "@tableland/sdk": "^5.2.0",
     "@vercel/analytics": "^1.0.0",
     "buffer": "^6.0.3",
     "clsx": "^2.0.0",

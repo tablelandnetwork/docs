@@ -231,11 +231,11 @@ ${content}`,
         },
       },
       // Announcement bar is upon visiting the site and removed if the user closes it out (tracked in local storage)
-      announcementBar: {
-        id: "announcementBar-0", // Increment on change
-        content: `Give Tableland a ⭐️ on <a target="_blank" rel="noopener noreferrer" href="https://github.com/tablelandnetwork">GitHub</a> and follow us on <a target="_blank" rel="noopener noreferrer" href="https://twitter.com/tableland" >Twitter</a>`,
-        isCloseable: true,
-      },
+      // announcementBar: {
+      //   id: "announcementBar-0", // Increment on change
+      //   content: `Give Tableland a ⭐️ on <a target="_blank" rel="noopener noreferrer" href="https://github.com/tablelandnetwork">GitHub</a> and follow us on <a target="_blank" rel="noopener noreferrer" href="https://twitter.com/tableland" >Twitter</a>`,
+      //   isCloseable: true,
+      // },
       liveCodeBlock: {
         /**
          * The position of the live playground, above or under the editor

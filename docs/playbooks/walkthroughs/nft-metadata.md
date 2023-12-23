@@ -8,7 +8,7 @@ keywords:
   - json metadata
 ---
 
-Tableland offers a dynamic and flexible way to store [NFT metadata](/fundamentals/concepts/nft-metadata). You can use Tableland for structuring the top-level metadata and nested attributes in tables and compose them together using a read query. In order to craft the data into ERC721 compliant metadata, developers can store NFT attributes (traits like integers or strings) and _pointers_ large media on IPFS (or similar) in table cells—with access controls to allow for data mutability.
+Tableland offers a dynamic and flexible way to store [NFT metadata](/quickstarts/concepts/nft-metadata). You can use Tableland for structuring the top-level metadata and nested attributes in tables and compose them together using a read query. In order to craft the data into ERC721 compliant metadata, developers can store NFT attributes (traits like integers or strings) and _pointers_ large media on IPFS (or similar) in table cells—with access controls to allow for data mutability.
 
 ## Table data
 

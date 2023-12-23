@@ -46,7 +46,7 @@ export default function Home(): JSX.Element {
               <p></p>
               <p>
                 Deploy across{" "}
-                <Link to="/fundamentals/chains">multiple blockchains</Link>,
+                <Link to="/quickstarts/chains">multiple blockchains</Link>,
                 including Ethereum, Polygon, Arbitrum, and Optimism, and be a
                 part of the growing number of projects using Tableland for
                 data-driven applications.
