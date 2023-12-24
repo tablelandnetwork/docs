@@ -23,13 +23,13 @@ const items: NavbarItem[] = [
     items: [
       {
         type: "docSidebar",
-        sidebarId: "quickstarts",
-        label: "Quickstarts",
+        sidebarId: "fundamentals",
+        label: "Fundamentals",
       },
       {
         type: "docSidebar",
-        sidebarId: "fundamentals",
-        label: "Fundamentals",
+        sidebarId: "quickstarts",
+        label: "Quickstarts",
       },
     ],
   },
@@ -80,13 +80,13 @@ const items: NavbarItem[] = [
     items: [
       {
         type: "docSidebar",
-        sidebarId: "sql",
-        label: "SQL",
+        sidebarId: "playbooks",
+        label: "Playbooks",
       },
       {
         type: "docSidebar",
-        sidebarId: "playbooks",
-        label: "Playbooks",
+        sidebarId: "sql",
+        label: "SQL",
       },
       {
         type: "docSidebar",

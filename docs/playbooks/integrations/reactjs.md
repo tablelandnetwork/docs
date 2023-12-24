@@ -3,9 +3,8 @@ title: Use Tableland with React
 sidebar_label: React
 description: Quickly set up a React application with Tableland via an account and database connection.
 keywords:
-  - quickstart
-  - quickstarts
   - react
+  - reactjs
 ---
 
 import Tabs from "@theme/Tabs";

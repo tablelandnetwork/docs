@@ -3,8 +3,6 @@ title: Use Tableland with Next.js
 sidebar_label: Next.js
 description: Quickly set up a Next.js application with Tableland via an account and database connection.
 keywords:
-  - quickstart
-  - quickstarts
   - nextjs
   - next.js
 ---

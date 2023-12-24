@@ -64,22 +64,7 @@ const introduction = [
       "fundamentals/why-sqlite",
     ],
   },
-  {
-    type: "category",
-    label: "Supported chains",
-    link: {
-      type: "doc",
-      id: "fundamentals/chains/README",
-    },
-    items: [
-      "fundamentals/chains/ethereum",
-      "fundamentals/chains/filecoin",
-      "fundamentals/chains/arbitrum",
-      "fundamentals/chains/optimism",
-      "fundamentals/chains/polygon",
-      "fundamentals/chains/local",
-    ],
-  },
+  "fundamentals/supported-chains",
 ];
 
 // Architecture
@@ -109,7 +94,6 @@ const about = [
   "fundamentals/about/glossary",
   "fundamentals/about/open-beta",
   "fundamentals/about/roadmap",
-  "fundamentals/about/repos",
 ];
 
 // Fundamentals wrapper, with some intro content
@@ -131,16 +115,22 @@ const quickstarts = [
   "quickstarts/smart-contract-quickstart",
   "quickstarts/cli-quickstart",
   "quickstarts/api-quickstart",
-  ...section("Frameworks"),
+  ...section("Reference"),
+  {
+    type: "category",
+    label: "Chain info & usage",
+    items: [
+      "quickstarts/chains/ethereum",
+      "quickstarts/chains/filecoin",
+      "quickstarts/chains/arbitrum",
+      "quickstarts/chains/optimism",
+      "quickstarts/chains/polygon",
+      "quickstarts/chains/local",
+    ],
+  },
   "quickstarts/templates",
-  "quickstarts/hardhat",
-  "quickstarts/reactjs",
-  "quickstarts/nextjs",
-  "quickstarts/wagmi",
-  ...section("Concepts"),
-  "quickstarts/concepts/access-control",
-  "quickstarts/concepts/nft-metadata",
-  "quickstarts/concepts/how-to-build-an-nft",
+  "quickstarts/repos",
+  "quickstarts/faqs",
 ];
 
 /* DEVELOP */
@@ -324,6 +314,46 @@ const localTableland = [
 
 /* GUIDES */
 
+// Playbooks
+const playbooks = [
+  ...sidepageHeader("Playbooks"),
+  "playbooks/README",
+  ...section("Concepts"),
+  "playbooks/concepts/access-control",
+  {
+    type: "category",
+    label: "SQL blueprints",
+    items: [
+      "playbooks/blueprints/nft-metadata",
+      "playbooks/blueprints/key-value",
+    ],
+  },
+  {
+    type: "category",
+    label: "NFTs",
+    items: [
+      "playbooks/concepts/nft-metadata",
+      "playbooks/concepts/how-to-build-an-nft",
+    ],
+  },
+  ...section("Integrations"),
+  {
+    type: "category",
+    label: "Web & contract frameworks",
+    items: [
+      "playbooks/integrations/hardhat",
+      "playbooks/integrations/reactjs",
+      "playbooks/integrations/react-native",
+      "playbooks/integrations/nextjs",
+      "playbooks/integrations/wagmi",
+    ],
+  },
+  "playbooks/integrations/chain-deployment",
+  "playbooks/integrations/ipfs",
+  ...section("Platforms"),
+  "playbooks/platforms/spheron",
+];
+
 // SQL
 const sql = [
   ...sidepageHeader("SQL"),
@@ -338,16 +368,10 @@ const sql = [
   "sql/functions",
   "sql/incrementing-values",
   "sql/alter-table",
-  ...section("Walkthroughs"),
-  "sql/walkthroughs/nft-metadata",
-  "sql/walkthroughs/key-value",
   ...section("Reference"),
   "sql/specification",
-  "sql/walkthroughs/sql-faqs",
+  "sql/faqs",
 ];
-
-// Playbooks
-const playbooks = [...sidepageHeader("Playbooks"), "playbooks/README"];
 
 // Tutorials
 const tutorials = [
@@ -451,14 +475,14 @@ const sidebars: SidebarsConfig = {
     ...section("Guides", "landing"),
     {
       type: "doc",
-      id: "sql/README",
-      label: "SQL",
+      id: "playbooks/README",
+      label: "Playbooks",
       className: "sidebar-landing",
     },
     {
       type: "doc",
-      id: "playbooks/README",
-      label: "Playbooks",
+      id: "sql/README",
+      label: "SQL",
       className: "sidebar-landing",
     },
     {
@@ -505,8 +529,8 @@ const sidebars: SidebarsConfig = {
   localTableland,
   apiSdk,
   // Guides
-  sql,
   playbooks,
+  sql,
   tutorials,
   // Infra & protocol
   validator,

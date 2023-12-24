@@ -23,7 +23,7 @@ Review the [cost estimation](/fundamentals/architecture/cost-estimator) table th
 
 ## Chain information
 
-If would like to dive straight into chain-specific overviews, with decision considerations and other chain information (chain ID, contracts, block explorers, faucets, etc.), head to one of the pages below.
+If would like to dive straight into chain-specific overviews, with decision considerations and other chain information (chain ID, contracts, block explorers, faucets, etc.), head to one of the pages below. The full list of chain-specific details can be found in the [chain info pages](/quickstarts/chains).
 
 Here's a summary of how the chains works in terms of speed:
 
@@ -35,8 +35,6 @@ Here's a summary of how the chains works in terms of speed:
 | Arbitrum Nova | 2-3 seconds                  | 0           | {'<'}5 seconds            |
 | Polygon       | 2 seconds                    | 1           | {'<'}10 seconds           |
 | Filecoin      | 30 seconds                   | 5           | ~4 mins.                  |
-
-<DocCardList />
 
 ## Layer 1 vs. Layer 2
 

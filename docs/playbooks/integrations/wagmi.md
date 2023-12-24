@@ -3,8 +3,8 @@ title: Use Tableland with wagmi
 sidebar_label: wagmi
 description: Quickly add and use wagmi with Tableland and React.
 keywords:
-  - quickstart
-  - quickstarts
+  - wagmi
+  - viem
   - react
 ---
 

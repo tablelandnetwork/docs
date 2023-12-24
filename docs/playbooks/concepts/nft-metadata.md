@@ -1,5 +1,5 @@
 ---
-title: NFT metadata
+title: NFT metadata standards
 description: Understand the basics of storing and querying ERC721 metadata in table.
 keywords:
   - nfts
