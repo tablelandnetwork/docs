@@ -1,32 +1,40 @@
-import React, {useState, useCallback} from 'react';
-import clsx from 'clsx';
-import {ThemeClassNames} from '@docusaurus/theme-common';
-import {useDocsSidebar} from '@docusaurus/theme-common/internal';
-import {useLocation} from '@docusaurus/router';
-import DocSidebar from '@theme/DocSidebar';
-import ExpandButton from '@theme/DocPage/Layout/Sidebar/ExpandButton';
-import styles from './styles.module.css';
+import React, { useState, useCallback } from "react";
+import clsx from "clsx";
+import {
+  prefersReducedMotion,
+  ThemeClassNames,
+} from "@docusaurus/theme-common";
+import { useDocsSidebar } from "@docusaurus/theme-common/internal";
+import { useLocation } from "@docusaurus/router";
+import DocSidebar from "@theme/DocSidebar";
+import ExpandButton from "@theme/DocRoot/Layout/Sidebar/ExpandButton";
+import styles from "./styles.module.css";
 // Reset sidebar state when sidebar changes
 // Use React key to unmount/remount the children
 // See https://github.com/facebook/docusaurus/issues/3414
-function ResetOnSidebarChange({children}) {
+function ResetOnSidebarChange({ children }) {
   const sidebar = useDocsSidebar();
   return (
-    <React.Fragment key={sidebar?.name ?? 'noSidebar'}>
+    <React.Fragment key={sidebar?.name ?? "noSidebar"}>
       {children}
     </React.Fragment>
   );
 }
-export default function DocPageLayoutSidebar({
+export default function DocRootLayoutSidebar({
   sidebar,
   hiddenSidebarContainer,
   setHiddenSidebarContainer,
 }) {
-  const {pathname} = useLocation();
+  const { pathname } = useLocation();
   const [hiddenSidebar, setHiddenSidebar] = useState(false);
   const toggleSidebar = useCallback(() => {
     if (hiddenSidebar) {
       setHiddenSidebar(false);
+    }
+    // onTransitionEnd won't fire when sidebar animation is disabled
+    // fixes https://github.com/facebook/docusaurus/issues/8918
+    if (!hiddenSidebar && prefersReducedMotion()) {
+      setHiddenSidebar(true);
     }
     setHiddenSidebarContainer((value) => !value);
   }, [setHiddenSidebarContainer, hiddenSidebar]);
@@ -35,7 +43,7 @@ export default function DocPageLayoutSidebar({
       className={clsx(
         ThemeClassNames.docs.docSidebarContainer,
         styles.docSidebarContainer,
-        hiddenSidebarContainer && styles.docSidebarContainerHidden,
+        hiddenSidebarContainer && styles.docSidebarContainerHidden
       )}
       onTransitionEnd={(e) => {
         if (!e.currentTarget.classList.contains(styles.docSidebarContainer)) {
@@ -44,13 +52,15 @@ export default function DocPageLayoutSidebar({
         if (hiddenSidebarContainer) {
           setHiddenSidebar(true);
         }
-      }}>
+      }}
+    >
       <ResetOnSidebarChange>
         <div
           className={clsx(
             styles.sidebarViewport,
-            hiddenSidebar && styles.sidebarViewportHidden,
-          )}>
+            hiddenSidebar && styles.sidebarViewportHidden
+          )}
+        >
           <DocSidebar
             sidebar={sidebar}
             path={pathname}

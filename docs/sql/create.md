@@ -18,7 +18,7 @@ CREATE TABLE table_name(
 The general flow is to start with the `CREATE TABLE` keywords, pass the (optional) table "prefix," and define columns plus constraints. You don't _have to_ use a table prefix nor any constraints, but you'll often want to.
 
 :::tip
-Review the [supported data types](/playbooks/sql/#data-types), which includes `INT`,`INTEGER`, `TEXT`, and `BLOB`.
+Review the [supported data types](/sql#data-types), which includes `INT`,`INTEGER`, `TEXT`, and `BLOB`.
 :::
 
 ## Column definitions
@@ -76,7 +76,7 @@ CREATE TABLE my_table(
 ```
 
 :::note
-If you use the `INTEGER` type along with `PRIMARY KEY`, you unlock a special feature for auto-incrementing a row's data automatically. Check out the docs on [auto-incrementing values](/playbooks/sql/incrementing-values) for more specifics.
+If you use the `INTEGER` type along with `PRIMARY KEY`, you unlock a special feature for auto-incrementing a row's data automatically. Check out the docs on [auto-incrementing values](/sql/incrementing-values) for more specifics.
 :::
 
 ## Altering an existing table
@@ -103,4 +103,4 @@ ALTER TABLE my_table DROP COLUMN val;
 
 Up to now, only the table owner can execute `ALTER TABLE` statements. If you want your table to have an immutable structure, you'd have to transfer it to a burner address.
 
-For more details, check the `ALTER TABLE` [specification](/specs/sql/#alter-table).
+For more details, check the `ALTER TABLE` [specification](/sql/specification#alter-table).

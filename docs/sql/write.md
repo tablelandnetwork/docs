@@ -74,7 +74,7 @@ VALUES
 
 **Subqueries have limited support** and are only possible in `INSERT`s but with limitations due to determinism considerations.
 
-Generally, flattened subqueries are fully supported in insert statements; [compound select statements](/playbooks/sql/composing-data) are **not supported** for inserts. In other words, you _can_ make sub-selects with a flat `SELECT` statement or one with `GROUP BY` and `HAVING` clauses; however, you _cannot_ use `UNION`, `JOIN`, or further subqueries. Also, there is an an implicit `ORDER BY rowid` clause forced on the [`SELECT` statement](/playbooks/sql/read).
+Generally, flattened subqueries are fully supported in insert statements; [compound select statements](/sql/composing-data) are **not supported** for inserts. In other words, you _can_ make sub-selects with a flat `SELECT` statement or one with `GROUP BY` and `HAVING` clauses; however, you _cannot_ use `UNION`, `JOIN`, or further subqueries. Also, there is an an implicit `ORDER BY rowid` clause forced on the [`SELECT` statement](/sql/read).
 
 A valid example of a flattened query is the following—let's assume the schema and types are the same for each table to help simplify things:
 
@@ -112,7 +112,7 @@ WHERE
   id = 1;
 ```
 
-You'll notice a `WHERE` clause was attached to the query to help identify which row to update. See the [read query](/playbooks/sql/read) documentation for more details on clauses.
+You'll notice a `WHERE` clause was attached to the query to help identify which row to update. See the [read query](/sql/read) documentation for more details on clauses.
 
 ## Upserts
 

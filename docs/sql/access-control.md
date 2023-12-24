@@ -83,7 +83,7 @@ FROM
 ```
 
 :::tip
-For more information on `GRANT` and `REVOKE`, see the [SQL specification](/specs/sql/).
+For more information on `GRANT` and `REVOKE`, see the [SQL specification](/sql/specification/).
 :::
 
 ## Precedence

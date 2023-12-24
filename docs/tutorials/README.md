@@ -1,12 +1,19 @@
 ---
 title: Overview
-description: Tutorials and example apps to help kickstart your development process.
+description: Tutorials, workshops, & example apps to help kickstart your development process.
 keywords:
   - tutorials
+  - workshops
   - example apps
 ---
 
-There are a number of written tutorials and [workshops](https://www.youtube.com/playlist?list=PLAc0xDyQDZbqTNM3lejUkVdiTprS2Gjob) that walk through how to build on Tableland. An endless number of use cases exist for using a serverless and permissionless relational database, but a few common areas include the following:
+There are a number of written tutorials and [workshops](https://www.youtube.com/playlist?list=PLAc0xDyQDZbqTNM3lejUkVdiTprS2Gjob) that walk through how to build on Tableland. These are more in-depth than the [quickstarts](/quickstarts) and [playbooks](/playbooks) as they are meant to be used as an end-to-end reference for building your own applications.
+
+## Introductory
+
+Learn the basics of Tableland and how to get started with the Tableland development stack:
+
+- [Getting started with the Studio](/tutorials/getting-started-studio): Walk through the basics of the Studio web app and Studio CLI.
 
 ## NFTs & gaming
 

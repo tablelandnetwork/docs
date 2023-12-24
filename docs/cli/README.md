@@ -35,7 +35,7 @@ Generally, **every command _should_ have these values** specified, except for th
 
 ## Usage patterns
 
-Most of the common Tableland usage patterns are possible via the command line. In general, you'll need to connect (to a host/provider), create a table (with a schema, using `create`), insert/mutate values (`write`), and query (`read`) a table. Developers can even retrieve all tables owned by a specific EVM address (using `list`). And for a full list of valid SQL statements used throughout these different commands, check out the [SQL Specification’s statement types](/specs/sql#statement-types).
+Most of the common Tableland usage patterns are possible via the command line. In general, you'll need to connect (to a host/provider), create a table (with a schema, using `create`), insert/mutate values (`write`), and query (`read`) a table. Developers can even retrieve all tables owned by a specific EVM address (using `list`). And for a full list of valid SQL statements used throughout these different commands, check out the [SQL Specification’s statement types](/sql/specification#statement-types).
 
 There also exists some useful commands for onchain information. View Tableland’s live chain deployments & smart contract addresses (`chains`) or retrieve onchain data from a `create` or `write` query (passing the transaction hash to `receipt`). Lastly, the corresponding token metadata about a table can also be requested (i.e., tables are onchain as ERC721s — the minted table’s name can be passed to `info`).
 

@@ -31,11 +31,6 @@ const items: NavbarItem[] = [
         sidebarId: "fundamentals",
         label: "Fundamentals",
       },
-      {
-        type: "docSidebar",
-        sidebarId: "playbooks",
-        label: "SQL playbooks",
-      },
     ],
   },
   {
@@ -74,24 +69,29 @@ const items: NavbarItem[] = [
       },
       {
         type: "docSidebar",
-        sidebarId: "tutorials",
-        label: "Tutorials",
+        sidebarId: "validator",
+        label: "Validator node",
       },
     ],
   },
   {
-    label: "Protocol",
+    label: "Guides",
     position: "right",
     items: [
       {
         type: "docSidebar",
-        sidebarId: "validator",
-        label: "Validator node",
+        sidebarId: "sql",
+        label: "SQL",
       },
       {
         type: "docSidebar",
-        sidebarId: "sqlSpecification",
-        label: "SQL specification",
+        sidebarId: "playbooks",
+        label: "Playbooks",
+      },
+      {
+        type: "docSidebar",
+        sidebarId: "tutorials",
+        label: "Tutorials",
       },
     ],
   },

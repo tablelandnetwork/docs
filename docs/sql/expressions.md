@@ -14,7 +14,7 @@ keywords:
   - cast
 ---
 
-[Operators](https://www.sqlite.org/lang_expr.html#operators_and_parse_affecting_attributes) provide ways to compute on or transform data; [expressions](https://www.sqlite.org/lang_expr.html) allow for more complex logic in your queries. You can do things like conditional logic with `CASE` statements, type casting, and more. We'll walk through some of the more common use cases here, but refer to the [SQL functions docs](/playbooks/sql/functions) to understand what else is possible. For most of these examples, let's assume we own a `my_table` with a schema of `id int, val text`.
+[Operators](https://www.sqlite.org/lang_expr.html#operators_and_parse_affecting_attributes) provide ways to compute on or transform data; [expressions](https://www.sqlite.org/lang_expr.html) allow for more complex logic in your queries. You can do things like conditional logic with `CASE` statements, type casting, and more. We'll walk through some of the more common use cases here, but refer to the [SQL functions docs](/sql/functions) to understand what else is possible. For most of these examples, let's assume we own a `my_table` with a schema of `id int, val text`.
 
 | id  | val          |
 | --- | ------------ |

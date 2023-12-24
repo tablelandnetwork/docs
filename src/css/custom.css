@@ -348,6 +348,13 @@ html[data-theme="dark"] .header-github-link:before {
   -webkit-transform: rotate(45deg) translateY(-50%);
 }
 
+/* Make sure nav search bar does not overlap with logo */
+@media (max-width: 1040px) and (min-width: 997px) {
+  .DocSearch-Button {
+    width: 17rem !important;
+  }
+}
+
 /* Custom style for buttons */
 .button {
   font-weight: var(--ifm-font-weight-bold);
@@ -576,6 +583,13 @@ html[data-theme="dark"] .navbar__link--active,
 .navbar__external {
   display: flex;
   align-items: center;
+}
+
+/* Hide on collapse */
+@media (max-width: 996px) {
+  .navbar__external {
+    display: none;
+  }
 }
 
 .sidebar-footer a svg,

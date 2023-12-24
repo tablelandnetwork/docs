@@ -40,7 +40,7 @@ The table will automatically increment the `id`, resulting in the following:
 
 ### Clarifications
 
-The type `INT` _will not_ behave in the same way as a type `INTEGER` in this incrementing setup. An `INT` _will not_ be incremented and will throw an error upon running the insert statement defined above because it would violate the implicit `NOT NULL` constraint that comes with a `PRIMARY KEY`. Additionally, as noted in the [SQL spec](/specs/sql/), `AUTOINCREMENT` is a reserved keyword and should not be directly used.
+The type `INT` _will not_ behave in the same way as a type `INTEGER` in this incrementing setup. An `INT` _will not_ be incremented and will throw an error upon running the insert statement defined above because it would violate the implicit `NOT NULL` constraint that comes with a `PRIMARY KEY`. Additionally, as noted in the [SQL spec](/sql/specification/), `AUTOINCREMENT` is a reserved keyword and should not be directly used.
 
 :::tip
 The `AUTOINCREMENT` keyword as a _potential_ feature is being further explored. Thus, it is subject to change, pending future research.

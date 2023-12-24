@@ -27,7 +27,7 @@ Without specifying any additional parameters, all of the default `format`, `extr
 
 ### ERC721 compliance
 
-A query used to compose [ERC721](/fundamentals/about/glossary#erc721) compliant metadata should use `unwrap=true` and `extract=true` along with `format=objects`. Often, these types of queries make use of SQL functions like `json_object` to [compose the metadata](/playbooks/walkthroughs/nft-metadata) according to the standard through a query that only returns a single object.
+A query used to compose [ERC721](/fundamentals/about/glossary#erc721) compliant metadata should use `unwrap=true` and `extract=true` along with `format=objects`. Often, these types of queries make use of SQL functions like `json_object` to [compose the metadata](/sql/walkthroughs/nft-metadata) according to the standard through a query that only returns a single object.
 
 ## Parameters
 

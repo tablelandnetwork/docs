@@ -130,7 +130,7 @@ contract TablelandVoter is ITablelandController {
 
 ## NFT contract
 
-Below is a basic NFT contract, but if you're trying to create your own NFT using Tableland, check out the page on [how to build an NFT](/how-to-build-an-nft). It outlines additional resources like defining an [optimal SQL table structure](/playbooks/walkthroughs/nft-metadata) or [building a dynamic NFT in Solidity](/tutorials/dynamic-nft-solidity).
+Below is a basic NFT contract, but if you're trying to create your own NFT using Tableland, check out the page on [how to build an NFT](/how-to-build-an-nft). It outlines additional resources like defining an [optimal SQL table structure](/sql/walkthroughs/nft-metadata) or [building a dynamic NFT in Solidity](/tutorials/dynamic-nft-solidity).
 
 ```solidity
 // SPDX-License-Identifier: MIT

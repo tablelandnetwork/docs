@@ -20,7 +20,7 @@ keywords:
 Today, the primary standard for Non-Fungible Tokens (NFTs) is Ethereum's ERC-721 Non-Fungible Token Standard as well as the Ethereum ERC-1155 Multi Token Standard. Platforms such as OpenSea have adopted these NFT standards, along with modifications of their own, to support a wide range of NFT projects.
 
 :::tip
-To learn how to actually store and query NFT metadata in tables, check out the [crafting NFT metadata playbook](/playbooks/walkthroughs/nft-metadata).
+To learn how to actually store and query NFT metadata in tables, check out the [crafting NFT metadata playbook](/sql/walkthroughs/nft-metadata).
 :::
 
 ## NFT standards & metadata
@@ -162,4 +162,4 @@ Thus, when an NFT is rendered somewhere, the associated `value` would also chang
 
 ## Next steps
 
-Looking for more? Check out the page on [how to build an NFT](/how-to-build-an-nft), including additional resources for defining an [optimal SQL table structure](/playbooks/walkthroughs/nft-metadata) or [building a dynamic NFT in Solidity](/tutorials/dynamic-nft-solidity).
+Looking for more? Check out the page on [how to build an NFT](/how-to-build-an-nft), including additional resources for defining an [optimal SQL table structure](/sql/walkthroughs/nft-metadata) or [building a dynamic NFT in Solidity](/tutorials/dynamic-nft-solidity).

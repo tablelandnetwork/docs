@@ -53,7 +53,7 @@ You can create tables and write data to it within the same onchain transaction, 
 
 ### Query "lag"
 
-When a table is created or written to, there will be a "lag" between calling the smart contract and the time at which the event’s SQL instructions are materialized in Tableland. This "lag" is documented below as **a chain-driven limitation** due to block times and block depth. See the [chains](/quickstarts/chains) page for more information on how this works.
+When a table is created or written to, there will be a "lag" between calling the smart contract and the time at which the event’s SQL instructions are materialized in Tableland. This "lag" is documented below as **a chain-driven limitation** due to block times and block depth. See the [chains](/fundamentals/chains) page for more information on how this works.
 
 | Chain         | Avg. block finalization time | Block depth | Avg. SQL materialize time |
 | ------------- | ---------------------------- | ----------- | ------------------------- |

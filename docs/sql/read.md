@@ -7,7 +7,7 @@ keywords:
   - reading data
 ---
 
-Querying table data has a bit more complexity as compared to other SQL clauses. There are more features available, plus, the added benefit of being able to compose data across multiple tables. The following page will walk through how to query data in read-only scenarios. If you're looking for specifics on subqueries _within_ writes (inserts), you should refer to the [documentation about writing data](/playbooks/sql/write#subqueries) to tables—the approach with writes is, generally, the same but with limitations.
+Querying table data has a bit more complexity as compared to other SQL clauses. There are more features available, plus, the added benefit of being able to compose data across multiple tables. The following page will walk through how to query data in read-only scenarios. If you're looking for specifics on subqueries _within_ writes (inserts), you should refer to the [documentation about writing data](/sql/write#subqueries) to tables—the approach with writes is, generally, the same but with limitations.
 
 For these examples, let's assume we own a `my_table` with a schema of `id int, val text`.
 
@@ -17,7 +17,7 @@ For these examples, let's assume we own a `my_table` with a schema of `id int, v
 | 2   | Molly Tables |
 
 :::note
-For reading data across _multiple_ tables (via `SELECT`s and `JOIN`s), refer to the [docs about composing data](/playbooks/sql/composing-data).
+For reading data across _multiple_ tables (via `SELECT`s and `JOIN`s), refer to the [docs about composing data](/sql/composing-data).
 :::
 
 ## Selecting data

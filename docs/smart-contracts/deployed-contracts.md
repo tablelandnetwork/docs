@@ -1,5 +1,6 @@
 ---
 title: Deployed contracts
+sidebar_label: Deployed contract addresses
 description: A list of deployed Tableland registry contracts for each supported chain.
 keywords:
   - chains

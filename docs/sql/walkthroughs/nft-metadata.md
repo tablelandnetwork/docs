@@ -56,7 +56,7 @@ To serve NFT metadata from a row in a table, you need to write a SQL statement t
 1. Extract the right row given a specific `id` (which should match with the NFT's `tokenId`).
 2. Convert the row into ERC721 compliant JSON metadata.
 
-You’ll want to query `attributes` above with a `WHERE` clause on the `id` column—for example, the row where the `id` is `1`. With SQL functions, you can use the [json_object()](https://www.sqlite.org/json1.html#jobj) function to turn table data into a JSON object. Check out the [JSON functions](/playbooks/sql/functions#objects) documentation for more details.
+You’ll want to query `attributes` above with a `WHERE` clause on the `id` column—for example, the row where the `id` is `1`. With SQL functions, you can use the [json_object()](https://www.sqlite.org/json1.html#jobj) function to turn table data into a JSON object. Check out the [JSON functions](/sql/functions#objects) documentation for more details.
 
 The TL;DR is that you can define a key-value pair in the function itself but as a set of comma separated values. The first value is the key (a string), the second value is the table's column name, and so on and so forth. At the end of the query, the `<id>` value represents the value that you would pass here; in our example table, the available `id`s is either a `1` or `2`.
 
@@ -87,9 +87,9 @@ This will create an object for only the rows where, for example, `id = 1` since 
 
 NFT metadata has top-level keys of `name`, `image`, and `external_url`, which often may incorporate the `id`. There is also an `attributes` key that is an array of objects which match the JSON object exemplified above. Note that other key-values are possible in NFT metadata. For simplicity sake, these are ignored for the moment but could easily be incorporated within the query itself (e.g., a top-level `description` that's the same for every NFT).
 
-You'll need to create an object that contains these top-level definitions, and the `attributes` will need to make use of the [JSON group array](/playbooks/sql/functions#objects) function. Namely, the `json_group_array()` will allow you to take one or more table rows that meet the `WHERE` clause condition and create JSON objects from them.
+You'll need to create an object that contains these top-level definitions, and the `attributes` will need to make use of the [JSON group array](/sql/functions#objects) function. Namely, the `json_group_array()` will allow you to take one or more table rows that meet the `WHERE` clause condition and create JSON objects from them.
 
-Here, you're using both the JSON object and array functions along with the `||` operator to [concatenate values into strings](/playbooks/sql/expressions#concatenation). Note that if you're _not_ using IPFS to store images (e.g., if storing on a hosted server), you should replace `'ipfs://QmVK.../'` with your base URL.
+Here, you're using both the JSON object and array functions along with the `||` operator to [concatenate values into strings](/sql/expressions#concatenation). Note that if you're _not_ using IPFS to store images (e.g., if storing on a hosted server), you should replace `'ipfs://QmVK.../'` with your base URL.
 
 ```sql
 SELECT

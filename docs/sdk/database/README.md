@@ -189,7 +189,7 @@ When a table is written to, it includes two steps:
 2. Offchain materialization—once `wait` is fulfilled, the mutating SQL query will have been materialized by the Tableland network and is now readable with the `SELECT` statement.
 
 :::tip
-A commonly used pattern with an `INTEGER PRIMARY KEY` constraint is to use it for auto-incrementing purposes, where you _don't_ specify that column upon inserts so that the value will increment automatically. See [here](/playbooks/sql/incrementing-values) for more details.
+A commonly used pattern with an `INTEGER PRIMARY KEY` constraint is to use it for auto-incrementing purposes, where you _don't_ specify that column upon inserts so that the value will increment automatically. See [here](/sql/incrementing-values) for more details.
 :::
 
 ### Reads

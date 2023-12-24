@@ -35,7 +35,7 @@ Across the various Tableland clients, you can either write `GRANT`/`REVOKE` stat
 
 Assuming you have ownership permissions on a table, you can pass `GRANT`/`REVOKE` statements as mutating queries:
 
-- SQL guide: [here](/playbooks/sql/access-control)
+- SQL guide: [here](/sql/access-control)
 - SDK with executing statements: [here](/sdk/database/query-statement-methods#all)
 - CLI with `write` command: [here](/cli/write)
 - Smart contracts with `mutate` method: [here](/smart-contracts/registry#mutate)

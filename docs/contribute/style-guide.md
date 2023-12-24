@@ -107,7 +107,7 @@ You can also import markdown files into another markdown file. Here's a simple e
 hide_title: true
 ---
 
-import DataTypes from '/specs/sql/DataTypes.md'
+import DataTypes from '/sql/specification/DataTypes.md'
 
 <DataTypes />
 ```

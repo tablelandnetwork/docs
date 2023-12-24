@@ -30,7 +30,7 @@ The Tableland network is currently in _open beta_ and will move into production 
 
 ## As a developer, how do I get testnet currency to use Tableland?
 
-All testnet blockchains have offer "faucets" where testnet currencies are sent to a wallet’s address (with some imposed limit). Check out the following page for more details, which includes various links to faucets and other information: [here](/quickstarts/chains).
+All testnet blockchains have offer "faucets" where testnet currencies are sent to a wallet’s address (with some imposed limit). Check out the following page for more details, which includes various links to faucets and other information: [here](/fundamentals/chains).
 
 ## What is a gateway?
 
@@ -86,7 +86,7 @@ As with standard SQL, you pass a `CREATE TABLE` statement after establishing a d
 
 ## Is there a SQL specification that should be used when writing these queries?
 
-Yes — Tableland understands a subset of SQL based on the [SQLite SQL language specification](https://www.sqlite.org/lang.html). Check out the full Tableland [SQL Specification](/specs/sql) for more details.
+Yes — Tableland understands a subset of SQL based on the [SQLite SQL language specification](https://www.sqlite.org/lang.html). Check out the full Tableland [SQL Specification](/sql/specification) for more details.
 
 ## Can I call your smart contracts directly?
 

@@ -5,7 +5,17 @@ keywords:
   - sql
 ---
 
-SQL offers a way to interact with databases for extracting and mutating structured data. It is a domain-specific language that allows you to build scalable applications through relational data through organizing data into a table row and column structure. It is a rather simple yet powerful syntax.
+Tableland supports [SQLite](https://www.sqlite.org/fullsql.html) language compatibility with some unique limitations and enhancements. Any imposed language constraint is due to blockchain-related qualities and the requirement for deterministic state across any machine running the protocol. On the flip side, a couple of "magic" SQL functions can be used to insert chain-related data like block numbers and transaction hashes. Additional walkthroughs for concepts like NFT metadata and key-value store tables are also detailed.
+
+## Using SQL
+
+Whether or not you're new to SQL, you should still review some of the introductory docs. Namely, not all SQL is the same, so if you're coming from SQL _that's not_ SQLite, there are likely some some small differences here and there—although generally, the core concepts are the same. Once you have the basics down, you can then dive into the more tailored content that is more use case specific.
+
+The intent of the first section is to provide a general overview of how to do something with Tableland SQL. It is not comprehensive, as the specification itself provides the most up-to-date and detailed information. From there, additional docs outline how to use SQL from a design perspective (structuring tables and query formation).
+
+:::tip
+Be sure to review the [SQL specification](/sql/specification) once you understand the basics. Also, note there are implementation-focused guides that demonstrate how to do this with actual code vs. pure SQL guides.
+:::
 
 ## Usage
 
@@ -13,13 +23,13 @@ When you write SQL statements, they follow a format that loosely resembles that 
 
 Tableland currently supports the following SQL clauses:
 
-- [`CREATE TABLE`](/playbooks/sql/create): Create a table with a series of types aligned to columns and constraints.
-- [`INSERT`](/playbooks/sql/write#inserting-data): Insert data into a table's columns with certain values (with "[upsert](/playbooks/sql/write#upserts)" support, too).
-- [`UPDATE`](/playbooks/sql/write#updating-data): Update a table's values where some condition is met.
-- [`DELETE`](/playbooks/sql/write#deleting-data): Delete a value from a table where some condition is met.
-- [`SELECT`](/playbooks/sql/read): Select a set of data from a table(s), along with conditions.
-- [`GRANT`/`REVOKE`](/playbooks/sql/access-control): Control how users can write to tables.
-- [`ALTER TABLE`](/playbooks/sql/alter-table): Adjust an existing table's structure.
+- [`CREATE TABLE`](/sql/create): Create a table with a series of types aligned to columns and constraints.
+- [`INSERT`](/sql/write#inserting-data): Insert data into a table's columns with certain values (with "[upsert](/sql/write#upserts)" support, too).
+- [`UPDATE`](/sql/write#updating-data): Update a table's values where some condition is met.
+- [`DELETE`](/sql/write#deleting-data): Delete a value from a table where some condition is met.
+- [`SELECT`](/sql/read): Select a set of data from a table(s), along with conditions.
+- [`GRANT`/`REVOKE`](/sql/access-control): Control how users can write to tables.
+- [`ALTER TABLE`](/sql/alter-table): Adjust an existing table's structure.
 
 To access the database, Tableland clients like the [SDK](/sdk), [smart contracts](/smart-contracts), and [CLI](/cli) can be used to create and mutate table data. These also use the [Gateway REST API](/gateway-api) to actually read data directly from the Tableland network by directly writing `SELECT` statement against it.
 
@@ -27,10 +37,10 @@ To access the database, Tableland clients like the [SDK](/sdk), [smart contracts
 
 Expressions, operators, and functions are the building blocks of SQL. They allow you to compute on or transform data. You can do things like conditional logic, type casting, working with JSON, etc. Check out the following pages for more details:
 
-- [Expressions & operators](/playbooks/sql/expressions): Logic or simple transformations on data.
-- [Functions](/playbooks/sql/functions): Execute a function on a value or set of values to transform the data.
-- [Incrementing values](/playbooks/sql/incrementing-values): Automatically increment a value in a table upon inserts.
-- [JOINs](/playbooks/sql/composing-data): Compose data across two or more tables.
+- [Expressions & operators](/sql/expressions): Logic or simple transformations on data.
+- [Functions](/sql/functions): Execute a function on a value or set of values to transform the data.
+- [Incrementing values](/sql/incrementing-values): Automatically increment a value in a table upon inserts.
+- [JOINs](/sql/composing-data): Compose data across two or more tables.
 
 ## Data types
 
@@ -56,9 +66,9 @@ Keep in mind that lower level interactions, like smart contract calls without a 
 Tableland doesn't have full SQLite parity. Let's review a TL;DR of what to look out for:
 
 - Table names in queries should use the format `{prefix}_{chainId}_{tableId}`, but a create statement should not have the `_{tableId}` portion since this ID autogenerated.
-- There is a [set of reserved keywords](/specs/sql#reserved-keywords) to be aware of.
+- There is a [set of reserved keywords](/sql/specification#reserved-keywords) to be aware of.
 - Foreign keys constraints are not supported.
-- Some common SQL languages have type support for numbers with decimals (floats/reals), dates/times, and booleans, but Tableland **does not support any of these** (see the [data type docs](/playbooks/sql#data-types)).
+- Some common SQL languages have type support for numbers with decimals (floats/reals), dates/times, and booleans, but Tableland **does not support any of these** (see the [data type docs](/sql#data-types)).
 - Subqueries ("nesting" `SELECT` statements within a query) are fully supported in read queries but limited to flattened subqueries or `GROUP BY` statements (with `HAVING` support) for inserts; they cannot be used in updates nor deletes.
 - Mutating queries (inserts, updates, deletes) can touch one or more tables in a single _transaction_, but they cannot touch multiple tables in a single _string of statements_.
 - Be sure to wrap any `TEXT` in a single quotes (`'`), including hexadecimals numbers (e.g., EVM account addresses).

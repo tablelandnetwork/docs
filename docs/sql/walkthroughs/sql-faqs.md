@@ -14,7 +14,7 @@ No, not at this time as there are potential determinism issues involved.
 
 ## Can I use subqueries in write statements?
 
-Only "flattened" subqueries are supported within `INSERT` statements but are not possible in `UPDATES`. For read queries, nesting subqueries is perfectly acceptable. See the [docs for more info](/playbooks/sql/write#inserting-data).
+Only "flattened" subqueries are supported within `INSERT` statements but are not possible in `UPDATES`. For read queries, nesting subqueries is perfectly acceptable. See the [docs for more info](/sql/write#inserting-data).
 
 ## Does Tableland support numbers with decimals values?
 
@@ -30,7 +30,7 @@ Yes, mutating queries (inserts, updates, deletes) can touch _one or more tables 
 
 ## Are all SQLite functions supported?
 
-No—and read the [SQL functions docs](/playbooks/sql/functions) for details!
+No—and read the [SQL functions docs](/sql/functions) for details!
 
 ## How do I escape single quotes within a SQL string literal?
 
