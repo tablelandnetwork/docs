@@ -13,7 +13,7 @@ When you visit the [Studio](https://studio.tableland.xyz/), you'll create a user
 
 - Create projects that house a set of tables.
 - Create/use table blueprints, which are frameworks for deploying tables to testnet or mainnet chains.
-- Deploy tables to a [supported EVM chain](/fundamentals/chains).
+- Deploy tables to a [supported EVM chain](/fundamentals/supported-chains).
 - Import _existing_ tables (e.g., created with the SDK or smart contracts) into the Studio to manage them within your project.
 - Further inspect deployment information (table name, chain, transaction hash, etc.) and underlying table data.
 - Create new teams that allow you to add collaborators to underlying projects.

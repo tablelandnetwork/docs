@@ -157,7 +157,7 @@ const ToolsList: ProductItem[] = [
       <>Use a Tableland Hardhat plugin during contract development</>
     ),
 
-    url: "/quickstarts/hardhat",
+    url: "/playbooks/frameworks/hardhat",
   },
   {
     name: "Wasm parser",

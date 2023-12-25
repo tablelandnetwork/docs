@@ -1,12 +1,10 @@
 ---
 title: How to build an NFT
-sidebar_label: Build an NFT
 description: Store NFT metadata in tables that capture chain-driven data changes.
 keywords:
   - nft metadata
   - erc721 metadata
   - how to build an nft
-slug: /how-to-build-an-nft
 ---
 
 Tableland closes the gap between onchain and offchain state synchronicity, which is especially useful for NFT developers. Namely, onchain can automatically drive offchain metadata changes while also offering performant query capabilities at the application layer.
@@ -15,8 +13,8 @@ Tableland closes the gap between onchain and offchain state synchronicity, which
 
 To get started, check out the following pages that provide general NFT metadata overviews and Tableland SQL usage:
 
-- [NFT metadata standards](/quickstarts/concepts/nft-metadata): A 101 about NFT metadata and the various standards used in web3.
-- [SQL table design](/sql/walkthroughs/nft-metadata): Learn about how you can structure data across one or more tables and compose the metadata using SQL + JSON functions.
+- [NFT metadata standards](/playbooks/concepts/nft-metadata): A 101 about NFT metadata and the various standards used in web3.
+- [SQL table design](/playbooks/concepts/nft-metadata): Learn about how you can structure data across one or more tables and compose the metadata using SQL + JSON functions.
 - [NFT uses cases](/fundamentals/use-cases#nfts--gaming): Dive into basics about what you can build with NFTs, including how web3 gaming can benefit from using Tableland.
 
 ## Develop

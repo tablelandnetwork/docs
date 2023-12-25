@@ -8,7 +8,7 @@ keywords:
   - json metadata
 ---
 
-Tableland offers a dynamic and flexible way to store [NFT metadata](/quickstarts/concepts/nft-metadata). You can use Tableland for structuring the top-level metadata and nested attributes in tables and compose them together using a read query. In order to craft the data into ERC721 compliant metadata, developers can store NFT attributes (traits like integers or strings) and _pointers_ large media on IPFS (or similar) in table cells—with access controls to allow for data mutability.
+Tableland offers a dynamic and flexible way to store [NFT metadata](/playbooks/concepts/nft-metadata). You can use Tableland for structuring the top-level metadata and nested attributes in tables and compose them together using a read query. In order to craft the data into ERC721 compliant metadata, developers can store NFT attributes (traits like integers or strings) and _pointers_ large media on IPFS (or similar) in table cells—with access controls to allow for data mutability.
 
 ## Table data
 
@@ -29,15 +29,15 @@ Ultimately, you'll need to form a JSON object with ERC721 compliance for each ro
 }
 ```
 
-For these examples, let's assume there exists `attributes` where every `id` represents an NFT and multiple rows _can_ have the same `id`. Its schema is the following:
+Let's assume there exists an `nft_metadata` table such that every `id` represents an NFT and multiple rows _can_ have the same `id`, representing an attribute. Its schema is the following:
 
 ```sql
-(
+CREATE TABLE nft_metadata(
   id INTEGER,
   display_type TEXT,
   trait_type TEXT,
   value TEXT,
-)
+);
 ```
 
 It has data that defines its attributes, and the top-level data (`image`, `name`, and `external_url`) can be composed within the `SELECT` statement.
@@ -56,7 +56,7 @@ To serve NFT metadata from a row in a table, you need to write a SQL statement t
 1. Extract the right row given a specific `id` (which should match with the NFT's `tokenId`).
 2. Convert the row into ERC721 compliant JSON metadata.
 
-You’ll want to query `attributes` above with a `WHERE` clause on the `id` column—for example, the row where the `id` is `1`. With SQL functions, you can use the [json_object()](https://www.sqlite.org/json1.html#jobj) function to turn table data into a JSON object. Check out the [JSON functions](/sql/functions#objects) documentation for more details.
+You’ll want to query `nft_metadata` above with a `WHERE` clause on the `id` column—for example, the row where the `id` is `1`. With SQL functions, you can use the [json_object()](https://www.sqlite.org/json1.html#jobj) function to turn table data into a JSON object. Check out the [JSON functions](/sql/functions#objects) documentation for more details.
 
 The TL;DR is that you can define a key-value pair in the function itself but as a set of comma separated values. The first value is the key (a string), the second value is the table's column name, and so on and so forth. At the end of the query, the `<id>` value represents the value that you would pass here; in our example table, the available `id`s is either a `1` or `2`.
 
@@ -68,7 +68,7 @@ SELECT
     'value', value
   )
 FROM
-  attributes
+  nft_metadata
 WHERE
   id = <id>;
 ```
@@ -107,13 +107,13 @@ SELECT
     )
   )
 FROM
-  attributes
+  nft_metadata
 WHERE id = <id>;
 ```
 
 Without going into too much detail on [IPFS](https://ipfs.tech/), this assumes the `image` is being stored in some directory where the path to the image can simply be appended to the end of the URL (e.g., `ipfs://QmVK.../1` would point to an image for an NFT `id` of `1`). Hence, when someone views the underlying value mapped to the `image` key, it'll be the [location of the actual media](https://bafybeidpnfh2zc6esvou3kfhhvxmy2qrmngrqczj7adnuygjsh3ulrrfeu.ipfs.nftstorage.link/100/image_full.png). The same pattern is often used for the `external_url` to point to some website landing page for the NFT.
 
-If you queried for the row where `id = 1` in `attributes`, the result would look resemble the following:
+If you queried for the row where `id = 1` in `nft_metadata`, the result would look resemble the following:
 
 ```json
 {
@@ -169,7 +169,7 @@ To make the metadata change, all it takes is an `UPDATE` statement. Perhaps the 
 
 ```sql
 UPDATE
-  attributes(color)
+  nft_metadata(color)
 SET
   color = <color>
 WHERE
@@ -225,7 +225,7 @@ SELECT
     )
   )
 FROM
-  attributes
+  nft_metadata
 JOIN
   lookups
 WHERE id = <id> GROUP BY <id>;
@@ -235,4 +235,4 @@ The JSON response is the same as before but much more future-proof and ready for
 
 ## Next steps
 
-Looking for more? Check out the page on [how to build an NFT](/how-to-build-an-nft), including additional resources including [building a dynamic NFT in Solidity](/tutorials/dynamic-nft-solidity).
+Looking for more? Check out the page on [how to build an NFT](/playbooks/concepts/how-to-build-an-nft), including additional resources including [building a dynamic NFT in Solidity](/tutorials/dynamic-nft-solidity).

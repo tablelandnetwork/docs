@@ -7,7 +7,6 @@ keywords:
   - blockchains
 ---
 
-import DocCardList from '@theme/DocCardList';
 import { ChainsList } from '@site/src/components/SupportedChains'
 
 Chain selection makes a significant impact on the database's usability. Choose a chain that’s too slow or expensive, and it won’t be feasible for table writes to occur frequently. Deploy a cross-chain data model for value layering purposes, and certain onchain access control features are lost. This page explains general chain related concepts; the following chains are supported and described in more detail in the subsequent pages.
@@ -35,6 +34,27 @@ Here's a summary of how the chains works in terms of speed:
 | Arbitrum Nova | 2-3 seconds                  | 0           | {'<'}5 seconds            |
 | Polygon       | 2 seconds                    | 1           | {'<'}10 seconds           |
 | Filecoin      | 30 seconds                   | 5           | ~4 mins.                  |
+
+## Providers
+
+To interact with a chain, developers must run their own node or have access to one. Providers like [Infura](https://infura.io/), [Alchemy](https://www.alchemy.com/), and [Etherscan](https://etherscan.io/) operate a large pool of decentralized nodes and provide an API (centralized gateway) to them. They make it extremely easy to get started and develop web3 applications without needing to personally manage the hardware and software for a dedicated node.
+
+Check out the following resources for each of these providers, and note that the Tableland SDK and CLI are both compatible with whatever [`ethers`](https://docs.ethers.org/v5/api/providers/) can support:
+
+### Infura
+
+- Status: [https://status.infura.io/](https://status.infura.io/)
+- Docs: [https://docs.infura.io/infura/](https://docs.infura.io/infura/)
+
+### Alchemy
+
+- Status: [https://status.alchemy.com/](https://status.alchemy.com/)
+- Docs: [https://docs.alchemy.com/](https://docs.alchemy.com/)
+
+### Etherscan
+
+- Status: [https://etherscan.freshstatus.io/](https://etherscan.freshstatus.io/)
+- Docs: [https://docs.etherscan.io/](https://docs.etherscan.io/)
 
 ## Layer 1 vs. Layer 2
 
@@ -75,24 +95,3 @@ Solutions that Tableland supports are all "EVM compatible." These are layers inc
 In general, all chains have both a mainnet and testnet. Developers should first use a testnet to validate everything is working as expected, and once ready, move everything to production on mainnet. Testnet chains use testnet currency with no inherent value such that developers can request testnet currency for _free_ from _faucets_. Mainnets require _real_ currency to help provide the proper incentivization mechanisms and payment to nodes for computation and state management.
 
 Be sure to use `https://tableland.network` on mainnets, and `https://testnets.tableland.network` on testnets. Learn more about why in the [gateway](/fundamentals/architecture/gateway) docs.
-
-## Providers
-
-To interact with a chain, developers must run their own node or have access to one. Providers like [Infura](https://infura.io/), [Alchemy](https://www.alchemy.com/), and [Etherscan](https://etherscan.io/) operate a large pool of decentralized nodes and provide an API (centralized gateway) to them. They make it extremely easy to get started and develop web3 applications without needing to personally manage the hardware and software for a dedicated node.
-
-Check out the following resources for each of these providers, and note that the Tableland SDK and CLI are both compatible with whatever [`ethers`](https://docs.ethers.org/v5/api/providers/) can support:
-
-### Infura
-
-- Status: [https://status.infura.io/](https://status.infura.io/)
-- Docs: [https://docs.infura.io/infura/](https://docs.infura.io/infura/)
-
-### Alchemy
-
-- Status: [https://status.alchemy.com/](https://status.alchemy.com/)
-- Docs: [https://docs.alchemy.com/](https://docs.alchemy.com/)
-
-### Etherscan
-
-- Status: [https://etherscan.freshstatus.io/](https://etherscan.freshstatus.io/)
-- Docs: [https://docs.etherscan.io/](https://docs.etherscan.io/)

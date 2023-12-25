@@ -28,7 +28,7 @@ When you are finished with the tutorial, you should be able to run `npm run star
 
 :::tip
 
-Looking for more? Check out the page on [how to build an NFT](/how-to-build-an-nft), including additional resources like defining an [optimal SQL table structure](/sql/walkthroughs/nft-metadata).
+Looking for more? Check out the page on [how to build an NFT](/playbooks/concepts/how-to-build-an-nft), including additional resources like defining an [optimal SQL table structure](/playbooks/concepts/nft-metadata).
 :::
 
 ## Customizing p5.js for an NFT

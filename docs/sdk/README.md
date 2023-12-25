@@ -47,4 +47,4 @@ For example, start by defining the type associated with the table’s schema and
 
 ## Web frameworks
 
-If you're building a frontend application, check out the [React](/quickstarts/reactjs), [Next.js](/quickstarts/nextjs), or [wagmi](/quickstarts/wagmi) for a full example of how to use the SDK there. There are also starter [template repos](/quickstarts/templates) to get you up and running even more quickly.
+If you're building a frontend application, check out the [React](/playbooks/frameworks/reactjs), [Next.js](/playbooks/frameworks/nextjs), or [wagmi](/playbooks/frameworks/wagmi) for a full example of how to use the SDK there. There are also starter [template repos](/quickstarts/templates) to get you up and running even more quickly.

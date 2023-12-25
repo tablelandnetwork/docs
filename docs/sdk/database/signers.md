@@ -85,5 +85,5 @@ const db = new Database({ signer });
 ```
 
 :::tip
-Aside from `ethers`, other third party libraries can also be used. For example, if you are writing Tableland interactions inside a React app, you could leverage a `signer` from [wagmi](https://wagmi.sh). Check out the [`wagmi framework quickstart`](/quickstarts/wagmi) for where to start.
+Aside from `ethers`, other third party libraries can also be used. For example, if you are writing Tableland interactions inside a React app, you could leverage a `signer` from [wagmi](https://wagmi.sh). Check out the [`wagmi framework quickstart`](/playbooks/frameworks/wagmi) for where to start.
 :::

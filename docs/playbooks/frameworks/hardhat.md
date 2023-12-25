@@ -5,7 +5,7 @@ keywords:
   - hardhat
 ---
 
-[Hardhat](https://hardhat.org/) is an EVM development platform that comes packed with plenty of tools to get up and running. Using `npx`, you can quickly spin up a project with starter contracts and scripts to help deploy your application. This will quickly walk through Hardhat-specific usage, but do review the more detailed [quickstart](smart-contract-quickstart) or general [smart contract documentation](/smart-contracts) for creating and mutating tables.
+[Hardhat](https://hardhat.org/) is an EVM development platform that comes packed with plenty of tools to get up and running. Using `npx`, you can quickly spin up a project with starter contracts and scripts to help deploy your application. This will quickly walk through Hardhat-specific usage, but do review the more detailed [quickstart](/quickstarts/smart-contract-quickstart) or general [smart contract documentation](/smart-contracts) for creating and mutating tables.
 
 ## 1. Installation & setup
 

@@ -23,7 +23,7 @@ INSERT INTO my_table (id, val) VALUES (0, 'first query');
 INSERT INTO my_table (id, val) VALUES (1, 'second query');
 ```
 
-It’s best to group them together into a single transaction, while also ensuring the count is under the [35kb query limit](/fundamentals/architecture/limits) (which isn’t an issue in this example). You can combine them within a single method call when developing with any of the Tableland clients:
+It’s best to group them together into a single transaction, while also ensuring the count is under the [35kb query limit](/fundamentals/limits) (which isn’t an issue in this example). You can combine them within a single method call when developing with any of the Tableland clients:
 
 ```sql
 INSERT INTO my_table (id, val) VALUES (0, 'first query'); INSERT INTO my_table (id, message) VALUES (1, 'second query');

@@ -1,5 +1,5 @@
 ---
-title: Getting started
+title: Get started
 description: Experiment with creating, editing, and querying tables from the comfort of the command line.
 keywords:
   - CLI

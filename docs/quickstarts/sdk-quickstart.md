@@ -93,7 +93,7 @@ const tableland = Database({ signer });
 
 ## 3. Create a table
 
-As mentioned, you can create a table by instantiating an ethers a `Signer`, but if you're working with frontends, a `Database` instantiation will default to a browser wallets if no signer is passed. There might be a bit of extra work if you're _not_ using ethers—for example, [wagmi](https://wagmi.sh/) using the [viem](https://viem.sh/) library, which needs special adapter to handle the `ethers` library's `Signer`. See the [wagmi docs](/quickstarts/wagmi) for more details.
+As mentioned, you can create a table by instantiating an ethers a `Signer`, but if you're working with frontends, a `Database` instantiation will default to a browser wallets if no signer is passed. There might be a bit of extra work if you're _not_ using ethers—for example, [wagmi](https://wagmi.sh/) using the [viem](https://viem.sh/) library, which needs special adapter to handle the `ethers` library's `Signer`. See the [wagmi docs](/playbooks/frameworks/wagmi) for more details.
 
 Start by connecting to an instance of the `Database` class, and use the `prepare` method while passing a `CREATE TABLE {prefix} ...` statement. You can then `run` this statement to execute it.
 

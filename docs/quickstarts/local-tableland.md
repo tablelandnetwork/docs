@@ -83,7 +83,7 @@ npx local-tableland
 npx hardhat run scripts/deploy.js --network localhost
 ```
 
-Alternatively, check the [Hardhat quickstart](hardhat) for using the `@tableland/hardhat` plugin, which differs a bit from this usage.
+Alternatively, check the [Hardhat quickstart](/playbooks/frameworks/hardhat) for using the `@tableland/hardhat` plugin, which differs a bit from this usage.
 
 ## REST API
 

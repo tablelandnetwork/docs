@@ -34,6 +34,27 @@ const items: NavbarItem[] = [
     ],
   },
   {
+    label: "Guides",
+    position: "right",
+    items: [
+      {
+        type: "docSidebar",
+        sidebarId: "playbooks",
+        label: "Playbooks",
+      },
+      {
+        type: "docSidebar",
+        sidebarId: "sql",
+        label: "SQL",
+      },
+      {
+        type: "docSidebar",
+        sidebarId: "tutorials",
+        label: "Tutorials",
+      },
+    ],
+  },
+  {
     label: "Develop",
     position: "right",
     items: [
@@ -71,27 +92,6 @@ const items: NavbarItem[] = [
         type: "docSidebar",
         sidebarId: "validator",
         label: "Validator node",
-      },
-    ],
-  },
-  {
-    label: "Guides",
-    position: "right",
-    items: [
-      {
-        type: "docSidebar",
-        sidebarId: "playbooks",
-        label: "Playbooks",
-      },
-      {
-        type: "docSidebar",
-        sidebarId: "sql",
-        label: "SQL",
-      },
-      {
-        type: "docSidebar",
-        sidebarId: "tutorials",
-        label: "Tutorials",
       },
     ],
   },

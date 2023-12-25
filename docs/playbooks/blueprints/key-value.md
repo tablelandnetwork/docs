@@ -12,10 +12,9 @@ Tableland is all about relational data between tables. But, relational databases
 Let's say you want to store key-value pairs that map strings to JSON data. You'll need to create a table with two columns, specifying that your key column (e.g., `k`) is of type `TEXT` and `PRIMARY KEY`, and your value column (e.g., `v`) is of type `TEXT`.
 
 ```sql
-CREATE TABLE key (
-  k TEXT,
-  v TEXT,
-  PRIMARY KEY (k)
+CREATE TABLE kv (
+  k TEXT PRIMARY KEY,
+  v TEXT
 );
 ```
 
@@ -31,9 +30,9 @@ Adding key-value pairs to the table is straightforward. You can `INSERT` the dat
 
 ```sql
 INSERT INTO
-  key_values
+  kv
 VALUES
-  ('key-or-uuid', '{"some_json_key": "some_value"}');
+  ('key-or-uuid', '{"some_json_key":"some_value"}');
 ```
 
 This is exactly the type of repetitive query string that you can easily wrap in an app or [use a library](https://www.npmjs.com/package/uuid) to make it even easier. If you want to retrieve the data a specific key, it follows standard SQL read convention.
@@ -42,15 +41,15 @@ This is exactly the type of repetitive query string that you can easily wrap in 
 SELECT
   v
 FROM
-  key_value
+  kv
 WHERE
   k = 'key-or-uuid';
 ```
 
 The resulting query will give you the JSON values.
 
-| v                                 |
-| --------------------------------- |
-| `{"some_json_key": "some_value"}` |
+| v                                |
+| -------------------------------- |
+| `{"some_json_key":"some_value"}` |
 
 Since `k` is a primary key, it is guaranteed unique and will return a single value `v`. Thus, you have key-value data in relational tables. Imagine linking arbitrary JSON data to other structured data via its key, or storing encrypted blobs of data in a `TEXT` → `BLOB` key-value-style table. There are an endless number of possibilities, and the relational model with SQL makes everything a lot easier to work with.

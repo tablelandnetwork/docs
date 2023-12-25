@@ -108,4 +108,4 @@ The main callout—this `tokenURI` method produced the percent encoded URI (`"SE
 
 ## Next steps
 
-Looking for more? Check out the page on [how to build an NFT](/how-to-build-an-nft), including additional resources for defining an [optimal SQL table structure](/sql/walkthroughs/nft-metadata) or [building a dynamic NFT in Solidity](/tutorials/dynamic-nft-solidity).
+Looking for more? Check out the page on [how to build an NFT](/playbooks/concepts/how-to-build-an-nft), including additional resources for defining an [optimal SQL table structure](/playbooks/concepts/nft-metadata) or [building a dynamic NFT in Solidity](/tutorials/dynamic-nft-solidity).

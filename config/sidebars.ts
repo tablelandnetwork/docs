@@ -9,7 +9,11 @@ import type { SidebarsConfig } from "@docusaurus/plugin-content-docs";
  Get started:
  - Fundamentals (/docs/fundamentals)
  - Quickstarts (/quickstarts)
+
+ Guides:
+ - Playbooks (/docs/playbooks)
  - SQL (/docs/sql)
+ - Tutorials (/docs/tutorials)
 
  Develop:
  - Studio (/studio)
@@ -21,10 +25,6 @@ import type { SidebarsConfig } from "@docusaurus/plugin-content-docs";
  - Local Tableland (/docs/local-tableland)
  - Validator node (/docs/validator)
  - API reference (/docs/api/sdk)
-
-Guides:
- - Playbooks (/docs/playbooks)
- - Tutorials (/docs/tutorials)
 
 Community: misc. links
  
@@ -46,10 +46,11 @@ Community: misc. links
   whatever frontmatter `title` is defined in the markdown file itself.
  */
 
-/* FUNDAMENTALS */
+/* GET STARTED */
 
-// Introduction
-const introduction = [
+// Fundamentals
+const fundamentals = [
+  ...sidepageHeader("Fundamentals"),
   {
     type: "category",
     label: "Introduction",
@@ -65,21 +66,13 @@ const introduction = [
     ],
   },
   "fundamentals/supported-chains",
-];
-
-// Architecture
-const architecture = [
+  "fundamentals/limits",
   ...section("Architecture"),
   "fundamentals/architecture/protocol-design",
   "fundamentals/architecture/table-token",
-  "fundamentals/architecture/limits",
   "fundamentals/architecture/gateway",
   "fundamentals/architecture/query-optimization",
   "fundamentals/architecture/cost-estimator",
-];
-
-// About
-const about = [
   ...section("About"),
   {
     type: "category",
@@ -96,29 +89,34 @@ const about = [
   "fundamentals/about/roadmap",
 ];
 
-// Fundamentals wrapper, with some intro content
-const fundamentals = [
-  ...sidepageHeader("Fundamentals"),
-  introduction,
-  architecture,
-  about,
-];
-
-/* QUICKSTARTS */
-
+// Quickstarts
 const quickstarts = [
   ...sidepageHeader("Quickstarts"),
-  "quickstarts/README",
-  "quickstarts/local-tableland",
-  "quickstarts/studio-quickstart",
-  "quickstarts/sdk-quickstart",
-  "quickstarts/smart-contract-quickstart",
-  "quickstarts/cli-quickstart",
-  "quickstarts/api-quickstart",
+  {
+    type: "category",
+    label: "Get started",
+    link: {
+      type: "doc",
+      id: "quickstarts/README",
+    },
+    collapsible: false,
+    items: [
+      "quickstarts/local-tableland",
+      "quickstarts/studio-quickstart",
+      "quickstarts/sdk-quickstart",
+      "quickstarts/smart-contract-quickstart",
+      "quickstarts/cli-quickstart",
+      "quickstarts/api-quickstart",
+    ],
+  },
   ...section("Reference"),
   {
     type: "category",
-    label: "Chain info & usage",
+    label: "Chain info & contracts",
+    link: {
+      type: "doc",
+      id: "quickstarts/chains/README",
+    },
     items: [
       "quickstarts/chains/ethereum",
       "quickstarts/chains/filecoin",
@@ -131,6 +129,80 @@ const quickstarts = [
   "quickstarts/templates",
   "quickstarts/repos",
   "quickstarts/faqs",
+];
+
+/* GUIDES */
+
+// Playbooks
+const playbooks = [
+  ...sidepageHeader("Playbooks"),
+  "playbooks/README",
+  ...section("Concepts"),
+  "playbooks/concepts/access-control",
+
+  {
+    type: "category",
+    label: "NFTs",
+    items: [
+      "playbooks/concepts/nft-metadata",
+      "playbooks/concepts/how-to-build-an-nft",
+    ],
+  },
+  {
+    type: "category",
+    label: "SQL blueprints",
+    items: [
+      "playbooks/blueprints/nft-metadata",
+      "playbooks/blueprints/key-value",
+    ],
+  },
+  ...section("Frameworks"),
+  "playbooks/frameworks/hardhat",
+  "playbooks/frameworks/reactjs",
+  "playbooks/frameworks/nextjs",
+  "playbooks/frameworks/wagmi",
+  ...section("Protocol integrations"),
+  "playbooks/integrations/ipfs",
+  ...section("Platforms"),
+  "playbooks/platforms/spheron",
+];
+
+// SQL
+const sql = [
+  ...sidepageHeader("SQL"),
+  "sql/README",
+  ...section("Basics"),
+  "sql/access-control",
+  "sql/create",
+  "sql/read",
+  "sql/write",
+  "sql/composing-data",
+  "sql/expressions",
+  "sql/functions",
+  "sql/incrementing-values",
+  "sql/alter-table",
+  ...section("Reference"),
+  "sql/specification",
+  "sql/faqs",
+];
+
+// Tutorials
+const tutorials = [
+  ...sidepageHeader("Tutorials"),
+  "tutorials/README",
+  ...section("Introductory"),
+  "tutorials/getting-started-studio",
+  ...section("NFTs & Gaming"),
+  "tutorials/dynamic-nft-solidity",
+  "tutorials/dynamic-nft-p5js",
+  "tutorials/building-games-on-arbitrum",
+  "tutorials/dynamic-nft-chainlink",
+  ...section("Data & storage"),
+  "tutorials/data-dao-polygon",
+  "tutorials/key-value-store-nft",
+  ...section("Utility"),
+  "tutorials/table-reads-chainlink",
+  "tutorials/json-files-nft-polygon",
 ];
 
 /* DEVELOP */
@@ -312,88 +384,6 @@ const localTableland = [
   "local-tableland/testing",
 ];
 
-/* GUIDES */
-
-// Playbooks
-const playbooks = [
-  ...sidepageHeader("Playbooks"),
-  "playbooks/README",
-  ...section("Concepts"),
-  "playbooks/concepts/access-control",
-  {
-    type: "category",
-    label: "SQL blueprints",
-    items: [
-      "playbooks/blueprints/nft-metadata",
-      "playbooks/blueprints/key-value",
-    ],
-  },
-  {
-    type: "category",
-    label: "NFTs",
-    items: [
-      "playbooks/concepts/nft-metadata",
-      "playbooks/concepts/how-to-build-an-nft",
-    ],
-  },
-  ...section("Integrations"),
-  {
-    type: "category",
-    label: "Web & contract frameworks",
-    items: [
-      "playbooks/integrations/hardhat",
-      "playbooks/integrations/reactjs",
-      "playbooks/integrations/react-native",
-      "playbooks/integrations/nextjs",
-      "playbooks/integrations/wagmi",
-    ],
-  },
-  "playbooks/integrations/chain-deployment",
-  "playbooks/integrations/ipfs",
-  ...section("Platforms"),
-  "playbooks/platforms/spheron",
-];
-
-// SQL
-const sql = [
-  ...sidepageHeader("SQL"),
-  "sql/README",
-  ...section("Basics"),
-  "sql/access-control",
-  "sql/create",
-  "sql/read",
-  "sql/write",
-  "sql/composing-data",
-  "sql/expressions",
-  "sql/functions",
-  "sql/incrementing-values",
-  "sql/alter-table",
-  ...section("Reference"),
-  "sql/specification",
-  "sql/faqs",
-];
-
-// Tutorials
-const tutorials = [
-  ...sidepageHeader("Tutorials"),
-  "tutorials/README",
-  ...section("Introductory"),
-  "tutorials/getting-started-studio",
-  ...section("NFTs & Gaming"),
-  "tutorials/dynamic-nft-solidity",
-  "tutorials/dynamic-nft-p5js",
-  "tutorials/building-games-on-arbitrum",
-  "tutorials/dynamic-nft-chainlink",
-  ...section("Data & storage"),
-  "tutorials/data-dao-polygon",
-  "tutorials/key-value-store-nft",
-  ...section("Utility"),
-  "tutorials/table-reads-chainlink",
-  "tutorials/json-files-nft-polygon",
-];
-
-/* PROTOCOL */
-
 // Validator node
 const validator = [...sidepageHeader("Reference"), "validator/README"];
 
@@ -427,6 +417,25 @@ const sidebars: SidebarsConfig = {
       type: "doc",
       id: "quickstarts/README",
       label: "Quickstarts",
+      className: "sidebar-landing",
+    },
+    ...section("Guides", "landing"),
+    {
+      type: "doc",
+      id: "playbooks/README",
+      label: "Playbooks",
+      className: "sidebar-landing",
+    },
+    {
+      type: "doc",
+      id: "sql/README",
+      label: "SQL",
+      className: "sidebar-landing",
+    },
+    {
+      type: "doc",
+      id: "tutorials/README",
+      label: "Tutorials",
       className: "sidebar-landing",
     },
     ...section("Develop", "landing"),
@@ -472,25 +481,6 @@ const sidebars: SidebarsConfig = {
       label: "Validator node",
       className: "sidebar-landing",
     },
-    ...section("Guides", "landing"),
-    {
-      type: "doc",
-      id: "playbooks/README",
-      label: "Playbooks",
-      className: "sidebar-landing",
-    },
-    {
-      type: "doc",
-      id: "sql/README",
-      label: "SQL",
-      className: "sidebar-landing",
-    },
-    {
-      type: "doc",
-      id: "tutorials/README",
-      label: "Tutorials",
-      className: "sidebar-landing",
-    },
     ...section("Community", "landing"),
     {
       type: "link",
@@ -518,8 +508,12 @@ const sidebars: SidebarsConfig = {
     },
   ],
   // Get started
-  quickstarts,
   fundamentals,
+  quickstarts,
+  // Guides
+  playbooks,
+  sql,
+  tutorials,
   // Develop
   studio,
   sdk,
@@ -528,10 +522,6 @@ const sidebars: SidebarsConfig = {
   gatewayApi,
   localTableland,
   apiSdk,
-  // Guides
-  playbooks,
-  sql,
-  tutorials,
   // Infra & protocol
   validator,
   // Miscellaneous

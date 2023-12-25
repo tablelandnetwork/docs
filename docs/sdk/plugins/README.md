@@ -23,7 +23,7 @@ The JETI (JavaScript Extension for Tableland Integrations) package is a library 
 There are a few ways to use JETI with the following exports:
 
 - `pinToLocal` or `pinToProvider`: Use string templating to define values in a SQL string that should be replaced with IPFS CIDs, pinning them in the process. That is, a CID will be inserted into the table and stored on IPFS, and you can call the `resolve` function to retrieve the underlying data from IPFS. See the [pinning docs](/sdk/plugins/pinning-to-ipfs) for more information.
-- `truncate`: In Tableland, each cell has a max size of [1024 bytes](/fundamentals/architecture/limits). Thus, you might want to use IPFS to store larger strings or files. Alternatively, if you want to simply store a string that _can be lossy_, the `truncate` function will limit the string to 1024 bytes and write the raw value to the table.
+- `truncate`: In Tableland, each cell has a max size of [1024 bytes](/fundamentals/limits). Thus, you might want to use IPFS to store larger strings or files. Alternatively, if you want to simply store a string that _can be lossy_, the `truncate` function will limit the string to 1024 bytes and write the raw value to the table.
 - `symmetricEncrypt`: This is more of an experimental example of how you can use JETI to encrypt data before it is sent to Tableland. It uses AES encryption with random secrets and salts, but it's safer to use more secure implementations in a production environment. See the [encryption docs](/sdk/plugins/encryption) for more information.
 - `createProcessor`: Alteratively, you can create your own plugin using the `createProcessor` function. This lets you define other methods of transformation outside of those out-of-the-box extensions described above.
 
