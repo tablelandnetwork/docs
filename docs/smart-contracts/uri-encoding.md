@@ -11,7 +11,7 @@ Developers can write SQL read statement using the Gateway REST API where the res
 
 The most powerful REST API endpoint is `/query`, which allows developers to write raw SQL queries and format the output in a desired format. This is most commonly used in smart contracts while setting a `tokenURI` or when rendering some information in a frontend, using JavaScript. But a key component is being able to write SQL _in the URI itself_, so it must conform to URI encoding standards.
 
-For more information on this endpoint, see the [query formatting documentation](/gateway-api/query-formatting).
+For more information on this endpoint, see the [query formatting documentation](/validator/api/query-formatting).
 
 ### Background on URI encoding
 

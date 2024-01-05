@@ -415,13 +415,13 @@ html[data-theme="dark"] .button {
 /* Decrease margin on sidebar for readability / more items shown */
 .menu__list-item {
   margin-top: 0px !important;
-  padding-top: 2.5px !important;
-  padding-bottom: 2.5px !important;
+  padding-top: 3px !important;
+  padding-bottom: 3px !important;
 }
 
 .menu__link {
-  padding-top: 2.5px !important;
-  padding-bottom: 2.5px !important;
+  padding-top: 3px !important;
+  padding-bottom: 3px !important;
   margin: 0 !important;
 }
 

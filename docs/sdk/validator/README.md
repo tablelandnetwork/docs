@@ -8,7 +8,7 @@ keywords:
 import Tabs from "@theme/Tabs";
 import TabItem from "@theme/TabItem";
 
-Setting up a validator node connection starts by importing a `Validator`. The methods defined in the [Gateway REST API](/gateway-api/endpoints) are exposed in the SDK, such as checking the `health` of a node or getting a table's name. Note that a validator can use a `Database` instance's `config`, which requires a `baseUrl` param in order to connect to and query a validator node. Alternatively, the SDK's `helpers` module provides a `getBaseUrl` function that can be used to determine the correct URL for a given chain ID.
+Setting up a validator node connection starts by importing a `Validator`. The methods defined in the [Gateway REST API](/validator/api) are exposed in the SDK, such as checking the `health` of a node or getting a table's name. Note that a validator can use a `Database` instance's `config`, which requires a `baseUrl` param in order to connect to and query a validator node. Alternatively, the SDK's `helpers` module provides a `getBaseUrl` function that can be used to determine the correct URL for a given chain ID.
 
 ## Installation
 
@@ -125,7 +125,7 @@ Query the Tableland network directly and get the results of a SQL _read_ query (
 - `extract` (optional): A boolean to extract the results.
 - `unwrap` (optional): A boolean to unwrap the results.
 
-See the Gateway API's [query formatting](/gateway-api/query-formatting) docs for more information on the optional parameters noted above; the `extract` and `unwrap` are only for special cases with `"objects"`. Here's an example of a simple query that formats the output as either `"objects"` or `"table"`:
+See the Gateway API's [query formatting](/validator/api/query-formatting) docs for more information on the optional parameters noted above; the `extract` and `unwrap` are only for special cases with `"objects"`. Here's an example of a simple query that formats the output as either `"objects"` or `"table"`:
 
 <Tabs groupId="formatting">
 <TabItem value="objects" label="objects" default>

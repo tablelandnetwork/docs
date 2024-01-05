@@ -371,7 +371,7 @@ Lastly, we can read the materialized data from the table.
   </TabItem>
   <TabItem value="solidity" label="Solidity">
 
-    You **cannot** read table data from Solidity. Table state is materialized offchain, so it can only be read with the SDK, CLI, or [Gateway API](/gateway-api) and then written back onchain as needed. For example, an [oracle setup](/tutorials/table-reads-chainlink) could be used to periodically read data from a table and write it back onchain.
+    You **cannot** read table data from Solidity. Table state is materialized offchain, so it can only be read with the SDK, CLI, or [Gateway API](/validator/api) and then written back onchain as needed. For example, an [oracle setup](/tutorials/table-reads-chainlink) could be used to periodically read data from a table and write it back onchain.
 
   </TabItem>
   <TabItem value="cli" label="CLI">

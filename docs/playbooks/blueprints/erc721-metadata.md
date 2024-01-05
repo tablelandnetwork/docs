@@ -1,6 +1,5 @@
 ---
-title: Crafting NFT metadata
-sidebar_label: NFT metadata storage
+title: ERC721 metadata
 description: Turn table data into JSON objects and array for ERC721 compliant metadata.
 keywords:
   - nft metadata

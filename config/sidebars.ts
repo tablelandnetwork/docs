@@ -21,9 +21,8 @@ import type { SidebarsConfig } from "@docusaurus/plugin-content-docs";
  - Smart contracts (/docs/smart-contracts)
  - Validator API (/docs/validator-api)
  - CLI (/docs/cli)
- - Gateway API (/docs/gateway-api)
  - Local Tableland (/docs/local-tableland)
- - Validator node (/docs/validator)
+ - Validator API & node (/docs/validator)
  - API reference (/docs/api/sdk)
 
 Community: misc. links
@@ -152,8 +151,10 @@ const playbooks = [
     type: "category",
     label: "SQL blueprints",
     items: [
-      "playbooks/blueprints/nft-metadata",
+      "playbooks/blueprints/erc721-metadata",
+      "playbooks/blueprints/erc1155-metadata",
       "playbooks/blueprints/key-value",
+      "playbooks/blueprints/studio-app-design",
     ],
   },
   ...section("Frameworks"),
@@ -163,8 +164,8 @@ const playbooks = [
   "playbooks/frameworks/wagmi",
   ...section("Protocol integrations"),
   "playbooks/integrations/ipfs",
-  ...section("Platforms"),
-  "playbooks/platforms/spheron",
+  // ...section("Platforms"),
+  // "playbooks/platforms/spheron",
 ];
 
 // SQL
@@ -346,18 +347,9 @@ const smartContracts = [
   "smart-contracts/using-remix",
 ];
 
-// Gateway REST API
-const gatewayApi = [
-  ...sidepageHeader("Gateway API"),
-  "gateway-api/README",
-  "gateway-api/endpoints",
-  "gateway-api/query-formatting",
-];
-
 // CLI
 const cli = [
   ...sidepageHeader("CLI"),
-  ,
   "cli/README",
   "cli/chains",
   "cli/controller",
@@ -384,8 +376,34 @@ const localTableland = [
   "local-tableland/testing",
 ];
 
+// Gateway REST API
+const gatewayApi = [
+  ...section("Gateway API"),
+  "validator/api/README",
+  {
+    type: "category",
+    label: "Query",
+    link: {
+      type: "doc",
+      id: "validator/api/query",
+    },
+    collapsible: false,
+    items: ["validator/api/query-formatting"],
+  },
+  "validator/api/receipt",
+  "validator/api/tables",
+  "validator/api/health",
+  "validator/api/version",
+];
+
 // Validator node
-const validator = [...sidepageHeader("Reference"), "validator/README"];
+const validator = [
+  ...sidepageHeader("Gateway API & validator"),
+  "validator/README",
+  gatewayApi,
+  ...section("Validator node"),
+  "validator/node/README",
+];
 
 /* MISC */
 
@@ -459,12 +477,6 @@ const sidebars: SidebarsConfig = {
     },
     {
       type: "doc",
-      id: "gateway-api/README",
-      label: "Gateway API",
-      className: "sidebar-landing",
-    },
-    {
-      type: "doc",
       id: "cli/README",
       label: "CLI",
       className: "sidebar-landing",
@@ -478,7 +490,7 @@ const sidebars: SidebarsConfig = {
     {
       type: "doc",
       id: "validator/README",
-      label: "Validator node",
+      label: "Validator API & node",
       className: "sidebar-landing",
     },
     ...section("Community", "landing"),
@@ -519,13 +531,12 @@ const sidebars: SidebarsConfig = {
   sdk,
   smartContracts,
   cli,
-  gatewayApi,
   localTableland,
-  apiSdk,
-  // Infra & protocol
+  gatewayApi,
   validator,
   // Miscellaneous
   contribute,
+  apiSdk,
 };
 
 /* A series of helpers to formulate sidebar dividers and titles */

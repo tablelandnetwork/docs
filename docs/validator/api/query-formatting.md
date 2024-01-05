@@ -1,5 +1,6 @@
 ---
 title: Query formatting
+sidebar_label: Formatting responses
 description: Transform the output of a read query into your desired format.
 keywords:
   - gateway api

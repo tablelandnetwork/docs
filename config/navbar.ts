@@ -75,11 +75,6 @@ const items: NavbarItem[] = [
       },
       {
         type: "docSidebar",
-        sidebarId: "gatewayApi",
-        label: "Gateway API",
-      },
-      {
-        type: "docSidebar",
         sidebarId: "cli",
         label: "CLI",
       },
@@ -91,7 +86,7 @@ const items: NavbarItem[] = [
       {
         type: "docSidebar",
         sidebarId: "validator",
-        label: "Validator node",
+        label: "Validator API & node",
       },
     ],
   },
@@ -103,6 +98,11 @@ const items: NavbarItem[] = [
         type: "docSidebar",
         sidebarId: "apiSdk",
         label: "SDK",
+      },
+      {
+        type: "docSidebar",
+        sidebarId: "gatewayApi",
+        label: "Validator",
       },
     ],
   },

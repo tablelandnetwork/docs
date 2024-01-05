@@ -31,7 +31,7 @@ Tableland currently supports the following SQL clauses:
 - [`GRANT`/`REVOKE`](/sql/access-control): Control how users can write to tables.
 - [`ALTER TABLE`](/sql/alter-table): Adjust an existing table's structure.
 
-To access the database, Tableland clients like the [SDK](/sdk), [smart contracts](/smart-contracts), and [CLI](/cli) can be used to create and mutate table data. These also use the [Gateway REST API](/gateway-api) to actually read data directly from the Tableland network by directly writing `SELECT` statement against it.
+To access the database, Tableland clients like the [SDK](/sdk), [smart contracts](/smart-contracts), and [CLI](/cli) can be used to create and mutate table data. These also use the [Gateway REST API](/validator/api) to actually read data directly from the Tableland network by directly writing `SELECT` statement against it.
 
 ## Expressions, operators, & functions
 

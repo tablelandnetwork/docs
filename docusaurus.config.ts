@@ -1,5 +1,4 @@
 import type { Config } from "@docusaurus/types";
-import { Options, ThemeConfig } from "@docusaurus/preset-classic";
 import katex from "rehype-katex";
 import math from "remark-math";
 import { lightCodeTheme, darkCodeTheme } from "./src/theme/codeTheme";
@@ -89,10 +88,13 @@ async function createConfig(): Promise<Config> {
           name: "validator-readme",
           sourceBaseUrl:
             "https://raw.githubusercontent.com/tablelandnetwork/go-tableland/main/", // The base url for the markdown (gets prepended to all of the documents when fetching)
-          outDir: "docs/validator", // The base directory to output to
+          outDir: "docs/validator/node", // The base directory to output to
           documents: ["README.md"], // The file names to download
           performCleanup: false, // Make sure generated file is not deleted on subsequent builds
-          noRuntimeDownloads: true, // Don't download files at runtime (helps avoid infinite loop issue)
+          // Don't download files at runtime (helps avoid infinite loop issue)
+          // However, you'll need to set to `false` if you want to generate a
+          // new file at `docs/validator/node/README.md` in case things change
+          noRuntimeDownloads: true,
           modifyContent(filename: any, content: any) {
             if (filename.includes("README")) {
               // Remove all content above `## Background`, which includes the
@@ -114,15 +116,18 @@ async function createConfig(): Promise<Config> {
 
               return {
                 content: `---
-title: Validator node
+title: Running a validator
 description: Learn how to run your own Tableland validator node.
 keywords:
   - validator
+  - indexer
+  - tableland validator
+  - run a validator
 ---
 
 Tableland is a permissionless network where anyone can run and operate their own node. This page walks through how to run your own node, including hardware requirements, installation steps, and common questions.
 
-{/* Imported from https://github.com/tablelandnetwork/go-tableland/blob/main/README.md --> */}
+<!-- Imported from https://github.com/tablelandnetwork/go-tableland/blob/main/README.md -->
 
 ${content}`,
               };
@@ -168,7 +173,7 @@ ${content}`,
             ignorePatterns: ["/tags/**"],
             filename: "sitemap.xml",
           },
-        } satisfies Options,
+        },
       ],
     ],
     themeConfig: {
@@ -243,7 +248,7 @@ ${content}`,
          */
         playgroundPosition: "bottom",
       },
-    } satisfies ThemeConfig,
+    },
   };
 }
 

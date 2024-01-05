@@ -13,6 +13,7 @@ import {
   AiFillApi,
   AiOutlineBuild,
   AiOutlineAppstoreAdd,
+  AiOutlineOrderedList,
 } from "react-icons/ai";
 import { HiOutlineArrowPath, HiOutlineLightBulb } from "react-icons/hi2";
 import { SiSolidity, SiSqlite } from "react-icons/si";
@@ -90,7 +91,6 @@ const BuildList: ProductItem[] = [
         Tableland project manage—create teams, projects, & tables via a web app
       </>
     ),
-
     url: "https://console.tableland.xyz/",
   },
   {
@@ -102,7 +102,6 @@ const BuildList: ProductItem[] = [
         specific features
       </>
     ),
-
     url: "sdk",
   },
   {
@@ -111,8 +110,13 @@ const BuildList: ProductItem[] = [
     description: (
       <>Develop and interact with the registry using smart contracts</>
     ),
-
     url: "smart-contracts",
+  },
+  {
+    name: "CLI",
+    icon: <FaTerminal size={20} />,
+    description: <>CLI & shell to use Tableland from the command line</>,
+    url: "cli",
   },
   {
     name: "Gateway API",
@@ -122,21 +126,13 @@ const BuildList: ProductItem[] = [
         Directly query a Tableland validator for network state & other node data
       </>
     ),
-
-    url: "gateway-api",
-  },
-  {
-    name: "CLI",
-    icon: <FaTerminal size={20} />,
-    description: <>CLI & shell to use Tableland from the command line</>,
-
-    url: "cli",
+    url: "validator/api",
   },
   {
     name: "Validator node",
     icon: <GoDatabase size={20} />,
     description: <>Run your own Tableland node (written in Go) using Docker</>,
-    url: "validator",
+    url: "validator/node",
   },
 ];
 
@@ -147,7 +143,6 @@ const ToolsList: ProductItem[] = [
     description: (
       <>Develop locally, spinning up a local Hardhat and validator node</>
     ),
-
     url: "/quickstarts/local-tableland",
   },
   {
@@ -156,21 +151,18 @@ const ToolsList: ProductItem[] = [
     description: (
       <>Use a Tableland Hardhat plugin during contract development</>
     ),
-
     url: "/playbooks/frameworks/hardhat",
   },
   {
     name: "Wasm parser",
     icon: <VscListTree size={20} />,
     description: <>Parse & normalize Tableland-compliant SQL, client-side</>,
-
     url: "https://github.com/tablelandnetwork/wasm-sqlparser",
   },
   {
     name: "Starter templates",
     icon: <HiOutlineArrowPath size={20} />,
     description: <>Use quickstart templates for building applications</>,
-
     url: "/quickstarts/templates",
   },
 ];
@@ -196,14 +188,18 @@ const LearnList: ProductItem[] = [
     description: (
       <>Common ways and starter ideas for when to use the protocol</>
     ),
-
     url: "fundamentals/use-cases",
+  },
+  {
+    name: "Playbooks",
+    icon: <AiOutlineOrderedList size={20} />,
+    description: <>Guides that showcase how to build with Tableland</>,
+    url: "tutorials",
   },
   {
     name: "Tutorials",
     icon: <AiOutlineBuild size={20} />,
-    description: <>Guides that showcase how to build with Tableland</>,
-
+    description: <>End-to-end walkthroughs for building applications</>,
     url: "tutorials",
   },
   {

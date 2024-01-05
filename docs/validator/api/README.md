@@ -6,8 +6,6 @@ keywords:
   - gateway api
 ---
 
-The Tableland Gateway API is organized around [REST](http://en.wikipedia.org/wiki/Representational_State_Transfer). You can leverage these APIs to read directly from tables and compose data across them, and make calls to learn information about the node itself. Keep in mind that a node listens to mainnet chains and testnet chains _separately_ such that there are separate Base URLs for each respective environment.
-
 ## Setup
 
 There are no required prerequisites, but it may be helpful to become familiar with [HTTPie](https://httpie.org/) and [cURL](https://curl.se/) since the examples provided use these. Also, [jq](https://stedolan.github.io/jq/) is an optional tool to help pipe the output from the API calls to a more human readable, "pretty" format (e.g., `curl <url> | jq`).
@@ -24,13 +22,13 @@ At the protocol level, the Tableland network is separated such that nodes proces
 
 ## Endpoints
 
-The following endpoints are available at the Base URL gateways above:
+The following endpoints are available at the base gateway URLs above:
 
-- [`/query`](/gateway-api/endpoints#query) ⇒ Write a SQL read query and get table data.
-- [`/receipt/{chainId}/{transactionHash}`](/gateway-api/endpoints#receipt) ⇒ Retrieve onchain transaction information regarding a table create or write query.
-- [`/tables/{chainId}/{tableId}`}](/gateway-api/endpoints#tables) ⇒ Get table metadata and information.
-- [`/health`](/gateway-api/endpoints#health) ⇒ Check if the validator is up and running.
-- [`/version`](/gateway-api/endpoints#version) ⇒ Check version information about the validator daemon.
+- [`/query`](/validator/api/query) ⇒ Write a SQL read query and get table data.
+- [`/receipt/{chainId}/{transactionHash}`](/validator/api/receipt) ⇒ Retrieve onchain transaction information regarding a table create or write query.
+- [`/tables/{chainId}/{tableId}`}](/validator/api/tables) ⇒ Get table metadata and information.
+- [`/health`](/validator/api/health) ⇒ Check if the validator is up and running.
+- [`/version`](/validator/api/version) ⇒ Check version information about the validator daemon.
 
 ## Definitions
 
@@ -38,5 +36,5 @@ import { ChainsList } from '@site/src/components/SupportedChains'
 
 - `transactionHash` ⇒ Resultant onchain transaction hash corresponding to a table’s creation or a write query.
 - `tableId` ⇒ The unique identifier assigned to the created table upon the registry contract minting the table as an ERC721 token.
-- `chainId` ⇒ Blockchain or L2 solution on which transactions are being sent; available _chainId_ include the following:
+- `chainId` ⇒ Chain on which the table is created or mutations were sent to, which include the following:
   <ChainsList type={'all'} format={'list'} info={'chainId'} />
