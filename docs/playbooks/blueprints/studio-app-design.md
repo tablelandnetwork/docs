@@ -38,7 +38,7 @@ The following provides a description Studio tables & a link to the actual deploy
 
 ## Table design
 
-Of those described above, there are a few that are generally useful for any web application. All of these tables make use of a library like [uuid](https://www.npmjs.com/package/uuid) to generate a unique identifier for each record within the application's logic. Additionally, it's quite common for a _slug_ to be used, which would also be generated in the app logic to ensure uniqueness if a specific record is associated with a URL (e.g., `https://example.com/teams/my-team/my-project`).
+Of those described above, there are a few that are generally useful for any web application. All of these tables make use of a library like [uuid](https://www.npmjs.com/package/uuid) to generate a unique identifier for each record within the application's logic. Additionally, it's quite common for a _slug_ to be used, which would also be generated in the app logic to ensure uniqueness if a specific record is associated with a URL (e.g., `https://example.com/my-team/my-project`).
 
 - `users`: Tracks the users that have been created with a unique wallet address and their corresponding team ID.
 - `teams`: Tracks the teams that have been created.
