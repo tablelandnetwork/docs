@@ -515,6 +515,12 @@ html[data-theme="dark"]
   transform: translate(-0.2rem);
 }
 
+/* For OpenAPI autogen validator API docs, the pagination is awkwardly placed in
+the content, so just hide it altogether */
+.open-api-main-page .pagination-nav {
+  display: none !important;
+}
+
 [data-theme="dark"] .pagination-nav__link {
   border-color: var(--color-green);
 }
@@ -634,8 +640,6 @@ html[data-theme="dark"] .navbar__link--active,
   color: var(--ifm-color-primary);
 }
 
-/* HERE */
-
 /* Smaller font for code block's pre-title section */
 div[class*="codeBlockTitle"] {
   padding-top: 7px;
@@ -665,8 +669,6 @@ figcaption {
 table {
   text-align: center;
 }
-
-/* HERE */
 
 .navbar-sidebar__back {
   display: none;

@@ -76,7 +76,7 @@ const [tableName] = create.txn?.names ?? [];
 ```
 
 :::note
-Filecoin operates with 30 second block times, and Tableland must optimistically wait a few block in order to ensure the transaction is included in a block. This means that you'll have to wait a few minutes before the table is created. See the Filecoin docs for more details: [here](/docs/quickstarts/chains/filecoin).
+Filecoin operates with 30 second block times, and Tableland must optimistically wait a few block in order to ensure the transaction is included in a block. This means that you'll have to wait a few minutes before the table is created. See the Filecoin docs for more details: [here](/quickstarts/chains/filecoin).
 :::
 
 ## Using a local IPFS node

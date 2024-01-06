@@ -6,14 +6,15 @@ keywords:
   - gateway api
   - validator api
   - validator node
-  - indexer node
+  - tableland indexer
+  - tableland validator
 ---
 
 A validator node is responsible for validating onchain transactions and materializing table state. The Tableland network exposes an HTTP API for interacting with validator nodes, called the Gateway API. Additionally, you can run your own validator node to participate in the network and manage the indexing on your own.
 
 ## Gateway API
 
-The Tableland Gateway API is organized around [REST](http://en.wikipedia.org/wiki/Representational_State_Transfer). You can leverage these APIs to read directly from tables, compose data across them, and make calls to learn information about the node itself. Also, feel free to test out the Gateway API yourself: [here](https://codesandbox.io/embed/red-surf-6bnbmm?fontsize=14&hidenavigation=1&theme=dark&view=preview)
+The Tableland Gateway API is organized around [REST](http://en.wikipedia.org/wiki/Representational_State_Transfer). You can leverage these APIs to read directly from tables, compose data across them, and make calls to learn information about the node itself. Also, feel free to test out the Gateway API yourself: [here](/api/validator)
 
 In Tableland, Validators are the execution unit/actors of the protocol. They have the following responsibilities:
 

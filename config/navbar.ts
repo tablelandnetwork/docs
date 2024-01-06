@@ -90,6 +90,7 @@ const items: NavbarItem[] = [
       },
     ],
   },
+
   {
     label: "API",
     position: "right",
@@ -101,7 +102,7 @@ const items: NavbarItem[] = [
       },
       {
         type: "docSidebar",
-        sidebarId: "gatewayApi",
+        sidebarId: "apiValidator",
         label: "Validator",
       },
     ],
