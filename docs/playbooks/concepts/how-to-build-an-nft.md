@@ -15,7 +15,7 @@ To get started, check out the following pages that provide general NFT metadata 
 
 - [NFT metadata standards](/playbooks/concepts/nft-metadata): A 101 about NFT metadata and the various standards used in web3.
 - [SQL table design](/playbooks/concepts/nft-metadata): Learn about how you can structure data across one or more tables and compose the metadata using SQL + JSON functions.
-- [NFT uses cases](/fundamentals/use-cases#nfts--gaming): Dive into basics about what you can build with NFTs, including how web3 gaming can benefit from using Tableland.
+- [NFT uses cases](/fundamentals/use-cases/#nfts--gaming): Dive into basics about what you can build with NFTs, including how web3 gaming can benefit from using Tableland.
 
 ## Develop
 

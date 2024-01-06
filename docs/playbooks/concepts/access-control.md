@@ -45,6 +45,6 @@ Assuming you have ownership permissions on a table, you can pass `GRANT`/`REVOKE
 The prerequisites for setting a controller is to deploy a controller smart contract. Then, you can call methods that set the controller for a table:
 
 - Creating smart contract controllers: [here](/smart-contracts/controller/)
-- SDK with `Registry` methods: [here](/sdk/registry#setcontroller)
+- SDK with `Registry` methods: [here](/sdk/registry/#setcontroller)
 - CLI with `controller` command: [here](/cli/controller#set-controller-name)
 - Smart contracts with `setController` method: [here](/smart-contracts/registry#setcontroller)

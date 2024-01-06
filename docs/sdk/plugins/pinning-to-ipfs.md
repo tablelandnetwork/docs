@@ -28,7 +28,7 @@ If you haven't already, install the JETI package and SDK:
 npm install @tableland/jeti @tableland/sdk
 ```
 
-Make sure you followed the initial setup steps for instantiating a `Database` and creating a table (with Local Tableland running): [here](/sdk/plugins#installation--setup).
+Make sure you followed the initial setup steps for instantiating a `Database` and creating a table (with Local Tableland running): [here](/sdk/plugins/#installation--setup).
 
 ### Insert & read data with IPFS
 

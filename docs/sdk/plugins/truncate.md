@@ -19,7 +19,7 @@ If you haven't already, install the JETI package and SDK:
 npm install @tableland/jeti @tableland/sdk
 ```
 
-The initial setup steps for instantiating a `Database` and creating a table (with Local Tableland running) can be found [here](/sdk/plugins#installation--setup).
+The initial setup steps for instantiating a `Database` and creating a table (with Local Tableland running) can be found [here](/sdk/plugins/#installation--setup).
 
 ## Truncating values
 

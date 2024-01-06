@@ -155,4 +155,4 @@ function safeTransferFrom(
 ) external payable;
 ```
 
-See the Tableland Deployments page for example: [here](/smart-contracts/controller/setting-controllers#transfer-a-table).
+See the Tableland Deployments page for example: [here](/smart-contracts/tableland-deployments#transfer-a-table).

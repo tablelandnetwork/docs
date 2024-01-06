@@ -52,7 +52,7 @@ contract Lock is ERC721Holder {
 
 ## 2. Create & insert to a table
 
-Create a table that is sent to the caller (`msg.sender`)—note that if you want the _contract_ to own the table, you'll have to implement [contract ERC721 ownership](/quickstarts/smart-contract-quickstart#5-add-contract-table-ownership).
+Create a table that is sent to the caller (`msg.sender`)—note that if you want the _contract_ to own the table, you'll have to implement [contract ERC721 ownership](/smart-contracts/contract-owned-tables).
 
 ```solidity title="contracts/Lock.sol"
 contract Lock is ERC721Holder {

@@ -18,7 +18,7 @@ CREATE TABLE table_name(
 The general flow is to start with the `CREATE TABLE` keywords, pass the (optional) table "prefix," and define columns plus constraints. You don't _have to_ use a table prefix nor any constraints, but you'll often want to.
 
 :::tip
-Review the [supported data types](/sql#data-types), which includes `INT`,`INTEGER`, `TEXT`, and `BLOB`.
+Review the [supported data types](/sql/#data-types), which includes `INT`,`INTEGER`, `TEXT`, and `BLOB`.
 :::
 
 ## Column definitions
