@@ -14,7 +14,7 @@ When in doubt, use the `receipt` command to check why a create table statement o
 
 ## Missing or incorrect required flags
 
-Recall that the [`shell`](/cli#shell) command sets up a `privateKey`, `chain`, and `providerUrl`, and you can also choose to pass these as flags. An incorrect or missing value lead to some of the most common issues. Some of these examples intentionally expose a private key of `0x59c6995e998f97a5a0044966f0945389dc9e86dae88c7a8412f4603b6b78690d` since this is an account used by many tools and given to developers for local development purposes.
+Recall that the [`shell`](/cli/shell) command sets up a `privateKey`, `chain`, and `providerUrl`, and you can also choose to pass these as flags. An incorrect or missing value lead to some of the most common issues. Some of these examples intentionally expose a private key of `0x59c6995e998f97a5a0044966f0945389dc9e86dae88c7a8412f4603b6b78690d` since this is an account used by many tools and given to developers for local development purposes.
 
 ## Could not detect network
 

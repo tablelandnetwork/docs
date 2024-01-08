@@ -12,13 +12,13 @@ import TabItem from "@theme/TabItem";
 
 ## Overview
 
-JETI comes packed with `pinToLocal` and `pinToProvider` methods that let you insert data as CIDs into a cell. For example, you might have a long string or file contents that exceed the max cell size of [1024 bytes](/fundamentals/architecture/limits). You can use these methods with string templating to create SQL strings with custom processing logic that pins the table data to IPFS, inserts a CID, and lets you fetch the underlying content at that CID.
+JETI comes packed with `pinToLocal` and `pinToProvider` methods that let you insert data as CIDs into a cell. For example, you might have a long string or file contents that exceed the max cell size of [1024 bytes](/fundamentals/limits). You can use these methods with string templating to create SQL strings with custom processing logic that pins the table data to IPFS, inserts a CID, and lets you fetch the underlying content at that CID.
 
 :::note
 JETI requires you to have an IPFS node running locally on port 5001, and to have a remote pinning service configured. This is because the point of JETI is to pin your IPFS files when they go to Tableland. It can be tricky.
 
 More on remote pinning services can be found [here](https://docs.ipfs.tech/how-to/work-with-pinning-services/#use-an-existing-pinning-service).
-:::note
+:::
 
 ## Installation & setup
 
@@ -28,7 +28,7 @@ If you haven't already, install the JETI package and SDK:
 npm install @tableland/jeti @tableland/sdk
 ```
 
-Make sure you followed the initial setup steps for instantiating a `Database` and creating a table (with Local Tableland running): [here](/sdk/plugins#installation--setup).
+Make sure you followed the initial setup steps for instantiating a `Database` and creating a table (with Local Tableland running): [here](/sdk/plugins/#installation--setup).
 
 ### Insert & read data with IPFS
 

@@ -351,6 +351,27 @@ A hex string representing the default address for the Tableland registry contrac
 
 ___
 
+### getContractAndOverrides
+
+▸ **getContractAndOverrides**(`signer`, `chainId`): `Promise`\<\{ `contract`: `TablelandTables` ; `overrides`: `Overrides`  }\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `signer` | [`Signer`](../classes/helpers.Signer.md) |
+| `chainId` | `number` |
+
+#### Returns
+
+`Promise`\<\{ `contract`: `TablelandTables` ; `overrides`: `Overrides`  }\>
+
+#### Defined in
+
+@tableland/sdk/src/registry/contract.ts:36
+
+___
+
 ### getContractReceipt
 
 ▸ **getContractReceipt**(`tx`): `Promise`\<[`MultiEventTransactionReceipt`](../interfaces/helpers.MultiEventTransactionReceipt.md)\>

@@ -185,29 +185,6 @@ Requirements:
 
 ___
 
-### runSQL
-
-▸ **runSQL**(`params`): `Promise`\<[`ContractTransaction`](../interfaces/helpers.ContractTransaction.md)\>
-
-Runs a set of SQL statements for `caller` using `runnables`.
-@custom:deprecated Using this with a single statement is deprecated. Use `mutate` instead.
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `params` | [`MutateParams`](../modules.md#mutateparams) |
-
-#### Returns
-
-`Promise`\<[`ContractTransaction`](../interfaces/helpers.ContractTransaction.md)\>
-
-#### Defined in
-
-@tableland/sdk/src/registry/index.ts:190
-
-___
-
 ### safeTransferFrom
 
 ▸ **safeTransferFrom**(`params`): `Promise`\<[`ContractTransaction`](../interfaces/helpers.ContractTransaction.md)\>

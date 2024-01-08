@@ -60,7 +60,7 @@ You can compose data across tables, too, making web3 data storage on Tableland q
 
 :::tip
 
-Tableland's [SQL playbooks](/playbooks/sql/) walk through how to use SQL, blockchain-specific limitations / features, and general how-tos for designing tables and queries.
+Tableland's [SQL guides](/sql/) walk through how to use SQL, blockchain-specific limitations / features, and general how-tos for designing tables and queries.
 
 :::
 

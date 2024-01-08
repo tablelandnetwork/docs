@@ -37,7 +37,7 @@ First, you'll have to install `@tableland/evm`.
 npm install --save @tableland/evm
 ```
 
-You can then import and set up the interface into your contract. One option is to set up an interface with the registry by importing and instantiating `ITablelandTables`, along with the [deployed contract's address](smart-contracts/deployed-contracts). Namely, you'd create a state variable like `ITablelandTables private _tableland` and set it equal to `ITablelandTables(address)`.
+You can then import and set up the interface into your contract. One option is to set up an interface with the registry by importing and instantiating `ITablelandTables`, along with the [deployed contract's address](/smart-contracts/deployed-contracts). Namely, you'd create a state variable like `ITablelandTables private _tableland` and set it equal to `ITablelandTables(address)`.
 
 An easier approach is to use the `TablelandDeployments` library, which does this for you under the hood. All you must do is import it and call `TablelandDeployments.get()` to get the interface. Once the it's set up, you can then call any of the contract methods, including the transfer methods.
 

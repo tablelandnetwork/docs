@@ -348,6 +348,13 @@ html[data-theme="dark"] .header-github-link:before {
   -webkit-transform: rotate(45deg) translateY(-50%);
 }
 
+/* Make sure nav search bar does not overlap with logo */
+@media (max-width: 1040px) and (min-width: 997px) {
+  .DocSearch-Button {
+    width: 17rem !important;
+  }
+}
+
 /* Custom style for buttons */
 .button {
   font-weight: var(--ifm-font-weight-bold);
@@ -405,6 +412,34 @@ html[data-theme="dark"] .button {
   padding-top: var(--ifm-pre-padding) !important;
 }
 
+/* Decrease margin on sidebar for readability / more items shown */
+.menu__list-item {
+  margin-top: 0px !important;
+  padding-top: 3px !important;
+  padding-bottom: 3px !important;
+}
+
+.menu__link {
+  padding-top: 3px !important;
+  padding-bottom: 3px !important;
+  margin: 0 !important;
+}
+
+/* Decrease padding on sidebar links wrt carets on dropdowns */
+.menu__caret::before {
+  background: var(--ifm-menu-link-sublist-icon) 50% / 1.25rem 1.25rem !important;
+}
+
+.menu__link--sublist-caret:after {
+  height: 1rem !important;
+  width: 1rem !important;
+}
+
+.menu__caret {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+
 .menu__list {
   font-size: var(--h5-font-size);
 }
@@ -424,10 +459,6 @@ html[data-theme="dark"] .button {
 
 .menu__link:hover {
   transition: background, color var(--ifm-transition-fast);
-}
-
-.menu__caret::before {
-  background: var(--ifm-menu-link-sublist-icon) 50% / 1.25rem 1.25rem;
 }
 
 /* If a sidebar section heading is the third child in the sidebar (behind the
@@ -482,6 +513,12 @@ html[data-theme="dark"]
 
 .pagination-nav__link--prev:hover .pagination-nav__label::before {
   transform: translate(-0.2rem);
+}
+
+/* For OpenAPI autogen validator API docs, the pagination is awkwardly placed in
+the content, so just hide it altogether */
+.open-api-main-page .pagination-nav {
+  display: none !important;
 }
 
 [data-theme="dark"] .pagination-nav__link {
@@ -578,6 +615,13 @@ html[data-theme="dark"] .navbar__link--active,
   align-items: center;
 }
 
+/* Hide on collapse */
+@media (max-width: 996px) {
+  .navbar__external {
+    display: none;
+  }
+}
+
 .sidebar-footer a svg,
 .navbar__external svg {
   width: 11px !important;
@@ -595,8 +639,6 @@ html[data-theme="dark"] .navbar__link--active,
 .sidepage-title {
   color: var(--ifm-color-primary);
 }
-
-/* HERE */
 
 /* Smaller font for code block's pre-title section */
 div[class*="codeBlockTitle"] {
@@ -627,8 +669,6 @@ figcaption {
 table {
   text-align: center;
 }
-
-/* HERE */
 
 .navbar-sidebar__back {
   display: none;

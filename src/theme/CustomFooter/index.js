@@ -5,12 +5,13 @@ import NewsletterForm from "@theme/CustomFooter/NewsletterForm";
 import { useColorMode, useThemeConfig } from "@docusaurus/theme-common";
 import ColorModeToggle from "@theme/ColorModeToggle";
 import {
-  FaTwitter,
+  FaXTwitter,
   FaDiscord,
   FaYoutube,
   FaHandshake,
   FaGithub,
-} from "react-icons/fa";
+  FaRocket,
+} from "react-icons/fa6";
 import styles from "./styles.module.css";
 
 const links = [
@@ -18,7 +19,7 @@ const links = [
     html: (
       <>
         Questions?{" "}
-        <Link to="https://discord.com/channels/592843512312102924/1000182412795445378">
+        <Link to="https://tableland.xyz/discord">
           Join our Discord & contact us.
         </Link>
       </>
@@ -47,10 +48,18 @@ const links = [
   {
     html: (
       <>
-        Follow us on <Link to="https://twitter.com/tableland"> Twitter.</Link>
+        Follow us on <Link to="https://twitter.com/tableland"> X/Twitter.</Link>
       </>
     ),
-    icon: <FaTwitter size={18} />,
+    icon: <FaXTwitter size={16} />,
+  },
+  {
+    html: (
+      <>
+        Or check out our <Link to="https://tableland.xyz"> main site.</Link>
+      </>
+    ),
+    icon: <FaRocket size={16} />,
   },
 ];
 

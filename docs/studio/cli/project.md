@@ -28,7 +28,7 @@ Creates a new project with the given name and description.
 | `<name>`        | `string` | The name of the project.  |
 | `<description>` | `string` | The project's description |
 
-You must also include the team ID the project is a part of.
+You can optionally include the team ID the project is a part of, if desired.
 
 | Option     | Type     | Description         |
 | ---------- | -------- | ------------------- |

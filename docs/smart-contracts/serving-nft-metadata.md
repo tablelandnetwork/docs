@@ -29,7 +29,7 @@ https://testnets.tableland.network/api/v1/query?unwrap=true&extract=true&stateme
 ...and serve it from your smart contract so that apps trying to display your token can read each NFT metadata response one at a time. To do this, you’ll need to leverage the `tokenURI` or `uri` endpoints in your smart contracts.
 
 :::tip
-Looking for more? Check out the page on [how to build an NFT](/how-to-build-an-nft), including additional resources for defining an [optimal SQL table structure](/playbooks/walkthroughs/nft-metadata) or [building a dynamic NFT in Solidity](/tutorials/dynamic-nft-solidity).
+Looking for more? Check out the page on [how to build an NFT](/playbooks/concepts/how-to-build-an-nft), including additional resources for defining an [optimal SQL table structure](/playbooks/concepts/nft-metadata) or [building a dynamic NFT in Solidity](/tutorials/dynamic-nft-solidity).
 :::
 
 ## ERC721 tokenURIs

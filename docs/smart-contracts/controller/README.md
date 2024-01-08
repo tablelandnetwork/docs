@@ -20,7 +20,7 @@ There are default options that allow for the owner to have full control of the t
 
 ## Creating a `TablelandController`
 
-A `TablelandController` compliant contract is one that implements `ITablelandController`, meaning, it supports a `getPolicy` read method that returns the `ITablelandController`’s `Policy` struct. This method can include onchain rules as logical checks prior to the `Policy` being returned (e.g., conditional logic to check ownership of a token or certain balance).
+A `TablelandController` compliant contract is one that implements `ITablelandController`, meaning, it supports a `getPolicy` read method that returns the `TablelandPolicy` struct. This method can include onchain rules as logical checks prior to the `TablelandPolicy` being returned (e.g., conditional logic to check ownership of a token or certain balance).
 
 ### How it works
 

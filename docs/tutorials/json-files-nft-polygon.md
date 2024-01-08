@@ -15,7 +15,7 @@ Tableland is a web3-native database that can be used to store data in relational
 - Decentralized storage (e.g., IPFS), which is _great_ for file/image storage, but immutable files (CIDs) pose a challenge for novel NFT metadata use cases
 
 :::tip
-New to NFTs? Check out the page on [how to build an NFT](/how-to-build-an-nft), including additional resources for defining an [optimal SQL table structure](/playbooks/walkthroughs/nft-metadata) or [building a dynamic NFT in Solidity](/tutorials/dynamic-nft-solidity).
+New to NFTs? Check out the page on [how to build an NFT](/playbooks/concepts/how-to-build-an-nft), including additional resources for defining an [optimal SQL table structure](/playbooks/concepts/nft-metadata) or [building a dynamic NFT in Solidity](/tutorials/dynamic-nft-solidity).
 :::
 
 ## Overview

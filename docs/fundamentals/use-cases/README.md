@@ -15,7 +15,7 @@ The TL;DR is that Tableland can be used as a data storage option with onchain da
 
 ### Application data
 
-- For _high velocity_ table writes, choose a chain like [Arbitrum Nova](/fundamentals/chains/arbitrum#arbitrum-nova) that can handle the volume and is [cheap to use](/fundamentals/architecture/cost-estimator).
+- For _high velocity_ table writes, choose a chain like [Arbitrum Nova](/quickstarts/chains/arbitrum#arbitrum-nova) that can handle the volume and is [cheap to use](/fundamentals/architecture/cost-estimator).
 - This could include ideas such as the following, and note that data is publicly readable unless you implement some form of encryption before writing the data:
   - User settings.
   - Comments / posts.
@@ -28,7 +28,7 @@ The TL;DR is that Tableland can be used as a data storage option with onchain da
 - Global leaderboards, game state, user settings, character inventory, or anything that needs a way to store game data in a permissionless database.
 
 :::tip
-Looking for more? Check out the page on [how to build an NFT](/how-to-build-an-nft), including additional resources for defining an [optimal SQL table structure](/playbooks/walkthroughs/nft-metadata) or [building a dynamic NFT in Solidity](/tutorials/dynamic-nft-solidity).
+Looking for more? Check out the page on [how to build an NFT](/playbooks/concepts/how-to-build-an-nft), including additional resources for defining an [optimal SQL table structure](/playbooks/concepts/nft-metadata) or [building a dynamic NFT in Solidity](/tutorials/dynamic-nft-solidity).
 :::
 
 ### Data DAOs & token gating

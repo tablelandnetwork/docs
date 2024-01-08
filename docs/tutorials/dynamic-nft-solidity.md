@@ -24,7 +24,7 @@ When you build the game, you want users to own their pixels as an NFT. So, we ca
 The data's simplicity would make it great fun to build fully onchain, but we'll use it to illustrate the basics of creating a smart contract that owns and populates relational data tables. Let's go!
 
 :::tip
-Looking for more? Check out the page on [how to build an NFT](/how-to-build-an-nft) to view additional resources for developing on Tableland, such as ERC721 compliant metadata standards.
+Looking for more? Check out the page on [how to build an NFT](/playbooks/concepts/how-to-build-an-nft) to view additional resources for developing on Tableland, such as ERC721 compliant metadata standards.
 :::
 
 ### The NFT design

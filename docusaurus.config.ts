@@ -1,5 +1,4 @@
 import type { Config } from "@docusaurus/types";
-import { Options, ThemeConfig } from "@docusaurus/preset-classic";
 import katex from "rehype-katex";
 import math from "remark-math";
 import { lightCodeTheme, darkCodeTheme } from "./src/theme/codeTheme";
@@ -89,10 +88,13 @@ async function createConfig(): Promise<Config> {
           name: "validator-readme",
           sourceBaseUrl:
             "https://raw.githubusercontent.com/tablelandnetwork/go-tableland/main/", // The base url for the markdown (gets prepended to all of the documents when fetching)
-          outDir: "docs/validator", // The base directory to output to
+          outDir: "docs/validator/node", // The base directory to output to
           documents: ["README.md"], // The file names to download
           performCleanup: false, // Make sure generated file is not deleted on subsequent builds
-          noRuntimeDownloads: true, // Don't download files at runtime (helps avoid infinite loop issue)
+          // Don't download files at runtime (helps avoid infinite loop issue)
+          // However, you'll need to set to `false` if you want to generate a
+          // new file at `docs/validator/node/README.md` in case things change
+          noRuntimeDownloads: true,
           modifyContent(filename: any, content: any) {
             if (filename.includes("README")) {
               // Remove all content above `## Background`, which includes the
@@ -114,15 +116,18 @@ async function createConfig(): Promise<Config> {
 
               return {
                 content: `---
-title: Validator node
+title: Running a validator
 description: Learn how to run your own Tableland validator node.
 keywords:
   - validator
+  - indexer
+  - tableland validator
+  - run a validator
 ---
 
 Tableland is a permissionless network where anyone can run and operate their own node. This page walks through how to run your own node, including hardware requirements, installation steps, and common questions.
 
-{/* Imported from https://github.com/tablelandnetwork/go-tableland/blob/main/README.md --> */}
+<!-- Imported from https://github.com/tablelandnetwork/go-tableland/blob/main/README.md -->
 
 ${content}`,
               };
@@ -137,7 +142,7 @@ ${content}`,
     ],
     presets: [
       [
-        "classic",
+        "docusaurus-preset-openapi",
         {
           docs: {
             sidebarPath: "./config/sidebars.ts", // Configuration for the sidebar
@@ -159,6 +164,10 @@ ${content}`,
               // "**/api/sdk/namespaces/helpers.md", // Must exclude due to "acorn" and MDX v2 for line: `Example: {contractAddress: "0x000deadbeef", baseUrl: "https://my.validator.mydomain.tld"}`
             ],
           },
+          api: {
+            path: "./specs/validator/tableland-openapi-spec.yaml",
+            routeBasePath: "/api/validator",
+          },
           theme: {
             customCss: "./src/css/custom.css", // All custom CSS overrides
           },
@@ -168,7 +177,7 @@ ${content}`,
             ignorePatterns: ["/tags/**"],
             filename: "sitemap.xml",
           },
-        } satisfies Options,
+        },
       ],
     ],
     themeConfig: {
@@ -231,11 +240,11 @@ ${content}`,
         },
       },
       // Announcement bar is upon visiting the site and removed if the user closes it out (tracked in local storage)
-      announcementBar: {
-        id: "announcementBar-0", // Increment on change
-        content: `Give Tableland a ⭐️ on <a target="_blank" rel="noopener noreferrer" href="https://github.com/tablelandnetwork">GitHub</a> and follow us on <a target="_blank" rel="noopener noreferrer" href="https://twitter.com/tableland" >Twitter</a>`,
-        isCloseable: true,
-      },
+      // announcementBar: {
+      //   id: "announcementBar-0", // Increment on change
+      //   content: `Give Tableland a ⭐️ on <a target="_blank" rel="noopener noreferrer" href="https://github.com/tablelandnetwork">GitHub</a> and follow us on <a target="_blank" rel="noopener noreferrer" href="https://twitter.com/tableland" >Twitter</a>`,
+      //   isCloseable: true,
+      // },
       liveCodeBlock: {
         /**
          * The position of the live playground, above or under the editor
@@ -243,7 +252,7 @@ ${content}`,
          */
         playgroundPosition: "bottom",
       },
-    } satisfies ThemeConfig,
+    },
   };
 }
 

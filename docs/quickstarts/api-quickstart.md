@@ -47,7 +47,7 @@ Since a _single_ value was originally returned, this allows the extract + unwrap
 ```
 
 :::note
-For more information, you should check out the [query formatting](/gateway-api/query-formatting) documentation, which walks through this in much greater detail—there are many other ways to alter the response!
+For more information, you should check out the [query formatting](/validator/api/query-formatting) documentation, which walks through this in much greater detail—there are many other ways to alter the response!
 :::
 
 ## 3. Get other table info

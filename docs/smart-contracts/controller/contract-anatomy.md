@@ -20,17 +20,23 @@ The [`TablelandController`](https://github.com/tablelandnetwork/evm-tableland/bl
 
 The `getPolicy` method signature is the following:
 
-```solidity title="@tableland/evm/contracts/ITablelandController.sol"
-function getPolicy(address caller, uint256 tableId) external payable returns (TablelandPolicy memory);
+```solidity title="@tableland/evm/contracts/TablelandController.sol"
+function getPolicy(address caller, uint256 tableId)
+    external
+    payable
+    virtual
+    override
+    returns (TablelandPolicy memory);
 ```
 
 Here's how it works:
 
 - `caller`: The address that is attempting to access the table.
+  - For example, the address calling the registry contract's `create` or `mutate` method.
 - `tableId`: The ID of the table that is being mutated.
 - `payable`: Used to allow the controller to, optionally, charge a fee for the access control (e.g., require payment to mutate data).
 
-Once you create a controller contract, you then call the `setController` method on the `TablelandTables` registry contract—see [here](smart-contracts/registry) for more details. This will set the controller for the specified table ID so that it returns a unique policy for the specific table.
+Once you create a controller contract, you then call the `setController` method on the `TablelandTables` registry contract—see [here](/smart-contracts/controller/setting-controllers) for more details. This will set the controller for the specified table ID so that it returns a unique policy for the specific table.
 
 ### `TablelandPolicy` struct
 

@@ -74,7 +74,7 @@ We’re here to build a new web. Together.
 - [Tableland Rigs](https://tableland.xyz/rigs/) mint in July.
 - The first external validators are onboarded to the network ([interest sign-up](https://hhueol4i6vp.typeform.com/to/gkcyeA22)).
 - Release SQLite backed validator.
-- Release custom SQL parser for Tableland’s [SQL Specification](/specs/sql/).
+- Release custom SQL parser for Tableland’s [SQL Specification](/sql/specification/).
 - Release smulti-transaction support.
 - The Tableland testnet protocol launches on Ethereum, Polygon, and Optimism mainnets.
 - Release TABLE NFT with dynamic rendering.
