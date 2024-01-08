@@ -18,7 +18,7 @@ Tableland naturally imposes [limits](/fundamentals/limits) on the size of data y
 
 [IPFS](https://ipfs.tech/) is a peer-to-peer network and protocol for storing and sharing data in a distributed file system. [Filecoin](https://filecoin.io/) is a decentralized storage network that uses IPFS as its underlying protocol. The Filecoin Virtual Machine (FVM) adds programmability to the Filecoin network, and the FVM also contains an Ethereum Virtual Machine (EVM) runtime, called the FEVM. The FEVM lets you use familiar languages like Solidity to write smart contracts (also called "actors" on the FVM), which makes building on top of Filecoin easier for existing web3 developers.
 
-Since Tableland is an EVM-compatible protocol, you can use the FEVM to deploy tables and interact with them, such as storing IPFS CIDs. For greater persitence guarantees, you can also create Filecoin deals for your content with [web3.storage](https://web3.storage), which will handle the deal-making process.
+Since Tableland is an EVM-compatible protocol, you can use the FEVM to deploy tables and interact with them, such as storing IPFS CIDs. For greater persistence guarantees, you can also create Filecoin deals for your content with [web3.storage](https://web3.storage), which will handle the deal-making process.
 
 ## Installation
 
