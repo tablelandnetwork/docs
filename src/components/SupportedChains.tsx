@@ -88,6 +88,9 @@ export const supportedChains = (): ChainFormatted[] => {
       case "arbitrum-nova":
         format.chainNameFormatted = "arbitrum nova";
         break;
+      case "arbitrum-sepolia":
+        format.chainNameFormatted = "arbitrum sepolia";
+        break;
       case "sepolia":
         format.chainNameFormatted = "ethereum sepolia";
         break;
@@ -96,6 +99,9 @@ export const supportedChains = (): ChainFormatted[] => {
         break;
       case "filecoin-calibration":
         format.location = "testnet";
+        break;
+      case "optimism-goerli":
+        format.chainNameFormatted = "optimism goerli";
         break;
       case "matic":
         format.chainNameFormatted = "polygon";
