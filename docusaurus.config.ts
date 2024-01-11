@@ -10,7 +10,7 @@ async function createConfig(): Promise<Config> {
   return {
     title: "Tableland Docs",
     tagline:
-      "Explore how to store & query data on Tableland—the serverless database for web3 apps.",
+      "Explore how to store & query data on Tableland—the serverless web3 database for apps.",
     url: "https://docs.tableland.xyz",
     baseUrl: "/",
     onBrokenLinks: "log", // Or, could `throw`
