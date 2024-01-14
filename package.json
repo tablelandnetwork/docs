@@ -48,7 +48,7 @@
     "@docusaurus/eslint-plugin": "^3.1.0",
     "@docusaurus/module-type-aliases": "^3.1.0",
     "@docusaurus/tsconfig": "^3.0.1",
-    "@docusaurus/types": "^3.0.1",
+    "@docusaurus/types": "^3.1.0",
     "docusaurus-plugin-typedoc": "^0.21.0",
     "prettier": "^2.8.8",
     "typedoc": "^0.25.4",

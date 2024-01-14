@@ -1,7 +1,4 @@
-import React, { useState } from "react";
-import clsx from "clsx";
-import Link from "@docusaurus/Link";
-import styles from "./index.module.css";
+import React from "react";
 import { supportedChains, ChainFormatted } from "../SupportedChains";
 
 interface ChainCost extends ChainFormatted {
@@ -21,9 +18,9 @@ interface ChainCost extends ChainFormatted {
 // Retrieve chain price costs
 function getChainCosts(token: string): number {
   // Hardcoded crypto prices
-  const ethPrice = 1600;
-  const maticPrice = 1.1;
-  const filPrice = 3.54;
+  const ethPrice = 2500;
+  const maticPrice = 0.9;
+  const filPrice = 6.0;
 
   switch (token) {
     case "ETH":
@@ -156,10 +153,10 @@ export function QueryCosts({ type }: { type: string }): JSX.Element {
             <tr>
               <th>Chain</th>
               <th>Create size (B)</th>
-              <th>Create cost (ETH)</th>
+              <th>Create cost</th>
               <th>Create cost (USD)</th>
-              <th>Create cost (ETH/MB)</th>
-              <th>Create cost ($/MB)</th>
+              <th>Create cost</th>
+              <th>Create cost (USD/MB)</th>
             </tr>
           </thead>
           <tbody>
@@ -171,9 +168,13 @@ export function QueryCosts({ type }: { type: string }): JSX.Element {
                     {c.chainNameFormatted}
                   </td>
                   <td>{c.createSize}</td>
-                  <td>{c.createCostCrypto.toFixed(7)}</td>
+                  <td>
+                    {c.createCostCrypto.toFixed(7)} {c.cryptoToken}
+                  </td>
                   <td>${c.createCostUsd.toFixed(4)}</td>
-                  <td>{c.createCostCryptoPerMb.toFixed(4)}</td>
+                  <td>
+                    {c.createCostCryptoPerMb.toFixed(4)} {c.cryptoToken}/MB
+                  </td>
                   <td>${c.createCostUsdPerMb.toFixed(2)}</td>
                 </tr>
               );
@@ -190,10 +191,10 @@ export function QueryCosts({ type }: { type: string }): JSX.Element {
             <tr>
               <th>Chain</th>
               <th>Write size (B)</th>
-              <th>Write cost (ETH)</th>
+              <th>Write cost</th>
               <th>Write cost (USD)</th>
-              <th>Write cost (ETH/MB)</th>
-              <th>Write cost ($/MB)</th>
+              <th>Write cost</th>
+              <th>Write cost (USD/MB)</th>
             </tr>
           </thead>
           <tbody>
@@ -205,9 +206,13 @@ export function QueryCosts({ type }: { type: string }): JSX.Element {
                     {c.chainNameFormatted}
                   </td>
                   <td>{c.writeSize}</td>
-                  <td>{c.writeCostCrypto.toFixed(7)}</td>
+                  <td>
+                    {c.writeCostCrypto.toFixed(7)} {c.cryptoToken}
+                  </td>
                   <td>${c.writeCostUsd.toFixed(4)}</td>
-                  <td>{c.writeCostCryptoPerMb.toFixed(4)}</td>
+                  <td>
+                    {c.writeCostCryptoPerMb.toFixed(4)} {c.cryptoToken}/MB
+                  </td>
                   <td>${c.writeCostUsdPerMb.toFixed(2)}</td>
                 </tr>
               );
