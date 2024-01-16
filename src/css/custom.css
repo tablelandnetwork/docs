@@ -647,8 +647,8 @@ div[class*="codeBlockTitle"] {
   font-size: 90%;
 }
 
-/* Horizontally center all images by default, except navbar and landing */
-img:not(.navbar__logo img, .landing-img) {
+/* Horizontally center all images by default, except navbar, landing, showcase */
+img:not(.navbar__logo img, .landing-img, .showcase-img) {
   display: block !important;
   margin: 0 auto 20px auto !important;
 }

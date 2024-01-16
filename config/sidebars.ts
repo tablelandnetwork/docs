@@ -503,6 +503,12 @@ const sidebars: SidebarsConfig = {
     ...section("Community", "landing"),
     {
       type: "link",
+      label: "Showcase",
+      href: "/Showcase",
+      className: "sidebar-landing sidebar-footer",
+    },
+    {
+      type: "link",
       label: "Discord",
       href: "https://tableland.xyz/discord",
       className: "sidebar-landing sidebar-footer",
@@ -517,12 +523,6 @@ const sidebars: SidebarsConfig = {
       type: "link",
       label: "Blog",
       href: "https://mirror.xyz/tableland.eth",
-      className: "sidebar-landing sidebar-footer",
-    },
-    {
-      type: "link",
-      label: "Showcase",
-      href: "https://dev.tableland.xyz/showcase",
       className: "sidebar-landing sidebar-footer",
     },
   ],

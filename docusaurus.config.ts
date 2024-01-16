@@ -252,6 +252,13 @@ ${content}`,
          */
         playgroundPosition: "bottom",
       },
+      // Custom pages that are rendered as standalone pages without sidebars
+      routes: [
+        {
+          path: "/showcase", // Specify the path for your custom page
+          component: "@site/src/pages/Showcase/index.tsx", // Provide the path to your custom component
+        },
+      ],
     },
   };
 }
