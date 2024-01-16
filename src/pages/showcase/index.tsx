@@ -207,73 +207,79 @@ export default function Showcase() {
                 </div>
               ))}
             </div>
-
-            <Modal
-              isOpen={modalIsOpen}
-              onRequestClose={closeModal}
-              contentLabel="Project details"
-              className={styles.modalContent}
-              overlayClassName={styles.modalOverlay}
-            >
-              {currentProject && (
-                <div>
-                  <div className={styles.modalTitleRow}>
-                    <h2>{currentProject.name}</h2>
-                    <ul className={styles.modalLinks}>
-                      <li>
-                        <Link to={currentProject.website}>
-                          <FaLink />
-                        </Link>
-                      </li>
-                      <li>
-                        <Link to={currentProject.github}>
-                          <FaGithub />
-                        </Link>
-                      </li>
-                      <li>
-                        <Link to={currentProject.twitter}>
-                          <FaXTwitter />
-                        </Link>
-                      </li>
-                    </ul>
-                  </div>
-                  <p className="margin-bottom--md">
-                    {currentProject.description}
-                  </p>
-                  <div
-                    className={clsx(
-                      "margin-bottom--md",
-                      styles.projectCardTags
+            <div>
+              <Modal
+                isOpen={modalIsOpen}
+                onRequestClose={closeModal}
+                contentLabel="Project details"
+                className={styles.modalContent}
+                overlayClassName={styles.modalOverlay}
+              >
+                {currentProject && (
+                  <div>
+                    <div className={styles.modalTitleRow}>
+                      <h2>{currentProject.name}</h2>
+                      <ul className={styles.modalLinks}>
+                        <li>
+                          <Link to={currentProject.website}>
+                            <FaLink />
+                          </Link>
+                        </li>
+                        <li>
+                          <Link to={currentProject.github}>
+                            <FaGithub />
+                          </Link>
+                        </li>
+                        <li>
+                          <Link to={currentProject.twitter}>
+                            <FaXTwitter />
+                          </Link>
+                        </li>
+                      </ul>
+                    </div>
+                    <p className="margin-bottom--md">
+                      {currentProject.description}
+                    </p>
+                    <div
+                      className={clsx(
+                        "margin-bottom--md",
+                        styles.projectCardTags
+                      )}
+                    >
+                      {[
+                        ...(currentProject.chains || []),
+                        ...(currentProject.tags || []),
+                      ].map((tag, index) => (
+                        <span key={`${tag}-${index}`}>{tag}</span>
+                      ))}
+                    </div>{" "}
+                    <hr />
+                    <h3>Details</h3>
+                    <p className={clsx(styles.modalDetails)}>
+                      {currentProject.details}
+                    </p>
+                    {currentProject.youtubeId && (
+                      <>
+                        <h3>Demo</h3>
+                        <YoutubeEmbed videoId={currentProject.youtubeId} />
+                      </>
                     )}
-                  >
-                    {[
-                      ...(currentProject.chains || []),
-                      ...(currentProject.tags || []),
-                    ].map((tag, index) => (
-                      <span key={`${tag}-${index}`}>{tag}</span>
-                    ))}
-                  </div>{" "}
-                  <hr />
-                  <h3>Details</h3>
-                  <p className={clsx(styles.modalDetails)}>
-                    {currentProject.details}
-                  </p>
-                  {currentProject.youtubeId && (
-                    <>
-                      <h3>Demo</h3>
-                      <YoutubeEmbed videoId={currentProject.youtubeId} />
-                    </>
-                  )}
-                  <button onClick={closeModal} className={styles.modalCloseBtn}>
-                    <FaX />
-                  </button>
-                </div>
-              )}
-            </Modal>
+                    <button
+                      onClick={closeModal}
+                      className={styles.modalCloseBtn}
+                    >
+                      <FaX />
+                    </button>
+                  </div>
+                )}
+              </Modal>
+            </div>
           </>
         )}
       </div>
-      <CustomFooter />
+      <div className="padding-left--lg padding-right--lg">
+        <CustomFooter />
+      </div>
     </Layout>
   );
 }
