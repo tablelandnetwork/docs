@@ -19,6 +19,8 @@ The `@tableland/sdk` comes with a few APIs: "primary" [Cloudflare D1 client comp
 If you're looking for the SDK API reference, you can check it out [here](/api/sdk/modules).
 :::
 
+There's also a Go SDK available [here](https://github.com/tablelandnetwork/go-tableland/tree/main/pkg/client/v1). It's still in beta, but it's a great way to get started with Tableland if you're a Go developer.
+
 ## Chain configuration
 
 Note the chain naming convention used by the `Database` connection matches that of [`ethersjs`](https://github.com/ethers-io/ethers.js/). To dictate which chain your app should connect to, you can leverage a [`Signer`](https://docs.ethers.org/v5/api/signer/) where the signer will provide information corresponding to a particular chain. This includes any of the following chains, which have their `ethers`-defined name shown as well:

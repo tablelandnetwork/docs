@@ -292,6 +292,7 @@ const sdk = [
   "sdk/walkthroughs/sql-parser",
   "sdk/walkthroughs/orm",
   "sdk/walkthroughs/testing",
+  "sdk/walkthroughs/chunking-queries",
   ...section("Reference"),
   "sdk/reference/type-conversion",
   "sdk/reference/compatability",

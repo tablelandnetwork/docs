@@ -21,6 +21,10 @@ You _can_ batch queries that touch different tables, but you **_cannot_ have dif
 
 Batched statements are similar to [SQL transactions](https://www.sqlite.org/lang_transaction.html). If a statement in the sequence fails, then an error is returned for that specific statement, and it aborts or rolls back the entire sequence.
 
+:::tip
+If you're looking for an in-depth example of breaking up queries for batch execution, check out the chunking queries [walkthrough](/sdk/walkthroughs/chunking-queries).
+:::
+
 ### `batch`
 
 To send batch statements, you must feed `batch()` with a list of prepared statements and get back the results. That is, these do not have a statement method attached (e.g., `.all()`) since the `batch` method will handle the execution. You can also construct batches reusing the same prepared statement.
