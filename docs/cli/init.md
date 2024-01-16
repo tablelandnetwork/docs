@@ -7,11 +7,7 @@ keywords:
   - tableland init
 ---
 
-## init
-
-`tableland init`
-
-Create a config file.
+## `tableland init`
 
 Before starting with the CLI, it’s best to create a config file. This will create a JSON or YAML file that stores a `privateKey`, `chain`, and `providerUrl`. Once these are set, commands will leverage these values.
 

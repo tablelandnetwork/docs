@@ -51,7 +51,7 @@ Output:
 
 :::warning
 ENS support is very experimental; long term support is not guaranteed!
-:::warning
+:::
 
 You must specify the `enableEnsExperiment` flag, either in your `.tablelandrc` file or your flags. You must also specify an `ensProviderUrl`, which should use a provider for an ENS compatible testnet or mainnet.
 

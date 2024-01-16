@@ -13,7 +13,7 @@ With namespaces, an [ENS domain](https://ens.domains/) can map to one or more ta
 
 :::warning
 ENS support is very experimental; long term support is not guaranteed!
-:::warning
+:::
 
 ### `set <domain> <subdomain>=<name>`
 
