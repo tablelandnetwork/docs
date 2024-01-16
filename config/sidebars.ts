@@ -65,8 +65,9 @@ const fundamentals = [
       "fundamentals/why-sqlite",
     ],
   },
-  "fundamentals/supported-chains",
+  "fundamentals/features",
   "fundamentals/limits",
+  "fundamentals/supported-chains",
   ...section("Architecture"),
   "fundamentals/architecture/protocol-design",
   "fundamentals/architecture/table-token",
@@ -505,7 +506,7 @@ const sidebars: SidebarsConfig = {
     {
       type: "link",
       label: "Showcase",
-      href: "/Showcase",
+      href: "/showcase",
       className: "sidebar-landing sidebar-footer",
     },
     {

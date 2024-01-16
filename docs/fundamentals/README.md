@@ -18,7 +18,7 @@ If you're eager to get building and use the Tableland protocol, you can dive rig
 
 Keep in mind that table creates and writes require you to interact with a blockchain, so you'll need a wallet and funds to use the clients noted above. Also, Tableland offers SQLite language compatibility but with some limitations, so be sure to check out the [SQL specification](/sql/specification) for details.
 
-If you'd like to help expand and decentralize the network itself, you can also choose to run your own [Tableland validator node](https://github.com/tablelandnetwork/go-tableland) with relatively low hardware and cost requirements.
+If you'd like to help expand and decentralize the network itself, you can also choose to run your own [Tableland validator node](/validator/node/) with relatively low hardware and cost requirements.
 
 :::note
 Tableland is still in open beta and will be launching the production network in 2024. But, smart contracts and apps deployed on testnet and mainnet chains can use the protocol during this open beta period.
