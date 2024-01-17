@@ -8,18 +8,21 @@ import { useLocation } from "@docusaurus/router";
 import CustomFooter from "@site/src/theme/CustomFooter";
 import Heading from "@theme/Heading";
 import Layout from "@theme/Layout";
+import ThemedImage from "@theme/ThemedImage";
 import YoutubeEmbed from "@site/src/components/YoutubeEmbed";
 import {
   projects as projectsData,
   type Project,
   type Tags,
   type Chains,
+  type Protocol,
 } from "./projects";
 import styles from "./index.module.css";
 
 interface FilterOptions {
   tags: Tags[];
   chains: Chains[];
+  protocol: Protocol[];
 }
 
 const slugify = (text: string) => {
@@ -44,6 +47,7 @@ export default function Showcase() {
   const [filterOptions, setFilterOptions] = useState<FilterOptions>({
     tags: [],
     chains: [],
+    protocol: [],
   });
   const [filter, setFilter] = useState<string>("");
   const [modalIsOpen, setModalIsOpen] = useState(false);
@@ -54,6 +58,7 @@ export default function Showcase() {
     setLoading(false);
     const allTags = new Set();
     const allChains = new Set();
+    const allProtocols: Protocol[] = ["Tableland", "Textile"];
 
     projectsData.forEach((project) => {
       project.tags?.forEach((tag) => allTags.add(tag));
@@ -62,7 +67,11 @@ export default function Showcase() {
 
     const uniqueTags = Array.from(allTags) as Tags[];
     const uniqueChains = Array.from(allChains) as Chains[];
-    setFilterOptions({ tags: uniqueTags, chains: uniqueChains });
+    setFilterOptions({
+      tags: uniqueTags,
+      chains: uniqueChains,
+      protocol: allProtocols,
+    });
   }, []);
 
   useEffect(() => {
@@ -119,15 +128,18 @@ export default function Showcase() {
         ) ||
         project.chains?.some((chain) =>
           chain.toLowerCase().includes(searchQuery.toLowerCase())
-        )
+        ) ||
+        project.protocol.toLowerCase().includes(searchQuery.toLowerCase())
       );
     })
     .filter((project) => {
-      // Filter based on the selected filter (if any)
+      // Filter based on the selected filter (if any) for tags, chains, or
+      // protocol (Tableland or Textile)
       return (
         filter === "" ||
         project.tags?.includes(filter as Tags) ||
-        project.chains?.includes(filter as Chains)
+        project.chains?.includes(filter as Chains) ||
+        project.protocol === filter
       );
     });
 
@@ -149,22 +161,21 @@ export default function Showcase() {
           </Link>
         </header>
         <p className="hero__subtitle">
-          Explore the ecosystem of projects building on the Tableland Network.
+          Explore the ecosystem of projects building with the protocol.
         </p>
-        <hr />
         <input
           type="text"
-          placeholder="Search projects by name, tags, or chain..."
+          placeholder="Search by name, tags, or chain..."
           onChange={handleSearch}
           value={searchQuery}
           className={styles.searchInput}
         />
         <select onChange={handleFilterChange} className={styles.dropdownFilter}>
           <option value="">Filter by</option>
-          <optgroup label="Tags">
-            {filterOptions.tags.map((tag) => (
-              <option key={tag} value={tag}>
-                {tag}
+          <optgroup label="Protocol">
+            {filterOptions.protocol.map((protocol) => (
+              <option key={protocol} value={protocol}>
+                {protocol}
               </option>
             ))}
           </optgroup>
@@ -175,8 +186,15 @@ export default function Showcase() {
               </option>
             ))}
           </optgroup>
+          <optgroup label="Tags">
+            {filterOptions.tags.map((tag) => (
+              <option key={tag} value={tag}>
+                {tag}
+              </option>
+            ))}
+          </optgroup>
         </select>
-        {loading && <div>Loading...</div>}
+        <hr />
         {!loading && (
           <>
             <div className={styles.projectShowcase}>
@@ -203,6 +221,35 @@ export default function Showcase() {
                         )
                       )}
                     </div>
+                  </div>
+                  <div className={styles.projectCardProtocol}>
+                    {project.protocol === "Tableland" ? (
+                      <>
+                        <ThemedImage
+                          alt="Built on Tableland"
+                          sources={{
+                            light: `/img/tableland/mesa-black.png`,
+                            dark: `/img/tableland/mesa-white.png`,
+                          }}
+                        />
+                        <span className={styles.tooltipText}>
+                          Built on Tableland
+                        </span>
+                      </>
+                    ) : (
+                      <>
+                        <ThemedImage
+                          alt="Built on Textile"
+                          sources={{
+                            light: `/img/tableland/textile.png`,
+                            dark: `/img/tableland/textile.png`,
+                          }}
+                        />
+                        <span className={styles.tooltipText}>
+                          Built on Textile
+                        </span>
+                      </>
+                    )}
                   </div>
                 </div>
               ))}
@@ -239,6 +286,7 @@ export default function Showcase() {
                     </div>
                     <p className="margin-bottom--md">
                       {currentProject.description}
+                      <br />
                     </p>
                     <div
                       className={clsx(
@@ -252,6 +300,9 @@ export default function Showcase() {
                       ].map((tag, index) => (
                         <span key={`${tag}-${index}`}>{tag}</span>
                       ))}
+                      <span className={styles.builtOnTag}>
+                        Built on {currentProject.protocol}
+                      </span>
                     </div>{" "}
                     <hr />
                     <h3>Details</h3>
