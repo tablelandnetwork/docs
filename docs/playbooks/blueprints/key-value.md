@@ -7,7 +7,7 @@ keywords:
 
 Tableland is all about relational data between tables. But, relational databases also make excellent key-value stores. When you store key-value pairs in a relational database, your keys become relational links to other content and data, adding nice query features that SQL was designed for.
 
-## Setup
+## Table design
 
 Let's say you want to store key-value pairs that map strings to JSON data. You'll need to create a table with two columns, specifying that your key column (e.g., `k`) is of type `TEXT` and `PRIMARY KEY`, and your value column (e.g., `v`) is of type `TEXT`.
 
@@ -18,7 +18,11 @@ CREATE TABLE kv (
 );
 ```
 
-Tableland also supports the `BLOB` (binary large objects) datatype. Certain use cases might prefer to use this as a type for the value `v` since the data is stored exactly as it was input (e.g., as bytes).
+Tableland also supports the `BLOB` (binary large objects) datatype. Certain use cases might prefer to use this as a type for the value `v` since the data is stored exactly as it was input (e.g., as bytes). Ultimately, our table will look something like this:
+
+| k             | v                                |
+| ------------- | -------------------------------- |
+| `key-or-uuid` | `{"some_json_key":"some_value"}` |
 
 :::note
 The word `key` is a _reserved keyword_ in SQLite and cannot be used, hence, why `k` was selected above. Attempting to use `key` will cause the table's creation to fail.

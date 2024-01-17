@@ -14,7 +14,7 @@ Whether or not you're new to SQL, you should still review some of the introducto
 The intent of the first section is to provide a general overview of how to do something with Tableland SQL. It is not comprehensive, as the specification itself provides the most up-to-date and detailed information. From there, additional docs outline how to use SQL from a design perspective (structuring tables and query formation).
 
 :::tip
-Be sure to review the [SQL specification](/sql/specification) once you understand the basics. Also, note there are implementation-focused guides that demonstrate how to do this with actual code vs. pure SQL guides.
+If you're looking for example table designs, check out the [playbooks section](/playbooks/blueprints).
 :::
 
 ## Usage
@@ -30,6 +30,10 @@ Tableland currently supports the following SQL clauses:
 - [`SELECT`](/sql/read): Select a set of data from a table(s), along with conditions.
 - [`GRANT`/`REVOKE`](/sql/access-control): Control how users can write to tables.
 - [`ALTER TABLE`](/sql/alter-table): Adjust an existing table's structure.
+
+:::note
+Be sure to review the [SQL specification](/sql/specification) once you understand the basics. Also, note there are implementation-focused guides that demonstrate how to do this with actual code vs. pure SQL guides.
+:::
 
 To access the database, Tableland clients like the [SDK](/sdk), [smart contracts](/smart-contracts), and [CLI](/cli) can be used to create and mutate table data. These also use the [Gateway REST API](/validator/api) to actually read data directly from the Tableland network by directly writing `SELECT` statement against it.
 

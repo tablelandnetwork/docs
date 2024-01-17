@@ -31,8 +31,9 @@ The TL;DR is that Tableland can be used as a data storage option with onchain da
 Looking for more? Check out the page on [how to build an NFT](/playbooks/concepts/how-to-build-an-nft), including additional resources for defining an [optimal SQL table structure](/playbooks/concepts/nft-metadata) or [building a dynamic NFT in Solidity](/tutorials/dynamic-nft-solidity).
 :::
 
-### Data DAOs & token gating
+### Data pipelines & DAOs
 
+- Datasets that require permissionless data storage for open read access, such as AI/ML workloads.
 - Storing large media on file storage networks (IPFS, Filecoin, etc.) where pointers and metadata exist in tables.
 - Access controls are baked into the protocol to allow for token ownership or onchain checks to dictate table mutations (e.g., mutate a row only if provisioned by the dataset's controller).
 - Storing publicly shared data, like a CMS or knowledge base, related to DAO operations.
@@ -47,10 +48,3 @@ As a best practice, developers should educate their users on what they’re usin
 - **High frequency, sub-second writes**: Most chains that cannot handle this volume / speed—such as a high frequency trading bot.
 - **Storing _every_ user interaction in an application**: It probably doesn’t make sense for this data to live in an web3 table, such as keystrokes or clicks. The write frequency would result in high costs unless some sort of batching mechanism is used (e.g., aggregate user data over some time period and only update this data at a more cost effective frequency)
 - **Extremely large datasets or files**: These should be avoided and are better handled by file storage, using solutions like IPFS, Filecoin, or similar. But, _pointers to these locations_ (like CIDs) and related metadata are a great use case for Tableland tables, actually.
-
-## Get connected
-
-If you're building out a use case and looking to connect with the Tableland team, there are a couple of ways we can help:
-
-- Set up a [discovery call](https://calendly.com/marlatextile/30min) with the Tableland partnerships team.
-- [Join our Discord](https://discord.com/invite/dc8EBEhGbg) and use the `#contact-team` channel to start a conversation.

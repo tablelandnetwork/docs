@@ -68,13 +68,6 @@ const fundamentals = [
   "fundamentals/features",
   "fundamentals/limits",
   "fundamentals/supported-chains",
-  ...section("Architecture"),
-  "fundamentals/architecture/protocol-design",
-  "fundamentals/architecture/table-token",
-  "fundamentals/architecture/gateway",
-  "fundamentals/architecture/query-optimization",
-  "fundamentals/architecture/cost-estimator",
-  ...section("About"),
   {
     type: "category",
     label: "Use cases",
@@ -84,6 +77,13 @@ const fundamentals = [
     },
     items: [],
   },
+  ...section("Architecture"),
+  "fundamentals/architecture/protocol-design",
+  "fundamentals/architecture/table-token",
+  "fundamentals/architecture/gateway",
+  "fundamentals/architecture/query-optimization",
+  "fundamentals/architecture/cost-estimator",
+  ...section("About"),
   "fundamentals/about/faqs",
   "fundamentals/about/glossary",
   "fundamentals/about/open-beta",
@@ -140,7 +140,6 @@ const playbooks = [
   "playbooks/README",
   ...section("Concepts"),
   "playbooks/concepts/access-control",
-
   {
     type: "category",
     label: "NFTs",
@@ -152,11 +151,17 @@ const playbooks = [
   {
     type: "category",
     label: "SQL blueprints",
+    link: {
+      type: "generated-index",
+      slug: "playbooks/blueprints",
+    },
     items: [
       "playbooks/blueprints/erc721-metadata",
       "playbooks/blueprints/erc1155-metadata",
+      "playbooks/blueprints/gaming",
       "playbooks/blueprints/key-value",
       "playbooks/blueprints/studio-app-design",
+      "playbooks/blueprints/data-dao",
     ],
   },
   ...section("Frameworks"),
