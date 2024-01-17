@@ -81,7 +81,7 @@ Watch database changes to perform logic in external services. [Docs](/sdk/regist
 
 ### Web app
 
-Deploy projects in the Studio and build an app in minutes. [Docs](/studio/web).
+Deploy projects in the Studio and build an app in minutes. [Docs](/studio/web/getting-started).
 
 ### CLI
 

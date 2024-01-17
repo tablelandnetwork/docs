@@ -10,14 +10,44 @@ import Heading from "@theme/Heading";
 import Layout from "@theme/Layout";
 import ThemedImage from "@theme/ThemedImage";
 import YoutubeEmbed from "@site/src/components/YoutubeEmbed";
-import {
-  projects as projectsData,
-  type Project,
-  type Tags,
-  type Chains,
-  type Protocol,
-} from "./projects";
+import projectsData from "../../components/projects";
 import styles from "./index.module.css";
+
+export interface Project {
+  name: string; // Name of the project
+  description: string; // Short description
+  logo: string; // Logo filename in `src/static/img/showcase`
+  protocol: Protocol; // Either Tableland or Textile
+  tags?: Tags[]; // Tags for the project, for filtering
+  chains?: Chains[]; // Chains the project is on, for filtering
+  website: string; // Website link
+  github?: string; // Github link
+  twitter: string; // Twitter link
+  details: string; // Long form details about the project
+  youtubeId?: string; // Youtube demo ID, e.g., `-MUq--Nrd0c` for `https://www.youtube.com/watch?v=-MUq--Nrd0c`
+}
+
+export type Protocol = "Tableland" | "Textile";
+
+export type Tags =
+  | "NFT"
+  | "Gaming"
+  | "DAO"
+  | "DeFi"
+  | "Infra"
+  | "Social"
+  | "Dataset"
+  | "DePIN"
+  | "dApp"
+  | "AI"
+  | "ML";
+
+export type Chains =
+  | "Ethereum"
+  | "Filecoin"
+  | "Arbitrum"
+  | "Optimism"
+  | "Polygon";
 
 interface FilterOptions {
   tags: Tags[];

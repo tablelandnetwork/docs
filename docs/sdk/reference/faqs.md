@@ -29,7 +29,7 @@ By default, the `Database` is instantiated with `autoWait` set to `true`. The SD
 
 ## I don't use ethers but another package like viem. Can I still use Tableland?
 
-Yes. See the [wagmi](/docs/playbooks/frameworks/wagmi) docs for an example of how to set up an ethers to viem adapter. The key point is that whatever package you're using needs to convert their version of a signer to an ethers-compatible signer.
+Yes. See the [wagmi](/playbooks/frameworks/wagmi) docs for an example of how to set up an ethers to viem adapter. The key point is that whatever package you're using needs to convert their version of a signer to an ethers-compatible signer.
 
 ## Can I interact directly with the onchain registry or Tableland validator?
 
