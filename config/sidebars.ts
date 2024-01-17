@@ -385,6 +385,7 @@ const localTableland = [
   ...sidepageHeader("Local Tableland"),
   "local-tableland/README",
   "local-tableland/cli",
+  "local-tableland/methods",
   "local-tableland/testing",
 ];
 
