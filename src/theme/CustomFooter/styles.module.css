@@ -24,7 +24,8 @@
 }
 
 @media (max-width: 996px) {
-  .colorModeToggle {
+  .colorModeToggle,
+  .footerIconRight {
     display: none;
   }
 }

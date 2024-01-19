@@ -49,9 +49,9 @@ export default function Home(): JSX.Element {
                 <Link to="/fundamentals/supported-chains">
                   multiple blockchains
                 </Link>
-                , including Ethereum, Polygon, Arbitrum, and Optimism, and be a
-                part of the growing number of projects using Tableland for
-                data-driven applications.
+                , including Filecoin, Ethereum, Polygon, Arbitrum, and
+                Optimism—and be a part of the growing number of projects using
+                Tableland for data-driven applications.
               </p>
               <Link
                 className={clsx("button button--primary", styles.getStartedBtn)}

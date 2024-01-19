@@ -24,6 +24,10 @@ Be sure to use `https://tableland.network` on mainnets, and `https://testnets.ta
 
 At the protocol level, the Tableland network is separated such that nodes process and respond to SQL queries relative to each environment. If you were to use the `testnets` gateway on a mainnet chain / contract, this would lead to issues. The `testnets` gateway only queries tables that exist on testnet chains, whereas the `tableland.network` gateway only queries tables that exist on mainnet chains.
 
+## Can I use Tableland on any chain I'd like?
+
+No. There are a subset of supported chains that Tableland is compatible with. You can find the list of supported chains [here](/fundamentals/supported-chains). If you'd like to see new chains, reach out to the team on Discord.
+
 ## Is the Tableland network in open beta or full production mode?
 
 The Tableland network is currently in _open beta_ and will move into production in 2024—see more information on what this entails and the migration plan [here](/fundamentals/about/open-beta). Between now and then, we’ll provide the proper migration resources after we properly prepare for the launch (e.g., tokenomics, adding to the protocol, further decentralizing the network, etc.).

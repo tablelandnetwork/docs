@@ -218,7 +218,7 @@ function Feature({ title, icon, description }: FeatureItem) {
     <div className={clsx("col col--4")}>
       <div className="text">
         {icon}
-        <h3>{title}</h3>
+        <h2>{title}</h2>
         <p>{description}</p>
       </div>
     </div>

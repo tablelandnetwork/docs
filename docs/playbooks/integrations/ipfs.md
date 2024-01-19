@@ -121,7 +121,7 @@ For reference, you can check out a deployed table on Filecoin Calibration: [tabl
 
 ## Using web3.storage for persistence
 
-If you want to persist your data, you can use [web3.Storage](https://web3.storage/) to create a deal that will store your data on the Filecoin network. This process slightly differs from the setup above because web3.storage will handle creating the CID, so the JETI plugin will not be used.
+If you want to persist your data, you can use [web3.storage](https://web3.storage/) to create a deal that will store your data on the Filecoin network. This process slightly differs from the setup above because web3.storage will handle creating the CID, so the JETI plugin will not be used.
 
 Make sure you've created an account before continuing [here](https://console.web3.storage/) since you'll use your email address in the steps below. Then, you'll need to install the web3.storage client:
 

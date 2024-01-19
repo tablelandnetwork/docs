@@ -35,6 +35,7 @@
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
     "react-icons": "^4.12.0",
+    "react-modal": "^3.16.1",
     "rehype-katex": "^7.0.0",
     "remark-math": "^6.0.0",
     "url": "^0.11.3"
@@ -48,7 +49,8 @@
     "@docusaurus/eslint-plugin": "^3.1.0",
     "@docusaurus/module-type-aliases": "^3.1.0",
     "@docusaurus/tsconfig": "^3.0.1",
-    "@docusaurus/types": "^3.0.1",
+    "@docusaurus/types": "^3.1.0",
+    "@types/react-modal": "^3.16.3",
     "docusaurus-plugin-typedoc": "^0.21.0",
     "prettier": "^2.8.8",
     "typedoc": "^0.25.4",

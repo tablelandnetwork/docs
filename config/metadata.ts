@@ -7,11 +7,11 @@ export default [
   {
     name: "og:title",
     content:
-      "Tableland Docs: Read & write tamperproof data using the decentralized cloud database for web3 apps.",
+      "Tableland Docs: Read & write tamperproof data using the serverless web3 database for applications.",
   },
   {
     name: "twitter:title",
-    content: "Tableland: Permissionless cloud database", // Need to fit within Twitter card title char limit
+    content: "Tableland: Permissionless web3 database", // Need to fit within Twitter card title char limit
   },
   {
     name: "twitter:description",
@@ -25,6 +25,6 @@ export default [
   {
     name: "keywords",
     content:
-      "tableland, table land, docs, documentation, web3, crypto, blockchain, SQL, SQLite, relational, database, serverless, permissionless, evm, decentralized, data pipeline, open source",
+      "tableland, web3 database, table land, docs, documentation, web3, crypto, blockchain, SQL, SQLite, relational, database, serverless, permissionless, evm, decentralized, data pipeline, open source, nft metadata, opensea metadata",
   },
 ];

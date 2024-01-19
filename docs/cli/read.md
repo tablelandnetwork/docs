@@ -1,6 +1,6 @@
 ---
 title: Read
-description: Run a read-only query against a remote table.
+description: Run a read-only query against remote tables.
 keywords:
   - CLI
   - command line
@@ -9,11 +9,13 @@ keywords:
 
 ## `tableland read <query>`
 
-Query against one or more tables and retrieve the associated data.
+The `read` command lets you query against one or more tables and retrieve the associated data. There are also additional options that let you format the output.
 
 | Argument  | Type     | Description              |
 | --------- | -------- | ------------------------ |
 | `<query>` | `string` | The SQL query statement. |
+
+Note that for both `--unwrap` and `--extract` options described below, the `--chain` must also be explicitly provided.
 
 <!--prettier-ignore-->
 | Option    | Type      | Default | Description                                           |
@@ -21,8 +23,6 @@ Query against one or more tables and retrieve the associated data.
 | --format  | `string`  | `objects` | Output format—either `pretty`, `table`, or `objects`. |
 | --extract | `boolean` | `false` | Returns only the set of values of a single column, assuming the read statement also only specifies a single column. |
 | --unwrap  | `boolean` | `false` | Returns the results of a single row instead of array of results, assuming the read statement also only specifies a single row. |
-
-Note that for both `--unwrap` and `--extract`, the `--chain` must also be explicitly provided.
 
 ## Examples
 
@@ -109,7 +109,7 @@ Output:
 
 :::warning
 ENS support is very experimental; long term support is not guaranteed!
-:::warning
+:::
 
 You must specify the `enableEnsExperiment` flag, either in your `.tablelandrc` file or your flags. You must also specify an `ensProviderUrl`, which should use a provider for an ENS compatible testnet or mainnet.
 

@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import clsx from "clsx";
-import Link from "@docusaurus/Link";
-import styles from "./index.module.css";
 import { supportedChains, ChainFormatted } from "../SupportedChains";
+import Link from "@docusaurus/Link";
+import Heading from "@theme/Heading";
+import styles from "./index.module.css";
 
 interface ChainCost extends ChainFormatted {
   createSize: number;
@@ -18,33 +18,20 @@ interface ChainCost extends ChainFormatted {
   writeCostUsdPerMb: number;
 }
 
-// Retrieve chain price costs
-function getChainCosts(token: string): number {
-  // Hardcoded crypto prices
-  const ethPrice = 1600;
-  const maticPrice = 1.1;
-  const filPrice = 3.54;
-
-  switch (token) {
-    case "ETH":
-      return ethPrice;
-    case "MATIC":
-      return maticPrice;
-    case "FIL":
-      return filPrice;
-    default:
-      return 0;
-  }
+interface CalculatedCost {
+  eth: number;
+  matic: number;
+  fil: number;
 }
 
 // Retrieve chain cost approximations
-function chainCostInfo(): ChainCost[] {
+function chainCostInfo(costs: CalculatedCost): ChainCost[] {
   let chains = supportedChains().filter(
     (chain) => chain.location === "mainnet"
   ) as ChainCost[];
-  const ethPrice = getChainCosts("ETH");
-  const maticPrice = getChainCosts("MATIC");
-  const filPrice = getChainCosts("FIL");
+  const ethPrice = costs.eth || 0;
+  const maticPrice = costs.matic || 0;
+  const filPrice = costs.fil || 0;
 
   chains.forEach((chain) => {
     switch (chain.chainName) {
@@ -146,8 +133,14 @@ function chainCostInfo(): ChainCost[] {
 }
 
 // Get chain costs for a `type` of `create` or `write` statements
-export function QueryCosts({ type }: { type: string }): JSX.Element {
-  const chains = chainCostInfo();
+function QueryCosts({
+  type,
+  costs,
+}: {
+  type: string;
+  costs: CalculatedCost;
+}): JSX.Element {
+  const chains = chainCostInfo(costs);
   if (type === "create") {
     return (
       <>
@@ -156,10 +149,10 @@ export function QueryCosts({ type }: { type: string }): JSX.Element {
             <tr>
               <th>Chain</th>
               <th>Create size (B)</th>
-              <th>Create cost (ETH)</th>
+              <th>Create cost</th>
               <th>Create cost (USD)</th>
-              <th>Create cost (ETH/MB)</th>
-              <th>Create cost ($/MB)</th>
+              <th>Create cost</th>
+              <th>Create cost (USD/MB)</th>
             </tr>
           </thead>
           <tbody>
@@ -171,9 +164,13 @@ export function QueryCosts({ type }: { type: string }): JSX.Element {
                     {c.chainNameFormatted}
                   </td>
                   <td>{c.createSize}</td>
-                  <td>{c.createCostCrypto.toFixed(7)}</td>
+                  <td>
+                    {c.createCostCrypto.toFixed(7)} {c.cryptoToken}
+                  </td>
                   <td>${c.createCostUsd.toFixed(4)}</td>
-                  <td>{c.createCostCryptoPerMb.toFixed(4)}</td>
+                  <td>
+                    {c.createCostCryptoPerMb.toFixed(4)} {c.cryptoToken}/MB
+                  </td>
                   <td>${c.createCostUsdPerMb.toFixed(2)}</td>
                 </tr>
               );
@@ -190,10 +187,10 @@ export function QueryCosts({ type }: { type: string }): JSX.Element {
             <tr>
               <th>Chain</th>
               <th>Write size (B)</th>
-              <th>Write cost (ETH)</th>
+              <th>Write cost</th>
               <th>Write cost (USD)</th>
-              <th>Write cost (ETH/MB)</th>
-              <th>Write cost ($/MB)</th>
+              <th>Write cost</th>
+              <th>Write cost (USD/MB)</th>
             </tr>
           </thead>
           <tbody>
@@ -205,9 +202,13 @@ export function QueryCosts({ type }: { type: string }): JSX.Element {
                     {c.chainNameFormatted}
                   </td>
                   <td>{c.writeSize}</td>
-                  <td>{c.writeCostCrypto.toFixed(7)}</td>
+                  <td>
+                    {c.writeCostCrypto.toFixed(7)} {c.cryptoToken}
+                  </td>
                   <td>${c.writeCostUsd.toFixed(4)}</td>
-                  <td>{c.writeCostCryptoPerMb.toFixed(4)}</td>
+                  <td>
+                    {c.writeCostCryptoPerMb.toFixed(4)} {c.cryptoToken}/MB
+                  </td>
                   <td>${c.writeCostUsdPerMb.toFixed(2)}</td>
                 </tr>
               );
@@ -221,7 +222,111 @@ export function QueryCosts({ type }: { type: string }): JSX.Element {
   }
 }
 
-// Get chain costs for a `type` of `create` or `write` statements
-export function TokenCost({ token }: { token: string }): JSX.Element {
-  return <>${getChainCosts(token).toFixed(2)}</>;
+export default function CostEstimator(): JSX.Element {
+  const [costs, setCosts] = useState({
+    eth: 2485.55,
+    matic: 0.85,
+    fil: 5.85,
+  });
+
+  const handleCurrencyChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const { name, value } = e.target;
+    const parsedValue = parseFloat(value).toFixed(2);
+
+    if (parsedValue === "NaN") {
+      setCosts((prevCosts) => ({
+        ...prevCosts,
+        [name]: "",
+      }));
+    } else if (parseFloat(parsedValue) >= 0) {
+      setCosts((prevCosts) => ({
+        ...prevCosts,
+        [name]: parseFloat(parsedValue),
+      }));
+    }
+  };
+
+  return (
+    <>
+      <p>
+        Every byte{" "}
+        <Link to="/fundamentals/architecture/query-optimization">
+          contributes to the cost
+        </Link>{" "}
+        associated with database mutating queries, and we're always working to
+        reduce costs with the goal of being cost competitive with web2
+        databases. The tables highlighted below provide <i>estimates</i> for
+        creating and writing data where each shows the following:
+      </p>
+      <ul>
+        <li>Size of the statement in bytes (B).</li>
+        <li>Cost in the chain's native crypto token or USD.</li>
+        <li>These costs mapped per megabyte (MB).</li>
+      </ul>{" "}
+      <p>
+        Please be sure to perform your own tests to understand price
+        implications since the live market impacts the price of any onchain
+        transaction. For these estimates, the following market prices (USD) are
+        used in the calculation, and you can adjust them below:
+      </p>
+      <table>
+        <tbody>
+          <tr>
+            <td>
+              <b>ETH price (USD)</b>:
+            </td>
+            <td>
+              <input
+                type="number"
+                step="0.01"
+                name="eth"
+                value={costs.eth}
+                onChange={handleCurrencyChange}
+                className={styles.currencyInput}
+              />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <b>MATIC price (USD)</b>:
+            </td>
+            <td>
+              <input
+                type="number"
+                step="0.01"
+                name="matic"
+                value={costs.matic}
+                onChange={handleCurrencyChange}
+                className={styles.currencyInput}
+              />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <b>FIL price (USD)</b>:
+            </td>
+            <td>
+              <input
+                type="number"
+                step="0.01"
+                name="fil"
+                value={costs.fil}
+                onChange={handleCurrencyChange}
+                className={styles.currencyInput}
+              />
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <br />
+      <p>
+        Note that all chains' native token is ETH, except for Polygon (uses
+        MATIC) and Filecoin (uses FIL).
+      </p>
+      <Heading as="h2">Create costs</Heading>
+      <QueryCosts type={"create"} costs={costs} />
+      <Heading as="h2">Write costs</Heading>
+      <QueryCosts type={"write"} costs={costs} />
+    </>
+  );
 }

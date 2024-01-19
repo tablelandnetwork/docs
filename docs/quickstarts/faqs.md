@@ -1,5 +1,6 @@
 ---
-title: FAQs
+title: General FAQs
+sidebar_label: FAQs
 description: Review commonly asked questions about the Tableland network and community.
 keywords:
   - faq

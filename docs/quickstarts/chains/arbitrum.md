@@ -25,28 +25,6 @@ Thus, you can imagine how high volume applications can take advantage of both th
 
 ## Setup & resources
 
-### Sepolia (testnet)
-
-- Average block time: 2 seconds
-- Block depth: 0
-- Average SQL materialization time: {'<'}5 seconds
-- Chain ID: {'<'}ChainInfo chain='arbitrum-sepolia' info='chainId' />
-- Symbol: ETH
-- Status Dashboard:
-  - N/A
-- Block Explorer:
-  - [https://sepolia.arbitrum.io/](https://sepolia.arbitrum.io/)
-- Faucet (use the Ethereum Sepolia faucet and then bridge ETH to Arbitrum):
-  - [https://sepoliafaucet.com/](https://sepoliafaucet.com/)
-  - [https://faucet.chainstack.com/sepolia-testnet-faucet](https://faucet.chainstack.com/sepolia-testnet-faucet)
-- Bridge:
-  - [https://bridge.arbitrum.io/](https://bridge.arbitrum.io/?l2ChainId=421614)
-- RPC URL:
-  - See [https://chainlist.org/chain/421614](https://chainlist.org/chain/421614)
-- Tableland contract address: <ChainInfo chain='arbitrum-sepolia' info='contractAddress' />
-- SDK network name: <ChainInfo chain='arbitrum-sepolia' info='chainName' />
-- Tableland gateway: <ChainInfo chain='arbitrum-sepolia' info='baseUrl' />
-
 ### Arbitrum One (mainnet)
 
 - Average block time: 2 seconds
@@ -83,6 +61,28 @@ Thus, you can imagine how high volume applications can take advantage of both th
   - See [https://chainlist.org/chain/42170](https://chainlist.org/chain/42170)
 - SDK network name: <ChainInfo chain='arbitrum-nova' info='chainName' />
 - Tableland gateway: <ChainInfo chain='arbitrum-nova' info='baseUrl' />
+
+### Sepolia (testnet)
+
+- Average block time: 2 seconds
+- Block depth: 0
+- Average SQL materialization time: {'<'}5 seconds
+- Chain ID: <ChainInfo chain='arbitrum-sepolia' info='chainId' />
+- Symbol: ETH
+- Status Dashboard:
+  - N/A
+- Block Explorer:
+  - [https://sepolia.arbitrum.io/](https://sepolia.arbitrum.io/)
+- Faucet (use the Ethereum Sepolia faucet and then bridge ETH to Arbitrum):
+  - [https://sepoliafaucet.com/](https://sepoliafaucet.com/)
+  - [https://faucet.chainstack.com/sepolia-testnet-faucet](https://faucet.chainstack.com/sepolia-testnet-faucet)
+- Bridge:
+  - [https://bridge.arbitrum.io/](https://bridge.arbitrum.io/?l2ChainId=421614)
+- RPC URL:
+  - See [https://chainlist.org/chain/421614](https://chainlist.org/chain/421614)
+- Tableland contract address: <ChainInfo chain='arbitrum-sepolia' info='contractAddress' />
+- SDK network name: <ChainInfo chain='arbitrum-sepolia' info='chainName' />
+- Tableland gateway: <ChainInfo chain='arbitrum-sepolia' info='baseUrl' />
 
 ## Getting testnet funds
 

@@ -1,0 +1,9 @@
+.currencyInput {
+  border-radius: 4px;
+  padding: 4px;
+  background-color: var(--docusaurus-collapse-button-bg);
+}
+
+.currencyInput:focus {
+  outline: none;
+}

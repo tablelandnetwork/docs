@@ -18,7 +18,7 @@ If you're eager to get building and use the Tableland protocol, you can dive rig
 
 Keep in mind that table creates and writes require you to interact with a blockchain, so you'll need a wallet and funds to use the clients noted above. Also, Tableland offers SQLite language compatibility but with some limitations, so be sure to check out the [SQL specification](/sql/specification) for details.
 
-If you'd like to help expand and decentralize the network itself, you can also choose to run your own [Tableland validator node](https://github.com/tablelandnetwork/go-tableland) with relatively low hardware and cost requirements.
+If you'd like to help expand and decentralize the network itself, you can also choose to run your own [Tableland validator node](/validator/node/) with relatively low hardware and cost requirements.
 
 :::note
 Tableland is still in open beta and will be launching the production network in 2024. But, smart contracts and apps deployed on testnet and mainnet chains can use the protocol during this open beta period.
@@ -35,4 +35,4 @@ import DocCardList from '@theme/DocCardList';
 
 <DocCardList />
 
-Be sure to also review the [Tableland SQL guides](/sql), which describe how to use SQL and details some web3 constraints that are important to understand when writing queries. If you're new to Tableland, there are a lot terms used throughout the protocol and documentation. The [glossary](/fundamentals/about/glossary) provides a description of various terms, and the [general FAQs](/fundamentals/about/general-faqs) are high-level common questions & answers. Note that more specific FAQs are scattered about the docs that are located within a specific topic's documentation.
+Be sure to also review the [Tableland SQL guides](/sql), which describe how to use SQL and details some web3 constraints that are important to understand when writing queries. If you're new to Tableland, there are a lot terms used throughout the protocol and documentation. The [glossary](/fundamentals/about/glossary) provides a description of various terms, and the [general FAQs](/fundamentals/about/faqs) are high-level common questions & answers. Note that more specific FAQs are scattered about the docs that are located within a specific topic's documentation.

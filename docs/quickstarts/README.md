@@ -167,7 +167,6 @@ Let's create a simple `my_table` with two columns: `id` and `val`.
     // Create a database connection
     const db = new Database({ signer });
 
-    const db = new Database({ signer });
     const { meta: create } = await db.prepare(`CREATE TABLE my_table (id int, val text);`).all();
     await create.txn?.wait();
     const [tableName] = create.txn?.names ?? [];
@@ -188,9 +187,8 @@ Let's create a simple `my_table` with two columns: `id` and `val`.
     }
 
     // Create a database connection
-    const db = new Database<TableSchema>();
+    const db = new Database<TableSchema>({ signer });
 
-    const db = new Database({ signer });
     const { meta: create } = await db.prepare(`CREATE TABLE my_table (id int, val text);`).all();
     await create.txn?.wait();
     const [tableName] = create.txn?.names ?? [];
