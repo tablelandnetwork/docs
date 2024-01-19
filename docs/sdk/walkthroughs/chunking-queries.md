@@ -12,7 +12,7 @@ import TabItem from "@theme/TabItem";
 
 ## Overview
 
-Tableland create and write statements flow through a pass chain. Because all chains have execution limits, there is a [35kb limit](/fundamentals/limits) imposed on the size of a single transaction. This means that if you try to execute a statement that is larger than 35kb, it will fail. We'll walk through how you can implement your own query chunking logic to get around this limit and submit multiple transactions to execute a set of statements.
+Tableland create and write statements flow through a base chain. Because all chains have execution limits, there is a [35kb limit](/fundamentals/limits) imposed on the size of a single statement. This means that if you try to execute a statement that is larger than 35kb, it will fail. We'll walk through how you can implement your own query chunking logic to get around this limit and submit multiple transactions to execute a set of statements.
 
 ## Setup
 
