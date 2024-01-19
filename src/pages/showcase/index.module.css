@@ -195,7 +195,7 @@ html[data-theme="dark"] .projectCard:hover {
   flex-wrap: wrap;
   overflow-x: auto;
   gap: 8px;
-  margin-top: 8px;
+  margin-top: 10px;
 }
 
 .projectCardTags span {
@@ -204,6 +204,7 @@ html[data-theme="dark"] .projectCard:hover {
   padding: 4px 8px;
   border-radius: 4px;
   font-size: 0.8em;
+  margin-top: 2px;
 }
 
 .builtOnTag {

@@ -30,6 +30,18 @@ export default [
     details: `WeatherXM is a network that's powered by community owned devices, purpose built by WeatherXM for weather data collection. As part of the network, devices are incentivized to share data, which is sent to various stations throughout the globe.\n\nOne of the challenges with this approach is not only ensuring that the raw device data is available when it's needed, but as a decentralized network, its infrastructure must also make sure that data is stored in a decentralized fashion instead of centralized infrastructure.\n\nAs devices send data to the network, it's replicated to a hot for immediate and TTL retrieval, which is pertinent for compute over that data. And for persistence guarantees, this data is also replicated to Filecoin for long-term storage guarantees, which can help the network ensure that data is available for years to come.`,
   },
   {
+    name: "Hideout Labs",
+    description:
+      "NFT platform for creators & collectors with dynamism & collaboration features.",
+    logo: "hideout.png",
+    protocol: "Tableland",
+    tags: ["NFT", "Marketplace", "dApp"],
+    chains: ["Ethereum"],
+    website: "https://linktr.ee/Skvllp",
+    twitter: "https://twitter.com/HideoutLabs",
+    details: `Hideout Labs is the creator of the popular NFT collections Skvllpvnkz and AWKN. Launching these collections set them down the path of addressing problems they saw in the space, particularly, with the goal of providing a way for anyone to launch dynamic NFT collections in a no-code experience as well as enabling for new NFT paradigms.\n\nThe Hideout Studio gives creators the ability to import NFT new or existing NFT collection artwork, randomly generate layers, apply/pick traits, and more. One of the goals for Hideout was to offer creators the flexibility between centralized metadata storage or decentralized storage.\n\nTableland was a natural fit for this use case, and the Hideout Studio uses Tableland as a deployment option to store collection NFT metadata. Under the hood, tables are controlled by each collection's ERC721 and ERC1155 smart contracts, which ensures that only the contract can write to the tables. Plus, the tables are publicly queryable, which means that anyone can build on top of the data.`,
+  },
+  {
     name: "KittyKart",
     description:
       "An FPS racing game where players can battle & upgrade their Karts as dynamic NFTs.",

@@ -38,6 +38,7 @@ export type Tags =
   | "Social"
   | "Dataset"
   | "DePIN"
+  | "Marketplace"
   | "dApp"
   | "AI"
   | "ML";
