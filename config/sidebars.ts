@@ -387,6 +387,7 @@ const localTableland = [
   "local-tableland/cli",
   "local-tableland/methods",
   "local-tableland/testing",
+  "local-tableland/fork-chain",
 ];
 
 // Gateway REST API
