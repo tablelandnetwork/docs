@@ -79,7 +79,7 @@ Sending a transaction is not free; you have to pay [gas](https://ethereum.org/en
 
 ### IPFS
 
-[IPFS](https://ipfs.tech/) stands for Interplanetary File System. It is a p2p protocol and is used as a common way to store files but in a distributed manner, which enables content addressing by way of [CIDs](#cid). IPFS has less of a "guaranteed" persistence mechanism but does offer a feature for "[pinning](https://docs.ipfs.tech/how-to/pin-files/)" files to help tell the network to keep the file around (but it's not incentive driven like its related protocol [Filecoin](#filecion)).
+[IPFS](https://ipfs.tech/) stands for Interplanetary File System. It is a p2p protocol and is used as a common way to store files but in a distributed manner, which enables content addressing by way of [CIDs](#cid). IPFS has less of a "guaranteed" persistence mechanism but does offer a feature for "[pinning](https://docs.ipfs.tech/how-to/pin-files/)" files to help tell the network to keep the file around (but it's not incentive driven like its related protocol [Filecoin](#filecoin)).
 
 ## L
 
