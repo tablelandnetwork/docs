@@ -29,7 +29,7 @@ info:
   license:
     name: Apache 2.0
     url: http://www.apache.org/licenses/LICENSE-2.0.html
-  version: 1.0.1
+  version: 1.1.0
 externalDocs:
   description: Tableland docs
   url: http://docs.tableland.xyz
@@ -82,7 +82,7 @@ paths:
       tags:
         - query
       summary: Query the network
-      description: Returns the results of a SQL read query against the Tabeland network
+      description: Returns the results of a SQL read query against the Tableland network
       operationId: queryByStatement
       parameters:
         - name: statement
@@ -119,6 +119,32 @@ paths:
           schema:
             type: boolean
             default: false
+      responses:
+        "200":
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                type: object
+        "400":
+          description: Invalid query/statement value
+        "404":
+          description: Row Not Found
+        "429":
+          description: Too Many Requests
+    post:
+      tags:
+        - query
+      summary: Query the network (POST)
+      description: Returns the results of a SQL read query against the Tableland network
+      operationId: queryByStatementPost
+      requestBody:
+        description: A JSON containing the statement and additional options
+        required: true
+        content: 
+          'application/json':
+            schema:
+              $ref: '#/components/schemas/Query'
       responses:
         "200":
           description: Successful operation
@@ -330,3 +356,25 @@ components:
         binary_version:
           type: string
           example: "v1.0.1"
+    Query:
+      type: object
+      properties:
+        statement:
+          description: The SQL read query statement
+          type: string
+          example: select * from healthbot_80001_1
+        format:
+          description: >
+            The requested response format:
+            * `objects` - Returns the query results as a JSON array of JSON objects.
+            * `table` - Return the query results as a JSON object with columns and rows properties.
+          type: string
+          example: objects
+        extract:
+          description: Whether to extract the JSON object from the single property of the surrounding JSON object.
+          type: boolean
+          example: false
+        unwrap:
+          description: Whether to unwrap the returned JSON objects from their surrounding array.
+          type: boolean
+          example: false
