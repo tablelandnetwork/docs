@@ -10,13 +10,40 @@ keywords:
 
 ## Endpoint
 
-`GET /query`
+The `/query` endpoint supports both `GET` and `POST` requests, returning the results of a SQL read query, along with options for formatting the response.
 
-The following describes the usage with placeholder parameters on a testnet gateway URL:
+`GET /query` or `POST /query`
+
+### GET request
+
+The following describes the `GET` usage with placeholder parameters on a testnet gateway URL:
 
 ```bash
 curl -X GET https://testnets.tableland.network/api/v1/query?format={objects|table}&extract={boolean}&unwrap={boolean}&statement={sql_select_statement} \
   -H 'Accept: application/json'
+```
+
+For example, to query the `healthbot_80001_1` table with default formatting options:
+
+```bash
+curl -X GET https://testnets.tableland.network/api/v1/query?statement=select%20%2A%20from%20healthbot_80001_1 \
+  -H 'Accept: application/json'
+```
+
+### POST request
+
+The following describes the `POST` usage with example parameters on a testnet gateway URL:
+
+```bash
+curl -L 'https://testnets.tableland.network/api/v1/query' \
+  -H 'Content-Type: application/json' \
+  -H 'Accept: application/json' \
+  -d '{
+    "statement": "select * from healthbot_80001_1",
+    "format": "objects",
+    "extract": false,
+    "unwrap": false
+  }'
 ```
 
 ## Parameters
@@ -46,6 +73,17 @@ See the [**query formatting**](/validator/api/query-formatting) section for how 
 ```bash
 curl -X GET https://testnets.tableland.network/api/v1/query?statement=select%20%2A%20from%20healthbot_80001_1 \
   -H 'Accept: application/json'
+```
+
+Or:
+
+```bash
+curl -L 'https://testnets.tableland.network/api/v1/query' \
+  -H 'Content-Type: application/json' \
+  -H 'Accept: application/json' \
+  -d '{
+    "statement": "select * from healthbot_80001_1"
+  }'
 ```
 
 Returns a successful (200) response:
