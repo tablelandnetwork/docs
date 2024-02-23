@@ -43,6 +43,9 @@ The `LocalTableland` constructor accepts a single argument, an object with the f
 - `verbose`: Output verbose logs to stdout.
 - `silent`: Silence all output to stdout.
 - `registryPort`: Use a custom registry hardhat port, e.g., `http://127.0.0.1:8545` is the default with port `8545`, but.
+- `forkUrl`: If forking a chain, the provider URL of the testnet or mainnet chain, such as an Alchemy or Infura URL.
+- `forkBlockNumber`: If forking a chain, the block number to fork from, which recreates the chain state up to that block.
+- `forkChainId`: If forking a chain, the chain ID of the chain.
 
 Most uses cases only use the `verbose` or `silent` options, which control logging behavior during tests.
 
@@ -51,6 +54,8 @@ const lt = new LocalTableland({ silent: false });
 ```
 
 In more complex cases, the registry and validator options allow you to point to custom instances. A monorepo setup, for example, might want separately test things in parallel, so the registry and validator need to be unique to each environment—check out the [`tableland-js` monorepo](https://github.com/tablelandnetwork/tableland-js/tree/main/packages) for how this might look.
+
+There's also a feature for _forking_ an existing testnet or mainnet chain, which will allow you to interact with the chain and table state in a sandboxed local environment. See the [forking chain state](/local-tableland/fork-chain) documentation for more information.
 
 ### Start
 
