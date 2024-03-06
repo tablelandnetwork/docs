@@ -7,7 +7,7 @@ keywords:
 
 Arbitrum is one of the leading EVM-compatible Layer 2 solutions that Tableland currently supports. Check out the overview of what this network is and relevant information when using it, including Arbitrum One vs. Arbitrum Nova.
 
-import { ChainInfo } from '@site/src/components/SupportedChains'
+import { ChainSection } from '@site/src/components/SupportedChains'
 
 ## Overview
 
@@ -25,69 +25,14 @@ Thus, you can imagine how high volume applications can take advantage of both th
 
 ## Setup & resources
 
-### Arbitrum One (mainnet)
-
-- Average block time: 2 seconds
-- Block depth: 0
-- Average SQL materialization time: {'<'}5 seconds
-- Chain ID: <ChainInfo chain='arbitrum' info='chainId' />
-- Symbol: ETH
-- Status Dashboard:
-  - N/A
-- Bridge:
-  - [https://bridge.arbitrum.io/](https://bridge.arbitrum.io/)
-- Block Explorer:
-  - [https://arbiscan.io](https://arbiscan.io)
-- RPC URL:
-  - See [https://chainlist.org/chain/42161](https://chainlist.org/chain/42161)
-- Tableland contract address: <ChainInfo chain='arbitrum' info='contractAddress' />
-- SDK network name: <ChainInfo chain='arbitrum' info='chainName' />
-- Tableland gateway: <ChainInfo chain='arbitrum' info='baseUrl' />
-
-### Arbitrum Nova (mainnet)
-
-- Average block time: 2 seconds
-- Block depth: 0
-- Average SQL materialization time: {'<'}5 seconds
-- Chain ID: <ChainInfo chain='arbitrum-nova' info='chainId' />
-- Symbol: ETH
-- Status Dashboard:
-  - N/A
-- Bridge:
-  - [https://bridge.arbitrum.io/?l2ChainId=42170](https://bridge.arbitrum.io/?l2ChainId=42170)
-- Block Explorer:
-  - [https://nova.arbiscan.io/](https://nova.arbiscan.io/)
-- RPC URL:
-  - See [https://chainlist.org/chain/42170](https://chainlist.org/chain/42170)
-- SDK network name: <ChainInfo chain='arbitrum-nova' info='chainName' />
-- Tableland gateway: <ChainInfo chain='arbitrum-nova' info='baseUrl' />
-
-### Sepolia (testnet)
-
-- Average block time: 2 seconds
-- Block depth: 0
-- Average SQL materialization time: {'<'}5 seconds
-- Chain ID: <ChainInfo chain='arbitrum-sepolia' info='chainId' />
-- Symbol: ETH
-- Status Dashboard:
-  - N/A
-- Block Explorer:
-  - [https://sepolia.arbitrum.io/](https://sepolia.arbitrum.io/)
-- Faucet (use the Ethereum Sepolia faucet and then bridge ETH to Arbitrum):
-  - [https://sepoliafaucet.com/](https://sepoliafaucet.com/)
-  - [https://faucet.chainstack.com/sepolia-testnet-faucet](https://faucet.chainstack.com/sepolia-testnet-faucet)
-- Bridge:
-  - [https://bridge.arbitrum.io/](https://bridge.arbitrum.io/?l2ChainId=421614)
-- RPC URL:
-  - See [https://chainlist.org/chain/421614](https://chainlist.org/chain/421614)
-- Tableland contract address: <ChainInfo chain='arbitrum-sepolia' info='contractAddress' />
-- SDK network name: <ChainInfo chain='arbitrum-sepolia' info='chainName' />
-- Tableland gateway: <ChainInfo chain='arbitrum-sepolia' info='baseUrl' />
+<ChainSection chainId='421614' />
+<ChainSection chainId='42161' />
+<ChainSection chainId='42170' />
 
 ## Getting testnet funds
 
-1. Request testnet Ether from a faucet noted above (e.g., [here](https://sepoliafaucet.com/) or [here](https://faucet.chainstack.com/sepolia-testnet-faucet)).
-2. Move the ETH from Ethereum to Arbitrum at [https://bridge.arbitrum.io/](https://bridge.arbitrum.io/)—i.e., select "ETH" (or, as in the screenshot below, other ERC20 tokens that exist on Ethereum Sepolia can be bridged).
+1. Request testnet Ether from a faucet noted above.
+2. Move the ETH from Ethereum to Arbitrum at the URL listed above—i.e., select "ETH" (or, as in the screenshot below, other ERC20 tokens that exist on Ethereum Sepolia can be bridged).
 
 import bridge from "@site/static/assets/arb-sepolia.png"
 
