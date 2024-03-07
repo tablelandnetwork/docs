@@ -111,7 +111,7 @@ To view the TABLE token itself, check out the deployed contracts on various bloc
 | Arbitrum One     | Mainnet     | https://opensea.io/collection/tableland-tables-arbitrum                  |
 | Arbitrum Nova    | Mainnet     | https://opensea.io/collection/tableland-tables-arbitrum-nova             |
 | Polygon          | Mainnet     | https://opensea.io/collection/tableland-tables-polygon                   |
-| Ethereum Sepolia | Testnet     | No marketplace support                                                   |
-| Optimism Goerli  | Testnet     | https://testnets.opensea.io/collection/tableland-tables-optimism-goerli  |
+| Ethereum Sepolia | Testnet     | https://testnets.opensea.io/collection/tableland-tables-2                |
+| Optimism Sepolia | Testnet     | No marketplace support                                                   |
 | Arbitrum Sepolia | Testnet     | https://testnets.opensea.io/collection/tableland-tables-arbitrum-sepolia |
 | Polygon Mumbai   | Testnet     | https://testnets.opensea.io/collection/tableland-tables-mumbai           |

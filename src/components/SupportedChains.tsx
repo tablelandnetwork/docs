@@ -3,6 +3,41 @@ import Link from "@docusaurus/Link";
 import { helpers } from "@tableland/sdk";
 import Heading from "@theme/Heading";
 
+/**
+ * For every chain, the data is extended from the SDK's `supportedChains` object
+ *
+ * @param location - The environment of the chain (mainnet or testnet)
+ * @param chainNameFormatted - The formatted chain name (e.g., polygon vs. matic)
+ * @param chainName - The ethers name of the chain, with dashes
+ * @param chainId - The chain ID
+ * @param contractAddress - The Tableland contract address on the chain
+ * @param blockExplorer - The block explorer link for the chain
+ * @param bridge - The bridge link for the chain, if applicable
+ * @param rpcUrl - The RPC URL for the chain (a link to chainlist.org)
+ * @param baseUrl - The Tableland validator API URL (testnet, mainnet, or local)
+ * @param symbol - The currency symbol for the chain
+ * @param avgBlockTime - The average block time of the chain
+ * @param blockDepth - The block depth of the chain for SQL materialization
+ * @param sqlMaterializationTime - The SQL materialization time of the chain
+ * @param faucet - The faucet link for the chain, if applicable
+ */
+export interface ChainFormatted {
+  location: string;
+  chainNameFormatted: string;
+  chainName: string;
+  chainId: number;
+  contractAddress: string;
+  blockExplorer: string;
+  bridge: string;
+  rpcUrl: string;
+  baseUrl: string;
+  symbol: string;
+  avgBlockTime: string;
+  blockDepth: string;
+  sqlMaterializationTime: string;
+  faucet: string;
+}
+
 // Return the block explorer link for a given chain and contract while using a
 // "testnets" or "mainnets" flag to determine which explorer to use.
 function getChainExplorer(chain: string, contract: string): string {
@@ -24,8 +59,8 @@ function getChainExplorer(chain: string, contract: string): string {
       return `https://calibration.filfox.info/en/address/${contract}`;
     case "optimism":
       return `https://optimistic.etherscan.io/address/${contract}`;
-    case "optimism-goerli":
-      return `https://goerli-optimism.etherscan.io/address/${contract}`;
+    case "optimism-sepolia":
+      return `https://sepolia-optimism.etherscan.io/address/${contract}`;
     case "matic":
       return `https://polygonscan.com/address/${contract}`;
     case "maticmum":
@@ -35,34 +70,12 @@ function getChainExplorer(chain: string, contract: string): string {
   }
 }
 
-export interface ChainFormatted {
-  location: string;
-  chainNameFormatted: string;
-  chainName: string;
-  chainId: number;
-  contractAddress: string;
-  blockExplorer: string;
-  bridge: string;
-  rpcUrl: string;
-  baseUrl: string;
-  symbol: string;
-  avgBlockTime: string;
-  blockDepth: string;
-  sqlMaterializationTime: string;
-  faucet: string;
-}
-
 // Create an object of Tableland supported chains, along with some extra data
 // for the "pretty" name and block explorer link.
 export const supportedChains = (): ChainFormatted[] => {
   const chains: any = helpers.supportedChains;
-  // Remove chain names for `localhost`, `homestead`, `optimism-goerli-staging`
-  const remove = [
-    `localhost`,
-    `homestead`,
-    `goerli`,
-    `optimism-goerli-staging`,
-  ];
+  // Remove chain names for `localhost` & `homestead`
+  const remove = [`localhost`, `homestead`];
   const filteredChains = Object.fromEntries(
     Object.entries(chains).filter(([chain]) => !remove.includes(chain))
   );
@@ -127,7 +140,7 @@ export const supportedChains = (): ChainFormatted[] => {
         format.blockDepth = "0";
         format.sqlMaterializationTime = "<5";
         format.bridge = "https://bridge.arbitrum.io/?l2ChainId=421614";
-        format.faucet = "https://www.alchemy.com/faucets/ethereum-sepolia";
+        format.faucet = "https://www.alchemy.com/faucets/arbitrum-sepolia";
         break;
       case "sepolia":
         format.chainNameFormatted = "ethereum sepolia";
@@ -158,14 +171,13 @@ export const supportedChains = (): ChainFormatted[] => {
         format.blockDepth = "0";
         format.sqlMaterializationTime = "2";
         format.bridge = "https://app.optimism.io/bridge";
-      case "optimism-goerli":
-        format.chainNameFormatted = "optimism goerli";
+      case "optimism-sepolia":
         format.symbol = "ETH";
         format.avgBlockTime = "2";
         format.blockDepth = "0";
         format.sqlMaterializationTime = "2";
         format.bridge = "https://app.optimism.io/bridge";
-        format.faucet = "https://www.alchemy.com/faucets/ethereum-sepolia";
+        format.faucet = "https://www.alchemy.com/faucets/optimism-sepolia";
         break;
       case "matic":
         format.chainNameFormatted = "polygon";

@@ -30,7 +30,7 @@ arbitrum-nova
 matic
 filecoin
 sepolia
-optimism-goerli
+optimism-sepolia
 arbitrum-sepolia
 maticmum
 filecoin-calibration

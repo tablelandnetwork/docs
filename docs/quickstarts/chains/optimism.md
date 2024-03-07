@@ -17,10 +17,9 @@ Offchain, the transactions happen much quicker than the batching. Note that deve
 
 ## Setup & resources
 
-<ChainSection chainId='420' />
+<ChainSection chainId='11155420' />
 <ChainSection chainId='10' />
 
 #### Getting testnet funds
 
-1. Request testnet Ether from a faucet noted above (e.g., [here](https://goerlifaucet.com/) or [here](https://faucet.paradigm.xyz/)).
-2. Move the ETH from Ethereum to Optimism at [https://app.optimism.io/bridge](https://app.optimism.io/bridge)—i.e., select "ETH" or any other ERC20 tokens that exist on Ethereum Goerli that can be bridged.
+If you request testnet Ether from a faucet noted above, it should go direct to the testnet. However, you can also request funds from the Ethereum Sepolia testnet and bridge it. You must move the ETH from Ethereum to Arbitrum at the URL listed above—i.e., select "ETH" (or, as in the screenshot below, other ERC20 tokens that exist on Ethereum Sepolia can be bridged).

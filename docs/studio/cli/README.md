@@ -119,7 +119,7 @@ Testnets
 
 - `sepolia` (Ethereum Sepolia)
 - `maticmum` (Polygon Mumbai)
-- `optimism-goerli` (Optimism Goerli)
+- `optimism-sepolia` (Optimism Sepolia)
 - `arbitrum-sepolia` (Arbitrum Sepolia)
 - `filecoin-calibration` (Filecoin Calibration)
 

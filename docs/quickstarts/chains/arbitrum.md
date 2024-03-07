@@ -31,8 +31,7 @@ Thus, you can imagine how high volume applications can take advantage of both th
 
 ## Getting testnet funds
 
-1. Request testnet Ether from a faucet noted above.
-2. Move the ETH from Ethereum to Arbitrum at the URL listed above—i.e., select "ETH" (or, as in the screenshot below, other ERC20 tokens that exist on Ethereum Sepolia can be bridged).
+If you request testnet Ether from a faucet noted above, it should go direct to the testnet. However, you can also request funds from the Ethereum Sepolia testnet and bridge it. You must move the ETH from Ethereum to Arbitrum at the URL listed above—i.e., select "ETH" (or, as in the screenshot below, other ERC20 tokens that exist on Ethereum Sepolia can be bridged).
 
 import bridge from "@site/static/assets/arb-sepolia.png"
 
