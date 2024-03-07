@@ -20,6 +20,6 @@ Offchain, the transactions happen much quicker than the batching. Note that deve
 <ChainSection chainId='11155420' />
 <ChainSection chainId='10' />
 
-#### Getting testnet funds
+### Getting testnet funds
 
 If you request testnet Ether from a faucet noted above, it should go direct to the testnet. However, you can also request funds from the Ethereum Sepolia testnet and bridge it. You must move the ETH from Ethereum to Arbitrum at the URL listed above—i.e., select "ETH" (or, as in the screenshot below, other ERC20 tokens that exist on Ethereum Sepolia can be bridged).

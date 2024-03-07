@@ -20,6 +20,6 @@ For comparison, Polygon supports 7k tx/s compared to Ethereum’s 15 tx/s and ~1
 <ChainSection chainId='80001' />
 <ChainSection chainId='137' />
 
-#### Getting testnet funds
+### Getting testnet funds
 
 Request testnet Matic from a faucet noted above. Note that bridging is not required since MATIC is the native token, not ETH.
