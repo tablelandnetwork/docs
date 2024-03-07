@@ -25,9 +25,9 @@ Thus, you can imagine how high volume applications can take advantage of both th
 
 ## Setup & resources
 
-<ChainSection chainId='421614' />
-<ChainSection chainId='42161' />
-<ChainSection chainId='42170' />
+<ChainSection chainName='arbitrum-sepolia' />
+<ChainSection chainName='arbitrum' />
+<ChainSection chainName='arbitrum-nova' />
 
 ## Getting testnet funds
 

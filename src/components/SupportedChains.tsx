@@ -103,7 +103,7 @@ export const supportedChains = (): ChainFormatted[] => {
     // (e.g., `matic` should be `Polygon`)
     switch (format.chainName) {
       case "local-tableland":
-        format.location = "local";
+        format.location = "local-only nodes";
         format.symbol = "ETH";
         format.avgBlockTime = "1-2";
         format.blockDepth = "0";
@@ -377,11 +377,12 @@ export function SupportedChainIds(): JSX.Element {
   );
 }
 
-export function ChainSection({ chainId }: { chainId: number }): JSX.Element {
-  if (typeof chainId === "string") {
-    chainId = parseInt(chainId);
-  }
-  const chain = supportedChains().filter((c) => c.chainId === chainId)[0];
+export function ChainSection({
+  chainName,
+}: {
+  chainName: string;
+}): JSX.Element {
+  const chain = supportedChains().filter((c) => c.chainName === chainName)[0];
   return (
     <>
       <>
@@ -397,7 +398,7 @@ export function ChainSection({ chainId }: { chainId: number }): JSX.Element {
           </li>
           <li>
             <b>Contract address:</b>{" "}
-            {chainId !== 31337 ? (
+            {chain.chainId !== 31337 ? (
               <Link to={chain.blockExplorer}>
                 <code>{chain.contractAddress}</code>
               </Link>
@@ -414,7 +415,7 @@ export function ChainSection({ chainId }: { chainId: number }): JSX.Element {
           </li>
           <li>
             <b>RPC URLs:</b>{" "}
-            {chainId !== 31337 ? (
+            {chain.chainId !== 31337 ? (
               <Link to={chain.rpcUrl}>{chain.rpcUrl}</Link>
             ) : (
               <code>{chain.rpcUrl}</code>

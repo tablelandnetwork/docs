@@ -17,8 +17,8 @@ Offchain, the transactions happen much quicker than the batching. Note that deve
 
 ## Setup & resources
 
-<ChainSection chainId='11155420' />
-<ChainSection chainId='10' />
+<ChainSection chainName='optimism-sepolia' />
+<ChainSection chainName='optimism' />
 
 ### Getting testnet funds
 

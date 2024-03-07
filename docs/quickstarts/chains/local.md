@@ -21,4 +21,4 @@ Check out the page about [Local Tableland](/quickstarts/local-tableland) to unde
 
 ### Setup & resources
 
-<ChainSection chainId='31337' />
+<ChainSection chainName='local-tableland' />

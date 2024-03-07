@@ -26,8 +26,8 @@ From the time an onchain SQL transaction is submitted until it is materialized i
 
 ## Setup & resources
 
-<ChainSection chainId='314159' />
-<ChainSection chainId='314' />
+<ChainSection chainName='filecoin-calibration' />
+<ChainSection chainName='filecoin' />
 
 :::caution
 Currently, Filecoin Calibration node providers _do not_ store an archive of chain history past the most recent 2000 blocks. This _should not_ have an impact on development if you’re using the primary Tableland node, barring some unforeseen & unlikely downtime of ~17 hours. If you’re a node operator of the Tableland protocol, this _does_ have an impact but will (hopefully) be resolved soon.

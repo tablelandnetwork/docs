@@ -17,5 +17,5 @@ Because of its security, data can be viewed as more valuable on this chain. A hi
 
 ## Setup & resources
 
-<ChainSection chainId='11155111' />
-<ChainSection chainId='1' />
+<ChainSection chainName='sepolia' />
+<ChainSection chainName='mainnet' />
