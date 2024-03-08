@@ -213,7 +213,7 @@ ___
 
 ### version
 
-▸ **version**(`signal?`): `Promise`\<`Camelize`\<`Required`\<\{ `binary_version?`: `string` ; `build_date?`: `string` ; `git_branch?`: `string` ; `git_commit?`: `string` ; `git_state?`: `string` ; `git_summary?`: `string` ; `version?`: `number`  }\>\>\>
+▸ **version**(`signal?`): `Promise`\<`Camelize`\<`Required`\<\{ `binary_version?`: `string` ; `build_date?`: `string` ; `git_branch?`: `string` ; `git_commit?`: `string` ; `git_state?`: `string` ; `git_summary?`: `string`  }\>\>\>
 
 Get version information
 
@@ -225,7 +225,7 @@ Get version information
 
 #### Returns
 
-`Promise`\<`Camelize`\<`Required`\<\{ `binary_version?`: `string` ; `build_date?`: `string` ; `git_branch?`: `string` ; `git_commit?`: `string` ; `git_state?`: `string` ; `git_summary?`: `string` ; `version?`: `number`  }\>\>\>
+`Promise`\<`Camelize`\<`Required`\<\{ `binary_version?`: `string` ; `build_date?`: `string` ; `git_branch?`: `string` ; `git_commit?`: `string` ; `git_state?`: `string` ; `git_summary?`: `string`  }\>\>\>
 
 **`Description`**
 

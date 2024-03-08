@@ -54,7 +54,7 @@ const localPinner = pinToLocal({
 });
 ```
 
-Once you local pinner is set up, you can create a new `Database` instance and create a table. This example shows how you might set it up in a Node.js environment where the provider URL is the [Filecoin Calibration testnet](/quickstarts/chains/filecoin#filecoin-calibration-testnet). Or, if you wanted to deploy this table to the Filecoin mainnet, you would simply swap out the provider URL (e.g., `https://api.node.glif.io/rpc/v0`). Make sure to replace the private key with your own!
+Once you local pinner is set up, you can create a new `Database` instance and create a table. This example shows how you might set it up in a Node.js environment where the provider URL is the [Filecoin Calibration testnet](/quickstarts/chains/filecoin#filecoin-calibration). Or, if you wanted to deploy this table to the Filecoin mainnet, you would simply swap out the provider URL (e.g., `https://api.node.glif.io/rpc/v0`). Make sure to replace the private key with your own!
 
 ```js
 // Set up wallet & chain connection

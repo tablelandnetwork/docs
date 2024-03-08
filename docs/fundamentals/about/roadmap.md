@@ -87,7 +87,7 @@ We’re here to build a new web. Together.
 - Release support for SQL privileges (`GRANT` and `REVOKE`).
 - Release support for table access control Policies.
 - Release [Javascript SDK](https://github.com/tablelandnetwork/js-tableland).
-- The Tableland protocol launches on Ethereum Goerli, Polygon Mumbai, Optimism Kovan.
+- The Tableland protocol launches on Ethereum, Polygon, and Optimism testnets.
 
 #### Q1
 

@@ -85,10 +85,10 @@ tableland chains
     "pollingTimeout": 40000,
     "pollingInterval": 1500
   },
-  "optimism-goerli": {
-    "chainName": "optimism-goerli",
-    "chainId": 420,
-    "contractAddress": "0xC72E8a7Be04f2469f8C2dB3F1BdF69A7D516aBbA",
+  "optimism-sepolia": {
+    "chainName": "optimism-sepolia",
+    "chainId": 11155420,
+    "contractAddress": "0x68A2f4423ad3bf5139Db563CF3bC80aA09ed7079",
     "baseUrl": "https://testnets.tableland.network/api/v1",
     "pollingTimeout": 10000,
     "pollingInterval": 1500

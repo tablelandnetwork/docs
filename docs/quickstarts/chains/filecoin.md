@@ -5,7 +5,7 @@ keywords:
   - filecoin
 ---
 
-import { ChainInfo } from '@site/src/components/SupportedChains';
+import { ChainSection } from '@site/src/components/SupportedChains'
 
 Filecoin is an EVM-compatible Layer 1 chain that Tableland currently supports. Check out the overview of what this network is and relevant information when using it.
 
@@ -26,48 +26,13 @@ From the time an onchain SQL transaction is submitted until it is materialized i
 
 ## Setup & resources
 
-### Filecoin (mainnet)
-
-- Average block time: 30s
-- Block depth: 5
-- Average SQL materialization time: 4 minutes
-- Chain ID: 314
-- Symbol: FIL
-- Status Dashboard:
-  - [https://status.filecoin.io/](https://status.filecoin.io/)
-- Block Explorer:
-  - [https://filfox.info](https://filfox.info)
-- RPC URL: [https://api.node.glif.io/rpc/v0](https://api.node.glif.io/rpc/v0)
-- Tableland contract address: <ChainInfo chain='filecoin' info='contractAddress' />
-- SDK network name: <ChainInfo chain='filecoin' info='chainName' />
-- Tableland gateway: <ChainInfo chain='filecoin' info='baseUrl' />
-
-:::tip
-To get FIL into an EVM wallet (e.g., MetaMask), you'll have to buy FIL on an exchange and send it to an f1 address on the Filecoin network. You can use [Glif.io](https://www.glif.io/) to do this, but there's a bit of nuance to the process; you have to create a burner f1 wallet first and then transfer the FIL to the EVM wallet—an f4 address type. See an overview [here](https://www.youtube.com/watch?v=Skim_qHnmjE) for how to do this.
-:::
-
-### Filecoin Calibration (testnet)
-
-- Average block time: 30s
-- Block depth: 5
-- Average SQL materialization time: 4 minutes
-- Chain ID: 314159
-- Symbol: TFIL
-- Status Dashboard:
-  - [https://stats.calibration.fildev.network/](https://stats.calibration.fildev.network/)
-- Block Explorer:
-  - [https://calibration.filfox.info/en](https://calibration.filfox.info/en)
-- Faucet:
-  - [https://faucet.calibration.fildev.network/](https://faucet.calibration.fildev.network/)
-- RPC URL: [https://api.calibration.node.glif.io/rpc/v1](https://api.calibration.node.glif.io/rpc/v1)
-- Tableland contract address: <ChainInfo chain='filecoin-calibration' info='contractAddress' />
-- SDK network name: <ChainInfo chain='filecoin-calibration' info='chainName' />
-- Tableland gateway: <ChainInfo chain='filecoin-calibration' info='baseUrl' />
+<ChainSection chainName='filecoin-calibration' />
+<ChainSection chainName='filecoin' />
 
 :::caution
 Currently, Filecoin Calibration node providers _do not_ store an archive of chain history past the most recent 2000 blocks. This _should not_ have an impact on development if you’re using the primary Tableland node, barring some unforeseen & unlikely downtime of ~17 hours. If you’re a node operator of the Tableland protocol, this _does_ have an impact but will (hopefully) be resolved soon.
 :::
 
-#### Getting testnet funds
+### Getting testnet funds
 
 Request testnet FIL from the faucet noted above—this should send funds directly to the identified wallet.

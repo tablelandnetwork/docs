@@ -199,12 +199,10 @@ import { SupportedChains, ChainsList, ChainInfo } from '@site/src/components/Sup
 
 ## Components
 
-There does exist some custom components that can be imported and used in markdown. For example, you can use `<Address />` to render the connected wallet or some default value—for example, the following uses `<Address />` (try connecting & disconnecting your wallet): <Address />. The `Wallet` component holds this logic, so you'll have to import it from `@site/src/components/Wallet`.
-
-Some other utilities exist in the `SupportedChains` component, such as importing `<ChainsList />`, `<ChainInfo />`, or `<SupportedChains />`. With `<ChainsList />`, you can pass optional strings of either `testnets` or `mainnets` for `type`, which will only include testnet or mainnet chains; similarly, the `format` prop can use either `list` or `string`. With `<ChainInfo />`, you pass a `name` prop for the chain's name (matching `ethersjs`) along with the info desired (`name`, `chainId`, etc.). The `getChainInfo()` method is used under the hood and takes the same parameters.
+There are a few custom components that can be imported and used in markdown. For example, you can use `<ChainsList />`, `<ChainInfo />`, `<SupportedChains />` etc. to render content in markdown. The components can be found in the `/src/components` directory of the docs site.
 
 ```js
-import { ChainsList, ChainInfo, getChainInfo, SupportedChains } from '@site/src/components/SupportedChains'
+import { ChainsList, ChainInfo, SupportedChains } from '@site/src/components/SupportedChains'
 
 <ChainsList type={'testnets'} format={'string'} />
 

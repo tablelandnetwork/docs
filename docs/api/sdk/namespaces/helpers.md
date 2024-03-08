@@ -124,7 +124,7 @@ The set of chains and their information as supported by the Tableland network.
 
 #### Defined in
 
-@tableland/sdk/src/helpers/chains.ts:71
+@tableland/sdk/src/helpers/chains.ts:67
 
 ## Functions
 
@@ -275,7 +275,7 @@ A string representing the default host uri for a given chain.
 
 #### Defined in
 
-@tableland/sdk/src/helpers/chains.ts:139
+@tableland/sdk/src/helpers/chains.ts:135
 
 ___
 
@@ -299,7 +299,7 @@ A number representing the default chain ID of the requested chain.
 
 #### Defined in
 
-@tableland/sdk/src/helpers/chains.ts:130
+@tableland/sdk/src/helpers/chains.ts:126
 
 ___
 
@@ -323,7 +323,7 @@ An object containing the default chainId, contractAddress, chainName, and baseUr
 
 #### Defined in
 
-@tableland/sdk/src/helpers/chains.ts:86
+@tableland/sdk/src/helpers/chains.ts:82
 
 ___
 
@@ -347,7 +347,7 @@ A hex string representing the default address for the Tableland registry contrac
 
 #### Defined in
 
-@tableland/sdk/src/helpers/chains.ts:121
+@tableland/sdk/src/helpers/chains.ts:117
 
 ___
 
@@ -467,7 +467,7 @@ An boolean to indicate the testnet classification of the given chain.
 
 #### Defined in
 
-@tableland/sdk/src/helpers/chains.ts:105
+@tableland/sdk/src/helpers/chains.ts:101
 
 ___
 
@@ -513,7 +513,7 @@ void
 
 #### Defined in
 
-@tableland/sdk/src/helpers/chains.ts:164
+@tableland/sdk/src/helpers/chains.ts:160
 
 ___
 

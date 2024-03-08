@@ -59,7 +59,7 @@ const { chains, publicClient, webSocketPublicClient } = configureChains(
     chain.arbitrum,
     chain.sepolia,
     chain.polygonMumbai,
-    chain.optimismGoerli,
+    chain.optimismSepolia,
     chain.arbitrumSepolia,
     chain.filecoinCalibration,
     chain.hardhat,

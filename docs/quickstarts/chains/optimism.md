@@ -5,7 +5,7 @@ keywords:
   - optimism
 ---
 
-import { ChainInfo } from '@site/src/components/SupportedChains'
+import { ChainSection } from '@site/src/components/SupportedChains'
 
 Optimism is one of the EVM-compatible Layer 2 solutions that Tableland currently supports. Check out the overview of what this network is and relevant information when using it.
 
@@ -17,45 +17,9 @@ Offchain, the transactions happen much quicker than the batching. Note that deve
 
 ## Setup & resources
 
-### Optimism (mainnet)
+<ChainSection chainName='optimism-sepolia' />
+<ChainSection chainName='optimism' />
 
-- Average block time: 2 seconds
-- Block depth: 0
-- Average SQL materialization time: {'<'}5 seconds
-- Chain ID: <ChainInfo chain='optimism' info='chainId' />
-- Symbol: ETH
-- Status Dashboard:
-  - [https://status.optimism.io/](https://status.optimism.io/)
-- Block Explorer:
-  - [https://optimistic.etherscan.io/](https://optimistic.etherscan.io/)
-- RPC URL:
-  - See [https://chainlist.org/chain/10](https://chainlist.org/chain/10)
-- Tableland contract address: <ChainInfo chain='optimism' info='contractAddress' />
-- SDK network name: <ChainInfo chain='optimism' info='chainName' />
-- Tableland gateway: <ChainInfo chain='optimism' info='baseUrl' />
+### Getting testnet funds
 
-### Optimism Goerli (testnet)
-
-- Average block time: 2 seconds
-- Block depth: 0
-- Average SQL materialization time: {'<'}5 seconds
-- Chain ID: <ChainInfo chain='optimism-goerli' info='chainId' />
-- Symbol: ETH
-- Status Dashboard:
-  - [https://status.optimism.io/](https://status.optimism.io/)
-- Block Explorer:
-  - [https://blockscout.com/optimism/goerli/](https://blockscout.com/optimism/goerli/)
-- Faucet:
-  - Use the Ethereum Goerli faucet and then bridge ETH to Optimism
-- Bridge:
-  - [https://app.optimism.io/bridge](https://app.optimism.io/bridge)
-- RPC URL:
-  - See [https://chainlist.org/chain/420](https://chainlist.org/chain/420)
-- Tableland contract address: <ChainInfo chain='optimism-goerli' info='contractAddress' />
-- SDK network name: <ChainInfo chain='optimism-goerli' info='chainName' />
-- Tableland gateway: <ChainInfo chain='optimism-goerli' info='baseUrl' />
-
-#### Getting testnet funds
-
-1. Request testnet Ether from a faucet noted above (e.g., [here](https://goerlifaucet.com/) or [here](https://faucet.paradigm.xyz/)).
-2. Move the ETH from Ethereum to Optimism at [https://app.optimism.io/bridge](https://app.optimism.io/bridge)—i.e., select "ETH" or any other ERC20 tokens that exist on Ethereum Goerli that can be bridged.
+If you request testnet Ether from a faucet noted above, it should go direct to the testnet. However, you can also request funds from the Ethereum Sepolia testnet and bridge it. You must move the ETH from Ethereum to Arbitrum at the URL listed above—i.e., select "ETH" (or, as in the screenshot below, other ERC20 tokens that exist on Ethereum Sepolia can be bridged).
