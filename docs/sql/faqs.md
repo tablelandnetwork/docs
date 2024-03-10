@@ -73,3 +73,4 @@ The following is a list of cool and useful SQL-related tools. These are not affi
 - [https://codebeautify.org/sqlformatter](https://codebeautify.org/sqlformatter)
 - [https://beta.openai.com/examples/default-sql-request](https://beta.openai.com/examples/default-sql-request)
 - Mock SQL data ⇒ [https://www.mockaroo.com/](https://www.mockaroo.com/)
+- [https://softwium.com/mockium/](https://softwium.com/mockium/)
