@@ -62,15 +62,21 @@ It doesn't matter if you use all caps or all lowercase—either way is perfectly
 
 The following is a list of cool and useful SQL-related tools. These are not affiliated with Tableland but simply being shared to help developers using the protocol:
 
-- [https://www.beekeeperstudio.io/](https://www.beekeeperstudio.io/)
-- [https://prql-lang.org/](https://prql-lang.org/)
-- [https://ricardoanderegg.com/posts/sqlite-remote-explorer-gui/](https://ricardoanderegg.com/posts/sqlite-remote-explorer-gui/)
-- [https://dataland.io/](https://dataland.io/)
-- [https://github.com/datafold/data-diff](https://github.com/datafold/data-diff)
-- [https://www.dolthub.com/](https://www.dolthub.com/)
-- [https://principles.planetscale.com/](https://principles.planetscale.com/)
-- [https://sqliteviewer.app/](https://sqliteviewer.app/)
-- [https://codebeautify.org/sqlformatter](https://codebeautify.org/sqlformatter)
-- [https://beta.openai.com/examples/default-sql-request](https://beta.openai.com/examples/default-sql-request)
-- Mock SQL data ⇒ [https://www.mockaroo.com/](https://www.mockaroo.com/)
-- [https://softwium.com/mockium/](https://softwium.com/mockium/)
+- Online SQL viewer/editor:
+  - [https://www.beekeeperstudio.io/](https://www.beekeeperstudio.io/)
+  - [https://ricardoanderegg.com/posts/sqlite-remote-explorer-gui/](https://ricardoanderegg.com/posts/sqlite-remote-explorer-gui/)
+  - [https://dataland.io/](https://dataland.io/)
+  - [https://sqliteviewer.app/](https://sqliteviewer.app/)
+- SQL formatter:
+  - [https://sqltools.beekeeperstudio.io/format](https://sqltools.beekeeperstudio.io/format)
+  - [https://codebeautify.org/sqlformatter](https://codebeautify.org/sqlformatter)
+- Mock SQL data:
+  - [https://www.mockaroo.com/](https://www.mockaroo.com/)
+  - [https://softwium.com/mockium/](https://softwium.com/mockium/)
+- SQL replacement pipeline: [https://prql-lang.org/](https://prql-lang.org/)
+- Data migration & diffs:
+  - [https://github.com/datafold/data-diff](https://github.com/datafold/data-diff)
+  - [https://www.dolthub.com/](https://www.dolthub.com/)
+- Natural language to SQL: [https://platform.openai.com/examples/default-sql-translate](https://platform.openai.com/examples/default-sql-translate)
+
+- SQL principles by PlanetScale: [https://principles.planetscale.com/](https://principles.planetscale.com/)
