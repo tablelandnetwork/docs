@@ -14,7 +14,7 @@ export default [
     website: "https://dimo.zone",
     github: "https://github.com/tablelandnetwork/dimo-vehicle-defs",
     twitter: "https://twitter.com/DIMO_Network",
-    details: `DIMO is an open and user-owned network. DIMO is an open and user-owned network where drivers can plug DIMO hardware into their cars and earn rewards for the data they share.\n\nPart of DIMO's solution is a vehicle definitions registry that stores vehicle data in a standardized format. With Tableland, this table is publicly queryable and can be used by anyone to build applications on top of the data.\n\nFrom a design perspective, the table is owned by and written to by a VehicleId NFT contract, and VehicleId tokens represent user vehicles and are associated with a vehicle definition (e.g., 2011 Toyota Tacoma). The crux of the problem is how to ensure that a given vehicle definition exists when a new VehicleId is minted from the contract.`,
+    details: `DIMO is an open and user-owned network where drivers can plug DIMO hardware into their cars and earn rewards for the data they share.\n\nPart of DIMO's solution is a vehicle definitions registry that stores vehicle data in a standardized format. With Tableland, this table is publicly queryable and can be used by anyone to build applications on top of the data.\n\nFrom a design perspective, the table is owned by and written to by a VehicleId NFT contract, and VehicleId tokens represent user vehicles and are associated with a vehicle definition (e.g., 2011 Toyota Tacoma). The crux of the problem is how to ensure that a given vehicle definition exists when a new VehicleId is minted from the contract.`,
   },
   {
     name: "WeatherXM",
@@ -28,6 +28,16 @@ export default [
     github: "https://github.com/WeatherXM",
     twitter: "https://twitter.com/WeatherXM",
     details: `WeatherXM is a network that's powered by community owned devices, purpose built by WeatherXM for weather data collection. As part of the network, devices are incentivized to share data, which is sent to various stations throughout the globe.\n\nOne of the challenges with this approach is not only ensuring that the raw device data is available when it's needed, but as a decentralized network, its infrastructure must also make sure that data is stored in a decentralized fashion instead of centralized infrastructure.\n\nAs devices send data to the network, it's replicated to a hot for immediate and TTL retrieval, which is pertinent for compute over that data. And for persistence guarantees, this data is also replicated to Filecoin for long-term storage guarantees, which can help the network ensure that data is available for years to come.`,
+    blogs: [
+      {
+        name: "WeatherXM + Textile: DePIN Data Storage, Retrieval, & Rewards Computation",
+        url: "https://mirror.xyz/tableland.eth/iw5tqM_2HFaTdTnQeZRw_fuj0UwlvxMaJOL2pJ3hIrQ",
+      },
+      {
+        name: "Solutions for DePIN Data Management & Collaboration",
+        url: "https://mirror.xyz/tableland.eth/CbRLSRYYClTB8bNOph-1z9WkFvHzBs5MIImPu-ybwAs",
+      },
+    ],
   },
   {
     name: "Hideout Labs",
