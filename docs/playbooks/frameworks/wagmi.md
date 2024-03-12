@@ -15,13 +15,26 @@ One great library to use in React apps is [wagmi](https://wagmi.sh/). It offers 
 
 ## 1. Installation
 
-First, install wagmi, RainbowKit, Tableland, and ethers. If you need help setting up a React project, check out the [React framework quickstart](reactjs).
+First, install wagmi, RainbowKit, Tableland, and ethers. If you need help setting up a React project, check out the [React framework quickstart](reactjs). All of these examples will show how to use either wagmi v1 or v2, so you can choose which version you'd like to use.
+
+<Tabs groupId="sdk">
+<TabItem value="jsv2" label="wagmi v2" default>
 
 ```bash npm2yarn
-npm install --save wagmi @rainbow-me/rainbowkit @tableland/sdk ethers@^5.7.2
+npm install wagmi@latest @rainbow-me/rainbowkit@latest @tableland/sdk ethers@^5.7.2 @tanstack/react-query
 ```
 
-Note that RainbowKit uses WalletConnect under the hood, which requires you to sign up for an account—[see their docs](https://www.rainbowkit.com/guides/walletconnect-v2) for more details. These examples will use [Alchemy](https://www.alchemy.com/) as the RPC provider, but you can choose whatever provider you'd like.
+</TabItem>
+<TabItem value="jsv1" label="wagmi v1">
+
+```bash npm2yarn
+npm install wagmi@^1 @rainbow-me/rainbowkit@^1 @tableland/sdk ethers@^5.7.2
+```
+
+</TabItem>
+</Tabs>
+
+Note that RainbowKit uses WalletConnect under the hood, which requires you to sign up for an account—[see their docs](https://www.rainbowkit.com/guides/walletconnect-v2) for more details.
 
 Now, let's set up our React app with a Vite scaffold:
 
@@ -33,14 +46,55 @@ npm create vite@latest starter-app -- --template react
 
 ### Wagmi
 
-We'll use a few different files to properly set everything up. Let's start with the first—create a file called `wagmi.js` to handle chain configurations. You should first create a `.env` that handles things like API keys. Our example with use Alchemy for the provider URL and also use WalletConnect's API for the connector. The file should contain:
+We'll use a few different files to properly set everything up. Let's start with the first—create a file called `wagmi.js` to handle chain configurations. You should first create a `.env` that handles things like API keys. Our example uses a public provider URL and will also use WalletConnect's API for the connector. The file should contain:
 
 ```txt title=".env"
-VITE_ALCHEMY_API_KEY=your_key
 VITE_WALLET_CONNECT_PROJECT_ID=your_key
+ENABLE_TESTNETS=true
 ```
 
-Note that we'll use `import.meta.env` to access these variables (below) in the `wagmi.js` file. Depending on your frontend setup, it may differ.
+Note that we'll use `import.meta.env` to access these variables (below) in the `wagmi.js` file. Depending on your frontend setup, it may differ. With Vite, you use `import.meta.env` and prefix the variable with `VITE_`. But, if you're using Next.js, you'd use `process.env` and prefix with `NEXT_PUBLIC_`.
+
+<Tabs groupId="sdk">
+<TabItem value="jsv2" label="wagmi v2">
+
+```jsx title="src/wagmi.js"
+import "@rainbow-me/rainbowkit/styles.css";
+import { getDefaultConfig } from "@rainbow-me/rainbowkit";
+import * as chain from "wagmi/chains";
+import { http } from "viem";
+
+const chains = [
+  chain.mainnet,
+  chain.polygon,
+  chain.optimism,
+  chain.arbitrum,
+  chain.arbitrumNova,
+  chain.filecoin,
+  ...(import.meta.ENABLE_TESTNETS === "true"
+    ? [
+        chain.arbitrumSepolia,
+        chain.sepolia,
+        chain.polygonMumbai,
+        chain.optimismSepolia,
+        chain.filecoinCalibration,
+        chain.hardhat,
+      ]
+    : []),
+];
+
+const transports = Object.fromEntries(chains.map((c) => [c.id, http()]));
+
+export const config = getDefaultConfig({
+  appName: "Tableland Starter",
+  chains,
+  transports,
+  projectId: import.meta.env.VITE_WALLET_CONNECT_PROJECT_ID ?? "",
+});
+```
+
+</TabItem>
+<TabItem value="jsv1" label="wagmi v1" default>
 
 ```js title="src/wagmi.js"
 import "@rainbow-me/rainbowkit/styles.css";
@@ -50,30 +104,32 @@ import * as chain from "wagmi/chains";
 import { publicProvider } from "wagmi/providers/public";
 import { alchemyProvider } from "wagmi/providers/alchemy";
 
-// All of the chains configured below are supported by Tableland
 const { chains, publicClient, webSocketPublicClient } = configureChains(
   [
     chain.mainnet,
     chain.polygon,
     chain.optimism,
     chain.arbitrum,
-    chain.sepolia,
-    chain.polygonMumbai,
-    chain.optimismSepolia,
-    chain.arbitrumSepolia,
-    chain.filecoinCalibration,
-    chain.hardhat,
+    chain.arbitrumNova,
+    chain.filecoin,
+    ...(import.meta.ENABLE_TESTNETS === "true"
+      ? [
+          chain.arbitrumSepolia,
+          chain.sepolia,
+          chain.polygonMumbai,
+          chain.optimismSepolia,
+          chain.filecoinCalibration,
+          chain.hardhat,
+        ]
+      : []),
   ],
-  [
-    alchemyProvider({ apiKey: VITE_ALCHEMY_API_KEY ?? "" }), // Set up an Alchemy account: https://www.alchemy.com/
-    publicProvider(),
-  ]
+  [publicProvider()]
 );
 
 const { connectors } = getDefaultWallets({
   appName: "Tableland Starter",
   chains,
-  projectId: process.env.WALLET_CONNECT_PROJECT_ID ?? "", // Set up a WalletConnect account: https://walletconnect.com/
+  projectId: import.meta.env.VITE_WALLET_CONNECT_PROJECT_ID ?? "",
 });
 
 export const config = createConfig({
@@ -86,9 +142,42 @@ export const config = createConfig({
 export { chains };
 ```
 
+</TabItem>
+</Tabs>
+
 ### Providers
 
 Next, we'll set up providers that wrap our React component with the wagmi config. Create a file called `providers.jsx` and add the following:
+
+<Tabs groupId="sdk">
+<TabItem value="jsv2" label="wagmi v2">
+
+```jsx title="src/providers.jsx"
+import { RainbowKitProvider, darkTheme } from "@rainbow-me/rainbowkit";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import * as React from "react";
+import { WagmiProvider } from "wagmi";
+import { config } from "./wagmi";
+
+const queryClient = new QueryClient();
+
+export function Providers({ children }) {
+  const [mounted, setMounted] = React.useState(false);
+  React.useEffect(() => setMounted(true), []);
+  return (
+    <WagmiProvider config={config}>
+      <QueryClientProvider client={queryClient}>
+        <RainbowKitProvider theme={darkTheme()}>
+          {mounted && children}
+        </RainbowKitProvider>
+      </QueryClientProvider>
+    </WagmiProvider>
+  );
+}
+```
+
+</TabItem>
+<TabItem value="jsv1" label="wagmi v1" default>
 
 ```js title="src/providers.jsx"
 import { RainbowKitProvider, darkTheme } from "@rainbow-me/rainbowkit";
@@ -108,6 +197,9 @@ export function Providers({ children }) {
   );
 }
 ```
+
+</TabItem>
+</Tabs>
 
 ### App component
 
@@ -133,7 +225,39 @@ ReactDOM.createRoot(document.getElementById("root")).render(
 
 Since wagmi is not natively compatible with ethers, we'll need to create a hook that adapts the wagmi account (viem) to an ethers account. Create a directory called `hooks` and a file called `useSigner.js`. Then, add the following:
 
-```js title="src/hooks/useEthersAccount.js"
+<Tabs groupId="sdk">
+<TabItem value="jsv2" label="wagmi v2">
+
+```js title="src/hooks/useSigner.js"
+import { useMemo } from "react";
+import { providers } from "ethers";
+import { useWalletClient } from "wagmi";
+
+function walletClientToSigner(walletClient) {
+  const { account, chain, transport } = walletClient;
+  const network = {
+    chainId: chain.id,
+    name: chain.name,
+    ensAddress: chain.contracts?.ensRegistry?.address,
+  };
+  const provider = new providers.JsonRpcProvider(transport.url, network);
+  const signer = provider.getSigner(account.address);
+  return signer;
+}
+
+export function useSigner({ chainId } = {}) {
+  const { data: walletClient } = useWalletClient({ chainId });
+  return useMemo(
+    () => (walletClient ? walletClientToSigner(walletClient) : undefined),
+    [walletClient]
+  );
+}
+```
+
+</TabItem>
+<TabItem value="jsv1" label="wagmi v1" default>
+
+```js title="src/hooks/useSigner.js"
 // Convert wagmi/viem `WalletClient` to ethers `Signer`
 import { useMemo } from "react";
 import { useWalletClient } from "wagmi";
@@ -159,6 +283,9 @@ export function useSigner({ chainId } = {}) {
   );
 }
 ```
+
+</TabItem>
+</Tabs>
 
 ## 3. Tableland setup
 
@@ -226,7 +353,7 @@ function App() {
 export default App;
 ```
 
-This boilerplate will display a connect wallet button in the navbar. Once a user makes the connection, the signer will now be available in the Tableland logic from step 3!
+This boilerplate will display a connect wallet button in the navbar. Once a user makes the connection, the signer will now be available in the Tableland logic!
 
 :::tip
 For more examples, you can [check out the templates](/quickstarts/templates) we've created, which also include a TypeScript example of what we walked through as well as Next.js examples.
