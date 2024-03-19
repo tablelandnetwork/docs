@@ -47,3 +47,4 @@ Frameworks show how developers can use Tableland with existing technologies and 
 As a database with onchain rules, Tableland can easily be used alongside other protocols. There are an endless number of ways protocols can work together, but here are some examples:
 
 - [IPFS & Filecoin](/playbooks/integrations/ipfs): Store files on IPFS, persist them on Filecoin (via web3.storage), and reference the CID in a Tableland table.
+- [Lit Protocol](/playbooks/integrations/lit): Encrypt and decrypt table data with secure and decentralized key management.
