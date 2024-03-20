@@ -171,6 +171,7 @@ const playbooks = [
   "playbooks/frameworks/wagmi",
   ...section("Protocol integrations"),
   "playbooks/integrations/ipfs",
+  "playbooks/integrations/lit",
   // ...section("Platforms"),
   // "playbooks/platforms/spheron",
 ];

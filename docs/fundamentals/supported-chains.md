@@ -7,7 +7,7 @@ keywords:
   - blockchains
 ---
 
-import { ChainsList } from '@site/src/components/SupportedChains'
+import { ChainsList, SupportedChains } from '@site/src/components/SupportedChains'
 
 Chain selection makes a significant impact on the database's usability. Choose a chain that’s too slow or expensive, and it won’t be feasible for table writes to occur frequently. Deploy a cross-chain data model for value layering purposes, and certain onchain access control features are lost. This page explains general chain related concepts; the following chains are supported and described in more detail in the subsequent pages.
 
@@ -22,7 +22,9 @@ Review the [cost estimation](/fundamentals/architecture/cost-estimator) table th
 
 ## Chain information
 
-If would like to dive straight into chain-specific overviews, with decision considerations and other chain information (chain ID, contracts, block explorers, faucets, etc.), head to one of the pages below. The full list of chain-specific details can be found in the [chain info pages](/quickstarts/chains).
+If would like to dive straight into chain-specific overviews, with decision considerations and other chain information (chain ID, contracts, block explorers, faucets, etc.), head to one of the pages below. The full list of chain-specific details can be found in the [chain info pages](/quickstarts/chains). The following shows the deployed contracts addresses across all mainnet and testnet chains:
+
+<SupportedChains />
 
 Here's a summary of how the chains works in terms of speed:
 

@@ -194,7 +194,6 @@ console.log(name.toUpperCase());
 // Uncaught TypeError: Cannot read properties of null (reading 'toUpperCase')
 ```
 
-import { Address } from '@site/src/components/Wallet'
 import { SupportedChains, ChainsList, ChainInfo } from '@site/src/components/SupportedChains'
 
 ## Components

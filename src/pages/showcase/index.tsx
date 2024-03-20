@@ -13,6 +13,11 @@ import YoutubeEmbed from "@site/src/components/YoutubeEmbed";
 import projectsData from "../../components/projects";
 import styles from "./index.module.css";
 
+interface Blog {
+  name: string;
+  url: string;
+}
+
 export interface Project {
   name: string; // Name of the project
   description: string; // Short description
@@ -25,6 +30,7 @@ export interface Project {
   twitter: string; // Twitter link
   details: string; // Long form details about the project
   youtubeId?: string; // Youtube demo ID, e.g., `-MUq--Nrd0c` for `https://www.youtube.com/watch?v=-MUq--Nrd0c`
+  blogs?: Blog[]; // Blog links
 }
 
 export type Protocol = "Tableland" | "Textile";
@@ -340,6 +346,19 @@ export default function Showcase() {
                     <p className={clsx(styles.modalDetails)}>
                       {currentProject.details}
                     </p>
+                    {currentProject.blogs &&
+                      currentProject.blogs?.length > 0 && (
+                        <>
+                          <h3>Blog posts</h3>
+                          <ul>
+                            {currentProject.blogs.map((blog, index) => (
+                              <li key={index}>
+                                <Link to={blog.url}>{blog.name}</Link>
+                              </li>
+                            ))}
+                          </ul>
+                        </>
+                      )}
                     {currentProject.youtubeId && (
                       <>
                         <h3>Demo</h3>

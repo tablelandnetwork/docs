@@ -20,17 +20,16 @@ export default function Home(): JSX.Element {
           </div>
           <div className="row row-landing margin-top--sm">
             <div className="col col--6 padding-left--none padding-right--none">
-              <h2>Program your web3 data</h2>
+              <h2>Program your onchain data</h2>
               <p>
-                Tableland is a decentralized database built on the SQLite
-                engine, providing developers with a web3-native, relational
-                database that easily integrates into their stack. With
-                Tableland, you can:
+                Tableland is a database built on the SQLite engine, providing
+                developers with a web3-native, relational database that easily
+                integrates into their stack. With Tableland, you can:
               </p>
               <ul>
                 <li>
-                  Utilize SQL to interact with web3 data, making the development
-                  process simpler and more efficient.
+                  Utilize SQL to interact with onchain data, making the
+                  development process simpler and more efficient.
                 </li>
                 <li>
                   Configure row-level access rules driven by wallet addresses,
@@ -38,17 +37,14 @@ export default function Home(): JSX.Element {
                 </li>
                 <li>
                   Build robust data pipelines that process and distribute large
-                  amounts of data for DeFi, DeSci, games, and more, all
-                  decentralized and autonomous, leveraging Tableland's
-                  infrastructure.
+                  amounts of data for DePIN, DeSci, games, and more, all with
+                  smart contracts or SDKs that leverage serverless infra.
                 </li>
               </ul>{" "}
               <p></p>
               <p>
                 Deploy across{" "}
-                <Link to="/fundamentals/supported-chains">
-                  multiple blockchains
-                </Link>
+                <Link to="/fundamentals/supported-chains">multiple chains</Link>
                 , including Filecoin, Ethereum, Polygon, Arbitrum, and
                 Optimism—and be a part of the growing number of projects using
                 Tableland for data-driven applications.
