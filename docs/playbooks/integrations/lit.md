@@ -21,7 +21,7 @@ Naturally, this is a perfect fit for encrypting and decrypting Tableland data! W
 
 ## Installation
 
-We'll first install the Tableland SDK and Lit SDK (version 3.x). This example walks uses NodeJS, and you'll also need the `siwe` package to generate a Lit `AuthSig`, described below.
+We'll first install the Tableland SDK and Lit SDK (version 3.x). This example uses NodeJS, and you'll also need the `siwe` package to generate a Lit `AuthSig`, described below.
 
 ```bash npm2yarn
 npm install @tableland/sdk @lit-protocol/lit-node-client siwe
