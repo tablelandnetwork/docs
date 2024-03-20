@@ -1,6 +1,7 @@
 name: Algolia # Reindex site search on Algolia
 
 on:
+  workflow_dispatch:
   push:
     branches:
       - main
@@ -9,12 +10,9 @@ jobs:
   reindex:
     runs-on: ubuntu-latest
     steps:
-      - name: Encode Algolia API credentials
-        run: echo "ALGOLIA_AUTH=$(echo -n ${{ secrets.CRAWLER_USER_ID }}:${{ secrets.CRAWLER_API_KEY }} | base64)" >> $GITHUB_ENV
       - name: Reindex Algolia
-        uses: JamesIves/fetch-api-data-action@v2
-        with:
-          endpoint: https://crawler.algolia.com/api/1/crawlers/${{ secrets.CRAWLER_ID }}/reindex
-          configuration: '{ "method": "POST", "headers": {"Content-Type": "application/json", "Authorization": "Basic ${ALGOLIA_AUTH}" } }'
-        env:
-          ALGOLIA_AUTH: ${{ env.ALGOLIA_AUTH }}
+        run: |
+          curl -H "Content-Type: application/json" \
+               -X POST \
+               --user ${{ secrets.CRAWLER_USER_ID }}:${{ secrets.CRAWLER_API_KEY }} \
+               "https://crawler.algolia.com/api/1/crawlers/${{ secrets.CRAWLER_ID }}/reindex"
