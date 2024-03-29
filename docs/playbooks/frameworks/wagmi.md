@@ -1,17 +1,24 @@
 ---
-title: Use Tableland with wagmi
-sidebar_label: wagmi
+title: Use Tableland with wagmi and RainbowKit
+sidebar_label: wagmi & RainbowKit
 description: Quickly add and use wagmi with Tableland and React.
 keywords:
   - wagmi
   - viem
   - react
+  - rainbowkit
+  - ethers wagmi
+  - wagmi adapter
 ---
 
 import Tabs from "@theme/Tabs";
 import TabItem from "@theme/TabItem";
 
-One great library to use in React apps is [wagmi](https://wagmi.sh/). It offers a very straightforward way to connect a user's wallet and access account information using React hooks. Start by installing wagmi in your React app, and then create and connect to a client. The one callout is that wagmi uses [viem](https://viem.sh/), and the Tableland SDK uses [ethers v5](https://docs.ethers.org/v5/)—so wagmi needs to implement an ethers adapter to use the SDK. We'll also use RainbowKit in this setup to make wallet connection modals easier as well as [Vite](https://vitejs.dev/guide/) to spin up a starter project.
+One great library to use in React apps is [wagmi](https://wagmi.sh/) alongside [RainbowKit](https://www.rainbowkit.com/). It offers a very straightforward way to connect a user's wallet and access account information using React hooks. Start by installing wagmi in your React app, and then create and connect to a client. The one callout is that wagmi uses [viem](https://viem.sh/), and the Tableland SDK uses [ethers v5](https://docs.ethers.org/v5/)—so wagmi needs to implement an ethers adapter to use the SDK. We'll also use RainbowKit in this setup to make wallet connection modals easier as well as [Vite](https://vitejs.dev/guide/) to spin up a starter project.
+
+:::tip
+For more starter kits, you can [check out the templates](/quickstarts/templates) we've created, which include both JavaScript and TypeScript implementation of the React examples we walk through below—plus, Next.js templates!
+:::
 
 ## 1. Installation
 
@@ -56,7 +63,7 @@ ENABLE_TESTNETS=true
 Note that we'll use `import.meta.env` to access these variables (below) in the `wagmi.js` file. Depending on your frontend setup, it may differ. With Vite, you use `import.meta.env` and prefix the variable with `VITE_`. But, if you're using Next.js, you'd use `process.env` and prefix with `NEXT_PUBLIC_`.
 
 <Tabs groupId="sdk">
-<TabItem value="jsv2" label="wagmi v2">
+<TabItem value="jsv2" label="wagmi v2" default>
 
 ```jsx title="src/wagmi.js"
 import "@rainbow-me/rainbowkit/styles.css";
@@ -94,7 +101,7 @@ export const config = getDefaultConfig({
 ```
 
 </TabItem>
-<TabItem value="jsv1" label="wagmi v1" default>
+<TabItem value="jsv1" label="wagmi v1">
 
 ```js title="src/wagmi.js"
 import "@rainbow-me/rainbowkit/styles.css";
@@ -150,7 +157,7 @@ export { chains };
 Next, we'll set up providers that wrap our React component with the wagmi config. Create a file called `providers.jsx` and add the following:
 
 <Tabs groupId="sdk">
-<TabItem value="jsv2" label="wagmi v2">
+<TabItem value="jsv2" label="wagmi v2" default>
 
 ```jsx title="src/providers.jsx"
 import { RainbowKitProvider, darkTheme } from "@rainbow-me/rainbowkit";
@@ -177,7 +184,7 @@ export function Providers({ children }) {
 ```
 
 </TabItem>
-<TabItem value="jsv1" label="wagmi v1" default>
+<TabItem value="jsv1" label="wagmi v1">
 
 ```js title="src/providers.jsx"
 import { RainbowKitProvider, darkTheme } from "@rainbow-me/rainbowkit";
@@ -226,7 +233,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
 Since wagmi is not natively compatible with ethers, we'll need to create a hook that adapts the wagmi account (viem) to an ethers account. Create a directory called `hooks` and a file called `useSigner.js`. Then, add the following:
 
 <Tabs groupId="sdk">
-<TabItem value="jsv2" label="wagmi v2">
+<TabItem value="jsv2" label="wagmi v2" default>
 
 ```js title="src/hooks/useSigner.js"
 import { useMemo } from "react";
@@ -255,7 +262,7 @@ export function useSigner({ chainId } = {}) {
 ```
 
 </TabItem>
-<TabItem value="jsv1" label="wagmi v1" default>
+<TabItem value="jsv1" label="wagmi v1">
 
 ```js title="src/hooks/useSigner.js"
 // Convert wagmi/viem `WalletClient` to ethers `Signer`
@@ -354,7 +361,3 @@ export default App;
 ```
 
 This boilerplate will display a connect wallet button in the navbar. Once a user makes the connection, the signer will now be available in the Tableland logic!
-
-:::tip
-For more examples, you can [check out the templates](/quickstarts/templates) we've created, which also include a TypeScript example of what we walked through as well as Next.js examples.
-:::
