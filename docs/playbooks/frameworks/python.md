@@ -18,21 +18,21 @@ The Tableland SDK is a JavaScript library, but you can makes calls directly to t
 Start by setting up a Python project. Then, depending on what you're using, you can install the `web3.py` library:
 
 <Tabs groupId="py">
-<TabItem value="pip" label="JavaScript" default>
+<TabItem value="pip" label="pip" default>
 
 ```bash
 pip install web3
 ```
 
 </TabItem>
-<TabItem value="poetry" label="TypeScript">
+<TabItem value="poetry" label="poetry">
 
 ```bash
 poetry add web3
 ```
 
 </TabItem>
-<TabItem value="pipenv" label="TypeScript">
+<TabItem value="pipenv" label="pipenv">
 
 ```bash
 pipenv install web3
@@ -175,21 +175,21 @@ There's an experimental Python SDK that can be used to interact with the Tablela
 The [`tableland`](https://github.com/dtbuchholz/tableland-py) Python library handles this and makes it easier to get started. You can install by running the following command:
 
 <Tabs groupId="py">
-<TabItem value="pip" label="JavaScript" default>
+<TabItem value="pip" label="pip" default>
 
 ```bash
 pip install web3
 ```
 
 </TabItem>
-<TabItem value="poetry" label="TypeScript">
+<TabItem value="poetry" label="poetry">
 
 ```bash
 poetry add web3
 ```
 
 </TabItem>
-<TabItem value="pipenv" label="TypeScript">
+<TabItem value="pipenv" label="pipenv">
 
 ```bash
 pipenv install web3
