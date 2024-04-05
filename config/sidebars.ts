@@ -271,18 +271,20 @@ const sdk = [
   "sdk/database/query-statement-methods",
   "sdk/database/batching",
   "sdk/database/aliases",
-  "sdk/validator/README",
   "sdk/registry/README",
+  "sdk/validator/README",
+  "sdk/helpers/README",
+  ...section("Walkthroughs"),
+  "sdk/walkthroughs/access-control",
   {
     type: "category",
     label: "Polling & subscriptions",
     items: [
-      "sdk/database/polling-queries",
+      "sdk/helpers/polling-queries",
       "sdk/validator/polling-transactions",
       "sdk/registry/subscribe",
     ],
   },
-  ...section("Walkthroughs"),
   {
     type: "category",
     label: "Plugins",
@@ -297,7 +299,7 @@ const sdk = [
       "sdk/plugins/custom-plugin",
     ],
   },
-  "sdk/database/timeouts-error-handling",
+  "sdk/walkthroughs/timeouts-error-handling",
   "sdk/walkthroughs/sql-parser",
   "sdk/walkthroughs/orm",
   "sdk/walkthroughs/testing",
@@ -317,7 +319,7 @@ const smartContracts = [
   "smart-contracts/contract-owned-tables",
   {
     type: "category",
-    label: "Configure write access",
+    label: "Access control",
     link: {
       type: "doc",
       id: "smart-contracts/controller/README",
