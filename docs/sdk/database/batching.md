@@ -11,7 +11,7 @@ The following methods act only on the the an instance of `Database`. They provid
 
 ## Options
 
-All methods can take an optional `controller` as the last parameter. This can control polling behavior to specify how long to wait for a transaction to be mined, and you can create your own, if desired. See the [polling controller docs](/sdk/database/polling-queries) for more details.
+All methods can take an optional `controller` as the last parameter. This can control polling behavior to specify how long to wait for a transaction to be mined, and you can create your own, if desired. See the [polling controller docs](/sdk/helpers/polling-queries) for more details.
 
 ## Batch statements
 

@@ -34,7 +34,7 @@ Thus, if the account `0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC` tries to write
 
 There is no native support in the SDK for _deploying_ controllers, which are smart contracts that [define an access control policy](/smart-contracts/controller/), which are more dynamic than the `GRANT`/`REVOKE` feature. But, once a controller contract is deployed, you can the use the SDK's [`Registry API`](/sdk/registry/) to set the controller.
 
-Let's say you've deployed a contract that has ["allow all" permissions](/smart-contracts/examples/allow-all-controller) at address `0x83a4bE0B792996f3b607f28cFD98f4E82AFcDD20` (note: this is a [real contract on Sepolia](https://sepolia.etherscan.io/address/0x83a4bE0B792996f3b607f28cFD98f4E82AFcDD20#code)). Then, you can use the [`setController` method](/sdk/registry#setcontroller) to, basically, state: this address is a controller contract that should dictate access controls for my table. Here's what it would look like:
+Let's say you've deployed a contract that has ["allow all" permissions](/smart-contracts/examples/allow-all-controller) at address `0x83a4bE0B792996f3b607f28cFD98f4E82AFcDD20` (note: this is a [real contract on Sepolia](https://sepolia.etherscan.io/address/0x83a4bE0B792996f3b607f28cFD98f4E82AFcDD20#code)). Then, you can use the [`setController` method](/sdk/registry) to, basically, state: this address is a controller contract that should dictate access controls for my table. Here's what it would look like:
 
 ```js
 import { Registry } from "@tableland/sdk";
