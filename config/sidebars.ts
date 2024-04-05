@@ -169,6 +169,7 @@ const playbooks = [
   "playbooks/frameworks/reactjs",
   "playbooks/frameworks/nextjs",
   "playbooks/frameworks/wagmi",
+  "playbooks/frameworks/python",
   ...section("Protocol integrations"),
   "playbooks/integrations/ipfs",
   "playbooks/integrations/lit",
