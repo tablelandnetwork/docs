@@ -34,7 +34,7 @@ On Tableland, mutating transactions such as `INSERT`, `DELETE`, and `UPDATE` pro
 
 ## Options
 
-All methods can take an optional `opts` object as the last parameter. This is an object that only has a single parameter for polling behavior: `controller`. It can be used to specify how long to wait for a transaction to be mined, and you can create your own, if desired. See the [polling controller docs](/sdk/database/polling-queries) for more details.
+All methods can take an optional `opts` object as the last parameter. This is an object that only has a single parameter for polling behavior: `controller`. It can be used to specify how long to wait for a transaction to be mined, and you can create your own, if desired. See the [polling controller docs](/sdk/helpers/polling-queries) for more details.
 
 ## Response format
 

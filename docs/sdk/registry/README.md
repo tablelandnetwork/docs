@@ -1,6 +1,6 @@
 ---
 title: Registry API
-description: Use the Registry API for directly calling the Tableland registry smart contract.
+description: Use the Registry API for directly calling the Tableland registry smart contract, such as setting access controllers.
 keywords:
   - registry api
   - access control

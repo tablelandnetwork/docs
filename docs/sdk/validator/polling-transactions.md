@@ -14,7 +14,7 @@ You can watch for table changes by setting up polling on a validator node. The g
 
 ## Polling for table changes
 
-By default, if you create table or write data with the SDK, it'll already be using this functionality under the hood. Every [chain has unique values configured](https://github.com/tablelandnetwork/evm-tableland/blob/ab6162634347028f1138fb04504de7209e797e55/network.ts#L76) for the `interval` and `timeout` params, which are used to determine how often to poll and how long to wait before timing out. See the [polling controller docs](/sdk/database/polling-queries) for more information on `createPollingController` works.
+By default, if you create table or write data with the SDK, it'll already be using this functionality under the hood. Every [chain has unique values configured](https://github.com/tablelandnetwork/evm-tableland/blob/ab6162634347028f1138fb04504de7209e797e55/network.ts#L76) for the `interval` and `timeout` params, which are used to determine how often to poll and how long to wait before timing out. See the [polling controller docs](/sdk/helpers/polling-queries) for more information on `createPollingController` works.
 
 You can override these values, if desired. Note the `Validator` does not need a `signer` to be instantiated, but it does need a `baseUrl` to connect to a validator node—the `getBaseUrl` helper function can be used to determine the correct one for your chain.
 
