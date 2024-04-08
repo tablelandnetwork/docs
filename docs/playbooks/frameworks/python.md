@@ -178,21 +178,21 @@ The [`tableland`](https://github.com/dtbuchholz/tableland-py) Python library han
 <TabItem value="pip" label="pip" default>
 
 ```bash
-pip install web3
+pip install tableland
 ```
 
 </TabItem>
 <TabItem value="poetry" label="poetry">
 
 ```bash
-poetry add web3
+poetry add tableland
 ```
 
 </TabItem>
 <TabItem value="pipenv" label="pipenv">
 
 ```bash
-pipenv install web3
+pipenv install tableland
 ```
 
 </TabItem>
