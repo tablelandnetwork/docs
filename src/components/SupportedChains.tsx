@@ -61,10 +61,10 @@ function getChainExplorer(chain: string, contract: string): string {
       return `https://optimistic.etherscan.io/address/${contract}`;
     case "optimism-sepolia":
       return `https://sepolia-optimism.etherscan.io/address/${contract}`;
-    case "matic":
+    case "polygon":
       return `https://polygonscan.com/address/${contract}`;
-    case "maticmum":
-      return `https://mumbai.polygonscan.com/address/${contract}`;
+    case "polygon-amoy":
+      return `https://amoy.polygonscan.com/address/${contract}`;
     default:
       return "";
   }
