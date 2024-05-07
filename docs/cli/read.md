@@ -27,7 +27,7 @@ Note that for both `--unwrap` and `--extract` options described below, the `--ch
 ## Examples
 
 ```bash
-tableland read "SELECT * FROM cli_demo_table_80001_1285;"
+tableland read "SELECT * FROM cli_demo_table_80002_151;"
 ```
 
 Output:
@@ -44,7 +44,7 @@ Output:
 If `pretty` is flagged, then the output is a "pretty" tabular view for a nice human-readable format.
 
 ```bash
-tableland read "SELECT * FROM cli_demo_table_80001_1285;" --format pretty
+tableland read "SELECT * FROM cli_demo_table_80002_151;" --format pretty
 ```
 
 Output:
@@ -60,7 +60,7 @@ Output:
 Lastly, if you want the data to be returned as a "table" with rows and columns, use the `table` flag:
 
 ```bash
-tableland read "SELECT * FROM cli_demo_table_80001_1285;" --format table
+tableland read "SELECT * FROM cli_demo_table_80002_151;" --format table
 ```
 
 Output:

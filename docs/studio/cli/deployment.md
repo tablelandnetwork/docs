@@ -47,8 +47,8 @@ This will log something like the following, where each entry shows table deploym
   {
     "tableId": "3ecb77e3-246e-4671-8695-8823dbb7c23d",
     "environmentId": "03b21226-3ed1-44c6-8100-901b6288c565",
-    "tableName": "my_table_80001_7726",
-    "chainId": 31338,
+    "tableName": "my_table_80002_7726",
+    "chainId": 80002,
     "tokenId": "2",
     "blockNumber": 41179459,
     "txnHash": "0x209195da1f735e6872ff8034d14b0fc3151a68533427a388e4adda9fa10d5ce1",
@@ -71,8 +71,8 @@ This will log something like:
 {
   "tableId": "3ecb77e3-246e-4671-8695-8823dbb7c23d",
   "environmentId": "03b21226-3ed1-44c6-8100-901b6288c565",
-  "tableName": "my_table_80001_7726",
-  "chainId": 31338,
+  "tableName": "my_table_80002_7726",
+  "chainId": 80002,
   "tokenId": "2",
   "blockNumber": 41179459,
   "txnHash": "0x209195da1f735e6872ff8034d14b0fc3151a68533427a388e4adda9fa10d5ce1",

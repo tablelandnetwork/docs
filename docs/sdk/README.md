@@ -23,7 +23,7 @@ There's also a Go SDK available [here](https://github.com/tablelandnetwork/go-ta
 
 ## Chain configuration
 
-Note the chain naming convention used by the `Database` connection matches that of [`ethersjs`](https://github.com/ethers-io/ethers.js/). To dictate which chain your app should connect to, you can leverage a [`Signer`](https://docs.ethers.org/v5/api/signer/) where the signer will provide information corresponding to a particular chain. This includes any of the following chains, which have their `ethers`-defined name shown as well:
+Note the chain naming convention used by the `Database` connection roughly matches that of [`ethersjs`](https://github.com/ethers-io/ethers.js/). To dictate which chain your app should connect to, you can leverage a [`Signer`](https://docs.ethers.org/v6/api/providers/#Signer) where the signer will provide information corresponding to a particular chain. This includes any of the following chains, which have their defined chain name shown as well:
 
 import { ChainsList } from '@site/src/components/SupportedChains'
 

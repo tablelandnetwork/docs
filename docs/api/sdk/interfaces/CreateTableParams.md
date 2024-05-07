@@ -18,7 +18,7 @@ The target chain id.
 
 #### Defined in
 
-@tableland/sdk/src/registry/create.ts:64
+@tableland/sdk/src/registry/create.ts:68
 
 ___
 
@@ -30,4 +30,4 @@ SQL statement string.
 
 #### Defined in
 
-@tableland/sdk/src/registry/create.ts:63
+@tableland/sdk/src/registry/create.ts:67

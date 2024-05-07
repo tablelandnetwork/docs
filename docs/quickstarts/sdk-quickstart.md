@@ -29,10 +29,10 @@ Note Tableland SDK uses the modern `fetch` API, which is only available starting
 
 ### Ethers
 
-Note that Tableland uses [ethersjs](https://docs.ethers.org/v5/) under the hood. The version being used is the **last version of ethersjs v5** (5.7.2) and **not the latest version overall** (v6). So, it's likely you'll need to install `ethers@^5.7.2` in your project:
+Note that Tableland uses [ethersjs](https://docs.ethers.org/v6/) under the hood. The version being used is the **latest version of ethersjs v6**.
 
 ```bash
-npm i --save ethers@^5.7.2
+npm i --save ethers
 ```
 
 ### Local development
@@ -65,7 +65,7 @@ const privateKey =
 const wallet = new Wallet(privateKey);
 // To avoid connecting to the browser wallet (locally, port 8545),
 // replace the URL with a provider like Alchemy, Infura, Etherscan, etc.
-const provider = getDefaultProvider("http://127.0.0.1:8545"); // For example: "https://polygon-mumbai.g.alchemy.com/v2/${process.env.YOUR_ALCHEMY_KEY}"
+const provider = getDefaultProvider("http://127.0.0.1:8545"); // For example: "https://polygon-amoy.g.alchemy.com/v2/${process.env.YOUR_ALCHEMY_KEY}"
 const signer = wallet.connect(provider);
 // Connect to the database
 const db = new Database({ signer });
@@ -76,10 +76,10 @@ const db = new Database({ signer });
 
 ```js
 import { Database } from "@tableland/sdk";
-import { providers, Signer } from "ethers";
+import { BrowserProvider, Signer } from "ethers";
 
 // Establish a connection with a `Signer`
-const provider = new providers.Web3Provider(window.ethereum);
+const provider = new BrowserProvider(window.ethereum);
 // Request the connected accounts, prompting a browser wallet popup to connect.
 await provider.send("eth_requestAccounts", []);
 // Create a signer from the returned provider connection.
@@ -229,7 +229,7 @@ const privateKey =
   "59c6995e998f97a5a0044966f0945389dc9e86dae88c7a8412f4603b6b78690d"; // Your private key
 const wallet = new Wallet(privateKey);
 // To avoid connecting to the browser wallet (locally, port 8545).
-// For example: "https://polygon-mumbai.g.alchemy.com/v2/YOUR_ALCHEMY_KEY"
+// For example: "https://polygon-amoy.g.alchemy.com/v2/YOUR_ALCHEMY_KEY"
 const provider = getDefaultProvider("http://127.0.0.1:8545");
 const signer = wallet.connect(provider);
 
@@ -268,7 +268,7 @@ const privateKey =
   "59c6995e998f97a5a0044966f0945389dc9e86dae88c7a8412f4603b6b78690d";
 const wallet = new Wallet(privateKey);
 // To avoid connecting to the browser wallet (locally, port 8545).
-// For example: "https://polygon-mumbai.g.alchemy.com/v2/YOUR_ALCHEMY_KEY"
+// For example: "https://polygon-amoy.g.alchemy.com/v2/YOUR_ALCHEMY_KEY"
 const provider = getDefaultProvider("http://127.0.0.1:8545");
 const signer = wallet.connect(provider);
 

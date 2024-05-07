@@ -63,7 +63,7 @@ This operation does not require authentication
 ## Example
 
 ```bash
-curl -X GET https://testnets.tableland.network/api/v1/tables/80001/1 \
+curl -X GET https://testnets.tableland.network/api/v1/tables/80002/1 \
   -H 'Accept: application/json'
 ```
 
@@ -71,10 +71,10 @@ Returns a successful (200) response:
 
 ```json
 {
-  "name": "healthbot_80001_1",
-  "external_url": "https://testnets.tableland.network/api/v1/tables/80001/1",
-  "animation_url": "https://tables.testnets.tableland.xyz/80001/1.html",
-  "image": "https://tables.testnets.tableland.xyz/80001/1.svg",
+  "name": "healthbot_80002_1",
+  "external_url": "https://testnets.tableland.network/api/v1/tables/80002/1",
+  "animation_url": "https://tables.testnets.tableland.xyz/80002/1.html",
+  "image": "https://tables.testnets.tableland.xyz/80002/1.svg",
   "attributes": [
     {
       "display_type": "date",

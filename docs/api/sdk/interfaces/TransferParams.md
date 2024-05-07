@@ -16,7 +16,7 @@ Name or tableId and chainId of the token to be transferred.
 
 #### Defined in
 
-@tableland/sdk/src/registry/transfer.ts:9
+@tableland/sdk/src/registry/transfer.ts:13
 
 ___
 
@@ -28,4 +28,4 @@ Address to receive the ownership of the given token ID.
 
 #### Defined in
 
-@tableland/sdk/src/registry/transfer.ts:13
+@tableland/sdk/src/registry/transfer.ts:17

@@ -16,7 +16,7 @@ Address of the contract to use as a controller.
 
 #### Defined in
 
-@tableland/sdk/src/registry/controller.ts:13
+@tableland/sdk/src/registry/controller.ts:17
 
 ___
 
@@ -28,4 +28,4 @@ Name or tableId and chainId of the token to be transferred.
 
 #### Defined in
 
-@tableland/sdk/src/registry/controller.ts:9
+@tableland/sdk/src/registry/controller.ts:13

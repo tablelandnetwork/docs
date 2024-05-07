@@ -55,7 +55,7 @@ The validator detects the smart contract events using an EVM node API (e.g., `ge
 
 If you're curious about Tableland network growth, eager to contribute, or interested in experimenting, we encourage you to try running a validator. To get started, follow the step-by-step instructions provided below. We appreciate your interest and welcome any questions or feedback you may have during the process; stay tuned for updates and developments in our [Discord](https://tableland.xyz/discord) and [Twitter](https://twitter.com/tableland).
 
-For projects that want to _use_ the validator API, Tableland [maintains a public gateway](https://docs.tableland.xyz/validator/api) that can be used to query the network.
+For projects that want to _use_ the validator API, Tableland [maintains a public gateway](https://docs.tableland.xyz/gateway-api) that can be used to query the network.
 
 ### Running a validator
 
@@ -334,7 +334,6 @@ This would result in having four tables—one per chain:
 - `healthbot_11155111_{tableID}` (Ethereum Sepolia)
 - `healthbot_11155420_{tableID}` (Optimism Sepolia)
 - `healthbot_421614_{tableID}` (Arbitrum Sepolia)
-- `healthbot_80001_{tableID}` (Polygon Mumbai)
 - `healthbot_314159_{tableID}` (Filecoin Calibration)
 
 You should create a file `.env_healthbot` in the `docker/deployed/testnet/healthbot` folder with the following content (an example is provided with `.env_healthbot.example`):
@@ -343,7 +342,6 @@ You should create a file `.env_healthbot` in the `docker/deployed/testnet/health
 HEALTHBOT_ETHEREUM_SEPOLIA_TABLE=healthbot_11155111_{tableID}
 HEALTHBOT_OPTIMISM_SEPOLIA_TABLE=healthbot_11155420_{tableID}
 HEALTHBOT_ARBITRUM_SEPOLIA_TABLE=healthbot_421614_{tableID}
-HEALTHBOT_POLYGON_MUMBAI_TABLE=healthbot_80001_{tableID}
 HEALTHBOT_FILECOIN_CALIBRATION_TABLE=healthbot_314159_{tableID}
 ```
 
@@ -469,4 +467,4 @@ Small note: If editing the README, please conform to the
 
 ## License
 
-MIT AND Apache-2.0, © 2021-2023 Tableland Network Contributors
+MIT AND Apache-2.0, © 2021-2024 Tableland Network Contributors

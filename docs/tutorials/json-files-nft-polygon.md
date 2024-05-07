@@ -20,7 +20,7 @@ New to NFTs? Check out the page on [how to build an NFT](/playbooks/concepts/how
 
 ## Overview
 
-Tableland solves the web3 metadata problem with ERC721-based tables that are powered by smart contracts. Create, insert, and update tables, all using smart contracts and/or libraries built on top of the Tableland protocol. Although not covered in this walkthrough, the metadata can also be _dynamic_ and change based on user interactions or onchain events. The Tableland contracts are currently deployed on Polygon mainnet & Mumbai testnet, as well as a number of other chains—this tutorial will use Polygon’s Mumbai testnet.
+Tableland solves the web3 metadata problem with ERC721-based tables that are powered by smart contracts. Create, insert, and update tables, all using smart contracts and/or libraries built on top of the Tableland protocol. Although not covered in this walkthrough, the metadata can also be _dynamic_ and change based on user interactions or onchain events. The Tableland contracts are currently deployed on Polygon mainnet & Amoy testnet, as well as a number of other chains—this tutorial will use Polygon’s Amoy testnet.
 
 All in all, this tutorial will walk through:
 
@@ -51,10 +51,10 @@ Before getting started, be sure to do the following:
 
 1. A basic understanding of Ethereum/Polygon, smart contracts, Solidity, and JavaScript.
 2. Have a private key from your wallet handy, such as exporting it via MetaMask—and have saved this _locally_ in a `.env` file (more on this below).
-3. Have testnet MATIC in your wallet—get some from the [Polygon Mumbai faucet](https://mumbaifaucet.com/).
+3. Have testnet MATIC in your wallet—get some from the [Polygon Amoy faucet](https://amoyfaucet.com/).
 4. Signed up for an [NFT.Storage](https://nft.storage/docs/#create-an-account) account and make a note of the API key (also placed in `.env`).
    1. Since Tableland is _not_ a file storage solution, using IPFS (or persisted file solutions like Filecoin) is still a best practice—[NFT.Storage](http://NFT.Storage) is a great file "pinning" solution.
-5. Signed up for an [Alchemy account](https://dashboard.alchemyapi.io/) for interacting with the Polygon Mumbai testnet.
+5. Signed up for an [Alchemy account](https://dashboard.alchemyapi.io/) for interacting with the Polygon Amoy testnet.
 6. (Optional) Signed up for a [Polygonscan account](https://polygonscan.com/login) and [created an API key](https://polygonscan.com/myapikey) (in `.env`)
 
 :::tip
@@ -67,15 +67,15 @@ NEVER share your `.env` file publicly—ensure that it is specified in a `.gitig
 See the following for the final product, which includes an NFT collection on Polygon:
 
 - Repo: [here](https://github.com/tablelandnetwork/two-tables-nft-polygon-tutorial)
-- Listing on OpenSea (Polygon Mumbai testnet): [here](https://testnets.opensea.io/collection/twotablesnft)
-- NFT metadata on Tableland: [here](https://testnets.tableland.network/api/v1/query?mode=list&statement=SELECT%20json_object%28%27id%27%2Cid%2C%27name%27%2Cname%2C%27description%27%2Cdescription%2C%27image%27%2Cimage%2C%27attributes%27%2Cjson_group_array%28json_object%28%27trait_type%27%2Ctrait_type%2C%27value%27%2Cvalue%29%29%29%20FROM%20table_nft_main_80001_1510%20JOIN%20table_nft_attributes_80001_1511%20ON%20table_nft_main_80001_1510%2Eid%20%3D%20table_nft_attributes_80001_1511%2Emain_id%20WHERE%20id%3D0%20group%20by%20id)
-- Contract address: `0xDAa7F50C50018D7332da819be275693cA9604178`, verified & viewable on [Polygonscan](https://mumbai.polygonscan.com/address/0xDAa7F50C50018D7332da819be275693cA9604178)
-- Main table creation transaction: [0x2016f295221c235f62d89b44f8d6a51096a58c0a2722e93f2c2133e5471d0737](https://mumbai.polygonscan.com/tx/0x2016f295221c235f62d89b44f8d6a51096a58c0a2722e93f2c2133e5471d0737)
-- Attributes table creation transaction: [0x9f8e874bec740dc1299fe0357a9b093f1938272311948437072de8a2b91c5f04](https://mumbai.polygonscan.com/tx/0x9f8e874bec740dc1299fe0357a9b093f1938272311948437072de8a2b91c5f04)
+- Listing on OpenSea (Polygon Amoy testnet): [here](https://testnets.opensea.io/collection/twotablesnft)
+- NFT metadata on Tableland: [here](https://testnets.tableland.network/api/v1/query?mode=list&statement=SELECT%20json_object%28%27id%27%2Cid%2C%27name%27%2Cname%2C%27description%27%2Cdescription%2C%27image%27%2Cimage%2C%27attributes%27%2Cjson_group_array%28json_object%28%27trait_type%27%2Ctrait_type%2C%27value%27%2Cvalue%29%29%29%20FROM%20table_nft_main_80002_1510%20JOIN%20table_nft_attributes_80002_1511%20ON%20table_nft_main_80002_1510%2Eid%20%3D%20table_nft_attributes_80002_1511%2Emain_id%20WHERE%20id%3D0%20group%20by%20id)
+- Contract address: `0xDAa7F50C50018D7332da819be275693cA9604178`, verified & viewable on [Polygonscan](https://amoy.polygonscan.com/address/0xDAa7F50C50018D7332da819be275693cA9604178)
+- Main table creation transaction: [0x2016f295221c235f62d89b44f8d6a51096a58c0a2722e93f2c2133e5471d0737](https://amoy.polygonscan.com/tx/0x2016f295221c235f62d89b44f8d6a51096a58c0a2722e93f2c2133e5471d0737)
+- Attributes table creation transaction: [0x9f8e874bec740dc1299fe0357a9b093f1938272311948437072de8a2b91c5f04](https://amoy.polygonscan.com/tx/0x9f8e874bec740dc1299fe0357a9b093f1938272311948437072de8a2b91c5f04)
 
 ### Project flow & structure
 
-The purpose of each file is described below. Basically, the entry point is `deployTwoTables`, which is ran with `npx hardat run scripts/deployTwoTables.js --network "polygon-mumbai"`. This will use the helper `prepareSql` to create SQL INSERT statements, which uses `metadataProcessing` to read files from the `images` and `metadata` directories. Lastly, the `TwoTablesNFT` contract is an ERC721 NFT contract, which leverages the Tableland gateway at the NFT’s `tokenURI`. A relational data model is used to easily compose data at the `tokenURI` across a _main_ and _attributes_ table deployed in the `deployTwoTables` with all of the corresponding metadata.
+The purpose of each file is described below. Basically, the entry point is `deployTwoTables`, which is ran with `npx hardat run scripts/deployTwoTables.js --network "polygon-amoy"`. This will use the helper `prepareSql` to create SQL INSERT statements, which uses `metadataProcessing` to read files from the `images` and `metadata` directories. Lastly, the `TwoTablesNFT` contract is an ERC721 NFT contract, which leverages the Tableland gateway at the NFT’s `tokenURI`. A relational data model is used to easily compose data at the `tokenURI` across a _main_ and _attributes_ table deployed in the `deployTwoTables` with all of the corresponding metadata.
 
 ```json
 ├── contracts
@@ -105,7 +105,7 @@ The following identifies what the final structure should look like; it may be he
 - `images` ⇒ A couple of sample images, but any images/amount can be included—these will be uploaded to IPFS. Note that these will be related to the NFT's `tokenId`.
 - `metadata` ⇒ The corresponding metadata files for each image, which lack the "image" field value (empty string by default). The metadata files will have their "image" values overwritten by the image's `CID` upon IPFS upload. These JSON files must have a 1:1 relationship to images, with matching names (e.g., `0.jpeg` for the image, and `0` for the JSON, omitting the extension).
 - `contracts` ⇒ The NFT smart contract (`TwoTablesNFT`), which will mint tokens & allow for the `baseURI` to be set that points to the Tableland network. `TwoTablesNFT` is the "recommended" way to do things where two Tableland tables (_main_ and _attributes_) are used and composed with SQL.
-- `hardhat.config.js` ⇒ Some useful deployment configs, including gateways to the proper Alchemy node provider on Polygon Mumbai testnets -- and also loading the private key from `.env` for live testnet deployment.
+- `hardhat.config.js` ⇒ Some useful deployment configs, including gateways to the proper Alchemy node provider on Polygon Amoy testnets -- and also loading the private key from `.env` for live testnet deployment.
 - `scripts`:
   - `metadataProcessing.js` ⇒ Look for images in `images`, upload images to IPFS, parse the `metadata` files, write these CIDs to the corresponding JSON/object, and also, return the built object for metadata preparation.
   - `prepareSql.js` ⇒ Take the output from `uploadMetadataToIpfs.js` and build SQL statements.
@@ -163,10 +163,10 @@ npm install @tableland/sdk node-fetch @openzeppelin/contracts dotenv nft.storage
 - `nft.storage` ⇒ IPFS pinning services for NFT images.
 - `mime` & `files-from-path` ⇒ Used when parsing files & while using `nft.storage`, as [outlined in their docs.](https://nft.storage/docs/#using-the-javascript-api)
 
-Also, install some `prettier` development dependencies and `@nomiclabs/hardhat-etherscan` for contract verification on Polygonscan:
+Also, install some `prettier` development dependencies and `@nomicfoundation/hardhat-verify` for contract verification:
 
 ```bash
-npm i -D @nomiclabs/hardhat-etherscan prettier prettier-plugin-solidity
+npm i -D @nomicfoundation/hardhat-verify prettier prettier-plugin-solidity
 ```
 
 Note that the `.env` file should resemble the following and be placed in the project’s root:
@@ -176,7 +176,7 @@ Note that the `.env` file should resemble the following and be placed in the pro
 NFT_STORAGE_API_KEY=your_api_key
 
 ### Gateway to the Polygon testnet
-ALCHEMY_POLYGON_MUMBAI_API_KEY=your_polygon_mumbai_api_key
+ALCHEMY_POLYGON_AMOY_API_KEY=your_polygon_amoy_api_key
 
 ### API key for (optional) contract verification
 POLYGONSCAN_API_KEY=your_polygonscan_api_key
@@ -644,13 +644,13 @@ const fetch = (...args) =>
   import("node-fetch").then(({ default: fetch }) => fetch(...args));
 globalThis.fetch = fetch;
 // Optionally, do contract verification (for demo purposes, but this could be as a separate script `verify.js`)
-require("@nomiclabs/hardhat-etherscan");
+require("@nomicfoundation/hardhat-verify");
 ```
 
 Next, we’ll add all of our functionality in the `main` function, which will be called when we run the deploy script. One of the most important aspects actually will come in our `hardhat.config.js`, so let’s take a look at that real quick. In the root of the project, update `hardhat.config.js`. The primary call outs:
 
 - The `hardhat` key can be helpful when running things locally with `npx hardhat node` during development. We’re going to skip right to the testnet!
-- For `networks`, many can be added, but here, we’re only going to deploy to Polygon Mumbai. The `PRIVATE_KEY` is from the `.env` file, which is the key to the development wallet being used.
+- For `networks`, many can be added, but here, we’re only going to deploy to Polygon Amoy. The `PRIVATE_KEY` is from the `.env` file, which is the key to the development wallet being used.
 - Optionally, we can also verify contracts on Polygonscan—this is where some optional aspects come into play, but it’s a fun exercise.
 
 ```tsx
@@ -658,26 +658,26 @@ Next, we’ll add all of our functionality in the `main` function, which will be
 
 require("@nomiclabs/hardhat-waffle");
 // Optionally, import for contract verification on Polygonscan
-require("@nomiclabs/hardhat-etherscan");
+require("@nomicfoundation/hardhat-verify");
 const dotenv = require("dotenv");
 dotenv.config();
 
 /**
- * Config sets the gateways to the proper node provider on Polygon Mumbai testnets & loads the private key from `.env`
+ * Config sets the gateways to the proper node provider on Polygon Amoy testnets & loads the private key from `.env`
  */
 module.exports = {
   solidity: "0.8.4",
   hardhat: {},
   networks: {
-    "polygon-mumbai": {
-      url: `https://polygon-mumbai.g.alchemy.com/v2/${process.env.ALCHEMY_POLYGON_MUMBAI_API_KEY}`,
+    "polygon-amoy": {
+      url: `https://polygon-amoy.g.alchemy.com/v2/${process.env.ALCHEMY_POLYGON_AMOY_API_KEY}`,
       accounts: [`${process.env.PRIVATE_KEY}`],
     },
   },
   // Set the API keys where the keys are defined by: `npx hardhat verify --list-networks`
   etherscan: {
     apiKey: {
-      polygonMumbai: process.env.POLYGONSCAN_API_KEY,
+      polygonAmoy: process.env.POLYGONSCAN_API_KEY,
     },
   },
 };
@@ -686,7 +686,7 @@ module.exports = {
 Back to deploying `TwoTablesNFT` and creating Tableland tables. We’ll first start by using `ethers.getSigners()` to retrieve the accounts from our `hardhat.config.js` when deploying to Polygon. We’ll also specify a couple of Tableland specifics:
 
 - In Tableland’s `Database`, there is a `signer` passed that defines the connected EVM account and chain.
-- The variables `mainSchema`, `attributesSchema`, `mainPrefix`, and `attributesPrefix` are all declared. These are used when minting a Tableland TABLE from the `TablelandTables` [registry contract](https://mumbai.polygonscan.com/address/0x4b48841d4b32C4650E4ABc117A03FE8B51f38F68).
+- The variables `mainSchema`, `attributesSchema`, `mainPrefix`, and `attributesPrefix` are all declared. These are used when minting a Tableland TABLE from the `TablelandTables` [registry contract](https://amoy.polygonscan.com/address/0x4b48841d4b32C4650E4ABc117A03FE8B51f38F68).
 
 Recall the schemas correspond to all of our previous write statements:
 
@@ -837,7 +837,7 @@ const twoTablesNFT = await TwoTablesNFT.deploy(
   mainName,
   attributesName
 );
-await twoTablesNFT.deployed();
+await twoTablesNFT.waitForDeployment();
 ```
 
 Boom! Table time. Double table time, to be exact. We will have some tables on Polygon, shortly! One follow up step is provided for sake of demonstration. This is best served in a testing scenario where you can write tests in the `tests` directory and run `npx hardhat test` to run them. Here, we’re going to do a pseudo-test for fun—minting a token in the deploy script itself.
@@ -871,7 +871,7 @@ console.log(
 
 ### Verifying Our Contract
 
-Okay, final "optional" step before we mint our tables and deploy the `TwoTablesNFT` contract. Ensure you’ve signed up for a [Polygonscan account](https://polygonscan.com/login), created an [API key](https://polygonscan.com/myapikey), and saved it to `.env` as `POLYGONSCAN_API_KEY`. Since we’ve already installed `@nomiclabs/hardhat-etherscan`, we just need to write the simple script.
+Okay, final "optional" step before we mint our tables and deploy the `TwoTablesNFT` contract. Ensure you’ve signed up for a [Polygonscan account](https://polygonscan.com/login), created an [API key](https://polygonscan.com/myapikey), and saved it to `.env` as `POLYGONSCAN_API_KEY`. Since we’ve already installed `@nomicfoundation/hardhat-verify`, we just need to write the simple script.
 
 This verification logic has been included in `deployTwoTables.js`, but it may be useful to do this as a separate step. As such, `verifyTwoTables.js` is provided for those who wish to separate roles of responsibility accordingly. The main consideration is to—just as the `deploy` method required—pass the constructor arguments. This includes the Tableland gateway and those previously saved variable for table names in the format `{prefix}_{chainId}_{tableId}`.
 
@@ -884,39 +884,33 @@ await run("verify:verify", {
 
 ### Actually, Deploying
 
-Whew…we’re finally ready to put everything together. All that’s left is to run the hardhat script—the main callout here is that we’re passing "polygon-mumbai" as the network, which we previously defined in the `hardhat.config.js` file:
+Whew…we’re finally ready to put everything together. All that’s left is to run the hardhat script—the main callout here is that we’re passing "polygon-amoy" as the network, which we previously defined in the `hardhat.config.js` file:
 
 ```bash
-npx hardhat run scripts/deployTwoTables.js --network "polygon-mumbai"
+npx hardhat run scripts/deployTwoTables.js --network "polygon-amoy"
 ```
-
-And BOOM. Tables have been deployed on Polygon:
-
-- **Contract**: [0xDAa7F50C50018D7332da819be275693cA9604178](https://mumbai.polygonscan.com/address/0xDAa7F50C50018D7332da819be275693cA9604178)
-- **Tableland metadata** (for tokenId `0`):
-  [](https://testnets.tableland.network/query?unwrap=true&extract=true&statement=SELECT%20json_object%28%27id%27%2Cid%2C%27name%27%2Cname%2C%27description%27%2Cdescription%2C%27image%27%2Cimage%2C%27attributes%27%2Cjson_group_array%28json_object%28%27trait_type%27%2Ctrait_type%2C%27value%27%2Cvalue%29%29%29%20FROM%20table_nft_main_80001_1510%20JOIN%20table_nft_attributes_80001_1511%20ON%20table_nft_main_80001_1510%2Eid%20%3D%20table_nft_attributes_80001_1511%2Emain_id%20WHERE%20id%3D0%20group%20by%20id)
 
 If you followed along and performed all of the optional actions and kept the associated logging, the output in the console should have looked something like this:
 
 ```
-Deploying to network 'polygon-mumbai' with account 0x4D5286d81317E284Cd377cB98b478552Bbe641ae
-Table 'table_nft_main_80001_1510' has been created at tx '0x2016f295221c235f62d89b44f8d6a51096a58c0a2722e93f2c2133e5471d0737'
-Table 'table_nft_attributes_80001_1511' has been created at tx '0x9f8e874bec740dc1299fe0357a9b093f1938272311948437072de8a2b91c5f04'
+Deploying to network 'polygon-amoy' with account 0x4D5286d81317E284Cd377cB98b478552Bbe641ae
+Table 'table_nft_main_80002_1510' has been created at tx '0x2016f295221c235f62d89b44f8d6a51096a58c0a2722e93f2c2133e5471d0737'
+Table 'table_nft_attributes_80002_1511' has been created at tx '0x9f8e874bec740dc1299fe0357a9b093f1938272311948437072de8a2b91c5f04'
 
 Writing metadata to tables...
-table_nft_main_80001_1510 table: INSERT INTO table_nft_main_80001_1510 (id, name, description, image) VALUES (0, 'TableNFT Rigs #0', 'A Tableland NFT demo -- deploying metadata on Tableland', 'https://bafkreieqzca4qd5quruezfcwnrzgx5j62xww4ud34k6upp2utuicp2m6ky.ipfs.nftstorage.link/');
-table_nft_attributes_80001_1511 table: INSERT INTO table_nft_attributes_80001_1511 (main_id, trait_type, value) VALUES (0, 'Fleet', 'Foils');
-table_nft_attributes_80001_1511 table: INSERT INTO table_nft_attributes_80001_1511 (main_id, trait_type, value) VALUES (0, 'Role', 'Admin');
-table_nft_main_80001_1510 table: INSERT INTO table_nft_main_80001_1510 (id, name, description, image) VALUES (1, 'TableNFT Rigs #1', 'A Tableland NFT demo -- deploying metadata on Tableland', 'https://bafkreibijrzbzy44dxmroq7jvbtka4oxgrejdtzsgu2qqsiugeb3he56pi.ipfs.nftstorage.link/');
-table_nft_attributes_80001_1511 table: INSERT INTO table_nft_attributes_80001_1511 (main_id, trait_type, value) VALUES (1, 'Fleet', 'Tumblers');
-table_nft_attributes_80001_1511 table: INSERT INTO table_nft_attributes_80001_1511 (main_id, trait_type, value) VALUES (1, 'Role', 'User');
+table_nft_main_80002_1510 table: INSERT INTO table_nft_main_80002_1510 (id, name, description, image) VALUES (0, 'TableNFT Rigs #0', 'A Tableland NFT demo -- deploying metadata on Tableland', 'https://bafkreieqzca4qd5quruezfcwnrzgx5j62xww4ud34k6upp2utuicp2m6ky.ipfs.nftstorage.link/');
+table_nft_attributes_80002_1511 table: INSERT INTO table_nft_attributes_80002_1511 (main_id, trait_type, value) VALUES (0, 'Fleet', 'Foils');
+table_nft_attributes_80002_1511 table: INSERT INTO table_nft_attributes_80002_1511 (main_id, trait_type, value) VALUES (0, 'Role', 'Admin');
+table_nft_main_80002_1510 table: INSERT INTO table_nft_main_80002_1510 (id, name, description, image) VALUES (1, 'TableNFT Rigs #1', 'A Tableland NFT demo -- deploying metadata on Tableland', 'https://bafkreibijrzbzy44dxmroq7jvbtka4oxgrejdtzsgu2qqsiugeb3he56pi.ipfs.nftstorage.link/');
+table_nft_attributes_80002_1511 table: INSERT INTO table_nft_attributes_80002_1511 (main_id, trait_type, value) VALUES (1, 'Fleet', 'Tumblers');
+table_nft_attributes_80002_1511 table: INSERT INTO table_nft_attributes_80002_1511 (main_id, trait_type, value) VALUES (1, 'Role', 'User');
 
-TwoTablesNFT contract deployed on polygon-mumbai at: 0xDAa7F50C50018D7332da819be275693cA9604178
+TwoTablesNFT contract deployed on polygon-amoy at: 0xDAa7F50C50018D7332da819be275693cA9604178
 TwoTablesNFT is using baseURI: https://testnets.tableland.network/query?unwrap=true&extract=true&statement=
 
 NFT minted: tokenId '0' to owner '0x4D5286d81317E284Cd377cB98b478552Bbe641ae'
 See an example of 'tokenURI' using token '0' here:
-https://testnets.tableland.network/query?unwrap=true&extract=true&statement=SELECT%20json_object%28%27id%27%2Cid%2C%27name%27%2Cname%2C%27description%27%2Cdescription%2C%27image%27%2Cimage%2C%27attributes%27%2Cjson_group_array%28json_object%28%27trait_type%27%2Ctrait_type%2C%27value%27%2Cvalue%29%29%29%20FROM%20table_nft_main_80001_1510%20JOIN%20table_nft_attributes_80001_1511%20ON%20table_nft_main_80001_1510%2Eid%20%3D%20table_nft_attributes_80001_1511%2Emain_id%20WHERE%20id%3D0%20group%20by%20id
+https://testnets.tableland.network/query?unwrap=true&extract=true&statement=SELECT%20json_object%28%27id%27%2Cid%2C%27name%27%2Cname%2C%27description%27%2Cdescription%2C%27image%27%2Cimage%2C%27attributes%27%2Cjson_group_array%28json_object%28%27trait_type%27%2Ctrait_type%2C%27value%27%2Cvalue%29%29%29%20FROM%20table_nft_main_80002_1510%20JOIN%20table_nft_attributes_80002_1511%20ON%20table_nft_main_80002_1510%2Eid%20%3D%20table_nft_attributes_80002_1511%2Emain_id%20WHERE%20id%3D0%20group%20by%20id
 
 Verifying contract...
 Nothing to compile
@@ -925,7 +919,7 @@ contracts/TwoTablesNFT.sol:TwoTablesNFT at 0xDAa7F50C50018D7332da819be275693cA96
 for verification on the block explorer. Waiting for verification result...
 
 Successfully verified contract TwoTablesNFT on Etherscan.
-https://mumbai.polygonscan.com/address/0xDAa7F50C50018D7332da819be275693cA9604178#code
+https://amoy.polygonscan.com/address/0xDAa7F50C50018D7332da819be275693cA9604178#code
 ```
 
 ### Testing
@@ -963,7 +957,7 @@ Let’s review everything we accomplished:
 - Prepared a bunch of SQL insert statements—for both a _main_ and _attributes_ table.
 - Created tables for both a _main_ and _attributes_, which is a much more optimal way to do metadata and enables endless use cases for mutability thereafter (if desired).
 - Inserted the prepared metadata as part of the same deploy script as the creates.
-- Deployed an NFT smart contract to Polygon Mumbai and verified the on Polygonscan using a script.
+- Deployed an NFT smart contract to Polygon Amoy and verified the on Polygonscan using a script.
 - Lastly, since Polygon’s testnet is supported by OpenSea, it’s possible to view everything from this tutorial as you would any other NFT collection (well, any other _testnet_ collection).
 
 ### View it on OpenSea

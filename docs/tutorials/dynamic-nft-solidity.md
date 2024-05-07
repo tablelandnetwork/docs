@@ -497,17 +497,17 @@ And at the gateway, the data should show all table values—which should also re
 ]
 ```
 
-If you're deploying to live networks, you'll need to copy the `.env.example` file to a `.env` file. Then, update the keys accordingly. For example, if you'd like to deploy to Polygon Mumbai, you'll need to update the `.env` values listed in `hardhat.config.js`:
+If you're deploying to live networks, you'll need to copy the `.env.example` file to a `.env` file. Then, update the keys accordingly. For example, if you'd like to deploy to Polygon Amoy, you'll need to update the `.env` values listed in `hardhat.config.js`:
 
 ```js
 // ...
-maticmum: {
-  url: `https://polygon-mumbai.alchemyapi.io/v2/${
-    process.env.POLYGON_MUMBAI_API_KEY ?? ""
+"polygon-amoy": {
+  url: `https://polygon-amoy.alchemyapi.io/v2/${
+    process.env.POLYGON_AMOY_API_KEY ?? ""
   }`,
   accounts:
-    process.env.POLYGON_MUMBAI_PRIVATE_KEY !== undefined
-      ? [process.env.POLYGON_MUMBAI_PRIVATE_KEY]
+    process.env.POLYGON_AMOY_PRIVATE_KEY !== undefined
+      ? [process.env.POLYGON_AMOY_PRIVATE_KEY]
       : [],
 },
 // ...
@@ -549,7 +549,7 @@ async function main() {
       kind: "uups",
     }
   );
-  await canvasGame.deployed();
+  await canvasGame.waitForDeployment();
   // Check upgradeability.
   console.log("Proxy deployed to:", canvasGame.address, "on", network.name);
   const impl = await upgrades.erc1967.getImplementationAddress(
@@ -611,10 +611,10 @@ Since the contracts can be upgraded, you can also deploy new instances with `upg
 npx hardhat run scripts/upgrade.ts --network localhost
 ```
 
-There is also a script to `verify` the contract, which makes the methods accessible via a UI but is only possible on live networks. For example, this would verify on Polygon Mumbai with the proxy address located in `hardhat.config.ts`'s `deployments` variable:
+There is also a script to `verify` the contract, which makes the methods accessible via a UI but is only possible on live networks. For example, this would verify on Polygon Amoy with the proxy address located in `hardhat.config.ts`'s `deployments` variable:
 
 ```bash
-npx hardhat run scripts/verify.ts --network maticmum
+npx hardhat run scripts/verify.ts --network polygon-amoy
 ```
 
 ## Testing
@@ -627,7 +627,7 @@ npx hardhat --network localhost test
 
 ## Live on Polygonscan
 
-You can play with the functions described above, `safeMint()` and `makeMove()` deployed demo contract. Find it over on the [Polygonscan](https://mumbai.polygonscan.com/address/0xEB5865EF3949585324c465eC9ba5C7777f455488#writeProxyContract) block explorer, which minted the table `canvas_80001_6076` to proxy contract `0xEB5865EF3949585324c465eC9ba5C7777f455488`. If you go to the `Contract` tab and `Write Contract`, you can connect your wallet and both mint an NFT from this contract, and then using that NFT, run `makeMove()`. The screenshots below walk through general block explorer UI usage, but you can also choose to do these things programmatically.
+You can play with the functions described above, `safeMint()` and `makeMove()` deployed demo contract. The screenshots below walk through general block explorer UI usage, but you can also choose to do these things programmatically.
 
 ### Connect to web3
 
@@ -635,7 +635,7 @@ import EtherscanConnect from "@site/static/assets/tutorials/dynamic-nft-solidity
 
 <img src={EtherscanConnect} />
 
-1. You’ll need a wallet connected to Polygon Mumbai.
+1. You’ll need a wallet connected to Polygon Amoy.
 2. You’ll need some test MATIC tokens from one of the available faucets.
 3. You’ll need to click the `Connect to Web3` button in Etherscan shown above.
 
@@ -675,8 +675,6 @@ You can find your current pixel location by querying the Tableland gateway. The 
 ```markdown
 http://localhost:8080/api/v1/query?unwrap=true&extract=true&statement=SELECT%20json_object%28%27name%27%2C%20%27Token%20%23%27%20%7C%7C%20id%2C%20%27external_url%27%2C%20'not.implemented.com'%2C%20%27attributes%27%2Cjson_array%28json_object%28%27display_type%27%2C%20%27number%27%2C%20%27trait_type%27%2C%20%27x%27%2C%20%27value%27%2C%20x%29%2Cjson_object%28%27display_type%27%2C%20%27number%27%2C%20%27trait_type%27%2C%20%27y%27%2C%20%27value%27%2C%20y%29%29%29%20FROM%20canvas_31337_2%20WHERE%20id={YOUR_ID_HERE}
 ```
-
-So, for the token `0` on Polygon Mumbai, its URL will be: [https://testnets.tableland.network/api/v1/query?unwrap=true&extract=true&statement=SELECT%20json_object%28%27name%27%2C%20%27Token%20%23%27%20%7C%7C%20id%2C%20%27external_url%27%2C%20'not.implemented.com'%2C%20%27attributes%27%2Cjson_array%28json_object%28%27display_type%27%2C%20%27number%27%2C%20%27trait_type%27%2C%20%27x%27%2C%20%27value%27%2C%20x%29%2Cjson_object%28%27display_type%27%2C%20%27number%27%2C%20%27trait_type%27%2C%20%27y%27%2C%20%27value%27%2C%20y%29%29%29%20FROM%20canvas_80001_6076%20WHERE%20id=0](https://testnets.tableland.network/api/v1/query?unwrap=true&extract=true&statement=SELECT%20json_object%28%27name%27%2C%20%27Token%20%23%27%20%7C%7C%20id%2C%20%27external_url%27%2C%20'not.implemented.com'%2C%20%27attributes%27%2Cjson_array%28json_object%28%27display_type%27%2C%20%27number%27%2C%20%27trait_type%27%2C%20%27x%27%2C%20%27value%27%2C%20x%29%2Cjson_object%28%27display_type%27%2C%20%27number%27%2C%20%27trait_type%27%2C%20%27y%27%2C%20%27value%27%2C%20y%29%29%29%20FROM%20canvas_80001_6076%20WHERE%20id=0)
 
 #### Default position
 

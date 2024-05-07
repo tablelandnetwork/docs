@@ -8,7 +8,8 @@ custom_edit_url: null
 
 ## Classes
 
-- [Signer](../classes/helpers.Signer.md)
+- [ContractTransactionReceipt](../classes/helpers.ContractTransactionReceipt.md)
+- [ContractTransactionResponse](../classes/helpers.ContractTransactionResponse.md)
 - [TableEventBus](../classes/helpers.TableEventBus.md)
 
 ## Interfaces
@@ -16,12 +17,12 @@ custom_edit_url: null
 - [AliasesNameMap](../interfaces/helpers.AliasesNameMap.md)
 - [AutoWaitConfig](../interfaces/helpers.AutoWaitConfig.md)
 - [ChainInfo](../interfaces/helpers.ChainInfo.md)
-- [ContractReceipt](../interfaces/helpers.ContractReceipt.md)
-- [ContractTransaction](../interfaces/helpers.ContractTransaction.md)
+- [Eip1193Provider](../interfaces/helpers.Eip1193Provider.md)
 - [Interval](../interfaces/helpers.Interval.md)
 - [MultiEventTransactionReceipt](../interfaces/helpers.MultiEventTransactionReceipt.md)
 - [ReadConfig](../interfaces/helpers.ReadConfig.md)
 - [Signal](../interfaces/helpers.Signal.md)
+- [Signer](../interfaces/helpers.Signer.md)
 - [SignerConfig](../interfaces/helpers.SignerConfig.md)
 - [Wait](../interfaces/helpers.Wait.md)
 
@@ -46,16 +47,6 @@ ___
 #### Defined in
 
 @tableland/sdk/src/helpers/config.ts:22
-
-___
-
-### ExternalProvider
-
-Ƭ **ExternalProvider**: `providers.ExternalProvider`
-
-#### Defined in
-
-@tableland/sdk/src/helpers/ethers.ts:11
 
 ___
 
@@ -102,7 +93,7 @@ The API v1 has a known problem where it only returns the first tableId from a tr
 
 #### Defined in
 
-@tableland/sdk/src/helpers/ethers.ts:55
+@tableland/sdk/src/helpers/ethers.ts:126
 
 ___
 
@@ -193,6 +184,34 @@ A [Signal](../interfaces/helpers.Signal.md) to abort a request.
 
 ___
 
+### createSigner
+
+▸ **createSigner**(`«destructured»`): [`Signer`](../interfaces/helpers.Signer.md)
+
+Create a signer with a private key, a provider URL, and a chain. Optionally,
+pass the chain name or ID to create a static network and reduce calls made by
+the provider (by not checking the chain ID).
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `«destructured»` | `Object` |
+| › `chainNameOrId?` | `number` \| keyof `TablelandNetworkConfig` |
+| › `options?` | `JsonRpcApiProviderOptions` |
+| › `privateKey` | `string` |
+| › `providerUrl` | `string` |
+
+#### Returns
+
+[`Signer`](../interfaces/helpers.Signer.md)
+
+#### Defined in
+
+@tableland/sdk/src/helpers/ethers.ts:261
+
+___
+
 ### extractBaseUrl
 
 ▸ **extractBaseUrl**(`conn?`, `chainNameOrId?`): `Promise`\<`string`\>
@@ -236,18 +255,18 @@ ___
 
 ### extractSigner
 
-▸ **extractSigner**(`conn?`, `external?`): `Promise`\<[`Signer`](../classes/helpers.Signer.md)\>
+▸ **extractSigner**(`conn?`, `external?`): `Promise`\<[`Signer`](../interfaces/helpers.Signer.md)\>
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
 | `conn` | `Partial`\<[`ReadConfig`](../interfaces/helpers.ReadConfig.md) & [`SignerConfig`](../interfaces/helpers.SignerConfig.md)\> |
-| `external?` | `ExternalProvider` |
+| `external?` | [`Eip1193Provider`](../interfaces/helpers.Eip1193Provider.md) |
 
 #### Returns
 
-`Promise`\<[`Signer`](../classes/helpers.Signer.md)\>
+`Promise`\<[`Signer`](../interfaces/helpers.Signer.md)\>
 
 #### Defined in
 
@@ -359,7 +378,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `signer` | [`Signer`](../classes/helpers.Signer.md) |
+| `signer` | [`Signer`](../interfaces/helpers.Signer.md) |
 | `chainId` | `number` |
 
 #### Returns
@@ -368,7 +387,7 @@ ___
 
 #### Defined in
 
-@tableland/sdk/src/registry/contract.ts:36
+@tableland/sdk/src/registry/contract.ts:41
 
 ___
 
@@ -384,7 +403,7 @@ calculate the full table name.
 
 | Name | Type |
 | :------ | :------ |
-| `tx` | [`ContractTransaction`](../interfaces/helpers.ContractTransaction.md) |
+| `tx` | [`ContractTransactionResponse`](../classes/helpers.ContractTransactionResponse.md) |
 
 #### Returns
 
@@ -394,34 +413,101 @@ tableland receipt
 
 #### Defined in
 
-@tableland/sdk/src/helpers/ethers.ts:84
+@tableland/sdk/src/helpers/ethers.ts:154
 
 ___
 
 ### getDefaultProvider
 
-▸ **getDefaultProvider**(`network?`, `options?`): `BaseProvider`
+▸ **getDefaultProvider**(`network?`, `options?`): `AbstractProvider`
+
+Returns a default provider for %%network%%.
+
+ If %%network%% is a [[WebSocketLike]] or string that begins with
+ ``"ws:"`` or ``"wss:"``, a [[WebSocketProvider]] is returned backed
+ by that WebSocket or URL.
+
+ If %%network%% is a string that begins with ``"HTTP:"`` or ``"HTTPS:"``,
+ a [[JsonRpcProvider]] is returned connected to that URL.
+
+ Otherwise, a default provider is created backed by well-known public
+ Web3 backends (such as [[link-infura]]) using community-provided API
+ keys.
+
+ The %%options%% allows specifying custom API keys per backend (setting
+ an API key to ``"-"`` will omit that provider) and ``options.exclusive``
+ can be set to either a backend name or and array of backend names, which
+ will whitelist **only** those backends.
+
+ Current backend strings supported are:
+ - ``"alchemy"``
+ - ``"ankr"``
+ - ``"cloudflare"``
+ - ``"chainstack"``
+ - ``"etherscan"``
+ - ``"infura"``
+ - ``"publicPolygon"``
+ - ``"quicknode"``
+
+ @example:
+   // Connect to a local Geth node
+   provider = getDefaultProvider("http://localhost:8545/");
+
+   // Connect to Ethereum mainnet with any current and future
+   // third-party services available
+   provider = getDefaultProvider("mainnet");
+
+   // Connect to Polygon, but only allow Etherscan and
+   // INFURA and use "MY_API_KEY" in calls to Etherscan.
+   provider = getDefaultProvider("matic", {
+     etherscan: "MY_API_KEY",
+     exclusive: [ "etherscan", "infura" ]
+   });
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `network?` | `Networkish` |
+| `network?` | `Networkish` \| `WebSocketLike` |
 | `options?` | `any` |
 
 #### Returns
 
-`BaseProvider`
+`AbstractProvider`
 
 #### Defined in
 
-@ethersproject/providers/lib/index.d.ts:21
+ethers/lib.commonjs/providers/default-provider.d.ts:48
+
+___
+
+### getFeeData
+
+▸ **getFeeData**(`signer`): `Promise`\<`FeeData`\>
+
+Fetches the current gas fee data for a connected network.
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `signer` | [`Signer`](../interfaces/helpers.Signer.md) | A signer instance. |
+
+#### Returns
+
+`Promise`\<`FeeData`\>
+
+Current gas fee information for the network.
+
+#### Defined in
+
+@tableland/sdk/src/helpers/ethers.ts:57
 
 ___
 
 ### getSigner
 
-▸ **getSigner**(`external?`): `Promise`\<[`Signer`](../classes/helpers.Signer.md)\>
+▸ **getSigner**(`external?`): `Promise`\<[`Signer`](../interfaces/helpers.Signer.md)\>
 
 Request a signer object from the global ethereum object.
 
@@ -429,11 +515,11 @@ Request a signer object from the global ethereum object.
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `external?` | `ExternalProvider` | A valid external provider. Defaults to `globalThis.ethereum` if not provided. |
+| `external?` | [`Eip1193Provider`](../interfaces/helpers.Eip1193Provider.md) | A valid external provider. Defaults to `globalThis.ethereum` if not provided. |
 
 #### Returns
 
-`Promise`\<[`Signer`](../classes/helpers.Signer.md)\>
+`Promise`\<[`Signer`](../interfaces/helpers.Signer.md)\>
 
 A promise that resolves to a valid web3 provider/signer
 
@@ -443,7 +529,7 @@ If no global ethereum object is available.
 
 #### Defined in
 
-@tableland/sdk/src/helpers/ethers.ts:117
+@tableland/sdk/src/helpers/ethers.ts:207
 
 ___
 
@@ -533,7 +619,7 @@ ___
 
 #### Defined in
 
-@tableland/sdk/src/helpers/config.ts:96
+@tableland/sdk/src/helpers/config.ts:97
 
 ___
 
@@ -560,7 +646,7 @@ A promise containing a `NameMapping` object.
 
 #### Defined in
 
-@tableland/sdk/src/helpers/config.ts:117
+@tableland/sdk/src/helpers/config.ts:118
 
 ___
 
@@ -609,4 +695,4 @@ A promise containing `void` upon write completion.
 
 #### Defined in
 
-@tableland/sdk/src/helpers/config.ts:133
+@tableland/sdk/src/helpers/config.ts:134

@@ -11,7 +11,7 @@ custom_edit_url: null
 
 ### signer
 
-• **signer**: [`Signer`](../classes/helpers.Signer.md)
+• **signer**: [`Signer`](helpers.Signer.md)
 
 #### Defined in
 

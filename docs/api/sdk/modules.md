@@ -72,7 +72,7 @@ ___
 
 #### Defined in
 
-@tableland/sdk/src/registry/create.ts:78
+@tableland/sdk/src/registry/create.ts:82
 
 ___
 
@@ -82,7 +82,7 @@ ___
 
 #### Defined in
 
-@tableland/sdk/src/registry/run.ts:65
+@tableland/sdk/src/registry/run.ts:69
 
 ___
 

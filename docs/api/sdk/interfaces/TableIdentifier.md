@@ -24,7 +24,7 @@ The target chain id.
 
 #### Defined in
 
-@tableland/sdk/src/registry/contract.ts:19
+@tableland/sdk/src/registry/contract.ts:24
 
 ___
 
@@ -36,4 +36,4 @@ The target table id.
 
 #### Defined in
 
-@tableland/sdk/src/registry/contract.ts:23
+@tableland/sdk/src/registry/contract.ts:28

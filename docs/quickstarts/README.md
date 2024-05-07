@@ -34,7 +34,7 @@ First, set up your development environment. Within your project directory, run t
   <TabItem value="sdk-node" label="SDK (Node.js)" default>
 
     ```bash
-    npm install @tableland/sdk ethers@^5.7.2
+    npm install @tableland/sdk ethers
     ```
 
     This will let you use the Tableland SDK in your Node.js project as well as ethers for signer behavior. Or, you can choose to install a starter template—both JavaScript and TypeScript templates are available, so you'd choose one of the following:
@@ -48,7 +48,7 @@ First, set up your development environment. Within your project directory, run t
     <TabItem value="sdk-web" label="SDK (Web)">
 
     ```bash
-    npm install @tableland/sdk ethers@^5.7.2
+    npm install @tableland/sdk ethers
     ```
 
     This will let you use the Tableland SDK on the client-side in your web app as well as ethers for signer behavior. Or, you can choose to install a starter template—both JavaScript and TypeScript are available, so you'd choose one of the following React or Next.js templates:
@@ -113,14 +113,14 @@ Then, within your source code, set up Tableland; this will vary depending on the
 
     ```js
     import { Database } from "@tableland/sdk";
-    import { providers } from "ethers";
+    import { BrowserProvider } from "ethers";
 
     // Connect to provider from browser and get accounts
-    const provider = new providers.Web3Provider(window.ethereum);
+    const provider = new BrowserProvider(window.ethereum);
     await provider.send("eth_requestAccounts", []);
 
     // Pass the signer to the Database
-    const signer = provider.getSigner();
+    const signer = await provider.getSigner();
     ```
 
   </TabItem>

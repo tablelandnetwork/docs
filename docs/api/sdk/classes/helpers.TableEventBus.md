@@ -30,7 +30,7 @@ Create a TableEventBus instance with the specified connection configuration.
 
 #### Defined in
 
-@tableland/sdk/src/helpers/subscribe.ts:77
+@tableland/sdk/src/helpers/subscribe.ts:131
 
 ## Properties
 
@@ -40,7 +40,7 @@ Create a TableEventBus instance with the specified connection configuration.
 
 #### Defined in
 
-@tableland/sdk/src/helpers/subscribe.ts:67
+@tableland/sdk/src/helpers/subscribe.ts:121
 
 ___
 
@@ -50,7 +50,7 @@ ___
 
 #### Defined in
 
-@tableland/sdk/src/helpers/subscribe.ts:68
+@tableland/sdk/src/helpers/subscribe.ts:122
 
 ___
 
@@ -60,7 +60,7 @@ ___
 
 #### Defined in
 
-@tableland/sdk/src/helpers/subscribe.ts:69
+@tableland/sdk/src/helpers/subscribe.ts:123
 
 ## Methods
 
@@ -82,7 +82,7 @@ ___
 
 #### Defined in
 
-@tableland/sdk/src/helpers/subscribe.ts:224
+@tableland/sdk/src/helpers/subscribe.ts:278
 
 ___
 
@@ -103,7 +103,7 @@ ___
 
 #### Defined in
 
-@tableland/sdk/src/helpers/subscribe.ts:214
+@tableland/sdk/src/helpers/subscribe.ts:268
 
 ___
 
@@ -123,7 +123,7 @@ ___
 
 #### Defined in
 
-@tableland/sdk/src/helpers/subscribe.ts:198
+@tableland/sdk/src/helpers/subscribe.ts:252
 
 ___
 
@@ -149,7 +149,7 @@ supports.
 
 #### Defined in
 
-@tableland/sdk/src/helpers/subscribe.ts:97
+@tableland/sdk/src/helpers/subscribe.ts:151
 
 ___
 
@@ -178,7 +178,7 @@ which can be used with the for await ... of pattern.
 
 #### Defined in
 
-@tableland/sdk/src/helpers/subscribe.ts:132
+@tableland/sdk/src/helpers/subscribe.ts:186
 
 ___
 
@@ -192,7 +192,7 @@ ___
 
 #### Defined in
 
-@tableland/sdk/src/helpers/subscribe.ts:163
+@tableland/sdk/src/helpers/subscribe.ts:217
 
 ___
 
@@ -214,4 +214,4 @@ Remove a listener (or iterator) based on chain and tableId
 
 #### Defined in
 
-@tableland/sdk/src/helpers/subscribe.ts:145
+@tableland/sdk/src/helpers/subscribe.ts:199

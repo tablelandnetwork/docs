@@ -20,7 +20,7 @@ The block number of the transaction
 
 #### Defined in
 
-@tableland/sdk/src/helpers/ethers.ts:71
+@tableland/sdk/src/helpers/ethers.ts:142
 
 ___
 
@@ -32,7 +32,7 @@ The chain id of the transaction
 
 #### Defined in
 
-@tableland/sdk/src/helpers/ethers.ts:72
+@tableland/sdk/src/helpers/ethers.ts:143
 
 ___
 
@@ -44,7 +44,7 @@ The list of table ids affected in the transaction
 
 #### Defined in
 
-@tableland/sdk/src/helpers/ethers.ts:69
+@tableland/sdk/src/helpers/ethers.ts:140
 
 ___
 
@@ -56,4 +56,4 @@ The hash of the transaction
 
 #### Defined in
 
-@tableland/sdk/src/helpers/ethers.ts:70
+@tableland/sdk/src/helpers/ethers.ts:141

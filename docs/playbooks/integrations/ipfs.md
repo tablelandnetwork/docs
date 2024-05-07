@@ -31,7 +31,7 @@ From within your project, install the SDK and JETI:
 npm install @tableland/sdk @tableland/jeti
 ```
 
-The Tableland SDK comes with ethers v5, which is used below—but make sure that's installed as well. Lastly, you'll also want to make sure you have testnet Filecoin (TFIL) in your wallet to pay for storage; you can get some from the [Filecoin faucet](https://faucet.calibration.fildev.network/).
+The Tableland SDK comes with ethers v6, which is used below—but make sure that's installed as well. Lastly, you'll also want to make sure you have testnet Filecoin (TFIL) in your wallet to pay for storage; you can get some from the [Filecoin faucet](https://faucet.calibration.fildev.network/).
 
 ## Setup
 

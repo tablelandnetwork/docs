@@ -31,7 +31,7 @@ npm install -g @tableland/cli@latest
 
 The `init` command sets up a configuration file at `/Users/$USER/.tablelandrc.json` (or wherever you'd like to place it). This makes it easier to use the CLI such that it will look for `privateKey`, `chain`, and `providerUrl` values within this file. Alternatively, you can pass these values as flags (e.g., `--privateKey abc123`) for each command.
 
-Generally, **every command _should_ have these values** specified, except for the `read` command since it directly interacts with a Tableland validator without needing to go through a host chain. If you do not specify a `privateKey` or `providerUrl`, you will run into issues. There _is_ a default value for the `chain` (`maticmum`), so it's fine to use the `chain` default if you are in fact developing on this chain.
+Generally, **every command _should_ have these values** specified, except for the `read` command since it directly interacts with a Tableland validator without needing to go through a host chain. If you do not specify a `privateKey` or `providerUrl`, you will run into issues. There _is_ a default value for the `chain` (`polygon-amoy`), so it's fine to use the `chain` default if you are in fact developing on this chain.
 
 ## Usage patterns
 
@@ -132,12 +132,12 @@ The Tableland CLI includes a number of global flags.
 
 ### Chain
 
-`-c, --chain <chain_name>`: The EVM chain to target (default: `maticmum`).
+`-c, --chain <chain_name>`: The EVM chain to target (default: `polygon-amoy`).
 
 Testnets
 
 - `sepolia` (Ethereum Sepolia)
-- `maticmum` (Polygon Mumbai)
+- `polygon-amoy` (Polygon Amoy)
 - `optimism-sepolia` (Optimism Sepolia)
 - `arbitrum-sepolia` (Arbitrum Sepolia)
 - `filecoin-calibration` (Filecoin Calibration)
@@ -146,7 +146,7 @@ Mainnets
 
 - `mainnet` (Ethereum)
 - `homestead` (Ethereum)
-- `matic` (Polygon)
+- `polygon` (Polygon)
 - `optimism` (Optimism)
 - `arbitrum` (Arbitrum One)
 - `arbitrum-nova` (Arbitrum Nova)
@@ -175,5 +175,5 @@ One helpful option to set during the `init` command or passed directly to any co
 
 The following are the default options:
 
-- `--chain` ⇒ `maticmum`: Polygon Mumbai has been set as the default chain; any other chain names from the `tableland chains` command can be used.
+- `--chain` ⇒ `polygon-amoy`: Polygon Amoy has been set as the default chain; any other chain names from the `tableland chains` command can be used.
 - `--baseUrl` ⇒ `http://localhost:8080`: The default Tableland validator URL is on port `8080`; a custom port can be set in a validator's configuration file, such as with [Local Tableland](/local-tableland) or a full [validator node](/validator).

@@ -354,13 +354,13 @@ async function main() {
   // Deploy the Example contract
   const Example = await ethers.getContractFactory("Example");
   const example = await Example.deploy();
-  await example.deployed();
+  await example.waitForDeployment();
   console.log(`Example contract deployed to '${example.address}'.\n`);
 
   // Deploy the RowController contract
   const RowController = await ethers.getContractFactory("RowController");
   const rowController = await RowController.deploy(example.address);
-  await rowController.deployed();
+  await rowController.waitForDeployment();
   console.log(`Controller contract deployed to '${rowController.address}'.\n`);
 
   // Set the Example contract's table controller to the RowController contract

@@ -45,7 +45,7 @@ const privateKey =
 const wallet = new Wallet(privateKey);
 // To avoid connecting to the browser wallet (locally, port 8545),
 // replace the URL with a provider like Alchemy, Infura, Etherscan, etc.
-const provider = getDefaultProvider("http://127.0.0.1:8545"); // For example: "https://polygon-mumbai.g.alchemy.com/v2/${process.env.YOUR_ALCHEMY_KEY}"
+const provider = getDefaultProvider("http://127.0.0.1:8545"); // For example: "https://polygon-amoy.g.alchemy.com/v2/${process.env.YOUR_ALCHEMY_KEY}"
 const signer = wallet.connect(provider);
 // Connect to the database
 const db = new Database({ signer });
@@ -56,16 +56,10 @@ const db = new Database({ signer });
 
 ```js
 import { Database } from "@tableland/sdk";
-import { providers, Signer } from "ethers";
+import { BrowserProvider, Signer } from "ethers";
 
-// Establish a connection with a `Signer`
-const provider = new providers.Web3Provider(window.ethereum);
-// Request the connected accounts, prompting a browser wallet popup to connect.
-await provider.send("eth_requestAccounts", []);
-// Create a signer from the returned provider connection.
-const signer = provider.getSigner();
-
-const tableland = Database({ signer });
+// By default, the database will try to connect to a browser wallet
+const tableland = Database();
 ```
 
 </TabItem>

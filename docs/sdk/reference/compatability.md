@@ -19,7 +19,7 @@ The `@tableland/sdk` can support the following environments or dependencies:
 
 - Node.js 18.x+.
 - Both ESM and CommonJS modules are supported.
-- `ethers` v5.x, specifically, `ethers@5.7.2`.
+- `ethers` v6.x, specifically, `ethers@6.12.0`.
 
 ## Build systems
 

@@ -26,7 +26,7 @@ Once these values are set, a few things will happen:
 When you initially start Local Tableland, it will take a bit of time to backfill the forked chain's state. The `forkUrl` you specify for the provider will make API calls to `eth_getLogs` in batches, and the validator replays these one-by-one. Keep in mind this will continue hitting the API until the state is fully backfilled, but it _should_ be cached after the first time you run it. But, **caching only works if you use the same** `forkBlockNumber` value each time you start Local Tableland.
 
 :::note
-Forking testnet chains _is_ possible. However, due to the large volume of data on chains like Polygon Mumbai, the backfilling process can take a **very long time**—potentially, up to an hour. We're researching ways to optimize this process (e.g., trusted bootstrap for backfilled state), but for now, it's best to fork mainnet chains with less data.
+Forking testnet chains _is_ possible. However, due to the large volume of data on chains like Polygon Amoy, the backfilling process can take a **very long time**—potentially, up to an hour. We're researching ways to optimize this process (e.g., trusted bootstrap for backfilled state), but for now, it's best to fork mainnet chains with less data.
 :::
 
 ## Setup

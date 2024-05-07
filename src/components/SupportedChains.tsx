@@ -7,7 +7,7 @@ import Heading from "@theme/Heading";
  * For every chain, the data is extended from the SDK's `supportedChains` object
  *
  * @param location - The environment of the chain (mainnet or testnet)
- * @param chainNameFormatted - The formatted chain name (e.g., polygon vs. matic)
+ * @param chainNameFormatted - The formatted chain name (e.g., ethereum vs. "mainnet")
  * @param chainName - The ethers name of the chain, with dashes
  * @param chainId - The chain ID
  * @param contractAddress - The Tableland contract address on the chain
@@ -100,7 +100,7 @@ export const supportedChains = (): ChainFormatted[] => {
     };
     // Custom fields per chain. Also, fixes for where a chain's ethers name
     // (delimited by `-`) does not align to how it should be "pretty" displayed
-    // (e.g., `matic` should be `Polygon`)
+    // (e.g., `mainnet` should be `ethereum`)
     switch (format.chainName) {
       case "local-tableland":
         format.location = "local-only nodes";
@@ -134,7 +134,6 @@ export const supportedChains = (): ChainFormatted[] => {
         format.bridge = "https://bridge.arbitrum.io/?l2ChainId=42170";
         break;
       case "arbitrum-sepolia":
-        format.chainNameFormatted = "arbitrum sepolia";
         format.symbol = "ETH";
         format.avgBlockTime = "2";
         format.blockDepth = "0";
@@ -157,7 +156,6 @@ export const supportedChains = (): ChainFormatted[] => {
         format.sqlMaterializationTime = "180-240";
         break;
       case "filecoin-calibration":
-        format.chainNameFormatted = "filecoin calibration";
         format.location = "testnet";
         format.symbol = "tFIL";
         format.avgBlockTime = "30";
@@ -179,21 +177,19 @@ export const supportedChains = (): ChainFormatted[] => {
         format.bridge = "https://app.optimism.io/bridge";
         format.faucet = "https://www.alchemy.com/faucets/optimism-sepolia";
         break;
-      case "matic":
-        format.chainNameFormatted = "polygon";
+      case "polygon":
         format.symbol = "MATIC";
         format.avgBlockTime = "2-3";
         format.blockDepth = "1";
         format.sqlMaterializationTime = "<10";
         format.bridge = "https://portal.polygon.technology/bridge";
         break;
-      case "maticmum":
-        format.chainNameFormatted = "polygon mumbai";
+      case "polygon-amoy":
         format.symbol = "MATIC";
         format.avgBlockTime = "2-3";
         format.blockDepth = "1";
         format.sqlMaterializationTime = "<10";
-        format.faucet = "https://www.alchemy.com/faucets/polygon-mumbai";
+        format.faucet = "https://www.alchemy.com/faucets/polygon-amoy";
         break;
       default:
         break;

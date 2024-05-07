@@ -44,7 +44,7 @@ Create a Registry instance with the specified connection configuration.
 
 ### create
 
-▸ **create**(`params`): `Promise`\<[`ContractTransaction`](../interfaces/helpers.ContractTransaction.md)\>
+▸ **create**(`params`): `Promise`\<[`ContractTransactionResponse`](helpers.ContractTransactionResponse.md)\>
 
 Creates a new table owned by `owner` using `statement` and returns its `tableId`.
 
@@ -63,11 +63,11 @@ Requirements:
 
 #### Returns
 
-`Promise`\<[`ContractTransaction`](../interfaces/helpers.ContractTransaction.md)\>
+`Promise`\<[`ContractTransactionResponse`](helpers.ContractTransactionResponse.md)\>
 
 #### Defined in
 
-@tableland/sdk/src/registry/index.ts:163
+@tableland/sdk/src/registry/index.ts:165
 
 ___
 
@@ -91,7 +91,7 @@ tableId - the id of the target table
 
 #### Defined in
 
-@tableland/sdk/src/registry/index.ts:149
+@tableland/sdk/src/registry/index.ts:151
 
 ___
 
@@ -119,7 +119,7 @@ ___
 
 ### lockController
 
-▸ **lockController**(`table`): `Promise`\<[`ContractTransaction`](../interfaces/helpers.ContractTransaction.md)\>
+▸ **lockController**(`table`): `Promise`\<[`ContractTransactionResponse`](helpers.ContractTransactionResponse.md)\>
 
 Locks the controller for a table _forever_. Controller can be an EOA or contract address.
 
@@ -143,17 +143,17 @@ Requirements:
 
 #### Returns
 
-`Promise`\<[`ContractTransaction`](../interfaces/helpers.ContractTransaction.md)\>
+`Promise`\<[`ContractTransactionResponse`](helpers.ContractTransactionResponse.md)\>
 
 #### Defined in
 
-@tableland/sdk/src/registry/index.ts:138
+@tableland/sdk/src/registry/index.ts:140
 
 ___
 
 ### mutate
 
-▸ **mutate**(`params`): `Promise`\<[`ContractTransaction`](../interfaces/helpers.ContractTransaction.md)\>
+▸ **mutate**(`params`): `Promise`\<[`ContractTransactionResponse`](helpers.ContractTransactionResponse.md)\>
 
 Runs a SQL statement for `caller` using `statement`.
 
@@ -177,17 +177,17 @@ Requirements:
 
 #### Returns
 
-`Promise`\<[`ContractTransaction`](../interfaces/helpers.ContractTransaction.md)\>
+`Promise`\<[`ContractTransactionResponse`](helpers.ContractTransactionResponse.md)\>
 
 #### Defined in
 
-@tableland/sdk/src/registry/index.ts:182
+@tableland/sdk/src/registry/index.ts:184
 
 ___
 
 ### safeTransferFrom
 
-▸ **safeTransferFrom**(`params`): `Promise`\<[`ContractTransaction`](../interfaces/helpers.ContractTransaction.md)\>
+▸ **safeTransferFrom**(`params`): `Promise`\<[`ContractTransactionResponse`](helpers.ContractTransactionResponse.md)\>
 
 Safely transfers the ownership of a given table ID to another address.
 
@@ -201,7 +201,7 @@ Requires the msg sender to be the owner, approved, or operator
 
 #### Returns
 
-`Promise`\<[`ContractTransaction`](../interfaces/helpers.ContractTransaction.md)\>
+`Promise`\<[`ContractTransactionResponse`](helpers.ContractTransactionResponse.md)\>
 
 #### Defined in
 
@@ -211,7 +211,7 @@ ___
 
 ### setController
 
-▸ **setController**(`params`): `Promise`\<[`ContractTransaction`](../interfaces/helpers.ContractTransaction.md)\>
+▸ **setController**(`params`): `Promise`\<[`ContractTransactionResponse`](helpers.ContractTransactionResponse.md)\>
 
 Sets the controller for a table. Controller can be an EOA or contract address.
 
@@ -244,11 +244,11 @@ Requirements:
 
 #### Returns
 
-`Promise`\<[`ContractTransaction`](../interfaces/helpers.ContractTransaction.md)\>
+`Promise`\<[`ContractTransactionResponse`](helpers.ContractTransactionResponse.md)\>
 
 #### Defined in
 
-@tableland/sdk/src/registry/index.ts:119
+@tableland/sdk/src/registry/index.ts:121
 
 ___
 
@@ -262,7 +262,7 @@ Create a Registry that is connected to the given Signer.
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `signer` | [`Signer`](helpers.Signer.md) | An ethersjs Signer to use for mutating queries. |
+| `signer` | [`Signer`](../interfaces/helpers.Signer.md) | An ethersjs Signer to use for mutating queries. |
 
 #### Returns
 

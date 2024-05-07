@@ -17,8 +17,8 @@ For comparison, Polygon supports 7k tx/s compared to Ethereum’s 15 tx/s and ~1
 
 ## Setup & resources
 
-<ChainSection chainName='maticmum' />
-<ChainSection chainName='matic' />
+<ChainSection chainName='polygon-amoy' />
+<ChainSection chainName='polygon' />
 
 ### Getting testnet funds
 

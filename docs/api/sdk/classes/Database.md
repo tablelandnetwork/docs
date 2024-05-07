@@ -203,7 +203,7 @@ Create a Database that is connected to the given Signer.
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `signer` | [`Signer`](helpers.Signer.md) | An ethersjs Signer to use for mutating queries. |
+| `signer` | [`Signer`](../interfaces/helpers.Signer.md) | An ethersjs Signer to use for mutating queries. |
 
 #### Returns
 
