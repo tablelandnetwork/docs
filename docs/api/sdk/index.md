@@ -1,11 +1,3 @@
----
-id: "index"
-title: "@tableland/sdk"
-sidebar_label: "Readme"
-sidebar_position: 0
-custom_edit_url: null
----
-
 # @tableland/sdk
 
 [![Review](https://github.com/tablelandnetwork/tableland-js/actions/workflows/review.yml/badge.svg)](https://github.com/tablelandnetwork/tableland-js/actions/workflows/review.yml)

@@ -1,10 +1,4 @@
----
-id: "Database"
-title: "Class: Database<D>"
-sidebar_label: "Database"
-sidebar_position: 0
-custom_edit_url: null
----
+# Class: Database\<D\>
 
 Database is the primary API for accessing the Tableland network as a database.
 This class provides a small and simple API that will feel very familiar to
@@ -14,35 +8,30 @@ to the better-sqlite3, and D1 APIs in many respects.
 
 ## Type parameters
 
-| Name | Type |
-| :------ | :------ |
-| `D` | `unknown` |
+• **D** = `unknown`
 
 ## Constructors
 
-### constructor
+### new Database()
 
-• **new Database**\<`D`\>(`config?`): [`Database`](Database.md)\<`D`\>
+> **new Database**\<`D`\>(`config`): [`Database`](Database.md)\<`D`\>
 
 Create a Database instance with the specified connection configuration.
 
-#### Type parameters
-
-| Name | Type |
-| :------ | :------ |
-| `D` | `unknown` |
-
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `config` | `Partial`\<[`ReadConfig`](../interfaces/helpers.ReadConfig.md) & [`SignerConfig`](../interfaces/helpers.SignerConfig.md)\> & `Partial`\<[`AutoWaitConfig`](../interfaces/helpers.AutoWaitConfig.md)\> | The connection configuration. These keys are evaluated lazily, so it is possible to omit the baseUrl or signer, depending on your query needs. For a read-only Database for instance, only the baseUrl needs to be provided. |
+• **config**: `Partial` \<[`ReadConfig`](../namespaces/helpers/interfaces/ReadConfig.md) & [`SignerConfig`](../namespaces/helpers/interfaces/SignerConfig.md)\> & `Partial` \<[`AutoWaitConfig`](../namespaces/helpers/interfaces/AutoWaitConfig.md)\>= `{}`
+
+The connection configuration. These keys are evaluated lazily,
+so it is possible to omit the baseUrl or signer, depending on your query
+needs. For a read-only Database for instance, only the baseUrl needs to be
+provided.
 
 #### Returns
 
 [`Database`](Database.md)\<`D`\>
 
-#### Defined in
+#### Source
 
 @tableland/sdk/src/database.ts:39
 
@@ -50,17 +39,17 @@ Create a Database instance with the specified connection configuration.
 
 ### config
 
-• `Readonly` **config**: `Partial`\<[`ReadConfig`](../interfaces/helpers.ReadConfig.md) & [`SignerConfig`](../interfaces/helpers.SignerConfig.md)\> & `Partial`\<[`AutoWaitConfig`](../interfaces/helpers.AutoWaitConfig.md)\>
+> `readonly` **config**: `Partial` \<[`ReadConfig`](../namespaces/helpers/interfaces/ReadConfig.md) & [`SignerConfig`](../namespaces/helpers/interfaces/SignerConfig.md)\> & `Partial` \<[`AutoWaitConfig`](../namespaces/helpers/interfaces/AutoWaitConfig.md)\>
 
-#### Defined in
+#### Source
 
 @tableland/sdk/src/database.ts:30
 
 ## Methods
 
-### batch
+### batch()
 
-▸ **batch**\<`T`\>(`statements`, `controller?`): `Promise`\<[`Result`](../interfaces/Result.md)\<`T`\>[]\>
+> **batch**\<`T`\>(`statements`, `controller`?): `Promise` \<[`Result`](../interfaces/Result.md)\<`T`\>[]\>
 
 Execute a set of Statements in batch mode.
 Batching sends multiple SQL statements inside a single call to the
@@ -73,55 +62,54 @@ statement, and it aborts or rolls back the entire sequence.
 
 #### Type parameters
 
-| Name | Type |
-| :------ | :------ |
-| `T` | `D` |
+• **T** = `D`
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `statements` | [`Statement`](Statement.md)\<`unknown`\>[] | A set of Statement objects to batch and submit. |
-| `controller?` | [`PollingController`](../namespaces/helpers.md#pollingcontroller) | An optional object used to control receipt polling behavior. |
+• **statements**: [`Statement`](Statement.md)\<`unknown`\>[]
+
+A set of Statement objects to batch and submit.
+
+• **controller?**: [`PollingController`](../namespaces/helpers/type-aliases/PollingController.md)
+
+An optional object used to control receipt polling behavior.
 
 #### Returns
 
-`Promise`\<[`Result`](../interfaces/Result.md)\<`T`\>[]\>
+`Promise` \<[`Result`](../interfaces/Result.md)\<`T`\>[]\>
 
 An array of run results.
 
-#### Defined in
+#### Source
 
 @tableland/sdk/src/database.ts:82
 
-___
+***
 
-### dump
+### dump()
 
-▸ **dump**(`_controller?`): `Promise`\<`ArrayBuffer`\>
+> **dump**(`_controller`?): `Promise`\<`ArrayBuffer`\>
 
 Export a (set of) tables to the SQLite binary format.
 Not implemented yet!
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `_controller?` | [`PollingController`](../namespaces/helpers.md#pollingcontroller) |
+• **\_controller?**: [`PollingController`](../namespaces/helpers/type-aliases/PollingController.md)
 
 #### Returns
 
 `Promise`\<`ArrayBuffer`\>
 
-#### Defined in
+#### Source
 
 @tableland/sdk/src/database.ts:207
 
-___
+***
 
-### exec
+### exec()
 
-▸ **exec**\<`T`\>(`statementStrings`, `controller?`): `Promise`\<[`ExecResult`](../interfaces/ExecResult.md)\<`T`\>\>
+> **exec**\<`T`\>(`statementStrings`, `controller`?): `Promise` \<[`ExecResult`](../interfaces/ExecResult.md)\<`T`\>\>
 
 Executes one or more queries directly without prepared statements
 or parameters binding. This method can have poorer performance
@@ -137,32 +125,33 @@ splitting, and batching may be used.
 
 #### Type parameters
 
-| Name | Type |
-| :------ | :------ |
-| `T` | `D` |
+• **T** = `D`
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `statementStrings` | `string` | A set of SQL statement strings separated by semi-colons. |
-| `controller?` | [`PollingController`](../namespaces/helpers.md#pollingcontroller) | An optional object used to control receipt polling behavior. |
+• **statementStrings**: `string`
+
+A set of SQL statement strings separated by semi-colons.
+
+• **controller?**: [`PollingController`](../namespaces/helpers/type-aliases/PollingController.md)
+
+An optional object used to control receipt polling behavior.
 
 #### Returns
 
-`Promise`\<[`ExecResult`](../interfaces/ExecResult.md)\<`T`\>\>
+`Promise` \<[`ExecResult`](../interfaces/ExecResult.md)\<`T`\>\>
 
 A single run result.
 
-#### Defined in
+#### Source
 
 @tableland/sdk/src/database.ts:183
 
-___
+***
 
-### prepare
+### prepare()
 
-▸ **prepare**\<`T`\>(`sql`): [`Statement`](Statement.md)\<`T`\>
+> **prepare**\<`T`\>(`sql`): [`Statement`](Statement.md)\<`T`\>
 
 Create a new prepared statement.
 Both static and prepared statements are supported. In the current
@@ -171,15 +160,13 @@ executed remotely (on-chain).
 
 #### Type parameters
 
-| Name | Type |
-| :------ | :------ |
-| `T` | `D` |
+• **T** = `D`
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `sql` | `string` | The SQL statement string to prepare. |
+• **sql**: `string`
+
+The SQL statement string to prepare.
 
 #### Returns
 
@@ -187,30 +174,30 @@ executed remotely (on-chain).
 
 A Statement object constructed with the given SQL string.
 
-#### Defined in
+#### Source
 
 @tableland/sdk/src/database.ts:61
 
-___
+***
 
-### forSigner
+### forSigner()
 
-▸ **forSigner**(`signer`): `Promise`\<[`Database`](Database.md)\<`unknown`\>\>
+> `static` **forSigner**(`signer`): `Promise` \<[`Database`](Database.md)\<`unknown`\>\>
 
 Create a Database that is connected to the given Signer.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `signer` | [`Signer`](../interfaces/helpers.Signer.md) | An ethersjs Signer to use for mutating queries. |
+• **signer**: [`Signer`](../namespaces/helpers/interfaces/Signer.md)
+
+An ethersjs Signer to use for mutating queries.
 
 #### Returns
 
-`Promise`\<[`Database`](Database.md)\<`unknown`\>\>
+`Promise` \<[`Database`](Database.md)\<`unknown`\>\>
 
 A Database with a Signer, and a default baseUrl.
 
-#### Defined in
+#### Source
 
 @tableland/sdk/src/database.ts:48

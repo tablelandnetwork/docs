@@ -1,10 +1,4 @@
----
-id: "Statement"
-title: "Class: Statement<S>"
-sidebar_label: "Statement"
-sidebar_position: 0
-custom_edit_url: null
----
+# Class: Statement\<S\>
 
 Statement defines a single SQL statement.
 Both static and prepared statements are supported. In the current
@@ -19,35 +13,27 @@ any runtime errors occur.
 
 ## Type parameters
 
-| Name | Type |
-| :------ | :------ |
-| `S` | `unknown` |
+• **S** = `unknown`
 
 ## Constructors
 
-### constructor
+### new Statement()
 
-• **new Statement**\<`S`\>(`config`, `sql`, `parameters?`): [`Statement`](Statement.md)\<`S`\>
-
-#### Type parameters
-
-| Name | Type |
-| :------ | :------ |
-| `S` | `unknown` |
+> **new Statement**\<`S`\>(`config`, `sql`, `parameters`?): [`Statement`](Statement.md)\<`S`\>
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `config` | `Partial`\<[`ReadConfig`](../interfaces/helpers.ReadConfig.md) & [`SignerConfig`](../interfaces/helpers.SignerConfig.md)\> & `Partial`\<[`AutoWaitConfig`](../interfaces/helpers.AutoWaitConfig.md)\> |
-| `sql` | `string` |
-| `parameters?` | [`Parameters`](../interfaces/Parameters.md) |
+• **config**: `Partial` \<[`ReadConfig`](../namespaces/helpers/interfaces/ReadConfig.md) & [`SignerConfig`](../namespaces/helpers/interfaces/SignerConfig.md)\> & `Partial` \<[`AutoWaitConfig`](../namespaces/helpers/interfaces/AutoWaitConfig.md)\>
+
+• **sql**: `string`
+
+• **parameters?**: [`Parameters`](../interfaces/Parameters.md)
 
 #### Returns
 
 [`Statement`](Statement.md)\<`S`\>
 
-#### Defined in
+#### Source
 
 @tableland/sdk/src/statement.ts:62
 
@@ -55,120 +41,115 @@ any runtime errors occur.
 
 ### config
 
-• `Private` `Readonly` **config**: `Partial`\<[`ReadConfig`](../interfaces/helpers.ReadConfig.md) & [`SignerConfig`](../interfaces/helpers.SignerConfig.md)\> & `Partial`\<[`AutoWaitConfig`](../interfaces/helpers.AutoWaitConfig.md)\>
+> `private` `readonly` **config**: `Partial` \<[`ReadConfig`](../namespaces/helpers/interfaces/ReadConfig.md) & [`SignerConfig`](../namespaces/helpers/interfaces/SignerConfig.md)\> & `Partial` \<[`AutoWaitConfig`](../namespaces/helpers/interfaces/AutoWaitConfig.md)\>
 
-#### Defined in
+#### Source
 
 @tableland/sdk/src/statement.ts:58
 
-___
+***
 
-### parameters
+### parameters?
 
-• `Private` `Optional` `Readonly` **parameters**: [`Parameters`](../interfaces/Parameters.md)
+> `private` `optional` `readonly` **parameters**: [`Parameters`](../interfaces/Parameters.md)
 
-#### Defined in
+#### Source
 
 @tableland/sdk/src/statement.ts:60
 
-___
+***
 
 ### sql
 
-• `Private` `Readonly` **sql**: `string`
+> `private` `readonly` **sql**: `string`
 
-#### Defined in
+#### Source
 
 @tableland/sdk/src/statement.ts:59
 
 ## Methods
 
-### #checkIsValidOpts
+### #checkIsValidOpts()
 
-▸ **#checkIsValidOpts**(`opts`): opts is Options
+> `private` **#checkIsValidOpts**(`opts`): `opts is Options`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `opts` | `any` |
+• **opts**: `any`
 
 #### Returns
 
-opts is Options
+`opts is Options`
 
-#### Defined in
+#### Source
 
 @tableland/sdk/src/statement.ts:185
 
-___
+***
 
-### #parseAndExtract
+### #parseAndExtract()
 
-▸ **#parseAndExtract**(): `Promise`\<`ExtractedStatement`\>
+> `private` **#parseAndExtract**(): `Promise`\<`ExtractedStatement`\>
 
 #### Returns
 
 `Promise`\<`ExtractedStatement`\>
 
-#### Defined in
+#### Source
 
 @tableland/sdk/src/statement.ts:112
 
-___
+***
 
-### #waitExec
+### #waitExec()
 
-▸ **#waitExec**(`params`, `controller?`): `Promise`\<[`WaitableTransactionReceipt`](../modules.md#waitabletransactionreceipt)\>
+> `private` **#waitExec**(`params`, `controller`?): `Promise` \<[`WaitableTransactionReceipt`](../type-aliases/WaitableTransactionReceipt.md)\>
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `params` | `ExtractedStatement` |
-| `controller?` | [`PollingController`](../namespaces/helpers.md#pollingcontroller) |
+• **params**: `ExtractedStatement`
+
+• **controller?**: [`PollingController`](../namespaces/helpers/type-aliases/PollingController.md)
 
 #### Returns
 
-`Promise`\<[`WaitableTransactionReceipt`](../modules.md#waitabletransactionreceipt)\>
+`Promise` \<[`WaitableTransactionReceipt`](../type-aliases/WaitableTransactionReceipt.md)\>
 
-#### Defined in
+#### Source
 
 @tableland/sdk/src/statement.ts:143
 
-___
+***
 
-### all
+### all()
 
-▸ **all**\<`T`\>(`opts?`): `Promise`\<[`Result`](../interfaces/Result.md)\<`T`\>\>
+> **all**\<`T`\>(`opts`): `Promise` \<[`Result`](../interfaces/Result.md)\<`T`\>\>
 
 Executes a query and returns all rows and metadata.
 
 #### Type parameters
 
-| Name | Type |
-| :------ | :------ |
-| `T` | `Record`\<`string`, `S`\> |
+• **T** = `Record`\<`string`, `S`\>
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `opts` | [`Options`](../interfaces/Options.md) | An optional object used to control behavior, see [Options](../interfaces/Options.md) |
+• **opts**: [`Options`](../interfaces/Options.md)= `{}`
+
+An optional object used to control behavior, see [Options](../interfaces/Options.md)
 
 #### Returns
 
-`Promise`\<[`Result`](../interfaces/Result.md)\<`T`\>\>
+`Promise` \<[`Result`](../interfaces/Result.md)\<`T`\>\>
 
-#### Defined in
+#### Source
 
 @tableland/sdk/src/statement.ts:158
 
-___
+***
 
-### bind
+### bind()
 
-▸ **bind**\<`T`\>(`...values`): [`Statement`](Statement.md)\<`T`\>
+> **bind**\<`T`\>(...`values`): [`Statement`](Statement.md)\<`T`\>
 
 Bind a set of values to the parameters of the prepared statement.
 We follow the SQLite convention for prepared statements parameter binding.
@@ -176,15 +157,13 @@ We support Ordered (?NNNN), Anonymous (?), and Named (@name, :name, $name) param
 
 #### Type parameters
 
-| Name | Type |
-| :------ | :------ |
-| `T` | `S` |
+• **T** = `S`
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `...values` | [`ValuesType`](../modules.md#valuestype)[] | A variadic list of values to bind. May include base types, and objects. |
+• ...**values**: [`ValuesType`](../type-aliases/ValuesType.md)[]
+
+A variadic list of values to bind. May include base types, and objects.
 
 #### Returns
 
@@ -192,124 +171,122 @@ We support Ordered (?NNNN), Anonymous (?), and Named (@name, :name, $name) param
 
 A new bound Statement.
 
-#### Defined in
+#### Source
 
 @tableland/sdk/src/statement.ts:83
 
-___
+***
 
-### first
+### first()
 
-▸ **first**\<`T`\>(`opts?`): `Promise`\<``null`` \| `T`\>
+#### first(opts)
+
+> **first**\<`T`\>(`opts`?): `Promise`\<`null` \| `T`\>
 
 Executes a query and returns the first row of the results.
 This does not return metadata like the other methods.
 Instead it returns the object directly. If the query returns no
 rows, then first() will return null.
 
-#### Type parameters
+##### Type parameters
 
-| Name | Type |
-| :------ | :------ |
-| `T` | `Record`\<`string`, `S`\> |
+• **T** = `Record`\<`string`, `S`\>
 
-#### Parameters
+##### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `opts?` | [`Options`](../interfaces/Options.md) | An optional object used to control behavior, see [Options](../interfaces/Options.md) |
+• **opts?**: [`Options`](../interfaces/Options.md)
 
-#### Returns
+An optional object used to control behavior, see [Options](../interfaces/Options.md)
 
-`Promise`\<``null`` \| `T`\>
+##### Returns
 
-#### Defined in
+`Promise`\<`null` \| `T`\>
+
+##### Source
 
 @tableland/sdk/src/statement.ts:197
 
-▸ **first**\<`T`, `K`\>(`colName`, `opts?`): `Promise`\<`T`\>
+#### first(colName, opts)
 
-#### Type parameters
+> **first**\<`T`, `K`\>(`colName`, `opts`?): `Promise`\<`T`\>
 
-| Name | Type |
-| :------ | :------ |
-| `T` | `S` |
-| `K` | extends `string` = keyof `T` & `string` |
+##### Type parameters
 
-#### Parameters
+• **T** = `S`
 
-| Name | Type |
-| :------ | :------ |
-| `colName` | `undefined` |
-| `opts?` | [`Options`](../interfaces/Options.md) |
+• **K** *extends* `string` = keyof `T` & `string`
 
-#### Returns
+##### Parameters
+
+• **colName**: `undefined`
+
+• **opts?**: [`Options`](../interfaces/Options.md)
+
+##### Returns
 
 `Promise`\<`T`\>
 
-#### Defined in
+##### Source
 
 @tableland/sdk/src/statement.ts:199
 
-▸ **first**\<`T`, `K`\>(`colName`, `opts?`): `Promise`\<``null`` \| `T`[`K`]\>
+#### first(colName, opts)
 
-#### Type parameters
+> **first**\<`T`, `K`\>(`colName`, `opts`?): `Promise`\<`null` \| `T`\[`K`\]\>
 
-| Name | Type |
-| :------ | :------ |
-| `T` | `S` |
-| `K` | extends `string` = keyof `T` & `string` |
+##### Type parameters
 
-#### Parameters
+• **T** = `S`
 
-| Name | Type |
-| :------ | :------ |
-| `colName` | `K` |
-| `opts?` | [`Options`](../interfaces/Options.md) |
+• **K** *extends* `string` = keyof `T` & `string`
 
-#### Returns
+##### Parameters
 
-`Promise`\<``null`` \| `T`[`K`]\>
+• **colName**: `K`
 
-#### Defined in
+• **opts?**: [`Options`](../interfaces/Options.md)
+
+##### Returns
+
+`Promise`\<`null` \| `T`\[`K`\]\>
+
+##### Source
 
 @tableland/sdk/src/statement.ts:203
 
-___
+***
 
-### raw
+### raw()
 
-▸ **raw**\<`T`\>(`opts?`): `Promise`\<[`ValueOf`](../modules.md#valueof)\<`T`\>[]\>
+> **raw**\<`T`\>(`opts`): `Promise` \<[`ValueOf`](../type-aliases/ValueOf.md)\<`T`\>[]\>
 
 Same as stmt.all(), but returns an array of rows instead of objects.
 
 #### Type parameters
 
-| Name | Type |
-| :------ | :------ |
-| `T` | `S` |
+• **T** = `S`
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `opts` | [`Options`](../interfaces/Options.md) | An optional object used to control behavior, see [Options](../interfaces/Options.md) |
+• **opts**: [`Options`](../interfaces/Options.md)= `{}`
+
+An optional object used to control behavior, see [Options](../interfaces/Options.md)
 
 #### Returns
 
-`Promise`\<[`ValueOf`](../modules.md#valueof)\<`T`\>[]\>
+`Promise` \<[`ValueOf`](../type-aliases/ValueOf.md)\<`T`\>[]\>
 
 An array of raw query results.
 
-#### Defined in
+#### Source
 
 @tableland/sdk/src/statement.ts:286
 
-___
+***
 
-### run
+### run()
 
-▸ **run**\<`T`\>(`opts?`): `Promise`\<[`Result`](../interfaces/Result.md)\<`T`\>\>
+> **run**\<`T`\>(`opts`): `Promise` \<[`Result`](../interfaces/Result.md)\<`T`\>\>
 
 Runs the query/queries, but returns no results. Instead, run()
 returns the metrics only. Useful for write operations like
@@ -317,52 +294,53 @@ UPDATE, DELETE or INSERT.
 
 #### Type parameters
 
-| Name | Type |
-| :------ | :------ |
-| `T` | `Record`\<`string`, `S`\> |
+• **T** = `Record`\<`string`, `S`\>
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `opts` | [`Options`](../interfaces/Options.md) | An optional object used to control behavior, see [Options](../interfaces/Options.md) |
+• **opts**: [`Options`](../interfaces/Options.md)= `{}`
+
+An optional object used to control behavior, see [Options](../interfaces/Options.md)
 
 #### Returns
 
-`Promise`\<[`Result`](../interfaces/Result.md)\<`T`\>\>
+`Promise` \<[`Result`](../interfaces/Result.md)\<`T`\>\>
 
 A results object with metadata only (results are null or an empty array).
 
-#### Defined in
+#### Source
 
 @tableland/sdk/src/statement.ts:255
 
-___
+***
 
-### toObject
+### toObject()
 
-▸ **toObject**(): `Object`
+> **toObject**(): `object`
 
 Export a Statement's sql string and parameters.
 
 #### Returns
 
-`Object`
+`object`
 
-| Name | Type |
-| :------ | :------ |
-| `parameters?` | [`Parameters`](../interfaces/Parameters.md) |
-| `sql` | `string` |
+##### parameters?
 
-#### Defined in
+> `optional` **parameters**: [`Parameters`](../interfaces/Parameters.md)
+
+##### sql
+
+> **sql**: `string`
+
+#### Source
 
 @tableland/sdk/src/statement.ts:105
 
-___
+***
 
-### toString
+### toString()
 
-▸ **toString**(): `string`
+> **toString**(): `string`
 
 Resolve a bound statement to a SQL string.
 
@@ -372,6 +350,6 @@ Resolve a bound statement to a SQL string.
 
 A valid SQL string.
 
-#### Defined in
+#### Source
 
 @tableland/sdk/src/statement.ts:92

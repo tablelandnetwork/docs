@@ -1,10 +1,4 @@
----
-id: "MutateManyParams"
-title: "Interface: MutateManyParams"
-sidebar_label: "MutateManyParams"
-sidebar_position: 0
-custom_edit_url: null
----
+# Interface: MutateManyParams
 
 MutateManyParams Represents the parameters Object used to mutate multiple tables in a single tx.
 
@@ -12,22 +6,22 @@ MutateManyParams Represents the parameters Object used to mutate multiple tables
 
 ### chainId
 
-• **chainId**: `number`
+> **chainId**: `number`
 
 The target chain id.
 
-#### Defined in
+#### Source
 
 @tableland/sdk/src/registry/run.ts:66
 
-___
+***
 
 ### runnables
 
-• **runnables**: [`Runnable`](Runnable.md)[]
+> **runnables**: [`Runnable`](Runnable.md)[]
 
 List of Runnables.
 
-#### Defined in
+#### Source
 
 @tableland/sdk/src/registry/run.ts:65

@@ -1,39 +1,31 @@
----
-id: "Metadata"
-title: "Interface: Metadata"
-sidebar_label: "Metadata"
-sidebar_position: 0
-custom_edit_url: null
----
+# Interface: Metadata
 
 Metadata represents meta information about an executed statement/transaction.
 
 ## Indexable
 
-▪ [key: `string`]: `any`
-
-Metadata may constrain additional arbitrary key/values pairs.
+ \[`key`: `string`\]: `any`
 
 ## Properties
 
 ### duration
 
-• **duration**: `number`
+> **duration**: `number`
 
 Total client-side duration of the async call.
 
-#### Defined in
+#### Source
 
 @tableland/sdk/src/registry/utils.ts:141
 
-___
+***
 
-### txn
+### txn?
 
-• `Optional` **txn**: [`WaitableTransactionReceipt`](../modules.md#waitabletransactionreceipt)
+> `optional` **txn**: [`WaitableTransactionReceipt`](../type-aliases/WaitableTransactionReceipt.md)
 
 The optional transaction information receipt.
 
-#### Defined in
+#### Source
 
 @tableland/sdk/src/registry/utils.ts:145

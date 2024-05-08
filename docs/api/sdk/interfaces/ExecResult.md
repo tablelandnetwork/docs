@@ -1,77 +1,67 @@
----
-id: "ExecResult"
-title: "Interface: ExecResult<T>"
-sidebar_label: "ExecResult"
-sidebar_position: 0
-custom_edit_url: null
----
+# Interface: ExecResult\<T\>
 
 ExecResult represents the return result for executed Database statements via `exec()`.
 
+## Extends
+
+- `Pick` \<[`Metadata`](Metadata.md), `"duration"` \| `"txn"`\>
+
 ## Type parameters
 
-| Name | Type |
-| :------ | :------ |
-| `T` | `unknown` |
-
-## Hierarchy
-
-- `Pick`\<[`Metadata`](Metadata.md), ``"duration"`` \| ``"txn"``\>
-
-  ↳ **`ExecResult`**
+• **T** = `unknown`
 
 ## Properties
 
 ### count
 
-• **count**: `number`
+> **count**: `number`
 
 The count of executed statements.
 
-#### Defined in
+#### Source
 
 @tableland/sdk/src/registry/utils.ts:184
 
-___
+***
 
 ### duration
 
-• **duration**: `number`
+> **duration**: `number`
 
 Total client-side duration of the async call.
 
 #### Inherited from
 
-Pick.duration
+`Pick.duration`
 
-#### Defined in
+#### Source
 
 @tableland/sdk/src/registry/utils.ts:141
 
-___
+***
 
-### results
+### results?
 
-• `Optional` **results**: `T`[]
+> `optional` **results**: `T`[]
 
 The optional list of query results.
 
-#### Defined in
+#### Source
 
 @tableland/sdk/src/registry/utils.ts:188
 
-___
+***
 
-### txn
+### txn?
 
-• `Optional` **txn**: [`WaitableTransactionReceipt`](../modules.md#waitabletransactionreceipt)
+> `optional` **txn**: [`WaitableTransactionReceipt`](../type-aliases/WaitableTransactionReceipt.md)
 
 The optional transaction information receipt.
 
 #### Inherited from
 
-Pick.txn
+`Pick.txn`
 
-#### Defined in
+#### Source
 
 @tableland/sdk/src/registry/utils.ts:145

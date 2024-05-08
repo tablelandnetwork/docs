@@ -1,10 +1,4 @@
----
-id: "Runnable"
-title: "Interface: Runnable"
-sidebar_label: "Runnable"
-sidebar_position: 0
-custom_edit_url: null
----
+# Interface: Runnable
 
 Runnable represents an Object the will be used as a Runnable struct in the
 call to the contract's `mutate` function.
@@ -13,20 +7,20 @@ call to the contract's `mutate` function.
 
 ### statement
 
-• **statement**: `string`
+> **statement**: `string`
 
 SQL statement string.
 
-#### Defined in
+#### Source
 
 @tableland/sdk/src/registry/run.ts:54
 
-___
+***
 
 ### tableId
 
-• **tableId**: `number`
+> **tableId**: `number`
 
-#### Defined in
+#### Source
 
 @tableland/sdk/src/registry/run.ts:55

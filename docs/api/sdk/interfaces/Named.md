@@ -1,10 +1,4 @@
----
-id: "Named"
-title: "Interface: Named"
-sidebar_label: "Named"
-sidebar_position: 0
-custom_edit_url: null
----
+# Interface: Named
 
 Named represents a named table with a prefix.
 
@@ -12,46 +6,46 @@ Named represents a named table with a prefix.
 
 ### name
 
-• **name**: `string`
+> **name**: `string`
 
 @custom:deprecated First table's full name.
 
-#### Defined in
+#### Source
 
 @tableland/sdk/src/registry/utils.ts:45
 
-___
+***
 
 ### names
 
-• **names**: `string`[]
+> **names**: `string`[]
 
 The full table names
 
-#### Defined in
+#### Source
 
 @tableland/sdk/src/registry/utils.ts:53
 
-___
+***
 
 ### prefix
 
-• **prefix**: `string`
+> **prefix**: `string`
 
 @custom:deprecated First table name prefix.
 
-#### Defined in
+#### Source
 
 @tableland/sdk/src/registry/utils.ts:49
 
-___
+***
 
 ### prefixes
 
-• **prefixes**: `string`[]
+> **prefixes**: `string`[]
 
 The table prefixes
 
-#### Defined in
+#### Source
 
 @tableland/sdk/src/registry/utils.ts:57

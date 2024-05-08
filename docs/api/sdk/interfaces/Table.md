@@ -1,77 +1,69 @@
----
-id: "Table"
-title: "Interface: Table"
-sidebar_label: "Table"
-sidebar_position: 0
-custom_edit_url: null
----
+# Interface: Table
 
-## Hierarchy
+## Extends
 
 - `Camelize`\<`AssertedResponse`\>
-
-  ↳ **`Table`**
 
 ## Properties
 
 ### animationUrl
 
-• **animationUrl**: `undefined` \| `string`
+> **animationUrl**: `undefined` \| `string`
 
 #### Inherited from
 
-Camelize.animationUrl
+`Camelize.animationUrl`
 
-___
+***
 
-### attributes
+### attributes?
 
-• `Optional` **attributes**: `Camelize`\<`Record`\<`string`, `any`\>\>[]
+> `optional` **attributes**: `Camelize`\<`Record`\<`string`, `any`\>\>[]
 
 #### Overrides
 
-Camelize.attributes
+`Camelize.attributes`
 
-#### Defined in
+#### Source
 
 @tableland/sdk/src/validator/tables.ts:32
 
-___
+***
 
 ### externalUrl
 
-• **externalUrl**: `string`
+> **externalUrl**: `string`
 
 #### Inherited from
 
-Camelize.externalUrl
+`Camelize.externalUrl`
 
-___
+***
 
 ### image
 
-• **image**: `string`
+> **image**: `string`
 
 #### Inherited from
 
-Camelize.image
+`Camelize.image`
 
-___
+***
 
 ### name
 
-• **name**: `string`
+> **name**: `string`
 
 #### Inherited from
 
-Camelize.name
+`Camelize.name`
 
-___
+***
 
 ### schema
 
-• **schema**: [`Schema`](Schema.md)
+> **schema**: [`Schema`](Schema.md)
 
 #### Inherited from
 
-Camelize.schema
+`Camelize.schema`

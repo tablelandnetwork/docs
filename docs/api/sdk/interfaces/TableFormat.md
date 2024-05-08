@@ -1,35 +1,27 @@
----
-id: "TableFormat"
-title: "Interface: TableFormat<T>"
-sidebar_label: "TableFormat"
-sidebar_position: 0
-custom_edit_url: null
----
+# Interface: TableFormat\<T\>
 
 TableFormat represents a object with rows and columns.
 
 ## Type parameters
 
-| Name | Type |
-| :------ | :------ |
-| `T` | `unknown` |
+• **T** = `unknown`
 
 ## Properties
 
 ### columns
 
-• **columns**: \{ `name`: `string`  }[]
+> **columns**: `object`[]
 
-#### Defined in
+#### Source
 
 @tableland/sdk/src/validator/query.ts:15
 
-___
+***
 
 ### rows
 
-• **rows**: [`ValueOf`](../modules.md#valueof)\<`T`\>[]
+> **rows**: [`ValueOf`](../type-aliases/ValueOf.md)\<`T`\>[]
 
-#### Defined in
+#### Source
 
 @tableland/sdk/src/validator/query.ts:14
