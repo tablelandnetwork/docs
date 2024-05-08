@@ -387,7 +387,7 @@ ETHERSCAN_API_KEY=fixme
 This is what our deployment script looks like:
 
 ```typescript
-import "@nomiclabs/hardhat-ethers";
+import "@nomicfoundation/hardhat-ethers";
 import { ethers, network, deployment } from "hardhat";
 
 async function main() {
@@ -401,7 +401,7 @@ async function main() {
     deployment.oracleAddress,
     ethers.utils.toUtf8Bytes(deployment.jobId) // Must convert the string to `bytes32`
   );
-  await tableState.deployed();
+  await tableState.waitForDeployment();
   console.log(`Contract 'TableState' deployed to: ${tableState.address}`);
 
   // Define the table in which Chainlink should make an API request to -- e.g., the `healthbot` table

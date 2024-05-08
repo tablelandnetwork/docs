@@ -26,7 +26,7 @@ import { createPollingController } from "@tableland/sdk/helpers";
 The validator base URL can be retrieved using the `getBaseUrl` method to check what URL should be used when making direct requests to the validator API.
 
 ```js
-const baseUrl = helpers.getBaseUrl(11155111); // Or pass the ethersjs name, e.g., `sepolia`
+const baseUrl = helpers.getBaseUrl(11155111); // Or pass the chain name, e.g., `sepolia`
 // https://testnets.tableland.network/api/v1
 ```
 
@@ -35,7 +35,7 @@ const baseUrl = helpers.getBaseUrl(11155111); // Or pass the ethersjs name, e.g.
 The `getChainInfo` method returns the chain information for the current network. This includes the chain name, chain ID, Tableland registry contract address, and validator information (base URL, polling timeout, and polling interval).
 
 ```js
-const chainInfo = helpers.getChainInfo(11155111); // Or pass the ethersjs name, e.g., `sepolia`
+const chainInfo = helpers.getChainInfo(11155111); // Or pass the chain name, e.g., `sepolia`
 // {
 //   chainName: 'sepolia',
 //   chainId: 11155111,
@@ -51,7 +51,7 @@ const chainInfo = helpers.getChainInfo(11155111); // Or pass the ethersjs name, 
 To simply get the Tableland registry contract address, you can use the `getContractAddress` method.
 
 ```js
-const contractAddress = helpers.getContractAddress(11155111); // Or pass the ethersjs name, e.g., `sepolia`
+const contractAddress = helpers.getContractAddress(11155111); // Or pass the chain name, e.g., `sepolia`
 // 0xc50C62498448ACc8dBdE43DA77f8D5D2E2c7597D
 ```
 
@@ -84,7 +84,7 @@ const chainInfo = await helpers.extractChainId(db.config);
 The `isTestnet` method can be used to determine if the current network is a testnet, returning true or false based on the chain ID or name.
 
 ```js
-const isTestnet = helpers.isTestnet(11155111); // Or pass the ethersjs name, e.g., `sepolia`
+const isTestnet = helpers.isTestnet(11155111); // Or pass the chain name, e.g., `sepolia`
 // true
 ```
 

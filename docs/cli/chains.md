@@ -61,8 +61,8 @@ tableland chains
     "pollingTimeout": 10000,
     "pollingInterval": 1500
   },
-  "matic": {
-    "chainName": "matic",
+  "polygon": {
+    "chainName": "polygon",
     "chainId": 137,
     "contractAddress": "0x5c4e6A9e5C1e1BF445A062006faF19EA6c49aFeA",
     "baseUrl": "https://tableland.network/api/v1",
@@ -101,10 +101,10 @@ tableland chains
     "pollingTimeout": 10000,
     "pollingInterval": 1500
   },
-  "maticmum": {
-    "chainName": "maticmum",
-    "chainId": 80001,
-    "contractAddress": "0x4b48841d4b32C4650E4ABc117A03FE8B51f38F68",
+  "polygon-amoy": {
+    "chainName": "polygon-amoy",
+    "chainId": 80002,
+    "contractAddress": "0x170fb206132b693e38adFc8727dCfa303546Cec1",
     "baseUrl": "https://testnets.tableland.network/api/v1",
     "pollingTimeout": 15000,
     "pollingInterval": 1500

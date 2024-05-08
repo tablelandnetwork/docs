@@ -117,7 +117,7 @@ const hre = require("hardhat");
 async function main() {
   const Lock = await hre.ethers.getContractFactory("Lock");
   const lock = await Lock.deploy();
-  await lock.deployed();
+  await lock.waitForDeployment();
   console.log(`Lock deployed to ${lock.address}`);
 }
 // highlight-end
@@ -144,7 +144,7 @@ const { Database, Validator, helpers } = require("@tableland/sdk");
 async function main() {
   const Lock = await hre.ethers.getContractFactory("Lock");
   const lock = await Lock.deploy();
-  await lock.deployed();
+  await lock.waitForDeployment();
   console.log(`Lock deployed to ${lock.address}`);
 
   // highlight-start

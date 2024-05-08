@@ -91,7 +91,7 @@ paths:
           required: true
           schema:
             type: string
-          example: select * from healthbot_80001_1
+          example: select * from healthbot_80002_1
         - name: format
           in: query
           description: >
@@ -141,10 +141,10 @@ paths:
       requestBody:
         description: A JSON containing the statement and additional options
         required: true
-        content: 
-          'application/json':
+        content:
+          "application/json":
             schema:
-              $ref: '#/components/schemas/Query'
+              $ref: "#/components/schemas/Query"
       responses:
         "200":
           description: Successful operation
@@ -173,7 +173,7 @@ paths:
           schema:
             type: integer
             format: int32
-          example: 80001
+          example: 80002
         - name: transactionHash
           in: path
           description: The transaction hash to request
@@ -209,7 +209,7 @@ paths:
           schema:
             type: integer
             format: int32
-          example: 80001
+          example: 80002
         - name: tableId
           in: path
           description: Table identifier
@@ -240,16 +240,16 @@ components:
       properties:
         name:
           type: string
-          example: healthbot_80001_1
+          example: healthbot_80002_1
         external_url:
           type: string
-          example: https://testnets.tableland.network/api/v1/tables/80001/1
+          example: https://testnets.tableland.network/api/v1/tables/80002/1
         animation_url:
           type: string
-          example: https://tables.testnets.tableland.xyz/80001/1.html
+          example: https://tables.testnets.tableland.xyz/80002/1.html
         image:
           type: string
-          example: https://tables.testnets.tableland.xyz/80001/1.svg
+          example: https://tables.testnets.tableland.xyz/80002/1.svg
         attributes:
           type: array
           items:
@@ -301,7 +301,7 @@ components:
         chain_id:
           type: integer
           format: int32
-          example: 80001
+          example: 80002
         error:
           type: string
           example: "The query statement is invalid"
@@ -362,7 +362,7 @@ components:
         statement:
           description: The SQL read query statement
           type: string
-          example: select * from healthbot_80001_1
+          example: select * from healthbot_80002_1
         format:
           description: >
             The requested response format:

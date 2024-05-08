@@ -20,33 +20,34 @@ You can use `receipt` to get a mutating query's transaction information, includi
 Retrieve data associated with a transaction, including the block number, table ID, and chain ID.
 
 ```bash
-tableland receipt 0xe62a3d3c5955e63b69daced639570e6e59559750d19a8e21bc91251a1876cce3 --chain maticmum
+tableland receipt 0x808afd525b8bac7d7d74ba9e0b214984e6862cf83e3b42cb181f8f415be57c9e --chain polygon-amoy
 ```
 
 Output:
 
 ```json
 {
-  "tableId": "5942",
-  "transactionHash": "0xe62a3d3c5955e63b69daced639570e6e59559750d19a8e21bc91251a1876cce3",
-  "blockNumber": 35114209,
-  "chainId": 80001
+  "tableId": "151",
+  "tableIds": ["151"],
+  "transactionHash": "0x808afd525b8bac7d7d74ba9e0b214984e6862cf83e3b42cb181f8f415be57c9e",
+  "blockNumber": 6765201,
+  "chainId": 80002
 }
 ```
 
 If some transaction has a problem and didn't mutate the database, this information will also be described in the `error` field:
 
 ```bash
-tableland receipt 0xf186073a8b1e3eba78e76a91517bc0daf425bb0d3f10379a26f2b386bc28c2ea --chain maticmum
+tableland receipt 0xa7f946bddeda6f70171a7b8850e9ccbd7a7c5b027a05652479bc3b8b2ae86c61 --chain polygon-amoy
 ```
 
 Output:
 
 ```json
 {
-  "transactionHash": "0xf186073a8b1e3eba78e76a91517bc0daf425bb0d3f10379a26f2b386bc28c2ea",
-  "blockNumber": 35114382,
-  "chainId": 80001,
-  "error": "db query execution failed (code: SQLITE_cannot store TEXT value in INT column t_80001_5942.id, msg: cannot store TEXT value in INT column t_80001_5942.id)"
+  "transactionHash": "0xa7f946bddeda6f70171a7b8850e9ccbd7a7c5b027a05652479bc3b8b2ae86c61",
+  "blockNumber": 6765236,
+  "chainId": 80002,
+  "error": "db query execution failed (code: SQLITE_UNIQUE constraint failed: cli_demo_table_80002_151.id, msg: UNIQUE constraint failed: cli_demo_table_80002_151.id)"
 }
 ```

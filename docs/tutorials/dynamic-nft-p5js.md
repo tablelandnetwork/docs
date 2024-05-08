@@ -165,7 +165,7 @@ import * as p5 from "p5";
 import { Database } from "@tableland/sdk";
 ```
 
-Finally, it’s time to update your `p.setup()` function to pull data from Tableland whenever the canvas loads. Note the table `canvas_80001_6076` was used in the previous tutorial; this should be updated to your own owned canvas table value.
+Finally, it’s time to update your `p.setup()` function to pull data from Tableland whenever the canvas loads.
 
 ```js
 p.setup = () => {
@@ -175,7 +175,7 @@ p.setup = () => {
   // Connect to the Tableland network with a read-only connection
   const db = new Database();
   // Run a SQL select on our project table
-  db.prepare("SELECT * FROM canvas_80001_6076")
+  db.prepare("SELECT * FROM <your_table_name>")
     .all()
     .then((data) => {
       // Format and store our data in the points[] array

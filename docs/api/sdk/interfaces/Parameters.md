@@ -1,27 +1,21 @@
----
-id: "Parameters"
-title: "Interface: Parameters"
-sidebar_label: "Parameters"
-sidebar_position: 0
-custom_edit_url: null
----
+# Interface: Parameters
 
 ## Properties
 
 ### anon
 
-• **anon**: [`BaseType`](../modules.md#basetype)[]
+> **anon**: [`BaseType`](../type-aliases/BaseType.md)[]
 
-#### Defined in
+#### Source
 
 @tableland/sdk/src/helpers/binding.ts:105
 
-___
+***
 
-### named
+### named?
 
-• `Optional` **named**: `Record`\<`string`, [`BaseType`](../modules.md#basetype)\>
+> `optional` **named**: `Record`\<`string`, [`BaseType`](../type-aliases/BaseType.md)\>
 
-#### Defined in
+#### Source
 
 @tableland/sdk/src/helpers/binding.ts:106

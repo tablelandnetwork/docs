@@ -40,7 +40,7 @@ tableland init
 
 Ideally, you should choose to ues the `aliases` feature. This is an option during the config step, and it allows you to write SQL statement with a locally saved alias to table name map. Thus, you can write statements with something like `my_table` instead of `my_table_31337_2`.
 
-Note that values for the `chain` can be found [here](/sdk/#chain-configuration); the values used are those that ethers uses (e.g., Polygon Mumbai is called `maticmum`).
+Note that values for the `chain` can be found [here](/sdk/#chain-configuration) (e.g., Polygon Amoy is called `polygon-amoy`).
 
 ## 3. Create a table
 

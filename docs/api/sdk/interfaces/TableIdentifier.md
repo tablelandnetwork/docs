@@ -1,39 +1,31 @@
----
-id: "TableIdentifier"
-title: "Interface: TableIdentifier"
-sidebar_label: "TableIdentifier"
-sidebar_position: 0
-custom_edit_url: null
----
+# Interface: TableIdentifier
 
 TableIdentifier represents the information required to identify a table on the Tableland network.
 
-## Hierarchy
+## Extended by
 
-- **`TableIdentifier`**
-
-  ↳ [`MutateOneParams`](MutateOneParams.md)
+- [`MutateOneParams`](MutateOneParams.md)
 
 ## Properties
 
 ### chainId
 
-• **chainId**: `number`
+> **chainId**: `number`
 
 The target chain id.
 
-#### Defined in
+#### Source
 
-@tableland/sdk/src/registry/contract.ts:19
+@tableland/sdk/src/registry/contract.ts:24
 
-___
+***
 
 ### tableId
 
-• **tableId**: `string`
+> **tableId**: `string`
 
 The target table id.
 
-#### Defined in
+#### Source
 
-@tableland/sdk/src/registry/contract.ts:23
+@tableland/sdk/src/registry/contract.ts:28

@@ -1,32 +1,28 @@
----
-id: "Registry"
-title: "Class: Registry"
-sidebar_label: "Registry"
-sidebar_position: 0
-custom_edit_url: null
----
+# Class: Registry
 
 Registry provides direct access to remote Registry smart contract APIs.
 
 ## Constructors
 
-### constructor
+### new Registry()
 
-• **new Registry**(`config?`): [`Registry`](Registry.md)
+> **new Registry**(`config`): [`Registry`](Registry.md)
 
 Create a Registry instance with the specified connection configuration.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `config` | `Partial`\<[`SignerConfig`](../interfaces/helpers.SignerConfig.md)\> | The connection configuration. This must include an ethersjs Signer. If passing the config from a pre-existing Database instance, it must have a non-null signer key defined. |
+• **config**: `Partial` \<[`SignerConfig`](../namespaces/helpers/interfaces/SignerConfig.md)\>= `{}`
+
+The connection configuration. This must include an ethersjs
+Signer. If passing the config from a pre-existing Database instance, it
+must have a non-null signer key defined.
 
 #### Returns
 
 [`Registry`](Registry.md)
 
-#### Defined in
+#### Source
 
 @tableland/sdk/src/registry/index.ts:62
 
@@ -34,17 +30,17 @@ Create a Registry instance with the specified connection configuration.
 
 ### config
 
-• `Readonly` **config**: [`SignerConfig`](../interfaces/helpers.SignerConfig.md)
+> `readonly` **config**: [`SignerConfig`](../namespaces/helpers/interfaces/SignerConfig.md)
 
-#### Defined in
+#### Source
 
 @tableland/sdk/src/registry/index.ts:55
 
 ## Methods
 
-### create
+### create()
 
-▸ **create**(`params`): `Promise`\<[`ContractTransaction`](../interfaces/helpers.ContractTransaction.md)\>
+> **create**(`params`): `Promise` \<[`ContractTransactionResponse`](../namespaces/helpers/classes/ContractTransactionResponse.md)\>
 
 Creates a new table owned by `owner` using `statement` and returns its `tableId`.
 
@@ -57,23 +53,21 @@ Requirements:
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `params` | [`CreateParams`](../modules.md#createparams) |
+• **params**: [`CreateParams`](../type-aliases/CreateParams.md)
 
 #### Returns
 
-`Promise`\<[`ContractTransaction`](../interfaces/helpers.ContractTransaction.md)\>
+`Promise` \<[`ContractTransactionResponse`](../namespaces/helpers/classes/ContractTransactionResponse.md)\>
 
-#### Defined in
+#### Source
 
-@tableland/sdk/src/registry/index.ts:163
+@tableland/sdk/src/registry/index.ts:165
 
-___
+***
 
-### getController
+### getController()
 
-▸ **getController**(`table`): `Promise`\<`string`\>
+> **getController**(`table`): `Promise`\<`string`\>
 
 Returns the controller for a table.
 
@@ -81,45 +75,43 @@ tableId - the id of the target table
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `table` | `string` \| [`TableIdentifier`](../interfaces/TableIdentifier.md) |
+• **table**: `string` \| [`TableIdentifier`](../interfaces/TableIdentifier.md)
 
 #### Returns
 
 `Promise`\<`string`\>
 
-#### Defined in
+#### Source
 
-@tableland/sdk/src/registry/index.ts:149
+@tableland/sdk/src/registry/index.ts:151
 
-___
+***
 
-### listTables
+### listTables()
 
-▸ **listTables**(`owner?`): `Promise`\<[`TableIdentifier`](../interfaces/TableIdentifier.md)[]\>
+> **listTables**(`owner`?): `Promise` \<[`TableIdentifier`](../interfaces/TableIdentifier.md)[]\>
 
 Gets the list of table IDs of the requested owner.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `owner?` | `string` | The address owning the table. |
+• **owner?**: `string`
+
+The address owning the table.
 
 #### Returns
 
-`Promise`\<[`TableIdentifier`](../interfaces/TableIdentifier.md)[]\>
+`Promise` \<[`TableIdentifier`](../interfaces/TableIdentifier.md)[]\>
 
-#### Defined in
+#### Source
 
 @tableland/sdk/src/registry/index.ts:82
 
-___
+***
 
-### lockController
+### lockController()
 
-▸ **lockController**(`table`): `Promise`\<[`ContractTransaction`](../interfaces/helpers.ContractTransaction.md)\>
+> **lockController**(`table`): `Promise` \<[`ContractTransactionResponse`](../namespaces/helpers/classes/ContractTransactionResponse.md)\>
 
 Locks the controller for a table _forever_. Controller can be an EOA or contract address.
 
@@ -137,23 +129,21 @@ Requirements:
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `table` | `string` \| [`TableIdentifier`](../interfaces/TableIdentifier.md) |
+• **table**: `string` \| [`TableIdentifier`](../interfaces/TableIdentifier.md)
 
 #### Returns
 
-`Promise`\<[`ContractTransaction`](../interfaces/helpers.ContractTransaction.md)\>
+`Promise` \<[`ContractTransactionResponse`](../namespaces/helpers/classes/ContractTransactionResponse.md)\>
 
-#### Defined in
+#### Source
 
-@tableland/sdk/src/registry/index.ts:138
+@tableland/sdk/src/registry/index.ts:140
 
-___
+***
 
-### mutate
+### mutate()
 
-▸ **mutate**(`params`): `Promise`\<[`ContractTransaction`](../interfaces/helpers.ContractTransaction.md)\>
+> **mutate**(`params`): `Promise` \<[`ContractTransactionResponse`](../namespaces/helpers/classes/ContractTransactionResponse.md)\>
 
 Runs a SQL statement for `caller` using `statement`.
 
@@ -171,23 +161,21 @@ Requirements:
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `params` | [`MutateParams`](../modules.md#mutateparams) |
+• **params**: [`MutateParams`](../type-aliases/MutateParams.md)
 
 #### Returns
 
-`Promise`\<[`ContractTransaction`](../interfaces/helpers.ContractTransaction.md)\>
+`Promise` \<[`ContractTransactionResponse`](../namespaces/helpers/classes/ContractTransactionResponse.md)\>
 
-#### Defined in
+#### Source
 
-@tableland/sdk/src/registry/index.ts:182
+@tableland/sdk/src/registry/index.ts:184
 
-___
+***
 
-### safeTransferFrom
+### safeTransferFrom()
 
-▸ **safeTransferFrom**(`params`): `Promise`\<[`ContractTransaction`](../interfaces/helpers.ContractTransaction.md)\>
+> **safeTransferFrom**(`params`): `Promise` \<[`ContractTransactionResponse`](../namespaces/helpers/classes/ContractTransactionResponse.md)\>
 
 Safely transfers the ownership of a given table ID to another address.
 
@@ -195,23 +183,21 @@ Requires the msg sender to be the owner, approved, or operator
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `params` | [`TransferParams`](../interfaces/TransferParams.md) |
+• **params**: [`TransferParams`](../interfaces/TransferParams.md)
 
 #### Returns
 
-`Promise`\<[`ContractTransaction`](../interfaces/helpers.ContractTransaction.md)\>
+`Promise` \<[`ContractTransactionResponse`](../namespaces/helpers/classes/ContractTransactionResponse.md)\>
 
-#### Defined in
+#### Source
 
 @tableland/sdk/src/registry/index.ts:91
 
-___
+***
 
-### setController
+### setController()
 
-▸ **setController**(`params`): `Promise`\<[`ContractTransaction`](../interfaces/helpers.ContractTransaction.md)\>
+> **setController**(`params`): `Promise` \<[`ContractTransactionResponse`](../namespaces/helpers/classes/ContractTransactionResponse.md)\>
 
 Sets the controller for a table. Controller can be an EOA or contract address.
 
@@ -238,36 +224,34 @@ Requirements:
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `params` | [`SetParams`](../interfaces/SetParams.md) |
+• **params**: [`SetParams`](../interfaces/SetParams.md)
 
 #### Returns
 
-`Promise`\<[`ContractTransaction`](../interfaces/helpers.ContractTransaction.md)\>
+`Promise` \<[`ContractTransactionResponse`](../namespaces/helpers/classes/ContractTransactionResponse.md)\>
 
-#### Defined in
+#### Source
 
-@tableland/sdk/src/registry/index.ts:119
+@tableland/sdk/src/registry/index.ts:121
 
-___
+***
 
-### forSigner
+### forSigner()
 
-▸ **forSigner**(`signer`): `Promise`\<[`Registry`](Registry.md)\>
+> `static` **forSigner**(`signer`): `Promise` \<[`Registry`](Registry.md)\>
 
 Create a Registry that is connected to the given Signer.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `signer` | [`Signer`](helpers.Signer.md) | An ethersjs Signer to use for mutating queries. |
+• **signer**: [`Signer`](../namespaces/helpers/interfaces/Signer.md)
+
+An ethersjs Signer to use for mutating queries.
 
 #### Returns
 
-`Promise`\<[`Registry`](Registry.md)\>
+`Promise` \<[`Registry`](Registry.md)\>
 
-#### Defined in
+#### Source
 
 @tableland/sdk/src/registry/index.ts:74

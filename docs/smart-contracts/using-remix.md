@@ -128,10 +128,10 @@ contract AllowAllInsertController is ITablelandController {
 }
 ```
 
-From there, you can deploy this contract to a live testnet—the example below pushes this contract to Polygon Mumbai and logs some useful information:
+From there, you can deploy this contract to a live testnet—the example below pushes this contract to Polygon Amoy and logs some useful information:
 
-- Transaction hash: [0x74ec88ad290625c8c17fc601f4431e5ee1b6277290ab6b69b277273b58c02499](https://mumbai.polygonscan.com/tx/0x74ec88ad290625c8c17fc601f4431e5ee1b6277290ab6b69b277273b58c02499)
-- Contract address (bottom left corner): [0x966b2E6615962cdeeD891323e66504B6C3214cB1](https://mumbai.polygonscan.com/address/0x966b2E6615962cdeeD891323e66504B6C3214cB1)
+- Transaction hash: [0xd3734304ff14c76381fea39378dcbff5adb9a8094e61a86e415a68fcc5ffe0fb](https://amoy.polygonscan.com/tx/0xd3734304ff14c76381fea39378dcbff5adb9a8094e61a86e415a68fcc5ffe0fb)
+- Contract address (bottom left corner): [0x5019661C0436e4F5539470940AD67b5EDB3481E8](https://amoy.polygonscan.com/address/0x5019661C0436e4F5539470940AD67b5EDB3481E8)
 
 ![An example of sending an onchain testnet transaction and deploying the controller contract.](@site/static/assets/smart-contracts/using-remix/5.png)
 
@@ -139,17 +139,17 @@ An example of sending an onchain testnet transaction and deploying the controlle
 
 ### Setting the controller
 
-You can then use tools like Etherscan to manually call the smart contract’s [`setController`](https://mumbai.polygonscan.com/address/0x4b48841d4b32C4650E4ABc117A03FE8B51f38F68#writeProxyContract#F12) method from a UI. Alternatively, this same method is made available in direct smart contract calls, SDK, and CLI.
+You can then use tools like Etherscan to manually call the smart contract’s [`setController`](https://amoy.polygonscan.com/address/0x170fb206132b693e38adFc8727dCfa303546Cec1#writeProxyContract#F16) method from a UI. Alternatively, this same method is made available in direct smart contract calls, SDK, and CLI.
 
 <img src={setController} width='60%' />
 
-Here, we set the controller to `0x966b2E6615962cdeeD891323e66504B6C3214cB1` (transaction hash [here](https://mumbai.polygonscan.com/tx/0x802d7ded8537fc92b683357b932d17090cac7dc3ebda3df720c40b7590130a22), for reference) for the table `tbl_calls_80001_1887` (i.e., _tableId_ is `1887`), owned by the address `0x9bA89c8aD3856C0137E268bD76ed12d14696E140`.
+Here, we set the controller to `0x5019661C0436e4F5539470940AD67b5EDB3481E8` (transaction hash [here](https://amoy.polygonscan.com/tx/0xd3734304ff14c76381fea39378dcbff5adb9a8094e61a86e415a68fcc5ffe0fb), for reference) for the table `tbl_calls_80002_152` (i.e., _tableId_ is `1887`), owned by the address `0x4D5286d81317E284Cd377cB98b478552Bbe641ae`.
 
-You can test it out yourself—try and successfully insert some row into `tbl_calls_80001_1887` but updates or deletes will fail! You could try the following by replacing `<your_address>` with your address or some message string, and then view the results [via a read query](https://testnets.tableland.network/api/v1/query?statement=select%20*%20from%20tbl_calls_80001_1887).
+You can test it out yourself—try and successfully insert some row into `tbl_calls_80002_152` but updates or deletes will fail! You could try the following by replacing `<your_address>` with your address or some message string, and then view the results [via a read query](https://testnets.tableland.network/api/v1/query?statement=select%20*%20from%20tbl_calls_80002_152).
 
 ```sql
 INSERT INTO
-    tbl_calls_80001_1887 (message)
+    tbl_calls_80002_152 (message)
 VALUES
     ('0xYOUR_EVM_ADDRESS');
 ```
@@ -161,7 +161,7 @@ There does exist an Etherscan Remix verification tool, which requires an API key
 1. Navigate to _Verify & Publish_ on the block explorer where `<0x_contract_address>` should be replaced with the deployed contract’s address and fill out the required information.
 
    ```markdown
-   https://mumbai.polygonscan.com/verifyContract?a=<0x_contract_address>
+   https://amoy.polygonscan.com/verifyContract?a=<0x_contract_address>
    ```
 
    - _Please select Compiler Type_ ⇒ _Solidity (Single Part)_.
@@ -179,7 +179,7 @@ There does exist an Etherscan Remix verification tool, which requires an API key
 
 <img src={blockExplorer} width='60%' />
 
-4. Contract is verified and easily readable! See it [here](https://mumbai.polygonscan.com/address/0x966b2E6615962cdeeD891323e66504B6C3214cB1#code).
+4. Contract is verified and easily readable! See it [here](https://amoy.polygonscan.com/address/0x2dDc5DE533509776a705F71c21B60ac07B8949E1#code).
 
 <img src={verifiedContract} width='60%' />
 

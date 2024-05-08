@@ -19,6 +19,10 @@ Tableland uses ethers.js and its "signer" class upon database instantiation. To 
 
 The easiest way to connect to a local chain is to use the [Local Tableland](/local-tableland) development environment. Starting the process spins up a local Hardhat node and Tableland validator for you and provides you with a URL to connect to at `http://127.0.0.1:8545` and `http://localhost:8080`, respectively.
 
+## Do I need an API key to use Tableland SDK?
+
+Not at this time. All table creates and writes flow through an RPC provider of your choosing. Table reads are unauthenticated and can be done without an API key.
+
 ## Can I set up access controls on my table with the SDK?
 
 Yes. The `GRANT` and `REVOKE` syntax can be used to set up admin table permissions with a mutating SQL query. However, more fine-grained access controls, like row-level security, require the use of smart contracts.

@@ -39,7 +39,7 @@ Let's first set up all of the imports that we'll be using:
 <TabItem value="js" label="JavaScript" default>
 
 ```js
-import { Wallet, getDefaultProvider, utils } from "ethers";
+import { Wallet, getDefaultProvider, verifyMessage } from "ethers";
 import {
   LitNodeClient,
   uint8arrayFromString,
@@ -52,7 +52,7 @@ import { SiweMessage } from "siwe";
 <TabItem value="ts" label="TypeScript">
 
 ```ts
-import { Wallet, getDefaultProvider, utils } from "ethers";
+import { Wallet, getDefaultProvider, verifyMessage } from "ethers";
 import {
   LitNodeClient,
   uint8arrayFromString,
@@ -103,7 +103,7 @@ const chainIdToLitChainName = (chainId: number): LitChain | undefined => {
 </Tabs>
 
 :::note
-As of early 2024, the following Tableland testnet chains are supported by Lit, shown with their associated Lit chain name: Ethereum Sepolia (`sepolia`) and Polygon Mumbai (`mumbai`). Additionally, the following mainnet chains are supported: Filecoin (`filecoin`), Ethereum (`ethereum`), Optimism (`optimism`), Arbitrum One (`arbitrum`), and Polygon (`polygon`).
+As of early 2024, the following Tableland testnet chains are supported by Lit, shown with their associated Lit chain name: Ethereum Sepolia (`sepolia`) and Polygon Amoy (`polygon-amoy`). Additionally, the following mainnet chains are supported: Filecoin (`filecoin`), Ethereum (`ethereum`), Optimism (`optimism`), Arbitrum One (`arbitrum`), and Polygon (`polygon`).
 :::
 
 The `AuthSig` requires a Sign In With Ethereum (SIWE) message to be signed so that it can validate the address trying to decrypt the data is the correct entity. Thus, we create a `SiweMessage` with a domain, origin, statement, and expiration time. We then sign the message with the wallet and create the `AuthSig` object.
@@ -136,7 +136,7 @@ const createAuthSig = async (client, wallet) => {
   // Sign the message
   const messageToSign = siweMessage.prepareMessage();
   const signature = await wallet.signMessage(messageToSign);
-  const recoveredAddress = utils.verifyMessage(messageToSign, signature);
+  const recoveredAddress = verifyMessage(messageToSign, signature);
   if (recoveredAddress !== address) {
     throw new Error("recovered address does not match wallet address");
   }
@@ -181,7 +181,7 @@ const createAuthSig = async (
   });
   const messageToSign = siweMessage.prepareMessage();
   const signature = await wallet.signMessage(messageToSign);
-  const recoveredAddress = utils.verifyMessage(messageToSign, signature);
+  const recoveredAddress = verifyMessage(messageToSign, signature);
   if (recoveredAddress !== address) {
     throw new Error("recovered address does not match wallet address");
   }
@@ -413,7 +413,7 @@ Here's the full example with all of the helpers and code, wrapped in a `main` fu
 
 ```js
 import { Database, helpers } from "@tableland/sdk";
-import { Wallet, getDefaultProvider, utils } from "ethers";
+import { Wallet, getDefaultProvider, verifyMessage } from "ethers";
 import {
   LitNodeClient,
   uint8arrayFromString,
@@ -455,7 +455,7 @@ const createAuthSig = async (client, wallet) => {
   // Sign the message
   const messageToSign = siweMessage.prepareMessage();
   const signature = await wallet.signMessage(messageToSign);
-  const recoveredAddress = utils.verifyMessage(messageToSign, signature);
+  const recoveredAddress = verifyMessage(messageToSign, signature);
   if (recoveredAddress !== address) {
     throw new Error("recovered address does not match wallet address");
   }
@@ -568,7 +568,7 @@ main().catch((error) => {
 
 ```ts
 import { Database, helpers } from "@tableland/sdk";
-import { Wallet, getDefaultProvider, utils } from "ethers";
+import { Wallet, getDefaultProvider, verifyMessage } from "ethers";
 import {
   LitNodeClient,
   uint8arrayFromString,
@@ -616,7 +616,7 @@ const createAuthSig = async (
   // Sign the message
   const messageToSign = siweMessage.prepareMessage();
   const signature = await wallet.signMessage(messageToSign);
-  const recoveredAddress = utils.verifyMessage(messageToSign, signature);
+  const recoveredAddress = verifyMessage(messageToSign, signature);
   if (recoveredAddress !== address) {
     throw new Error("recovered address does not match wallet address");
   }

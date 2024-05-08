@@ -1,28 +1,18 @@
----
-id: "ApiError"
-title: "Class: ApiError"
-sidebar_label: "ApiError"
-sidebar_position: 0
-custom_edit_url: null
----
+# Class: ApiError
 
-## Hierarchy
+## Extends
 
 - `Error`
 
-  ↳ **`ApiError`**
-
 ## Constructors
 
-### constructor
+### new ApiError()
 
-• **new ApiError**(`response`): [`ApiError`](ApiError.md)
+> **new ApiError**(`response`): [`ApiError`](ApiError.md)
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `response` | `Omit`\<`ApiResponse`\<`any`\>, ``"ok"``\> |
+• **response**: `Omit`\<`ApiResponse`\<`any`\>, `"ok"`\>
 
 #### Returns
 
@@ -30,181 +20,175 @@ custom_edit_url: null
 
 #### Overrides
 
-Error.constructor
+`Error.constructor`
 
-#### Defined in
+#### Source
 
 @tableland/sdk/src/validator/client/types.ts:164
 
 ## Properties
 
-### cause
+### cause?
 
-• `Optional` **cause**: `unknown`
+> `optional` **cause**: `unknown`
 
 #### Inherited from
 
-Error.cause
+`Error.cause`
 
-#### Defined in
+#### Source
 
 typescript/lib/lib.es2022.error.d.ts:24
 
-___
+***
 
 ### data
 
-• `Readonly` **data**: `any`
+> `readonly` **data**: `any`
 
-#### Defined in
+#### Source
 
 @tableland/sdk/src/validator/client/types.ts:162
 
-___
+***
 
 ### headers
 
-• `Readonly` **headers**: `Headers`
+> `readonly` **headers**: `Headers`
 
-#### Defined in
+#### Source
 
 @tableland/sdk/src/validator/client/types.ts:158
 
-___
+***
 
 ### message
 
-• **message**: `string`
+> **message**: `string`
 
 #### Inherited from
 
-Error.message
+`Error.message`
 
-#### Defined in
+#### Source
 
 typescript/lib/lib.es5.d.ts:1068
 
-___
+***
 
 ### name
 
-• **name**: `string`
+> **name**: `string`
 
 #### Inherited from
 
-Error.name
+`Error.name`
 
-#### Defined in
+#### Source
 
 typescript/lib/lib.es5.d.ts:1067
 
-___
+***
 
-### stack
+### stack?
 
-• `Optional` **stack**: `string`
+> `optional` **stack**: `string`
 
 #### Inherited from
 
-Error.stack
+`Error.stack`
 
-#### Defined in
+#### Source
 
 typescript/lib/lib.es5.d.ts:1069
 
-___
+***
 
 ### status
 
-• `Readonly` **status**: `number`
+> `readonly` **status**: `number`
 
-#### Defined in
+#### Source
 
 @tableland/sdk/src/validator/client/types.ts:160
 
-___
+***
 
 ### statusText
 
-• `Readonly` **statusText**: `string`
+> `readonly` **statusText**: `string`
 
-#### Defined in
+#### Source
 
 @tableland/sdk/src/validator/client/types.ts:161
 
-___
+***
 
 ### url
 
-• `Readonly` **url**: `string`
+> `readonly` **url**: `string`
 
-#### Defined in
+#### Source
 
 @tableland/sdk/src/validator/client/types.ts:159
 
-___
+***
 
-### prepareStackTrace
+### prepareStackTrace()?
 
-▪ `Static` `Optional` **prepareStackTrace**: (`err`: `Error`, `stackTraces`: `CallSite`[]) => `any`
-
-#### Type declaration
-
-▸ (`err`, `stackTraces`): `any`
+> `static` `optional` **prepareStackTrace**: (`err`, `stackTraces`) => `any`
 
 Optional override for formatting stack traces
 
-##### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `err` | `Error` |
-| `stackTraces` | `CallSite`[] |
-
-##### Returns
-
-`any`
-
-**`See`**
+#### See
 
 https://v8.dev/docs/stack-trace-api#customizing-stack-traces
 
+#### Parameters
+
+• **err**: `Error`
+
+• **stackTraces**: `CallSite`[]
+
+#### Returns
+
+`any`
+
 #### Inherited from
 
-Error.prepareStackTrace
+`Error.prepareStackTrace`
 
-#### Defined in
+#### Source
 
 @types/node/globals.d.ts:28
 
-___
+***
 
 ### stackTraceLimit
 
-▪ `Static` **stackTraceLimit**: `number`
+> `static` **stackTraceLimit**: `number`
 
 #### Inherited from
 
-Error.stackTraceLimit
+`Error.stackTraceLimit`
 
-#### Defined in
+#### Source
 
 @types/node/globals.d.ts:30
 
 ## Methods
 
-### captureStackTrace
+### captureStackTrace()
 
-▸ **captureStackTrace**(`targetObject`, `constructorOpt?`): `void`
+> `static` **captureStackTrace**(`targetObject`, `constructorOpt`?): `void`
 
 Create .stack property on a target object
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `targetObject` | `object` |
-| `constructorOpt?` | `Function` |
+• **targetObject**: `object`
+
+• **constructorOpt?**: `Function`
 
 #### Returns
 
@@ -212,8 +196,8 @@ Create .stack property on a target object
 
 #### Inherited from
 
-Error.captureStackTrace
+`Error.captureStackTrace`
 
-#### Defined in
+#### Source
 
 @types/node/globals.d.ts:21

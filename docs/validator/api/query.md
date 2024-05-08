@@ -23,10 +23,10 @@ curl -X GET https://testnets.tableland.network/api/v1/query?format={objects|tabl
   -H 'Accept: application/json'
 ```
 
-For example, to query the `healthbot_80001_1` table with default formatting options:
+For example, to query the `healthbot_80002_1` table with default formatting options:
 
 ```bash
-curl -X GET https://testnets.tableland.network/api/v1/query?statement=select%20%2A%20from%20healthbot_80001_1 \
+curl -X GET https://testnets.tableland.network/api/v1/query?statement=select%20%2A%20from%20healthbot_80002_1 \
   -H 'Accept: application/json'
 ```
 
@@ -39,7 +39,7 @@ curl -L 'https://testnets.tableland.network/api/v1/query' \
   -H 'Content-Type: application/json' \
   -H 'Accept: application/json' \
   -d '{
-    "statement": "select * from healthbot_80001_1",
+    "statement": "select * from healthbot_80002_1",
     "format": "objects",
     "extract": false,
     "unwrap": false
@@ -71,7 +71,7 @@ See the [**query formatting**](/validator/api/query-formatting) section for how 
 ## Example
 
 ```bash
-curl -X GET https://testnets.tableland.network/api/v1/query?statement=select%20%2A%20from%20healthbot_80001_1 \
+curl -X GET https://testnets.tableland.network/api/v1/query?statement=select%20%2A%20from%20healthbot_80002_1 \
   -H 'Accept: application/json'
 ```
 
@@ -82,7 +82,7 @@ curl -L 'https://testnets.tableland.network/api/v1/query' \
   -H 'Content-Type: application/json' \
   -H 'Accept: application/json' \
   -d '{
-    "statement": "select * from healthbot_80001_1"
+    "statement": "select * from healthbot_80002_1"
   }'
 ```
 

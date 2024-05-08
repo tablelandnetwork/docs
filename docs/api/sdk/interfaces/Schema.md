@@ -1,37 +1,29 @@
----
-id: "Schema"
-title: "Interface: Schema"
-sidebar_label: "Schema"
-sidebar_position: 0
-custom_edit_url: null
----
+# Interface: Schema
 
-## Hierarchy
+## Extends
 
 - `Camelize`\<`BaseSchema`\>
-
-  ↳ **`Schema`**
 
 ## Properties
 
 ### columns
 
-• `Readonly` **columns**: `PartialRequired`\<\{ `constraints?`: readonly `string`[] ; `name?`: `string` ; `type?`: `string`  }, ``"constraints"``\>[]
+> `readonly` **columns**: `PartialRequired`\<`object`, `"constraints"`\>[]
 
 #### Overrides
 
-Camelize.columns
+`Camelize.columns`
 
-#### Defined in
+#### Source
 
 @tableland/sdk/src/validator/tables.ts:21
 
-___
+***
 
 ### tableConstraints
 
-• **tableConstraints**: `undefined` \| readonly `string`[]
+> **tableConstraints**: `undefined` \| readonly `string`[]
 
 #### Inherited from
 
-Camelize.tableConstraints
+`Camelize.tableConstraints`

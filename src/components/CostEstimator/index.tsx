@@ -95,7 +95,7 @@ function chainCostInfo(costs: CalculatedCost): ChainCost[] {
         chain.writeCostUsd = chain.writeCostCrypto * ethPrice;
         chain.writeCostUsdPerMb = chain.writeCostCryptoPerMb * ethPrice;
         break;
-      case "matic":
+      case "polygon":
         chain.createSize = 135;
         chain.cryptoToken = "MATIC";
         chain.createCostCrypto = 0.008319063873;
@@ -165,13 +165,18 @@ function QueryCosts({
                   </td>
                   <td>{c.createSize}</td>
                   <td>
-                    {c.createCostCrypto.toFixed(7)} {c.cryptoToken}
+                    {c.createCostCrypto && c.createCostCrypto.toFixed(7)}{" "}
+                    {c.cryptoToken}
                   </td>
-                  <td>${c.createCostUsd.toFixed(4)}</td>
+                  <td>${c.createCostUsd && c.createCostUsd.toFixed(4)}</td>
                   <td>
-                    {c.createCostCryptoPerMb.toFixed(4)} {c.cryptoToken}/MB
+                    {c.createCostCryptoPerMb &&
+                      c.createCostCryptoPerMb.toFixed(4)}{" "}
+                    {c.cryptoToken}/MB
                   </td>
-                  <td>${c.createCostUsdPerMb.toFixed(2)}</td>
+                  <td>
+                    ${c.createCostUsdPerMb && c.createCostUsdPerMb.toFixed(2)}
+                  </td>
                 </tr>
               );
             })}
@@ -203,13 +208,18 @@ function QueryCosts({
                   </td>
                   <td>{c.writeSize}</td>
                   <td>
-                    {c.writeCostCrypto.toFixed(7)} {c.cryptoToken}
+                    {c.writeCostCrypto && c.writeCostCrypto.toFixed(7)}{" "}
+                    {c.cryptoToken}
                   </td>
-                  <td>${c.writeCostUsd.toFixed(4)}</td>
+                  <td>${c.writeCostUsd && c.writeCostUsd.toFixed(4)}</td>
                   <td>
-                    {c.writeCostCryptoPerMb.toFixed(4)} {c.cryptoToken}/MB
+                    {c.writeCostCryptoPerMb &&
+                      c.writeCostCryptoPerMb.toFixed(4)}{" "}
+                    {c.cryptoToken}/MB
                   </td>
-                  <td>${c.writeCostUsdPerMb.toFixed(2)}</td>
+                  <td>
+                    ${c.writeCostUsdPerMb && c.writeCostUsdPerMb.toFixed(2)}
+                  </td>
                 </tr>
               );
             })}
@@ -224,24 +234,24 @@ function QueryCosts({
 
 export default function CostEstimator(): JSX.Element {
   const [costs, setCosts] = useState({
-    eth: 2485.55,
-    matic: 0.85,
-    fil: 5.85,
+    eth: 3000.0,
+    matic: 0.7,
+    fil: 5.75,
   });
 
   const handleCurrencyChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
-    const parsedValue = parseFloat(value).toFixed(2);
+    const numberValue = parseFloat(value);
 
-    if (parsedValue === "NaN") {
+    if (isNaN(numberValue)) {
       setCosts((prevCosts) => ({
         ...prevCosts,
-        [name]: "",
+        [name]: 0,
       }));
-    } else if (parseFloat(parsedValue) >= 0) {
+    } else {
       setCosts((prevCosts) => ({
         ...prevCosts,
-        [name]: parseFloat(parsedValue),
+        [name]: parseFloat(numberValue.toFixed(2)),
       }));
     }
   };
@@ -280,9 +290,10 @@ export default function CostEstimator(): JSX.Element {
                 type="number"
                 step="0.01"
                 name="eth"
-                value={costs.eth}
+                value={costs.eth.toFixed(2)}
                 onChange={handleCurrencyChange}
                 className={styles.currencyInput}
+                min="0"
               />
             </td>
           </tr>
@@ -295,9 +306,10 @@ export default function CostEstimator(): JSX.Element {
                 type="number"
                 step="0.01"
                 name="matic"
-                value={costs.matic}
+                value={costs.matic.toFixed(2)}
                 onChange={handleCurrencyChange}
                 className={styles.currencyInput}
+                min="0"
               />
             </td>
           </tr>
@@ -310,9 +322,10 @@ export default function CostEstimator(): JSX.Element {
                 type="number"
                 step="0.01"
                 name="fil"
-                value={costs.fil}
+                value={costs.fil.toFixed(2)}
                 onChange={handleCurrencyChange}
                 className={styles.currencyInput}
+                min="0"
               />
             </td>
           </tr>

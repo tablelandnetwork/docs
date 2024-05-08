@@ -52,7 +52,7 @@ This operation does not require authentication
 ## Example
 
 ```bash
-curl -X GET https://testnets.tableland.network/api/v1/receipt/80001/0x02f319429b8a7be1cbb492f0bfbf740d2472232a2edadde7df7c16c0b61aa78b \
+curl -X GET https://testnets.tableland.network/api/v1/receipt/80002/0x02f319429b8a7be1cbb492f0bfbf740d2472232a2edadde7df7c16c0b61aa78b \
   -H 'Accept: application/json'
 ```
 
@@ -64,6 +64,6 @@ Returns a successful (200) response:
   "table_ids": ["1"],
   "transaction_hash": "0x02f319429b8a7be1cbb492f0bfbf740d2472232a2edadde7df7c16c0b61aa78b",
   "block_number": 27055540,
-  "chain_id": 80001
+  "chain_id": 80002
 }
 ```

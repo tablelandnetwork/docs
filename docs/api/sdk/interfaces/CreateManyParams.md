@@ -1,10 +1,4 @@
----
-id: "CreateManyParams"
-title: "Interface: CreateManyParams"
-sidebar_label: "CreateManyParams"
-sidebar_position: 0
-custom_edit_url: null
----
+# Interface: CreateManyParams
 
 CreateManyParams Represents the parameters Object used to create multiple tables in a single tx.
 
@@ -12,22 +6,22 @@ CreateManyParams Represents the parameters Object used to create multiple tables
 
 ### chainId
 
-• **chainId**: `number`
+> **chainId**: `number`
 
 The target chain id.
 
-#### Defined in
+#### Source
 
-@tableland/sdk/src/registry/create.ts:75
+@tableland/sdk/src/registry/create.ts:79
 
-___
+***
 
 ### statements
 
-• **statements**: `string`[]
+> **statements**: `string`[]
 
 List of create SQL statement strings.
 
-#### Defined in
+#### Source
 
-@tableland/sdk/src/registry/create.ts:74
+@tableland/sdk/src/registry/create.ts:78

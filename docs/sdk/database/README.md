@@ -25,7 +25,7 @@ npm install @tableland/sdk
 <br />
 
 :::note
-Note that Tableland uses [ethersjs](https://docs.ethers.org/v5/) under the hood. The version being used is the **last version of ethersjs v5** (5.7.2) and **not the latest version overall** (v6).
+Note that Tableland uses [ethersjs](https://docs.ethers.org/v6/) under the hood. The version being used is the **latest version of ethersjs v6**.
 
 Also note Tableland SDK uses the modern `fetch` API, which is only available starting with Node 18. If you're using an earlier version (Node 16 or before), you must [provide global access](https://github.com/node-fetch/node-fetch#providing-global-access) to `fetch` as well as `Headers` to use the SDK. [Check out this walkthrough](/sdk/reference/compatability#node-polyfills) for how to do this.
 :::
@@ -40,10 +40,10 @@ Alternatively, the `Database` has a `batch()` method that allows you to send mul
 
 ### Ethers
 
-Note that Tableland uses [ethersjs](https://docs.ethers.org/v5/) under the hood. The version being used is the **last version of ethersjs v5** (5.7.2) and **not the latest version overall** (v6). So, it's likely you'll need to install `ethers@^5.7.2` in your project:
+Note that Tableland uses [ethersjs](https://docs.ethers.org/v6/) under the hood. The version being used is the **latest version of ethersjs v6**.
 
 ```bash
-npm i --save ethers@^5.7.2
+npm i --save ethers
 ```
 
 ### Local development
@@ -62,7 +62,7 @@ npx local-tableland
 
 ### Network configuration
 
-When connecting to a `Database`, the default will connect to Polygon Mumbai and use a browser connection (e.g., MetaMask prompt), but setting up the network configuration using a `Signer` defines the desired chain connection. You'll need a to use a provider to connect the `Signer` using a private key; the provider will point to the desired chain for the database's connection.
+When connecting to a `Database`, the default will connect to Polygon Amoy and use a browser connection (e.g., MetaMask prompt), but setting up the network configuration using a `Signer` defines the desired chain connection. You'll need a to use a provider to connect the `Signer` using a private key; the provider will point to the desired chain for the database's connection.
 
 For example, you could choose to override the default browser-based connection and pass a private key to instantiate a signer, then, connecting it to the `Database`. But, if you'd like to use the default browser connection, simply instantiating with `new Database()` will prompt the browser wallet.
 
@@ -73,7 +73,7 @@ import { Wallet, getDefaultProvider } from "ethers";
 const privateKey = "your_private_key";
 const wallet = new Wallet(privateKey);
 // To avoid connecting to the browser wallet (locally, port 8545).
-// For example: "https://polygon-mumbai.g.alchemy.com/v2/YOUR_ALCHEMY_KEY"
+// For example: "https://polygon-amoy.g.alchemy.com/v2/YOUR_ALCHEMY_KEY"
 const provider = getDefaultProvider("http://127.0.0.1:8545");
 const signer = wallet.connect(provider);
 // Connect to the database

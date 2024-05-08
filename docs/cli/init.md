@@ -27,12 +27,12 @@ homestead
 optimism
 arbitrum
 arbitrum-nova
-matic
+polygon
 filecoin
 sepolia
 optimism-sepolia
 arbitrum-sepolia
-maticmum
+polygon-amoy
 filecoin-calibration
 localhost
 ```

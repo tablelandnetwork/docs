@@ -1,11 +1,3 @@
----
-id: "index"
-title: "@tableland/sdk"
-sidebar_label: "Readme"
-sidebar_position: 0
-custom_edit_url: null
----
-
 # @tableland/sdk
 
 [![Review](https://github.com/tablelandnetwork/tableland-js/actions/workflows/review.yml/badge.svg)](https://github.com/tablelandnetwork/tableland-js/actions/workflows/review.yml)
@@ -18,10 +10,13 @@ custom_edit_url: null
 
 ## Table of Contents
 
+- [Table of Contents](#table-of-contents)
 - [Background](#background)
 - [Install](#install)
 - [Usage](#usage)
   - [Database](#database)
+    - [Connecting](#connecting)
+    - [Create, write, \& read](#create-write--read)
   - [Validator](#validator)
   - [Registry](#registry)
   - [Build Tools](#build-tools)
@@ -125,7 +120,7 @@ const { meta: create } = await db
   .run();
 
 // The table's `name` is in the format `{prefix}_{chainId}_{tableId}`
-const { name } = create.txn; // e.g., my_sdk_table_80001_311
+const { name } = create.txn; // e.g., my_sdk_table_80002_311
 ```
 
 Once the table is created, you can then insert, update, and/or delete data with prepared statements. Parameter binding is a useful feature such that you can pass parameters in `bind` that replace the `?` placeholders in this example.

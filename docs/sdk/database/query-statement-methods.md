@@ -16,7 +16,7 @@ A `Database` will `prepare` a `Statement` and then let you choose how it should 
 When calling the the `Database` API’s `prepare` method, it returns an object that supports a variety of query statement methods. Each one is asynchronous and should be called upon that response object—for demonstration purposes, the `stmt` variable is used to save the response from `prepare` and then further transform the result.
 
 ```js
-const tableName = `healthbot_80001_1`;
+const tableName = `healthbot_80002_1`;
 // Define the `Database` response object
 const stmt = db.prepare(`SELECT * FROM ${tableName};`);
 // Call a query statement method

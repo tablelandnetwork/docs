@@ -75,10 +75,10 @@ One option is to manually implement this sanitization step on the query string. 
 const query = `SELECT * FROM my_uri_encoding_table`;
 const encoded = encodeURIComponent(query);
 // The `*` isn't escaped properly
-// SELECT%20*%20FROM%20uri_encoding_80001_2752
+// SELECT%20*%20FROM%20my_uri_encoding_table
 
 const encodeAsterisk = encoded.replace(/\*/g, "%2A");
-// SELECT%20%2A%20FROM%20uri_encoding_80001_2752
+// SELECT%20%2A%20FROM%20my_uri_encoding_table
 ```
 
 By using a regex, you can search for each one of these characters and replace them with the corresponding percent encoding. You could also leverage existing libraries—one example to check out is something like [`url-encode-decode`](https://github.com/tiaanduplessis/url-encode-decode).

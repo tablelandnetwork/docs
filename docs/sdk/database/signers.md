@@ -7,7 +7,7 @@ keywords:
   - SQL query
 ---
 
-A `Database` connection requires a `Signer` from the [ethersjs](https://docs.ethers.org/v5/) package. This will provide a means for signing any table creation or mutations transactions sent to the Tableland network, and the connected provider will provide the chain information for the network you are connecting to.
+A `Database` connection requires a `Signer` from the [ethersjs](https://docs.ethers.org/v6/) package. This will provide a means for signing any table creation or mutations transactions sent to the Tableland network, and the connected provider will provide the chain information for the network you are connecting to.
 
 ## Connecting via the browser
 
@@ -17,10 +17,10 @@ Similar to the default behavior, you can pass a custom `signer` to the `Database
 
 ```js
 import { Database } from "@tableland/sdk";
-import { providers } from "ethers";
+import { BrowserProvider } from "ethers";
 
 // Connect to provider from browser and get accounts
-const provider = new providers.Web3Provider(window.ethereum);
+const provider = new BrowserProvider(window.ethereum);
 await provider.send("eth_requestAccounts", []);
 
 // Pass the signer to the Database
@@ -45,7 +45,7 @@ const privateKey = process.env.PRIVATE_KEY;
 const wallet = new Wallet(privateKey);
 // To avoid connecting to the browser wallet (locally, port 8545),
 // replace the URL with a provider like Alchemy, Infura, Etherscan, etc.
-const provider = getDefaultProvider("http://127.0.0.1:8545"); // For example: "https://polygon-mumbai.g.alchemy.com/v2/${process.env.YOUR_ALCHEMY_KEY}"
+const provider = getDefaultProvider("http://127.0.0.1:8545"); // For example: "https://polygon-amoy.g.alchemy.com/v2/${process.env.YOUR_ALCHEMY_KEY}"
 const signer = wallet.connect(provider);
 // Connect to the database
 const db = new Database({ signer });
@@ -53,19 +53,12 @@ const db = new Database({ signer });
 
 ## Nonce manager
 
-It might be useful to use the `NonceManager` (experimental), which will automatically manage the nonce for you so you can blast the network with as many transactions as you would like.
-
-```bash npm2yarn
-npm install --save @ethersproject/experimental"
-```
-
-Once installed, import it into your project. The main difference is that you wrap the signer in a `NonceManager` instance.
+It might be useful to use the `NonceManager`, which will automatically manage the nonce for you so you can blast the network with as many transactions as you would like. The main difference is that you wrap the signer in a `NonceManager` instance.
 
 ```js
-// highlight-next-line
-import { NonceManager } from "@ethersproject/experimental";
 import { Database } from "@tableland/sdk";
-import { Wallet, getDefaultProvider } from "ethers";
+// highlight-next-line
+import { NonceManager, Wallet, getDefaultProvider } from "ethers";
 import * as dotenv from "dotenv";
 dotenv.config();
 

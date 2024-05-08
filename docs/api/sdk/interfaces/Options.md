@@ -1,21 +1,15 @@
----
-id: "Options"
-title: "Interface: Options"
-sidebar_label: "Options"
-sidebar_position: 0
-custom_edit_url: null
----
+# Interface: Options
 
 Options for `all`, `first`, `run`, and `raw` methods.
 
 ## Properties
 
-### controller
+### controller?
 
-• `Optional` **controller**: [`PollingController`](../namespaces/helpers.md#pollingcontroller)
+> `optional` **controller**: [`PollingController`](../namespaces/helpers/type-aliases/PollingController.md)
 
-An optional [PollingController](../namespaces/helpers.md#pollingcontroller) used to control receipt polling behavior.
+An optional [PollingController](../namespaces/helpers/type-aliases/PollingController.md) used to control receipt polling behavior.
 
-#### Defined in
+#### Source
 
 @tableland/sdk/src/statement.ts:42

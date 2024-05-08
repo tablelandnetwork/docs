@@ -1,31 +1,25 @@
----
-id: "TransferParams"
-title: "Interface: TransferParams"
-sidebar_label: "TransferParams"
-sidebar_position: 0
-custom_edit_url: null
----
+# Interface: TransferParams
 
 ## Properties
 
 ### tableName
 
-• **tableName**: `string` \| [`TableIdentifier`](TableIdentifier.md)
+> **tableName**: `string` \| [`TableIdentifier`](TableIdentifier.md)
 
 Name or tableId and chainId of the token to be transferred.
 
-#### Defined in
+#### Source
 
-@tableland/sdk/src/registry/transfer.ts:9
+@tableland/sdk/src/registry/transfer.ts:13
 
-___
+***
 
 ### to
 
-• **to**: `string`
+> **to**: `string`
 
 Address to receive the ownership of the given token ID.
 
-#### Defined in
+#### Source
 
-@tableland/sdk/src/registry/transfer.ts:13
+@tableland/sdk/src/registry/transfer.ts:17

@@ -12,11 +12,11 @@ Be sure to use `https://tableland.network` on mainnets, `https://testnets.tablel
 
 All requests should be `GET` requests. Simply append a read query to the `/query` endpoint with a parameter of `statement`. For example, take `https://testnets.tableland.network/api/v1/query?statement=` plus a read query of `SELECT * FROM healthbot_{chainId}_1` (where `{chainId}` is the chain's ID).
 
-You can use something like `curl` or `wget` to query table data or even copy/paste the [URL below in your browser](https://testnets.tableland.network/api/v1/query?statement=select%20%2A%20from%20healthbot_80001_1).
+You can use something like `curl` or `wget` to query table data or even copy/paste the [URL below in your browser](https://testnets.tableland.network/api/v1/query?statement=select%20%2A%20from%20healthbot_80002_1).
 
 ```bash
-# Here, were making a query on healthbot_80001_1.
-curl -X GET https://testnets.tableland.network/api/v1/query?statement=select%20%2A%20from%20healthbot_80001_1 \
+# Here, were making a query on healthbot_80002_1.
+curl -X GET https://testnets.tableland.network/api/v1/query?statement=select%20%2A%20from%20healthbot_80002_1 \
   -H 'Accept: application/json'
 ```
 
@@ -36,7 +36,7 @@ You can further transform this using additional query parameters like `format` (
 
 ```bash
 # Add some additional query params
-curl -X GET https://testnets.tableland.network/api/v1/query?statement=select%20%2A%20from%20healthbot_80001_1&format=objects&unwrap=true&extract=true \
+curl -X GET https://testnets.tableland.network/api/v1/query?statement=select%20%2A%20from%20healthbot_80002_1&format=objects&unwrap=true&extract=true \
   -H 'Accept: application/json'
 ```
 
@@ -56,18 +56,18 @@ The `receipt` endpoint take a transaction hash parameter for a specific chain ID
 
 ```bash
 # You can also use wget
-curl -X GET https://testnets.tableland.network/api/v1/receipt/80001/0x02f319429b8a7be1cbb492f0bfbf740d2472232a2edadde7df7c16c0b61aa78b \
+curl -X GET https://testnets.tableland.network/api/v1/receipt/80002/0x808afd525b8bac7d7d74ba9e0b214984e6862cf83e3b42cb181f8f415be57c9e \
   -H 'Accept: application/json'
 ```
 
-It [returns onchain transaction information](https://testnets.tableland.network/api/v1/receipt/80001/0x02f319429b8a7be1cbb492f0bfbf740d2472232a2edadde7df7c16c0b61aa78b) about a table creation or mutation.
+It [returns onchain transaction information](https://testnets.tableland.network/api/v1/receipt/80002/0x808afd525b8bac7d7d74ba9e0b214984e6862cf83e3b42cb181f8f415be57c9e) about a table creation or mutation.
 
 ```json
 {
   "table_ids": ["1"],
-  "transaction_hash": "0x02f319429b8a7be1cbb492f0bfbf740d2472232a2edadde7df7c16c0b61aa78b",
+  "transaction_hash": "0x808afd525b8bac7d7d74ba9e0b214984e6862cf83e3b42cb181f8f415be57c9e",
   "block_number": 27055540,
-  "chain_id": 80001
+  "chain_id": 80002
 }
 ```
 
@@ -75,18 +75,18 @@ And you can retrieve table metadata using the `tables` endpoint.
 
 ```bash
 # You can also use wget
-curl -X GET https://testnets.tableland.network/api/v1/tables/80001/1 \
+curl -X GET https://testnets.tableland.network/api/v1/tables/80002/1 \
   -H 'Accept: application/json'
 ```
 
-The response includes information like the table's schema, the table's data shown in the [Console](https://console.tableland.xyz/) (at the [`animation_url`](https://tables.testnets.tableland.xyz/80001/1.html)), date created, etc.
+The response includes information like the table's schema, the table's data shown in the [Console](https://console.tableland.xyz/) (at the [`animation_url`](https://tables.testnets.tableland.xyz/80002/1.html)), date created, etc.
 
 ```json
 {
-  "name": "healthbot_80001_1",
-  "external_url": "https://testnets.tableland.network/api/v1/tables/80001/1",
-  "animation_url": "https://tables.testnets.tableland.xyz/80001/1.html",
-  "image": "https://tables.testnets.tableland.xyz/80001/1.svg",
+  "name": "healthbot_80002_1",
+  "external_url": "https://testnets.tableland.network/api/v1/tables/80002/1",
+  "animation_url": "https://tables.testnets.tableland.xyz/80002/1.html",
+  "image": "https://tables.testnets.tableland.xyz/80002/1.svg",
   "attributes": [
     {
       "display_type": "date",

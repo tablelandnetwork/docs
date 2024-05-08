@@ -68,15 +68,24 @@ async function createConfig(): Promise<Config> {
       },
     ],
     plugins: [
-      [
-        "docusaurus-plugin-typedoc",
-        {
-          id: "api/sdk",
-          entryPoints: ["./node_modules/@tableland/sdk/src/index.ts"],
-          tsconfig: "./tsconfig.json",
-          out: "api/sdk",
-        },
-      ],
+      // TODO: figure out how to parse "acorn" issues with MDX. The following
+      // pages have brackets that wrap code examples, which are interpreted as
+      // JSX but cannot be resolved. They should be interpreted as strings, so
+      // there needs to be a custom post-processing plugin to handle these.
+      // api/sdk/namespaces/helpers/functions/getDefaultProvider.md line 44
+      // api/sdk/namespaces/helpers/functions/overrideDefaults.md line 16
+      //
+      // If you need to generate new SDK API docs, uncomment, run, and then make
+      // the changes manually.
+      // [
+      //   "docusaurus-plugin-typedoc",
+      //   {
+      //     id: "api/sdk",
+      //     entryPoints: ["./node_modules/@tableland/sdk/src/index.ts"],
+      //     tsconfig: "./tsconfig.json",
+      //     out: "./docs/api/sdk",
+      //   },
+      // ],
       [
         // Note: (only) during local dev, you may run into an infinite loop issue that
         // occurs when certain files get modified

@@ -14,7 +14,7 @@ keywords:
 import Tabs from "@theme/Tabs";
 import TabItem from "@theme/TabItem";
 
-One great library to use in React apps is [wagmi](https://wagmi.sh/) alongside [RainbowKit](https://www.rainbowkit.com/). It offers a very straightforward way to connect a user's wallet and access account information using React hooks. Start by installing wagmi in your React app, and then create and connect to a client. The one callout is that wagmi uses [viem](https://viem.sh/), and the Tableland SDK uses [ethers v5](https://docs.ethers.org/v5/)—so wagmi needs to implement an ethers adapter to use the SDK. We'll also use RainbowKit in this setup to make wallet connection modals easier as well as [Vite](https://vitejs.dev/guide/) to spin up a starter project.
+One great library to use in React apps is [wagmi](https://wagmi.sh/) alongside [RainbowKit](https://www.rainbowkit.com/). It offers a very straightforward way to connect a user's wallet and access account information using React hooks. Start by installing wagmi in your React app, and then create and connect to a client. The one callout is that wagmi uses [viem](https://viem.sh/), and the Tableland SDK uses [ethers v6](https://docs.ethers.org/v6/)—so wagmi needs to implement an ethers adapter to use the SDK. We'll also use RainbowKit in this setup to make wallet connection modals easier as well as [Vite](https://vitejs.dev/guide/) to spin up a starter project.
 
 :::tip
 For more starter kits, you can [check out the templates](/quickstarts/templates) we've created, which include both JavaScript and TypeScript implementation of the React examples we walk through below—plus, Next.js templates!
@@ -28,14 +28,14 @@ First, install wagmi, RainbowKit, Tableland, and ethers. If you need help settin
 <TabItem value="jsv2" label="wagmi v2" default>
 
 ```bash npm2yarn
-npm install wagmi@latest @rainbow-me/rainbowkit@latest @tableland/sdk ethers@^5.7.2 @tanstack/react-query
+npm install wagmi@latest @rainbow-me/rainbowkit@latest @tableland/sdk ethers @tanstack/react-query
 ```
 
 </TabItem>
 <TabItem value="jsv1" label="wagmi v1">
 
 ```bash npm2yarn
-npm install wagmi@^1 @rainbow-me/rainbowkit@^1 @tableland/sdk ethers@^5.7.2
+npm install wagmi@^1 @rainbow-me/rainbowkit@^1 @tableland/sdk ethers
 ```
 
 </TabItem>
@@ -82,7 +82,7 @@ const chains = [
     ? [
         chain.arbitrumSepolia,
         chain.sepolia,
-        chain.polygonMumbai,
+        chain.polygonAmoy,
         chain.optimismSepolia,
         chain.filecoinCalibration,
         chain.hardhat,
@@ -110,6 +110,30 @@ import { configureChains, createConfig } from "wagmi";
 import * as chain from "wagmi/chains";
 import { publicProvider } from "wagmi/providers/public";
 import { alchemyProvider } from "wagmi/providers/alchemy";
+import { defineChain } from "viem";
+
+// Polygon Amoy is only defined in viem v2
+const polygonAmoy = defineChain({
+  id: 80_002,
+  name: "Polygon Amoy",
+  network: "polygon-amoy",
+  nativeCurrency: { name: "MATIC", symbol: "MATIC", decimals: 18 },
+  rpcUrls: {
+    default: {
+      http: ["https://rpc-amoy.polygon.technology"],
+    },
+    public: {
+      http: ["https://rpc-amoy.polygon.technology"],
+    },
+  },
+  blockExplorers: {
+    default: {
+      name: "Polygonscan",
+      url: "https://amoy.polygonscan.com",
+    },
+  },
+  testnet: true,
+});
 
 const { chains, publicClient, webSocketPublicClient } = configureChains(
   [
@@ -123,7 +147,7 @@ const { chains, publicClient, webSocketPublicClient } = configureChains(
       ? [
           chain.arbitrumSepolia,
           chain.sepolia,
-          chain.polygonMumbai,
+          polygonAmoy, // Custom chain
           chain.optimismSepolia,
           chain.filecoinCalibration,
           chain.hardhat,
@@ -237,7 +261,7 @@ Since wagmi is not natively compatible with ethers, we'll need to create a hook 
 
 ```js title="src/hooks/useSigner.js"
 import { useMemo } from "react";
-import { providers } from "ethers";
+import { BrowserProvider } from "ethers";
 import { useWalletClient } from "wagmi";
 
 function walletClientToSigner(walletClient) {
@@ -247,8 +271,8 @@ function walletClientToSigner(walletClient) {
     name: chain.name,
     ensAddress: chain.contracts?.ensRegistry?.address,
   };
-  const provider = new providers.JsonRpcProvider(transport.url, network);
-  const signer = provider.getSigner(account.address);
+  const provider = new BrowserProvider(transport.url, network);
+  const signer = await provider.getSigner(account.address);
   return signer;
 }
 
@@ -267,8 +291,8 @@ export function useSigner({ chainId } = {}) {
 ```js title="src/hooks/useSigner.js"
 // Convert wagmi/viem `WalletClient` to ethers `Signer`
 import { useMemo } from "react";
+import { BrowserProvider } from "ethers";
 import { useWalletClient } from "wagmi";
-import { providers } from "ethers";
 
 function walletClientToSigner(walletClient) {
   const { account, chain, transport } = walletClient;
@@ -277,8 +301,8 @@ function walletClientToSigner(walletClient) {
     name: chain.name,
     ensAddress: chain.contracts?.ensRegistry?.address,
   };
-  const provider = new providers.Web3Provider(transport, network);
-  const signer = provider.getSigner(account.address);
+  const provider = new BrowserProvider(transport, network);
+  const signer = await provider.getSigner(account.address);
   return signer;
 }
 

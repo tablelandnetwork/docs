@@ -1,5 +1,6 @@
 ---
 title: Using IPFS, Filecoin, & web3.storage
+sidebar_label: IPFS, Filecoin, & web3.storage
 description: Understand the basics for storing data with IPFS & Filecoin in tables.
 keywords:
   - ipfs
@@ -12,7 +13,7 @@ keywords:
   - w3s
 ---
 
-Tableland naturally imposes [limits](/fundamentals/limits) on the size of data you can store in a table. If you need to store larger pieces media, you can use IPFS to store the data and then reference it in your table—and Filecoin is a perfect fit! Additionally, you can further extend persistence guarantees by creating Filecoin deals for your content.
+Tableland naturally imposes [limits](/fundamentals/limits) on the size of data you can store in a table. If you need to store larger pieces media, you can use IPFS to store the data and then reference unique [Content Identifiers](https://docs.ipfs.tech/concepts/content-addressing/) ("CIDs") in your table. Additionally, you can further extend persistence guarantees by creating Filecoin deals for your content.
 
 ## Background
 
@@ -30,7 +31,7 @@ From within your project, install the SDK and JETI:
 npm install @tableland/sdk @tableland/jeti
 ```
 
-The Tableland SDK comes with ethers v5, which is used below—but make sure that's installed as well. Lastly, you'll also want to make sure you have testnet Filecoin (TFIL) in your wallet to pay for storage; you can get some from the [Filecoin faucet](https://faucet.calibration.fildev.network/).
+The Tableland SDK comes with ethers v6, which is used below—but make sure that's installed as well. Lastly, you'll also want to make sure you have testnet Filecoin (TFIL) in your wallet to pay for storage; you can get some from the [Filecoin faucet](https://faucet.calibration.fildev.network/).
 
 ## Setup
 

@@ -36,7 +36,6 @@ Be sure to check out the Chainlink [examples](https://github.com/smartcontractki
 
 For context, we’ll end up with the following:
 
-- Deployed contract: [here](https://mumbai.polygonscan.com/token/0x86aa63f233a41a4af09e28f5953f4aa627978e31)
 - Dynamic NFT collection: [here](https://testnets.opensea.io/collection/tableland-chainlink-dnft)
   - The "seed" NFT will grow into a "bloom" — all of these mutations are handled by onchain table writes that are updated by the Chainlink network
     ![Table Chainlink dNFT](@site/static/assets/tutorials/dynamic-nft-chainlink/tbl-link-dnft.png)
@@ -380,7 +379,7 @@ async function main() {
 
   // Deploy the NFT with the base URI defined
   const dynNFT = await DynNFT.deploy(baseURIString);
-  await dynNFT.deployed();
+  await dynNFT.waitForDeployment();
   // Log the address and save this for verification purposes
   console.log("dynNFT deployed to:", dynNFT.address);
 
@@ -408,13 +407,13 @@ main()
 Run the hardhat deploy script, and **_save the contract address_** (in `hardhat.config.js` under `config.contractAddress`) for verification and Chainlink purposes! Here, we’re deploying to Polygon, but you can also choose to use `local-tableland` by running `npx local-tableland` and setting the network to `localhost`. For setup information, see the [Local Tableland documentation](/quickstarts/local-tableland).
 
 ```bash
-npx hardhat run scripts/deploy.js --network polygon-mumbai
+npx hardhat run scripts/deploy.js --network polygon-amoy
 ```
 
 You should now be able to see the NFT minted and viewable on marketplaces — here’s an example of the tutorial minted on Polygon + OpenSea (see [here](https://testnets.opensea.io/collection/tableland-chainlink-dnft)). If your collection is not showing, please be sure to verify the collection:
 
 ```bash
-npx hardhat run scripts/verify.js --network polygon-mumbai
+npx hardhat run scripts/verify.js --network polygon-amoy
 ```
 
 ![OpenSea dNFT](@site/static/assets/tutorials/dynamic-nft-chainlink/dnfts-os.png)
@@ -436,7 +435,7 @@ By depositing LINK, the Keeper network will be incentivized to make smart contra
 
 ## Dynamic NFT updates
 
-Now that Chainlink Automation is set up, the Keeper network will `performUpkeep` every 30 seconds, which is the values configured in our original contract. When the NFT is intially minted, it will have metadata for the "seed" — [here’s an example](https://testnets.tableland.network/query?extract=true&unwrap=true&statement=select%20json_object%28%27name%27%2C%27Friendship%20Seed%20%23%27%7C%7Ctokens_80001_4153%2Eid%2C%27image%27%2C%27ipfs%3A%2F%2F%27%7C%7Ccid%7C%7C%27%2F%27%7C%7Cstage%7C%7C%27.jpg%27%2C%27attributes%27%2Cjson_array%28json_object%28%27display_type%27%2C%27string%27%2C%27trait_type%27%2C%27Flower%20Stage%27%2C%27value%27%2Cstage%29%2Cjson_object%28%27display_type%27%2C%27string%27%2C%27trait_type%27%2C%27Flower%20Color%27%2C%27value%27%2Ccolor%29%29%29%20from%20tokens_80001_4153%20join%20flowers_80001_4152%20on%20tokens_80001_4153%2Estage_id%20%3D%20flowers_80001_4152%2Eid%20where%20tokens_80001_4153%2Eid%3D1%20group%20by%20tokens_80001_4153%2Eid):
+Now that Chainlink Automation is set up, the Keeper network will `performUpkeep` every 30 seconds, which is the values configured in our original contract. When the NFT is intially minted, it will have metadata for the "seed".
 
 ```json
 {
@@ -457,7 +456,7 @@ Now that Chainlink Automation is set up, the Keeper network will `performUpkeep`
 }
 ```
 
-Once the NFT updates, the metadata values will change — upon hitting the final stage, this will [resemble the following](https://testnets.tableland.network/query?extract=true&unwrap=true&statement=select%20json_object%28%27name%27%2C%27Friendship%20Seed%20%23%27%7C%7Ctokens_80001_4153%2Eid%2C%27image%27%2C%27ipfs%3A%2F%2F%27%7C%7Ccid%7C%7C%27%2F%27%7C%7Cstage%7C%7C%27.jpg%27%2C%27attributes%27%2Cjson_array%28json_object%28%27display_type%27%2C%27string%27%2C%27trait_type%27%2C%27Flower%20Stage%27%2C%27value%27%2Cstage%29%2Cjson_object%28%27display_type%27%2C%27string%27%2C%27trait_type%27%2C%27Flower%20Color%27%2C%27value%27%2Ccolor%29%29%29%20from%20tokens_80001_4153%20join%20flowers_80001_4152%20on%20tokens_80001_4153%2Estage_id%20%3D%20flowers_80001_4152%2Eid%20where%20tokens_80001_4153%2Eid%3D0%20group%20by%20tokens_80001_4153%2Eid):
+Once the NFT updates, the metadata values will change.
 
 ```json
 {

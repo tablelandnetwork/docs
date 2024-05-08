@@ -69,7 +69,7 @@ const privateKey =
   "59c6995e998f97a5a0044966f0945389dc9e86dae88c7a8412f4603b6b78690d";
 const wallet = new Wallet(privateKey);
 // To avoid connecting to the browser wallet (locally, port 8545).
-// For example: "https://polygon-mumbai.g.alchemy.com/v2/YOUR_ALCHEMY_KEY"
+// For example: "https://polygon-amoy.g.alchemy.com/v2/YOUR_ALCHEMY_KEY"
 const provider = getDefaultProvider("http://127.0.0.1:8545");
 const signer = wallet.connect(provider);
 ```

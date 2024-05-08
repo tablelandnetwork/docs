@@ -37,7 +37,7 @@ Then, `cd` into the project and install Tableland.
 npm install --save @tableland/sdk
 ```
 
-Under `src/app`, go to the `app.js` component, and import `Database` from `@tableland/sdk`. The SDK already provides access to [`ethers v5`](https://docs.ethers.org/v5/)—for setting up an account connection, you should also import `Signer` and `providers`. Lastly, we'll import `useState` from `react` for a simple way to track the signer in your application's state.
+Under `src/app`, go to the `app.js` component, and import `Database` from `@tableland/sdk`. The SDK already provides access to [`ethers v6`](https://docs.ethers.org/v6/)—for setting up an account connection, you should also import `Signer` and `BrowserProvider`. Lastly, we'll import `useState` from `react` for a simple way to track the signer in your application's state.
 
 <Tabs groupId="sdk">
 <TabItem value="js" label="JavaScript" default>
@@ -47,7 +47,7 @@ Under `src/app`, go to the `app.js` component, and import `Database` from `@tabl
 "use client";
 
 import { Database } from "@tableland/sdk";
-import { providers } from "ethers";
+import { BrowserProvider } from "ethers";
 import { useState } from "react";
 // highlight-end
 
@@ -64,7 +64,7 @@ export function Home() {
 "use client";
 
 import { Database } from "@tableland/sdk";
-import { Signer, providers } from "ethers";
+import { Signer, BrowserProvider } from "ethers";
 import { useState } from "react";
 
 declare const window: any;
@@ -89,7 +89,7 @@ All database creates and writes need a `Signer`. Create a `connectSigner` method
 // highlight-start
 async function connectSigner() {
   // Establish a connection with the browser wallet's provider.
-  const provider = new providers.Web3Provider(window.ethereum);
+  const provider = new BrowserProvider(window.ethereum);
   // Request the connected accounts, prompting a browser wallet popup to connect.
   await provider.send("eth_requestAccounts", []);
   // Create a signer from the returned provider connection.
@@ -113,7 +113,7 @@ export default function Home() {
 // highlight-start
 async function connectSigner(): Promise<Signer> {
   // Establish a connection with the browser wallet's provider.
-  const provider = new providers.Web3Provider(window.ethereum);
+  const provider = new r(window.ethereum);
   // Request the connected accounts, prompting a browser wallet popup to connect.
   await provider.send("eth_requestAccounts", []);
   // Create a signer from the returned provider connection.
@@ -372,12 +372,12 @@ Here is the final code from above, all in one place.
 "use client";
 
 import { Database } from "@tableland/sdk";
-import { providers } from "ethers";
+import { BrowserProvider } from "ethers";
 import { useState } from "react";
 
 async function connectSigner() {
   // Establish a connection with the browser wallet's provider.
-  const provider = new providers.Web3Provider(window.ethereum);
+  const provider = new BrowserProvider(window.ethereum);
   // Request the connected accounts, prompting a browser wallet popup to connect.
   await provider.send("eth_requestAccounts", []);
   // Create a signer from the returned provider connection.
@@ -423,14 +423,14 @@ export default function Home() {
 "use client";
 
 import { Database } from "@tableland/sdk";
-import { Signer, providers } from "ethers";
+import { Signer, BrowserProvider } from "ethers";
 import { useState } from "react";
 
 declare const window: any;
 
 async function connectSigner(): Promise<Signer> {
   // Establish a connection with the browser wallet's provider.
-  const provider = new providers.Web3Provider(window.ethereum);
+  const provider = new BrowserProvider(window.ethereum);
   // Request the connected accounts, prompting a browser wallet popup to connect.
   await provider.send("eth_requestAccounts", []);
   // Create a signer from the returned provider connection.

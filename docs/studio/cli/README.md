@@ -118,7 +118,7 @@ The Tableland CLI includes a number of global flags.
 Testnets
 
 - `sepolia` (Ethereum Sepolia)
-- `maticmum` (Polygon Mumbai)
+- `polygon-amoy` (Polygon Amoy)
 - `optimism-sepolia` (Optimism Sepolia)
 - `arbitrum-sepolia` (Arbitrum Sepolia)
 - `filecoin-calibration` (Filecoin Calibration)
@@ -127,7 +127,7 @@ Mainnets
 
 - `mainnet` (Ethereum)
 - `homestead` (Ethereum)
-- `matic` (Polygon)
+- `polygon` (Polygon)
 - `optimism` (Optimism)
 - `arbitrum` (Arbitrum One)
 - `arbitrum-nova` (Arbitrum Nova)

@@ -41,7 +41,7 @@ Here's a summary of how the chains works in terms of speed:
 
 To interact with a chain, developers must run their own node or have access to one. Providers like [Infura](https://infura.io/), [Alchemy](https://www.alchemy.com/), and [Etherscan](https://etherscan.io/) operate a large pool of decentralized nodes and provide an API (centralized gateway) to them. They make it extremely easy to get started and develop web3 applications without needing to personally manage the hardware and software for a dedicated node.
 
-Check out the following resources for each of these providers, and note that the Tableland SDK and CLI are both compatible with whatever [`ethers`](https://docs.ethers.org/v5/api/providers/) can support:
+Check out the following resources for each of these providers, and note that the Tableland SDK and CLI are both compatible with whatever [`ethers v6`](https://docs.ethers.org/v6/api/providers/) can support:
 
 ### Infura
 

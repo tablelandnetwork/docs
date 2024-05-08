@@ -16,14 +16,14 @@ The Tableland SDK provides a minimal client that implements the Cloudflare D1 D
 The `@tableland/sdk` comes with a few APIs: "primary" [Cloudflare D1 client compatible](https://developers.cloudflare.com/d1/platform/client-api/) API for [`Database`](/sdk/database) connections, and two additional "secondary" APIs ([`Validator`](/sdk/validator) and [`Registry`](/sdk/registry)) that are unique to Tableland operations. Generally, users will leverage the primary database API for typical SQL operations, and the secondary APIs are useful when needing to interact directly with a Tableland Validator node or directly calling Tableland’s smart contracts (onchain access control, direct contract calls, etc.). Both ESM and CommonJS are supported.
 
 :::tip
-If you're looking for the SDK API reference, you can check it out [here](/api/sdk/modules).
+If you're looking for the SDK API reference, you can check it out [here](/api/sdk/globals).
 :::
 
 There's also a Go SDK available [here](https://github.com/tablelandnetwork/go-tableland/tree/main/pkg/client/v1). It's still in beta, but it's a great way to get started with Tableland if you're a Go developer.
 
 ## Chain configuration
 
-Note the chain naming convention used by the `Database` connection matches that of [`ethersjs`](https://github.com/ethers-io/ethers.js/). To dictate which chain your app should connect to, you can leverage a [`Signer`](https://docs.ethers.org/v5/api/signer/) where the signer will provide information corresponding to a particular chain. This includes any of the following chains, which have their `ethers`-defined name shown as well:
+Note the chain naming convention used by the `Database` connection roughly matches that of [`ethersjs`](https://github.com/ethers-io/ethers.js/). To dictate which chain your app should connect to, you can leverage a [`Signer`](https://docs.ethers.org/v6/api/providers/#Signer) where the signer will provide information corresponding to a particular chain. This includes any of the following chains, which have their defined chain name shown as well:
 
 import { ChainsList } from '@site/src/components/SupportedChains'
 
