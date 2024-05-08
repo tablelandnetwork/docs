@@ -55,7 +55,7 @@ The parent chain to target
 
 **Example**
 ```ts
-80001
+80002
 ```
 
 • **params.tableId?**: `string`
@@ -125,7 +125,7 @@ The parent chain to target
 
 **Example**
 ```ts
-80001
+80002
 ```
 
 • **params.transactionHash?**: `string`
@@ -225,7 +225,7 @@ The parent chain to target
 
 **Example**
 ```ts
-80001
+80002
 ```
 
 • **params.transactionHash?**: `string`
