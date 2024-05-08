@@ -1,13 +1,12 @@
 name: Algolia # Reindex site search on Algolia
 
 on:
-  workflow_dispatch:
-  push:
-    branches:
-      - main
-
+  workflow_dispatch: 
+  deployment_status:
+    
 jobs:
   reindex:
+    if: github.event.deployment_status.environment == 'production' && github.event.deployment_status.state == 'success'
     runs-on: ubuntu-latest
     steps:
       - name: Reindex Algolia
