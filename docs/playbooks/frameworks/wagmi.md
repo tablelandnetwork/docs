@@ -261,26 +261,26 @@ Since wagmi is not natively compatible with ethers, we'll need to create a hook 
 
 ```js title="src/hooks/useSigner.js"
 import { useMemo } from "react";
-import { BrowserProvider } from "ethers";
-import { useWalletClient } from "wagmi";
+import { BrowserProvider, JsonRpcSigner } from "ethers";
+import { useConnectorClient } from "wagmi";
 
-function walletClientToSigner(walletClient) {
-  const { account, chain, transport } = walletClient;
+function walletClientToSigner(client) {
+  const { account, chain, transport } = client;
   const network = {
     chainId: chain.id,
     name: chain.name,
     ensAddress: chain.contracts?.ensRegistry?.address,
   };
-  const provider = new BrowserProvider(transport.url, network);
-  const signer = await provider.getSigner(account.address);
+  const provider = new BrowserProvider(transport, network);
+  const signer = new JsonRpcSigner(provider, account.address);
   return signer;
 }
 
 export function useSigner({ chainId } = {}) {
-  const { data: walletClient } = useWalletClient({ chainId });
+  const { data: client } = useConnectorClient({ chainId });
   return useMemo(
-    () => (walletClient ? walletClientToSigner(walletClient) : undefined),
-    [walletClient]
+    () => (client ? walletClientToSigner(client) : undefined),
+    [client]
   );
 }
 ```
@@ -289,28 +289,27 @@ export function useSigner({ chainId } = {}) {
 <TabItem value="jsv1" label="wagmi v1">
 
 ```js title="src/hooks/useSigner.js"
-// Convert wagmi/viem `WalletClient` to ethers `Signer`
 import { useMemo } from "react";
-import { BrowserProvider } from "ethers";
-import { useWalletClient } from "wagmi";
+import { BrowserProvider, JsonRpcSigner } from "ethers";
+import { useConnectorClient } from "wagmi";
 
-function walletClientToSigner(walletClient) {
-  const { account, chain, transport } = walletClient;
+function walletClientToSigner(client) {
+  const { account, chain, transport } = client;
   const network = {
     chainId: chain.id,
     name: chain.name,
     ensAddress: chain.contracts?.ensRegistry?.address,
   };
   const provider = new BrowserProvider(transport, network);
-  const signer = await provider.getSigner(account.address);
+  const signer = new JsonRpcSigner(provider, account.address);
   return signer;
 }
 
 export function useSigner({ chainId } = {}) {
-  const { data: walletClient } = useWalletClient({ chainId });
+  const { data: client } = useConnectorClient({ chainId });
   return useMemo(
-    () => (walletClient ? walletClientToSigner(walletClient) : undefined),
-    [walletClient]
+    () => (client ? walletClientToSigner(client) : undefined),
+    [client]
   );
 }
 ```
