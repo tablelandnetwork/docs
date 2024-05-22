@@ -363,6 +363,17 @@ components:
           description: The SQL read query statement
           type: string
           example: select * from healthbot_80002_1
+        params:
+          description: The values of query parameters
+          type: array
+          items:
+            type: object
+            oneOf:
+              - type: string
+              - type: number
+              - type: integer
+              - type: boolean
+          example: [1, "hello", null, true]
         format:
           description: >
             The requested response format:
