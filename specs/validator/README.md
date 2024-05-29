@@ -10,22 +10,13 @@ This general API specification is used to automatically generate clients and bac
 
 ### Table of Contents
 
-- [Synopsis](#synopsis)
-  - [Table of Contents](#table-of-contents)
 - [Query the network](#query-the-network)
-  - [Detailed descriptions](#detailed-descriptions)
-  - [Enumerated Values](#enumerated-values)
 - [Query the network (POST)](#query-the-network-post)
 - [Get transaction status](#get-transaction-status)
 - [Get table information](#get-table-information)
 - [Get health status](#get-health-status)
 - [Get version information](#get-version-information)
-  - [Properties](#properties)
-  - [Properties](#properties-1)
-  - [Properties](#properties-2)
-  - [Properties](#properties-3)
-  - [Properties](#properties-4)
-  - [Properties](#properties-5)
+- [Schemas](#schemas)
 
 <!-- Generator: Widdershins v4.0.1 -->
 <h1 id="tableland-validator-openapi-3-0">
@@ -81,7 +72,7 @@ Query the Tableland network
 
 > Code samples
 
-```shell
+``` shell
 # You can also use wget
 curl -X GET https://testnets.tableland.network/api/v1/query?statement=select%20%2A%20from%20healthbot_80002_1 \
   -H 'Accept: application/json'
@@ -95,12 +86,12 @@ Returns the results of a SQL read query against the Tableland network
 Parameters
 </h3>
 
-| Name      | In    | Type    | Required | Description                                                                                 |
-| --------- | ----- | ------- | -------- | ------------------------------------------------------------------------------------------- |
-| statement | query | string  | true     | The SQL read query statement                                                                |
-| format    | query | string  | false    | The requested response format:                                                              |
-| extract   | query | boolean | false    | Whether to extract the JSON object from the single property of the surrounding JSON object. |
-| unwrap    | query | boolean | false    | Whether to unwrap the returned JSON objects from their surrounding array.                   |
+| Name | In | Type | Required | Description |
+|----|----|----|----|----|
+| statement | query | string | true | The SQL read query statement |
+| format | query | string | false | The requested response format: |
+| extract | query | boolean | false | Whether to extract the JSON object from the single property of the surrounding JSON object. |
+| unwrap | query | boolean | false | Whether to unwrap the returned JSON objects from their surrounding array. |
 
 #### Detailed descriptions
 
@@ -111,7 +102,7 @@ query results as a JSON object with columns and rows properties.
 #### Enumerated Values
 
 | Parameter | Value   |
-| --------- | ------- |
+|-----------|---------|
 | format    | objects |
 | format    | table   |
 
@@ -119,7 +110,7 @@ query results as a JSON object with columns and rows properties.
 
 > 200 Response
 
-```json
+``` json
 {}
 ```
 
@@ -127,12 +118,12 @@ query results as a JSON object with columns and rows properties.
 Responses
 </h3>
 
-| Status | Meaning                                                            | Description                   | Schema |
-| ------ | ------------------------------------------------------------------ | ----------------------------- | ------ |
-| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)            | Successful operation          | Inline |
-| 400    | [Bad Request](https://tools.ietf.org/html/rfc7231#section-6.5.1)   | Invalid query/statement value | None   |
-| 404    | [Not Found](https://tools.ietf.org/html/rfc7231#section-6.5.4)     | Row Not Found                 | None   |
-| 429    | [Too Many Requests](https://tools.ietf.org/html/rfc6585#section-4) | Too Many Requests             | None   |
+| Status | Meaning | Description | Schema |
+|----|----|----|----|
+| 200 | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1) | Successful operation | Inline |
+| 400 | [Bad Request](https://tools.ietf.org/html/rfc7231#section-6.5.1) | Invalid query/statement value | None |
+| 404 | [Not Found](https://tools.ietf.org/html/rfc7231#section-6.5.4) | Row Not Found | None |
+| 429 | [Too Many Requests](https://tools.ietf.org/html/rfc6585#section-4) | Too Many Requests | None |
 
 <h3 id="query-the-network-responseschema">
 Response Schema
@@ -147,7 +138,7 @@ This operation does not require authentication
 
 > Code samples
 
-```shell
+``` shell
 # You can also use wget
 curl -X POST https://testnets.tableland.network/api/v1/query \
   -H 'Content-Type: application/json' \
@@ -160,9 +151,15 @@ Returns the results of a SQL read query against the Tableland network
 
 > Body parameter
 
-```json
+``` json
 {
   "statement": "select * from healthbot_80002_1",
+  "params": [
+    1,
+    "hello",
+    null,
+    true
+  ],
   "format": "objects",
   "extract": false,
   "unwrap": false
@@ -173,15 +170,15 @@ Returns the results of a SQL read query against the Tableland network
 Parameters
 </h3>
 
-| Name | In   | Type                  | Required | Description                                            |
-| ---- | ---- | --------------------- | -------- | ------------------------------------------------------ |
-| body | body | [Query](#schemaquery) | true     | A JSON containing the statement and additional options |
+| Name | In | Type | Required | Description |
+|----|----|----|----|----|
+| body | body | [Query](#schemaquery) | true | A JSON containing the statement and additional options |
 
 > Example responses
 
 > 200 Response
 
-```json
+``` json
 {}
 ```
 
@@ -189,12 +186,12 @@ Parameters
 Responses
 </h3>
 
-| Status | Meaning                                                            | Description                   | Schema |
-| ------ | ------------------------------------------------------------------ | ----------------------------- | ------ |
-| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)            | Successful operation          | Inline |
-| 400    | [Bad Request](https://tools.ietf.org/html/rfc7231#section-6.5.1)   | Invalid query/statement value | None   |
-| 404    | [Not Found](https://tools.ietf.org/html/rfc7231#section-6.5.4)     | Row Not Found                 | None   |
-| 429    | [Too Many Requests](https://tools.ietf.org/html/rfc6585#section-4) | Too Many Requests             | None   |
+| Status | Meaning | Description | Schema |
+|----|----|----|----|
+| 200 | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1) | Successful operation | Inline |
+| 400 | [Bad Request](https://tools.ietf.org/html/rfc7231#section-6.5.1) | Invalid query/statement value | None |
+| 404 | [Not Found](https://tools.ietf.org/html/rfc7231#section-6.5.4) | Row Not Found | None |
+| 429 | [Too Many Requests](https://tools.ietf.org/html/rfc6585#section-4) | Too Many Requests | None |
 
 <h3 id="query-the-network-(post)-responseschema">
 Response Schema
@@ -216,7 +213,7 @@ Get information about transaction progress
 
 > Code samples
 
-```shell
+``` shell
 # You can also use wget
 curl -X GET https://testnets.tableland.network/api/v1/receipt/{chainId}/{transactionHash} \
   -H 'Accept: application/json'
@@ -231,7 +228,7 @@ Parameters
 </h3>
 
 | Name            | In   | Type           | Required | Description                     |
-| --------------- | ---- | -------------- | -------- | ------------------------------- |
+|-----------------|------|----------------|----------|---------------------------------|
 | chainId         | path | integer(int32) | true     | The parent chain to target      |
 | transactionHash | path | string         | true     | The transaction hash to request |
 
@@ -239,10 +236,13 @@ Parameters
 
 > 200 Response
 
-```json
+``` json
 {
   "table_id": "1",
-  "table_ids": ["1", "2"],
+  "table_ids": [
+    "1",
+    "2"
+  ],
   "transaction_hash": "0x02f319429b8a7be1cbb492f0bfbf740d2472232a2edadde7df7c16c0b61aa78b",
   "block_number": 27055540,
   "chain_id": 80002,
@@ -255,12 +255,12 @@ Parameters
 Responses
 </h3>
 
-| Status | Meaning                                                            | Description                                         | Schema                                          |
-| ------ | ------------------------------------------------------------------ | --------------------------------------------------- | ----------------------------------------------- |
-| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)            | successful operation                                | [TransactionReceipt](#schematransactionreceipt) |
-| 400    | [Bad Request](https://tools.ietf.org/html/rfc7231#section-6.5.1)   | Invalid chain identifier or transaction hash format | None                                            |
-| 404    | [Not Found](https://tools.ietf.org/html/rfc7231#section-6.5.4)     | No transaction receipt found with the provided hash | None                                            |
-| 429    | [Too Many Requests](https://tools.ietf.org/html/rfc6585#section-4) | Too Many Requests                                   | None                                            |
+| Status | Meaning | Description | Schema |
+|----|----|----|----|
+| 200 | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1) | successful operation | [TransactionReceipt](#schematransactionreceipt) |
+| 400 | [Bad Request](https://tools.ietf.org/html/rfc7231#section-6.5.1) | Invalid chain identifier or transaction hash format | None |
+| 404 | [Not Found](https://tools.ietf.org/html/rfc7231#section-6.5.4) | No transaction receipt found with the provided hash | None |
+| 429 | [Too Many Requests](https://tools.ietf.org/html/rfc6585#section-4) | Too Many Requests | None |
 
 <aside class="success">
 This operation does not require authentication
@@ -279,7 +279,7 @@ Access to table information
 
 > Code samples
 
-```shell
+``` shell
 # You can also use wget
 curl -X GET https://testnets.tableland.network/api/v1/tables/{chainId}/{tableId} \
   -H 'Accept: application/json'
@@ -294,7 +294,7 @@ Parameters
 </h3>
 
 | Name    | In   | Type           | Required | Description                |
-| ------- | ---- | -------------- | -------- | -------------------------- |
+|---------|------|----------------|----------|----------------------------|
 | chainId | path | integer(int32) | true     | The parent chain to target |
 | tableId | path | string         | true     | Table identifier           |
 
@@ -302,7 +302,7 @@ Parameters
 
 > 200 Response
 
-```json
+``` json
 {
   "name": "healthbot_80002_1",
   "external_url": "https://testnets.tableland.network/api/v1/tables/80002/1",
@@ -318,10 +318,16 @@ Parameters
       {
         "name": "id",
         "type": "integer",
-        "constraints": ["NOT NULL", "PRIMARY KEY", "UNIQUE"]
+        "constraints": [
+          "NOT NULL",
+          "PRIMARY KEY",
+          "UNIQUE"
+        ]
       }
     ],
-    "table_constraints": ["PRIMARY KEY (id)"]
+    "table_constraints": [
+      "PRIMARY KEY (id)"
+    ]
   }
 }
 ```
@@ -330,13 +336,13 @@ Parameters
 Responses
 </h3>
 
-| Status | Meaning                                                                    | Description                       | Schema                |
-| ------ | -------------------------------------------------------------------------- | --------------------------------- | --------------------- |
-| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)                    | successful operation              | [Table](#schematable) |
-| 400    | [Bad Request](https://tools.ietf.org/html/rfc7231#section-6.5.1)           | Invalid chain or table identifier | None                  |
-| 404    | [Not Found](https://tools.ietf.org/html/rfc7231#section-6.5.4)             | Table Not Found                   | None                  |
-| 429    | [Too Many Requests](https://tools.ietf.org/html/rfc6585#section-4)         | Too Many Requests                 | None                  |
-| 500    | [Internal Server Error](https://tools.ietf.org/html/rfc7231#section-6.6.1) | Internal Server Error             | None                  |
+| Status | Meaning | Description | Schema |
+|----|----|----|----|
+| 200 | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1) | successful operation | [Table](#schematable) |
+| 400 | [Bad Request](https://tools.ietf.org/html/rfc7231#section-6.5.1) | Invalid chain or table identifier | None |
+| 404 | [Not Found](https://tools.ietf.org/html/rfc7231#section-6.5.4) | Table Not Found | None |
+| 429 | [Too Many Requests](https://tools.ietf.org/html/rfc6585#section-4) | Too Many Requests | None |
+| 500 | [Internal Server Error](https://tools.ietf.org/html/rfc7231#section-6.6.1) | Internal Server Error | None |
 
 <aside class="success">
 This operation does not require authentication
@@ -351,7 +357,7 @@ health
 
 > Code samples
 
-```shell
+``` shell
 # You can also use wget
 curl -X GET https://testnets.tableland.network/api/v1/health
 ```
@@ -364,9 +370,9 @@ Returns OK if the validator considers itself healthy.
 Responses
 </h3>
 
-| Status | Meaning                                                 | Description               | Schema |
-| ------ | ------------------------------------------------------- | ------------------------- | ------ |
-| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1) | The validator is healthy. | None   |
+| Status | Meaning | Description | Schema |
+|----|----|----|----|
+| 200 | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1) | The validator is healthy. | None |
 
 <aside class="success">
 This operation does not require authentication
@@ -381,7 +387,7 @@ version
 
 > Code samples
 
-```shell
+``` shell
 # You can also use wget
 curl -X GET https://testnets.tableland.network/api/v1/version \
   -H 'Accept: application/json'
@@ -395,7 +401,7 @@ Returns version information about the validator daemon.
 
 > 200 Response
 
-```json
+``` json
 {
   "git_commit": "79688910d4689dcc0991a0d8eb9d988200586d8f",
   "git_branch": "foo/experimentalfeature",
@@ -410,9 +416,9 @@ Returns version information about the validator daemon.
 Responses
 </h3>
 
-| Status | Meaning                                                 | Description          | Schema                            |
-| ------ | ------------------------------------------------------- | -------------------- | --------------------------------- |
-| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1) | successful operation | [VersionInfo](#schemaversioninfo) |
+| Status | Meaning | Description | Schema |
+|----|----|----|----|
+| 200 | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1) | successful operation | [VersionInfo](#schemaversioninfo) |
 
 <aside class="success">
 This operation does not require authentication
@@ -428,7 +434,7 @@ Table
 <a id="schematable"></a> <a id="schema_Table"></a>
 <a id="tocStable"></a> <a id="tocstable"></a>
 
-```json
+``` json
 {
   "name": "healthbot_80002_1",
   "external_url": "https://testnets.tableland.network/api/v1/tables/80002/1",
@@ -444,61 +450,67 @@ Table
       {
         "name": "id",
         "type": "integer",
-        "constraints": ["NOT NULL", "PRIMARY KEY", "UNIQUE"]
+        "constraints": [
+          "NOT NULL",
+          "PRIMARY KEY",
+          "UNIQUE"
+        ]
       }
     ],
-    "table_constraints": ["PRIMARY KEY (id)"]
+    "table_constraints": [
+      "PRIMARY KEY (id)"
+    ]
   }
 }
 ```
 
 ### Properties
 
-| Name           | Type       | Required | Restrictions | Description                       |
-| -------------- | ---------- | -------- | ------------ | --------------------------------- |
-| name           | string     | false    | none         | none                              |
-| external_url   | string     | false    | none         | none                              |
-| animation_url  | string     | false    | none         | none                              |
-| image          | string     | false    | none         | none                              |
-| attributes     | \[object\] | false    | none         | none                              |
-| » display_type | string     | false    | none         | The display type for marketplaces |
-| » trait_type   | string     | false    | none         | The trait type for marketplaces   |
-| » value        | object     | false    | none         | The value of the property         |
+| Name | Type | Required | Restrictions | Description |
+|----|----|----|----|----|
+| name | string | false | none | none |
+| external_url | string | false | none | none |
+| animation_url | string | false | none | none |
+| image | string | false | none | none |
+| attributes | \[object\] | false | none | none |
+| » display_type | string | false | none | The display type for marketplaces |
+| » trait_type | string | false | none | The trait type for marketplaces |
+| » value | object | false | none | The value of the property |
 
 oneOf
 
 | Name           | Type   | Required | Restrictions | Description |
-| -------------- | ------ | -------- | ------------ | ----------- |
-| »» _anonymous_ | string | false    | none         | none        |
+|----------------|--------|----------|--------------|-------------|
+| »» *anonymous* | string | false    | none         | none        |
 
 xor
 
 | Name           | Type   | Required | Restrictions | Description |
-| -------------- | ------ | -------- | ------------ | ----------- |
-| »» _anonymous_ | number | false    | none         | none        |
+|----------------|--------|----------|--------------|-------------|
+| »» *anonymous* | number | false    | none         | none        |
 
 xor
 
 | Name           | Type    | Required | Restrictions | Description |
-| -------------- | ------- | -------- | ------------ | ----------- |
-| »» _anonymous_ | integer | false    | none         | none        |
+|----------------|---------|----------|--------------|-------------|
+| »» *anonymous* | integer | false    | none         | none        |
 
 xor
 
 | Name           | Type    | Required | Restrictions | Description |
-| -------------- | ------- | -------- | ------------ | ----------- |
-| »» _anonymous_ | boolean | false    | none         | none        |
+|----------------|---------|----------|--------------|-------------|
+| »» *anonymous* | boolean | false    | none         | none        |
 
 xor
 
 | Name           | Type   | Required | Restrictions | Description |
-| -------------- | ------ | -------- | ------------ | ----------- |
-| »» _anonymous_ | object | false    | none         | none        |
+|----------------|--------|----------|--------------|-------------|
+| »» *anonymous* | object | false    | none         | none        |
 
 continued
 
 | Name   | Type                    | Required | Restrictions | Description |
-| ------ | ----------------------- | -------- | ------------ | ----------- |
+|--------|-------------------------|----------|--------------|-------------|
 | schema | [Schema](#schemaschema) | false    | none         | none        |
 
 <h2 id="tocS_TransactionReceipt">
@@ -510,10 +522,13 @@ TransactionReceipt
 <a id="schema_TransactionReceipt"></a>
 <a id="tocStransactionreceipt"></a> <a id="tocstransactionreceipt"></a>
 
-```json
+``` json
 {
   "table_id": "1",
-  "table_ids": ["1", "2"],
+  "table_ids": [
+    "1",
+    "2"
+  ],
   "transaction_hash": "0x02f319429b8a7be1cbb492f0bfbf740d2472232a2edadde7df7c16c0b61aa78b",
   "block_number": 27055540,
   "chain_id": 80002,
@@ -524,15 +539,15 @@ TransactionReceipt
 
 ### Properties
 
-| Name             | Type           | Required | Restrictions | Description              |
-| ---------------- | -------------- | -------- | ------------ | ------------------------ |
-| table_id         | string         | false    | none         | This field is deprecated |
-| table_ids        | \[string\]     | false    | none         | none                     |
-| transaction_hash | string         | false    | none         | none                     |
-| block_number     | integer(int64) | false    | none         | none                     |
-| chain_id         | integer(int32) | false    | none         | none                     |
-| error            | string         | false    | none         | none                     |
-| error_event_idx  | integer(int32) | false    | none         | none                     |
+| Name | Type | Required | Restrictions | Description |
+|----|----|----|----|----|
+| table_id | string | false | none | This field is deprecated |
+| table_ids | \[string\] | false | none | none |
+| transaction_hash | string | false | none | none |
+| block_number | integer(int64) | false | none | none |
+| chain_id | integer(int32) | false | none | none |
+| error | string | false | none | none |
+| error_event_idx | integer(int32) | false | none | none |
 
 <h2 id="tocS_Schema">
 Schema
@@ -542,25 +557,31 @@ Schema
 <a id="schemaschema"></a> <a id="schema_Schema"></a>
 <a id="tocSschema"></a> <a id="tocsschema"></a>
 
-```json
+``` json
 {
   "columns": [
     {
       "name": "id",
       "type": "integer",
-      "constraints": ["NOT NULL", "PRIMARY KEY", "UNIQUE"]
+      "constraints": [
+        "NOT NULL",
+        "PRIMARY KEY",
+        "UNIQUE"
+      ]
     }
   ],
-  "table_constraints": ["PRIMARY KEY (id)"]
+  "table_constraints": [
+    "PRIMARY KEY (id)"
+  ]
 }
 ```
 
 ### Properties
 
-| Name              | Type                        | Required | Restrictions | Description |
-| ----------------- | --------------------------- | -------- | ------------ | ----------- |
-| columns           | \[[Column](#schemacolumn)\] | false    | none         | none        |
-| table_constraints | \[string\]                  | false    | none         | none        |
+| Name | Type | Required | Restrictions | Description |
+|----|----|----|----|----|
+| columns | \[[Column](#schemacolumn)\] | false | none | none |
+| table_constraints | \[string\] | false | none | none |
 
 <h2 id="tocS_Column">
 Column
@@ -570,18 +591,22 @@ Column
 <a id="schemacolumn"></a> <a id="schema_Column"></a>
 <a id="tocScolumn"></a> <a id="tocscolumn"></a>
 
-```json
+``` json
 {
   "name": "id",
   "type": "integer",
-  "constraints": ["NOT NULL", "PRIMARY KEY", "UNIQUE"]
+  "constraints": [
+    "NOT NULL",
+    "PRIMARY KEY",
+    "UNIQUE"
+  ]
 }
 ```
 
 ### Properties
 
 | Name        | Type       | Required | Restrictions | Description |
-| ----------- | ---------- | -------- | ------------ | ----------- |
+|-------------|------------|----------|--------------|-------------|
 | name        | string     | false    | none         | none        |
 | type        | string     | false    | none         | none        |
 | constraints | \[string\] | false    | none         | none        |
@@ -594,7 +619,7 @@ VersionInfo
 <a id="schemaversioninfo"></a> <a id="schema_VersionInfo"></a>
 <a id="tocSversioninfo"></a> <a id="tocsversioninfo"></a>
 
-```json
+``` json
 {
   "git_commit": "79688910d4689dcc0991a0d8eb9d988200586d8f",
   "git_branch": "foo/experimentalfeature",
@@ -608,7 +633,7 @@ VersionInfo
 ### Properties
 
 | Name           | Type   | Required | Restrictions | Description |
-| -------------- | ------ | -------- | ------------ | ----------- |
+|----------------|--------|----------|--------------|-------------|
 | git_commit     | string | false    | none         | none        |
 | git_branch     | string | false    | none         | none        |
 | git_state      | string | false    | none         | none        |
@@ -624,9 +649,15 @@ Query
 <a id="schemaquery"></a> <a id="schema_Query"></a>
 <a id="tocSquery"></a> <a id="tocsquery"></a>
 
-```json
+``` json
 {
   "statement": "select * from healthbot_80002_1",
+  "params": [
+    1,
+    "hello",
+    null,
+    true
+  ],
   "format": "objects",
   "extract": false,
   "unwrap": false
@@ -635,9 +666,39 @@ Query
 
 ### Properties
 
-| Name      | Type    | Required | Restrictions | Description                                                                                                                                                                                       |
-| --------- | ------- | -------- | ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| statement | string  | false    | none         | The SQL read query statement                                                                                                                                                                      |
-| format    | string  | false    | none         | The requested response format: \* `objects` - Returns the query results as a JSON array of JSON objects. \* `table` - Return the query results as a JSON object with columns and rows properties. |
-| extract   | boolean | false    | none         | Whether to extract the JSON object from the single property of the surrounding JSON object.                                                                                                       |
-| unwrap    | boolean | false    | none         | Whether to unwrap the returned JSON objects from their surrounding array.                                                                                                                         |
+| Name      | Type      | Required | Restrictions | Description                    |
+|-----------|-----------|----------|--------------|--------------------------------|
+| statement | string    | false    | none         | The SQL read query statement   |
+| params    | \[oneOf\] | false    | none         | The values of query parameters |
+
+oneOf
+
+| Name          | Type   | Required | Restrictions | Description |
+|---------------|--------|----------|--------------|-------------|
+| » *anonymous* | string | false    | none         | none        |
+
+xor
+
+| Name          | Type   | Required | Restrictions | Description |
+|---------------|--------|----------|--------------|-------------|
+| » *anonymous* | number | false    | none         | none        |
+
+xor
+
+| Name          | Type    | Required | Restrictions | Description |
+|---------------|---------|----------|--------------|-------------|
+| » *anonymous* | integer | false    | none         | none        |
+
+xor
+
+| Name          | Type    | Required | Restrictions | Description |
+|---------------|---------|----------|--------------|-------------|
+| » *anonymous* | boolean | false    | none         | none        |
+
+continued
+
+| Name | Type | Required | Restrictions | Description |
+|----|----|----|----|----|
+| format | string | false | none | The requested response format: \* `objects` - Returns the query results as a JSON array of JSON objects. \* `table` - Return the query results as a JSON object with columns and rows properties. |
+| extract | boolean | false | none | Whether to extract the JSON object from the single property of the surrounding JSON object. |
+| unwrap | boolean | false | none | Whether to unwrap the returned JSON objects from their surrounding array. |
