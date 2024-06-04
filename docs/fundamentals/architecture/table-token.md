@@ -114,4 +114,5 @@ To view the TABLE token itself, check out the deployed contracts on various bloc
 | Ethereum Sepolia | Testnet     | https://testnets.opensea.io/collection/tableland-tables-2                |
 | Optimism Sepolia | Testnet     | No marketplace support                                                   |
 | Arbitrum Sepolia | Testnet     | https://testnets.opensea.io/collection/tableland-tables-arbitrum-sepolia |
+| Base Sepolia     | Testnet     | https://testnets.opensea.io/collection/tableland-tables-15               |
 | Polygon Amoy     | Testnet     | https://testnets.opensea.io/collection/tableland-tables-13               |

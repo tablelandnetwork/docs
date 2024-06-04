@@ -84,6 +84,7 @@ const chains = [
         chain.sepolia,
         chain.polygonAmoy,
         chain.optimismSepolia,
+        chain.baseSepolia,
         chain.filecoinCalibration,
         chain.hardhat,
       ]
@@ -149,6 +150,7 @@ const { chains, publicClient, webSocketPublicClient } = configureChains(
           chain.sepolia,
           polygonAmoy, // Custom chain
           chain.optimismSepolia,
+          chain.baseSepolia,
           chain.filecoinCalibration,
           chain.hardhat,
         ]

@@ -123,6 +123,7 @@ const quickstarts = [
       "quickstarts/chains/filecoin",
       "quickstarts/chains/arbitrum",
       "quickstarts/chains/optimism",
+      "quickstarts/chains/base",
       "quickstarts/chains/polygon",
       "quickstarts/chains/local",
     ],

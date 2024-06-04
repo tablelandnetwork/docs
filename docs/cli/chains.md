@@ -61,6 +61,14 @@ tableland chains
     "pollingTimeout": 10000,
     "pollingInterval": 1500
   },
+  "base-sepolia": {
+    "chainName": "base-sepolia",
+    "chainId": 84532,
+    "contractAddress": "0xA85aAE9f0Aec5F5638E5F13840797303Ab29c9f9",
+    "baseUrl": "https://tableland.network/api/v1",
+    "pollingTimeout": 10000,
+    "pollingInterval": 1500
+  },
   "polygon": {
     "chainName": "polygon",
     "chainId": 137,
