@@ -15,9 +15,9 @@ Note that in addition to each chain's unique block time, there is also a chain-s
 
 <ChainsList type={'mainnets'} format={'list'} />
 
-:::tip
+:::note
 
-Review the [cost estimation](/fundamentals/architecture/cost-estimator) table that compares the costs of creates and writes across each chain.
+[Base](https://www.base.org/) is also supported, but currently, it is _only_ the Base Sepolia testnet. If you're interested in mainnet support, please reach out and let us know!
 :::
 
 ## Chain information
@@ -34,8 +34,14 @@ Here's a summary of how the chains works in terms of speed:
 | Optimism      | 2 seconds                    | 0           | {'<'}5 seconds            |
 | Arbitrum One  | {'<'}2 seconds               | 0           | {'<'}5 seconds            |
 | Arbitrum Nova | 2-3 seconds                  | 0           | {'<'}5 seconds            |
+| Base          | 2 seconds                    | 0           | {'<'}5 seconds            |
 | Polygon       | 2 seconds                    | 1           | {'<'}10 seconds           |
 | Filecoin      | 30 seconds                   | 5           | ~4 mins.                  |
+
+:::tip
+
+Review the [cost estimation](/fundamentals/architecture/cost-estimator) table that compares the costs of creates and writes across each chain.
+:::
 
 ## Providers
 

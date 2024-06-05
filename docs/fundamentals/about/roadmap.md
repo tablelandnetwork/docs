@@ -26,7 +26,24 @@ We’re here to build a new web. Together.
 
 ## Protocol roadmap
 
+### 2024
+
+#### Q2
+
+- Ethers v6 upgrade.
+- Base Sepolia & Polygon Amoy chain support.
+- [Basin](https://basin.textile.io/) official launch.
+
+#### Q1
+
+- [Tableland Studio](https://studio.tableland.xyz/) official launch.
+- Initial MVP for [Basin](https://basin.textile.io/).
+
 ### 2023
+
+#### Q4
+
+- R&D for [Basin](https://basin.textile.io/).
 
 #### Q3
 
@@ -75,7 +92,7 @@ We’re here to build a new web. Together.
 - The first external validators are onboarded to the network ([interest sign-up](https://hhueol4i6vp.typeform.com/to/gkcyeA22)).
 - Release SQLite backed validator.
 - Release custom SQL parser for Tableland’s [SQL Specification](/sql/specification/).
-- Release smulti-transaction support.
+- Release multi-transaction support.
 - The Tableland testnet protocol launches on Ethereum, Polygon, and Optimism mainnets.
 - Release TABLE NFT with dynamic rendering.
 - Release a [technical engineering blog](https://dev.tableland.xyz/).

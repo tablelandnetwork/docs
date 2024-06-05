@@ -32,6 +32,7 @@ filecoin
 sepolia
 optimism-sepolia
 arbitrum-sepolia
+base-sepolia
 polygon-amoy
 filecoin-calibration
 localhost

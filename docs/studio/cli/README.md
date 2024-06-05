@@ -121,6 +121,7 @@ Testnets
 - `polygon-amoy` (Polygon Amoy)
 - `optimism-sepolia` (Optimism Sepolia)
 - `arbitrum-sepolia` (Arbitrum Sepolia)
+- `base-sepolia` (Base Sepolia)
 - `filecoin-calibration` (Filecoin Calibration)
 
 Mainnets

@@ -54,6 +54,7 @@ export type Chains =
   | "Filecoin"
   | "Arbitrum"
   | "Optimism"
+  | "Base"
   | "Polygon";
 
 interface FilterOptions {
