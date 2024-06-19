@@ -96,7 +96,7 @@ This _only_ restarts the validator, but you'd have to handle the Hardhat node se
 The `getAccounts` method returns a list of accounts that are available on the Tableland network. This returns all accounts at the Hardhat `http://127.0.0.1:8545` endpoint as an ethersjs `Wallet` instance. Optionally, you can pass an instance of `LocalTableland` as well.
 
 ```js
-const [accounts] = await getAccounts();
+const accounts = await getAccounts();
 const signer = accounts[1];
 console.log(signer.address);
 // 0x70997970C51812dc3A010C7d01b50e0d17dc79C8
