@@ -31,7 +31,7 @@ We’re here to build a new web. Together.
 #### Q2
 
 - Ethers v6 upgrade.
-- Base Sepolia & Polygon Amoy chain support.
+- Base (Mainnet, Sepolia) & Polygon Amoy chain support.
 - [Basin](https://basin.textile.io/) official launch.
 
 #### Q1

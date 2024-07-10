@@ -15,11 +15,6 @@ Note that in addition to each chain's unique block time, there is also a chain-s
 
 <ChainsList type={'mainnets'} format={'list'} />
 
-:::note
-
-[Base](https://www.base.org/) is also supported, but currently, it is _only_ the Base Sepolia testnet. If you're interested in mainnet support, please reach out and let us know!
-:::
-
 ## Chain information
 
 If would like to dive straight into chain-specific overviews, with decision considerations and other chain information (chain ID, contracts, block explorers, faucets, etc.), head to one of the pages below. The full list of chain-specific details can be found in the [chain info pages](/quickstarts/chains). The following shows the deployed contracts addresses across all mainnet and testnet chains:

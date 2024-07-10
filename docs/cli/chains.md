@@ -61,10 +61,10 @@ tableland chains
     "pollingTimeout": 10000,
     "pollingInterval": 1500
   },
-  "base-sepolia": {
-    "chainName": "base-sepolia",
-    "chainId": 84532,
-    "contractAddress": "0xA85aAE9f0Aec5F5638E5F13840797303Ab29c9f9",
+  "base": {
+    "chainName": "base",
+    "chainId": 8453,
+    "contractAddress": "0x8268F7Aba0E152B3A853e8CB4Ab9795Ec66c2b6B",
     "baseUrl": "https://tableland.network/api/v1",
     "pollingTimeout": 10000,
     "pollingInterval": 1500
@@ -105,6 +105,14 @@ tableland chains
     "chainName": "arbitrum-sepolia",
     "chainId": 421614,
     "contractAddress": "0x223A74B8323914afDC3ff1e5005564dC17231d6e",
+    "baseUrl": "https://testnets.tableland.network/api/v1",
+    "pollingTimeout": 10000,
+    "pollingInterval": 1500
+  },
+  "base-sepolia": {
+    "chainName": "base-sepolia",
+    "chainId": 84532,
+    "contractAddress": "0xA85aAE9f0Aec5F5638E5F13840797303Ab29c9f9",
     "baseUrl": "https://testnets.tableland.network/api/v1",
     "pollingTimeout": 10000,
     "pollingInterval": 1500
