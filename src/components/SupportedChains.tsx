@@ -61,6 +61,8 @@ function getChainExplorer(chain: string, contract: string): string {
       return `https://optimistic.etherscan.io/address/${contract}`;
     case "optimism-sepolia":
       return `https://sepolia-optimism.etherscan.io/address/${contract}`;
+    case "base":
+      return `https://basescan.org/address/${contract}`;
     case "base-sepolia":
       return `https://sepolia.basescan.org/address/${contract}`;
     case "polygon":
@@ -178,6 +180,13 @@ export const supportedChains = (): ChainFormatted[] => {
         format.sqlMaterializationTime = "2";
         format.bridge = "https://app.optimism.io/bridge";
         format.faucet = "https://www.alchemy.com/faucets/optimism-sepolia";
+        break;
+      case "base":
+        format.symbol = "ETH";
+        format.avgBlockTime = "2";
+        format.blockDepth = "0";
+        format.sqlMaterializationTime = "2";
+        format.bridge = "https://superbridge.app/base";
         break;
       case "base-sepolia":
         format.symbol = "ETH";

@@ -86,6 +86,7 @@ async function createConfig(): Promise<Config> {
       //     out: "./docs/api/sdk",
       //   },
       // ],
+      "custom-loader",
       [
         // Note: (only) during local dev, you may run into an infinite loop issue that
         // occurs when certain files get modified

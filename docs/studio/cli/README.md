@@ -132,6 +132,7 @@ Mainnets
 - `optimism` (Optimism)
 - `arbitrum` (Arbitrum One)
 - `arbitrum-nova` (Arbitrum Nova)
+- `base` (Base)
 - `filecoin` (Filecoin)
 
 Local (for development mode only)

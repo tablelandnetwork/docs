@@ -27,6 +27,7 @@ homestead
 optimism
 arbitrum
 arbitrum-nova
+base
 polygon
 filecoin
 sepolia
