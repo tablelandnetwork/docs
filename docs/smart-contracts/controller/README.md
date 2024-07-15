@@ -10,7 +10,7 @@ tags:
   - access control
 ---
 
-By default, the _owner_ of a table is the only one that can modify data. However, Tableland gives you a suite of options for programming ownership in useful ways. The most feature rich way to use a _controller_; a smart contract that implements the `ITablelandTables` interface, enabling onchain rules that govern offchain table mutations.
+By default, the _owner_ of a table is the only one that can modify data. However, Tableland gives you a suite of options for programming ownership in useful ways. The most feature rich way to use a _controller_; a smart contract that implements the `ITablelandController` interface, enabling onchain rules that govern offchain table mutations.
 
 ## Access control with controllers
 
