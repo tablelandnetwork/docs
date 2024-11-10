@@ -37,7 +37,7 @@ No—and read the [SQL functions docs](/sql/functions) for details!
 SQL string literals (e.g., a table with a TEXT value) are wrapped single quotes. In order to use a single quote within the string literal, double the single quote that must be escaped:
 
 ```sql
-INSERT INTO escape_table (id, VALUES) VALUES (0, 'My string''s escaping!')
+INSERT INTO escape_table (id, val) VALUES (0, 'My string''s escaping!')
 ```
 
 ## What's the difference between single and double quotes in SQL?
