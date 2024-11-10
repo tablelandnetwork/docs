@@ -16,7 +16,7 @@ No, not at this time as there are potential determinism issues involved.
 
 Only "flattened" subqueries are supported within `INSERT` statements but are not possible in `UPDATES`. For read queries, nesting subqueries is perfectly acceptable. See the [docs for more info](/sql/write#inserting-data).
 
-## Does Tableland support numbers with decimals values?
+## Does Tableland support numbers with decimal values?
 
 No, because floating points are hard to deal with in decentralized systems due to non-deterministic behavior. So, blockchains and related infrastructure have to adopt whole integer values and arithmetic, instead.
 
@@ -37,7 +37,7 @@ No—and read the [SQL functions docs](/sql/functions) for details!
 SQL string literals (e.g., a table with a TEXT value) are wrapped single quotes. In order to use a single quote within the string literal, double the single quote that must be escaped:
 
 ```sql
-INSERT INTO escape_table (id, VALUES (0, 'My string''s escaping!')
+INSERT INTO escape_table (id, VALUES) VALUES (0, 'My string''s escaping!')
 ```
 
 ## What's the difference between single and double quotes in SQL?
@@ -70,6 +70,7 @@ The following is a list of cool and useful SQL-related tools. These are not affi
 - SQL formatter:
   - [https://sqltools.beekeeperstudio.io/format](https://sqltools.beekeeperstudio.io/format)
   - [https://codebeautify.org/sqlformatter](https://codebeautify.org/sqlformatter)
+  - [https://sqlable.com/formatter/](https://sqlable.com/formatter/)
 - Mock SQL data:
   - [https://www.mockaroo.com/](https://www.mockaroo.com/)
   - [https://softwium.com/mockium/](https://softwium.com/mockium/)
